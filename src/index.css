@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0C0F3F;
+  --secondary: #0D1148;
+  --accent: #5CE1E6;
+  --swiper-theme-color: var(--accent);
+  --swiper-navigation-size: 24px;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-inactive-color: #ffffff40;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #5CE1E6, #6B8AFF, #9D7BFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+}
+
+.neon-border {
+  box-shadow: 0 0 15px rgba(92, 225, 230, 0.2);
+  border: 1px solid rgba(92, 225, 230, 0.1);
+  transition: all 0.3s ease;
+}
+
+.neon-border:hover {
+  box-shadow: 0 0 20px rgba(92, 225, 230, 0.3);
+  border-color: rgba(92, 225, 230, 0.2);
+}
+
+.neon-card {
+  background: linear-gradient(to bottom right, rgba(26, 26, 79, 0.9), rgba(30, 30, 95, 0.9));
+  box-shadow: 0 0 20px rgba(92, 225, 230, 0.15),
+              inset 0 0 20px rgba(92, 225, 230, 0.05);
+  border: 1px solid rgba(92, 225, 230, 0.2);
+  transition: all 0.3s ease;
+}
+
+.neon-card:hover {
+  box-shadow: 0 0 30px rgba(92, 225, 230, 0.25),
+              inset 0 0 30px rgba(92, 225, 230, 0.1);
+  border-color: rgba(92, 225, 230, 0.3);
+  transform: translateY(-2px);
+}
+
+.card-glow {
+  box-shadow: 0 0 20px rgba(92, 225, 230, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 30px rgba(92, 225, 230, 0.1);
+}
+
+.flow-line {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    rgba(92, 225, 230, 0.1) 20%,
+    rgba(92, 225, 230, 0.3) 50%,
+    rgba(92, 225, 230, 0.1) 80%,
+    transparent 100%
+  );
+  opacity: 0.15;
+  transform-origin: left;
+  animation: flowAnimation 6s infinite ease-in-out;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(92, 225, 230, 0.3),
+    rgba(92, 225, 230, 0.5),
+    rgba(92, 225, 230, 0.3),
+    transparent
+  );
+  box-shadow: 0 0 15px rgba(92, 225, 230, 0.3);
+}
+
+.timeline-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px var(--accent);
+  animation: moveDown 8s infinite linear;
+  opacity: 0;
+}
+
+.glow-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(92, 225, 230, 0.2),
+    transparent
+  );
+  margin: 1.5rem 0;
+}
+
+.pricing-card {
+  background: linear-gradient(145deg, var(--card-from) 0%, var(--card-to) 100%);
+  box-shadow: 0 0 15px rgba(92, 225, 230, 0.2);
+  border: 1px solid rgba(92, 225, 230, 0.1);
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+  box-shadow: 0 0 20px rgba(92, 225, 230, 0.3);
+  border-color: rgba(92, 225, 230, 0.2);
+  transform: translateY(-2px);
+}
+
+.pricing-card-basic {
+  --card-from: #0C0F3F;
+  --card-to: #0D1148;
+}
+
+.pricing-card-pro {
+  --card-from: #0A0D35;
+  --card-to: #0B0E3D;
+}
+
+.pricing-card-enterprise {
+  --card-from: #070922;
+  --card-to: #080A28;
+}
+
+/* Testimonials Slider Styles */
+.testimonials-slider {
+  padding-bottom: 60px !important;
+}
+
+.testimonials-slider .swiper-button-next,
+.testimonials-slider .swiper-button-prev {
+  color: var(--accent);
+  background: rgba(92, 225, 230, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.testimonials-slider .swiper-button-next:hover,
+.testimonials-slider .swiper-button-prev:hover {
+  background: rgba(92, 225, 230, 0.2);
+}
+
+.testimonials-slider .swiper-button-next::after,
+.testimonials-slider .swiper-button-prev::after {
+  font-size: 16px;
+}
+
+.testimonials-slider .swiper-pagination-bullet {
+  background: var(--accent);
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.testimonials-slider .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+@keyframes flowAnimation {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 0.15;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0;
+    transform-origin: right;
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    top: -5%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 105%;
+    opacity: 0;
+  }
+}
+
+.card-glow {
+  box-shadow: 0 0 20px rgba(92, 225, 230, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 30px rgba(92, 225, 230, 0.1);
+}
