@@ -155,7 +155,12 @@ function App() {
             </div>
 
             <div className="hidden md:flex items-center space-x-8">       
-              <button className="bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-full font-semibold hover:bg-[var(--secondary)] hover:text-white transition-all duration-300">
+              <button 
+              onClick={() => {
+                  const target = document.getElementById("subscription-plans");
+                   if (target) target.scrollIntoView({ behavior: "smooth" });
+                  }}
+                className="bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-full font-semibold hover:bg-[var(--secondary)] hover:text-white transition-all duration-300">
                 Get Started
               </button>
             </div>
@@ -624,7 +629,7 @@ function App() {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-[#0C0F3F] relative overflow-hidden">
+      <section id="subscription-plans" className="py-20 px-4 bg-[#0C0F3F] relative overflow-hidden">
         <AnimatedLines />
         <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-4xl font-bold text-center mb-6 gradient-text">
