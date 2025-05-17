@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
@@ -39,10 +39,24 @@ import {
   Send
 } from 'lucide-react';
 
+declare global {
+  interface Window {
+    Calendly?: any;
+  }
+}  
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = React.useState<number | null>(null);
 
+  const openCalendly = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: "https://calendly.com/hello-elevaitelabs/30min"
+      });
+    } else {
+      console.warn("Calendly not loaded yet");
+    }
+  };
   const AnimatedLines = () => (
     <div className="absolute inset-0 opacity-10">
       {[...Array(5)].map((_, i) => (
@@ -159,7 +173,7 @@ function App() {
               onClick={() => {
                   const target = document.getElementById("subscription-plans");
                    if (target) target.scrollIntoView({ behavior: "smooth" });
-                  }}
+                }}
                 className="bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-full font-semibold hover:bg-[var(--secondary)] hover:text-white transition-all duration-300">
                 Get Started
               </button>
@@ -224,7 +238,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <button className="bg-[var(--accent)] hover:bg-[var(--secondary)] text-[var(--primary)] hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 neon-border">
+            <button className="bg-[var(--accent)] hover:bg-[var(--secondary)] text-[var(--primary)] hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 neon-border" onClick={openCalendly}>
               Book a Call
             </button>
             <p className="text-gray-400">See Our AI Systems in Action.</p>
@@ -333,7 +347,7 @@ function App() {
             ))}
           </div>
           <div className="flex justify-center mt-12">
-            <button className="bg-[var(--accent)] hover:bg-[var(--secondary)] text-[var(--primary)] hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 neon-border">
+            <button className="bg-[var(--accent)] hover:bg-[var(--secondary)] text-[var(--primary)] hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 neon-border" onClick={openCalendly}>
               Boost My Revenue
             </button>
           </div>
@@ -869,7 +883,7 @@ function App() {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <button className="bg-[var(--accent)] hover:bg-[var(--secondary)] text-[var(--primary)] hover:text-white px-8 py-4 rounded-full text-xl font-semibold transition-all duration-300 neon-border">
+            <button className="bg-[var(--accent)] hover:bg-[var(--secondary)] text-[var(--primary)] hover:text-white px-8 py-4 rounded-full text-xl font-semibold transition-all duration-300 neon-border" onClick={openCalendly}>
               Book a Demo
             </button>
           </motion.div>
