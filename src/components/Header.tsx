@@ -38,14 +38,12 @@ const Header = () => {
           <a href="#subscription-plans" className="text-white hover:text-[var(--accent)] transition">Plans</a>
           <a href="#testimonials" className="text-white hover:text-[var(--accent)] transition">Testimonials</a>
           <a href="#contact" className="text-white hover:text-[var(--accent)] transition">Contact</a>
-          <a href="/get-started" className="text-white hover:text-[var(--accent)] transition">Get Started</a>
-
           <button
-            onClick={scrollToPlans}
-            className="bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-full font-semibold hover:bg-[var(--secondary)] hover:text-white transition-all duration-300"
-          >
-            Get Started
-          </button>
+                onClick={() => window.location.href = "/get-started"}
+                className="w-full bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-full font-semibold hover:bg-[var(--secondary)] hover:text-white transition-all duration-300"
+            >
+                Get Started
+            </button>
         </div>
 
         {/* Mobile Toggle */}
@@ -69,13 +67,12 @@ const Header = () => {
             <a href="#subscription-plans" onClick={() => setIsMenuOpen(false)} className="block">Plans</a>
             <a href="#testimonials" onClick={() => setIsMenuOpen(false)} className="block">Testimonials</a>
             <a href="#contact" onClick={() => setIsMenuOpen(false)} className="block">Contact</a>
-            <a href="/get-started" onClick={() => setIsMenuOpen(false)} className="block">Join Waitlist</a>
 
             <button
-              onClick={scrollToPlans}
-              className="w-full bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-full font-semibold hover:bg-[var(--secondary)] hover:text-white transition-all duration-300"
+                onClick={() => window.location.href = "/get-started"}
+                className="w-full bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-full font-semibold hover:bg-[var(--secondary)] hover:text-white transition-all duration-300"
             >
-              Get Started
+                Get Started
             </button>
           </motion.div>
         )}
