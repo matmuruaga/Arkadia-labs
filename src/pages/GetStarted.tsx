@@ -1,18 +1,19 @@
-import Layout from "../components/Layout";
 import { useEffect } from "react";
+import Layout from "../components/Layout";
 
 const GetStarted = () => {
   useEffect(() => {
-    // Carga el script de MailerLite solo una vez
-    const script = document.createElement("script");
-    script.src = "https://assets.mailerlite.com/js/universal.js";
-    script.async = true;
-    script.onload = () => {
-      // Inicializa el formulario después de que el script haya cargado
+    const interval = setInterval(() => {
       // @ts-ignore
-      if (window.ml) window.ml('account', '1530683');
-    };
-    document.body.appendChild(script);
+      if (window.ml && typeof window.ml === "function") {
+        // Forzamos render del formulario
+        // @ts-ignore
+        window.ml('show', 'PBMiVg', true);
+        clearInterval(interval);
+      }
+    }, 500); // chequea cada 0.5s hasta que ml esté listo
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -27,6 +28,7 @@ const GetStarted = () => {
           </p>
 
           <div className="bg-white p-6 rounded-xl shadow-xl mx-auto max-w-2xl">
+            {/* Este div no se toca */}
             <div className="ml-embedded" data-form="PBMiVg"></div>
           </div>
         </div>
