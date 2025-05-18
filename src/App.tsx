@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
-import Waitlist from "./pages/Waitlist";
+import GetStarted from "./pages/GetStarted"; //
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/waitlist" element={<Waitlist />} />
+        <Route path="/get-started" element={<GetStarted />} />
       </Routes>
     </BrowserRouter>
   );

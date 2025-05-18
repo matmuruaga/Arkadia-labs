@@ -26,7 +26,6 @@ const MainPage = () => {
       <Testimonials />
       <FAQ />
       <CTA2 />
-      <Footer />
     </Layout>
   );
 };

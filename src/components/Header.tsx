@@ -38,7 +38,7 @@ const Header = () => {
           <a href="#subscription-plans" className="text-white hover:text-[var(--accent)] transition">Plans</a>
           <a href="#testimonials" className="text-white hover:text-[var(--accent)] transition">Testimonials</a>
           <a href="#contact" className="text-white hover:text-[var(--accent)] transition">Contact</a>
-          <a href="/waitlist" className="text-white hover:text-[var(--accent)] transition">Join Waitlist</a>
+          <a href="/get-started" className="text-white hover:text-[var(--accent)] transition">Get Started</a>
 
           <button
             onClick={scrollToPlans}
