@@ -6,13 +6,11 @@ const GetStarted = () => {
     const interval = setInterval(() => {
       // @ts-ignore
       if (window.ml && typeof window.ml === "function") {
-        // Forzamos render del formulario
         // @ts-ignore
-        window.ml('show', 'PBMiVg', true);
+        window.ml('forms', 'load');
         clearInterval(interval);
       }
-    }, 500); // chequea cada 0.5s hasta que ml esté listo
-
+    }, 500);
     return () => clearInterval(interval);
   }, []);
 
@@ -26,9 +24,7 @@ const GetStarted = () => {
           <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
             Tell us what you need and we’ll help you plan the perfect AI system — no pressure, just discovery.
           </p>
-
           <div className="bg-white p-6 rounded-xl shadow-xl mx-auto max-w-2xl">
-            {/* Este div no se toca */}
             <div className="ml-embedded" data-form="PBMiVg"></div>
           </div>
         </div>
