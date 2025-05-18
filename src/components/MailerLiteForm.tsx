@@ -1,10 +1,9 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 const MailerLiteForm = () => {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024";
-    script.type = "text/javascript";
+    const script = document.createElement('script');
+    script.src = 'https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024';
     script.async = true;
     document.body.appendChild(script);
 
@@ -14,12 +13,9 @@ const MailerLiteForm = () => {
   }, []);
 
   return (
-    <div className="bg-[#0B0E35] p-6 rounded-xl shadow-lg neon-border max-w-3xl mx-auto">
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `<div class="ml-embedded" data-form="PBMiVg"></div>`,
-        }}
-      />
+    <div className="flex justify-center w-full">
+      {/* Este div será procesado automáticamente por MailerLite */}
+      <div className="ml-embedded" data-form="PBMiVg"></div>
     </div>
   );
 };

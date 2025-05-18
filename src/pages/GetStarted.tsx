@@ -1,11 +1,10 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Layout from "../components/Layout";
 import MailerLiteForm from '../components/MailerLiteForm';
 
 const GetStarted = () => {
   return (
     <>
-      <Header />
+      <Layout>
       <section className="py-20 bg-[#0C0F3F] min-h-screen">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold gradient-text mb-6">
@@ -17,7 +16,7 @@ const GetStarted = () => {
           <MailerLiteForm />
         </div>
       </section>
-      <Footer />
+      </Layout>
     </>
   );
 };
