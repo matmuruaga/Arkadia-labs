@@ -8,14 +8,8 @@ const MailerLiteForm = () => {
     script.async = true;
     document.body.appendChild(script);
 
-    const recaptcha = document.createElement("script");
-    recaptcha.src = "https://www.google.com/recaptcha/api.js";
-    recaptcha.async = true;
-    document.body.appendChild(recaptcha);
-
     return () => {
       document.body.removeChild(script);
-      document.body.removeChild(recaptcha);
     };
   }, []);
 
