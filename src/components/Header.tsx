@@ -69,7 +69,7 @@ const Header = () => {
             <a href="#subscription-plans" onClick={() => setIsMenuOpen(false)} className="block">Plans</a>
             <a href="#testimonials" onClick={() => setIsMenuOpen(false)} className="block">Testimonials</a>
             <a href="#contact" onClick={() => setIsMenuOpen(false)} className="block">Contact</a>
-            <a href="/waitlist" onClick={() => setIsMenuOpen(false)} className="block">Join Waitlist</a>
+            <a href="/get-started" onClick={() => setIsMenuOpen(false)} className="block">Join Waitlist</a>
 
             <button
               onClick={scrollToPlans}
