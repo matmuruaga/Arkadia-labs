@@ -3,29 +3,32 @@ import { useEffect } from "react";
 
 const GetStarted = () => {
   useEffect(() => {
+    // Carga el script de MailerLite solo una vez
     const script = document.createElement("script");
-    script.src = "https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024";
+    script.src = "https://assets.mailerlite.com/js/universal.js";
     script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
+    script.onload = () => {
+      // Inicializa el formulario después de que el script haya cargado
+      // @ts-ignore
+      if (window.ml) window.ml('account', '1530683');
     };
+    document.body.appendChild(script);
   }, []);
 
   return (
     <Layout>
-      <section className="min-h-screen bg-[#0C0F3F] px-4 py-20 text-white text-center">
-        <h1 className="text-4xl font-bold gradient-text mb-4">
-          Let’s Design Your AI Agent Together
-        </h1>
-        <p className="text-gray-300 mb-12 max-w-xl mx-auto">
-          Tell us what you need and we’ll help you plan the perfect AI system — no pressure, just discovery.
-        </p>
+      <section className="bg-[#0C0F3F] text-white py-20 px-4 min-h-screen">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
+            Let’s Design Your AI Agent Together
+          </h1>
+          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+            Tell us what you need and we’ll help you plan the perfect AI system — no pressure, just discovery.
+          </p>
 
-        {/* Formulario embebido de MailerLite */}
-        <div className="flex justify-center">
-          <div className="ml-embedded" data-form="PBMiVg"></div>
+          <div className="bg-white p-6 rounded-xl shadow-xl mx-auto max-w-2xl">
+            <div className="ml-embedded" data-form="PBMiVg"></div>
+          </div>
         </div>
       </section>
     </Layout>
