@@ -72,6 +72,14 @@ function App() {
     </div>
   );
 
+  const scrollToPlans = () => {
+    const target = document.getElementById("subscription-plans");
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   const faqs = [
     {
       question: "What is an AI sales system?",
@@ -169,15 +177,13 @@ function App() {
             </div>
 
             <div className="hidden md:flex items-center space-x-8">       
-              <button 
-              onClick={() => {
-                  const target = document.getElementById("subscription-plans");
-                   if (target) target.scrollIntoView({ behavior: "smooth" });
-                }}
-                className="bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-full font-semibold hover:bg-[var(--secondary)] hover:text-white transition-all duration-300">
+               <button 
+                  onClick={scrollToPlans}
+                 className="bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-full font-semibold hover:bg-[var(--secondary)] hover:text-white transition-all duration-300"
+                >
                 Get Started
-              </button>
-            </div>
+               </button>
+                </div>
 
             <div className="md:hidden">
               <button
@@ -205,9 +211,12 @@ function App() {
               >
                 Pricing
               </a>
-              <button className="w-full bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-full font-semibold hover:bg-[var(--secondary)] hover:text-white transition-all duration-300">
+            <button
+                onClick={scrollToPlans}
+                className="w-full bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-full font-semibold hover:bg-[var(--secondary)] hover:text-white transition-all duration-300"
+              >
                 Get Started
-              </button>
+            </button>
             </div>
           </motion.div>
         )}
