@@ -1,25 +1,17 @@
 import Layout from "../components/Layout";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 const GetStarted = () => {
-  const formRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    // Elimina scripts antiguos si los hubiera
-    const existingScript = document.getElementById("ml-universal");
-    if (existingScript) existingScript.remove();
-
-    // Crea el script de MailerLite
-    const script = document.createElement("script");
-    script.src = "https://assets.mailerlite.com/js/universal.js";
-    script.async = true;
-    script.id = "ml-universal";
-    document.body.appendChild(script);
-
-    // Limpieza: elimina script cuando desmonta el componente
-    return () => {
-      script.remove();
-    };
+    // Solo añade el script si no existe ya
+    if (!document.getElementById("ml-universal")) {
+      const script = document.createElement("script");
+      script.src = "https://assets.mailerlite.com/js/universal.js";
+      script.async = true;
+      script.id = "ml-universal";
+      document.body.appendChild(script);
+    }
+    // NO pongas ningún window.ml aquí
   }, []);
 
   return (
@@ -34,12 +26,12 @@ const GetStarted = () => {
           </p>
 
           <div className="bg-white p-6 rounded-xl shadow-xl mx-auto max-w-2xl">
-            {/* Aquí va el código embebido EXACTO de MailerLite */}
+            {/* Aquí MailerLite sí detecta el div embebido */}
             <div
-              ref={formRef}
-              className="ml-embedded"
-              data-form="PBMiVg"
-            ></div>
+              dangerouslySetInnerHTML={{
+                __html: `<div class="ml-embedded" data-form="WyCvO1"></div>`,
+              }}
+            />
           </div>
         </div>
       </section>
