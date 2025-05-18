@@ -176,13 +176,19 @@ function App() {
               <span className="ml-2 text-xl font-bold gradient-text">ElevAIte Labs</span>
             </div>
 
-            <div className="hidden md:flex items-center space-x-8">       
-               <button 
-                  onClick={scrollToPlans}
-                 className="bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-full font-semibold hover:bg-[var(--secondary)] hover:text-white transition-all duration-300"
-                >
+            <div className="hidden md:flex items-center space-x-8">
+                <a href="#features" className="text-white hover:text-[var(--accent)] transition-colors duration-300 font-medium">
+                  Features
+                </a>
+                 <a href="#subscription-plans" className="text-white hover:text-[var(--accent)] transition-colors duration-300 font-medium">
+                  Plans
+                </a>
+                <a href="#testimonials" className="text-white hover:text-[var(--accent)] transition-colors duration-300 font-medium">
+                  Testimonials
+                </a>
+                <button onClick={scrollToPlans} className="bg-[var(--accent)] text-[var(--primary)] px-4 py-2 rounded-full font-semibold hover:bg-[var(--secondary)] hover:text-white transition-all duration-300">
                 Get Started
-               </button>
+                </button>       
                 </div>
 
             <div className="md:hidden">
@@ -205,11 +211,25 @@ function App() {
           >
             <div className="px-4 py-4 space-y-4">
               <a
-                href="#pricing"
-                className="block text-gray-300 hover:text-[var(--accent)] transition-colors"
+                href="#features"
                 onClick={() => setIsMenuOpen(false)}
+                className="block text-white text-xl font-medium hover:text-[var(--accent)] transition-colors duration-300"
               >
-                Pricing
+                Features
+              </a>
+              <a
+                href="#subscription-plans"
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-white text-xl font-medium hover:text-[var(--accent)] transition-colors duration-300"
+              >
+                Plans
+              </a>
+              <a
+                href="#testimonials"
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-white text-xl font-medium hover:text-[var(--accent)] transition-colors duration-300"
+              >
+                Testimonials
               </a>
             <button
                 onClick={scrollToPlans}
@@ -255,7 +275,7 @@ function App() {
         </div>
       </section>
 
-      <section className="relative px-4 py-20 overflow-hidden">
+      <section id="features" className="relative px-4 py-20 overflow-hidden">
         <AnimatedLines />
         <div className="max-w-6xl mx-auto relative z-10">
           <motion.h2 
@@ -778,7 +798,7 @@ function App() {
         </div>
       </section>
 
-      <section className="relative px-4 py-20 overflow-hidden">
+      <section id="testimonials" className="relative px-4 py-20 overflow-hidden">
         <AnimatedLines />
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
