@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
+        sans: ['"Noto Sans"', 'ui-sans-serif', 'system-ui'],
       },
     },
   },
