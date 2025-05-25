@@ -28,9 +28,14 @@ const Header = () => {
       scrolling ? "bg-[#0C0F3F]/80 backdrop-blur border-b border-white/10" : ""
     }`}>
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="/" className="flex items-center text-white font-bold text-xl">
-          <BrainCircuit className="mr-2 text-[var(--accent)]" /> ElevAIte Labs
+        <a href="/" className="flex items-center space-x-2">
+            <img
+             src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1748199184/Recurso_1_ryyyrz.svg"
+             alt="Elevaite Labs Logo"
+             className="h-8 w-auto"
+             />
         </a>
+
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
