@@ -11,7 +11,7 @@ const GetStarted = () => (
         <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
           Tell us what you need and we’ll help you plan the perfect AI system — no pressure, just discovery.
         </p>
-        <div className="bg-white p-6 rounded-xl shadow-xl mx-auto max-w-2xl">
+        <div className="bg-white/5 backdrop-blur-md p-6 rounded-lg border border-white/10 mx-auto max-w-xl">
           <BrevoForm />
         </div>
       </div>

@@ -3,8 +3,8 @@ const BrevoForm = () => {
     <div className="w-full flex justify-center">
       <iframe
         width="100%"
-        height="600" // Ajustado para evitar scroll
-        src="https://sibforms.com/serve/MUIFAGN6ccfa_dIe4yux8e553LoKsjsODN8P1YCqoBwRFXv9LueT_UaKeo1TNrDTwKKrTpmcI8giyZuapWSjJtQzDAOe0U-84O3TeSswNNvtqyOAHM8zAut7DGYYQ_7AJpizAjdEExQ5hAcEgEPBfjR_3HLcJt5mdqZC70btfHrBNhNT-dedStIZwVn5KiQBsvbGcSuZcQBBzHXU"
+        height= "600" // Ajustado para evitar scroll
+        src="https://sibforms.com/serve/MUIFAOkL85i1rolyTU33uoJVxSnb6uDnORsZZoQbVAwQoj75Ubg8HfAWbUr_5PRx_Np-sgjFIWy31FKp5Qg8sfA1eWLfZLgKMaFAYD3YhxAZyE1Jdp5tlncQBiqQDVeb7Cg8cJ8ITw1wzBFDnu9IRPTqJmVveJuOdr0vWcG6JgSwVtcNCUIBOhfDlOKCacNAQXDuuG-z403pPcUt"
         scrolling="no"
         allowFullScreen
         style={{
