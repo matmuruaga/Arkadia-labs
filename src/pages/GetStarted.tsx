@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import BrevoForm from "../components/BrevoForm"; // Asegúrate de tenerlo en esa ruta
 
 const GetStarted = () => (
   <Layout>
@@ -11,8 +12,7 @@ const GetStarted = () => (
           Tell us what you need and we’ll help you plan the perfect AI system — no pressure, just discovery.
         </p>
         <div className="bg-white p-6 rounded-xl shadow-xl mx-auto max-w-2xl">
-          {/* ¡Sólo el div! */}
-          <div class="ml-embedded" data-form="WyCvO1"></div>
+          <BrevoForm />
         </div>
       </div>
     </section>
