@@ -28,7 +28,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Close more deals, scale faster, and dominate your market with custom-built AI sales employees.
+          Close more deals, scale faster, and dominate your market with custom-built AI employees.
         </motion.p>
         <motion.div
           className="flex flex-col items-center gap-4"
