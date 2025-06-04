@@ -3,22 +3,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  .animate-blink {
+    animation: blink 1s infinite;
+  }
+}
 
 :root {
-  --primary: #0C0F3F;
-  --secondary: #0D1148;
-  --accent: #5CE1E6;
-  --swiper-theme-color: var(--accent);
+  /* Puedes mantener tus variables antiguas si las usas en otros sitios,
+     o actualizarlas/eliminarlas si este es el único tema.
+     Por ahora, los cambios principales los haremos directamente o con nuevas clases/colores.
+  */
+  --primary-old: #0C0F3F; /* Renombrado para evitar confusión si decides mantenerlo */
+  --secondary-old: #0D1148;
+  --accent-old: #5CE1E6; /* Este es el cian usado en el Header/Footer actualmente */
+
+  /* Nuevas variables (opcional, podrías usar los HEX directamente en Tailwind) */
+  --site-bg-light: #F1F3F5;
+  --site-text-dark: #0D1B2A;
+  --site-accent-blue: #1C7ED6;
+  --site-accent-purple: #D0BFFF;
+  --site-accent-green: #69DB7C;
+
+
+  --swiper-theme-color: var(--site-accent-blue); /* Actualizado al nuevo azul de acento */
   --swiper-navigation-size: 24px;
   --swiper-pagination-bullet-size: 10px;
-  --swiper-pagination-bullet-inactive-color: #ffffff40;
+  /* Ajustar colores de paginación de Swiper para tema claro si es necesario */
+  --swiper-pagination-bullet-inactive-color: #0D1B2A40; /* Ejemplo: azul oscuro con opacidad */
   --swiper-pagination-bullet-inactive-opacity: 1;
 }
 
 body {
   font-family: 'Noto Sans', sans-serif;
-  background-color: var(--primary);
-  color: #FFFFFF;
+  background-color: var(--site-bg-light, #F1F3F5); /* Nuevo fondo claro */
+  color: var(--site-text-dark, #0D1B2A);          /* Nuevo color de texto oscuro */
+  /* Asegúrate de que el color de texto por defecto tenga buen contraste con el fondo claro */
+}
+
+/* ... (tus clases .gradient-text, .neon-border, etc., podrían necesitar ajustes de color si se usan sobre fondos claros) ... */
+/* Por ejemplo, tu .gradient-text actual está pensado para texto claro sobre fondo oscuro. */
+/* Si lo usas en el tema claro, podría necesitar un fondo degradado oscuro o colores diferentes. */
+
+.crafted-gradient-text {
+  background: linear-gradient(to right, #1C7ED6, #D0BFFF); /* Azul brillante a Morado claro de tu paleta */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block; /* Asegura que el fondo se aplique correctamente */
 }
 
 .gradient-text {
@@ -28,7 +64,6 @@ body {
   color: transparent;
   text-shadow: none;
 }
-
 .neon-border {
   box-shadow: 0 0 15px rgba(92, 225, 230, 0.2);
   border: 1px solid rgba(92, 225, 230, 0.1);
