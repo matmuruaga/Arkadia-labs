@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="flex items-center mb-4 cursor-pointer">
               {/* Asumiendo que el logo del Header también funciona aquí o usar uno específico */}
               <img 
-                src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1748199184/Recurso_1_ryyyrz.svg" 
+                src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1749155603/Recurso_14_wwxduv.svg" 
                 alt="ElevAIte Labs Logo" 
                 className="h-8 w-auto mr-2"
               />

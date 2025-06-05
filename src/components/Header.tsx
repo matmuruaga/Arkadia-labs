@@ -36,7 +36,7 @@ const Header = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         <a href="/" className="flex items-center space-x-2">
             <img
-             src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1748199184/Recurso_1_ryyyrz.svg" // Asumo que este logo funciona bien en fondo claro
+             src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1749155603/Recurso_14_wwxduv.svg" 
              alt="ElevAIte Labs Logo"
              className="h-8 w-auto" // Podrías necesitar un logo diferente para tema claro si este no contrasta bien
              />
