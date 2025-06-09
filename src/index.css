@@ -37,10 +37,6 @@
   --swiper-pagination-bullet-inactive-color: #0D1B2A40; /* Ejemplo: azul oscuro con opacidad */
   --swiper-pagination-bullet-inactive-opacity: 1;
 }
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Noto Sans', sans-serif;
   background-color: var(--site-bg-light, #F1F3F5); /* Nuevo fondo claro */

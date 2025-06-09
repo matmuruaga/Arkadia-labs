@@ -1,8 +1,6 @@
-import Layout from "../components/Layout";
 import BrevoForm from "../components/BrevoForm"; // Asegúrate de tenerlo en esa ruta
 
 const GetStarted = () => (
-  <Layout>
     <section className="bg-[#0C0F3F] text-white py-20 px-4 min-h-screen">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
@@ -16,7 +14,6 @@ const GetStarted = () => (
         </div>
       </div>
     </section>
-  </Layout>
 );
 
 export default GetStarted;

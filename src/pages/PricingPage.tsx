@@ -1,7 +1,6 @@
 // src/pages/PricingPage.tsx
 import { useState } from 'react'; // Importa useState
 import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
 import PricingTiers from '../components/PricingTiers';
 import FeatureComparisonTable from '../components/FeatureComparisonTable';
 import RoiCalculator from '../components/RoiCalculator';
@@ -17,7 +16,7 @@ const PricingPage = () => {
   const closeRoiModal = () => setIsRoiModalOpen(false);
 
   return (
-    <Layout>
+    <>
       {/* Sección de los Planes de Precios */}
       <section id="pricing-tiers-section" className="py-20 md:py-24 bg-[#F1F3F5]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -45,7 +44,7 @@ const PricingPage = () => {
         <RoiCalculator />
       </Modal>
       <FinalCtaSection />
-    </Layout>
+      </>
   );
 };
 

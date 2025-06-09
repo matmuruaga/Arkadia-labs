@@ -1,32 +1,29 @@
 // src/components/Footer.tsx
+import { Link } from 'react-router-dom'; // <-- 1. AÑADE ESTA LÍNEA DE IMPORTACIÓN
 import { BrainCircuit, Linkedin, Twitter, Youtube, Instagram, Send } from 'lucide-react';
-// AnimatedLines fue diseñado para fondos oscuros, considera si quieres una versión clara o quitarlo del footer claro.
-// import AnimatedLines from '../components/AnimatedLines'; 
+// Si no usas AnimatedLines en el Footer de tema claro, puedes quitar esta línea:
+import AnimatedLines from '../components/AnimatedLines'; 
 
 const Footer = () => {
   const socialLinkClasses = "text-gray-500 hover:text-[#1C7ED6] transition-colors";
   const navLinkClasses = "text-gray-600 hover:text-[#1C7ED6] transition-colors";
 
   return (
-    // Fondo blanco o un gris muy claro como #F8F9FA (ligeramente diferente al body #F1F3F5)
-    // con un borde superior para separarlo del contenido.
+    // He asumido que quieres un Footer de tema claro para que coincida con el nuevo diseño.
     <footer className="bg-white border-t border-slate-200 pt-16 pb-8 px-4 sm:px-6">
-      {/* <AnimatedLines />  Considera si esto se ve bien en un fondo claro */}
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+          
           {/* Columna Logo & Descripción */}
           <div className="md:col-span-2 lg:col-span-1">
-            <div className="flex items-center mb-4 cursor-pointer">
-              {/* Asumiendo que el logo del Header también funciona aquí o usar uno específico */}
+            <Link to="/" className="flex items-center mb-4 cursor-pointer">
               <img 
                 src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1749155603/Recurso_14_wwxduv.svg" 
                 alt="ElevAIte Labs Logo" 
                 className="h-8 w-auto mr-2"
               />
-              {/* Si quieres el nombre en texto, usa el color oscuro */}
-              {/* <BrainCircuit size={32} className="text-[#1C7ED6]" />
-              <span className="ml-2 text-xl font-bold text-[#0D1B2A]">ElevAIte Labs</span> */}
-            </div>
+              <span className="text-xl font-bold text-[#0D1B2A]">ElevAIte Labs</span>
+            </Link>
             <p className="text-gray-600 mb-6 text-sm">
               Transforming businesses with intelligent AI automation solutions.
             </p>
@@ -42,21 +39,19 @@ const Footer = () => {
           <div>
             <h3 className="text-[#0D1B2A] font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#" className={navLinkClasses}>AI Solutions</a></li>
-              <li><a href="/pricing" className={navLinkClasses}>Pricing</a></li>
-              <li><a href="#" className={navLinkClasses}>Case Studies</a></li>
-              <li><a href="#" className={navLinkClasses}>About Us</a></li>
+              <li><Link to="/#before-after" className={navLinkClasses}>Features</Link></li>
+              <li><Link to="/pricing" className={navLinkClasses}>Pricing</Link></li>
+              <li><Link to="/#testimonials" className={navLinkClasses}>Case Studies</Link></li>
             </ul>
           </div>
 
-          {/* Columna Legal */}
+          {/* Columna Legal con <Link> */}
           <div>
             <h3 className="text-[#0D1B2A] font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><a href="#" className={navLinkClasses}>Privacy Policy</a></li>
-              <li><a href="#" className={navLinkClasses}>Terms & Conditions</a></li>
-              <li><a href="#" className={navLinkClasses}>Cookie Policy</a></li>
-              <li><a href="#" className={navLinkClasses}>Legal Notice</a></li>
+              <li><Link to="/privacy-policy" className={navLinkClasses}>Privacy Policy</Link></li>
+              <li><Link to="/terms-and-conditions" className={navLinkClasses}>Terms & Conditions</Link></li>
+              <li><Link to="/cookie-policy" className={navLinkClasses}>Cookie Policy</Link></li>
             </ul>
           </div>
 
@@ -69,7 +64,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="w-full bg-white text-[#0D1B2A] rounded-full py-2.5 pl-4 pr-12 border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#1C7ED6] focus:border-[#1C7ED6]"
               />
-              <button className="absolute right-3 top-1/2 -translate-y-1/2 text-[#1C7ED6] hover:text-[#1565C0] transition-colors" aria-label="Subscribe">
+              <button className="absolute right-3 top-1/2 -translate-y-1/2 text-[#1C7ED6] hover:text-[#155CB0] transition-colors" aria-label="Subscribe">
                 <Send size={20} />
               </button>
             </div>
@@ -77,14 +72,12 @@ const Footer = () => {
               🚀 Stay ahead with AI automation – Subscribe to our newsletter!
             </p>
           </div>
+
         </div>
 
         <div className="border-t border-slate-200 pt-8 text-center md:text-left">
-          <p className="text-gray-500 text-sm mb-2 md:mb-0">
+          <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} ElevAIte Labs. All rights reserved.
-          </p>
-          <p className="text-gray-500 text-xs">
-            ElevAIte Labs AG | Bahnhofstrasse 1, 8001 Zürich, Switzerland | VAT: CHE-123.456.789
           </p>
         </div>
       </div>

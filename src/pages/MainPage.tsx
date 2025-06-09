@@ -1,6 +1,6 @@
 // src/pages/MainPage.tsx
 import React from 'react';
-import Layout from "../components/Layout";
+// Ya no se importa Layout aquí
 import Hero from "../components/Hero";
 import WhyElevaite from "../components/WhyElevaite";
 import KpiSection from "../components/KpiSection";
@@ -12,10 +12,12 @@ import FaqSection from "../components/FaqSection";
 import FinalCtaSection from "../components/FinalCtaSection";
 
 const MainPage = () => {
-  // Ya no se necesita ninguna lógica de JavaScript (useRef, useEffect, etc.) para el widget.
-
+  // La lógica del widget, si es solo para esta página, se queda aquí.
+  // Si moviste la lógica y el widget a App.tsx, puedes quitarla de aquí.
+  
   return (
-    <Layout>
+    // Ya no se necesita el componente <Layout> aquí
+    <>
       <Hero />
       <BeforeAfterSection />
       <KpiSection />
@@ -25,7 +27,7 @@ const MainPage = () => {
       <TestimonialsSection />
       <FaqSection />
       <FinalCtaSection />
-    </Layout>
+    </>
   );
 };
 
