@@ -1,8 +1,8 @@
-// src/components/WhyElevaiteJourney.tsx
-import { useState } from 'react';
+// src/components/WhyElevaite.tsx
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-// Elige iconos de lucide-react que representen cada etapa
-import { ClipboardList, Blocks, Rocket, Eye } from 'lucide-react';
+// Añadidos los nuevos iconos
+import { ClipboardList, Blocks, Users, Rocket, TrendingUp } from 'lucide-react';
 
 const journeySteps = [
   {
@@ -11,10 +11,8 @@ const journeySteps = [
     subtitle: 'Discovery & Strategic Alignment',
     Icon: ClipboardList,
     description: "We start with a deep dive into your unique business processes, challenges, and strategic goals. This collaborative discovery phase is crucial for ensuring your AI solution is perfectly aligned with your vision and delivers maximum impact.",
-    visualDescription: "Abstract visual of data points converging or a focused lens highlighting key information. Colors: #D0BFFF, #1C7ED6 (subtle).",
-    // Aquí iría tu componente SVG real o un <img>
-    VisualComponent: () => <div className="w-full h-48 bg-[#D0BFFF]/20 rounded-lg flex items-center justify-center p-4 border border-[#D0BFFF]/50"><p className="text-sm text-[#0D1B2A]/60">Visual: Data Analysis / Discovery</p></div>,
-    themeColor: '#D0BFFF', // Light Purple
+    imageUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1749457637/u5837542839_Minimalist_3D_abstract_art_data_visualization_of__0feee8c7-ee56-45dd-8238-e3fab362ce8e_0_eryjst.png', 
+    themeColor: '#D0BFFF', // Purple
   },
   {
     id: 2,
@@ -22,33 +20,45 @@ const journeySteps = [
     subtitle: 'Tailored Development & Design',
     Icon: Blocks,
     description: "Our experts design and build your AI agents from the ground up, integrating sophisticated logic and custom workflows. We don't use off-the-shelf templates; this is about tailor-made intelligence specifically for your operational demands.",
-    visualDescription: "Abstract visual of interlocking modules or clean, geometric blocks forming a structure. Colors: #1C7ED6, #69DB7C.",
-    VisualComponent: () => <div className="w-full h-48 bg-[#1C7ED6]/10 rounded-lg flex items-center justify-center p-4 border border-[#1C7ED6]/50"><p className="text-sm text-[#0D1B2A]/60">Visual: AI Core / Module Assembly</p></div>,
-    themeColor: '#1C7ED6', // Bright Blue
+    imageUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1749457637/u5837542839_A_3D_illustration_of_abstract_geometric_blocks_an_94647f7b-8b15-4554-b25a-76a96263bfa5_1_se69bp.png',
+    themeColor: '#1C7ED6', // Blue
   },
-  {
+  { // --- NUEVO PASO 3 ---
     id: 3,
-    title: 'Seamless Integration & Growth',
-    subtitle: 'Deployment & Continuous Optimization',
-    Icon: Rocket,
-    description: "We ensure your new AI agents are smoothly deployed into your existing ecosystem. Post-launch, we focus on continuous optimization, ensuring your AI learns, adapts, and scales with your business for ongoing efficiency gains.",
-    visualDescription: "Abstract visual of a network expanding or an upward trending graph with data trails. Colors: #69DB7C, #1C7ED6.",
-    VisualComponent: () => <div className="w-full h-48 bg-[#69DB7C]/10 rounded-lg flex items-center justify-center p-4 border border-[#69DB7C]/50"><p className="text-sm text-[#0D1B2A]/60">Visual: Network Growth / Optimization</p></div>,
+    title: 'Onboarding & Training',
+    subtitle: 'Empowering Your Team for Success',
+    Icon: Users,
+    description: "We don't just hand over the technology. We provide comprehensive onboarding for your team to ensure everyone knows how to leverage the new AI agents effectively and track their performance from day one.",
+    imageUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1749474803/u5837542839_A_highly_detailed_3D_illustration_in_a_minimalist_e14be8a9-7360-4d9f-98cf-5bef51259afc_0_ivn7jx.png', // <-- REEMPLAZA ESTO
     themeColor: '#69DB7C', // Green
   },
+  { // Antiguo paso 3, ahora es el 4
+    id: 4,
+    title: 'Boosting Your Performance',
+    subtitle: 'Integration & Impact',
+    Icon: Rocket,
+    description: "The final step is seamlessly integrating the AI into your environment and measuring its impact. We ensure a smooth launch and provide ongoing support to maximize your ROI and drive continuous improvement.",
+    imageUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1749457637/u5837542839_A_dynamic_3D_abstract_illustration_symbolizing_bu_10e8516b-f41c-4970-ab35-ca6c542d358c_0_yanqtx.png',
+    themeColor: '#1C7ED6', // Reutilizando el Azul
+  },
+  { // --- NUEVO PASO 5 ---
+    id: 5,
+    title: 'Optimization & Scaling',
+    subtitle: 'A Partnership for Continuous Growth',
+    Icon: TrendingUp,
+    description: "Our partnership extends beyond launch. We continuously monitor your AI agents' performance, providing optimizations and strategic recommendations to ensure your solutions scale seamlessly as your business grows.",
+    imageUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1749475263/u5837542839_A_friendly_3D_illustration_in_a_minimalist_corpor_14637264-df72-425d-a6db-2ab9dce0fd74_1_nf4n6i.png', // <-- REEMPLAZA ESTO
+    themeColor: '#D0BFFF', // Reutilizando el Morado
+  }
 ];
 
-const WhyElevaiteJourney = () => {
+// El nombre del componente coincide con el de tu archivo
+const WhyElevaite = () => {
   const [activeStep, setActiveStep] = useState(journeySteps[0].id);
-
   const currentStepData = journeySteps.find(step => step.id === activeStep);
 
-  const handleSeeInAction = () => {
-    console.log('See in Action clicked');
-  };
-
   return (
-    <section id="why-elevaite-journey" className="py-16 md:py-24 bg-white">
+    <section id="why-elevaite" className="py-16 md:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div
           className="text-center mb-12 md:mb-16"
@@ -58,58 +68,51 @@ const WhyElevaiteJourney = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0D1B2A] mb-3">
-            ¿Why ElevAIte?
+          The ElevAIte Launchpad: Your Journey to Automation
           </h2>
           <p className="text-base md:text-lg text-[#0D1B2A]/70 uppercase tracking-wider font-semibold">
-            Our Crafted Approach {/* "Features" renombrado para encajar con el concepto de viaje */}
+            Our Crafted Approach
           </p>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
-          {/* Navegación de Pasos (Vertical en móvil, podría ser Horizontal en Desktop) */}
-          <motion.div 
-            className="lg:w-1/3 space-y-4"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          {/* Navegación de Pasos (Ahora 5) */}
+          <div className="lg:w-1/3 space-y-3">
             {journeySteps.map((step) => (
-              <button
+              <motion.button
                 key={step.id}
                 onClick={() => setActiveStep(step.id)}
-                className={`w-full text-left p-4 rounded-lg transition-all duration-300 flex items-center gap-4
+                className={`w-full text-left p-4 rounded-lg transition-all duration-300 flex items-center gap-4 border-2
                   ${activeStep === step.id 
-                    ? `bg-[${step.themeColor}]/20 shadow-lg` 
-                    : 'hover:bg-slate-100'
+                    ? `shadow-lg` 
+                    : 'border-transparent hover:bg-slate-100'
                   }`}
-                style={activeStep === step.id ? { borderColor: step.themeColor, borderWidth: '2px', borderStyle: 'solid' } : { borderColor: 'transparent', borderWidth: '2px', borderStyle: 'solid' }}
+                style={activeStep === step.id ? { borderColor: step.themeColor, backgroundColor: `${step.themeColor}20` } : {}}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: (step.id -1) * 0.05 }} // Ajustado delay para 5 items
+                viewport={{ once: true }}
               >
                 <step.Icon 
                   size={28} 
-                  className={activeStep === step.id ? `text-[${step.themeColor}]` : 'text-[#0D1B2A]/50'} 
+                  style={{ color: activeStep === step.id ? step.themeColor : 'rgba(13, 27, 42, 0.5)' }} 
+                  className="transition-colors duration-300 flex-shrink-0"
                   strokeWidth={activeStep === step.id ? 2.5 : 2}
                 />
                 <div>
-                  <h3 className={`text-lg font-semibold ${activeStep === step.id ? `text-[${step.themeColor}]` : 'text-[#0D1B2A]'}`}>
+                  <h3 className="text-lg font-semibold transition-colors duration-300" style={{ color: activeStep === step.id ? step.themeColor : '#0D1B2A' }}>
                     {step.title}
                   </h3>
-                  <p className={`text-sm ${activeStep === step.id ? `text-[${step.themeColor}]/80` : 'text-[#0D1B2A]/60'}`}>
+                  <p className="text-sm transition-colors duration-300" style={{ color: activeStep === step.id ? `${step.themeColor}CC` : 'rgba(13, 27, 42, 0.6)' }}>
                     {step.subtitle}
                   </p>
                 </div>
-              </button>
+              </motion.button>
             ))}
-          </motion.div>
+          </div>
 
           {/* Contenido del Paso Activo */}
-          <motion.div 
-            className="lg:w-2/3 "
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
+          <div className="lg:w-2/3">
             <AnimatePresence mode="wait">
               {currentStepData && (
                 <motion.div
@@ -118,42 +121,31 @@ const WhyElevaiteJourney = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.4 }}
-                  className="p-6 bg-[#F1F3F5] rounded-xl shadow-xl" // Fondo para el contenido del paso
+                  className="bg-[#F1F3F5] rounded-xl shadow-xl overflow-hidden"
                 >
-                  <div className="mb-6">
-                    <currentStepData.VisualComponent />
-                    {/* <p className="text-xs text-center italic text-[#0D1B2A]/50 mt-2">{currentStepData.visualDescription}</p> */}
+                  <div className="aspect-w-16 aspect-h-9">
+                    <img
+                      src={currentStepData.imageUrl}
+                      alt={currentStepData.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h3 className="text-2xl font-semibold text-[#0D1B2A] mb-3" style={{color: currentStepData.themeColor}}>
-                    {currentStepData.title}
-                  </h3>
-                  <p className="text-[#0D1B2A]/80 leading-relaxed">
-                    {currentStepData.description}
-                  </p>
+                  <div className="p-6 md:p-8">
+                    <h3 className="text-2xl font-semibold mb-3" style={{color: currentStepData.themeColor}}>
+                      {currentStepData.title}
+                    </h3>
+                    <p className="text-[#0D1B2A]/80 leading-relaxed">
+                      {currentStepData.description}
+                    </p>
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
-          </motion.div>
+          </div>
         </div>
-
-        <motion.div
-          className="text-center mt-16 md:mt-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <button
-            onClick={handleSeeInAction}
-            className="bg-[#1C7ED6] hover:bg-[#1565C0] text-white px-10 py-3.5 rounded-lg text-lg font-semibold transition-colors duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#1C7ED6] focus:ring-opacity-50 flex items-center mx-auto gap-2"
-          >
-            <Eye size={20} strokeWidth={2.5}/>
-            SEE IN ACTION
-          </button>
-        </motion.div>
       </div>
     </section>
   );
 };
 
-export default WhyElevaiteJourney;
+export default WhyElevaite;

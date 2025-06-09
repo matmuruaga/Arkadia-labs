@@ -1,15 +1,12 @@
 // src/components/Hero.tsx
 import { motion } from 'framer-motion';
 import AccumulatingTypingEffect, { PhraseWithEmoji } from './AccumulatingTypingEffect';
-// El icono Brain ya no se usa para este botón, se reemplaza por la imagen.
-// Si necesitas otros iconos de Lucide en otra parte, mantenlos.
 
+// Ya no necesita recibir ninguna prop para el widget
 const Hero = () => {
-  const handleLetsTalkClick = () => {
-    console.log("Floating button 'I'm ready to talk' clicked. Implement action.");
-    // Lógica para chat, Calendly, etc.
-  };
 
+  // La función handleLetsTalkClick ya no es necesaria aquí
+  
   const aiAgentPhrases: PhraseWithEmoji[] = [
     { emoji: "📈", text: "Marketing Agent driving growth..." },
     { emoji: "⚙️", text: "Automation Agent streamlining tasks..." },
@@ -22,37 +19,37 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-20 bg-[#F1F3F5] relative"
+      // Añadimos un poco más de padding inferior para dar espacio al nuevo widget flotante
+      className="min-h-screen flex flex-col items-center justify-center px-4 pt-16 pb-32 sm:pt-20 sm:pb-40 bg-[#F1F3F5] relative"
     >
       <div className="container mx-auto mt-10 md:mt-0">
-        <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-12"> {/* md:items-start para alinear con H1 */}
+        <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-12">
           
           {/* Columna de Texto (Izquierda) */}
           <div className="md:w-1/2 lg:w-3/5 text-center md:text-left pt-0 md:pt-2 lg:pt-4">
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold mb-6 text-[#0D1B2A] leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold mb-4 text-[#0D1B2A] leading-tight"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              Beyond Off-the-Shelf: Get AI Agents{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1C7ED6] to-[#D0BFFF]">
-                Crafted
+                Adaptive AI Systems:
               </span>
-              {' '}For Your Business.
+              {' '}that save time and generate revenue.
             </motion.h1>
 
-            <motion.p
+            <motion.h2
               className="text-lg sm:text-xl text-[#0D1B2A]/80"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
             >
-              Automate complex tasks and achieve superior operational efficiency with truly personalized AI solutions.
-            </motion.p>
+              Automate business operations to achieve superior efficiency with tailored AI solutions.
+            </motion.h2>
           </div>
 
-          {/* Columna del Elemento Visual (Derecha) - Typing Effect Box */}
+          {/* Columna del Elemento Visual (Derecha) */}
           <motion.div 
             className="md:w-1/2 lg:w-2/5 w-full mt-6 md:mt-0 flex justify-center md:justify-start"
             initial={{ opacity: 0, x: 20 }}
@@ -73,44 +70,8 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Conjunto de Botón Flotante Modificado */}
-      <div 
-        className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center w-full px-4" // w-full y px-4 para que el texto no se corte en móviles
-      >
-        {/* Botón Circular Flotante con Gradiente e Imagen */}
-        <motion.button
-          onClick={handleLetsTalkClick}
-          aria-label="Let's talk about AI solutions"
-          // Gradiente de tu paleta, de Morado Claro a Azul Brillante
-          className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[#D0BFFF] to-[#1C7ED6] rounded-full flex items-center justify-center shadow-xl hover:opacity-90 focus:outline-none focus:ring-4 focus:ring-[#B3A2FF]/70 transition-all duration-300 p-3 sm:p-4" // Padding para la imagen interna
-          animate={{ y: [0, -8, 0] }} 
-          transition={{
-            duration: 2.0,          
-            repeat: Infinity,     
-            ease: "easeInOut",    
-            repeatDelay: 0.2,
-          }}
-          whileHover={{ scale: 1.05 }} // Sutil efecto de escala al hover
-          whileTap={{ scale: 0.95 }}
-        >
-          <img 
-            src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1749075688/technical-support_nzdkqo.png" 
-            alt="Talk to AI expert" 
-            className="w-full h-full object-contain" // Para que la imagen se ajuste bien
-          />
-        </motion.button>
+      {/* EL BOTÓN FLOTANTE PERSONALIZADO HA SIDO ELIMINADO DE AQUÍ */}
 
-        {/* Caja Gris Oscura con Texto Debajo */}
-        <motion.div
-          onClick={handleLetsTalkClick} 
-          className="mt-3 bg-[#0D1B2A] text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-md shadow-lg cursor-pointer hover:bg-opacity-90 transition-opacity"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }} 
-        >
-          I'm ready to talk!
-        </motion.div>
-      </div>
     </section>
   );
 };

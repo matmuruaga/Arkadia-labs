@@ -1,14 +1,13 @@
 // src/components/Header.tsx
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react"; // BrainCircuit no se usaba en el return, lo quité
+import { Menu, X } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom"; // <-- 1. Importa Link y useNavigate
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
-
-  // scrollToPlans no se usa directamente en los enlaces del menú, puedes eliminarla o implementarla si es necesario.
-  // const scrollToPlans = () => { ... }; 
+  const navigate = useNavigate(); // <-- 2. Inicializa el hook para la navegación
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,74 +16,68 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const linkClasses = "text-[#0D1B2A] hover:text-[#1C7ED6] transition-colors";
-  const mobileLinkClasses = `block py-2 ${linkClasses}`;
   
-  // Opción 1: Botón "Get Started" con el cian original (var(--accent-old))
-  // const buttonClasses = "bg-[#5CE1E6] text-[#0D1B2A] px-6 py-2.5 rounded-full font-semibold hover:bg-opacity-80 transition-all duration-300";
-  // Opción 2: Botón "Get Started" con el nuevo azul de acento
-  const buttonClasses = "bg-[#1C7ED6] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-[#1565C0] transition-all duration-300";
+  // Función para el botón "Get Started"
+  const handleGetStartedClick = () => {
+    setIsMenuOpen(false); // Cierra el menú móvil si está abierto
+    navigate('/get-started');
+  };
 
+  const linkClasses = "text-[#0D1B2A] hover:text-[#1C7ED6] transition-colors font-medium";
+  const mobileLinkClasses = `block py-3 text-center text-lg ${linkClasses}`;
+  const buttonClasses = "bg-[#1C7ED6] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-[#155CB0] transition-all duration-300";
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
       scrolling 
-        ? "bg-[#F1F3F5]/80 backdrop-blur-md border-b border-slate-300 shadow-sm" 
-        : "bg-transparent" // O bg-[#F1F3F5] si quieres que siempre tenga fondo
+        ? "bg-[#F1F3F5]/80 backdrop-blur-md border-b border-slate-200 shadow-sm" 
+        : "bg-transparent"
     }`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-        <a href="/" className="flex items-center space-x-2">
+        {/* El logo ahora usa Link para navegar a la página de inicio */}
+        <Link to="/" aria-label="Go to homepage">
             <img
              src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1749155603/Recurso_14_wwxduv.svg" 
              alt="ElevAIte Labs Logo"
-             className="h-8 w-auto" // Podrías necesitar un logo diferente para tema claro si este no contrasta bien
-             />
-        </a>
+             className="h-8 w-auto"
+            />
+        </Link>
 
-        {/* Desktop Menu */}
+        {/* Desktop Menu - Actualizado con <Link> */}
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
-          <a href="#features" className={linkClasses}>Features</a>
-          <a href="#subscription-plans" className={linkClasses}>Plans</a>
-          <a href="#testimonials" className={linkClasses}>Testimonials</a>
-          <a href="#contact" className={linkClasses}>Contact</a>
-          <button
-            onClick={() => window.location.href = "/get-started"}
-            className={buttonClasses}
-          >
+          {/* 3. Los enlaces ahora apuntan a la ruta raíz + el ancla */}
+          <Link to="/#before-after" className={linkClasses}>Features</Link>
+          <Link to="/pricing" className={linkClasses}>Plans</Link>
+          <Link to="/#integrations" className={linkClasses}>Integrations</Link>
+          <Link to="/#contact" className={linkClasses}>Contact</Link>
+          <button onClick={handleGetStartedClick} className={buttonClasses}>
             Get Started
           </button>
         </nav>
 
-        {/* Mobile Toggle */}
         <div className="md:hidden">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
-            {isMenuOpen 
-              ? <X className="text-[#0D1B2A]" size={28} /> 
-              : <Menu className="text-[#0D1B2A]" size={28} />}
+            {isMenuOpen ? <X className="text-[#0D1B2A]" size={28} /> : <Menu className="text-[#0D1B2A]" size={28} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Actualizado con <Link> */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-[#F1F3F5] border-t border-slate-300 shadow-lg" // Fondo claro para el menú móvil
+            className="md:hidden bg-[#F1F3F5] border-t border-slate-300 shadow-lg"
           >
             <nav className="px-4 py-6 space-y-4">
-              <a href="#features" onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>Features</a>
-              <a href="#subscription-plans" onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>Plans</a>
-              <a href="#testimonials" onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>Testimonials</a>
-              <a href="#contact" onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>Contact</a>
-              <button
-                  onClick={() => { window.location.href = "/get-started"; setIsMenuOpen(false); }}
-                  className={`w-full mt-2 ${buttonClasses}`}
-              >
+              <Link to="/#before-after" onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>Features</Link>
+              <Link to="/pricing" onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>Plans</Link>
+              <Link to="/#integrations" onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>Integrations</Link>
+              <Link to="/#contact" onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>Contact</Link>
+              <button onClick={handleGetStartedClick} className={`w-full mt-4 py-3 ${buttonClasses}`}>
                   Get Started
               </button>
             </nav>

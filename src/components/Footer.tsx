@@ -43,7 +43,7 @@ const Footer = () => {
             <h3 className="text-[#0D1B2A] font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><a href="#" className={navLinkClasses}>AI Solutions</a></li>
-              <li><a href="#" className={navLinkClasses}>Pricing</a></li>
+              <li><a href="/pricing" className={navLinkClasses}>Pricing</a></li>
               <li><a href="#" className={navLinkClasses}>Case Studies</a></li>
               <li><a href="#" className={navLinkClasses}>About Us</a></li>
             </ul>
