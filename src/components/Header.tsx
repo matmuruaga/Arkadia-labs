@@ -67,7 +67,7 @@ const Header = () => {
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
           <Link to="/#before-after" className={linkClasses} onClick={(e) => handleNavClick(e, 'before-after')}>Features</Link>
-          <Link to="/pricing" className={linkClasses}>Plans</Link>
+          {/* <Link to="/pricing" className={linkClasses}>Plans</Link> */}
           <Link to="/#integrations" className={linkClasses} onClick={(e) => handleNavClick(e, 'integrations')}>Integrations</Link>
           <Link to="/#contact" className={linkClasses} onClick={(e) => handleNavClick(e, 'contact')}>Contact</Link>
           <button onClick={handleGetStartedClick} className={buttonClasses}>
@@ -95,7 +95,7 @@ const Header = () => {
           >
             <nav className="px-4 py-6 space-y-4">
               <Link to="/#before-after" onClick={(e) => handleNavClick(e, 'before-after')} className={mobileLinkClasses}>Features</Link>
-              <Link to="/pricing" onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>Plans</Link>
+              {/* <Link to="/pricing" onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>Plans</Link> */}
               <Link to="/#integrations" onClick={(e) => handleNavClick(e, 'integrations')} className={mobileLinkClasses}>Integrations</Link>
               <Link to="/#contact" onClick={(e) => handleNavClick(e, 'contact')} className={mobileLinkClasses}>Contact</Link>
               <button onClick={handleGetStartedClick} className={`w-full mt-4 py-3 ${buttonClasses}`}>

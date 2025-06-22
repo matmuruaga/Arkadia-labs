@@ -1,36 +1,49 @@
 // src/App.tsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { ElevenLabsWidgetProvider } from "./components/ElevenLabsWidgetContext";
+
+// --- Componentes de estructura y lógica ---
+import Layout from "./components/Layout";
+import ScrollToTop from "./components/ScrollToTop";
+
+// --- Páginas Públicas ---
 import MainPage from "./pages/MainPage";
 import PricingPage from "./pages/PricingPage";
 import GetStarted from "./pages/GetStarted";
-import ScrollToTop from "./components/ScrollToTop";
-import { ElevenLabsWidgetProvider } from "./components/ElevenLabsWidgetContext"; // <-- 1. Importa el Provider
-import Layout from "./components/Layout"
-
-// --- 1. Importa las nuevas páginas legales ---
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsPage from "./pages/TermsPage";
 import CookiePolicyPage from "./pages/CookiePolicyPage";
 import LegalNoticePage from "./pages/LegalNoticePage";
 
+
+/**
+ * Componente que agrupa todas las rutas que usan el Layout principal (Header/Footer).
+ * El componente <Outlet /> renderizará la ruta hija que corresponda.
+ */
+const PublicLayout = () => (
+  <Layout>
+    <Outlet />
+  </Layout>
+);
+
 function App() {
   return (
-    // --- 2. Envuelve todo con el Provider ---
     <ElevenLabsWidgetProvider>
       <BrowserRouter>
-      <Layout>
-      <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/get-started" element={<GetStarted />} />
-          {/* --- 2. Añade las nuevas rutas --- */}
-          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-          <Route path="/terms-and-conditions" element={<TermsPage />} />
-          <Route path="/cookie-policy" element={<CookiePolicyPage />} />
-          <Route path="/legal-notice" element={<LegalNoticePage />} />
-        </Routes>
-        </Layout >
+          <ScrollToTop />
+          <Routes>
+            {/* --- GRUPO DE RUTAS PÚBLICAS --- */}
+            {/* Todas las rutas dentro de este grupo usarán el PublicLayout */}
+            <Route element={<PublicLayout />}>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/get-started" element={<GetStarted />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+              <Route path="/terms-and-conditions" element={<TermsPage />} />
+              <Route path="/cookie-policy" element={<CookiePolicyPage />} />
+              <Route path="/legal-notice" element={<LegalNoticePage />} />
+            </Route>
+          </Routes>
       </BrowserRouter>
       
       <elevenlabs-convai 

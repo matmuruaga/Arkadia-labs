@@ -40,7 +40,7 @@ const Footer = () => {
             <h3 className="text-[#0D1B2A] font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><Link to="/#before-after" className={navLinkClasses}>Features</Link></li>
-              <li><Link to="/pricing" className={navLinkClasses}>Pricing</Link></li>
+              {/* <li><Link to="/pricing" className={navLinkClasses}>Pricing</Link></li> */}
               <li><Link to="/#testimonials" className={navLinkClasses}>Case Studies</Link></li>
             </ul>
           </div>
