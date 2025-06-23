@@ -1,0 +1,623 @@
+{
+  "languageCode": "en",
+  "header": {
+    "features": "Features",
+    "plans": "Plans",
+    "integrations": "Integrations",
+    "contact": "Use Case",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "title_part1": "Adaptive AI Systems:",
+    "title_part2": "that save time and generate revenue.",
+    "subtitle": "Automate business operations to achieve superior efficiency with tailored AI solutions."
+  },
+  "beforeAfter": {
+    "title": "The ElevAIte Transformation: Before & After",
+    "subtitle": "Select a department to see how our custom AI agents outperform traditional tools and boost your operational efficiency.",
+    "challengeTitle": "The Manual Challenge",
+    "solutionTitle": "The ElevAIte Solution",
+    "cta": "Start Automating Now",
+    "tabs": {
+      "sales": "Sales",
+      "marketing": "Marketing",
+      "operations": "Operations",
+      "support": "Support",
+      "hr": "HR & Recruitment"
+    },
+    "content": {
+      "sales": {
+        "s1": { "beforeTitle": "Inconsistent Follow-ups", "beforeDescription": "Leads go cold and opportunities are lost due to sporadic, manual follow-up efforts.", "afterTitle": "AI-Powered Nurturing", "afterDescription": "Your agent executes tireless, multi-touch follow-up sequences to ensure no lead is ever forgotten." },
+        "s2": { "beforeTitle": "Generic Sales Pitches", "beforeDescription": "Sales reps use the same script for every prospect, failing to connect with their specific pain points.", "afterTitle": "Dynamic, Personalized Pitches", "afterDescription": "The AI provides reps with data-driven talking points and personalized variations for each prospect." },
+        "s3": { "beforeTitle": "Manual CRM Data Entry", "beforeDescription": "Hours are wasted each day logging calls and emails, taking valuable time away from actual selling.", "afterTitle": "Automated Activity Logging", "afterDescription": "Every interaction is automatically logged in your CRM in real-time, providing a perfect, effortless record." },
+        "s4": { "beforeTitle": "Inaccurate Sales Forecasting", "beforeDescription": "Forecasts are based on guesswork and gut feelings, leading to unreliable revenue predictions.", "afterTitle": "AI-Driven Predictive Forecasting", "afterDescription": "Leverage predictive analytics based on real engagement data for highly accurate, data-driven forecasts." },
+        "s5": { "beforeTitle": "Time Spent on Lead Research", "beforeDescription": "Reps spend more time researching prospects on multiple platforms than actually talking to them.", "afterTitle": "Instant Lead Enrichment", "afterDescription": "Your agent instantly enriches leads with company data, social profiles, and key insights." }
+      },
+      "marketing": {
+        "m1": { "beforeTitle": "Broad Audience Targeting", "beforeDescription": "Campaigns target wide segments, resulting in low conversion rates and wasted ad spend.", "afterTitle": "AI-Driven Micro-Segmentation", "afterDescription": "AI identifies and targets hyper-specific micro-segments with the most relevant messaging." },
+        "m2": { "beforeTitle": "Difficult Campaign Attribution", "beforeDescription": "It's nearly impossible to know which marketing activities are actually driving revenue.", "afterTitle": "Clear, Real-time ROI Analysis", "afterDescription": "Track every touchpoint with AI-powered models that provide a clear view of your marketing ROI." },
+        "m3": { "beforeTitle": "Time-Consuming Content Creation", "beforeDescription": "The content team is a bottleneck, struggling to produce enough copy for ads, emails, and social media.", "afterTitle": "AI-Assisted Content Generation", "afterDescription": "Generate high-quality first drafts for ad copy, email campaigns, and social posts in seconds." },
+        "m4": { "beforeTitle": "Low Social Media Engagement", "beforeDescription": "Company social media accounts feel static, with slow responses to comments and messages.", "afterTitle": "Automated Social Engagement", "afterDescription": "Your AI agent can manage first-level engagement, respond to common questions, and schedule content." },
+        "m5": { "beforeTitle": "Static Email Campaigns", "beforeDescription": "All users receive the same email drip, regardless of their behavior or engagement level.", "afterTitle": "Dynamic & Adaptive Email Journeys", "afterDescription": "AI triggers email journeys that adapt in real-time based on user actions and engagement." }
+      },
+      "operations": {
+        "o1": { "beforeTitle": "Rigid, Manual Workflows", "beforeDescription": "Error-prone processes are difficult to follow and scale, creating operational bottlenecks.", "afterTitle": "AI-Powered Process Orchestration", "afterDescription": "Flexible automation of complex workflows that dynamically adapt to your business needs." },
+        "o2": { "beforeTitle": "Fragmented Data Silos", "beforeDescription": "Information is scattered across different systems, making a unified view impossible.", "afterTitle": "Unified Operational Dashboard", "afterDescription": "AI aggregates data from all sources into a single, real-time view for better decision-making." },
+        "o3": { "beforeTitle": "Reactive Problem Solving", "beforeDescription": "Issues are only addressed after they've already caused a disruption to the business.", "afterTitle": "Predictive Maintenance & Alerts", "afterDescription": "Your agent can predict potential issues and send alerts before they impact your operations." },
+        "o4": { "beforeTitle": "Manual Inventory Management", "beforeDescription": "Guesswork in inventory leads to stockouts or overstocking, affecting cash flow and sales.", "afterTitle": "Predictive Inventory Optimization", "afterDescription": "AI analyzes sales data and trends to recommend optimal inventory levels automatically." },
+        "o5": { "beforeTitle": "Inefficient Resource Allocation", "beforeDescription": "Assigning tasks and resources manually often leads to unbalanced workloads and project delays.", "afterTitle": "AI-Powered Resource Scheduling", "afterDescription": "Intelligently assign resources based on availability, skill, and priority for maximum efficiency." }
+      },
+      "support": {
+        "su1": { "beforeTitle": "Long Ticket Queues & Wait Times", "beforeDescription": "Customers are left waiting for hours or days to get answers to simple questions.", "afterTitle": "Instant L1 Support with 24/7 AI Agents", "afterDescription": "Provide immediate answers to common questions around the clock, drastically reducing wait times." },
+        "su2": { "beforeTitle": "Agent Burnout from Repetitive Questions", "beforeDescription": "Support agents spend most of their day answering the same questions over and over again.", "afterTitle": "Automated FAQ & KB Responses", "afterDescription": "Your AI frees up human agents by handling routine inquiries, allowing them to focus on complex cases." },
+        "su3": { "beforeTitle": "Lack of Personalization in Service", "beforeDescription": "Every customer gets a generic, scripted response that fails to acknowledge their history.", "afterTitle": "Context-Aware, Personalized Support", "afterDescription": "The AI agent has full context of the customer's history to provide a truly personal and effective response." },
+        "su4": { "beforeTitle": "No Proactive Support", "beforeDescription": "You only help customers after they complain, missing opportunities to build loyalty.", "afterTitle": "Proactive Issue Detection & Outreach", "afterDescription": "AI can detect signs of customer frustration or potential issues and proactively offer help." },
+        "su5": { "beforeTitle": "Limited Support Coverage (9-5)", "beforeDescription": "Your global customers can't get help outside of your local business hours.", "afterTitle": "24/7 AI-Powered Global Availability", "afterDescription": "Offer consistent, high-quality support to all your customers, no matter their time zone." }
+      },
+      "hr": {
+        "h1": { "beforeTitle": "Manual CV Screening Overload", "beforeDescription": "HR managers spend countless hours reading through hundreds of irrelevant resumes.", "afterTitle": "AI-Powered Candidate Matching", "afterDescription": "Your AI agent automatically screens, scores, and shortlists the most qualified candidates for any role." },
+        "h2": { "beforeTitle": "Chaotic Interview Scheduling", "beforeDescription": "The back-and-forth emails to schedule a single interview can take days.", "afterTitle": "Automated Calendar Coordination", "afterDescription": "The AI coordinates with candidates and interviewers to find the perfect time and books it automatically." },
+        "h3": { "beforeTitle": "Generic Employee Onboarding", "beforeDescription": "New hires receive a standard package that doesn't cater to their specific role or needs.", "afterTitle": "Personalized Onboarding Journeys", "afterDescription": "Create unique onboarding experiences with an AI agent that guides new hires through their specific tasks." },
+        "h4": { "beforeTitle": "Time-Consuming FAQ Answering", "beforeDescription": "HR staff are constantly interrupted with the same questions about policies, payroll, and benefits.", "afterTitle": "Instant HR & Policy AI Assistant", "afterDescription": "An internal AI assistant provides instant, accurate answers to employee questions 24/7." },
+        "h5": { "beforeTitle": "Low Employee Engagement Insights", "beforeDescription": "Annual surveys provide stale data that is difficult to act upon in a timely manner.", "afterTitle": "AI-Powered Engagement Analysis", "afterDescription": "AI analyzes feedback from multiple channels in real-time to provide a constant pulse on team morale." }
+      }
+    }
+  },
+   "kpi": {
+    "title": "The ElevAIte Impact: Measurable Results",
+    "subtitle": "Discover how our crafted AI solutions translate into tangible benefits and significant growth for businesses like yours.",
+    "cards": {
+      "kpi1": {
+        "description": "Global law firm automates compiling and analysis of legal docs with our AI.",
+        "label": "Reduction in Manual Task Time"
+      },
+      "kpi2": {
+        "description": "European fintech scales up new hire onboarding using AI agents.",
+        "label": "Faster Response & Resolution"
+      },
+      "kpi3": {
+        "description": "Leading SaaS company automates L1 support queries with custom AI.",
+        "label": "Increase in Lead Qualification"
+      },
+      "kpi4": {
+        "description": "Industrial market leader uses AI agent to augment customer support globally.",
+        "label": "Operational Efficiency Boost"
+      }
+    }
+  },
+  "whyElevaite": {
+  "title": "The ElevAIte Launchpad: Your Journey to Automation",
+  "subtitle": "Our Crafted Approach",
+  "steps": {
+    "s1": {
+      "title": "Understanding Your Needs",
+      "subtitle": "Discovery & Strategic Alignment",
+      "description": "We start with a deep dive into your unique business processes, challenges, and strategic goals. This collaborative discovery phase is crucial for ensuring your AI solution is perfectly aligned with your vision and delivers maximum impact."
+    },
+    "s2": {
+      "title": "Crafting Your Custom AI",
+      "subtitle": "Tailored Development & Design",
+      "description": "Our experts design and build your AI agents from the ground up, integrating sophisticated logic and custom workflows. We don't use off-the-shelf templates; this is about tailor-made intelligence specifically for your operational demands."
+    },
+    "s3": {
+      "title": "Onboarding & Training",
+      "subtitle": "Empowering Your Team for Success",
+      "description": "We don't just hand over the technology. We provide comprehensive onboarding for your team to ensure everyone knows how to leverage the new AI agents effectively and track their performance from day one."
+    },
+    "s4": {
+      "title": "Boosting Your Performance",
+      "subtitle": "Integration & Impact",
+      "description": "The final step is seamlessly integrating the AI into your environment and measuring its impact. We ensure a smooth launch and provide ongoing support to maximize your ROI and drive continuous improvement."
+    },
+    "s5": {
+      "title": "Optimization & Scaling",
+      "subtitle": "A Partnership for Continuous Growth",
+      "description": "Our partnership extends beyond launch. We continuously monitor your AI agents' performance, providing optimizations and strategic recommendations to ensure your solutions scale seamlessly as your business grows."
+    }
+  }
+},
+"integrations": {
+  "title": "Seamless Integrations: Connect Your Entire Ecosystem",
+  "description": "ElevAIte's AI agents are designed to operate at the heart of your existing tools. We natively integrate with your CRMs, communication platforms, calendars, and more, amplifying your workflows without disruption and boosting overall productivity.",
+  "examples": {
+    "e1": "Market-leading CRMs (Salesforce, HubSpot, etc.)",
+    "e2": "Communication Platforms (Slack, Email, Microsoft Teams)",
+    "e3": "Smart Calendar & Scheduling Tools",
+    "e4": "Custom APIs & Internal Systems Integration",
+    "e5": "Databases & Data Analysis Tools"
+  },
+  "ctaButton": "How it works?"
+},
+"testimonials": {
+  "title": "Trusted by Innovative Businesses",
+  "subtitle": "Hear how our crafted AI solutions are making a real difference.",
+  "mainLogos": {
+    "logo1": "Global Innovate",
+    "logo2": "NextGen Corp",
+    "logo3": "Alpha Solutions",
+    "logo4": "Peak Dynamics",
+    "logo5": "Core Systems"
+  },
+  "cards": {
+    "t1": {
+      "quote": "Before ElevAIte, our sales team was drowning in unqualified leads. The AI agent they built doesn't just filter; it learns and adapts to our ideal customer profile. Our team's morale is through the roof because they're finally focused on what they do best: building relationships and closing deals.",
+      "author": "Jessica Miller",
+      "title": "Head of Sales",
+      "company": "ApexConnect"
+    },
+    "t2": {
+      "quote": "Our month-end reporting used to be a week-long, error-prone nightmare. The automation agent ElevAIte crafted for us now handles it in under an hour, with zero errors. It's not just a time-saver; it's given us back our sanity and lets us focus on strategy, not spreadsheets.",
+      "author": "Michael Carter",
+      "title": "Chief Operating Officer",
+      "company": "ScaleOps"
+    },
+    "t3": {
+      "quote": "We were worried an AI would feel impersonal, but it's been the opposite. The support agent handles all routine queries instantly, 24/7, which frees up our human experts to tackle complex issues with more care. Our customers now get faster answers for simple things and better support for big problems. It's a win-win.",
+      "author": "Sofia Rossi",
+      "title": "Director of Customer Experience",
+      "company": "Bright-Desk"
+    }
+  },
+  "caseStudyButton": "Read Full Story",
+  "altText": {
+    "portrait": "Portrait of {{author}}",
+    "logo": "{{company}} logo"
+  }
+},
+"faq": {
+  "title": "Frequently Asked Questions",
+  "subtitle": "Find quick answers to common questions about our AI solutions.",
+  "questions": {
+    "q1": {
+      "question": "What kind of AI agents can you build?",
+      "answer": "We craft a wide range of AI agents tailored to specific business needs, including marketing agents, automation agents for operational tasks, intelligent receptionist agents, sales AI assistants to boost your pipeline, AI-powered support agents for enhanced customer experience, and data analyst agents for insightful reporting."
+    },
+    "q2": {
+      "question": "How long does it take to implement a custom AI agent?",
+      "answer": "The timeline for implementing a custom AI agent can vary depending on the complexity and the integration requirements. Typically, a project can take anywhere from a few weeks to a couple of months. We begin with a discovery phase to fully understand your specific needs and then provide you with a more accurate project estimate."
+    },
+    "q3": {
+      "question": "Do your AI agents integrate with existing business tools?",
+      "answer": "Absolutely. Seamless integration is a core part of our offering. Our AI agents are designed to connect with your existing CRMs (like Salesforce, HubSpot), communication platforms (Slack, email, Teams), calendar tools, databases, and even custom APIs to ensure a smooth workflow."
+    },
+    "q4": {
+      "question": "How do you ensure the AI solutions are truly 'crafted' for my business?",
+      "answer": "Our process begins with a deep dive into your specific operational challenges, workflows, and strategic goals. We don't use one-size-fits-all templates. Each AI agent's logic, tasks, and integrations are custom-designed and developed to provide a truly personalized solution that addresses your unique requirements."
+    },
+    "q5": {
+      "question": "What kind of ROI can I expect from an AI agent?",
+      "answer": "Clients typically see significant ROI through increased efficiency, reduced manual labor costs, improved lead conversion rates, faster response times, and enhanced customer satisfaction. We work with you to define key performance indicators (KPIs) to measure the specific impact on your business."
+    }
+  }
+},
+"finalCta": {
+  "heading": {
+    "part1": "Supercharge Your",
+    "part2": "with Crafted AI Agents"
+  },
+  "cyclingWords": {
+    "w1": "Sales",
+    "w2": "Marketing",
+    "w3": "Operations",
+    "w4": "Support",
+    "w5": "Growth"
+  },
+  "description": "Ready to unlock unprecedented efficiency and scale with AI agents built for your unique business needs? Let's build your future, together.",
+  "primaryCta": "Get Your Custom AI Solution",
+  "secondaryCta": "Book a Consultation"
+},
+"footer": {
+  "altLogo": "ElevAIte Labs Logo",
+  "companyName": "ElevAIte Labs",
+  "description": "Transforming businesses with intelligent AI automation solutions.",
+  "social": {
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "youtube": "YouTube",
+    "instagram": "Instagram"
+  },
+  "headings": {
+    "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "stayUpdated": "Stay Updated"
+  },
+  "links": {
+    "features": "Features",
+    "caseStudies": "Case Studies",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "cookies": "Cookie Policy"
+  },
+  "newsletter": {
+    "placeholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "description": "🚀 Stay ahead with AI automation – Subscribe to our newsletter!"
+  },
+  "copyright": "All rights reserved."
+},
+"pricing": {
+  "mostPopular": "Most Popular",
+  "perMonth": "/mo",
+  "plans": {
+    "p1": {
+      "name": "AI Employee",
+      "setupFee": "$1,500 one-time setup fee",
+      "description": "For small businesses automating lead qualification & follow-ups.",
+      "cta": "Choose Plan",
+      "features": {
+        "f1": "1 AI Sales System built & trained",
+        "f2": "2× Monthly Strategy Calls (30 min)",
+        "f3": "Standard Email & Chat Support",
+        "f4": "CRM Integration",
+        "f5": "Monthly Optimizing Session",
+        "f6": "Standard Response (24–48h)"
+      },
+      "excluded": {
+        "e1": "External Tools (Twilio, APIs, CRMs)",
+        "e2": "Dedicated Slack Channel"
+      }
+    },
+    "p2": {
+      "name": "AI Sales Team",
+      "setupFee": "$2,500 one-time setup fee",
+      "description": "Designed for scaling teams automating multiple sales functions.",
+      "cta": "Get Started Now",
+      "features": {
+        "f1": "3 AI Sales Systems built & trained",
+        "f2": "4× Monthly Strategy Calls (30 min)",
+        "f3": "Priority Email & Chat Support",
+        "f4": "Dedicated Slack Channel",
+        "f5": "CRM Integration",
+        "f6": "Bi-Weekly Optimization Session",
+        "f7": "Priority Response (12–24h)"
+      },
+      "excluded": {
+        "e1": "External Tools (Twilio, APIs, CRMs)"
+      }
+    },
+    "p3": {
+      "name": "AI Growth Partner",
+      "setupFee": "$5,000 one-time setup fee",
+      "description": "For enterprises automating their entire sales funnel.",
+      "cta": "Contact Sales",
+      "features": {
+        "f1": "10 AI Sales System built & trained",
+        "f2": "Weekly Strategy Calls (60 min)",
+        "f3": "Exclusive Email & Chat Support",
+        "f4": "Dedicated Slack Channel",
+        "f5": "CRM Integrations",
+        "f6": "Weekly Optimization Sessions",
+        "f7": "4-Hour Response Time"
+      },
+      "excluded": {
+        "e1": "External Tools (Twilio, APIs, CRMs)"
+      }
+    }
+  },
+  "footer": {
+    "annualDiscount": "💰 Save up to 20% with annual billing!",
+    "paymentOptions": "Payment options: Invoice, Bank Transfer, Stripe (Credit Card)",
+    "addOnsTitle": "✳️ Add-ons Available:",
+    "addOn1": "Additional Strategy Call – $250",
+    "addOn2": "Sales Training for Human Team – $750"
+  },
+"header": {
+  "title": "Find the Perfect AI Partner for Your Business",
+  "subtitle": "Simple, transparent pricing to help you scale. Choose the plan that fits your growth ambitions."
+}
+},
+"featureComparison": {
+  "title": "Compare Plans Side-by-Side",
+  "subtitle": "Find the exact features you need to drive growth.",
+  "roiButton": "Calculate Your Potential ROI",
+  "tableHeader": {
+    "features": "Features",
+    "plan1": "AI Employee",
+    "plan2": "AI Sales Team",
+    "plan3": "AI Growth Partner"
+  },
+  "features": {
+    "f1": {
+      "name": "AI Sales Systems built & trained",
+      "plan1": "1", "plan2": "3", "plan3": "10"
+    },
+    "f2": {
+      "name": "Monthly Strategy Calls",
+      "plan1": "2× (30 min)", "plan2": "4× (30 min)", "plan3": "Weekly (60 min)"
+    },
+    "f3": {
+      "name": "Email & Chat Support",
+      "plan1": "Standard", "plan2": "Priority", "plan3": "Exclusive"
+    },
+    "f4": {
+      "name": "Dedicated Slack Channel",
+      "plan1": "false", "plan2": "true", "plan3": "true"
+    },
+    "f5": {
+      "name": "CRM Integration(s)",
+      "plan1": "true", "plan2": "true", "plan3": "true"
+    },
+    "f6": {
+      "name": "Optimization Sessions",
+      "plan1": "Monthly", "plan2": "Bi-Weekly", "plan3": "Weekly"
+    },
+    "f7": {
+      "name": "Support Response Time",
+      "plan1": "24–48h", "plan2": "12–24h", "plan3": "4-Hour"
+    },
+    "f8": {
+      "name": "External Tools (Twilio, APIs, CRMs)",
+      "plan1": "false", "plan2": "false", "plan3": "false"
+    }
+  }
+},
+"modal": {
+  "close": "Close modal"
+},
+"roiCalculator": {
+  "title": "Calculate Your ROI",
+  "subtitle": "Adjust the sliders to see your potential savings and revenue growth.",
+  "plans": {
+    "employee": "AI Employee",
+    "team": "AI Sales Team",
+    "partner": "AI Growth Partner"
+  },
+  "inputs": {
+    "reps": "Number of Sales Reps",
+    "dealSize": "Average Deal Size",
+    "leads": "Current Monthly Leads"
+  },
+  "results": {
+    "gain": "POTENTIAL MONTHLY GAIN*",
+    "hoursSaved": "HOURS SAVED*",
+    "roi": "EST. ROI*",
+    "perMonthSuffix": "/mo"
+  },
+  "disclaimer": "*All results shown are estimates based on the data you provide and our general customer models. A personalized deep-dive analysis is required for a more precise forecast."
+},
+"privacyPolicy": {
+  "title": "Privacy Policy",
+  "lastUpdated": "June 10, 2025",
+  "sections": {
+    "introduction": {
+      "heading": "Introduction",
+      "body": {
+        "p1": "This Privacy Policy describes how ElevAIte Labs AG (\"ElevAIte\", \"we\", \"us\", or \"our\") collects, uses, processes, and discloses your information in connection with your access to and use of our website (elevaitelabs.io), our AI-powered services, and other interactions you may have with us (collectively, the \"Services\").",
+        "p2": "We are committed to protecting your privacy and handling your data in an open and transparent manner. When you access our Website or use our Services, you are trusting us with your information. We understand this is a big responsibility and we work hard to protect your information and put you in control."
+      }
+    },
+    "informationWeCollect": {
+      "heading": "Information We Collect",
+      "body": {
+        "p1": "We collect information to provide better services to all our users. The types of personal information we may collect depend on your interaction with us and can be broadly categorized as follows:",
+        "h4_1": "A. Information You Provide to Us",
+        "p2": "This includes data you voluntarily provide when you create an account, request a demo, contact our sales or support teams, or otherwise communicate with us. This may include your full name, email address, phone number, company name, job title, and the content of your communications.",
+        "h4_2": "B. Information We Collect Automatically",
+        "p3": "When you navigate our Website or use our Services, we may collect certain information automatically from your device. This includes your IP address, device type, browser type, operating system, unique device identifiers, and broad geographic location. We also collect information about how your device has interacted with our Website, including the pages accessed and links clicked. We use tools like Google Analytics 4 (GA4) for this purpose. For more details, please see our Cookie Policy."
+      }
+    },
+    "howWeUseInformation": {
+      "heading": "How We Use Your Information",
+      "body": {
+        "p1": "We use the information we collect for various business purposes, including to:",
+        "li1_strong": "Provide, Operate, and Maintain our Services: ",
+        "li1_text": "To set up and manage your account, process transactions, and provide you with the AI agent services you request.",
+        "li2_strong": "Improve, Personalize, and Expand our Services: ",
+        "li2_text": "To understand and analyze how you use our Services and to develop new products, services, features, and functionality.",
+        "li3_strong": "Communicate with You: ",
+        "li3_text": "To send you transactional messages, technical notices, updates, security alerts, and support messages. We may also send you marketing communications (in accordance with your preferences) about our products and services.",
+        "li4_strong": "For Security and Fraud Prevention: ",
+        "li4_text": "To detect and prevent fraudulent activities, abuse, and other harmful activities to protect you, our other customers, and ourselves.",
+        "li5_strong": "For Legal Compliance: ",
+        "li5_text": "To comply with applicable legal requirements, such as tax and accounting obligations, and to respond to lawful requests by public authorities."
+      }
+    },
+    "dataSharing": {
+      "heading": "How We Share Your Information",
+      "body": {
+        "p1": "We do not sell your personal data. We may share your information with third parties who provide services on our behalf, but only in the following circumstances:",
+        "li1_strong": "With Service Providers: ",
+        "li1_text": "We work with third-party service providers to support our business operations, such as cloud hosting (e.g., Vercel, AWS), CRM platforms, analytics providers, and payment processors. These providers only have access to the information necessary to perform their functions and are contractually obligated to protect it.",
+        "li2_strong": "For Legal Reasons: ",
+        "li2_text": "We may disclose your information if we believe it is required by applicable law, regulation, legal process, or governmental request.",
+        "li3_strong": "Business Transfers: ",
+        "li3_text": "In connection with any merger, sale of company assets, financing, or acquisition of all or a portion of our business by another company."
+      }
+    },
+    "dataRetention": {
+      "heading": "Data Retention",
+      "body": {
+        "p1": "We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies. Once the data is no longer needed for these purposes, it is securely deleted or anonymized."
+      }
+    },
+    "yourRights": {
+      "heading": "Your Data Protection Rights",
+      "body": {
+        "p1": "Depending on your location, you may have the following rights regarding your personal data:",
+        "li1_text1": "The right to ", "li1_strong1": "access", "li1_strong2": "update", "li1_text2": ", or ", "li1_strong3": "delete", "li1_text3": " the information we have on you.",
+        "li2_text1": "The right of ", "li2_strong": "rectification", "li2_text2": " if that information is inaccurate or incomplete.",
+        "li3_text1": "The right to ", "li3_strong": "object", "li3_text2": " to our processing of your personal data.",
+        "li4_text1": "The right to request that we ", "li4_strong": "restrict", "li4_text2": " the processing of your personal information.",
+        "li5_text1": "The right to ", "li5_strong": "data portability", "li5_text2": ", allowing you to be provided with a copy of your information in a structured, machine-readable format.",
+        "li6_text1": "The right to ", "li6_strong": "withdraw consent", "li6_text2": " at any time where we relied on your consent to process your information."
+      }
+    },
+    "contact": {
+      "heading": "Contact Us",
+      "body": {
+        "p1": "If you have any questions, concerns, or comments about this Privacy Policy or our data practices, please do not hesitate to contact us. You can reach our privacy team by emailing: ",
+        "p1_email": "hello@elevaitelabs.io"
+      }
+    }
+  }
+},
+"termsAndConditions": {
+  "title": "Terms & Conditions",
+  "lastUpdated": "June 10, 2025",
+  "sections": {
+    "agreement": {
+      "heading": "1. Agreement to Terms",
+      "body": {
+        "p1": "These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and ElevAIte Labs AG (“we,” “us,” or “our”), concerning your access to and use of our AI agent services and the elevaitelabs.io website (collectively, the “Services”).",
+        "p2": "You agree that by accessing the Services, you have read, understood, and agree to be bound by all of these Terms and Conditions. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.",
+        "p3": "Supplemental terms and conditions or documents that may be posted on the Website from time to time are hereby expressly incorporated herein by reference."
+      }
+    },
+    "description": {
+      "heading": "2. Description of Service",
+      "body": {
+        "p1": "ElevAIte Labs provides custom-built, AI-powered agents designed to automate and optimize business processes, including but not limited to sales, marketing, operations, and customer support. The specific functionalities, scope, and performance metrics of each AI agent are defined in the specific service plan and setup agreement (“Service Plan”) you subscribe to. The Service is provided on a subscription basis and may include a one-time setup fee."
+      }
+    },
+    "responsibilities": {
+      "heading": "3. User Accounts and Responsibilities",
+      "body": {
+        "p1": "To use certain features of the Service, you may be required to create an account. You are responsible for safeguarding your account password and for any activities or actions under your account. You agree to provide and maintain true, accurate, current, and complete information about yourself as prompted by the service's registration form.",
+        "p2": "You are also responsible for providing the necessary data, access to third-party systems (e.g., CRMs), and strategic guidance required for us to build and maintain your AI agents as outlined in your Service Plan. You retain all ownership rights to your underlying data."
+      }
+    },
+    "acceptableUse": {
+      "heading": "4. Acceptable Use Policy",
+      "body": {
+        "p1": "You may not access or use the Services for any purpose other than that for which we make the Services available. The Services may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by us. As a user of the Services, you agree not to:",
+        "li1": "Use the AI agents for any illegal, harmful, or fraudulent activities.",
+        "li2": "Attempt to reverse-engineer, decompile, or otherwise discover the source code or underlying algorithms of the AI agents.",
+        "li3": "Interfere with, disrupt, or create an undue burden on the Services or the networks or services connected to them.",
+        "li4": "Use any data provided by the Service for purposes other than your internal business operations as intended by your Service Plan."
+      }
+    },
+    "payment": {
+      "heading": "5. Fees and Payment",
+      "body": {
+        "p1": "We offer various subscription plans as detailed on our Pricing Page. You agree to pay all fees, including any applicable one-time setup fees, in accordance with the terms of your selected Service Plan. Subscription fees are billed on a recurring basis (e.g., monthly or annually) in advance. All payments are non-refundable except as expressly stated in your Service Plan. We reserve the right to change our prices and will notify you in advance of any such changes."
+      }
+    },
+    "ip": {
+      "heading": "6. Intellectual Property Rights",
+      "body": {
+        "p1": "The Services, including the underlying AI models, software, algorithms, and all content on our Website (excluding your data), are the exclusive property of ElevAIte Labs AG and its licensors. These are protected by copyright, trademark, and other laws of Switzerland and foreign countries. Our trademarks may not be used in connection with any product or service without our prior written consent. You retain full ownership of the data you provide to the Service."
+      }
+    },
+    "termination": {
+      "heading": "7. Termination",
+      "body": {
+        "p1": "We may terminate or suspend your account and bar access to the Services immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever, including but not limited to a breach of these Terms. If you wish to terminate your account, you may do so by providing written notice in accordance with your Service Plan. Upon termination, your right to use the Service will immediately cease."
+      }
+    },
+    "disclaimers": {
+      "heading": "8. Disclaimer of Warranties",
+      "body": {
+        "reviewRequired": "Legal Review Required",
+        "p1": "The service is provided on an \"AS IS\" and \"AS AVAILABLE\" basis. ElevAIte Labs expressly disclaims all warranties of any kind, whether express or implied, including, but not limited to, the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the service will be uninterrupted, timely, secure, or error-free."
+      }
+    },
+    "liability": {
+      "heading": "9. Limitation of Liability",
+      "body": {
+        "reviewRequired": "Legal Review Required",
+        "p1": "In no event shall ElevAIte Labs AG, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service."
+      }
+    },
+    "governingLaw": {
+      "heading": "10. Governing Law",
+      "body": {
+        "p1": "These Terms shall be governed and construed in accordance with the laws of Switzerland, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect."
+      }
+    }
+  }
+},
+"cookiePolicy": {
+  "title": "Cookie Notice",
+  "lastUpdated": "June 10, 2025",
+  "sections": {
+    "introduction": {
+      "heading": "What are cookies and other tracking technologies?",
+      "body": {
+        "p1": "A cookie is a small data file that is placed on your device when you visit a website. Cookies are widely used to make websites work, or to work more efficiently, as well as to provide reporting information.",
+        "p2": "This notice also applies to similar tracking technologies, like web beacons (sometimes called \"tracking pixels\" or \"clear gifs\"). These are tiny graphics files that contain a unique identifier that enable us to recognize when someone has visited our Website. This allows us, for example, to monitor the traffic patterns of users from one page within our Website to another and to understand whether you have come to our Website from an online advertisement displayed on a third-party website."
+      }
+    },
+    "whyWeUseCookies": {
+      "heading": "Why do we use cookies?",
+      "body": {
+        "p1": "We use first-party and third-party cookies for several reasons. Some cookies are required for technical reasons in order for our Website to operate, and we refer to these as \"essential\" or \"strictly necessary\" cookies. Other cookies enable us to provide a better experience on our Website, and others are used for analytics and marketing purposes. This is described in more detail below."
+      }
+    },
+    "typesOfCookies": {
+      "heading": "Types of cookies we use",
+      "body": {
+        "p1": "Our website uses the following categories of cookies, managed through our consent management platform, <strong>Cookiebot</strong>:",
+        "h4_1": "1. Necessary Cookies",
+        "p2": "These cookies are strictly necessary to provide you with services available through our Website and to use some of its features, such as remembering your consent preferences. Because these cookies are strictly necessary to deliver the Website to you, you cannot refuse them without impacting how our site functions.",
+        "necessary_li1_strong": "Provider:",
+        "necessary_li1_text": "Cookiebot",
+        "necessary_li2_strong": "Purpose:",
+        "necessary_li2_text": "To store your consent status for other cookie categories for the current domain.",
+        "h4_2": "2. Statistics Cookies",
+        "p3": "These cookies collect information that is used in aggregate form to help us understand how our Website is being used or how effective our marketing campaigns are. This data helps us understand traffic patterns, which pages are most and least popular, and how visitors move around the site.",
+        "stats_li1_strong": "Provider:",
+        "stats_li1_text": "Google Analytics (GA4)",
+        "stats_li2_strong": "Purpose:",
+        "stats_li2_text": "To collect anonymous data on user behavior, such as page views, session duration, and user demographics, to help us understand and optimize our website's performance. All data collected is aggregated and does not personally identify you.",
+        "h4_3": "3. Marketing Cookies",
+        "p4": "These cookies are used to make advertising messages more relevant to you. They perform functions like preventing the same ad from continuously reappearing, ensuring ads are properly displayed, and in some cases, selecting advertisements based on your interests. We may use this data to build a profile of your interests and show you relevant adverts on other sites.",
+        "marketing_li1_strong": "Provider(s):",
+        "marketing_li1_text": "[List your marketing providers here, e.g., Meta (Facebook), LinkedIn, Google Ads]",
+        "marketing_li2_strong": "Purpose:",
+        "marketing_li2_text": "To track the effectiveness of marketing campaigns, enable targeted advertising, and understand user engagement with our marketing content."
+      }
+    },
+    "cookieControl": {
+      "heading": "How can you control cookies?",
+      "body": {
+        "p1": "You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences at any time by clicking on the cookie settings link or banner provided by our consent management platform, <strong>Cookiebot</strong>. Through the banner, you can select which categories of cookies you accept or reject. Essential cookies cannot be rejected.",
+        "p2": "In addition, you can set or amend your web browser controls to accept or refuse cookies. As the means by which you can refuse cookies through your web browser controls vary from browser-to-browser, you should visit your browser's help menu for more information.",
+        "p3_html": "You can also opt out of targeted advertising by visiting industry portals such as the Digital Advertising Alliance (DAA) <a href=\"http://optout.aboutads.info/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#1C7ED6] hover:underline\">opt-out portal</a>."
+      }
+    },
+    "updates": {
+      "heading": "How often will we update this Cookie Notice?",
+      "body": {
+        "p1": "We may update this Cookie Notice from time to time in order to reflect, for example, changes to the cookies we use or for other operational, legal, or regulatory reasons. Please therefore re-visit this Cookie Notice regularly to stay informed about our use of cookies and related technologies. The date at the top of this Cookie Notice indicates when it was last updated."
+      }
+    },
+    "contact": {
+      "heading": "Where can I get further information?",
+      "body": {
+        "p1_text": "If you have any questions about our use of cookies or other technologies, please email us at ",
+        "p1_email": "[Your contact email, e.g., privacy@elevaitelabs.io]"
+      }
+    }
+  }
+},
+"legalNotice": {
+  "title": "Legal Notice (Imprint)",
+  "subtitle": "Information provided according to § 5 TMG (German Telemedia Act) and other relevant regulations.",
+  "placeholderInfo": "This is a placeholder for your Legal Notice or Imprint. It's legally required in many countries, especially in Europe. You must replace this with your official company details.",
+  "headings": {
+    "company": "Company Information",
+    "contact": "Contact Information",
+    "register": "Register Entry"
+  },
+  "companyInfo": {
+    "name": "Company Name:",
+    "address": "Address:",
+    "representedBy": "Represented by:",
+    "placeholder_ceo": "[Your Name/CEO's Name]"
+  },
+  "contactInfo": {
+    "telephone": "Telephone:",
+    "email": "Email:",
+    "placeholder_phone": "[Your Phone Number]",
+    "placeholder_email": "[Your Contact Email]"
+  },
+  "registerInfo": {
+    "entry": "Entry in the Handelsregister.",
+    "court": "Registering Court:",
+    "number": "Registration Number:",
+    "vatId": "VAT ID:",
+    "placeholder_court": "[Your Register Court]",
+    "placeholder_number": "[Your Registration Number]"
+  }
+}
+}

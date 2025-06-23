@@ -1,24 +1,35 @@
-// src/components/ScrollToTop.tsx
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const ScrollToTop = () => {
-  // Obtenemos la información de la ruta actual, específicamente el 'pathname' (ej. "/", "/pricing")
-  const { pathname } = useLocation();
+const ScrollHandler = () => {
+  // Obtenemos la ruta y el anclaje (#) de la ubicación actual
+  const { pathname, hash } = useLocation();
 
-  // Usamos un 'useEffect' que se ejecutará cada vez que el 'pathname' cambie
   useEffect(() => {
-    // Hacemos scroll al principio de la página (coordenadas 0, 0)
-    // 'instant' hace que el salto sea inmediato, como se espera al cargar una nueva página.
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'instant' 
-    });
-  }, [pathname]); // El efecto se dispara cada vez que cambia el pathname
+    // Primero, verificamos si hay un anclaje en la URL
+    if (hash) {
+      // Limpiamos el '#' para obtener solo el id
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      
+      if (element) {
+        // Si encontramos el elemento, nos desplazamos suavemente hacia él.
+        // Se añade un pequeño retraso para dar tiempo a que la página se renderice completamente.
+        const timer = setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+        
+        return () => clearTimeout(timer); // Limpiamos el temporizador
+      }
+    } else {
+      // Si no hay anclaje, simplemente nos desplazamos al principio de la página.
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]); // Este efecto se ejecuta cada vez que la ruta o el anclaje cambian
 
-  // Este componente no renderiza nada visualmente, solo contiene lógica.
+  // Este componente no renderiza nada visualmente
   return null;
 };
 
-export default ScrollToTop;
+// Si renombraste el archivo, asegúrate de cambiar el nombre aquí también.
+export default ScrollHandler;

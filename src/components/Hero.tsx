@@ -1,12 +1,11 @@
 // src/components/Hero.tsx
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import AccumulatingTypingEffect, { PhraseWithEmoji } from './AccumulatingTypingEffect';
 
-// Ya no necesita recibir ninguna prop para el widget
 const Hero = () => {
+  const { t } = useTranslation();
 
-  // La función handleLetsTalkClick ya no es necesaria aquí
-  
   const aiAgentPhrases: PhraseWithEmoji[] = [
     { emoji: "📈", text: "Marketing Agent driving growth..." },
     { emoji: "⚙️", text: "Automation Agent streamlining tasks..." },
@@ -19,8 +18,8 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      // Añadimos un poco más de padding inferior para dar espacio al nuevo widget flotante
-      className="min-h-screen flex flex-col items-center justify-center px-4 pt-16 pb-32 sm:pt-20 sm:pb-40 bg-[#F1F3F5] relative"
+      // Se añade más padding inferior para dar espacio al widget flotante de la IA
+      className="min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-48 sm:pt-24 bg-[#F1F3F5] relative"
     >
       <div className="container mx-auto mt-10 md:mt-0">
         <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-12">
@@ -34,9 +33,9 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.1 }}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1C7ED6] to-[#D0BFFF]">
-                Adaptive AI Systems:
+                {t('hero.title_part1')}
               </span>
-              {' '}that save time and generate revenue.
+              {' '}{t('hero.title_part2')}
             </motion.h1>
 
             <motion.h2
@@ -45,7 +44,7 @@ const Hero = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
             >
-              Automate business operations to achieve superior efficiency with tailored AI solutions.
+              {t('hero.subtitle')}
             </motion.h2>
           </div>
 
@@ -70,8 +69,8 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* EL BOTÓN FLOTANTE PERSONALIZADO HA SIDO ELIMINADO DE AQUÍ */}
-
+      {/* El botón flotante personalizado ha sido eliminado. 
+          El widget de ElevenLabs se posicionará desde MainPage.tsx o App.tsx. */}
     </section>
   );
 };

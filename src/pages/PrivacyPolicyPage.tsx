@@ -1,100 +1,104 @@
 // src/pages/PrivacyPolicyPage.tsx
 import LegalPageLayout from '../components/LegalPageLayout';
+import { useTranslation } from 'react-i18next'; // 1. Importar
 
-const privacyPolicyContent = [
-  {
-    id: 'introduction',
-    heading: 'Introduction',
-    body: (
-      <>
-        <p>This Privacy Policy describes how ElevAIte Labs AG ("ElevAIte", "we", "us", or "our") collects, uses, processes, and discloses your information in connection with your access to and use of our website (elevaitelabs.io), our AI-powered services, and other interactions you may have with us (collectively, the "Services").</p>
-        <p>We are committed to protecting your privacy and handling your data in an open and transparent manner. When you access our Website or use our Services, you are trusting us with your information. We understand this is a big responsibility and we work hard to protect your information and put you in control.</p>
-      </>
-    ),
-  },
-  {
-    id: 'information-we-collect',
-    heading: 'Information We Collect',
-    body: (
-      <>
-        <p>We collect information to provide better services to all our users. The types of personal information we may collect depend on your interaction with us and can be broadly categorized as follows:</p>
-        <h4 className="font-semibold mt-4 mb-2">A. Information You Provide to Us</h4>
-        <p>This includes data you voluntarily provide when you create an account, request a demo, contact our sales or support teams, or otherwise communicate with us. This may include your full name, email address, phone number, company name, job title, and the content of your communications.</p>
-        <h4 className="font-semibold mt-4 mb-2">B. Information We Collect Automatically</h4>
-        <p>When you navigate our Website or use our Services, we may collect certain information automatically from your device. This includes your IP address, device type, browser type, operating system, unique device identifiers, and broad geographic location. We also collect information about how your device has interacted with our Website, including the pages accessed and links clicked. We use tools like **Google Analytics 4 (GA4)** for this purpose. For more details, please see our Cookie Policy.</p>
-      </>
-    ),
-  },
-  {
-    id: 'how-we-use-information',
-    heading: 'How We Use Your Information',
-    body: (
-      <>
-        <p>We use the information we collect for various business purposes, including to:</p>
-        <ul>
-          <li><strong>Provide, Operate, and Maintain our Services:</strong> To set up and manage your account, process transactions, and provide you with the AI agent services you request.</li>
-          <li><strong>Improve, Personalize, and Expand our Services:</strong> To understand and analyze how you use our Services and to develop new products, services, features, and functionality.</li>
-          <li><strong>Communicate with You:</strong> To send you transactional messages, technical notices, updates, security alerts, and support messages. We may also send you marketing communications (in accordance with your preferences) about our products and services.</li>
-          <li><strong>For Security and Fraud Prevention:</strong> To detect and prevent fraudulent activities, abuse, and other harmful activities to protect you, our other customers, and ourselves.</li>
-          <li><strong>For Legal Compliance:</strong> To comply with applicable legal requirements, such as tax and accounting obligations, and to respond to lawful requests by public authorities.</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    id: 'data-sharing',
-    heading: 'How We Share Your Information',
-    body: (
-      <>
-        <p>We do not sell your personal data. We may share your information with third parties who provide services on our behalf, but only in the following circumstances:</p>
-        <ul>
-          <li><strong>With Service Providers:</strong> We work with third-party service providers to support our business operations, such as cloud hosting (e.g., Vercel, AWS), CRM platforms, analytics providers, and payment processors. These providers only have access to the information necessary to perform their functions and are contractually obligated to protect it.</li>
-          <li><strong>For Legal Reasons:</strong> We may disclose your information if we believe it is required by applicable law, regulation, legal process, or governmental request.</li>
-          <li><strong>Business Transfers:</strong> In connection with any merger, sale of company assets, financing, or acquisition of all or a portion of our business by another company.</li>
-        </ul>
-      </>
-    ),
-  },
+const PrivacyPolicyPage = () => {
+  const { t } = useTranslation(); // 2. Inicializar el hook
+
+  // 3. Definir el contenido DENTRO del componente usando la función t()
+  const privacyPolicyContent = [
     {
-    id: 'data-retention',
-    heading: 'Data Retention',
-    body: (
-      <p>We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies. Once the data is no longer needed for these purposes, it is securely deleted or anonymized.</p>
-    ),
-  },
-  {
-    id: 'your-rights',
-    heading: 'Your Data Protection Rights',
-    body: (
-      <>
-      <p>Depending on your location, you may have the following rights regarding your personal data:</p>
-      <ul>
-        <li>The right to **access**, **update**, or **delete** the information we have on you.</li>
-        <li>The right of **rectification** if that information is inaccurate or incomplete.</li>
-        <li>The right to **object** to our processing of your personal data.</li>
-        <li>The right to request that we **restrict** the processing of your personal information.</li>
-        <li>The right to **data portability**, allowing you to be provided with a copy of your information in a structured, machine-readable format.</li>
-        <li>The right to **withdraw consent** at any time where we relied on your consent to process your information.</li>
-      </ul>
-      <p>To exercise any of these rights, please contact us at our designated email address.</p>
-      </>
-    ),
-  },
-  {
-    id: 'contact',
-    heading: 'Contact Us',
-    body: (
-      <p>If you have any questions, concerns, or comments about this Privacy Policy or our data practices, please do not hesitate to contact us. You can reach our privacy team by emailing: <strong>hello@elevaitelabs.io</strong>.</p>
-    ),
-  }
-];
+      id: 'introduction',
+      heading: t('privacyPolicy.sections.introduction.heading'),
+      body: (
+        <>
+          <p>{t('privacyPolicy.sections.introduction.body.p1')}</p>
+          <p>{t('privacyPolicy.sections.introduction.body.p2')}</p>
+        </>
+      ),
+    },
+    {
+      id: 'information-we-collect',
+      heading: t('privacyPolicy.sections.informationWeCollect.heading'),
+      body: (
+        <>
+          <p>{t('privacyPolicy.sections.informationWeCollect.body.p1')}</p>
+          <h4 className="font-semibold mt-4 mb-2">{t('privacyPolicy.sections.informationWeCollect.body.h4_1')}</h4>
+          <p>{t('privacyPolicy.sections.informationWeCollect.body.p2')}</p>
+          <h4 className="font-semibold mt-4 mb-2">{t('privacyPolicy.sections.informationWeCollect.body.h4_2')}</h4>
+          <p>{t('privacyPolicy.sections.informationWeCollect.body.p3')}</p>
+        </>
+      ),
+    },
+    {
+      id: 'how-we-use-information',
+      heading: t('privacyPolicy.sections.howWeUseInformation.heading'),
+      body: (
+        <>
+          <p>{t('privacyPolicy.sections.howWeUseInformation.body.p1')}</p>
+          <ul>
+            <li><strong>{t('privacyPolicy.sections.howWeUseInformation.body.li1_strong')}</strong>{t('privacyPolicy.sections.howWeUseInformation.body.li1_text')}</li>
+            <li><strong>{t('privacyPolicy.sections.howWeUseInformation.body.li2_strong')}</strong>{t('privacyPolicy.sections.howWeUseInformation.body.li2_text')}</li>
+            <li><strong>{t('privacyPolicy.sections.howWeUseInformation.body.li3_strong')}</strong>{t('privacyPolicy.sections.howWeUseInformation.body.li3_text')}</li>
+            <li><strong>{t('privacyPolicy.sections.howWeUseInformation.body.li4_strong')}</strong>{t('privacyPolicy.sections.howWeUseInformation.body.li4_text')}</li>
+            <li><strong>{t('privacyPolicy.sections.howWeUseInformation.body.li5_strong')}</strong>{t('privacyPolicy.sections.howWeUseInformation.body.li5_text')}</li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      id: 'data-sharing',
+      heading: t('privacyPolicy.sections.dataSharing.heading'),
+      body: (
+        <>
+          <p>{t('privacyPolicy.sections.dataSharing.body.p1')}</p>
+          <ul>
+            <li><strong>{t('privacyPolicy.sections.dataSharing.body.li1_strong')}</strong>{t('privacyPolicy.sections.dataSharing.body.li1_text')}</li>
+            <li><strong>{t('privacyPolicy.sections.dataSharing.body.li2_strong')}</strong>{t('privacyPolicy.sections.dataSharing.body.li2_text')}</li>
+            <li><strong>{t('privacyPolicy.sections.dataSharing.body.li3_strong')}</strong>{t('privacyPolicy.sections.dataSharing.body.li3_text')}</li>
+          </ul>
+        </>
+      ),
+    },
+      {
+      id: 'data-retention',
+      heading: t('privacyPolicy.sections.dataRetention.heading'),
+      body: <p>{t('privacyPolicy.sections.dataRetention.body.p1')}</p>,
+    },
+    {
+      id: 'your-rights',
+      heading: t('privacyPolicy.sections.yourRights.heading'),
+      body: (
+        <>
+          <p>{t('privacyPolicy.sections.yourRights.body.p1')}</p>
+          <ul>
+            <li>{t('privacyPolicy.sections.yourRights.body.li1_text1')}<strong>{t('privacyPolicy.sections.yourRights.body.li1_strong1')}</strong>, <strong>{t('privacyPolicy.sections.yourRights.body.li1_strong2')}</strong>, {t('privacyPolicy.sections.yourRights.body.li1_text2')}<strong>{t('privacyPolicy.sections.yourRights.body.li1_strong3')}</strong>{t('privacyPolicy.sections.yourRights.body.li1_text3')}</li>
+            <li>{t('privacyPolicy.sections.yourRights.body.li2_text1')}<strong>{t('privacyPolicy.sections.yourRights.body.li2_strong')}</strong>{t('privacyPolicy.sections.yourRights.body.li2_text2')}</li>
+            <li>{t('privacyPolicy.sections.yourRights.body.li3_text1')}<strong>{t('privacyPolicy.sections.yourRights.body.li3_strong')}</strong>{t('privacyPolicy.sections.yourRights.body.li3_text2')}</li>
+            <li>{t('privacyPolicy.sections.yourRights.body.li4_text1')}<strong>{t('privacyPolicy.sections.yourRights.body.li4_strong')}</strong>{t('privacyPolicy.sections.yourRights.body.li4_text2')}</li>
+            <li>{t('privacyPolicy.sections.yourRights.body.li5_text1')}<strong>{t('privacyPolicy.sections.yourRights.body.li5_strong')}</strong>{t('privacyPolicy.sections.yourRights.body.li5_text2')}</li>
+            <li>{t('privacyPolicy.sections.yourRights.body.li6_text1')}<strong>{t('privacyPolicy.sections.yourRights.body.li6_strong')}</strong>{t('privacyPolicy.sections.yourRights.body.li6_text2')}</li>
+          </ul>
+          <p>{t('privacyPolicy.sections.yourRights.body.p2')}</p>
+        </>
+      ),
+    },
+    {
+      id: 'contact',
+      heading: t('privacyPolicy.sections.contact.heading'),
+      body: (
+          <p>{t('privacyPolicy.sections.contact.body.p1')}<strong>{t('privacyPolicy.sections.contact.body.p1_email')}</strong>.</p>
+      ),
+    }
+  ];
 
-const PrivacyPolicyPage = () => (
-  <LegalPageLayout
-    title="Privacy Policy"
-    lastUpdated="June 10, 2025" // <-- REEMPLAZA CON LA FECHA REAL
-    content={privacyPolicyContent}
-  />
-);
+  return (
+    <LegalPageLayout
+      title={t('privacyPolicy.title')}
+      lastUpdated={t('privacyPolicy.lastUpdated')}
+      content={privacyPolicyContent}
+    />
+  );
+};
 
 export default PrivacyPolicyPage;

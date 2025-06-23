@@ -1,0 +1,623 @@
+{
+  "languageCode": "es",
+  "header": {
+    "features": "Características",
+    "plans": "Planes",
+    "integrations": "Integraciones",
+    "contact": "Casos de Uso",
+    "getStarted": "Empezar"
+  },
+  "hero": {
+    "title_part1": "Sistemas de IA Adaptativos:",
+    "title_part2": "que ahorran tiempo y generan ingresos.",
+    "subtitle": "Automatiza operaciones de negocio para lograr una eficiencia superior con soluciones de IA a medida."
+  },
+  "beforeAfter": {
+    "title": "La Transformación ElevAIte: Antes y Después",
+    "subtitle": "Selecciona un departamento para ver cómo nuestros agentes de IA personalizados superan a las herramientas tradicionales.",
+    "challengeTitle": "El Desafío Manual",
+    "solutionTitle": "La Solución ElevAIte",
+    "cta": "Empieza a Automatizar",
+    "tabs": {
+      "sales": "Ventas",
+      "marketing": "Marketing",
+      "operations": "Operaciones",
+      "support": "Soporte",
+      "hr": "RRHH y Contratación"
+    },
+    "content": {
+      "sales": {
+        "s1": { "beforeTitle": "Seguimientos Inconsistentes", "beforeDescription": "Los leads se enfrían y se pierden oportunidades debido a un seguimiento manual y esporádico.", "afterTitle": "Nutrición de Leads con IA", "afterDescription": "Tu agente ejecuta incansables secuencias de seguimiento multi-canal para asegurar que ningún lead sea olvidado." },
+        "s2": { "beforeTitle": "Argumentos de Venta Genéricos", "beforeDescription": "Los comerciales usan el mismo guion para todos, sin conectar con los problemas específicos del cliente.", "afterTitle": "Discursos Dinámicos y Personalizados", "afterDescription": "La IA proporciona a tus comerciales datos y variaciones de discurso personalizadas para cada prospecto." },
+        "s3": { "beforeTitle": "Entrada Manual de Datos en CRM", "beforeDescription": "Se pierden horas cada día registrando llamadas y correos, restando tiempo a la venta.", "afterTitle": "Registro Automatizado de Actividad", "afterDescription": "Cada interacción se registra automáticamente en tu CRM en tiempo real, creando un historial perfecto." },
+        "s4": { "beforeTitle": "Previsión de Ventas Imprecisa", "beforeDescription": "Las previsiones se basan en conjeturas e intuición, llevando a predicciones de ingresos poco fiables.", "afterTitle": "Previsión Predictiva con IA", "afterDescription": "Utiliza análisis predictivo basado en datos reales para obtener previsiones de ventas de alta precisión." },
+        "s5": { "beforeTitle": "Inversión de Tiempo en Investigación", "beforeDescription": "Los comerciales pasan más tiempo investigando prospectos en múltiples plataformas que hablando con ellos.", "afterTitle": "Enriquecimiento Instantáneo de Leads", "afterDescription": "Tu agente enriquece instantáneamente los leads con datos de empresa, perfiles sociales e información clave." }
+      },
+      "marketing": {
+        "m1": { "beforeTitle": "Segmentación de Audiencia Amplia", "beforeDescription": "Las campañas apuntan a segmentos genéricos, resultando en bajas conversiones y gasto publicitario perdido.", "afterTitle": "Micro-Segmentación con IA", "afterDescription": "La IA identifica y apunta a micro-segmentos híper-específicos de tu audiencia con el mensaje más relevante." },
+        "m2": { "beforeTitle": "Atribución de Campañas Difícil", "beforeDescription": "Es casi imposible saber qué acciones de marketing están generando ingresos realmente.", "afterTitle": "Análisis de ROI Claro y en Tiempo Real", "afterDescription": "Rastrea cada punto de contacto con modelos de atribución de IA que ofrecen una visión clara de tu ROI." },
+        "m3": { "beforeTitle": "Creación de Contenido Lenta", "beforeDescription": "El equipo de contenido es un cuello de botella, luchando por producir suficientes textos para anuncios y correos.", "afterTitle": "Generación de Contenido Asistida por IA", "afterDescription": "Genera borradores de alta calidad para textos de anuncios, campañas de email y posts en segundos." },
+        "m4": { "beforeTitle": "Baja Interacción en Redes Sociales", "beforeDescription": "Las cuentas de redes sociales se sienten estáticas, con respuestas lentas a comentarios y mensajes.", "afterTitle": "Interacción Social Automatizada", "afterDescription": "Tu agente de IA puede gestionar la primera línea de interacción, responder preguntas comunes y programar contenido." },
+        "m5": { "beforeTitle": "Campañas de Email Estáticas", "beforeDescription": "Todos los usuarios reciben la misma secuencia de correos, sin importar su comportamiento.", "afterTitle": "Email Journeys Dinámicos y Adaptativos", "afterDescription": "La IA activa secuencias de emails que se adaptan en tiempo real según las acciones del usuario." }
+      },
+      "operations": {
+        "o1": { "beforeTitle": "Flujos de Trabajo Rígidos y Manuales", "beforeDescription": "Los procesos propensos a errores son difíciles de seguir y escalar, creando cuellos de botella operativos.", "afterTitle": "Orquestación de Procesos con IA", "afterDescription": "Automatización flexible de flujos de trabajo complejos que se adaptan dinámicamente a las necesidades de tu negocio." },
+        "o2": { "beforeTitle": "Silos de Datos Fragmentados", "beforeDescription": "La información está dispersa en diferentes sistemas, lo que imposibilita una visión unificada.", "afterTitle": "Panel de Control Operativo Unificado", "afterDescription": "La IA agrega datos de todas las fuentes en una única vista en tiempo real para una mejor toma de decisiones." },
+        "o3": { "beforeTitle": "Resolución Reactiva de Problemas", "beforeDescription": "Los problemas solo se abordan después de que ya han causado una interrupción en el negocio.", "afterTitle": "Mantenimiento Predictivo y Alertas", "afterDescription": "Tu agente puede predecir posibles problemas y enviar alertas antes de que afecten a tus operaciones." },
+        "o4": { "beforeTitle": "Gestión Manual de Inventario", "beforeDescription": "Las conjeturas en el inventario provocan roturas de stock o exceso de existencias, afectando al flujo de caja y a las ventas.", "afterTitle": "Optimización Predictiva de Inventario", "afterDescription": "La IA analiza los datos de ventas y las tendencias para recomendar niveles óptimos de inventario de forma automática." },
+        "o5": { "beforeTitle": "Asignación Ineficiente de Recursos", "beforeDescription": "Asignar tareas y recursos manualmente a menudo conduce a cargas de trabajo desequilibradas y retrasos en los proyectos.", "afterTitle": "Programación de Recursos con IA", "afterDescription": "Asigna recursos de manera inteligente según la disponibilidad, habilidad y prioridad para una máxima eficiencia." }
+      },
+      "support": {
+        "su1": { "beforeTitle": "Largas Colas de Tickets y Tiempos de Espera", "beforeDescription": "Los clientes esperan horas o días para obtener respuestas a preguntas sencillas.", "afterTitle": "Soporte Instantáneo de Nivel 1 con Agentes de IA 24/7", "afterDescription": "Proporciona respuestas inmediatas a preguntas comunes durante todo el día, reduciendo drásticamente los tiempos de espera." },
+        "su2": { "beforeTitle": "Agotamiento de los Agentes por Preguntas Repetitivas", "beforeDescription": "Los agentes de soporte pasan la mayor parte del día respondiendo las mismas preguntas una y otra vez.", "afterTitle": "Respuestas Automatizadas de FAQ y Base de Conocimiento", "afterDescription": "Tu IA libera a los agentes humanos al gestionar consultas rutinarias, permitiéndoles centrarse en casos complejos." },
+        "su3": { "beforeTitle": "Falta de Personalización en el Servicio", "beforeDescription": "Cada cliente recibe una respuesta genérica y programada que no tiene en cuenta su historial.", "afterTitle": "Soporte Personalizado y Consciente del Contexto", "afterDescription": "El agente de IA tiene todo el contexto del historial del cliente para proporcionar una respuesta verdaderamente personal y efectiva." },
+        "su4": { "beforeTitle": "Soporte no Proactivo", "beforeDescription": "Solo ayudas a los clientes después de que se quejan, perdiendo oportunidades para fidelizarlos.", "afterTitle": "Detección Proactiva de Problemas y Contacto", "afterDescription": "La IA puede detectar signos de frustración del cliente o posibles problemas y ofrecer ayuda de forma proactiva." },
+        "su5": { "beforeTitle": "Cobertura de Soporte Limitada (9 a 5)", "beforeDescription": "Tus clientes globales no pueden obtener ayuda fuera de tu horario comercial local.", "afterTitle": "Disponibilidad Global 24/7 con IA", "afterDescription": "Ofrece un soporte constante y de alta calidad a todos tus clientes, sin importar su zona horaria." }
+      },
+      "hr": {
+        "h1": { "beforeTitle": "Sobrecarga por Selección Manual de CVs", "beforeDescription": "Los gerentes de RRHH dedican incontables horas a leer cientos de currículums irrelevantes.", "afterTitle": "Selección de Candidatos con IA", "afterDescription": "Tu agente de IA criba, puntúa y preselecciona automáticamente a los candidatos más cualificados para cualquier puesto." },
+        "h2": { "beforeTitle": "Programación Caótica de Entrevistas", "beforeDescription": "Los correos de ida y vuelta para programar una sola entrevista pueden tardar días.", "afterTitle": "Coordinación Automatizada de Calendarios", "afterDescription": "La IA se coordina con los candidatos y entrevistadores para encontrar el momento perfecto y lo reserva automáticamente." },
+        "h3": { "beforeTitle": "Onboarding Genérico para Empleados", "beforeDescription": "Los nuevos empleados reciben un paquete estándar que no se adapta a su rol o necesidades específicas.", "afterTitle": "Procesos de Onboarding Personalizados", "afterDescription": "Crea experiencias de incorporación únicas con un agente de IA que guía a los nuevos empleados a través de sus tareas específicas." },
+        "h4": { "beforeTitle": "Pérdida de Tiempo Respondiendo a FAQs", "beforeDescription": "El personal de RRHH es interrumpido constantemente con las mismas preguntas sobre políticas, nóminas y beneficios.", "afterTitle": "Asistente Instantáneo de IA para RRHH y Políticas", "afterDescription": "Un asistente de IA interno proporciona respuestas instantáneas y precisas a las preguntas de los empleados 24/7." },
+        "h5": { "beforeTitle": "Baja Visibilidad de la Implicación del Empleado", "beforeDescription": "Las encuestas anuales proporcionan datos obsoletos sobre los que es difícil actuar de manera oportuna.", "afterTitle": "Análisis de la Implicación con IA", "afterDescription": "La IA analiza el feedback de múltiples canales en tiempo real para proporcionar un pulso constante de la moral del equipo." }
+      }
+    }
+  },
+  "kpi": {
+    "title": "El Impacto ElevAIte: Resultados Medibles",
+    "subtitle": "Descubre cómo nuestras soluciones de IA a medida se traducen en beneficios tangibles y un crecimiento significativo para negocios como el tuyo.",
+    "cards": {
+      "kpi1": {
+        "description": "Firma de abogados global automatiza la compilación y análisis de documentos legales con nuestra IA.",
+        "label": "Reducción en Tiempo de Tareas Manuales"
+      },
+      "kpi2": {
+        "description": "Fintech europea acelera el onboarding de nuevos empleados usando agentes de IA.",
+        "label": "Respuesta y Resolución Más Rápidas"
+      },
+      "kpi3": {
+        "description": "Empresa SaaS líder automatiza consultas de soporte de Nivel 1 con IA personalizada.",
+        "label": "Aumento en la Cualificación de Leads"
+      },
+      "kpi4": {
+        "description": "Líder del mercado industrial utiliza agentes de IA para aumentar el soporte al cliente globalmente.",
+        "label": "Impulso a la Eficiencia Operacional"
+      }
+    }
+  },
+  "whyElevaite": {
+  "title": "La Plataforma ElevAIte: Tu Viaje hacia la Automatización",
+  "subtitle": "Nuestro Enfoque Estratégico",
+  "steps": {
+    "s1": {
+      "title": "Entendiendo Tus Necesidades",
+      "subtitle": "Descubrimiento y Alineación Estratégica",
+      "description": "Comenzamos con un análisis profundo de tus procesos de negocio, desafíos y objetivos estratégicos. Esta fase de descubrimiento colaborativo es crucial para asegurar que tu solución de IA esté perfectamente alineada con tu visión y ofrezca el máximo impacto."
+    },
+    "s2": {
+      "title": "Creando Tu IA a Medida",
+      "subtitle": "Diseño y Desarrollo Personalizado",
+      "description": "Nuestros expertos diseñan y construyen tus agentes de IA desde cero, integrando lógica sofisticada y flujos de trabajo personalizados. No usamos plantillas; se trata de inteligencia a medida para tus demandas operativas."
+    },
+    "s3": {
+      "title": "Onboarding y Formación",
+      "subtitle": "Capacitando a Tu Equipo para el Éxito",
+      "description": "No solo entregamos la tecnología. Ofrecemos una formación completa para tu equipo para asegurar que todos sepan cómo aprovechar los nuevos agentes de IA de manera efectiva y seguir su rendimiento desde el primer día."
+    },
+    "s4": {
+      "title": "Impulsando Tu Rendimiento",
+      "subtitle": "Integración e Impacto",
+      "description": "El paso final es integrar la IA de manera fluida en tu entorno y medir su impacto. Aseguramos un lanzamiento sin problemas y brindamos soporte continuo para maximizar tu ROI e impulsar la mejora continua."
+    },
+    "s5": {
+      "title": "Optimización y Escalado",
+      "subtitle": "Una Alianza para el Crecimiento Continuo",
+      "description": "Nuestra alianza se extiende más allá del lanzamiento. Monitoreamos continuamente el rendimiento de tus agentes de IA, ofreciendo optimizaciones y recomendaciones estratégicas para asegurar que tus soluciones escalen sin problemas a medida que tu negocio crece."
+    }
+  }
+},
+"integrations": {
+  "title": "Integraciones Fluidas: Conecta Todo Tu Ecosistema",
+  "description": "Los agentes de IA de ElevAIte están diseñados para operar en el corazón de tus herramientas existentes. Nos integramos de forma nativa con tus CRMs, plataformas de comunicación, calendarios y más, amplificando tus flujos de trabajo sin interrupciones e impulsando la productividad general.",
+  "examples": {
+    "e1": "CRMs líderes del mercado (Salesforce, HubSpot, etc.)",
+    "e2": "Plataformas de Comunicación (Slack, Email, Microsoft Teams)",
+    "e3": "Calendarios Inteligentes y Herramientas de Programación",
+    "e4": "Integración con APIs a Medida y Sistemas Internos",
+    "e5": "Bases de Datos y Herramientas de Análisis"
+  },
+  "ctaButton": "¿Cómo funciona?"
+},
+"testimonials": {
+  "title": "Con la Confianza de Empresas Innovadoras",
+  "subtitle": "Descubre cómo nuestras soluciones de IA a medida están marcando una diferencia real.",
+  "mainLogos": {
+    "logo1": "Innova Global",
+    "logo2": "Corp NextGen",
+    "logo3": "Soluciones Alpha",
+    "logo4": "Dinámicas Peak",
+    "logo5": "Sistemas Core"
+  },
+  "cards": {
+    "t1": {
+      "quote": "Antes de ElevAIte, nuestro equipo de ventas se ahogaba en leads no cualificados. El agente de IA que construyeron no solo filtra; aprende y se adapta a nuestro perfil de cliente ideal. La moral de nuestro equipo está por las nubes porque finalmente se centran en lo que mejor saben hacer: construir relaciones y cerrar tratos.",
+      "author": "Jessica Miller",
+      "title": "Directora de Ventas",
+      "company": "ApexConnect"
+    },
+    "t2": {
+      "quote": "Nuestros informes de fin de mes solían ser una pesadilla de una semana, propensa a errores. El agente de automatización que ElevAIte creó para nosotros ahora lo gestiona en menos de una hora, con cero errores. No solo ahorra tiempo; nos ha devuelto la cordura y nos permite centrarnos en la estrategia, no en las hojas de cálculo.",
+      "author": "Michael Carter",
+      "title": "Director de Operaciones",
+      "company": "ScaleOps"
+    },
+    "t3": {
+      "quote": "Nos preocupaba que una IA se sintiera impersonal, pero ha sido todo lo contrario. El agente de soporte gestiona todas las consultas rutinarias al instante, 24/7, lo que libera a nuestros expertos humanos para abordar problemas complejos con más atención. Nuestros clientes ahora obtienen respuestas más rápidas para cosas simples y un mejor soporte para problemas grandes. Todos ganan.",
+      "author": "Sofia Rossi",
+      "title": "Directora de Experiencia del Cliente",
+      "company": "Bright-Desk"
+    }
+  },
+  "caseStudyButton": "Leer Historia Completa",
+  "altText": {
+    "portrait": "Retrato de {{author}}",
+    "logo": "Logo de {{company}}"
+  }
+},
+"faq": {
+  "title": "Preguntas Frecuentes",
+  "subtitle": "Encuentra respuestas rápidas a preguntas comunes sobre nuestras soluciones de IA.",
+  "questions": {
+    "q1": {
+      "question": "¿Qué tipo de agentes de IA pueden construir?",
+      "answer": "Creamos una amplia gama de agentes de IA adaptados a necesidades empresariales específicas, incluyendo agentes de marketing, agentes de automatización para tareas operativas, recepcionistas inteligentes, asistentes de IA para ventas para impulsar tu pipeline, agentes de soporte con IA para una mejor experiencia del cliente y agentes analistas de datos para informes detallados."
+    },
+    "q2": {
+      "question": "¿Cuánto tiempo se tarda en implementar un agente de IA personalizado?",
+      "answer": "El tiempo para implementar un agente de IA personalizado puede variar según la complejidad y los requisitos de integración. Normalmente, un proyecto puede durar desde unas pocas semanas hasta un par de meses. Empezamos con una fase de descubrimiento para entender completamente tus necesidades y luego te proporcionamos una estimación más precisa del proyecto."
+    },
+    "q3": {
+      "question": "¿Sus agentes de IA se integran con las herramientas empresariales existentes?",
+      "answer": "Absolutamente. La integración fluida es una parte fundamental de nuestra oferta. Nuestros agentes de IA están diseñados para conectarse con tus CRMs existentes (como Salesforce, HubSpot), plataformas de comunicación (Slack, email, Teams), herramientas de calendario, bases de datos e incluso APIs personalizadas para garantizar un flujo de trabajo sin interrupciones."
+    },
+    "q4": {
+      "question": "¿Cómo se aseguran de que las soluciones de IA estén verdaderamente 'hechas a medida' para mi negocio?",
+      "answer": "Nuestro proceso comienza con un análisis profundo de tus desafíos operativos, flujos de trabajo y objetivos estratégicos específicos. No utilizamos plantillas universales. La lógica, las tareas y las integraciones de cada agente de IA se diseñan y desarrollan a medida para proporcionar una solución verdaderamente personalizada que aborde tus requisitos únicos."
+    },
+    "q5": {
+      "question": "¿Qué tipo de ROI puedo esperar de un agente de IA?",
+      "answer": "Nuestros clientes suelen ver un ROI significativo a través de una mayor eficiencia, reducción de los costos de trabajo manual, mejores tasas de conversión de leads, tiempos de respuesta más rápidos y una mayor satisfacción del cliente. Trabajamos contigo para definir indicadores clave de rendimiento (KPIs) para medir el impacto específico en tu negocio."
+    }
+  }
+},
+"finalCta": {
+  "heading": {
+    "part1": "Potencia Tu",
+    "part2": "con Agentes de IA a Medida"
+  },
+  "cyclingWords": {
+    "w1": "Ventas",
+    "w2": "Marketing",
+    "w3": "Operaciones",
+    "w4": "Soporte",
+    "w5": "Crecimiento"
+  },
+  "description": "¿Listo para desbloquear una eficiencia y escalabilidad sin precedentes con agentes de IA creados para las necesidades únicas de tu negocio? Construyamos tu futuro, juntos.",
+  "primaryCta": "Obtén Tu Solución de IA",
+  "secondaryCta": "Agenda una Consulta"
+},
+"footer": {
+  "altLogo": "Logo de ElevAIte Labs",
+  "companyName": "ElevAIte Labs",
+  "description": "Transformando negocios con soluciones inteligentes de automatización con IA.",
+  "social": {
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "youtube": "YouTube",
+    "instagram": "Instagram"
+  },
+  "headings": {
+    "quickLinks": "Enlaces Rápidos",
+    "legal": "Legal",
+    "stayUpdated": "Mantente Actualizado"
+  },
+  "links": {
+    "features": "Características",
+    "caseStudies": "Casos de Éxito",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos y Condiciones",
+    "cookies": "Política de Cookies"
+  },
+  "newsletter": {
+    "placeholder": "Introduce tu email",
+    "subscribe": "Suscribirse",
+    "description": "🚀 ¡Mantente a la vanguardia con la automatización IA - Suscríbete a nuestro boletín!"
+  },
+  "copyright": "Todos los derechos reservados."
+},
+"pricing": {
+  "mostPopular": "El más popular",
+  "perMonth": "/mes",
+  "plans": {
+    "p1": {
+      "name": "Empleado de IA",
+      "setupFee": "$1,500 tarifa única de configuración",
+      "description": "Para pequeñas empresas que automatizan la cualificación y el seguimiento de leads.",
+      "cta": "Elegir Plan",
+      "features": {
+        "f1": "1 Sistema de Ventas con IA construido y entrenado",
+        "f2": "2× Llamadas de Estrategia Mensuales (30 min)",
+        "f3": "Soporte Estándar por Email y Chat",
+        "f4": "Integración con CRM",
+        "f5": "Sesión de Optimización Mensual",
+        "f6": "Respuesta Estándar (24–48h)"
+      },
+      "excluded": {
+        "e1": "Herramientas Externas (Twilio, APIs, CRMs)",
+        "e2": "Canal de Slack Dedicado"
+      }
+    },
+    "p2": {
+      "name": "Equipo de Ventas de IA",
+      "setupFee": "$2,500 tarifa única de configuración",
+      "description": "Diseñado para equipos en crecimiento que automatizan múltiples funciones de ventas.",
+      "cta": "Empezar Ahora",
+      "features": {
+        "f1": "3 Sistemas de Ventas con IA construidos y entrenados",
+        "f2": "4× Llamadas de Estrategia Mensuales (30 min)",
+        "f3": "Soporte Prioritario por Email y Chat",
+        "f4": "Canal de Slack Dedicado",
+        "f5": "Integración con CRM",
+        "f6": "Sesión de Optimización Quincenal",
+        "f7": "Respuesta Prioritaria (12–24h)"
+      },
+      "excluded": {
+        "e1": "Herramientas Externas (Twilio, APIs, CRMs)"
+      }
+    },
+    "p3": {
+      "name": "Socio de Crecimiento de IA",
+      "setupFee": "$5,000 tarifa única de configuración",
+      "description": "Para empresas que buscan automatizar todo su embudo de ventas.",
+      "cta": "Contactar con Ventas",
+      "features": {
+        "f1": "10 Sistemas de Ventas con IA construidos y entrenados",
+        "f2": "Llamadas de Estrategia Semanales (60 min)",
+        "f3": "Soporte Exclusivo por Email y Chat",
+        "f4": "Canal de Slack Dedicado",
+        "f5": "Integraciones con CRM",
+        "f6": "Sesiones de Optimización Semanales",
+        "f7": "Tiempo de Respuesta de 4 Horas"
+      },
+      "excluded": {
+        "e1": "Herramientas Externas (Twilio, APIs, CRMs)"
+      }
+    }
+  },
+  "footer": {
+    "annualDiscount": "💰 ¡Ahorra hasta un 20% con la facturación anual!",
+    "paymentOptions": "Opciones de pago: Factura, Transferencia Bancaria, Stripe (Tarjeta de crédito)",
+    "addOnsTitle": "✳️ Complementos Disponibles:",
+    "addOn1": "Llamada de Estrategia Adicional – $250",
+    "addOn2": "Formación de Ventas para el Equipo Humano – $750"
+  },
+"header": {
+  "title": "Encuentra el Socio de IA Perfecto para Tu Negocio",
+  "subtitle": "Precios simples y transparentes para ayudarte a escalar. Elige el plan que se ajuste a tus ambiciones de crecimiento."
+}
+},
+"featureComparison": {
+  "title": "Compara los Planes Cara a Cara",
+  "subtitle": "Encuentra las características exactas que necesitas para impulsar tu crecimiento.",
+  "roiButton": "Calcula tu ROI Potencial",
+  "tableHeader": {
+    "features": "Características",
+    "plan1": "Empleado de IA",
+    "plan2": "Equipo de Ventas de IA",
+    "plan3": "Socio de Crecimiento de IA"
+  },
+  "features": {
+    "f1": {
+      "name": "Sistemas de Ventas con IA construidos y entrenados",
+      "plan1": "1", "plan2": "3", "plan3": "10"
+    },
+    "f2": {
+      "name": "Llamadas de Estrategia Mensuales",
+      "plan1": "2× (30 min)", "plan2": "4× (30 min)", "plan3": "Semanal (60 min)"
+    },
+    "f3": {
+      "name": "Soporte por Email y Chat",
+      "plan1": "Estándar", "plan2": "Prioritario", "plan3": "Exclusivo"
+    },
+    "f4": {
+      "name": "Canal de Slack Dedicado",
+      "plan1": "false", "plan2": "true", "plan3": "true"
+    },
+    "f5": {
+      "name": "Integración(es) con CRM",
+      "plan1": "true", "plan2": "true", "plan3": "true"
+    },
+    "f6": {
+      "name": "Sesiones de Optimización",
+      "plan1": "Mensual", "plan2": "Quincenal", "plan3": "Semanal"
+    },
+    "f7": {
+      "name": "Tiempo de Respuesta de Soporte",
+      "plan1": "24–48h", "plan2": "12–24h", "plan3": "4 Horas"
+    },
+    "f8": {
+      "name": "Herramientas Externas (Twilio, APIs, CRMs)",
+      "plan1": "false", "plan2": "false", "plan3": "false"
+    }
+  }
+},
+"modal": {
+  "close": "Cerrar modal"
+},
+"roiCalculator": {
+  "title": "Calcula tu ROI",
+  "subtitle": "Ajusta los deslizadores para ver tus ahorros y crecimiento de ingresos potenciales.",
+  "plans": {
+    "employee": "Empleado de IA",
+    "team": "Equipo de Ventas de IA",
+    "partner": "Socio de Crecimiento de IA"
+  },
+  "inputs": {
+    "reps": "Número de Vendedores",
+    "dealSize": "Tamaño de Trato Promedio",
+    "leads": "Leads Mensuales Actuales"
+  },
+  "results": {
+    "gain": "GANANCIA MENSUAL POTENCIAL*",
+    "hoursSaved": "HORAS AHORRADAS*",
+    "roi": "ROI ESTIMADO*",
+    "perMonthSuffix": "/mes"
+  },
+  "disclaimer": "*Todos los resultados son estimaciones basadas en los datos que proporcionas y nuestros modelos generales de clientes. Se requiere un análisis personalizado y profundo para una previsión más precisa."
+},
+"privacyPolicy": {
+  "title": "Política de Privacidad",
+  "lastUpdated": "10 de junio de 2025",
+  "sections": {
+    "introduction": {
+      "heading": "Introducción",
+      "body": {
+        "p1": "Esta Política de Privacidad describe cómo ElevAIte Labs AG (\"ElevAIte\", \"nosotros\" o \"nuestro\") recopila, usa, procesa y divulga su información en relación con su acceso y uso de nuestro sitio web (elevaitelabs.io), nuestros servicios impulsados por IA y otras interacciones que pueda tener con nosotros (colectivamente, los \"Servicios\").",
+        "p2": "Estamos comprometidos a proteger su privacidad y a manejar sus datos de manera abierta y transparente. Cuando accede a nuestro Sitio Web o utiliza nuestros Servicios, nos confía su información. Entendemos que esta es una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control."
+      }
+    },
+    "informationWeCollect": {
+      "heading": "Información que Recopilamos",
+      "body": {
+        "p1": "Recopilamos información para proporcionar mejores servicios a todos nuestros usuarios. Los tipos de información personal que podemos recopilar dependen de su interacción con nosotros y se pueden clasificar de la siguiente manera:",
+        "h4_1": "A. Información que Usted Nos Proporciona",
+        "p2": "Esto incluye los datos que proporciona voluntariamente cuando crea una cuenta, solicita una demostración, se pone en contacto con nuestros equipos de ventas o soporte, o se comunica de otra manera con nosotros. Esto puede incluir su nombre completo, dirección de correo electrónico, número de teléfono, nombre de la empresa, cargo y el contenido de sus comunicaciones.",
+        "h4_2": "B. Información que Recopilamos Automáticamente",
+        "p3": "Cuando navega por nuestro Sitio Web o utiliza nuestros Servicios, podemos recopilar cierta información automáticamente desde su dispositivo. Esto incluye su dirección IP, tipo de dispositivo, tipo de navegador, sistema operativo, identificadores únicos de dispositivo y ubicación geográfica general. También recopilamos información sobre cómo su dispositivo ha interactuado con nuestro Sitio Web, incluidas las páginas visitadas y los enlaces en los que ha hecho clic. Utilizamos herramientas como Google Analytics 4 (GA4) para este propósito. Para más detalles, consulte nuestra Política de Cookies."
+      }
+    },
+    "howWeUseInformation": {
+      "heading": "Cómo Utilizamos Su Información",
+      "body": {
+        "p1": "Utilizamos la información que recopilamos para diversos fines comerciales, que incluyen:",
+        "li1_strong": "Proporcionar, Operar y Mantener nuestros Servicios: ",
+        "li1_text": "Para configurar y gestionar su cuenta, procesar transacciones y proporcionarle los servicios de agentes de IA que solicita.",
+        "li2_strong": "Mejorar, Personalizar y Ampliar nuestros Servicios: ",
+        "li2_text": "Para comprender y analizar cómo utiliza nuestros Servicios y para desarrollar nuevos productos, servicios, características y funcionalidades.",
+        "li3_strong": "Comunicarnos con Usted: ",
+        "li3_text": "Para enviarle mensajes transaccionales, avisos técnicos, actualizaciones, alertas de seguridad y mensajes de soporte. También podemos enviarle comunicaciones de marketing (de acuerdo con sus preferencias) sobre nuestros productos y servicios.",
+        "li4_strong": "Para Seguridad y Prevención de Fraude: ",
+        "li4_text": "Para detectar y prevenir actividades fraudulentas, abusos y otras actividades perjudiciales para protegerlo a usted, a nuestros otros clientes y a nosotros mismos.",
+        "li5_strong": "Para el Cumplimiento Legal: ",
+        "li5_text": "Para cumplir con los requisitos legales aplicables, como las obligaciones fiscales y contables, y para responder a solicitudes legales de las autoridades públicas."
+      }
+    },
+    "dataSharing": {
+      "heading": "Cómo Compartimos Su Información",
+      "body": {
+        "p1": "No vendemos sus datos personales. Podemos compartir su información con terceros que prestan servicios en nuestro nombre, pero solo en las siguientes circunstancias:",
+        "li1_strong": "Con Proveedores de Servicios: ",
+        "li1_text": "Trabajamos con proveedores de servicios de terceros para respaldar nuestras operaciones comerciales, como alojamiento en la nube (p. ej., Vercel, AWS), plataformas de CRM, proveedores de análisis y procesadores de pagos. Estos proveedores solo tienen acceso a la información necesaria para realizar sus funciones y están obligados por contrato a protegerla.",
+        "li2_strong": "Por Razones Legales: ",
+        "li2_text": "Podemos divulgar su información si creemos que es requerido por la ley, regulación, proceso legal o solicitud gubernamental aplicable.",
+        "li3_strong": "Transferencias Comerciales: ",
+        "li3_text": "En relación con cualquier fusión, venta de activos de la empresa, financiación o adquisición de la totalidad o una parte de nuestro negocio por otra empresa."
+      }
+    },
+    "dataRetention": {
+      "heading": "Retención de Datos",
+      "body": {
+        "p1": "Retendremos su información personal solo durante el tiempo que sea necesario para los fines establecidos en esta Política de Privacidad. Retendremos y utilizaremos su información en la medida necesaria para cumplir con nuestras obligaciones legales (por ejemplo, si se nos exige retener sus datos para cumplir con las leyes aplicables), resolver disputas y hacer cumplir nuestros acuerdos y políticas legales. Una vez que los datos ya no son necesarios para estos fines, se eliminan de forma segura o se anonimizan."
+      }
+    },
+    "yourRights": {
+      "heading": "Sus Derechos de Protección de Datos",
+      "body": {
+        "p1": "Dependiendo de su ubicación, puede tener los siguientes derechos con respecto a sus datos personales:",
+        "li1_text1": "El derecho a ", "li1_strong1": "acceder", "li1_strong2": "actualizar", "li1_text2": " o ", "li1_strong3": "eliminar", "li1_text3": " la información que tenemos sobre usted.",
+        "li2_text1": "El derecho de ", "li2_strong": "rectificación", "li2_text2": " si esa información es inexacta o incompleta.",
+        "li3_text1": "El derecho a ", "li3_strong": "oponerse", "li3_text2": " a nuestro procesamiento de sus datos personales.",
+        "li4_text1": "El derecho a solicitar que ", "li4_strong": "restrinjamos", "li4_text2": " el procesamiento de su información personal.",
+        "li5_text1": "El derecho a la ", "li5_strong": "portabilidad de los datos", "li5_text2": ", permitiéndole recibir una copia de su información en un formato estructurado y legible por máquina.",
+        "li6_text1": "El derecho a ", "li6_strong": "retirar el consentimiento", "li6_text2": " en cualquier momento en que nos hayamos basado en su consentimiento para procesar su información."
+      }
+    },
+    "contact": {
+      "heading": "Contáctenos",
+      "body": {
+        "p1": "Si tiene alguna pregunta, inquietud o comentario sobre esta Política de Privacidad o nuestras prácticas de datos, no dude en contactarnos. Puede comunicarse con nuestro equipo de privacidad enviando un correo electrónico a: ",
+        "p1_email": "hello@elevaitelabs.io"
+      }
+    }
+  }
+},
+"termsAndConditions": {
+  "title": "Términos y Condiciones",
+  "lastUpdated": "10 de junio de 2025",
+  "sections": {
+    "agreement": {
+      "heading": "1. Aceptación de los Términos",
+      "body": {
+        "p1": "Estos Términos y Condiciones constituyen un acuerdo legalmente vinculante entre usted, ya sea personalmente o en nombre de una entidad (\"usted\") y ElevAIte Labs AG (\"nosotros\" o \"nuestro\"), en relación con su acceso y uso de nuestros servicios de agentes de IA y el sitio web elevaitelabs.io (colectivamente, los \"Servicios\").",
+        "p2": "Usted acepta que al acceder a los Servicios, ha leído, entendido y aceptado estar sujeto a todos estos Términos y Condiciones. SI NO ESTÁ DE ACUERDO CON TODOS ESTOS TÉRMINOS, SE LE PROHÍBE EXPRESAMENTE EL USO DE LOS SERVICIOS Y DEBE INTERRUMPIR SU USO INMEDIATAMENTE.",
+        "p3": "Los términos y condiciones suplementarios o documentos que puedan publicarse en el Sitio Web de vez en cuando se incorporan expresamente aquí por referencia."
+      }
+    },
+    "description": {
+      "heading": "2. Descripción del Servicio",
+      "body": {
+        "p1": "ElevAIte Labs proporciona agentes personalizados impulsados por IA diseñados para automatizar y optimizar procesos de negocio, incluyendo, entre otros, ventas, marketing, operaciones y soporte al cliente. Las funcionalidades específicas, el alcance y las métricas de rendimiento de cada agente de IA se definen en el plan de servicio y acuerdo de configuración específico (\"Plan de Servicio\") al que se suscriba. El Servicio se proporciona mediante suscripción y puede incluir una tarifa única de configuración."
+      }
+    },
+    "responsibilities": {
+      "heading": "3. Cuentas y Responsabilidades del Usuario",
+      "body": {
+        "p1": "Para utilizar ciertas características del Servicio, es posible que se le solicite crear una cuenta. Usted es responsable de salvaguardar la contraseña de su cuenta y de cualquier actividad o acción bajo su cuenta. Usted se compromete a proporcionar y mantener información verdadera, precisa, actual y completa sobre usted según lo solicite el formulario de registro del servicio.",
+        "p2": "Usted también es responsable de proporcionar los datos necesarios, el acceso a sistemas de terceros (p. ej., CRMs) y la orientación estratégica requerida para que podamos construir y mantener sus agentes de IA según lo establecido en su Plan de Servicio. Usted retiene todos los derechos de propiedad sobre sus datos subyacentes."
+      }
+    },
+    "acceptableUse": {
+      "heading": "4. Política de Uso Aceptable",
+      "body": {
+        "p1": "No puede acceder ni utilizar los Servicios para ningún otro propósito que no sea aquel para el que ponemos a disposición los Servicios. Los Servicios no pueden ser utilizados en relación con ninguna actividad comercial, excepto aquellas que estén específicamente respaldadas o aprobadas por nosotros. Como usuario de los Servicios, usted se compromete a no:",
+        "li1": "Utilizar los agentes de IA para actividades ilegales, dañinas o fraudulentas.",
+        "li2": "Intentar realizar ingeniería inversa, descompilar o descubrir de otro modo el código fuente o los algoritmos subyacentes de los agentes de IA.",
+        "li3": "Interferir, interrumpir o crear una carga indebida en los Servicios o en las redes o servicios conectados a ellos.",
+        "li4": "Utilizar cualquier dato proporcionado por el Servicio para fines distintos a sus operaciones comerciales internas según lo previsto en su Plan de Servicio."
+      }
+    },
+    "payment": {
+      "heading": "5. Tarifas y Pago",
+      "body": {
+        "p1": "Ofrecemos varios planes de suscripción como se detalla en nuestra Página de Precios. Usted se compromete a pagar todas las tarifas, incluidas las tarifas únicas de configuración aplicables, de acuerdo con los términos de su Plan de Servicio seleccionado. Las tarifas de suscripción se facturan de forma recurrente (p. ej., mensual o anualmente) por adelantado. Todos los pagos no son reembolsables, salvo que se indique expresamente en su Plan de Servicio. Nos reservamos el derecho de cambiar nuestros precios y le notificaremos con antelación cualquier cambio."
+      }
+    },
+    "ip": {
+      "heading": "6. Derechos de Propiedad Intelectual",
+      "body": {
+        "p1": "Los Servicios, incluidos los modelos de IA subyacentes, el software, los algoritmos y todo el contenido de nuestro Sitio Web (excluyendo sus datos), son propiedad exclusiva de ElevAIte Labs AG y sus licenciantes. Estos están protegidos por derechos de autor, marcas comerciales y otras leyes de Suiza y de países extranjeros. Nuestras marcas comerciales no pueden ser utilizadas en conexión con ningún producto o servicio sin nuestro consentimiento previo por escrito. Usted retiene la plena propiedad de los datos que proporciona al Servicio."
+      }
+    },
+    "termination": {
+      "heading": "7. Terminación",
+      "body": {
+        "p1": "Podemos terminar o suspender su cuenta y prohibir el acceso a los Servicios de inmediato, sin previo aviso ni responsabilidad, a nuestra entera discreción, por cualquier motivo, incluyendo, entre otros, el incumplimiento de estos Términos. Si desea terminar su cuenta, puede hacerlo mediante notificación por escrito de acuerdo con su Plan de Servicio. Tras la terminación, su derecho a utilizar el Servicio cesará inmediatamente."
+      }
+    },
+    "disclaimers": {
+      "heading": "8. Exención de Garantías",
+      "body": {
+        "reviewRequired": "Revisión Legal Requerida",
+        "p1": "El servicio se proporciona \"TAL CUAL\" y \"SEGÚN DISPONIBILIDAD\". ElevAIte Labs renuncia expresamente a todas las garantías de cualquier tipo, ya sean expresas o implícitas, incluidas, entre otras, las garantías implícitas de comerciabilidad, idoneidad para un propósito particular y no infracción. No garantizamos que el servicio sea ininterrumpido, oportuno, seguro o libre de errores."
+      }
+    },
+    "liability": {
+      "heading": "9. Limitación de Responsabilidad",
+      "body": {
+        "reviewRequired": "Revisión Legal Requerida",
+        "p1": "En ningún caso ElevAIte Labs AG, ni sus directores, empleados, socios, agentes, proveedores o afiliados, serán responsables de ningún daño indirecto, incidental, especial, consecuente o punitivo, incluyendo, sin limitación, la pérdida de beneficios, datos, uso, buena voluntad u otras pérdidas intangibles, resultantes de su acceso o uso o de la imposibilidad de acceder o usar el Servicio."
+      }
+    },
+    "governingLaw": {
+      "heading": "10. Ley Aplicable",
+      "body": {
+        "p1": "Estos Términos se regirán e interpretarán de acuerdo con las leyes de Suiza, sin tener en cuenta sus disposiciones sobre conflicto de leyes. Nuestra incapacidad para hacer cumplir cualquier derecho o disposición de estos Términos no se considerará una renuncia a esos derechos. Si alguna disposición de estos Términos es declarada inválida o inaplicable por un tribunal, las disposiciones restantes de estos Términos permanecerán en vigor."
+      }
+    }
+  }
+},
+"cookiePolicy": {
+  "title": "Política de Cookies",
+  "lastUpdated": "10 de junio de 2025",
+  "sections": {
+    "introduction": {
+      "heading": "¿Qué son las cookies y otras tecnologías de seguimiento?",
+      "body": {
+        "p1": "Una cookie es un pequeño archivo de datos que se coloca en su dispositivo cuando visita un sitio web. Las cookies se utilizan ampliamente para que los sitios web funcionen, o para que funcionen de manera más eficiente, así como para proporcionar información de informes.",
+        "p2": "Este aviso también se aplica a tecnologías de seguimiento similares, como las balizas web (a veces llamadas \"píxeles de seguimiento\" o \"gifs transparentes\"). Se trata de pequeños archivos gráficos que contienen un identificador único que nos permite reconocer cuándo alguien ha visitado nuestro Sitio Web. Esto nos permite, por ejemplo, monitorear los patrones de tráfico de los usuarios de una página a otra dentro de nuestro Sitio Web y comprender si ha llegado a nuestro Sitio Web desde un anuncio en línea mostrado en un sitio web de terceros."
+      }
+    },
+    "whyWeUseCookies": {
+      "heading": "¿Por qué utilizamos cookies?",
+      "body": {
+        "p1": "Utilizamos cookies de origen y de terceros por varias razones. Algunas cookies son necesarias por razones técnicas para que nuestro Sitio Web funcione, y nos referimos a estas como cookies \"esenciales\" o \"estrictamente necesarias\". Otras cookies nos permiten ofrecer una mejor experiencia en nuestro Sitio Web, y otras se utilizan con fines de análisis y marketing. Esto se describe con más detalle a continuación."
+      }
+    },
+    "typesOfCookies": {
+      "heading": "Tipos de cookies que utilizamos",
+      "body": {
+        "p1": "Nuestro sitio web utiliza las siguientes categorías de cookies, gestionadas a través de nuestra plataforma de gestión de consentimiento, <strong>Cookiebot</strong>:",
+        "h4_1": "1. Cookies Necesarias",
+        "p2": "Estas cookies son estrictamente necesarias para proporcionarle los servicios disponibles a través de nuestro Sitio Web y para utilizar algunas de sus funciones, como recordar sus preferencias de consentimiento. Dado que estas cookies son estrictamente necesarias para entregarle el Sitio Web, no puede rechazarlas sin afectar el funcionamiento de nuestro sitio.",
+        "necessary_li1_strong": "Proveedor:",
+        "necessary_li1_text": "Cookiebot",
+        "necessary_li2_strong": "Propósito:",
+        "necessary_li2_text": "Almacenar su estado de consentimiento para otras categorías de cookies en el dominio actual.",
+        "h4_2": "2. Cookies de Estadísticas",
+        "p3": "Estas cookies recopilan información que se utiliza de forma agregada para ayudarnos a comprender cómo se está utilizando nuestro Sitio Web o qué tan efectivas son nuestras campañas de marketing. Estos datos nos ayudan a comprender los patrones de tráfico, qué páginas son más y menos populares, y cómo se mueven los visitantes por el sitio.",
+        "stats_li1_strong": "Proveedor:",
+        "stats_li1_text": "Google Analytics (GA4)",
+        "stats_li2_strong": "Propósito:",
+        "stats_li2_text": "Recopilar datos anónimos sobre el comportamiento del usuario, como vistas de página, duración de la sesión y datos demográficos del usuario, para ayudarnos a comprender y optimizar el rendimiento de nuestro sitio web. Todos los datos recopilados son agregados y no lo identifican personalmente.",
+        "h4_3": "3. Cookies de Marketing",
+        "p4": "Estas cookies se utilizan para que los mensajes publicitarios sean más relevantes para usted. Realizan funciones como evitar que el mismo anuncio vuelva a aparecer continuamente, garantizar que los anuncios se muestren correctamente y, en algunos casos, seleccionar anuncios basados en sus intereses. Podemos utilizar estos datos para crear un perfil de sus intereses y mostrarle anuncios relevantes en otros sitios.",
+        "marketing_li1_strong": "Proveedor(es):",
+        "marketing_li1_text": "[Enumere aquí sus proveedores de marketing, p. ej., Meta (Facebook), LinkedIn, Google Ads]",
+        "marketing_li2_strong": "Propósito:",
+        "marketing_li2_text": "Rastrear la efectividad de las campañas de marketing, habilitar la publicidad dirigida y comprender la interacción del usuario con nuestro contenido de marketing."
+      }
+    },
+    "cookieControl": {
+      "heading": "¿Cómo puede controlar las cookies?",
+      "body": {
+        "p1": "Usted tiene derecho a decidir si acepta o rechaza las cookies. Puede ejercer sus preferencias de cookies en cualquier momento haciendo clic en el enlace de configuración de cookies o en el banner proporcionado por nuestra plataforma de gestión de consentimiento, <strong>Cookiebot</strong>. A través del banner, puede seleccionar qué categorías de cookies acepta o rechaza. Las cookies esenciales no se pueden rechazar.",
+        "p2": "Además, puede configurar o modificar los controles de su navegador web para aceptar o rechazar cookies. Como los medios por los cuales puede rechazar las cookies a través de los controles de su navegador web varían de un navegador a otro, debe visitar el menú de ayuda de su navegador para obtener más información.",
+        "p3_html": "También puede optar por no recibir publicidad dirigida visitando portales de la industria como el <a href=\"http://optout.aboutads.info/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#1C7ED6] hover:underline\">portal de exclusión</a> de la Digital Advertising Alliance (DAA)."
+      }
+    },
+    "updates": {
+      "heading": "¿Con qué frecuencia actualizaremos este Aviso de Cookies?",
+      "body": {
+        "p1": "Podemos actualizar este Aviso de Cookies de vez en cuando para reflejar, por ejemplo, cambios en las cookies que utilizamos o por otras razones operativas, legales o reglamentarias. Por lo tanto, le rogamos que vuelva a visitar este Aviso de Cookies con regularidad para mantenerse informado sobre nuestro uso de cookies y tecnologías relacionadas. La fecha en la parte superior de este Aviso de Cookies indica cuándo se actualizó por última vez."
+      }
+    },
+    "contact": {
+      "heading": "¿Dónde puedo obtener más información?",
+      "body": {
+        "p1_text": "Si tiene alguna pregunta sobre nuestro uso de cookies u otras tecnologías, envíenos un correo electrónico a ",
+        "p1_email": "[Tu email de contacto, ej. privacy@elevaitelabs.io]"
+      }
+    }
+  }
+},
+"legalNotice": {
+  "title": "Aviso Legal (Imprint)",
+  "subtitle": "Información proporcionada según el § 5 TMG (Ley Alemana de Telemedios) y otras regulaciones pertinentes.",
+  "placeholderInfo": "Este es un texto provisional para su Aviso Legal o Imprint. Es legalmente requerido en muchos países, especialmente en Europa. Debe reemplazar esto con los datos oficiales de su empresa.",
+  "headings": {
+    "company": "Información de la Empresa",
+    "contact": "Información de Contacto",
+    "register": "Registro Mercantil"
+  },
+  "companyInfo": {
+    "name": "Nombre de la Empresa:",
+    "address": "Dirección:",
+    "representedBy": "Representado por:",
+    "placeholder_ceo": "[Su Nombre/Nombre del CEO]"
+  },
+  "contactInfo": {
+    "telephone": "Teléfono:",
+    "email": "Correo Electrónico:",
+    "placeholder_phone": "[Su Número de Teléfono]",
+    "placeholder_email": "[Su Correo de Contacto]"
+  },
+  "registerInfo": {
+    "entry": "Inscripción en el Handelsregister.",
+    "court": "Tribunal de Registro:",
+    "number": "Número de Registro:",
+    "vatId": "ID de IVA:",
+    "placeholder_court": "[Su Tribunal de Registro]",
+    "placeholder_number": "[Su Número de Registro]"
+  }
+}
+}

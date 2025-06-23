@@ -1,47 +1,20 @@
 // src/components/FaqSection.tsx
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react'; // Using Chevron for open/close indication
+import { ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next'; // 1. Importar
 
-interface FaqItem {
-  id: number;
-  question: string;
-  answer: string; // You can also use JSX here if answers need rich formatting
-}
-
-// --- YOU NEED TO REPLACE THIS WITH YOUR ACTUAL FAQs ---
-const faqData: FaqItem[] = [
-  {
-    id: 1,
-    question: "What kind of AI agents can you build?",
-    answer: "We craft a wide range of AI agents tailored to specific business needs, including marketing agents, automation agents for operational tasks, intelligent receptionist agents, sales AI assistants to boost your pipeline, AI-powered support agents for enhanced customer experience, and data analyst agents for insightful reporting."
-  },
-  {
-    id: 2,
-    question: "How long does it take to implement a custom AI agent?",
-    answer: "The timeline for implementing a custom AI agent can vary depending on the complexity and the integration requirements. Typically, a project can take anywhere from a few weeks to a couple of months. We begin with a discovery phase to fully understand your specific needs and then provide you with a more accurate project estimate."
-  },
-  {
-    id: 3,
-    question: "Do your AI agents integrate with existing business tools?",
-    answer: "Absolutely. Seamless integration is a core part of our offering. Our AI agents are designed to connect with your existing CRMs (like Salesforce, HubSpot), communication platforms (Slack, email, Teams), calendar tools, databases, and even custom APIs to ensure a smooth workflow."
-  },
-  {
-    id: 4,
-    question: "How do you ensure the AI solutions are truly 'crafted' for my business?",
-    answer: "Our process begins with a deep dive into your specific operational challenges, workflows, and strategic goals. We don't use one-size-fits-all templates. Each AI agent's logic, tasks, and integrations are custom-designed and developed to provide a truly personalized solution that addresses your unique requirements."
-  },
-  {
-    id: 5,
-    question: "What kind of ROI can I expect from an AI agent?",
-    answer: "Clients typically see significant ROI through increased efficiency, reduced manual labor costs, improved lead conversion rates, faster response times, and enhanced customer satisfaction. We work with you to define key performance indicators (KPIs) to measure the specific impact on your business."
-  }
-  // Add more of your FAQs here...
+// 2. La data ahora solo contiene los IDs y las claves de traducción
+const faqData = [
+  { id: 1, questionKey: 'faq.questions.q1.question', answerKey: 'faq.questions.q1.answer' },
+  { id: 2, questionKey: 'faq.questions.q2.question', answerKey: 'faq.questions.q2.answer' },
+  { id: 3, questionKey: 'faq.questions.q3.question', answerKey: 'faq.questions.q3.answer' },
+  { id: 4, questionKey: 'faq.questions.q4.question', answerKey: 'faq.questions.q4.answer' },
+  { id: 5, questionKey: 'faq.questions.q5.question', answerKey: 'faq.questions.q5.answer' },
 ];
-// --- END OF PLACEHOLDER DATA ---
-
 
 const FaqSection = () => {
+  const { t } = useTranslation(); // 3. Inicializar hook
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
@@ -49,8 +22,8 @@ const FaqSection = () => {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-white"> {/* Or bg-[#F1F3F5] */}
-      <div className="max-w-3xl mx-auto px-4 sm:px-6"> {/* Limiting width for better readability */}
+    <section id="faq" className="py-16 md:py-24 bg-white">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <motion.div
           className="text-center mb-10 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -58,11 +31,12 @@ const FaqSection = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
+          {/* 4. Usar la función t() para traducir */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0D1B2A] mb-4">
-            Frequently Asked Questions
+            {t('faq.title')}
           </h2>
           <p className="text-lg text-[#0D1B2A]/75">
-            Find quick answers to common questions about our AI solutions.
+            {t('faq.subtitle')}
           </p>
         </motion.div>
 
@@ -82,7 +56,7 @@ const FaqSection = () => {
                 aria-controls={`faq-answer-${faq.id}`}
               >
                 <span className="text-md sm:text-lg font-medium text-[#0D1B2A]">
-                  {faq.question}
+                  {t(faq.questionKey)}
                 </span>
                 <ChevronDown
                   size={20}
@@ -108,7 +82,7 @@ const FaqSection = () => {
                     className="overflow-hidden"
                   >
                     <p className="pt-1 pb-4 text-sm sm:text-base text-[#0D1B2A]/80 leading-relaxed">
-                      {faq.answer}
+                      {t(faq.answerKey)}
                     </p>
                   </motion.div>
                 )}
