@@ -13,6 +13,17 @@ import TermsPage from "./pages/TermsPage";
 import CookiePolicyPage from "./pages/CookiePolicyPage";
 import LegalNoticePage from "./pages/LegalNoticePage";
 
+
+/**
+ * Componente que agrupa todas las rutas que usan el Layout principal (Header/Footer).
+ * El componente <Outlet /> renderizará la ruta hija que corresponda.
+ */
+const PublicLayout = () => (
+  <Layout>
+    <Outlet />
+  </Layout>
+);
+
 function App() {
   return (
     <ElevenLabsWidgetProvider>
