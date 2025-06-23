@@ -5,7 +5,8 @@
     "plans": "Planes",
     "integrations": "Integraciones",
     "contact": "Casos de Uso",
-    "getStarted": "Empezar"
+    "getStarted": "Empezar",
+    "login": "Iniciar Sesión"
   },
   "hero": {
     "title_part1": "Sistemas de IA Adaptativos:",
