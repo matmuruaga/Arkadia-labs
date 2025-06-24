@@ -643,5 +643,39 @@
   "footer": {
     "backToHome": "Back to the main page"
   }
+},
+"contactPage": {
+  "title": "Let's Talk About Your Project",
+  "subtitle": "Complete this form to schedule a meeting with our team.",
+  "labels": {
+    "fullName": "Full Name",
+    "workEmail": "Work Email",
+    "companyName": "Company Name",
+    "role": "Role (Optional)",
+    "companySize": "Company Size",
+    "challenge": "What is your main challenge or need?"
+  },
+  "placeholders": {
+    "companySize": "Select a range"
+  },
+  "options": {
+    "size1": "1-10 employees",
+    "size2": "11-50 employees",
+    "size3": "51-200 employees",
+    "size4": "201+ employees"
+  },
+  "button": {
+    "submit": "Schedule Meeting"
+  },
+  "validation": {
+    "fullName": "Name must be at least 3 characters.",
+    "email": "Please enter a valid email.",
+    "companyName": "Company name is required.",
+    "companySize": "Please select a company size.",
+    "challenge": "Your description must be at least 10 characters."
+  },
+  "errors": {
+    "server": "There was a problem submitting your request. Please try again."
+  }
 }
 }

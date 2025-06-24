@@ -643,5 +643,39 @@
   "footer": {
     "backToHome": "Volver a la página principal"
   }
+},
+"contactPage": {
+  "title": "Hablemos de tu Proyecto",
+  "subtitle": "Completa este formulario para agendar una reunión con nuestro equipo.",
+  "labels": {
+    "fullName": "Nombre Completo",
+    "workEmail": "Email de Trabajo",
+    "companyName": "Nombre de la Empresa",
+    "role": "Cargo (Opcional)",
+    "companySize": "Tamaño de la Empresa",
+    "challenge": "¿Cuál es tu principal desafío o necesidad?"
+  },
+  "placeholders": {
+    "companySize": "Selecciona un rango"
+  },
+  "options": {
+    "size1": "1-10 empleados",
+    "size2": "11-50 empleados",
+    "size3": "51-200 empleados",
+    "size4": "+201 empleados"
+  },
+  "button": {
+    "submit": "Agendar Reunión"
+  },
+  "validation": {
+    "fullName": "El nombre debe tener al menos 3 caracteres.",
+    "email": "Por favor, introduce un email válido.",
+    "companyName": "El nombre de la empresa es requerido.",
+    "companySize": "Por favor, selecciona un tamaño de empresa.",
+    "challenge": "Tu descripción debe tener al menos 10 caracteres."
+  },
+  "errors": {
+    "server": "Hubo un problema al enviar tu solicitud. Por favor, inténtalo de nuevo."
+  }
 }
 }
