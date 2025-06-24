@@ -1,8 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "/((?!api/).*)",
-      "destination": "/"
+      "source": "/api/contact",
+      "destination": "/functions/contact.cjs"
+    },
+    { 
+      "source": "/(.*)", 
+      "destination": "/" 
     }
   ],
   "headers": [
