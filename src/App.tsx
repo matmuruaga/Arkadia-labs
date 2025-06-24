@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import LanguageHandler from "./components/LanguageHandler";
 import { ElevenLabsWidgetProvider } from "./components/ElevenLabsWidgetContext";
+import { Outlet } from 'react-router-dom'; //
+import  Layout  from "./components/Layout";
 
 // Importa tus páginas
 import MainPage from "./pages/MainPage";
@@ -12,6 +14,8 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsPage from "./pages/TermsPage";
 import CookiePolicyPage from "./pages/CookiePolicyPage";
 import LegalNoticePage from "./pages/LegalNoticePage";
+import { ContactPage } from './pages/ContactPage';
+import { ThankYouPage } from './pages/ThankYouPage';
 
 
 /**
@@ -41,6 +45,8 @@ function App() {
           <Route path="terms-and-conditions" element={<TermsPage />} />
           <Route path="cookie-policy" element={<CookiePolicyPage />} />
           <Route path="legal-notice" element={<LegalNoticePage />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="thank-you" element={<ThankYouPage />} />
 
         </Route>
         

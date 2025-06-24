@@ -10,6 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.1.1",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-select": "^2.2.5",
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.0.8",
     "i18next": "^25.2.1",
     "i18next-browser-languagedetector": "^8.2.0",
@@ -17,11 +23,16 @@
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
+    "react-calendly": "^4.4.0",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.5",
+    "react-hook-form": "^7.58.1",
     "react-i18next": "^15.5.3",
     "react-router-dom": "^7.6.0",
-    "swiper": "^11.0.7"
+    "swiper": "^11.0.7",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.25.67"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
