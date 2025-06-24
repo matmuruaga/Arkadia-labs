@@ -25,7 +25,6 @@ const Footer = () => {
                 alt={t('footer.altLogo')}
                 className="h-8 w-auto mr-2"
               />
-              <span className="text-xl font-bold text-[#0D1B2A]">{t('footer.companyName')}</span>
             </Link>
             <p className="text-gray-600 mb-6 text-sm">{t('footer.description')}</p>
             <div className="flex space-x-4">

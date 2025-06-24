@@ -628,5 +628,20 @@
     "placeholder_court": "[Su Tribunal de Registro]",
     "placeholder_number": "[Su Número de Registro]"
   }
+},
+"thankYouPage": {
+  "header": {
+    "title": "¡Gracias por tu interés!",
+    "subtitle": "Hemos recibido tu solicitud y nuestro equipo se pondrá en contacto contigo en breve."
+  },
+  "cta": {
+    "altImage": "Ilustración de Agente de IA",
+    "title": "Da el siguiente paso",
+    "description": "Para mayor agilidad y para asegurar un espacio que te convenga, puedes reservar una llamada de 15 minutos directamente en nuestro calendario.",
+    "button": "Agendar tu reunión"
+  },
+  "footer": {
+    "backToHome": "Volver a la página principal"
+  }
 }
 }

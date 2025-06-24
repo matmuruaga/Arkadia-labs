@@ -628,5 +628,20 @@
     "placeholder_court": "[Your Register Court]",
     "placeholder_number": "[Your Registration Number]"
   }
+},
+"thankYouPage": {
+  "header": {
+    "title": "Thank you for your interest!",
+    "subtitle": "We have received your request and our team will be in touch with you shortly."
+  },
+  "cta": {
+    "altImage": "AI Agent Illustration",
+    "title": "Take the next step",
+    "description": "For greater agility and to secure a time that suits you, you can book a 15-minute call directly on our calendar.",
+    "button": "Schedule your meeting"
+  },
+  "footer": {
+    "backToHome": "Back to the main page"
+  }
 }
 }

@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form'; 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useNavigate } from 'react-router-dom';
+// CAMBIO 1: Importamos useParams para obtener el idioma de la URL
+import { useNavigate, useParams } from 'react-router-dom';
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,6 +17,7 @@ const contactFormSchema = z.object({
   fullName: z.string().min(3, { message: "El nombre debe tener al menos 3 caracteres." }),
   email: z.string().email({ message: "Por favor, introduce un email válido." }),
   companyName: z.string().min(2, { message: "El nombre de la empresa es requerido." }),
+  role: z.string().optional(),
   companySize: z.string({ required_error: "Por favor, selecciona un tamaño de empresa."}),
   mainChallenge: z.string().min(10, { message: "Tu descripción debe tener al menos 10 caracteres." }),
 });
@@ -26,6 +28,8 @@ export const ContactPage = () => {
   const [loading, setLoading] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
   const navigate = useNavigate();
+  // CAMBIO 2: Obtenemos el parámetro 'lang' de la URL
+  const { lang } = useParams<{ lang: string }>();
 
   const { register, handleSubmit, formState: { errors }, control } = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -36,29 +40,25 @@ export const ContactPage = () => {
     setServerError(null);
 
     try {
-      // --- CAMBIO CLAVE AQUÍ ---
-      // Se define la URL de la API de forma condicional.
-      // En desarrollo, apunta a la URL de producción en Vercel.
-      // En producción, usa la ruta relativa.
-      const apiUrl = import.meta.env.DEV
-        ? 'https://www.elevaitelabs.io/api/contact'
-        : '/api/contact';
+      // Usamos la URL del webhook de n8n que ya te funcionaba
+      const webhookUrl = 'https://n8n-elevaitelabs-u48215.vm.elestio.app/webhook/b8866b0b-beb2-4f71-b268-94a9663bfbc8';
 
-      const response = await fetch(apiUrl, {
+      const response = await fetch(webhookUrl, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify(data),
       });
 
       if (!response.ok) {
-        const errorData = await response.json().catch(() => ({ message: 'Hubo un problema al enviar tu solicitud. Inténtalo de nuevo.' }));
-        throw new Error('Hubo un problema al enviar tu solicitud. Inténtalo de nuevo.');
+        throw new Error('Hubo un problema al enviar tu solicitud. Por favor, inténtalo de nuevo.');
       }
 
-      navigate('/thank-you');
+      // CAMBIO 3: Usamos una redirección a nivel de navegador para máxima fiabilidad
+      window.location.href = `/${lang}/thank-you`;
 
     } catch (error: any) {
-      // Este error ahora mostrará 'Failed to fetch' o el mensaje del servidor
       setServerError(error.message || 'Failed to fetch');
     } finally {
       setLoading(false);
@@ -91,26 +91,31 @@ export const ContactPage = () => {
               {errors.companyName && <p className="text-red-500 text-sm mt-1">{errors.companyName.message}</p>}
             </div>
             <div>
-              <Label>Tamaño de la Empresa</Label>
-              <Controller
-                control={control}
-                name="companySize"
-                render={({ field }) => (
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Selecciona un rango" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="1-10 empleados">1-10 empleados</SelectItem>
-                      <SelectItem value="11-50 empleados">11-50 empleados</SelectItem>
-                      <SelectItem value="51-200 empleados">51-200 empleados</SelectItem>
-                      <SelectItem value="+201 empleados">+201 empleados</SelectItem>
-                    </SelectContent>
-                  </Select>
-                )}
-              />
-              {errors.companySize && <p className="text-red-500 text-sm mt-1">{errors.companySize.message}</p>}
+              <Label htmlFor="role">Cargo (Opcional)</Label>
+              <Input id="role" {...register("role")} />
+              {errors.role && <p className="text-red-500 text-sm mt-1">{errors.role.message}</p>}
             </div>
+          </div>
+          <div>
+            <Label>Tamaño de la Empresa</Label>
+            <Controller
+              control={control}
+              name="companySize"
+              render={({ field }) => (
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecciona un rango" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="1-10 empleados">1-10 empleados</SelectItem>
+                    <SelectItem value="11-50 empleados">11-50 empleados</SelectItem>
+                    <SelectItem value="51-200 empleados">51-200 empleados</SelectItem>
+                    <SelectItem value="+201 empleados">+201 empleados</SelectItem>
+                  </SelectContent>
+                </Select>
+              )}
+            />
+            {errors.companySize && <p className="text-red-500 text-sm mt-1">{errors.companySize.message}</p>}
           </div>
           <div>
             <Label htmlFor="mainChallenge">¿Cuál es tu principal desafío o necesidad?</Label>
