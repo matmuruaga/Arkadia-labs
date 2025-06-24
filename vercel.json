@@ -1,9 +1,9 @@
 {
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/(.*)", "destination": "/" }
   ],
   "headers": [
+
     {
       "source": "/api/contact",
       "headers": [
@@ -13,12 +13,13 @@
         { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" }
       ]
     },
+ 
     {
       "source": "/(.*)",
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "script-src 'self' 'wasm-unsafe-eval' 'inline-speculation-rules' https://www.googletagmanager.com https://assets.calendly.com 'sha256-L6vfczTwQfkTAhrKoc8xdB1000jNx4RA/rkePBgt0=o=' 'sha256-tQ3NWuL/+WxfWnFD1TgosXgUNaXyzWJ7iQiSqHSf4iM=' 'sha256-uNxeLPZRN91A5h78wJ0YD0bRrG8LKu6TJMDk9t+YA4=';"
+          "value": "script-src 'self' 'wasm-unsafe-eval' 'inline-speculation-rules' https://www.googletagmanager.com https://assets.calendly.com https://unpkg.com 'sha256-L6vfczTwQfkTAhrKoc8xdB1000jNx4RA/rkePBgt0=o=' 'sha256-tQ3NWuL/+WxfWnFD1TgosXgUNaXyzWJ7iQiSqHSf4iM=' 'sha256-uNxeLPZRN91A5h78wJ0YD0bRrG8LKu6TJMDk9t+YA4=';"
         }
       ]
     }
