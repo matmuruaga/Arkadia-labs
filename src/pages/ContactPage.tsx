@@ -41,7 +41,7 @@ export const ContactPage = () => {
       // En desarrollo, apunta a la URL de producción en Vercel.
       // En producción, usa la ruta relativa.
       const apiUrl = import.meta.env.DEV
-        ? 'https://elevaitelabs.io/api/contact'
+        ? 'https://www.elevaitelabs.io/api/contact'
         : '/api/contact';
 
       const response = await fetch(apiUrl, {

@@ -10,18 +10,9 @@ interface ContactRequestBody {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  // --- ESTA SECCIÓN DE CORS ES LA MÁS IMPORTANTE ---
-  // Debe estar al principio de la función.
-  res.setHeader('Access-Control-Allow-Origin', '*'); // Permite cualquier origen
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Api-Token');
+  // El manejo de CORS ahora está en vercel.json, ya no es necesario aquí.
+  // Procedemos directamente a la lógica de la API.
 
-  // Si la petición es de tipo OPTIONS (preflight), respondemos con éxito inmediatamente.
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end();
-  }
-
-  // El resto de la lógica solo se ejecuta para peticiones POST
   if (req.method === 'POST') {
     try {
       const { fullName, email, companyName, companySize, mainChallenge } = req.body as ContactRequestBody;
@@ -33,20 +24,21 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         throw new Error("Las variables de entorno de ActiveCampaign no están configuradas.");
       }
       
-      const syncResponse = await fetch(`${AC_URL}/api/3/contact/sync`, { /* ... */ });
+      const syncResponse = await fetch(`${AC_URL}/api/3/contact/sync`, { /* ... tu lógica de fetch ... */ });
       if (!syncResponse.ok) { throw new Error('Error al sincronizar contacto.'); }
 
       const { contact } = await syncResponse.json();
 
-      await fetch(`${AC_URL}/api/3/contactLists`, { /* ... */ });
+      await fetch(`${AC_URL}/api/3/contactLists`, { /* ... tu lógica de fetch ... */ });
 
       return res.status(200).json({ message: 'Contacto procesado con éxito.' });
+
     } catch (error: any) {
       console.error("Error en /api/contact:", error);
       return res.status(500).json({ message: error.message || 'Error interno del servidor.' });
     }
   }
 
-  res.setHeader('Allow', ['POST', 'OPTIONS']);
+  // Si no es POST, devolvemos un error
   return res.status(405).end(`Method ${req.method} Not Allowed`);
 }
