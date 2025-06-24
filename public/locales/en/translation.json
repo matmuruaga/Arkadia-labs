@@ -11,7 +11,15 @@
   "hero": {
     "title_part1": "Adaptive AI Systems:",
     "title_part2": "that save time and generate revenue.",
-    "subtitle": "Automate business operations to achieve superior efficiency with tailored AI solutions."
+    "subtitle": "Automate business operations to achieve superior efficiency with tailored AI solutions.",
+"phrases": {
+  "p1": "Marketing Agent driving growth...",
+  "p2": "Automation Agent streamlining tasks...",
+  "p3": "Receptionist Agent managing inquiries...",
+  "p4": "Sales AI Assistant boosting deals...",
+  "p5": "Support Agent AI enhancing CX...",
+  "p6": "Data Analyst Agent uncovering insights..."
+}
   },
   "beforeAfter": {
     "title": "The ElevAIte Transformation: Before & After",

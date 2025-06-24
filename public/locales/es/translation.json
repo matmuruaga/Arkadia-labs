@@ -11,7 +11,15 @@
   "hero": {
     "title_part1": "Sistemas de IA Adaptativos:",
     "title_part2": "que ahorran tiempo y generan ingresos.",
-    "subtitle": "Automatiza operaciones de negocio para lograr una eficiencia superior con soluciones de IA a medida."
+    "subtitle": "Automatiza operaciones de negocio para lograr una eficiencia superior con soluciones de IA a medida.",
+"phrases": {
+  "p1": "Agente de Marketing impulsando el crecimiento...",
+  "p2": "Agente de Automatización optimizando tareas...",
+  "p3": "Agente Recepcionista gestionando consultas...",
+  "p4": "Asistente de Ventas IA potenciando acuerdos...",
+  "p5": "Agente de Soporte IA mejorando la CX...",
+  "p6": "Agente Analista de Datos revelando insights..."
+}
   },
   "beforeAfter": {
     "title": "La Transformación ElevAIte: Antes y Después",

@@ -6,25 +6,24 @@ import AccumulatingTypingEffect, { PhraseWithEmoji } from './AccumulatingTypingE
 const Hero = () => {
   const { t } = useTranslation();
 
+  // 1. Definir los datos DENTRO del componente para usar la función t()
   const aiAgentPhrases: PhraseWithEmoji[] = [
-    { emoji: "📈", text: "Marketing Agent driving growth..." },
-    { emoji: "⚙️", text: "Automation Agent streamlining tasks..." },
-    { emoji: "💁‍♀️", text: "Receptionist Agent managing inquiries..." },
-    { emoji: "💼", text: "Sales AI Assistant boosting deals..." },
-    { emoji: "💬", text: "Support Agent AI enhancing CX..." },
-    { emoji: "📊", text: "Data Analyst Agent uncovering insights..." }
+    { emoji: "📈", text: t('hero.phrases.p1') },
+    { emoji: "⚙️", text: t('hero.phrases.p2') },
+    { emoji: "💁‍♀️", text: t('hero.phrases.p3') },
+    { emoji: "💼", text: t('hero.phrases.p4') },
+    { emoji: "💬", text: t('hero.phrases.p5') },
+    { emoji: "📊", text: t('hero.phrases.p6') }
   ];
 
   return (
     <section
       id="hero"
-      // Se añade más padding inferior para dar espacio al widget flotante de la IA
       className="min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-48 sm:pt-24 bg-[#F1F3F5] relative"
     >
       <div className="container mx-auto mt-10 md:mt-0">
         <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-12">
           
-          {/* Columna de Texto (Izquierda) */}
           <div className="md:w-1/2 lg:w-3/5 text-center md:text-left pt-0 md:pt-2 lg:pt-4">
             <motion.h1
               className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold mb-4 text-[#0D1B2A] leading-tight"
@@ -48,7 +47,6 @@ const Hero = () => {
             </motion.h2>
           </div>
 
-          {/* Columna del Elemento Visual (Derecha) */}
           <motion.div 
             className="md:w-1/2 lg:w-2/5 w-full mt-6 md:mt-0 flex justify-center md:justify-start"
             initial={{ opacity: 0, x: 20 }}
@@ -68,9 +66,6 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-      
-      {/* El botón flotante personalizado ha sido eliminado. 
-          El widget de ElevenLabs se posicionará desde MainPage.tsx o App.tsx. */}
     </section>
   );
 };
