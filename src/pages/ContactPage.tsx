@@ -1,6 +1,5 @@
 // src/pages/ContactPage.tsx
 import { useState } from 'react';
-// CAMBIO 1: Importamos 'Controller' desde react-hook-form
 import { useForm, Controller } from 'react-hook-form'; 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -37,20 +36,30 @@ export const ContactPage = () => {
     setServerError(null);
 
     try {
-      const response = await fetch('/api/contact', {
+      // --- CAMBIO CLAVE AQUÍ ---
+      // Se define la URL de la API de forma condicional.
+      // En desarrollo, apunta a la URL de producción en Vercel.
+      // En producción, usa la ruta relativa.
+      const apiUrl = import.meta.env.DEV
+        ? 'https://elevaitelabs.io/api/contact'
+        : '/api/contact';
+
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
 
       if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: 'Hubo un problema al enviar tu solicitud. Inténtalo de nuevo.' }));
         throw new Error('Hubo un problema al enviar tu solicitud. Inténtalo de nuevo.');
       }
 
       navigate('/thank-you');
 
     } catch (error: any) {
-      setServerError(error.message);
+      // Este error ahora mostrará 'Failed to fetch' o el mensaje del servidor
+      setServerError(error.message || 'Failed to fetch');
     } finally {
       setLoading(false);
     }
@@ -63,7 +72,6 @@ export const ContactPage = () => {
         <p className="text-gray-600 mb-6">Completa este formulario para agendar una reunión con nuestro equipo.</p>
         
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          {/* ... otros campos del formulario ... */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <Label htmlFor="fullName">Nombre Completo</Label>
@@ -82,7 +90,6 @@ export const ContactPage = () => {
               <Input id="companyName" {...register("companyName")} />
               {errors.companyName && <p className="text-red-500 text-sm mt-1">{errors.companyName.message}</p>}
             </div>
-            {/* CAMBIO 2: Reemplazamos el Select con el componente Controller */}
             <div>
               <Label>Tamaño de la Empresa</Label>
               <Controller
