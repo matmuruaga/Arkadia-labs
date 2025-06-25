@@ -16,6 +16,7 @@ import CookiePolicyPage from "./pages/CookiePolicyPage";
 import LegalNoticePage from "./pages/LegalNoticePage";
 import { ContactPage } from './pages/ContactPage';
 import { ThankYouPage } from './pages/ThankYouPage';
+import { IntegrationsPage } from './pages/IntegrationsPage';
 
 
 /**
@@ -47,6 +48,7 @@ function App() {
           <Route path="legal-notice" element={<LegalNoticePage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="thank-you" element={<ThankYouPage />} />
+          <Route path="integrations" element={<IntegrationsPage />} />
 
         </Route>
         
@@ -56,7 +58,7 @@ function App() {
     </BrowserRouter>
     <elevenlabs-convai 
         agent-id="agent_01jx8asf98f8xt7pzzrhvt2rzs"
-        launcher-style="none"
+        //launcher-style="none"
       ></elevenlabs-convai>
     </ElevenLabsWidgetProvider>
   );

@@ -647,6 +647,8 @@
 "contactPage": {
   "title": "Hablemos de tu Proyecto",
   "subtitle": "Completa este formulario para agendar una reunión con nuestro equipo.",
+   "whyInfoTitle": "Un último paso antes de conectar",
+    "whyInfoBody": "Completar este formulario es el primer paso para una colaboración exitosa. Conocer un poco sobre tu empresa y tus desafíos nos permite preparar nuestra conversación y llegar con ideas que realmente aporten valor. ¡Estamos deseando hablar contigo!",
   "labels": {
     "fullName": "Nombre Completo",
     "workEmail": "Email de Trabajo",
@@ -677,5 +679,49 @@
   "errors": {
     "server": "Hubo un problema al enviar tu solicitud. Por favor, inténtalo de nuevo."
   }
+},
+"integrationsHero": {
+  "title": "Conéctate con las Herramientas que Amas",
+  "subtitle": "Elevaite Labs se integra con más de 500 aplicaciones para potenciar tus flujos de trabajo existentes."
+},
+"integrationCard": {
+  "cta": "Empezar"
+},
+"integrationsPage": {
+  "categories": {
+    "marketing": "Automatización de Marketing",
+    "crm": "CRM",
+    "communication": "Comunicación",
+    "support": "Soporte",
+    "productivity": "Productividad"
+  },
+  "list": {
+    "salesforce": { "name": "Salesforce", "description": "Sincroniza tus leads y actividades de venta directamente con el CRM líder del mercado." },
+    "hubspot": { "name": "HubSpot", "description": "Automatiza la creación de contactos y registra interacciones en tu HubSpot CRM." },
+    "zoom": { "name": "Zoom", "description": "Transcripción y análisis en tiempo real de tus reuniones de Zoom." },
+    "google_meet": { "name": "Google Meet", "description": "Integra nuestro agente de IA en tus Google Meets para automatizar notas." },
+    "ms_teams": { "name": "Microsoft Teams", "description": "Potencia la colaboración con respuestas inteligentes en tus canales y llamadas." },
+    "slack": { "name": "Slack", "description": "Recibe notificaciones y ejecuta acciones de tus agentes de IA directamente en Slack." },
+    "amazon_chime": { "name": "Amazon Chime" },
+    "cisco_webex": { "name": "Cisco WebEx" },
+    "intercom": { "name": "Intercom" },
+    "jira": { "name": "Jira" },
+    "notion": { "name": "Notion" },
+    "trello": { "name": "Trello" },
+    "asana": { "name": "Asana" },
+    "gmail": { "name": "Gmail" },
+    "google_drive": { "name": "Google Drive" }
+  }
+},
+"howItWorks": {
+  "title": "Tus Herramientas, Nuestra Inteligencia. Automatización sin Esfuerzo.",
+  "p1": "Olvídate de la complejidad técnica. Nosotros diseñamos y configuramos los flujos de trabajo (workflows) inteligentes que tus agentes de IA necesitan para operar.",
+  "p2": "Gracias a nuestras integraciones nativas con las herramientas líderes del mercado, nuestros agentes se encargan de todo: desde actualizar tu CRM hasta gestionar tareas de soporte, todo de forma autónoma y eficiente. Tú solo conéctalos y observa cómo trabajan.",
+  "altImage": "Flujo de trabajo de integraciones automatizadas"
+},
+"ctaSection": {
+  "title": "¿Hay algo que no puedas automatizar con IA?",
+  "subtitle": "Dile adiós a las tareas manuales. Empieza a construir hoy.",
+  "button": "Comienza a Automatizar"
 }
 }

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Lottie, { LottieRefCurrentProps } from 'lottie-react';
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom'; // 1. Importamos useNavigate
 import integrationsAnimationData from '../assets/integrations-lottie.json';
 import { Check, ArrowRight } from 'lucide-react';
 
@@ -15,15 +16,16 @@ const integrationExampleKeys = [
 ];
 
 const IntegrationsSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate(); // 2. Inicializamos el hook
   const lottieIntegrationsRef = useRef<LottieRefCurrentProps>(null);
 
-  const handleHowItWorksClick = () => {
-    console.log('"How it works?" button clicked. Implement desired action.');
+  // 3. Modificamos la función para que redirija a la página de integraciones
+  const handleBrowseIntegrationsClick = () => {
+    navigate(`/${i18n.language}/integrations`);
   };
 
   return (
-    // CAMBIO AQUÍ: Se añade 'overflow-x-hidden' para contener las animaciones
     <section id="integrations" className="py-16 md:py-24 bg-[#F1F3F5] overflow-x-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -66,8 +68,9 @@ const IntegrationsSection = () => {
             </ul>
             
             <div>
+              {/* 4. Conectamos la nueva función al onClick del botón */}
               <button 
-                onClick={handleHowItWorksClick}
+                onClick={handleBrowseIntegrationsClick}
                 className="bg-[#1C7ED6] hover:bg-[#1565C0] text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#1C7ED6] focus:ring-opacity-50 inline-flex items-center group"
               >
                 {t('integrations.ctaButton')}

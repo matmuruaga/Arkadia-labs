@@ -647,6 +647,8 @@
 "contactPage": {
   "title": "Let's Talk About Your Project",
   "subtitle": "Complete this form to schedule a meeting with our team.",
+    "whyInfoTitle": "One last step before we connect",
+    "whyInfoBody": "Completing this form is the first step towards a successful collaboration. Knowing a bit about your company and your challenges allows us to prepare for our conversation and arrive with ideas that truly add value. We look forward to speaking with you!",
   "labels": {
     "fullName": "Full Name",
     "workEmail": "Work Email",
@@ -677,5 +679,49 @@
   "errors": {
     "server": "There was a problem submitting your request. Please try again."
   }
+},
+"integrationsHero": {
+  "title": "Connect with the Tools You Love",
+  "subtitle": "Elevaite Labs integrates with over 500 applications to supercharge your existing workflows."
+},
+"integrationCard": {
+  "cta": "Get Started"
+},
+"integrationsPage": {
+  "categories": {
+    "marketing": "Marketing Automation",
+    "crm": "CRM",
+    "communication": "Communication",
+    "support": "Support",
+    "productivity": "Productivity"
+  },
+  "list": {
+    "salesforce": { "name": "Salesforce", "description": "Sync your leads and sales activities directly with the market-leading CRM." },
+    "hubspot": { "name": "HubSpot", "description": "Automate contact creation and log interactions in your HubSpot CRM." },
+    "zoom": { "name": "Zoom", "description": "Real-time transcription and analysis of your Zoom meetings." },
+    "google_meet": { "name": "Google Meet", "description": "Integrate our AI agent into your Google Meets to automate note-taking." },
+    "ms_teams": { "name": "Microsoft Teams", "description": "Enhance collaboration with intelligent responses in your channels and calls." },
+    "slack": { "name": "Slack", "description": "Receive notifications and execute actions from your AI agents directly in Slack." },
+    "amazon_chime": { "name": "Amazon Chime" },
+    "cisco_webex": { "name": "Cisco WebEx" },
+    "intercom": { "name": "Intercom" },
+    "jira": { "name": "Jira" },
+    "notion": { "name": "Notion" },
+    "trello": { "name": "Trello" },
+    "asana": { "name": "Asana" },
+    "gmail": { "name": "Gmail" },
+    "google_drive": { "name": "Google Drive" }
+  }
+},
+"howItWorks": {
+  "title": "Your Tools, Our Intelligence. Effortless Automation.",
+  "p1": "Forget the technical complexity. We design and configure the intelligent workflows your AI agents need to operate.",
+  "p2": "Thanks to our native integrations with market-leading tools, our agents handle everything: from updating your CRM to managing support tasks, all autonomously and efficiently. You just connect them and watch them work.",
+  "altImage": "Automated integrations workflow"
+},
+"ctaSection": {
+  "title": "Is There Anything You Can't Automate with AI?",
+  "subtitle": "Say goodbye to manual tasks. Start building today.",
+  "button": "Start Automating"
 }
 }
