@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+// 1. Importamos useNavigate para la redirección
+import { useNavigate } from 'react-router-dom';
 import { Check, X, SlidersHorizontal, LineChart, Bot, MessageSquare, Briefcase, Zap } from 'lucide-react';
 
 const segments = [
@@ -12,7 +14,6 @@ const segments = [
   { id: 'hr', labelKey: 'beforeAfter.tabs.hr' },
 ];
 
-// Estructura de datos que contiene las claves de traducción únicas para cada punto
 const contentKeysBySegment = {
   sales: ['s1', 's2', 's3', 's4'],
   marketing: ['m1', 'm2', 'm3', 'm4'],
@@ -22,11 +23,14 @@ const contentKeysBySegment = {
 };
 
 const BeforeAfterSection = () => {
-  const { t } = useTranslation();
+  // 2. Obtenemos i18n y navigate
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const [activeSegment, setActiveSegment] = useState('sales');
 
+  // 3. Modificamos la función para que redirija a la página de contacto
   const handleCtaClick = () => {
-    console.log('CTA Button Clicked');
+    navigate(`/${i18n.language}/contact`);
   };
 
   return (
@@ -80,7 +84,6 @@ const BeforeAfterSection = () => {
                       <X size={14} className="text-slate-500" strokeWidth={2.5}/>
                     </div>
                     <div>
-                      {/* --- LÓGICA DE TRADUCCIÓN CORREGIDA --- */}
                       <h4 className="font-semibold text-[#0D1B2A]">{t(`beforeAfter.content.${activeSegment}.${itemKey}.beforeTitle`)}</h4>
                       <p className="mt-1 text-sm text-[#0D1B2A]/70">{t(`beforeAfter.content.${activeSegment}.${itemKey}.beforeDescription`)}</p>
                     </div>
@@ -102,7 +105,6 @@ const BeforeAfterSection = () => {
                        <Check size={14} className="text-green-600" strokeWidth={3}/>
                      </div>
                     <div>
-                      {/* --- LÓGICA DE TRADUCCIÓN CORREGIDA --- */}
                       <h4 className="font-semibold text-[#0D1B2A]">{t(`beforeAfter.content.${activeSegment}.${itemKey}.afterTitle`)}</h4>
                       <p className="mt-1 text-sm text-[#0D1B2A]/70">{t(`beforeAfter.content.${activeSegment}.${itemKey}.afterDescription`)}</p>
                     </div>
@@ -118,15 +120,15 @@ const BeforeAfterSection = () => {
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} viewport={{ once: true }}
         >
+          {/* El onClick de este botón ahora llama a la función handleCtaClick actualizada */}
           <button
             onClick={handleCtaClick}
-            className="bg-[#0D1B2A] hover:bg-black text-white px-8 py-3.5 rounded-full text-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-slate-400/50 flex items-center justify-center gap-2"
+            className="bg-[#0D1B2A] hover:bg-black text-white px-8 py-3.5 rounded-full text-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-slate-400/50 flex items-center justify-center gap-2 mx-auto"
           >
             <Zap size={20} strokeWidth={2.5}/>
             {t('beforeAfter.cta')}
           </button>
         </motion.div>
-
       </div>
     </section>
   );

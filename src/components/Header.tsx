@@ -20,15 +20,16 @@ const Header = () => {
   
   const handleGetStartedClick = () => {
     setIsMenuOpen(false);
-    navigate(`/${i18n.language}/get-started`);
+    // --- CORRECCIÓN ---
+    // Esta única línea controla ambos botones, 'Get Started' (escritorio y móvil)
+    // Nos aseguramos de que apunte a /contact
+    navigate(`/${i18n.language}/contact`);
   };
 
   const linkClasses = "text-[#0D1B2A] hover:text-[#1C7ED6] transition-colors font-medium cursor-pointer";
   const mobileLinkClasses = `block py-3 text-center text-lg ${linkClasses}`;
   
-  // Estilos de los botones
   const primaryButtonClasses = "bg-[#1C7ED6] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-[#155CB0] transition-all duration-300";
-  // --- 1. NUEVO ESTILO PARA EL BOTÓN SECUNDARIO (LOGIN) ---
   const secondaryButtonClasses = "border border-[#1C7ED6] text-[#1C7ED6] px-6 py-2.5 rounded-full font-semibold hover:bg-[#1C7ED6]/10 transition-all duration-300";
 
   return (
@@ -40,7 +41,6 @@ const Header = () => {
             <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1749155603/Recurso_14_wwxduv.svg" alt="ElevAIte Labs Logo" className="h-8 w-auto"/>
         </Link>
 
-        {/* --- 2. CAMBIOS EN EL MENÚ DE ESCRITORIO --- */}
         <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
           <Link to={`/${i18n.language}/#before-after`} className={linkClasses}>{t('header.features')}</Link>
           <Link to={`/${i18n.language}/#integrations`} className={linkClasses}>{t('header.integrations')}</Link>
@@ -54,7 +54,7 @@ const Header = () => {
               href="https://app.elevaitelabs.io"
               target="_blank"
               rel="noopener noreferrer"
-              className={secondaryButtonClasses} // <-- Estilo nuevo aplicado
+              className={secondaryButtonClasses}
             >
               {t('header.login')}
             </a>
@@ -71,7 +71,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* --- 3. CAMBIOS EN EL MENÚ MÓVIL --- */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -81,12 +80,10 @@ const Header = () => {
           >
             <nav className="px-4 py-6">
               <div className="flex flex-col space-y-4">
-                {/* Enlaces de Navegación */}
                 <Link to={`/${i18n.language}/#before-after`} onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>{t('header.features')}</Link>
                 <Link to={`/${i18n.language}/#integrations`} onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>{t('header.integrations')}</Link>
                 <Link to={`/${i18n.language}/#testimonials`} onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>{t('header.contact')}</Link>
 
-                {/* Contenedor para los botones de acción */}
                 <div className="pt-4 mt-4 border-t border-slate-200 flex flex-col space-y-3">
                   <button onClick={handleGetStartedClick} className={`w-full py-3 ${primaryButtonClasses}`}>
                       {t('header.getStarted')}
@@ -95,14 +92,13 @@ const Header = () => {
                     href="https://app.elevaitelabs.io"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-full text-center py-3 ${secondaryButtonClasses}`} // <-- Estilo nuevo aplicado
+                    className={`w-full text-center py-3 ${secondaryButtonClasses}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {t('header.login')}
                   </a>
                 </div>
 
-                {/* Contenedor para el selector de idioma */}
                 <div className="flex justify-center pt-4 mt-4 border-t border-slate-200">
                   <LanguageSwitcher />
                 </div>
