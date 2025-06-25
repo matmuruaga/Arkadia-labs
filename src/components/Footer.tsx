@@ -60,7 +60,7 @@ const Footer = () => {
             </Link>
             <p className="text-gray-600 mb-6 text-sm">{t('footer.description')}</p>
             <div className="flex space-x-4">
-              <a href="#" className={socialLinkClasses} aria-label={t('footer.social.linkedin')}><Linkedin size={20} /></a>
+              <a href="https://www.linkedin.com/company/elevaite-labs-io/" className={socialLinkClasses} aria-label={t('footer.social.linkedin')}><Linkedin size={20} /></a>
               <a href="#" className={socialLinkClasses} aria-label={t('footer.social.twitter')}><Twitter size={20} /></a>
               <a href="#" className={socialLinkClasses} aria-label={t('footer.social.youtube')}><Youtube size={20} /></a>
               <a href="#" className={socialLinkClasses} aria-label={t('footer.social.instagram')}><Instagram size={20} /></a>
