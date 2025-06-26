@@ -25,7 +25,7 @@ const PublicLayout = () => (
   <Layout>
     <Outlet />
   </Layout>
-);
+); 
 
 function App() {
   // Ya no se necesita el ElevenLabsContextProvider. 

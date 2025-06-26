@@ -24,14 +24,10 @@ const LanguageHandler = () => {
     return null;
   }
 
-  // 2. Envuelve el Outlet con Suspense y un fallback
-  return (
-    <Layout>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Outlet />
-      </Suspense>
-    </Layout>
-  );
+ // El componente SOLO debe renderizar el Outlet.
+  // El Layout ya es aplicado por el componente PublicLayout en App.tsx.
+  // No añadas <Layout>, <Header> o <Footer> aquí.
+  return <Outlet />;
 };
 
 export default LanguageHandler;

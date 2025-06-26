@@ -11,14 +11,13 @@ const Hero = () => {
   const { startSession, endSession, status } = useConversation();
   const [isLoading, setIsLoading] = useState(false);
 
-  // El array se construye usando las claves de traducción, que ahora incluyen los emoticonos
   const aiAgentPhrases: PhraseWithEmoji[] = [
-    { text: t('hero.phrases.p1') },
-    { text: t('hero.phrases.p2') },
-    { text: t('hero.phrases.p3') },
-    { text: t('hero.phrases.p4') },
-    { text: t('hero.phrases.p5') },
-    { text: t('hero.phrases.p6') }
+    { emoji: "📈", text: t('hero.phrases.p1') },
+    { emoji: "⚙️", text: t('hero.phrases.p2') },
+    { emoji: "💁‍♀️", text: t('hero.phrases.p3') },
+    { emoji: "💼", text: t('hero.phrases.p4') },
+    { emoji: "💬", text: t('hero.phrases.p5') },
+    { emoji: "📊", text: t('hero.phrases.p6') }
   ];
 
   const handleToggleConversation = useCallback(async () => {
@@ -46,10 +45,8 @@ const Hero = () => {
     >
       <div className="container mx-auto mt-10 md:mt-0 flex flex-col items-center">
         
-        {/* --- SECCIÓN SUPERIOR: DOS COLUMNAS --- */}
         <div className="w-full flex flex-col md:flex-row md:items-start gap-8 md:gap-12">
           
-          {/* Columna Izquierda: Texto */}
           <div className="md:w-1/2 lg:w-3/5 text-center md:text-left pt-0 md:pt-2 lg:pt-4">
             <motion.h1
               className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold mb-4 text-[#0D1B2A] leading-tight"
@@ -73,7 +70,6 @@ const Hero = () => {
             </motion.h2>
           </div>
 
-          {/* Columna Derecha: Caja de animación */}
           <motion.div 
             className="md:w-1/2 lg:w-2/5 w-full mt-6 md:mt-0 flex justify-center md:justify-start"
             initial={{ opacity: 0, x: 20 }}
@@ -94,7 +90,8 @@ const Hero = () => {
         </div>
 
         {/* --- SECCIÓN INFERIOR: BOTÓN CENTRADO --- */}
-        <div className="flex flex-col items-center gap-4 mt-12">
+        {/* 1. Aumentado el margen superior de mt-12 a mt-16 para bajar el botón */}
+        <div className="flex flex-col items-center gap-4 mt-16">
           <button
               onClick={handleToggleConversation}
               disabled={isLoading}
@@ -107,7 +104,7 @@ const Hero = () => {
             )}
             <div className="w-full h-full bg-[#0D1B2A] rounded-full flex items-center justify-center">
                 <img 
-                    src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1750950797/mascota_elevaite_labs_soh0ef.png" 
+                    src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1750970201/u5837542839_Create_an_icon_of_a_robots_head_and_upper_torso_w_523f113d-4c43-4b45-ab0b-b1c5c47b834e_3_ysyfcr.png" 
                     alt={t('hero.voice.altMascot')}
                     className={`w-16 h-16 object-cover rounded-full transition-transform duration-300 ${isSessionActive ? 'scale-110' : 'scale-100 group-hover:scale-105'}`}
                 />
@@ -122,9 +119,10 @@ const Hero = () => {
               </span>
           </div>
           
-          <div className="text-center text-xs text-gray-500 max-w-md mt-2">
+          {/* 2. Aumentado el ancho máximo de max-w-md a max-w-xl para ensanchar el texto */}
+          <div className="text-center text-xs text-gray-600 max-w-5xl mt-2">
               <Trans i18nKey="hero.disclaimer">
-                  Se requiere acceso al micrófono. Las llamadas se graban por motivos de calidad y se eliminan en 30 días. Al usar esta demo, aceptas nuestros <a href="/terms-and-conditions" className="underline hover:text-gray-700">Términos de Uso</a> y <a href="/privacy-policy" className="underline hover:text-gray-700">Política de Privacidad</a>. Para la mejor calidad de audio, recomendamos usar Chrome.
+                  Se requiere acceso al micrófono. Las llamadas se graban por motivos de calidad y se eliminan en 30 días. Al usar esta demo, aceptas nuestros <a href="privacy-policy" className="underline hover:text-gray-700">Términos de Uso</a> y <a href="/privacy-policy" className="underline hover:text-gray-700">Política de Privacidad</a>. Para la mejor calidad de audio, recomendamos usar Chrome.
               </Trans>
           </div>
         </div>
@@ -132,5 +130,4 @@ const Hero = () => {
     </section>
   );
 };
-
 export default Hero;
