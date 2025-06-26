@@ -334,4 +334,15 @@ body {
     order: -1; 
   }
 }
+/* src/index.css */
 
+/* ... (tus otros estilos) ... */
+
+/* Reemplaza la regla anterior con esta.
+  Esta nueva regla mueve el widget fuera de la pantalla en lugar de ocultarlo,
+  permitiendo que su API se inicialice correctamente.
+*/
+elevenlabs-convai {
+  position: fixed;
+  z-index: -1 !important;
+}

@@ -1,12 +1,10 @@
 // src/App.tsx
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
+
+// Componentes y Páginas
 import ScrollToTop from "./components/ScrollToTop";
 import LanguageHandler from "./components/LanguageHandler";
-import { ElevenLabsWidgetProvider } from "./components/ElevenLabsWidgetContext";
-import { Outlet } from 'react-router-dom'; //
-import  Layout  from "./components/Layout";
-
-// Importa tus páginas
+import Layout from "./components/Layout";
 import MainPage from "./pages/MainPage";
 import PricingPage from "./pages/PricingPage";
 import GetStarted from "./pages/GetStarted";
@@ -30,8 +28,9 @@ const PublicLayout = () => (
 );
 
 function App() {
+  // Ya no se necesita el ElevenLabsContextProvider. 
+  // El hook useConversation funciona de forma independiente.
   return (
-    <ElevenLabsWidgetProvider>
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
@@ -39,16 +38,18 @@ function App() {
         <Route path="/:lang" element={<LanguageHandler />}>
           
           {/* Rutas Hijas: Se renderizarán dentro del <Outlet/> del LanguageHandler */}
-          <Route index element={<MainPage />} />
-          <Route path="pricing" element={<PricingPage />} />
-          <Route path="get-started" element={<GetStarted />} />
-          <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
-          <Route path="terms-and-conditions" element={<TermsPage />} />
-          <Route path="cookie-policy" element={<CookiePolicyPage />} />
-          <Route path="legal-notice" element={<LegalNoticePage />} />
-          <Route path="contact" element={<ContactPage />} />
-          <Route path="thank-you" element={<ThankYouPage />} />
-          <Route path="integrations" element={<IntegrationsPage />} />
+          <Route element={<PublicLayout />}>
+              <Route index element={<MainPage />} />
+              <Route path="pricing" element={<PricingPage />} />
+              <Route path="get-started" element={<GetStarted />} />
+              <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
+              <Route path="terms-and-conditions" element={<TermsPage />} />
+              <Route path="cookie-policy" element={<CookiePolicyPage />} />
+              <Route path="legal-notice" element={<LegalNoticePage />} />
+              <Route path="contact" element={<ContactPage />} />
+              <Route path="thank-you" element={<ThankYouPage />} />
+              <Route path="integrations" element={<IntegrationsPage />} />
+          </Route>
 
         </Route>
         
@@ -56,11 +57,6 @@ function App() {
         <Route path="*" element={<Navigate to="/en" replace />} />
       </Routes>
     </BrowserRouter>
-    <elevenlabs-convai 
-        agent-id="agent_01jynm32kjf7rvq5857ggj51ew"
-        //launcher-style="none"
-      ></elevenlabs-convai>
-    </ElevenLabsWidgetProvider>
   );
 }
 

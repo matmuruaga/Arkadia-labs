@@ -1,29 +1,55 @@
 // src/components/Hero.tsx
 import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
+import { useConversation } from '@elevenlabs/react';
+import { useState, useCallback } from 'react';
 import AccumulatingTypingEffect, { PhraseWithEmoji } from './AccumulatingTypingEffect';
 
 const Hero = () => {
   const { t } = useTranslation();
+  
+  const { startSession, endSession, status } = useConversation();
+  const [isLoading, setIsLoading] = useState(false);
 
-  // 1. Definir los datos DENTRO del componente para usar la función t()
+  // El array se construye usando las claves de traducción, que ahora incluyen los emoticonos
   const aiAgentPhrases: PhraseWithEmoji[] = [
-    { emoji: "📈", text: t('hero.phrases.p1') },
-    { emoji: "⚙️", text: t('hero.phrases.p2') },
-    { emoji: "💁‍♀️", text: t('hero.phrases.p3') },
-    { emoji: "💼", text: t('hero.phrases.p4') },
-    { emoji: "💬", text: t('hero.phrases.p5') },
-    { emoji: "📊", text: t('hero.phrases.p6') }
+    { text: t('hero.phrases.p1') },
+    { text: t('hero.phrases.p2') },
+    { text: t('hero.phrases.p3') },
+    { text: t('hero.phrases.p4') },
+    { text: t('hero.phrases.p5') },
+    { text: t('hero.phrases.p6') }
   ];
+
+  const handleToggleConversation = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      if (status === 'disconnected') {
+        await navigator.mediaDevices.getUserMedia({ audio: true });
+        await startSession({ agentId: 'agent_01jynm32kjf7rvq5857ggj51ew' });
+      } else if (status === 'connected') {
+        await endSession();
+      }
+    } catch (error) {
+      console.error("Error al gestionar la conversación:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [status, startSession, endSession]);
+
+  const isSessionActive = status === 'connected';
 
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-48 sm:pt-24 bg-[#F1F3F5] relative"
+      className="min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-20 sm:pt-24 bg-[#F1F3F5]"
     >
-      <div className="container mx-auto mt-10 md:mt-0">
-        <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-12">
+      <div className="container mx-auto mt-10 md:mt-0 flex flex-col items-center">
+        
+        {/* --- SECCIÓN SUPERIOR: DOS COLUMNAS --- */}
+        <div className="w-full flex flex-col md:flex-row md:items-start gap-8 md:gap-12">
           
+          {/* Columna Izquierda: Texto */}
           <div className="md:w-1/2 lg:w-3/5 text-center md:text-left pt-0 md:pt-2 lg:pt-4">
             <motion.h1
               className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold mb-4 text-[#0D1B2A] leading-tight"
@@ -47,6 +73,7 @@ const Hero = () => {
             </motion.h2>
           </div>
 
+          {/* Columna Derecha: Caja de animación */}
           <motion.div 
             className="md:w-1/2 lg:w-2/5 w-full mt-6 md:mt-0 flex justify-center md:justify-start"
             initial={{ opacity: 0, x: 20 }}
@@ -64,6 +91,42 @@ const Hero = () => {
               />
             </div>
           </motion.div>
+        </div>
+
+        {/* --- SECCIÓN INFERIOR: BOTÓN CENTRADO --- */}
+        <div className="flex flex-col items-center gap-4 mt-12">
+          <button
+              onClick={handleToggleConversation}
+              disabled={isLoading}
+              className={`relative group w-24 h-24 rounded-full p-1 transition-all duration-300
+                          ${isSessionActive ? 'bg-gradient-to-r from-[#1C7ED6] to-[#D0BFFF]' : 'bg-gray-700'}`}
+              aria-label={t('hero.voice.ariaLabel')}
+          >
+            {isSessionActive && (
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#1C7ED6] to-[#D0BFFF] opacity-60 blur-lg animate-pulse-slow -z-10"></div>
+            )}
+            <div className="w-full h-full bg-[#0D1B2A] rounded-full flex items-center justify-center">
+                <img 
+                    src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1750950797/mascota_elevaite_labs_soh0ef.png" 
+                    alt={t('hero.voice.altMascot')}
+                    className={`w-16 h-16 object-cover rounded-full transition-transform duration-300 ${isSessionActive ? 'scale-110' : 'scale-100 group-hover:scale-105'}`}
+                />
+            </div>
+          </button>
+
+          <div className="flex items-center gap-2 bg-gray-800 text-white py-1.5 px-3 rounded-full text-sm">
+              {t('hero.voice.caption')}
+              <span className="relative flex h-2 w-2">
+                  <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${isSessionActive ? 'bg-gradient-to-r from-[#1C7ED6] to-[#D0BFFF]' : 'bg-gray-400'}`}></span>
+                  <span className={`relative inline-flex rounded-full h-2 w-2 ${isSessionActive ? 'bg-gradient-to-r from-[#1C7ED6] to-[#D0BFFF]' : 'bg-gray-500'}`}></span>
+              </span>
+          </div>
+          
+          <div className="text-center text-xs text-gray-500 max-w-md mt-2">
+              <Trans i18nKey="hero.disclaimer">
+                  Se requiere acceso al micrófono. Las llamadas se graban por motivos de calidad y se eliminan en 30 días. Al usar esta demo, aceptas nuestros <a href="/terms-and-conditions" className="underline hover:text-gray-700">Términos de Uso</a> y <a href="/privacy-policy" className="underline hover:text-gray-700">Política de Privacidad</a>. Para la mejor calidad de audio, recomendamos usar Chrome.
+              </Trans>
+          </div>
         </div>
       </div>
     </section>

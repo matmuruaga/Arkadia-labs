@@ -19,7 +19,13 @@
   "p4": "Asistente de Ventas IA potenciando acuerdos...",
   "p5": "Agente de Soporte IA mejorando la CX...",
   "p6": "Agente Analista de Datos revelando insights..."
-}
+},
+"voice": {
+  "ariaLabel": "Activar/Desactivar Agente de IA",
+  "altMascot": "Mascota del agente de IA",
+  "caption": "Hablemos"
+},
+"disclaimer": "Se requiere acceso al micrófono. Las llamadas se graban por motivos de calidad y se eliminan en 30 días. Al usar esta demo, aceptas nuestros <0>Términos de Uso</0> y <1>Política de Privacidad</1>. Para la mejor calidad de audio, recomendamos usar Chrome."
   },
   "beforeAfter": {
     "title": "La Transformación ElevAIte: Antes y Después",

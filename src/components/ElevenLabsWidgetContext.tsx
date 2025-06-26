@@ -1,16 +1,16 @@
 // src/components/ElevenLabsWidgetContext.tsx
-import React, { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, useContext, ReactNode, useState, useEffect } from 'react';
 
-// Declaramos que 'elevenlabs' puede existir en el objeto window para que TypeScript no de error.
 declare global {
   interface Window {
     elevenlabs: any;
   }
 }
 
+// Añadimos el estado 'isReady' al contexto
 interface WidgetContextType {
+  isReady: boolean;
   toggleConversation: () => void;
-  // Podrías añadir más funciones si las necesitas, ej: openConversation, closeConversation
 }
 
 const ElevenLabsWidgetContext = createContext<WidgetContextType | undefined>(undefined);
@@ -24,16 +24,32 @@ export const useElevenLabsWidget = () => {
 };
 
 export const ElevenLabsWidgetProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  
+  // Nuevo estado para saber si el widget está listo
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    // Usamos un intervalo para comprobar si la API del widget ya se ha cargado
+    const intervalId = setInterval(() => {
+      if (window.elevenlabs?.convai?.toggle) {
+        setIsReady(true);
+        // Una vez que lo encontramos, limpiamos el intervalo
+        clearInterval(intervalId);
+      }
+    }, 100); // Comprueba cada 100ms
+
+    // Limpiamos el intervalo si el componente se desmonta
+    return () => clearInterval(intervalId);
+  }, []); // Este efecto se ejecuta solo una vez
+
   const toggleConversation = () => {
-    if (window.elevenlabs?.convai) {
+    if (isReady) {
       window.elevenlabs.convai.toggle();
     } else {
-      console.error("ElevenLabs Convai widget API not found on window object.");
+      console.error("ElevenLabs Convai widget API not ready yet.");
     }
   };
 
-  const value = { toggleConversation };
+  const value = { isReady, toggleConversation };
 
   return (
     <ElevenLabsWidgetContext.Provider value={value}>

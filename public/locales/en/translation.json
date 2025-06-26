@@ -19,7 +19,13 @@
   "p4": "Sales AI Assistant boosting deals...",
   "p5": "Support Agent AI enhancing CX...",
   "p6": "Data Analyst Agent uncovering insights..."
-}
+},
+"voice": {
+  "ariaLabel": "Toggle AI Agent",
+  "altMascot": "AI agent mascot",
+  "caption": "Let's talk"
+},
+"disclaimer": "Microphone access is required. Calls are recorded for quality purposes and deleted within 30 days. By using this demo, you agree to our <0>Terms of Use</0> and <1>Privacy Policy</1>. For the best audio quality, we recommend using Chrome."
   },
   "beforeAfter": {
     "title": "The ElevAIte Transformation: Before & After",
