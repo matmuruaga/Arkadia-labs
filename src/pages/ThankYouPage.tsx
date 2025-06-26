@@ -1,28 +1,38 @@
 // src/pages/ThankYouPage.tsx
-import { useState } from 'react';
+import { useState, useRef } from 'react'; // 1. Importamos useRef
 import { Link, useParams } from 'react-router-dom';
 import { PopupModal } from 'react-calendly';
-import { useTranslation } from 'react-i18next'; // 1. Importar
+import { useTranslation } from 'react-i18next';
 import { CheckCircle, Calendar, ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const ThankYouPage = () => {
-  const { t } = useTranslation(); // 2. Inicializar hook
+  const { t } = useTranslation();
   const { lang } = useParams<{ lang: string }>();
   const homeUrl = `/${lang || 'es'}`;
   const [isOpen, setIsOpen] = useState(false);
   const calendlyUrl = "https://calendly.com/karel-elevaitelabs";
 
+  // 2. Creamos una referencia para la sección de agendamiento
+  const scheduleSectionRef = useRef<HTMLElement>(null);
+
+  // 3. Creamos una función para manejar el scroll suave
+  const handleScrollToSchedule = () => {
+    scheduleSectionRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
+
   return (
     <div className="bg-slate-50">
-      {/* 3. Usar la función t() para todos los textos */}
       <header className="relative w-full h-screen overflow-hidden flex items-center justify-center text-white text-center p-4">
+        {/* ... (código del fondo y del título se mantiene igual) ... */}
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{ backgroundImage: `url('https://res.cloudinary.com/dwhidn4z1/image/upload/v1750796289/Gradient__42_klhn8c.jpg')` }}
         />
         <div className="absolute inset-0 w-full h-full bg-black/50" />
-
         <div className="relative z-10 flex flex-col items-center">
           <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
@@ -48,16 +58,21 @@ export const ThankYouPage = () => {
             {t('thankYouPage.header.subtitle')}
           </motion.p>
         </div>
-        <motion.div
-          className="absolute bottom-10"
+
+        {/* 4. Modificamos la flecha: es un botón, está más arriba y tiene el onClick */}
+        <motion.button
+          onClick={handleScrollToSchedule}
+          aria-label="Scroll to schedule section"
+          className="absolute bottom-60 z-20 cursor-pointer p-2 rounded-full hover:bg-white/10 transition-colors"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, repeatType: 'loop' }}
         >
-          <ArrowDown className="h-8 w-8 text-gray-400" />
-        </motion.div>
+          <ArrowDown className="h-8 w-8 text-gray-200" />
+        </motion.button>
       </header>
 
-      <section className="w-full bg-white py-20 md:py-32">
+      {/* 5. Asignamos la referencia a la sección de destino */}
+      <section ref={scheduleSectionRef} className="w-full bg-white py-20 md:py-32">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
             <motion.div
