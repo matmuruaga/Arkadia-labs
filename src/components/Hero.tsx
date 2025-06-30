@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-20 sm:pt-24 bg-[#F1F3F5]"
+      className="min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-20 sm:pt-36 bg-[#F1F3F5]"
     >
       <div className="container mx-auto mt-10 md:mt-0 flex flex-col items-center">
         
@@ -94,7 +94,7 @@ const Hero = () => {
 
         {/* --- SECCIÓN INFERIOR: BOTÓN CENTRADO --- */}
         {/* 2. Margen superior responsivo: pequeño en móvil (mt-8), grande en desktop (md:mt-24) */}
-        <div className="flex flex-col items-center gap-4 mt-8 md:mt-48">
+        <div className="flex flex-col items-center gap-4 mt-8 md:mt-24">
           <button
               onClick={handleToggleConversation}
               disabled={isLoading}
@@ -123,7 +123,7 @@ const Hero = () => {
           </div>
           
           {/* 3. Ancho responsivo y texto justificado */}
-          <div className="text-justify text-xs text-gray-500 max-w-sm md:max-w-2xl mt-2">
+          <div className="text-justify text-xs text-gray-500 max-w-sm md:max-w-3xl mt-2">
             <Trans
               i18nKey="hero.disclaimer"
               components={{
