@@ -346,3 +346,7 @@ elevenlabs-convai {
   position: fixed;
   z-index: -1 !important;
 }
+
+#uc-privacy-button {
+  display: none !important;
+}
