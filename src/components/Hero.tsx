@@ -3,10 +3,11 @@ import { motion } from 'framer-motion';
 import { useTranslation, Trans } from 'react-i18next';
 import { useConversation } from '@elevenlabs/react';
 import { useState, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import AccumulatingTypingEffect, { PhraseWithEmoji } from './AccumulatingTypingEffect';
 
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
   const { startSession, endSession, status } = useConversation();
   const [isLoading, setIsLoading] = useState(false);
@@ -45,6 +46,7 @@ const Hero = () => {
     >
       <div className="container mx-auto mt-10 md:mt-0 flex flex-col items-center">
         
+        {/* --- SECCIÓN SUPERIOR: DOS COLUMNAS --- */}
         <div className="w-full flex flex-col md:flex-row md:items-start gap-8 md:gap-12">
           
           <div className="md:w-1/2 lg:w-3/5 text-center md:text-left pt-0 md:pt-2 lg:pt-4">
@@ -76,13 +78,14 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <div className="w-full max-w-md xl:max-w-lg bg-white p-4 sm:p-6 rounded-xl shadow-2xl border border-slate-200 min-h-[180px] sm:min-h-[220px] md:min-h-[260px] flex flex-col justify-start overflow-hidden">
+            {/* 1. Aumentada la altura en desktop (md:h-64) */}
+            <div className="w-full max-w-md xl:max-w-lg bg-white p-4 sm:p-6 rounded-xl shadow-2xl border border-slate-200 h-48 sm:h-56 md:h-80 flex flex-col justify-end overflow-hidden">
               <AccumulatingTypingEffect
                 phrases={aiAgentPhrases}
                 lineClassName="text-lg sm:text-xl md:text-2xl text-[#0D1B2A] mb-1.5 font-mono"
                 typingSpeed={80}
                 pauseBetweenLines={1500}
-                maxVisibleLines={4}
+                maxVisibleLines={3}
                 cursorClassName="inline-block w-[2px] h-[1.2em] ml-1 bg-[#0D1B2A] animate-blink align-middle"
               />
             </div>
@@ -90,8 +93,8 @@ const Hero = () => {
         </div>
 
         {/* --- SECCIÓN INFERIOR: BOTÓN CENTRADO --- */}
-        {/* 1. Aumentado el margen superior de mt-12 a mt-16 para bajar el botón */}
-        <div className="flex flex-col items-center gap-4 mt-16">
+        {/* 2. Margen superior responsivo: pequeño en móvil (mt-8), grande en desktop (md:mt-24) */}
+        <div className="flex flex-col items-center gap-4 mt-8 md:mt-48">
           <button
               onClick={handleToggleConversation}
               disabled={isLoading}
@@ -104,7 +107,7 @@ const Hero = () => {
             )}
             <div className="w-full h-full bg-[#0D1B2A] rounded-full flex items-center justify-center">
                 <img 
-                    src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1750970201/u5837542839_Create_an_icon_of_a_robots_head_and_upper_torso_w_523f113d-4c43-4b45-ab0b-b1c5c47b834e_3_ysyfcr.png" 
+                    src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1750970201/u5837542839_Create_an_icon_of_a_robots_head_and_upper_torso_w_523f113d-4c43-4b45-ab0b-b1c5c47b834e_3_ysyfcr.png"
                     alt={t('hero.voice.altMascot')}
                     className={`w-16 h-16 object-cover rounded-full transition-transform duration-300 ${isSessionActive ? 'scale-110' : 'scale-100 group-hover:scale-105'}`}
                 />
@@ -119,15 +122,20 @@ const Hero = () => {
               </span>
           </div>
           
-          {/* 2. Aumentado el ancho máximo de max-w-md a max-w-xl para ensanchar el texto */}
-          <div className="text-center text-xs text-gray-600 max-w-5xl mt-2">
-              <Trans i18nKey="hero.disclaimer">
-                  Se requiere acceso al micrófono. Las llamadas se graban por motivos de calidad y se eliminan en 30 días. Al usar esta demo, aceptas nuestros <a href="privacy-policy" className="underline hover:text-gray-700">Términos de Uso</a> y <a href="/privacy-policy" className="underline hover:text-gray-700">Política de Privacidad</a>. Para la mejor calidad de audio, recomendamos usar Chrome.
-              </Trans>
+          {/* 3. Ancho responsivo y texto justificado */}
+          <div className="text-justify text-xs text-gray-500 max-w-sm md:max-w-2xl mt-2">
+            <Trans
+              i18nKey="hero.disclaimer"
+              components={{
+                terms: <Link to={`/${i18n.language}/terms-and-conditions`} className="underline hover:text-gray-700" />,
+                privacy: <Link to={`/${i18n.language}/privacy-policy`} className="underline hover:text-gray-700" />
+              }}
+            />
           </div>
         </div>
       </div>
     </section>
   );
 };
+
 export default Hero;

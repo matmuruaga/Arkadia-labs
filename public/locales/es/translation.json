@@ -25,7 +25,7 @@
   "altMascot": "Mascota del agente de IA",
   "caption": "Hablemos"
 },
-"disclaimer": "Se requiere acceso al micrófono. Las llamadas se graban por motivos de calidad y se eliminan en 30 días. Al usar esta demo, aceptas nuestros <0>Términos de Uso</0> y <1>Política de Privacidad</1>. Para la mejor calidad de audio, recomendamos usar Chrome."
+"disclaimer": "Para usar el agente de voz, se necesita un micrófono en tu ordenador y concederle acceso. Las llamadas se graban por motivos de calidad y se eliminan en 30 días. Al usar esta demo, aceptas nuestros <terms>Términos de Uso</terms> y nuestra <privacy>Política de Privacidad</privacy>. Recomendamos usar Chrome para la mejor calidad de audio."
   },
   "beforeAfter": {
     "title": "La Transformación ElevAIte: Antes y Después",
@@ -468,14 +468,15 @@
 },
 "termsAndConditions": {
   "title": "Términos y Condiciones",
-  "lastUpdated": "10 de junio de 2025",
+  "lastUpdated": "30 de junio de 2025",
   "sections": {
     "agreement": {
       "heading": "1. Aceptación de los Términos",
       "body": {
         "p1": "Estos Términos y Condiciones constituyen un acuerdo legalmente vinculante entre usted, ya sea personalmente o en nombre de una entidad (\"usted\") y ElevAIte Labs AG (\"nosotros\" o \"nuestro\"), en relación con su acceso y uso de nuestros servicios de agentes de IA y el sitio web elevaitelabs.io (colectivamente, los \"Servicios\").",
-        "p2": "Usted acepta que al acceder a los Servicios, ha leído, entendido y aceptado estar sujeto a todos estos Términos y Condiciones. SI NO ESTÁ DE ACUERDO CON TODOS ESTOS TÉRMINOS, SE LE PROHÍBE EXPRESAMENTE EL USO DE LOS SERVICIOS Y DEBE INTERRUMPIR SU USO INMEDIATAMENTE.",
-        "p3": "Los términos y condiciones suplementarios o documentos que puedan publicarse en el Sitio Web de vez en cuando se incorporan expresamente aquí por referencia."
+        "p2": "Usted acepta que al acceder o utilizar los Servicios, ha leído, entendido y aceptado estar sujeto a todos estos Términos y Condiciones. SI NO ESTÁ DE ACUERDO CON TODOS ESTOS TÉRMINOS, SE LE PROHÍBE EXPRESAMENTE EL USO DE LOS SERVICIOS Y DEBE INTERRUMPIR SU USO INMEDIATAMENTE.",
+        "p3": "Los términos y condiciones suplementarios o documentos que puedan publicarse en el Sitio Web de vez en cuando se incorporan expresamente aquí por referencia.",
+        "p4": "Estos Términos incluyen una renuncia a ciertos derechos legales, incluyendo su derecho a presentar una demanda judicial. En su lugar, se requiere que las disputas se resuelvan mediante arbitraje vinculante de forma individual. Por favor, lea esta sección detenidamente."
       }
     },
     "description": {
@@ -488,13 +489,22 @@
       "heading": "3. Cuentas y Responsabilidades del Usuario",
       "body": {
         "p1": "Para utilizar ciertas características del Servicio, es posible que se le solicite crear una cuenta. Usted es responsable de salvaguardar la contraseña de su cuenta y de cualquier actividad o acción bajo su cuenta. Usted se compromete a proporcionar y mantener información verdadera, precisa, actual y completa sobre usted según lo solicite el formulario de registro del servicio.",
-        "p2": "Usted también es responsable de proporcionar los datos necesarios, el acceso a sistemas de terceros (p. ej., CRMs) y la orientación estratégica requerida para que podamos construir y mantener sus agentes de IA según lo establecido en su Plan de Servicio. Usted retiene todos los derechos de propiedad sobre sus datos subyacentes."
+        "p2": "Usted también es responsable de proporcionar los datos necesarios, el acceso a sistemas de terceros (p. ej., CRMs) y la orientación estratégica requerida para que podamos construir y mantener sus agentes de IA según lo establecido en su Plan de Servicio. Usted retiene todos los derechos de propiedad sobre sus datos subyacentes.",
+        "p3": "Al comprar o utilizar cualquiera de los materiales de ElevAIte Labs, se le otorga una licencia limitada, revocable y no transferible para uso personal y para fines internos de su negocio únicamente. No puede reproducir, compartir, distribuir ni utilizar nuestro contenido para fines comerciales sin nuestro permiso explícito por escrito."
       }
     },
+    "voiceAgent": {
+        "heading": "4. Agente de Voz de IA y Grabación de Llamadas",
+        "body": {
+            "p1": "Nuestros Servicios incluyen un agente de voz de IA que le permite interactuar con nosotros a través de una llamada telefónica para fines de demostración o soporte. Al iniciar o aceptar una llamada con nuestro agente de voz de IA, usted entiende y consiente explícitamente que la conversación será grabada, transcrita y analizada.",
+            "p2": "El propósito de la grabación es para control de calidad, entrenamiento de nuestros modelos de IA y para mejorar la precisión y eficacia de nuestros Servicios. El tratamiento de estos datos se rige por nuestra Política de Privacidad.",
+            "p3": "Si no está de acuerdo con la grabación y el procesamiento de su voz y conversación, no utilice la función del agente de voz y contáctenos por otros medios disponibles."
+        }
+    },
     "acceptableUse": {
-      "heading": "4. Política de Uso Aceptable",
+      "heading": "5. Política de Uso Aceptable",
       "body": {
-        "p1": "No puede acceder ni utilizar los Servicios para ningún otro propósito que no sea aquel para el que ponemos a disposición los Servicios. Los Servicios no pueden ser utilizados en relación con ninguna actividad comercial, excepto aquellas que estén específicamente respaldadas o aprobadas por nosotros. Como usuario de los Servicios, usted se compromete a no:",
+        "p1": "No puede acceder ni utilizar los Servicios para ningún otro propósito que no sea aquel para el que ponemos a disposición los Servicios. Como usuario, usted se compromete a no:",
         "li1": "Utilizar los agentes de IA para actividades ilegales, dañinas o fraudulentas.",
         "li2": "Intentar realizar ingeniería inversa, descompilar o descubrir de otro modo el código fuente o los algoritmos subyacentes de los agentes de IA.",
         "li3": "Interferir, interrumpir o crear una carga indebida en los Servicios o en las redes o servicios conectados a ellos.",
@@ -502,41 +512,43 @@
       }
     },
     "payment": {
-      "heading": "5. Tarifas y Pago",
+      "heading": "6. Tarifas y Pago",
       "body": {
-        "p1": "Ofrecemos varios planes de suscripción como se detalla en nuestra Página de Precios. Usted se compromete a pagar todas las tarifas, incluidas las tarifas únicas de configuración aplicables, de acuerdo con los términos de su Plan de Servicio seleccionado. Las tarifas de suscripción se facturan de forma recurrente (p. ej., mensual o anualmente) por adelantado. Todos los pagos no son reembolsables, salvo que se indique expresamente en su Plan de Servicio. Nos reservamos el derecho de cambiar nuestros precios y le notificaremos con antelación cualquier cambio."
+        "p1": "Ofrecemos varios planes de suscripción como se detalla en nuestra Página de Precios. Usted se compromete a pagar todas las tarifas, incluidas las tarifas únicas de configuración aplicables, de acuerdo con los términos de su Plan de Servicio seleccionado. Las tarifas de suscripción se facturan de forma recurrente (p. ej., mensual o anualmente) por adelantado.",
+        "p2": "Todos los pagos no son reembolsables, excepto como se indique expresamente en nuestra política de reembolsos. Si ha acordado un plan de pagos, está obligado a realizar todos los pagos programados. El impago puede resultar en la suspensión del servicio y el envío del saldo pendiente a una agencia de cobros."
       }
     },
     "ip": {
-      "heading": "6. Derechos de Propiedad Intelectual",
+      "heading": "7. Derechos de Propiedad Intelectual",
       "body": {
         "p1": "Los Servicios, incluidos los modelos de IA subyacentes, el software, los algoritmos y todo el contenido de nuestro Sitio Web (excluyendo sus datos), son propiedad exclusiva de ElevAIte Labs AG y sus licenciantes. Estos están protegidos por derechos de autor, marcas comerciales y otras leyes de Suiza y de países extranjeros. Nuestras marcas comerciales no pueden ser utilizadas en conexión con ningún producto o servicio sin nuestro consentimiento previo por escrito. Usted retiene la plena propiedad de los datos que proporciona al Servicio."
       }
     },
     "termination": {
-      "heading": "7. Terminación",
+      "heading": "8. Terminación",
       "body": {
-        "p1": "Podemos terminar o suspender su cuenta y prohibir el acceso a los Servicios de inmediato, sin previo aviso ni responsabilidad, a nuestra entera discreción, por cualquier motivo, incluyendo, entre otros, el incumplimiento de estos Términos. Si desea terminar su cuenta, puede hacerlo mediante notificación por escrito de acuerdo con su Plan de Servicio. Tras la terminación, su derecho a utilizar el Servicio cesará inmediatamente."
+        "p1": "Podemos terminar o suspender su cuenta y prohibir el acceso a los Servicios de inmediato, sin previo aviso ni responsabilidad, a nuestra entera discreción, por cualquier motivo, incluyendo el incumplimiento de estos Términos. Si desea terminar su cuenta, puede hacerlo mediante notificación por escrito. Tras la terminación, su derecho a utilizar el Servicio cesará inmediatamente y usted será responsable de todos los pagos pendientes."
       }
     },
-    "disclaimers": {
-      "heading": "8. Exención de Garantías",
+     "disclaimers": {
+    "heading": "9. Exención de Garantías",
+    "body": {
+      "p1": "Los Servicios se proporcionan \"tal cual\" y \"según disponibilidad\". Usted acepta que el uso de los Servicios será bajo su propio riesgo y responsabilidad. En la medida máxima permitida por la legislación aplicable, renunciamos a todas las garantías, expresas o implícitas, en relación con los Servicios y su uso, incluyendo, sin limitación, las garantías implícitas de comerciabilidad, idoneidad para un propósito particular y ausencia de infracción.",
+      "p2": "No garantizamos ni declaramos la exactitud, integridad, actualidad o utilidad de los contenidos de los Servicios o de los sitios web vinculados. No asumiremos responsabilidad alguna por (1) errores u omisiones en los contenidos y materiales, (2) daños personales o a la propiedad, de cualquier naturaleza, derivados de su acceso o uso de los Servicios, ni (3) cualquier virus, malware, troyano o elementos similares que puedan ser transmitidos por terceros a través de los Servicios. No garantizamos la obtención de ningún resultado concreto del uso de nuestros Servicios. Nada de lo aquí dispuesto afectará los derechos irrenunciables del consumidor ni excluirá o limitará nuestra responsabilidad en casos en que la ley no lo permita."
+    }
+  },
+  "liability": {
+    "heading": "10. Limitación de Responsabilidad",
+    "body": {
+      "p1": "En la medida máxima permitida por la legislación aplicable, en ningún caso nosotros, nuestros directores, empleados o agentes seremos responsables ante usted o cualquier tercero por daños directos, indirectos, consecuenciales, ejemplares, incidentales, especiales o punitivos, incluyendo, entre otros, pérdida de beneficios, ingresos, datos u otros daños que surjan del uso o imposibilidad de uso de los Servicios, incluso si se nos ha advertido de la posibilidad de tales daños.",
+      "p2": "Sin perjuicio de lo anterior y salvo disposición legal en contrario, nuestra responsabilidad total hacia usted por cualquier motivo y bajo cualquier causa de acción, estará limitada, en todo caso, al importe efectivamente abonado por usted a nosotros durante los seis (6) meses previos al hecho que origine la responsabilidad, si lo hubiera. Algunas jurisdicciones no permiten la exclusión o limitación de ciertas garantías o daños, por lo que algunas de estas limitaciones pueden no serle aplicables. Nada en esta cláusula excluirá o limitará nuestra responsabilidad por dolo, negligencia grave, daños personales o muerte causados por nuestra negligencia, o cualquier otra responsabilidad que no pueda ser excluida o limitada conforme a la ley aplicable."
+    }
+  },
+    "disputeResolution": {
+      "heading": "11. Ley Aplicable y Resolución de Disputas",
       "body": {
-        "reviewRequired": "Revisión Legal Requerida",
-        "p1": "El servicio se proporciona \"TAL CUAL\" y \"SEGÚN DISPONIBILIDAD\". ElevAIte Labs renuncia expresamente a todas las garantías de cualquier tipo, ya sean expresas o implícitas, incluidas, entre otras, las garantías implícitas de comerciabilidad, idoneidad para un propósito particular y no infracción. No garantizamos que el servicio sea ininterrumpido, oportuno, seguro o libre de errores."
-      }
-    },
-    "liability": {
-      "heading": "9. Limitación de Responsabilidad",
-      "body": {
-        "reviewRequired": "Revisión Legal Requerida",
-        "p1": "En ningún caso ElevAIte Labs AG, ni sus directores, empleados, socios, agentes, proveedores o afiliados, serán responsables de ningún daño indirecto, incidental, especial, consecuente o punitivo, incluyendo, sin limitación, la pérdida de beneficios, datos, uso, buena voluntad u otras pérdidas intangibles, resultantes de su acceso o uso o de la imposibilidad de acceder o usar el Servicio."
-      }
-    },
-    "governingLaw": {
-      "heading": "10. Ley Aplicable",
-      "body": {
-        "p1": "Estos Términos se regirán e interpretarán de acuerdo con las leyes de Suiza, sin tener en cuenta sus disposiciones sobre conflicto de leyes. Nuestra incapacidad para hacer cumplir cualquier derecho o disposición de estos Términos no se considerará una renuncia a esos derechos. Si alguna disposición de estos Términos es declarada inválida o inaplicable por un tribunal, las disposiciones restantes de estos Términos permanecerán en vigor."
+        "p1": "Estos Términos se regirán e interpretarán de acuerdo con las leyes de Suiza, sin tener en cuenta sus disposiciones sobre conflicto de leyes.",
+        "p2": "En caso de disputa, las partes acuerdan intentar primero una resolución amistosa mediante comunicación directa. Si no se llega a un acuerdo, cualquier disputa se resolverá mediante arbitraje vinculante administrado de acuerdo con las reglas de arbitraje pertinentes en Zúrich, Suiza. La parte ganadora tendrá derecho a recuperar los honorarios razonables de los abogados."
       }
     }
   }

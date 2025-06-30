@@ -25,7 +25,7 @@
   "altMascot": "AI agent mascot",
   "caption": "Let's talk"
 },
-"disclaimer": "Microphone access is required. Calls are recorded for quality purposes and deleted within 30 days. By using this demo, you agree to our <0>Terms of Use</0> and <1>Privacy Policy</1>. For the best audio quality, we recommend using Chrome."
+"disclaimer": "To use the voice agent, a microphone on your computer and granting access are required. Calls are recorded for quality purposes and deleted within 30 days. By using this demo, you agree to our <terms>Terms of Use</terms> and our <privacy>Privacy Policy</privacy>. We recommend using Chrome for the best audio quality."
   },
   "beforeAfter": {
     "title": "The ElevAIte Transformation: Before & After",
@@ -519,28 +519,28 @@
         "p1": "We may terminate or suspend your account and bar access to the Services immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever, including but not limited to a breach of these Terms. If you wish to terminate your account, you may do so by providing written notice in accordance with your Service Plan. Upon termination, your right to use the Service will immediately cease."
       }
     },
-    "disclaimers": {
-      "heading": "8. Disclaimer of Warranties",
-      "body": {
-        "reviewRequired": "Legal Review Required",
-        "p1": "The service is provided on an \"AS IS\" and \"AS AVAILABLE\" basis. ElevAIte Labs expressly disclaims all warranties of any kind, whether express or implied, including, but not limited to, the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the service will be uninterrupted, timely, secure, or error-free."
-      }
-    },
-    "liability": {
-      "heading": "9. Limitation of Liability",
-      "body": {
-        "reviewRequired": "Legal Review Required",
-        "p1": "In no event shall ElevAIte Labs AG, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service."
-      }
-    },
+     "disclaimers": {
+    "heading": "9. Disclaimer of Warranties",
+    "body": {
+      "p1": "The Services are provided on an \"as is\" and \"as available\" basis. You acknowledge that your use of the Services is at your sole risk and responsibility. To the fullest extent permitted by applicable law, we disclaim all warranties, express or implied, in connection with the Services and your use thereof, including, without limitation, the implied warranties of merchantability, fitness for a particular purpose, and non-infringement.",
+      "p2": "We make no warranties or representations regarding the accuracy, completeness, timeliness, or usefulness of the content of the Services or any websites linked thereto. We shall not be liable for any (1) errors or omissions in any content and materials, (2) personal injury or property damage of any nature whatsoever resulting from your access to or use of the Services, or (3) any bugs, viruses, malware, or the like that may be transmitted to or through the Services by any third party. We do not guarantee any specific results from the use of our Services. Nothing herein shall affect any non-waivable statutory rights you may have or exclude or limit our liability where it would be unlawful to do so."
+    }
+  },
+  "liability": {
+    "heading": "10. Limitation of Liability",
+    "body": {
+      "p1": "To the maximum extent permitted by applicable law, in no event shall we, our directors, employees, or agents be liable to you or any third party for any direct, indirect, consequential, exemplary, incidental, special, or punitive damages, including but not limited to loss of profits, revenue, data, or other damages arising from the use or inability to use the Services, even if we have been advised of the possibility of such damages.",
+      "p2": "Notwithstanding anything to the contrary herein and except as otherwise required by law, our total liability to you for any cause whatsoever and regardless of the form of the action will at all times be limited to the amount actually paid, if any, by you to us during the six (6) month period preceding the event giving rise to the claim. Some jurisdictions do not allow the exclusion or limitation of certain warranties or damages, so some of the above limitations may not apply to you. Nothing in this clause shall exclude or limit our liability for fraud, gross negligence, personal injury or death caused by our negligence, or any other liability that cannot be excluded or limited under applicable law."
+    }
+  }
+},
     "governingLaw": {
       "heading": "10. Governing Law",
       "body": {
         "p1": "These Terms shall be governed and construed in accordance with the laws of Switzerland, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect."
       }
     }
-  }
-},
+  },
 "cookiePolicy": {
   "title": "Cookie Notice",
   "lastUpdated": "June 10, 2025",

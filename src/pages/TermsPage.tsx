@@ -66,28 +66,18 @@ const TermsPage = () => {
     {
       id: 'disclaimers',
       heading: t('termsAndConditions.sections.disclaimers.heading'),
-      body: (
-        <div className="p-4 bg-yellow-50 border border-yellow-300 rounded-md">
-          <p className="font-semibold text-yellow-800">{t('termsAndConditions.sections.disclaimers.body.reviewRequired')}</p>
-          <p className="text-yellow-700">{t('termsAndConditions.sections.disclaimers.body.p1')}</p>
-        </div>
-      ),
+      body: <p>{t('termsAndConditions.sections.termination.body.p1')}</p>,
     },
     {
       id: 'liability-limitation',
       heading: t('termsAndConditions.sections.liability.heading'),
-      body: (
-        <div className="p-4 bg-yellow-50 border border-yellow-300 rounded-md">
-          <p className="font-semibold text-yellow-800">{t('termsAndConditions.sections.liability.body.reviewRequired')}</p>
-          <p className="text-yellow-700">{t('termsAndConditions.sections.liability.body.p1')}</p>
-        </div>
-      ),
+      body: <p>{t('termsAndConditions.sections.termination.body.p1')}</p>,
     },
-    {
-      id: 'governing-law',
-      heading: t('termsAndConditions.sections.governingLaw.heading'),
-      body: <p>{t('termsAndConditions.sections.governingLaw.body.p1')}</p>,
-    },
+   /* {
+      id: 'disputeResolution',
+      heading: t('termsAndConditions.sections.disputeResolution.heading'),
+      body: <p>{t('termsAndConditions.sections.disputeResolution.body.p1')}</p>,
+    },*/
   ];
 
   return (
