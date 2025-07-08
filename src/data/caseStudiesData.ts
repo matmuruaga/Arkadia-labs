@@ -114,7 +114,7 @@ export const caseStudies: { [key: string]: CaseStudy } = {
     },
     hero: {
       title: "How We *Tripled* Demo Appointments For With AI BDR Agents",
-      subtitle: "Strategic case study: Zytlyn achieved 400% TOI in 6 months, cut sales cycles by 55%, and scaled their pipeline without expensive human hiring",
+      subtitle: "Strategic case study: Zytlyn achieved 400% ROI in 6 months, cut sales cycles by 55%, and scaled their pipeline without expensive human hiring",
       kpis: [
         { value: "3x", label: "Demo Aplications" },
         { value: "55%", label: "Cycle Reduction" },
