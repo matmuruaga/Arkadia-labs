@@ -20,9 +20,6 @@ const Header = () => {
   
   const handleGetStartedClick = () => {
     setIsMenuOpen(false);
-    // --- CORRECCIÓN ---
-    // Esta única línea controla ambos botones, 'Get Started' (escritorio y móvil)
-    // Nos aseguramos de que apunte a /contact
     navigate(`/${i18n.language}/contact`);
   };
 
@@ -41,10 +38,13 @@ const Header = () => {
             <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1749155603/Recurso_14_wwxduv.svg" alt="ElevAIte Labs Logo" className="h-8 w-auto"/>
         </Link>
 
+        {/* --- NAVEGACIÓN DE ESCRITORIO --- */}
         <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
           <Link to={`/${i18n.language}/#before-after`} className={linkClasses}>{t('header.features')}</Link>
           <Link to={`/${i18n.language}/#integrations`} className={linkClasses}>{t('header.integrations')}</Link>
-          <Link to={`/${i18n.language}/#testimonials`} className={linkClasses}>{t('header.contact')}</Link>
+          
+          {/* --- ENLACE AÑADIDO --- */}
+          <Link to={`/${i18n.language}/case-studies`} className={linkClasses}>{t('header.useCases', 'Use Cases')}</Link>
           
           <div className="flex items-center gap-2">
             <button onClick={handleGetStartedClick} className={primaryButtonClasses}>
@@ -82,7 +82,9 @@ const Header = () => {
               <div className="flex flex-col space-y-4">
                 <Link to={`/${i18n.language}/#before-after`} onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>{t('header.features')}</Link>
                 <Link to={`/${i18n.language}/#integrations`} onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>{t('header.integrations')}</Link>
-                <Link to={`/${i18n.language}/#testimonials`} onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>{t('header.contact')}</Link>
+                
+                {/* --- ENLACE AÑADIDO (MÓVIL) --- */}
+                <Link to={`/${i18n.language}/case-studies`} onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>{t('header.useCases', 'Use Cases')}</Link>
 
                 <div className="pt-4 mt-4 border-t border-slate-200 flex flex-col space-y-3">
                   <button onClick={handleGetStartedClick} className={`w-full py-3 ${primaryButtonClasses}`}>
