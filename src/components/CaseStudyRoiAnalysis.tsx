@@ -1,12 +1,10 @@
 // src/components/CaseStudyRoiAnalysis.tsx
 import React, { useEffect, useRef } from 'react';
 import { motion, animate } from 'framer-motion';
+import { useTranslation } from 'react-i18next'; // <-- 1. Importar
 import { CaseStudy } from '../data/caseStudiesData';
 import Icon from './Icon';
 
-// ¡CORRECCIÓN!
-// 1. Se elimina la línea 'import NumberAnimator from "./NumberAnimator";'
-// 2. Se define la función de animación aquí para que el componente sea autocontenido.
 function NumberAnimator({ value, suffix }: { value: number, suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null);
 
@@ -17,7 +15,7 @@ function NumberAnimator({ value, suffix }: { value: number, suffix: string }) {
 
     const controls = animate(0, value, {
       duration: 1.5,
-      ease: [0.6, 0.01, 0.3, 0.95], // Curva de easing válida
+      ease: [0.6, 0.01, 0.3, 0.95],
       onUpdate(latest) {
         node.textContent = Math.round(latest).toString();
       }
@@ -39,11 +37,14 @@ const valueColorClasses = {
   default: 'text-gray-800 bg-gray-100/50',
 };
 
+// 2. La interfaz ahora también necesita la clave del estudio
 interface Props {
   data: CaseStudy['roiAnalysis'];
+  studyKey: string;
 }
 
-const CaseStudyRoiAnalysis: React.FC<Props> = ({ data }) => {
+const CaseStudyRoiAnalysis: React.FC<Props> = ({ data, studyKey }) => {
+  const { t } = useTranslation(); // <-- 3. Inicializar
   if (!data) return null;
 
   return (
@@ -51,9 +52,14 @@ const CaseStudyRoiAnalysis: React.FC<Props> = ({ data }) => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-2 rounded-full shadow-md">
-                <h2 className="text-sm font-bold text-white uppercase tracking-wider">{data.title}</h2>
-              </div>
-          <p className="text-lg text-gray-600 mt-4">{data.subtitle}</p>
+            {/* 4. Usar la función t() para todos los textos */}
+            <h2 className="text-sm font-bold text-white uppercase tracking-wider">
+              {t(`caseStudies.${studyKey}.roiAnalysis.title`, data.title)}
+            </h2>
+          </div>
+          <p className="text-lg text-gray-600 mt-4">
+            {t(`caseStudies.${studyKey}.roiAnalysis.subtitle`, data.subtitle)}
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8 items-stretch">
@@ -64,7 +70,9 @@ const CaseStudyRoiAnalysis: React.FC<Props> = ({ data }) => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">{data.calculator.title}</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              {t(`caseStudies.${studyKey}.roiAnalysis.calculator.title`, data.calculator.title)}
+            </h3>
             <div className="space-y-3">
               {data.calculator.items.map((item, index) => (
                 <motion.div
@@ -75,9 +83,11 @@ const CaseStudyRoiAnalysis: React.FC<Props> = ({ data }) => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.15 }}
                 >
-                  <span className="font-medium text-gray-600">{item.label}</span>
+                  <span className="font-medium text-gray-600">
+                    {t(`caseStudies.${studyKey}.roiAnalysis.calculator.items.${index}.label`, item.label)}
+                  </span>
                   <span className={`font-bold text-lg px-3 py-1 rounded-md ${valueColorClasses[item.color]}`}>
-                    {item.value}
+                    {t(`caseStudies.${studyKey}.roiAnalysis.calculator.items.${index}.value`, item.value)}
                   </span>
                 </motion.div>
               ))}
@@ -95,11 +105,12 @@ const CaseStudyRoiAnalysis: React.FC<Props> = ({ data }) => {
                     style={{ transformOrigin: 'left' }}
                 />
                 <div className="relative p-8 text-center z-10">
-                    {/* --- BLOQUE DE TEXTO DEL ROI REDISEÑADO --- */}
                     <p className="text-7xl font-extrabold text-teal-900">
-                        <NumberAnimator value={data.calculator.finalRoi.value} suffix="% ROI" />
+                      <NumberAnimator value={data.calculator.finalRoi.value} suffix={t('caseStudies.common.roiSuffix', '% ROI')} />
                     </p>
-                    <p className="text-teal-800 font-semibold mt-2">{data.calculator.finalRoi.label}</p>
+                    <p className="text-teal-800 font-semibold mt-2">
+                      {t(`caseStudies.${studyKey}.roiAnalysis.calculator.finalRoi.label`, data.calculator.finalRoi.label)}
+                    </p>
                 </div>
             </div>
           </motion.div>
@@ -108,7 +119,6 @@ const CaseStudyRoiAnalysis: React.FC<Props> = ({ data }) => {
             {data.benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                // CAMBIO: Se ha eliminado la clase 'h-full' de esta línea
                 className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -119,9 +129,13 @@ const CaseStudyRoiAnalysis: React.FC<Props> = ({ data }) => {
                   <div className="bg-blue-100 p-2 rounded-full">
                     <Icon name={benefit.icon as any} className="h-6 w-6 text-blue-600" />
                   </div>
-                  <h4 className="text-xl font-bold text-gray-900">{benefit.title}</h4>
+                  <h4 className="text-xl font-bold text-gray-900">
+                    {t(`caseStudies.${studyKey}.roiAnalysis.benefits.${index}.title`, benefit.title)}
+                  </h4>
                 </div>
-                <p className="text-gray-600">{benefit.description}</p>
+                <p className="text-gray-600">
+                  {t(`caseStudies.${studyKey}.roiAnalysis.benefits.${index}.description`, benefit.description)}
+                </p>
               </motion.div>
             ))}
           </div>

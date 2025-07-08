@@ -1,13 +1,18 @@
 // src/components/CaseStudyTimeline.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next'; // <-- 1. Importar
 import { CaseStudy } from '../data/caseStudiesData';
 
+// 2. La interfaz ahora también necesita la clave del estudio
 interface Props {
   data: CaseStudy['timeline'];
+  studyKey: string;
 }
 
-const CaseStudyTimeline: React.FC<Props> = ({ data }) => {
+const CaseStudyTimeline: React.FC<Props> = ({ data, studyKey }) => {
+  const { t } = useTranslation(); // <-- 3. Inicializar
+
   return (
     <section className="bg-gray-50 py-24">
       <div className="container mx-auto px-4">
@@ -20,8 +25,11 @@ const CaseStudyTimeline: React.FC<Props> = ({ data }) => {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.5 }}
             >
+              {/* 4. Usar la función t() para todos los textos */}
               <div className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-2 rounded-full shadow-md">
-                <h2 className="text-sm font-bold text-white uppercase tracking-wider">{data.title}</h2>
+                <h2 className="text-sm font-bold text-white uppercase tracking-wider">
+                  {t(`caseStudies.${studyKey}.timeline.title`, data.title)}
+                </h2>
               </div>
           </motion.div>
           <motion.p 
@@ -31,14 +39,11 @@ const CaseStudyTimeline: React.FC<Props> = ({ data }) => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            {data.subtitle}
+            {t(`caseStudies.${studyKey}.timeline.subtitle`, data.subtitle)}
           </motion.p>
         </div>
 
-        {/* --- LÍNEA CORREGIDA --- */}
-        {/* Contenedor de la Línea de Tiempo. Ahora el max-w es responsive. */}
         <div className="relative md:max-w-2xl mx-auto">
-          {/* La línea vertical central */}
           <div className="absolute left-1/2 top-2 h-full w-0.5 bg-gray-200 -translate-x-1/2 hidden md:block"></div>
 
           <div className="space-y-10 md:space-y-4">
@@ -68,8 +73,12 @@ const CaseStudyTimeline: React.FC<Props> = ({ data }) => {
                       className={`p-5 rounded-xl shadow-lg border ${cardStyles}`}
                       variants={cardVariants}
                     >
-                      <h3 className="font-bold text-base text-gray-900">{phase.title}</h3>
-                      <p className="text-gray-600 text-sm mt-1">{phase.description}</p>
+                      <h3 className="font-bold text-base text-gray-900">
+                        {t(`caseStudies.${studyKey}.timeline.phases.${index}.title`, phase.title)}
+                      </h3>
+                      <p className="text-gray-600 text-sm mt-1">
+                        {t(`caseStudies.${studyKey}.timeline.phases.${index}.description`, phase.description)}
+                      </p>
                     </motion.div>
                   </div>
 

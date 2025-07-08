@@ -977,5 +977,134 @@
     "productivity": "Productivity",
     "cybersecurity": "Cybersecurity",
     "utility": "Utility"
+  },
+
+  "caseStudies": {
+  "zytlyn": {
+    "client": {
+      "tagline": "AI Predictive Intelligence",
+      "description": "Leading travel AI company providing predictive intelligence solutions for airlines, airports, tourism boards, OTAs, and meta-search platforms.",
+      "details": [
+        { "label": "Industry", "value": "Travel & Tourism AI" },
+        { "label": "Deal Size", "value": "~$15k/month ARR" },
+        { "label": "Sales Team", "value": "1 Salesperson + CEO" },
+        { "label": "Target Market", "value": "Enterprise B2B" }
+      ]
+    },
+    "hero": {
+      "title": "How We *Tripled* Demo Appointments With AI BDR Agents",
+      "subtitle": "Strategic case study: Zytlyn achieved 400% ROI in 6 months, cut sales cycles by 55%, and scaled their pipeline without expensive human hiring.",
+      "kpis": [
+        { "label": "Demo Appointments" },
+        { "label": "Cycle Reduction" },
+        { "label": "ROI in 6 Months" }
+      ]
+    },
+    "challengeSection": {
+      "title": "The Challenge",
+      "subtitle": "Zytlyn faced critical scaling challenges that limited their growth potential in the competitive travel AI market.",
+      "challenges": [
+        { "title": "Extended Sales Cycles", "description": "Average sales cycles of 8-10 months, with some extending to 18 months, creating unpredictable revenue flow.", "impact": "Slow revenue growth" },
+        { "title": "Capacity Limitations", "description": "Only one salesperson managing entire pipeline, limiting number of qualified demos and follow-ups.", "impact": "Missed opportunities" },
+        { "title": "Manual Qualification", "description": "Time-intensive manual lead qualification process preventing focus on high-value activities.", "impact": "Inefficient resource allocation" }
+      ],
+      "coreProblem": {
+        "title": "The Core Problem",
+        "quote": "We needed AI employees to substitute jobs that would typically be done by expensive human BDRs, allowing our team to focus on what matters most - nurturing and closing qualified prospects.",
+        "author": "Head of Sales, Zytlyn"
+      }
+    },
+      "challenge": {
+        "beforeTitle": "Before ElevateLabs",
+        "points": [
+          "Time-consuming lead follow-up",
+          "High volume of unfiltered leads",
+          "Inconsistent qualification process"
+        ]
+      },
+    "solution": {
+      "title": "The ElevaitLabs Solution",
+      "subtitle": "Custom AI BDR agents designed with Swiss precision to automate qualification, scheduling, and lead nurturing.",
+      "implementation": {
+        "title": "Strategic AI Implementation",
+        "description": "Leveraging 12 years of sales expertise and proven methodologies from scaling 3 startups from pre-seed to Series A, we developed a tailored AI BDR system.",
+        "features": [
+          { "title": "Intelligent Lead Qualification", "description": "AI-powered qualification system that identifies high-value prospects from hundreds of thousands of leads." },
+          { "title": "Automated Demo Scheduling", "description": "Seamless appointment booking system that integrates with existing calendars and CRM workflows." },
+          { "title": "24/7 Prospect Engagement", "description": "Round-the-clock availability for prospect inquiries and follow-up management." }
+        ]
+      },
+      "coreFunctions": {
+        "title": "AI BDR Core Functions",
+        "functions": [ "Lead Qualification", "Demo Scheduling", "Follow-up Management", "CRM Integration" ]
+      }
+    },
+    "timeline": {
+      "title": "Implementation Timeline",
+      "subtitle": "Swift deployment with continuous optimization",
+      "phases": [
+        { "title": "Months 1-2: Development", "description": "Custom AI agent development, integration setup, and personalization for Zytlyn’s specific use cases." },
+        { "title": "Months 3-4: Fine-tuning", "description": "System optimization, performance monitoring, and adjustment based on initial results and feedback." },
+        { "title": "Month 4+: Results Delivery", "description": "Full system performance achieved with measurable impact on demo appointments and sales cycles." }
+      ]
+    },
+    "impact": {
+      "title": "Measurable Impact",
+      "subtitle": "Transformational results delivered within 4 months",
+      "kpis": [
+        { "label": "Demo Appointments", "subLabel": "Per Month" },
+        { "label": "Cycle Reduction", "subLabel": "8-10 -> 4.5 months" },
+        { "label": "ROI Achieved", "subLabel": "Within 6 months" },
+        { "label": "Cost vs Human BDR", "subLabel": "For 3x results" }
+      ]
+    },
+    "beforeAfter": {
+        "title": "Before vs After Performance",
+        "beforeLabel": "Leads Before",
+        "afterLabel": "Demo Appointments Increase"
+    },
+    "roiAnalysis": {
+      "title": "ROI Analysis",
+      "subtitle": "Comprehensive financial impact assessment",
+      "calculator": {
+        "title": "Investment vs Human BDR Cost",
+        "items": [
+          { "label": "Traditional Human BDR Cost", "value": "CHF 150k+/year" },
+          { "label": "AI Investment Cost", "value": "25% of human cost" },
+          { "label": "Output Multiplier", "value": "3x performance" }
+        ],
+        "finalRoi": { "label": "Achieved within 6 months" }
+      },
+      "benefits": [
+        { "title": "Cost Efficiency", "description": "AI investment represents only 25% of traditional human BDR hiring costs, while delivering 3x the performance in demo scheduling and qualification." },
+        { "title": "Revenue Acceleration", "description": "55% reduction in sales cycles combined with 3x demo capacity directly translates to faster revenue recognition and improved cash flow." },
+        { "title": "Scalability Factor", "description": "AI agents scale infinitely without additional hiring costs, providing sustainable competitive advantage as Zytlyn grows." }
+      ]
+    },
+    "testimonial": {
+      "quote": "The AI agent from ElevaitLabs is more than a tool; it's a core part of our sales team now. It has completely cleared our pipeline's bottleneck, allowing our human team to focus on what they do best: closing deals. The 400% ROI speaks for itself.",
+      "author": "Jane Doe",
+      "role": "Head of Growth",
+      "company": "Zytlyn"
+    }
   }
+},
+"whyElevaiteStudyCase": {
+  "title": "Why ElevaiteLabs",
+  "subtitle": "Swiss-made precision meets proven sales expertise",
+  "features": [
+    {
+      "title": "Swiss-Made Quality",
+      "description": "Precision engineering and reliability standards applied to AI development."
+    },
+    {
+      "title": "Proven Track Record",
+      "description": "12 years sales experience scaling 3 startups from pre-seed to Series A."
+    },
+    {
+      "title": "Custom Solutions",
+      "description": "Tailored AI agents designed specifically for your business requirements."
+    }
+  ]
+}
 }

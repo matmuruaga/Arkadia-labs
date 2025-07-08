@@ -32,16 +32,18 @@ const CaseStudyPage: React.FC = () => {
         </>
     );
   }
+  
+  const studyData = caseStudies[slug]; //
 
   return (
     <>
-      <CaseStudyHero data={study.hero} />
-      <CaseStudyIntro client={study.client} challenge={study.challenge} />
-      <CaseStudyChallenge data={study.challengeSection} />
-      <CaseStudySolution data={study.solution} />
-      <CaseStudyTimeline data={study.timeline} />
-      <CaseStudyImpact data={study.impact} />
-      <CaseStudyRoiAnalysis data={study.roiAnalysis} />
+      <CaseStudyHero data={study.hero} studyKey={slug} />
+      <CaseStudyIntro client={study.client} studyKey={slug} challenge={study.challenge} />
+      <CaseStudyChallenge data={study.challengeSection} studyKey={slug} />
+      <CaseStudySolution data={study.solution} studyKey={slug} />
+      <CaseStudyTimeline data={study.timeline} studyKey={slug} />
+      <CaseStudyImpact data={study.impact} studyKey={slug} />
+      <CaseStudyRoiAnalysis data={study.roiAnalysis} studyKey={slug} />
       <WhyElevaiteLabs />
       <FinalCtaSection />
       </>

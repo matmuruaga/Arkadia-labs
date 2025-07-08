@@ -989,5 +989,134 @@
     "cybersecurity": "Ciberseguridad",
     "utility": "Utilidades"
   }
+},
+
+"caseStudies": {
+  "zytlyn": {
+    "client": {
+      "tagline": "Inteligencia Predictiva con IA",
+      "description": "Empresa líder en IA para viajes que proporciona soluciones de inteligencia predictiva a aerolíneas, aeropuertos, oficinas de turismo, OTAs y plataformas de metabúsqueda.",
+      "details": [
+        { "label": "Industria", "value": "IA para Viajes y Turismo" },
+        { "label": "Tamaño del Acuerdo", "value": "~$15k/mes ARR" },
+        { "label": "Equipo de Ventas", "value": "1 Vendedor + CEO" },
+        { "label": "Mercado Objetivo", "value": "Enterprise B2B" }
+      ]
+    },
+    "hero": {
+      "title": "Cómo *Triplicamos* las Citas para Demos con Agentes BDR de IA",
+      "subtitle": "Caso de estudio estratégico: Zytlyn logró un ROI del 400% en 6 meses, redujo los ciclos de venta en un 55% y escaló su pipeline sin costosas contrataciones humanas.",
+      "kpis": [
+        { "label": "Solicitudes de Demo" },
+        { "label": "Reducción de Ciclo" },
+        { "label": "ROI en 6 Meses" }
+      ]
+    },
+    "challengeSection": {
+      "title": "El Desafío",
+      "subtitle": "Zytlyn enfrentaba desafíos críticos de escalabilidad que limitaban su potencial de crecimiento en el competitivo mercado de la IA para viajes.",
+      "challenges": [
+        { "title": "Ciclos de Venta Extendidos", "description": "Ciclos de venta promedio de 8-10 meses, algunos extendiéndose a 18 meses, creando un flujo de ingresos impredecible.", "impact": "Lento crecimiento de ingresos" },
+        { "title": "Limitaciones de Capacidad", "description": "Solo un vendedor gestionando todo el pipeline, limitando el número de demos cualificadas y seguimientos.", "impact": "Oportunidades perdidas" },
+        { "title": "Cualificación Manual", "description": "Proceso manual de cualificación de leads que consumía mucho tiempo e impedía centrarse en actividades de alto valor.", "impact": "Asignación ineficiente de recursos" }
+      ],
+      "coreProblem": {
+        "title": "El Problema Central",
+        "quote": "Necesitábamos empleados de IA para sustituir trabajos que normalmente harían costosos BDRs humanos, permitiendo a nuestro equipo centrarse en lo más importante: nutrir y cerrar prospectos cualificados.",
+        "author": "Director de Ventas, Zytlyn"
+      }
+    },
+    "challenge": {
+  "beforeTitle": "Antes de ElevateLabs",
+  "points": [
+    "Seguimiento de leads que consumía mucho tiempo",
+    "Alto volumen de leads sin filtrar",
+    "Proceso de cualificación inconsistente"
+  ]
+},
+    "solution": {
+      "title": "La Solución de ElevaitLabs",
+      "subtitle": "Agentes BDR de IA personalizados y diseñados con precisión suiza para automatizar la cualificación, agendamiento y nutrición de leads.",
+      "implementation": {
+        "title": "Implementación Estratégica de IA",
+        "description": "Aprovechando 12 años de experiencia en ventas y metodologías probadas escalando 3 startups desde pre-seed hasta Serie A, desarrollamos un sistema de BDR con IA a medida.",
+        "features": [
+          { "title": "Cualificación Inteligente de Leads", "description": "Sistema de cualificación impulsado por IA que identifica prospectos de alto valor entre cientos de miles de leads." },
+          { "title": "Agendamiento Automatizado de Demos", "description": "Sistema de reserva de citas fluido que se integra con calendarios existentes y flujos de trabajo de CRM." },
+          { "title": "Interacción 24/7 con Prospectos", "description": "Disponibilidad continua para consultas de prospectos y gestión de seguimientos." }
+        ]
+      },
+      "coreFunctions": {
+        "title": "Funciones Clave del BDR de IA",
+        "functions": [ "Cualificación de Leads", "Agendamiento de Demos", "Gestión de Seguimientos", "Integración con CRM" ]
+      }
+    },
+    "timeline": {
+      "title": "Cronograma de Implementación",
+      "subtitle": "Despliegue rápido con optimización continua",
+      "phases": [
+        { "title": "Meses 1-2: Desarrollo", "description": "Desarrollo de agentes de IA a medida, configuración de integraciones y personalización para los casos de uso específicos de Zytlyn." },
+        { "title": "Meses 3-4: Puesta a punto", "description": "Optimización del sistema, monitorización del rendimiento y ajustes basados en los resultados iniciales y el feedback." },
+        { "title": "Mes 4+: Entrega de Resultados", "description": "Rendimiento completo del sistema logrado con un impacto medible en las citas para demos y los ciclos de venta." }
+      ]
+    },
+    "impact": {
+      "title": "Impacto Medible",
+      "subtitle": "Resultados transformadores entregados en 4 meses",
+      "kpis": [
+        { "label": "Citas para Demo", "subLabel": "Por Mes" },
+        { "label": "Reducción de Ciclo", "subLabel": "8-10 -> 4.5 meses" },
+        { "label": "ROI Alcanzado", "subLabel": "En 6 meses" },
+        { "label": "Coste vs BDR Humano", "subLabel": "Para 3x resultados" }
+      ]
+    },
+    "beforeAfter": {
+        "title": "Rendimiento Antes vs Después",
+        "beforeLabel": "Leads Antes",
+        "afterLabel": "Aumento en Citas para Demo"
+    },
+    "roiAnalysis": {
+      "title": "Análisis del ROI",
+      "subtitle": "Evaluación exhaustiva del impacto financiero",
+      "calculator": {
+        "title": "Inversión vs Coste de BDR Humano",
+        "items": [
+          { "label": "Coste de BDR Humano Tradicional", "value": "CHF 150k+/año" },
+          { "label": "Coste de Inversión en IA", "value": "25% del coste humano" },
+          { "label": "Multiplicador de Rendimiento", "value": "3x rendimiento" }
+        ],
+        "finalRoi": { "label": "Alcanzado en 6 meses" }
+      },
+      "benefits": [
+        { "title": "Eficiencia de Costes", "description": "La inversión en IA representa solo el 25% de los costes de contratación de un BDR tradicional, mientras entrega 3 veces el rendimiento en agendamiento y cualificación." },
+        { "title": "Aceleración de Ingresos", "description": "La reducción del 55% en los ciclos de venta, combinada con una capacidad 3x para demos, se traduce directamente en un reconocimiento de ingresos más rápido y un mejor flujo de caja." },
+        { "title": "Factor de Escalabilidad", "description": "Los agentes de IA escalan infinitamente sin costes de contratación adicionales, proporcionando una ventaja competitiva sostenible a medida que Zytlyn crece." }
+      ]
+    },
+    "testimonial": {
+      "quote": "El agente de IA de ElevaitLabs es más que una herramienta; ahora es una parte fundamental de nuestro equipo de ventas. Ha despejado por completo el cuello de botella de nuestro pipeline, permitiendo a nuestro equipo humano centrarse en lo que mejor saben hacer: cerrar tratos. El 400% de ROI habla por sí mismo.",
+      "author": "Jane Doe",
+      "role": "Directora de Crecimiento",
+      "company": "Zytlyn"
+    }
+  }
+},
+"whyElevaiteStudyCase": {
+  "title": "Por qué ElevaiteLabs",
+  "subtitle": "Precisión suiza unida a una probada experiencia en ventas",
+  "features": [
+    {
+      "title": "Calidad 'Hecho en Suiza'",
+      "description": "Ingeniería de precisión y estándares de fiabilidad aplicados al desarrollo de IA."
+    },
+    {
+      "title": "Trayectoria Comprobada",
+      "description": "12 años de experiencia en ventas escalando 3 startups desde pre-seed hasta Serie A."
+    },
+    {
+      "title": "Soluciones a Medida",
+      "description": "Agentes de IA personalizados y diseñados específicamente para los requisitos de tu negocio."
+    }
+  ]
 }
 }

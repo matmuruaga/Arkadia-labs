@@ -1,11 +1,10 @@
 // src/components/CaseStudyImpact.tsx
 import React, { useEffect } from 'react';
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
+import { useTranslation } from 'react-i18next'; // <-- 1. Importar
 import { CaseStudy } from '../data/caseStudiesData';
 import Icon from './Icon';
 
-// --- NUEVO ANIMADOR DE NÚMEROS: MÁS EFICIENTE ---
-// Esta versión usa hooks de Framer Motion para un rendimiento superior.
 function AnimatedNumber({ value, suffix }: { value: number, suffix: string }) {
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
@@ -13,7 +12,7 @@ function AnimatedNumber({ value, suffix }: { value: number, suffix: string }) {
   useEffect(() => {
     const controls = animate(count, value, {
       duration: 2,
-      ease: [0.22, 1, 0.36, 1], // Curva de easing más suave
+      ease: [0.22, 1, 0.36, 1],
     });
     return controls.stop;
   }, [value, count]);
@@ -26,7 +25,6 @@ function AnimatedNumber({ value, suffix }: { value: number, suffix: string }) {
   );
 }
 
-// ... El resto del código (themeStyles, variants) se mantiene similar ...
 const themeStyles = {
     blue: { gradient: 'from-blue-500/20 to-indigo-600/10', iconBg: 'bg-blue-500', textColor: 'text-blue-300' },
     green: { gradient: 'from-green-500/20 to-teal-600/10', iconBg: 'bg-green-500', textColor: 'text-green-300' },
@@ -39,13 +37,16 @@ const cardVariants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
 
+// 2. La interfaz ahora también necesita la clave del estudio
 interface Props {
   data: CaseStudy['impact'];
+  studyKey: string;
 }
 const backgroundImageUrl = 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1750796289/Gradient__42_klhn8c.jpg';
 
+const CaseStudyImpact: React.FC<Props> = ({ data, studyKey }) => {
+  const { t } = useTranslation(); // <-- 3. Inicializar
 
-const CaseStudyImpact: React.FC<Props> = ({ data }) => {
   return (
     <section 
       className="relative py-24 bg-cover bg-center bg-no-repeat"
@@ -53,8 +54,13 @@ const CaseStudyImpact: React.FC<Props> = ({ data }) => {
     >
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">{data.title}</h2>
-          <p className="text-lg text-gray-400 mt-4">{data.subtitle}</p>
+          {/* 4. Usar la función t() para todos los textos */}
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+            {t(`caseStudies.${studyKey}.impact.title`, data.title)}
+          </h2>
+          <p className="text-lg text-gray-400 mt-4">
+            {t(`caseStudies.${studyKey}.impact.subtitle`, data.subtitle)}
+          </p>
         </div>
         
         <motion.div 
@@ -64,7 +70,7 @@ const CaseStudyImpact: React.FC<Props> = ({ data }) => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          {data.kpis.map((kpi) => {
+          {data.kpis.map((kpi, index) => {
             const styles = themeStyles[kpi.theme];
             const numericValue = parseFloat(String(kpi.value).replace(/[^0-9.]/g, ''));
             const suffix = String(kpi.value).includes('%') ? '%' : String(kpi.value).includes('x') ? 'x' : '';
@@ -85,8 +91,12 @@ const CaseStudyImpact: React.FC<Props> = ({ data }) => {
                     <AnimatedNumber value={numericValue} suffix={suffix} />
                   </div>
                   
-                  <p className="mt-2 text-lg font-bold text-white">{kpi.label}</p>
-                  <p className="mt-1 text-sm text-gray-400">{kpi.subLabel}</p>
+                  <p className="mt-2 text-lg font-bold text-white">
+                    {t(`caseStudies.${studyKey}.impact.kpis.${index}.label`, kpi.label)}
+                  </p>
+                  <p className="mt-1 text-sm text-gray-400">
+                    {t(`caseStudies.${studyKey}.impact.kpis.${index}.subLabel`, kpi.subLabel)}
+                  </p>
                 </div>
               </motion.div>
             );
