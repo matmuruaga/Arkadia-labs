@@ -1,0 +1,142 @@
+// src/components/CaseStudyHero.tsx
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { ArrowDown } from 'lucide-react';
+import { CaseStudy } from '../data/caseStudiesData';
+
+// Helper para el título (sin cambios)
+const HighlightedTitle: React.FC<{ text: string }> = ({ text }) => {
+  const parts = text.split(/(\*.*?\*)/g).filter(part => part);
+  return (
+    <>
+      {parts.map((part, index) => 
+        part.startsWith('*') && part.endsWith('*') ? (
+          <span key={index} className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+            {part.slice(1, -1)}
+          </span>
+        ) : (
+          <span key={index}>{part}</span>
+        )
+      )}
+    </>
+  );
+};
+
+interface Props {
+  data: CaseStudy['hero'];
+}
+
+const CaseStudyHero: React.FC<Props> = ({ data }) => {
+  const targetRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ['start start', 'end start'],
+  });
+
+  // El Parallax se mantiene, pero los elementos que lo usan serán visibles solo en desktop
+  const yBg = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
+  const opacityBg = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+  const yContent = useTransform(scrollYProgress, [0, 1], ['0%', '-20%']);
+  
+  return (
+    // RESPONSIVE: Usamos min-h-screen para evitar cortes y ajustamos el padding para móvil
+    <section ref={targetRef} className="relative min-h-screen bg-gradient-to-br from-orange-100 via-purple-100 to-blue-200 overflow-hidden">
+      
+      {/* RESPONSIVE: El fondo Parallax ahora solo es visible en pantallas grandes (md y superior) */}
+      <motion.div
+        className="absolute inset-0 z-0 hidden md:block"
+        style={{ y: yBg, opacity: opacityBg }}
+      />
+      
+      <motion.div 
+        // RESPONSIVE: El parallax del contenido también se aplica solo en desktop
+        style={{ y: window.innerWidth >= 768 ? yContent : 0 }}
+        className="relative z-10 flex flex-col items-center justify-center container mx-auto px-4 text-center h-full pt-28 pb-20"
+      >
+        <motion.div 
+          className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-1.5 rounded-full shadow-md mb-6"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          <p className="text-sm font-semibold uppercase tracking-wider text-white">Client Success Story</p>
+        </motion.div>
+
+        {/* RESPONSIVE: Tamaños de fuente ajustados para móvil y desktop */}
+        <motion.h1 
+          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-slate-900"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+        >
+          <HighlightedTitle text={data.title} />
+        </motion.h1>
+
+        <motion.p 
+          className="text-base md:text-lg text-slate-700 mb-10 max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.6 }}
+        >
+          {data.subtitle}
+        </motion.p>
+        
+        {/* --- TARJETAS DE KPIs CON DISEÑO RESPONSIVE --- */}
+        <motion.div 
+          className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-6 max-w-5xl mx-auto w-full"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.2, delayChildren: 0.8 } }
+          }}
+        >
+          {data.kpis.map((kpi, index) => (
+            <motion.div 
+              key={index}
+              // RESPONSIVE: Estilos base para móvil (píldoras) y `md:` para desktop (tarjetas)
+              className="bg-white/50 backdrop-blur-md p-3 md:p-6 rounded-2xl md:rounded-xl border border-white/50 shadow-lg flex flex-row items-center justify-between md:flex-col md:justify-center"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 }
+              }}
+              whileHover={{ scale: 1.05, transition: { type: 'spring', stiffness: 300 } }}
+            >
+              <div className="text-left md:text-center">
+                {/* RESPONSIVE: Texto más pequeño en móvil */}
+                <p className="text-sm md:text-base text-slate-800 font-medium">{kpi.label}</p>
+              </div>
+              <div className="text-right md:text-center">
+                {/* RESPONSIVE: Texto del valor también más pequeño y colores adaptados */}
+                <div className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 md:mb-2">
+                  {kpi.value}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* El botón de scroll se oculta en móvil para dar más espacio al contenido */}
+        <motion.a 
+            href="#CaseStudyIntro"
+            className="absolute bottom-1 left-1/2 -translate-x-1/2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.5 }}
+            aria-label="Scroll to next section"
+        >
+          <div className="w-12 h-12 rounded-full border-2 border-slate-900/30 flex items-center justify-center text-slate-900 hover:bg-black/5 transition-colors cursor-pointer">
+              <motion.div
+                animate={{ y: [-4, 4, -4] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              >
+                  <ArrowDown className="h-6 w-6"/>
+              </motion.div>
+          </div>
+        </motion.a>
+      </motion.div>
+    </section>
+  );
+};
+
+export default CaseStudyHero;

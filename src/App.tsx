@@ -15,6 +15,8 @@ import LegalNoticePage from "./pages/LegalNoticePage";
 import { ContactPage } from './pages/ContactPage';
 import { ThankYouPage } from './pages/ThankYouPage';
 import { IntegrationsPage } from './pages/IntegrationsPage';
+import  CaseStudyPage  from './pages/CaseStudyPage';
+import CaseStudiesIndexPage from './pages/CaseStudiesIndexPage';
 
 
 /**
@@ -49,6 +51,8 @@ function App() {
               <Route path="contact" element={<ContactPage />} />
               <Route path="thank-you" element={<ThankYouPage />} />
               <Route path="integrations" element={<IntegrationsPage />} />
+              <Route path="case-studies" element={<CaseStudiesIndexPage />} />
+              <Route path="case-studies/:slug" element={<CaseStudyPage />} />
           </Route>
 
         </Route>

@@ -131,7 +131,7 @@
     }
   }
 },
-"integrations": {
+"integrationsComponent": {
   "title": "Integraciones Fluidas: Conecta Todo Tu Ecosistema",
   "description": "Los agentes de IA de ElevAIte están diseñados para operar en el corazón de tus herramientas existentes. Nos integramos de forma nativa con tus CRMs, plataformas de comunicación, calendarios y más, amplificando tus flujos de trabajo sin interrupciones e impulsando la productividad general.",
   "examples": {
@@ -741,5 +741,253 @@
   "title": "¿Hay algo que no puedas automatizar con IA?",
   "subtitle": "Dile adiós a las tareas manuales. Empieza a construir hoy.",
   "button": "Comienza a Automatizar"
+},
+  "integrations": {
+    "title": "Tus Herramientas, Sin Límites.",
+    "subtitle": "Nuestros agentes hablan el idioma de todas tus apps. Conecta tus herramientas favoritas y automatiza tus flujos de trabajo.",
+    "searchPlaceholder": "Busca por nombre de integración...",
+    "count_one": "{{count}} integración",
+    "count_other": "{{count}} integraciones",
+    "showMore": "Mostrar más",
+    "categoriesTitle": "Categorías",
+    "allApplications": "Todas las Aplicaciones",
+    "openai": {
+      "name": "OpenAI",
+      "description": "Accede a los modelos de IA más potentes como GPT-4."
+    },
+    "google_ai_studio": {
+      "name": "Google AI Studio (Gemini)",
+      "description": "Crea con los modelos de vanguardia de la familia Gemini."
+    },
+    "hugging_face": {
+      "name": "Hugging Face",
+      "description": "Ejecuta miles de modelos de la comunidad de Hugging Face."
+    },
+    "aws_bedrock": {
+      "name": "AWS Bedrock"
+    },
+    "claude": {
+      "name": "Claude",
+      "description": "Suite de modelos de IA para diversas aplicaciones."
+    },
+    "cohere": {
+      "name": "Cohere"
+    },
+    "groq": {
+      "name": "Groq"
+    },
+    "google_vertex_ai": {
+      "name": "Google Vertex AI",
+      "description": "Plataforma unificada de Machine Learning de Google."
+    },
+    "anthropic": {
+      "name": "Anthropic"
+    },
+    "ollama": {
+      "name": "Ollama"
+    },
+    "mistral_ai": {
+      "name": "Mistral AI"
+    },
+    "embeddings_openai": {
+      "name": "Embeddings OpenAI"
+    },
+    "embeddings_ollama": {
+      "name": "Embeddings Ollama"
+    },
+    "azure_openai_chat": {
+      "name": "Azure OpenAI Chat"
+    },
+    "mongodb_chat_memory": {
+      "name": "MongoDB Chat Memory"
+    },
+    "deepl": {
+      "name": "DeepL",
+      "description": "Traducción de texto con alta precisión y matices."
+    },
+    "google_analytics": {
+      "name": "Google Analytics"
+    },
+    "mixpanel": {
+      "name": "Mixpanel"
+    },
+    "posthog": {
+      "name": "PostHog"
+    },
+    "segment": {
+      "name": "Segment"
+    },
+    "chartmogul": {
+      "name": "ChartMogul"
+    },
+    "slack": {
+      "name": "Slack",
+      "description": "Automatiza mensajes y notificaciones en tus canales."
+    },
+    "discord": {
+      "name": "Discord"
+    },
+    "gmail": {
+      "name": "Gmail",
+      "description": "Envía correos, busca emails y gestiona borradores."
+    },
+    "microsoft_outlook": {
+      "name": "Microsoft Outlook"
+    },
+    "telegram": {
+      "name": "Telegram",
+      "description": "Uno de los servicios de mensajería más rápidos y seguros."
+    },
+    "twilio": {
+      "name": "Twilio"
+    },
+    "whatsapp": {
+      "name": "WhatsApp Business"
+    },
+    "mattermost": {
+      "name": "Mattermost"
+    },
+    "hubspot": {
+      "name": "HubSpot",
+      "description": "Sincroniza contactos, negocios y actividades de marketing."
+    },
+    "salesforce": {
+      "name": "Salesforce"
+    },
+    "pipedrive": {
+      "name": "Pipedrive"
+    },
+    "zoho_crm": {
+      "name": "Zoho CRM"
+    },
+    "activecampaign": {
+      "name": "ActiveCampaign"
+    },
+    "mysql": {
+      "name": "MySQL",
+      "description": "Conecta y ejecuta consultas en tu base de datos relacional."
+    },
+    "mongodb": {
+      "name": "MongoDB"
+    },
+    "postgres": {
+      "name": "PostgreSQL"
+    },
+    "redis": {
+      "name": "Redis"
+    },
+    "aws_s3": {
+      "name": "AWS S3"
+    },
+    "milvus": {
+      "name": "Milvus Vector Store"
+    },
+    "github": {
+      "name": "GitHub",
+      "description": "Gestiona repositorios, issues y acciones automáticamente."
+    },
+    "jira": {
+      "name": "Jira Software"
+    },
+    "grafana": {
+      "name": "Grafana"
+    },
+    "stripe": {
+      "name": "Stripe",
+      "description": "Automatiza pagos, facturas y gestión de clientes."
+    },
+    "shopify": {
+      "name": "Shopify"
+    },
+    "woocommerce": {
+      "name": "WooCommerce"
+    },
+    "profitwell": {
+      "name": "ProfitWell"
+    },
+    "mailchimp": {
+      "name": "Mailchimp"
+    },
+    "sendgrid": {
+      "name": "SendGrid"
+    },
+    "lemlist": {
+      "name": "lemlist"
+    },
+    "convertkit": {
+      "name": "ConvertKit"
+    },
+    "linkedin": {
+      "name": "LinkedIn"
+    },
+    "google_ads": {
+      "name": "Google Ads"
+    },
+    "orbit": {
+      "name": "Orbit"
+    },
+    "notion": {
+      "name": "Notion",
+      "description": "Crea y actualiza páginas, bases de datos y más."
+    },
+    "google_sheets": {
+      "name": "Google Sheets",
+      "description": "Lee, escribe y actualiza hojas de cálculo de forma automática."
+    },
+    "google_calendar": {
+      "name": "Google Calendar"
+    },
+    "monday": {
+      "name": "monday.com"
+    },
+    "microsoft_excel": {
+      "name": "Microsoft Excel"
+    },
+    "trello": {
+      "name": "Trello"
+    },
+    "clickup": {
+      "name": "ClickUp"
+    },
+    "todoist": {
+      "name": "Todoist"
+    },
+    "wordpress": {
+      "name": "WordPress"
+    },
+    "webflow": {
+      "name": "Webflow"
+    },
+    "securityscorecard": {
+      "name": "SecurityScorecard"
+    },
+    "virustotal": {
+      "name": "VirusTotal"
+    },
+    "cortex": {
+      "name": "Cortex"
+    },
+    "bitly": {
+      "name": "Bitly"
+    },
+    "spotify": {
+      "name": "Spotify"
+    },
+    "youtube": {
+      "name": "YouTube"
+    },
+  "categories": {
+    "ai": "Inteligencia Artificial",
+    "analytics": "Análisis",
+    "communication": "Comunicación",
+    "crm": "CRM",
+    "data_storage": "Datos y Almacenamiento",
+    "developer_tools": "Herramientas de Desarrollo",
+    "finance": "Finanzas",
+    "marketing": "Marketing",
+    "productivity": "Productividad",
+    "cybersecurity": "Ciberseguridad",
+    "utility": "Utilidades"
+  }
 }
 }

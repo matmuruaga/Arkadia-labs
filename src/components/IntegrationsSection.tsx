@@ -8,11 +8,11 @@ import integrationsAnimationData from '../assets/integrations-lottie.json';
 import { Check, ArrowRight } from 'lucide-react';
 
 const integrationExampleKeys = [
-  'integrations.examples.e1',
-  'integrations.examples.e2',
-  'integrations.examples.e3',
-  'integrations.examples.e4',
-  'integrations.examples.e5',
+  'integrationsComponent.examples.e1',
+  'integrationsComponent.examples.e2',
+  'integrationsComponent.examples.e3',
+  'integrationsComponent.examples.e4',
+  'integrationsComponent.examples.e5',
 ];
 
 const IntegrationsSection = () => {
@@ -53,10 +53,10 @@ const IntegrationsSection = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0D1B2A] mb-6 leading-tight">
-              {t('integrations.title')}
+              {t('integrationsComponent.title')}
             </h2>
             <p className="text-lg text-[#0D1B2A]/80 mb-8 leading-relaxed">
-              {t('integrations.description')}
+              {t('integrationsComponent.description')}
             </p>
             <ul className="space-y-3 mb-10">
               {integrationExampleKeys.map((key, index) => (
@@ -73,7 +73,7 @@ const IntegrationsSection = () => {
                 onClick={handleBrowseIntegrationsClick}
                 className="bg-[#1C7ED6] hover:bg-[#1565C0] text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#1C7ED6] focus:ring-opacity-50 inline-flex items-center group"
               >
-                {t('integrations.ctaButton')}
+                {t('integrationsComponent.ctaButton')}
                 <ArrowRight size={20} className="ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
