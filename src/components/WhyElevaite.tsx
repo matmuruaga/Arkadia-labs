@@ -1,8 +1,7 @@
 // src/components/WhyElevaite.tsx
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import { ClipboardList, Blocks, Users, Rocket, TrendingUp } from 'lucide-react';
 
 const journeyStepsData = [
@@ -17,22 +16,6 @@ const WhyElevaite = () => {
   const { t } = useTranslation();
   const [activeStep, setActiveStep] = useState(journeyStepsData[0].id);
   const activeStepData = journeyStepsData.find(step => step.id === activeStep);
-
-  // --- SOLUCIÓN: LÓGICA PARA CONTROLAR LA ALTURA DINÁMICA ---
-  const [height, setHeight] = useState<number | 'auto'>('auto');
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Cada vez que cambia el paso activo, medimos la altura del nuevo contenido
-    // y la establecemos en el estado para que el contenedor padre pueda animarse a esa altura.
-    const timer = setTimeout(() => {
-      if (cardRef.current) {
-        setHeight(cardRef.current.offsetHeight);
-      }
-    }, 10); // Un pequeño timeout para asegurar que el DOM se ha actualizado
-    return () => clearTimeout(timer);
-  }, [activeStep]);
-
 
   return (
     <section id="why-elevaite" className="py-16 md:py-24 bg-white">
@@ -68,23 +51,18 @@ const WhyElevaite = () => {
           </div>
 
           {/* --- COLUMNA DERECHA RECONSTRUIDA --- */}
-          {/* 1. El contenedor padre ahora es un 'motion.div' con altura animada */}
-          <motion.div 
-            animate={{ height: height || 'auto' }}
-            transition={{ type: 'spring', stiffness: 200, damping: 25 }}
-            className="lg:w-2/3 relative"
-          >
-            <AnimatePresence initial={false}>
+          {/* 1. El contenedor ahora tiene una altura mínima para evitar que se colapse */}
+          <div className="lg:w-2/3 min-h-[500px]">
+            {/* 2. AnimatePresence ahora usa 'mode="wait"' para una transición limpia */}
+            <AnimatePresence mode="wait">
               {activeStepData && (
-                // 2. La tarjeta ahora está posicionada de forma absoluta
                 <motion.div
                   key={activeStepData.id}
-                  ref={cardRef} // Usamos la ref para medir la altura de este elemento
-                  className="absolute top-0 left-0 w-full"
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -30 }}
-                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  // 3. Ya no es 'absolute'. Está en el flujo normal del documento.
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -15 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
                   <div className="bg-[#F1F3F5] rounded-xl shadow-xl overflow-hidden">
                     <div className="aspect-w-16 aspect-h-9 bg-gray-200">
@@ -98,7 +76,7 @@ const WhyElevaite = () => {
                 </motion.div>
               )}
             </AnimatePresence>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
