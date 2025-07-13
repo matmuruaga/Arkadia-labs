@@ -1,9 +1,10 @@
 // src/components/CaseStudyIntro.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next'; // <-- 1. Importar hook
+import { useTranslation } from 'react-i18next';
 import { CaseStudy } from '../data/caseStudiesData';
 import Icon from './Icon';
+import { X } from 'lucide-react'; // <-- 1. Importar el nuevo icono
 
 const containerVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -23,7 +24,6 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
 };
 
-// 2. La interfaz ahora también necesita la clave del estudio para las traducciones
 interface Props {
   client: CaseStudy['client'];
   challenge: CaseStudy['challenge'];
@@ -31,11 +31,12 @@ interface Props {
 }
 
 const CaseStudyIntro: React.FC<Props> = ({ client, challenge, studyKey }) => {
-  const { t } = useTranslation(); // <-- 3. Inicializar hook
+  const { t } = useTranslation();
+
   if (!client || !challenge) return null;
 
   return (
-    <section id="CaseStudyIntro" className="bg-gray-100 py-24">
+    <section className="bg-gray-100 py-24">
       <div className="container mx-auto px-4">
         
         <motion.div 
@@ -45,25 +46,24 @@ const CaseStudyIntro: React.FC<Props> = ({ client, challenge, studyKey }) => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {/* 4. Usar la función t() para todos los textos */}
           <div className="max-w-4xl">
             <motion.div variants={itemVariants}>
               <div className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-2 rounded-full shadow-md">
                 <h2 className="text-sm font-bold text-white uppercase tracking-wider">
-                  {t('caseStudies.common.clientOverview', 'Client Overview')}
+                  {t('caseStudies.client_overview_title', 'Client Overview')}
                 </h2>
               </div>
             </motion.div>
             
             <motion.div variants={itemVariants}>
               <div className="mt-8">
-                <img
-                  src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1751619752/zytlyn_logo_wotmqi.svg"
-                  alt={t('caseStudies.common.logoAlt', { clientName: client.name })}
-                  className="h-6"
-                />
+                {client.logoUrl && (
+                  <a href={`https://${client.website}`} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${client.name} website`} className="inline-block transition-opacity hover:opacity-80">
+                    <img src={client.logoUrl} alt={`${client.name} logo`} className="h-9" />
+                  </a>
+                )}
                 <h3 className="text-2xl md:text-3xl font-semibold text-slate-800 mt-4">
-                  {client.name} - {t(`caseStudies.${studyKey}.client.tagline`, client.tagline)}
+                  {t(`caseStudies.${studyKey}.client.name`, client.name)} - {t(`caseStudies.${studyKey}.client.tagline`, client.tagline)}
                 </h3>
               </div>
             </motion.div>
@@ -82,17 +82,17 @@ const CaseStudyIntro: React.FC<Props> = ({ client, challenge, studyKey }) => {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.5 }}
           />
-
+          
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-12"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2, delay: 0.6 }} // Ajuste de delay
+            viewport={{ once: true, delay: 0.6 }}
           >
             <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
               {client.details.map((detail, index) => (
-                <motion.div key={detail.label} variants={itemVariants}>
+                <motion.div key={index} variants={itemVariants}>
                   <div className="flex items-center gap-3 mb-2">
                     <Icon name={detail.icon as any} className="h-6 w-6 text-slate-400" />
                     <h4 className="text-sm font-semibold text-slate-500 tracking-wider uppercase">
@@ -106,14 +106,18 @@ const CaseStudyIntro: React.FC<Props> = ({ client, challenge, studyKey }) => {
               ))}
             </div>
 
+            {/* --- SECCIÓN DE BULLETS MEJORADA --- */}
             <motion.div className="md:col-span-1" variants={itemVariants}>
               <h3 className="text-xl font-bold text-slate-800 mb-4">
                 {t(`caseStudies.${studyKey}.challenge.beforeTitle`, challenge.beforeTitle)}
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 {challenge.points.map((point, index) => (
-                  <li key={point} className="flex items-start">
-                    <span className="text-blue-500 mr-3 mt-1.5">—</span>
+                  // 2. Se reemplaza el <span> con un icono y se ajusta el espaciado
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <X size={12} className="text-red-500" strokeWidth={3} />
+                    </div>
                     <span className="text-slate-600">
                       {t(`caseStudies.${studyKey}.challenge.points.${index}`, point)}
                     </span>

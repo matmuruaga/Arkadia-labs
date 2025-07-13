@@ -1,10 +1,10 @@
 {
   "languageCode": "es",
   "header": {
-    "features": "Características",
+    "features": "Casos de Uso",
     "plans": "Planes",
     "integrations": "Integraciones",
-    "contact": "Casos de Uso",
+    "studyCase": "Casos de Estudio",
     "getStarted": "Empezar",
     "login": "Iniciar Sesión"
   },
@@ -42,31 +42,31 @@
     },
     "content": {
       "sales": {
-        "s1": { "beforeTitle": "Seguimientos Inconsistentes", "beforeDescription": "Los leads se enfrían y se pierden oportunidades debido a un seguimiento manual y esporádico.", "afterTitle": "Nutrición de Leads con IA", "afterDescription": "Tu agente ejecuta incansables secuencias de seguimiento multi-canal para asegurar que ningún lead sea olvidado." },
-        "s2": { "beforeTitle": "Argumentos de Venta Genéricos", "beforeDescription": "Los comerciales usan el mismo guion para todos, sin conectar con los problemas específicos del cliente.", "afterTitle": "Discursos Dinámicos y Personalizados", "afterDescription": "La IA proporciona a tus comerciales datos y variaciones de discurso personalizadas para cada prospecto." },
-        "s3": { "beforeTitle": "Entrada Manual de Datos en CRM", "beforeDescription": "Se pierden horas cada día registrando llamadas y correos, restando tiempo a la venta.", "afterTitle": "Registro Automatizado de Actividad", "afterDescription": "Cada interacción se registra automáticamente en tu CRM en tiempo real, creando un historial perfecto." },
-        "s4": { "beforeTitle": "Previsión de Ventas Imprecisa", "beforeDescription": "Las previsiones se basan en conjeturas e intuición, llevando a predicciones de ingresos poco fiables.", "afterTitle": "Previsión Predictiva con IA", "afterDescription": "Utiliza análisis predictivo basado en datos reales para obtener previsiones de ventas de alta precisión." },
+        "s1": { "beforeTitle": "Agujero Negro de Investigación de Prospectos", "beforeDescription": "Los vendedores pasan 3+ horas buscando información básica de LinkedIn, perdiendo el 90% de los disparadores de decisión y señales de compra.", "afterTitle": "Inteligencia de Prospectos Impulsada por IA ", "afterDescription": "Investigación profunda en 15 minutos encuentra movimientos ejecutivos, rondas de financiación y momentos 'por qué ahora'." },
+        "s2": { "beforeTitle": "Cementerio de Leads Fríos", "beforeDescription": "El 80% de los leads se enfrían después de 3 contactos debido a contexto olvidado y mensajería inconsistente.", "afterTitle": "Resurrección de Leads Impulsada por IA", "afterDescription": "Secuencias de 15 contactos con memoria perfecta nutren deals por 6+ meses sin intervención humana." },
+        "s3": { "beforeTitle": "Volando a Ciegas en Llamadas de Ventas", "beforeDescription": "Los vendedores improvisan presentaciones críticas, perdiendo objeciones e intel competitivo durante llamadas en vivo.", "afterTitle": "Coaching de Ventas en Tiempo Real con IA", "afterDescription": "Tarjetas de batalla en vivo y respuestas a objeciones susurradas en tu oído durante cada llamada." },
+        "s4": { "beforeTitle": "Deals Atascados en el Purgatorio del CRM ", "beforeDescription": "La gestión manual del pipeline lleva a deals estancados y revisiones trimestrales cuando ya es demasiado tarde.", "afterTitle": "Motor de Aceleración de Deals con IA", "afterDescription": "Alertas instantáneas cuando los prospectos visitan páginas de precios con sugerencias automatizadas de próximas acciones." },
         "s5": { "beforeTitle": "Inversión de Tiempo en Investigación", "beforeDescription": "Los comerciales pasan más tiempo investigando prospectos en múltiples plataformas que hablando con ellos.", "afterTitle": "Enriquecimiento Instantáneo de Leads", "afterDescription": "Tu agente enriquece instantáneamente los leads con datos de empresa, perfiles sociales e información clave." }
       },
       "marketing": {
-        "m1": { "beforeTitle": "Segmentación de Audiencia Amplia", "beforeDescription": "Las campañas apuntan a segmentos genéricos, resultando en bajas conversiones y gasto publicitario perdido.", "afterTitle": "Micro-Segmentación con IA", "afterDescription": "La IA identifica y apunta a micro-segmentos híper-específicos de tu audiencia con el mensaje más relevante." },
-        "m2": { "beforeTitle": "Atribución de Campañas Difícil", "beforeDescription": "Es casi imposible saber qué acciones de marketing están generando ingresos realmente.", "afterTitle": "Análisis de ROI Claro y en Tiempo Real", "afterDescription": "Rastrea cada punto de contacto con modelos de atribución de IA que ofrecen una visión clara de tu ROI." },
-        "m3": { "beforeTitle": "Creación de Contenido Lenta", "beforeDescription": "El equipo de contenido es un cuello de botella, luchando por producir suficientes textos para anuncios y correos.", "afterTitle": "Generación de Contenido Asistida por IA", "afterDescription": "Genera borradores de alta calidad para textos de anuncios, campañas de email y posts en segundos." },
-        "m4": { "beforeTitle": "Baja Interacción en Redes Sociales", "beforeDescription": "Las cuentas de redes sociales se sienten estáticas, con respuestas lentas a comentarios y mensajes.", "afterTitle": "Interacción Social Automatizada", "afterDescription": "Tu agente de IA puede gestionar la primera línea de interacción, responder preguntas comunes y programar contenido." },
+        "m1": { "beforeTitle": "Agujero Negro de Investigación de Prospectos", "beforeDescription": "Los marketers pasan horas investigando audiencias objetivo, perdiendo el 90% de micro-segmentos y señales de alta intención de compra.", "afterTitle": "Micro-Segmentación Impulsada por IA", "afterDescription": "La IA identifica y se dirige a micro-segmentos híper-específicos con mensajería más relevante y mayor potencial de conversión." },
+        "m2": { "beforeTitle": "Segmentación Genérica de Campañas", "beforeDescription": "Las campañas se dirigen a segmentos amplios, resultando en bajas tasas de conversión y gasto publicitario desperdiciado.", "afterTitle": "Optimización de Campañas en Tiempo Real", "afterDescription": "La IA optimiza continuamente las campañas en todos los canales, maximizando el ROI mientras minimiza el gasto desperdiciado." },
+        "m3": { "beforeTitle": "Cuello de Botella de Creación Manual de Contenido", "beforeDescription": "Los equipos de contenido luchan con fechas límite, produciendo copy genérico para anuncios, emails y posts sociales.", "afterTitle": "Generación de Contenido Asistida por IA", "afterDescription": "Genera borradores de alta calidad para copy, campañas de email y posts sociales en segundos con consistencia de marca." },
+        "m4": { "beforeTitle": "Adivinanzas de Atribución de Campañas", "beforeDescription": "Es casi imposible saber qué actividades de marketing están realmente generando ingresos y ROI.", "afterTitle": "Análisis de ROI Claro en Tiempo Real", "afterDescription": "Rastrea cada punto de contacto con modelos de atribución impulsados por IA que proporcionan una vista clara del ROI de marketing." },
         "m5": { "beforeTitle": "Campañas de Email Estáticas", "beforeDescription": "Todos los usuarios reciben la misma secuencia de correos, sin importar su comportamiento.", "afterTitle": "Email Journeys Dinámicos y Adaptativos", "afterDescription": "La IA activa secuencias de emails que se adaptan en tiempo real según las acciones del usuario." }
       },
       "operations": {
-        "o1": { "beforeTitle": "Flujos de Trabajo Rígidos y Manuales", "beforeDescription": "Los procesos propensos a errores son difíciles de seguir y escalar, creando cuellos de botella operativos.", "afterTitle": "Orquestación de Procesos con IA", "afterDescription": "Automatización flexible de flujos de trabajo complejos que se adaptan dinámicamente a las necesidades de tu negocio." },
-        "o2": { "beforeTitle": "Silos de Datos Fragmentados", "beforeDescription": "La información está dispersa en diferentes sistemas, lo que imposibilita una visión unificada.", "afterTitle": "Panel de Control Operativo Unificado", "afterDescription": "La IA agrega datos de todas las fuentes en una única vista en tiempo real para una mejor toma de decisiones." },
-        "o3": { "beforeTitle": "Resolución Reactiva de Problemas", "beforeDescription": "Los problemas solo se abordan después de que ya han causado una interrupción en el negocio.", "afterTitle": "Mantenimiento Predictivo y Alertas", "afterDescription": "Tu agente puede predecir posibles problemas y enviar alertas antes de que afecten a tus operaciones." },
-        "o4": { "beforeTitle": "Gestión Manual de Inventario", "beforeDescription": "Las conjeturas en el inventario provocan roturas de stock o exceso de existencias, afectando al flujo de caja y a las ventas.", "afterTitle": "Optimización Predictiva de Inventario", "afterDescription": "La IA analiza los datos de ventas y las tendencias para recomendar niveles óptimos de inventario de forma automática." },
+        "o1": { "beforeTitle": "Largas Colas de Tickets y Tiempos de Espera", "beforeDescription": "Los clientes esperan horas o días para obtener respuestas a preguntas simples, generando frustración y pérdida de retención.", "afterTitle": "Soporte L1 Instantáneo con Agentes IA 24/7", "afterDescription": "Proporciona respuestas inmediatas a preguntas comunes las 24 horas, reduciendo drásticamente los tiempos de espera." },
+        "o2": { "beforeTitle": "Agotamiento de Agentes por Preguntas Repetitivas", "beforeDescription": "Los agentes de soporte pasan la mayor parte del día respondiendo las mismas preguntas una y otra vez.", "afterTitle": "Respuestas Automatizadas de FAQ y KB", "afterDescription": "Tu IA libera a los agentes humanos manejando consultas rutinarias, permitiéndoles enfocarse en casos complejos." },
+        "o3": { "beforeTitle": "Falta de Personalización en el Servicio", "beforeDescription": "Cada cliente recibe una respuesta genérica y guionada que no reconoce su historial ni contexto específico.", "afterTitle": "Soporte Personalizado y Consciente del Contexto", "afterDescription": "El agente IA tiene el contexto completo del historial del cliente para brindar respuestas verdaderamente personales y efectivas." },
+        "o4": { "beforeTitle": "Sin Soporte Proactivo", "beforeDescription": "Solo ayudas a los clientes después de que se quejan, perdiendo oportunidades de construir lealtad y prevenir churn.", "afterTitle": "Detección Proactiva de Problemas y Alcance", "afterDescription": "La IA puede detectar señales de frustración del cliente o problemas potenciales y ofrecer ayuda proactivamente." },
         "o5": { "beforeTitle": "Asignación Ineficiente de Recursos", "beforeDescription": "Asignar tareas y recursos manualmente a menudo conduce a cargas de trabajo desequilibradas y retrasos en los proyectos.", "afterTitle": "Programación de Recursos con IA", "afterDescription": "Asigna recursos de manera inteligente según la disponibilidad, habilidad y prioridad para una máxima eficiencia." }
       },
       "support": {
-        "su1": { "beforeTitle": "Largas Colas de Tickets y Tiempos de Espera", "beforeDescription": "Los clientes esperan horas o días para obtener respuestas a preguntas sencillas.", "afterTitle": "Soporte Instantáneo de Nivel 1 con Agentes de IA 24/7", "afterDescription": "Proporciona respuestas inmediatas a preguntas comunes durante todo el día, reduciendo drásticamente los tiempos de espera." },
-        "su2": { "beforeTitle": "Agotamiento de los Agentes por Preguntas Repetitivas", "beforeDescription": "Los agentes de soporte pasan la mayor parte del día respondiendo las mismas preguntas una y otra vez.", "afterTitle": "Respuestas Automatizadas de FAQ y Base de Conocimiento", "afterDescription": "Tu IA libera a los agentes humanos al gestionar consultas rutinarias, permitiéndoles centrarse en casos complejos." },
-        "su3": { "beforeTitle": "Falta de Personalización en el Servicio", "beforeDescription": "Cada cliente recibe una respuesta genérica y programada que no tiene en cuenta su historial.", "afterTitle": "Soporte Personalizado y Consciente del Contexto", "afterDescription": "El agente de IA tiene todo el contexto del historial del cliente para proporcionar una respuesta verdaderamente personal y efectiva." },
-        "su4": { "beforeTitle": "Soporte no Proactivo", "beforeDescription": "Solo ayudas a los clientes después de que se quejan, perdiendo oportunidades para fidelizarlos.", "afterTitle": "Detección Proactiva de Problemas y Contacto", "afterDescription": "La IA puede detectar signos de frustración del cliente o posibles problemas y ofrecer ayuda de forma proactiva." },
+        "su1": { "beforeTitle": "Largas Colas de Tickets y Tiempos de Espera", "beforeDescription": "Los clientes esperan horas o días para obtener respuestas a preguntas simples.", "afterTitle": "Soporte L1 Instantáneo con Agentes IA 24/7", "afterDescription": "Proporciona respuestas inmediatas a preguntas comunes las 24 horas, reduciendo drásticamente los tiempos de espera." },
+        "su2": { "beforeTitle": "Agotamiento de Agentes por Preguntas Repetitivas", "beforeDescription": "Los agentes de soporte pasan la mayor parte del día respondiendo las mismas preguntas una y otra vez.", "afterTitle": "Respuestas Automatizadas de FAQ y KB", "afterDescription": "Tu IA libera a los agentes humanos manejando consultas rutinarias, permitiéndoles enfocarse en casos complejos." },
+        "su3": { "beforeTitle": "Falta de Personalización en el Servicio", "beforeDescription": "Cada cliente recibe una respuesta genérica y guionada que no reconoce su historial.", "afterTitle": "Soporte Personalizado y Consciente del Contexto", "afterDescription": "El agente IA tiene el contexto completo del historial del cliente para brindar respuestas verdaderamente personales y efectivas." },
+        "su4": { "beforeTitle": "Sin Soporte Proactivo", "beforeDescription": "Solo ayudas a los clientes después de que se quejan, perdiendo oportunidades de construir lealtad.", "afterTitle": "Detección Proactiva de Problemas y Alcance", "afterDescription": "La IA puede detectar señales de frustración del cliente o problemas potenciales y ofrecer ayuda proactivamente." }, 
         "su5": { "beforeTitle": "Cobertura de Soporte Limitada (9 a 5)", "beforeDescription": "Tus clientes globales no pueden obtener ayuda fuera de tu horario comercial local.", "afterTitle": "Disponibilidad Global 24/7 con IA", "afterDescription": "Ofrece un soporte constante y de alta calidad a todos tus clientes, sin importar su zona horaria." }
       },
       "hr": {
@@ -78,25 +78,37 @@
       }
     }
   },
-  "kpi": {
+ "kpi": {
     "title": "El Impacto ElevAIte: Resultados Medibles",
     "subtitle": "Descubre cómo nuestras soluciones de IA a medida se traducen en beneficios tangibles y un crecimiento significativo para negocios como el tuyo.",
     "cards": {
       "kpi1": {
-        "description": "Firma de abogados global automatiza la compilación y análisis de documentos legales con nuestra IA.",
-        "label": "Reducción en Tiempo de Tareas Manuales"
+        "capsule": "Equipos de Ventas",
+        "description": "Startup suiza de IA escala de $2M a $6M en ARR en 18 meses usando nuestro ecosistema de IA.",
+        "label": "Más Acuerdos Cerrados",
+        "impactTitle": "Impacto en Ingresos:",
+        "impactDescription": "Transforma tu Tasa de Cierre en un Crecimiento de Ingresos Constante"
       },
       "kpi2": {
-        "description": "Fintech europea acelera el onboarding de nuevos empleados usando agentes de IA.",
-        "label": "Respuesta y Resolución Más Rápidas"
+        "capsule": "Equipos de Marketing",
+        "description": "Empresa B2B SaaS reduce el coste de adquisición de clientes con nuestro ecosistema de IA.",
+        "label": "Reducción de Costes",
+        "impactTitle": "Impacto en Costes:",
+        "impactDescription": "Convierte el Gasto en Marketing en Centros de Beneficio"
       },
       "kpi3": {
-        "description": "Empresa SaaS líder automatiza consultas de soporte de Nivel 1 con IA personalizada.",
-        "label": "Aumento en la Cualificación de Leads"
+        "capsule": "Equipos de Operaciones",
+        "description": "Líder de e-commerce automatiza procesos rutinarios, impulsando iniciativas de crecimiento.",
+        "label": "90% de Automatización de Procesos",
+        "impactTitle": "Impacto en Escalabilidad:",
+        "impactDescription": "Construye Sistemas que Escalan sin Costes Lineales"
       },
       "kpi4": {
-        "description": "Líder del mercado industrial utiliza agentes de IA para aumentar el soporte al cliente globalmente.",
-        "label": "Impulso a la Eficiencia Operacional"
+        "capsule": "Equipos de Soporte al Cliente",
+        "description": "Empresa de software empresarial reduce la tasa de abandono (churn) y aumenta el valor de vida del cliente.",
+        "label": "Reducción de Churn",
+        "impactTitle": "Impacto en Retención: ",
+        "impactDescription": "Protege los Ingresos Existentes Mientras Reduces los Costes de Soporte"
       }
     }
   },
@@ -237,7 +249,7 @@
     "stayUpdated": "Mantente Actualizado"
   },
   "links": {
-    "features": "Características",
+    "features": "Casos de Uso",
     "caseStudies": "Casos de Éxito",
     "privacy": "Política de Privacidad",
     "terms": "Términos y Condiciones",
@@ -1099,8 +1111,210 @@
       "role": "Directora de Crecimiento",
       "company": "Zytlyn"
     }
+  },
+  "goodnite": {
+    "client": {
+      "name": "Goodnite",
+      "tagline": "Alquileres Vacacionales Boutique",
+      "description": "Empresa de alquileres vacacionales premium en Brno, República Checa, que ofrece 68 habitaciones y suites originales en 12 edificios con recepción sin contacto y enfoque en el máximo confort.",
+      "details": [
+        { "label": "Industria", "value": "Alquileres Vacacionales y Hotelería" },
+        { "label": "Tamaño del Equipo", "value": "Equipo de Operaciones Pequeño" },
+        { "label": "Propiedades", "value": "68 Habitaciones y Suites" },
+        { "label": "Mercado Objetivo", "value": "Viajeros de Negocios y Ocio" }
+      ]
+    },
+    "hero": {
+      "title": "Cómo Transformamos la *Experiencia del Cliente* de Goodnite con un Ecosistema de IA Completo",
+      "subtitle": "Caso de estudio estratégico: Goodnite logró un ROI de 6x en 12 meses, aumentó la satisfacción del cliente en un 11% y transformó sus operaciones con un ecosistema de experiencia del cliente de IA 24/7.",
+      "kpis": [
+        { "label": "ROI en 12 Meses" },
+        { "label": "Aumento de Satisfacción" },
+        { "label": "Más Reseñas Generadas" }
+      ]
+    },
+    "challenge": {
+      "beforeTitle": "Antes de ElevateLabs",
+      "points": [
+        "Soporte al cliente limitado fuera de horario",
+        "Comunicación inconsistente con los huéspedes",
+        "Baja tasa de generación de reseñas"
+      ]
+    },
+    "challengeSection": {
+      "title": "El Desafío",
+      "subtitle": "Goodnite enfrentaba desafíos operativos críticos que limitaban la experiencia de sus huéspedes y su potencial de crecimiento en el competitivo mercado de alquileres vacacionales.",
+      "challenges": [
+        { "title": "Horario de Soporte Limitado", "description": "Sin disponibilidad para consultas y soporte a huéspedes de 10 PM a 10 AM, dejando a los huéspedes desatendidos en horas críticas.", "impact": "Mala experiencia del huésped" },
+        { "title": "Comunicación Inconsistente", "description": "Sin un proceso estandarizado de comunicación antes de la llegada o después de la estancia, lo que generaba confusión y oportunidades perdidas.", "impact": "Confusión de huéspedes y reservas perdidas" },
+        { "title": "Baja Generación de Reseñas", "description": "Solo el 40% de los huéspedes dejaban reseñas, lo que afectaba significativamente la visibilidad online y las conversiones de reservas.", "impact": "Presencia online reducida" }
+      ],
+      "coreProblem": {
+        "title": "El Problema Central",
+        "quote": "Necesitábamos un ecosistema completo de experiencia del cliente con IA que pudiera brindar soporte 24/7, guiar a los huéspedes durante su viaje y recopilar activamente feedback para mejorar nuestras calificaciones y reservas.",
+        "author": "Tomáš Ustohal, Gerente de Equipo en Goodnite"
+      }
+    },
+    "solution": {
+      "title": "La Solución de Elevaitelabs",
+      "subtitle": "Un completo Ecosistema de Experiencia del Cliente con IA diseñado con precisión suiza para transformar las operaciones hoteleras.",
+      "implementation": {
+        "title": "Implementación Estratégica de IA",
+        "description": "Aprovechando 12 años de experiencia en ventas y metodologías probadas escalando 3 startups, desarrollamos un ecosistema de IA integral que cubre todo el viaje del huésped.",
+        "features": [
+          { "title": "Recepcionista Nocturno 24/7", "description": "Recepcionista impulsado por IA que gestiona todas las consultas de los huéspedes de 10 PM a 10 AM con capacidad de respuesta inmediata." },
+          { "title": "Soporte Pre-Llegada y Llegada", "description": "Sistema de llamadas automatizado que explica todo antes de la llegada y brinda soporte el día de la llegada." },
+          { "title": "Recopilación de Feedback Post-Estancia", "description": "Agente de IA que llama 2-3 días después de la estancia para recopilar feedback y fomentar reseñas positivas." }
+        ]
+      },
+      "coreFunctions": {
+        "title": "Funciones Clave del Ecosistema de IA",
+        "functions": ["Soporte Nocturno", "Guía Pre-Llegada", "Soporte el Día de Llegada", "Recopilación de Feedback", "Generación de Reseñas"]
+      }
+    },
+    "timeline": {
+      "title": "Cronograma de Implementación",
+      "subtitle": "Despliegue rápido con optimización continua",
+      "phases": [
+        { "title": "Mes 1: Desarrollo", "description": "Desarrollo del ecosistema de IA a medida, configuración de integraciones y personalización para los requisitos específicos de Goodnite." },
+        { "title": "Mes 2: Integración y Pruebas", "description": "Integración del sistema con los sistemas de reserva existentes, pruebas exhaustivas y formación del personal sobre el nuevo ecosistema de IA." },
+        { "title": "Mes 3: Puesta en Marcha y Resultados", "description": "Lanzamiento completo del sistema con un impacto inmediato en la satisfacción del cliente, la generación de reseñas y la eficiencia operativa." }
+      ]
+    },
+    "impact": {
+      "title": "Impacto Medible",
+      "subtitle": "Resultados transformadores entregados en 3 meses",
+      "kpis": [
+        { "label": "Satisfacción del Cliente", "subLabel": "Sube de 8.4 (aumento del 11%)" },
+        { "label": "Más Reseñas", "subLabel": "Generación de reseñas del 40% → 71%" },
+        { "label": "ROI Alcanzado", "subLabel": "En 12 meses" },
+        { "label": "Respuesta Inmediata", "subLabel": "Reemplaza a 2-3 empleados" }
+      ]
+    },
+    "roiAnalysis": {
+      "title": "Análisis del ROI",
+      "subtitle": "Evaluación exhaustiva del impacto financiero",
+      "calculator": {
+        "title": "Inversión vs Coste de Personal",
+        "items": [
+          { "label": "Coste de Personal Tradicional (2-3 empleados)", "value": "€120k+/año" },
+          { "label": "Inversión en Ecosistema de IA", "value": "15% del coste de personal" },
+          { "label": "Multiplicador de Rendimiento", "value": "3x eficiencia" }
+        ],
+        "finalRoi": { "label": "Alcanzado en 12 meses" }
+      },
+      "benefits": [
+        { "title": "Eficiencia de Costes", "description": "La inversión en IA representa solo el 15% de los costes de personal tradicional, mientras entrega 3 veces el rendimiento en satisfacción del cliente y generación de reseñas." },
+        { "title": "Aceleración de Ingresos", "description": "Un aumento del 78% en la generación de reseñas, combinado con una mejora del 11% en la satisfacción del cliente, se traduce directamente en mayores tasas de reserva y crecimiento de ingresos." },
+        { "title": "Factor de Escalabilidad", "description": "El ecosistema de IA escala infinitamente sin costes de contratación adicionales, proporcionando una ventaja competitiva sostenible a medida que Goodnite se expande." }
+      ]
+    }
+  },
+  "domus-labs": {
+    "hero": {
+      "title": "Cómo *Aceleramos* la Entrega de Proyectos con un Sistema de Inteligencia de IA",
+      "subtitle": "Caso de estudio estratégico: Domus Labs logró un ROI del 160% en 3 meses, aumentó la finalización de proyectos en un 77% y ahorró 8 horas semanales de tiempo ejecutivo con inteligencia de proyectos automatizada.",
+      "kpis": [
+        { "label": "Eficiencia en Reuniones" },
+        { "label": "Finalización de Proyectos" },
+        { "label": "ROI en 3 Meses" }
+      ]
+    },
+    "client": {
+      "name": "Domus Labs",
+      "tagline": "Estudio de Arquitectura Boutique",
+      "description": "Innovador estudio de arquitectura y diseño de interiores que crea espacios significativos con una perspectiva humanista, expandiéndose internacionalmente por Barcelona, Alemania y Francia.",
+      "details": [
+        { "label": "Industria", "value": "Arquitectura y Diseño de Interiores" },
+        { "label": "Tamaño del Proyecto", "value": "€500k-2M por proyecto" },
+        { "label": "Tamaño del Equipo", "value": "17 Empleados" },
+        { "label": "Mercado Objetivo", "value": "B2B Internacional" }
+      ]
+    },
+    "challenge": {
+      "beforeTitle": "Antes de ElevateLabs",
+      "points": [
+        "Documentación manual de reuniones que consumía más de 2 horas semanales",
+        "Baja visibilidad de proyectos entre múltiples iniciativas",
+        "Seguimiento de tareas y rendición de cuentas inconsistentes"
+      ]
+    },
+    "challengeSection": {
+      "title": "El Desafío",
+      "subtitle": "Domus Labs enfrentaba desafíos críticos en la gestión de proyectos que limitaban su potencial de expansión internacional.",
+      "challenges": [
+        { "title": "Procesamiento Manual de Reuniones", "description": "Los ejecutivos pasaban más de 2 horas semanales documentando reuniones manualmente, actualizando el estado de los proyectos y rastreando tareas.", "impact": "Pérdida de tiempo ejecutivo" },
+        { "title": "Falta de Visibilidad de Proyectos", "description": "Múltiples proyectos en marcha simultáneamente con poca visibilidad sobre el estado, los riesgos y la responsabilidad entre los equipos.", "impact": "Incumplimiento de plazos" },
+        { "title": "Desafíos de Responsabilidad", "description": "Sistema inconsistente de seguimiento de tareas que impedía una entrega eficiente de proyectos y la coordinación del equipo.", "impact": "Retrasos en proyectos" }
+      ],
+      "coreProblem": {
+        "title": "El Problema Central",
+        "quote": "Necesitábamos un sistema de IA que pudiera capturar automáticamente las ideas de las reuniones, actualizar el estado de los proyectos y mantener la responsabilidad a medida que nos expandimos internacionalmente. Los procesos manuales estaban limitando nuestro potencial de crecimiento.",
+        "author": "Cosma Musacchio, Director General y Creativo, Domus Labs"
+      }
+    },
+    "solution": {
+      "title": "La Solución de Elevaitelabs",
+      "subtitle": "Sistema de Inteligencia de Proyectos de IA a medida, diseñado con precisión suiza para automatizar la gestión de proyectos, el procesamiento de reuniones y el seguimiento de responsabilidades.",
+      "implementation": {
+        "title": "Implementación Estratégica de IA",
+        "description": "Aprovechando 12 años de experiencia en ventas y metodologías probadas, desarrollamos un sistema de Inteligencia de Proyectos de IA a medida.",
+        "features": [
+          { "title": "Análisis Automatizado de Reuniones", "description": "Sistema impulsado por IA que procesa reuniones, genera resúmenes y actualiza automáticamente el estado del proyecto en Notion." },
+          { "title": "Seguimiento Inteligente de Proyectos", "description": "Visibilidad de proyectos en tiempo real con asignación automatizada de tareas y seguimiento del progreso en todas las iniciativas." },
+          { "title": "Inteligencia de Proyectos 24/7", "description": "Asistente de IA basado en Telegram que proporciona respuestas instantáneas sobre el estado de los proyectos, resúmenes de reuniones y actualizaciones de tareas." },
+          { "title": "Rendición de Cuentas Automatizada", "description": "Informes semanales automatizados para miembros del equipo y ejecutivos con el estado del proyecto, riesgos y acciones requeridas." }
+        ]
+      },
+      "coreFunctions": {
+        "title": "Funciones Clave de la Inteligencia de Proyectos",
+        "functions": ["Análisis y Resumen de Reuniones", "Asignación Automatizada de Tareas", "Actualizaciones de Estado de Proyectos", "Asistente de IA en Telegram"]
+      }
+    },
+    "timeline": {
+      "title": "Cronograma de Implementación",
+      "subtitle": "Despliegue rápido con optimización continua",
+      "phases": [
+        { "title": "Mes 1: Desarrollo", "description": "Desarrollo del sistema de IA a medida, configuración de la integración con Notion y creación del bot de Telegram adaptado a los flujos de trabajo de Domus Labs." },
+        { "title": "Mes 2: Puesta a punto", "description": "Optimización del sistema, perfeccionamiento del procesamiento de reuniones y personalización del flujo de trabajo de gestión de proyectos según el feedback inicial." },
+        { "title": "Mes 3+: Entrega de Resultados", "description": "Rendimiento completo del sistema logrado con un impacto medible en las tasas de finalización de proyectos, el ahorro de tiempo ejecutivo y la responsabilidad del equipo." }
+      ]
+    },
+    "impact": {
+      "title": "Impacto Medible",
+      "subtitle": "Resultados transformadores entregados en 3 meses",
+      "kpis": [
+        { "label": "Eficiencia en Reuniones", "subLabel": "2 horas → 10 minutos" },
+        { "label": "Finalización de Proyectos", "subLabel": "Tasa de éxito del 47% → 83%" },
+        { "label": "ROI Alcanzado", "subLabel": "En 3 meses" },
+        { "label": "Tiempo Semanal Ahorrado", "subLabel": "Por ejecutivo" }
+      ]
+    },
+    "roiAnalysis": {
+      "title": "Análisis del ROI",
+      "subtitle": "Evaluación exhaustiva del impacto financiero",
+      "calculator": {
+        "title": "Inversión vs Coste de Tiempo Ejecutivo",
+        "items": [
+          { "label": "Coste de Tiempo Ejecutivo Tradicional", "value": "€2,000+/mes" },
+          { "label": "Coste de Inversión en IA", "value": "€990/mes" },
+          { "label": "Multiplicador de Eficiencia", "value": "10x procesamiento más rápido" }
+        ],
+        "finalRoi": { "label": "Alcanzado en 3 meses" }
+      },
+      "benefits": [
+        { "title": "Eficiencia de Costes", "description": "La inversión en IA representa el 50% de los costes de tiempo ejecutivo tradicional, mientras entrega 10 veces la eficiencia de procesamiento." },
+        { "title": "Aceleración de Proyectos", "description": "Una mejora del 77% en las tasas de finalización de proyectos se traduce directamente en una entrega más rápida y una mayor satisfacción del cliente." },
+        { "title": "Factor de Escalabilidad", "description": "El sistema de IA escala infinitamente en ubicaciones internacionales sin gastos generales de gestión adicionales." }
+      ]
+    }
   }
 },
+ "case_studies_index": {
+    "title": "Casos de Estudio",
+    "subtitle": "Descubre cómo hemos ayudado a empresas a transformar sus procesos de ventas con IA.",
+    "cta" : "Leer Caso de Estudio"
+  },
 "whyElevaiteStudyCase": {
   "title": "Por qué ElevaiteLabs",
   "subtitle": "Precisión suiza unida a una probada experiencia en ventas",

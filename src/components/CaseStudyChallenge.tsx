@@ -67,9 +67,16 @@ const CaseStudyChallenge: React.FC<Props> = ({ data, studyKey }) => {
               <p className="text-gray-600 mb-4">
                 {t(`caseStudies.${studyKey}.challengeSection.challenges.${index}.description`, challenge.description)}
               </p>
-              <p className="font-semibold text-red-700">
-                <span className="font-bold">{t('caseStudies.common.impactLabel', 'Impacto')}:</span> {t(`caseStudies.${studyKey}.challengeSection.challenges.${index}.impact`, challenge.impact)}
+                            <p className="font-semibold text-red-700">
+                {/* --- LÍNEA CORREGIDA --- */}
+                {/* Ahora la clave para "Impact" es dinámica y coincide con la estructura del JSON */}
+                <span className="font-bold">
+                  {t(`caseStudies.${studyKey}.challengeSection.challenges.${index}.impactLabel`, 'Impacto')}:
+                </span>
+                {' '} {/* Espacio añadido para separar */}
+                {t(`caseStudies.${studyKey}.challengeSection.challenges.${index}.impact`, challenge.impact)}
               </p>
+
             </motion.div>
           ))}
         </div>

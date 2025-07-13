@@ -44,7 +44,7 @@ const Header = () => {
           <Link to={`/${i18n.language}/#integrations`} className={linkClasses}>{t('header.integrations')}</Link>
           
           {/* --- ENLACE AÑADIDO --- */}
-          <Link to={`/${i18n.language}/case-studies`} className={linkClasses}>{t('header.useCases', 'Use Cases')}</Link>
+          <Link to={`/${i18n.language}/case-studies`} className={linkClasses}>{t('header.studyCase')}</Link>
           
           <div className="flex items-center gap-2">
             <button onClick={handleGetStartedClick} className={primaryButtonClasses}>

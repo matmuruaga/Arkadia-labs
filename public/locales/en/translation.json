@@ -1,10 +1,10 @@
 {
   "languageCode": "en",
   "header": {
-    "features": "Features",
+    "features": "Use Cases",
     "plans": "Plans",
     "integrations": "Integrations",
-    "contact": "Use Case",
+    "studyCase": "Case Studies",
     "getStarted": "Get Started",
     "login": "Login"
   },
@@ -41,64 +41,201 @@
       "hr": "HR & Recruitment"
     },
     "content": {
-      "sales": {
-        "s1": { "beforeTitle": "Inconsistent Follow-ups", "beforeDescription": "Leads go cold and opportunities are lost due to sporadic, manual follow-up efforts.", "afterTitle": "AI-Powered Nurturing", "afterDescription": "Your agent executes tireless, multi-touch follow-up sequences to ensure no lead is ever forgotten." },
-        "s2": { "beforeTitle": "Generic Sales Pitches", "beforeDescription": "Sales reps use the same script for every prospect, failing to connect with their specific pain points.", "afterTitle": "Dynamic, Personalized Pitches", "afterDescription": "The AI provides reps with data-driven talking points and personalized variations for each prospect." },
-        "s3": { "beforeTitle": "Manual CRM Data Entry", "beforeDescription": "Hours are wasted each day logging calls and emails, taking valuable time away from actual selling.", "afterTitle": "Automated Activity Logging", "afterDescription": "Every interaction is automatically logged in your CRM in real-time, providing a perfect, effortless record." },
-        "s4": { "beforeTitle": "Inaccurate Sales Forecasting", "beforeDescription": "Forecasts are based on guesswork and gut feelings, leading to unreliable revenue predictions.", "afterTitle": "AI-Driven Predictive Forecasting", "afterDescription": "Leverage predictive analytics based on real engagement data for highly accurate, data-driven forecasts." },
-        "s5": { "beforeTitle": "Time Spent on Lead Research", "beforeDescription": "Reps spend more time researching prospects on multiple platforms than actually talking to them.", "afterTitle": "Instant Lead Enrichment", "afterDescription": "Your agent instantly enriches leads with company data, social profiles, and key insights." }
-      },
-      "marketing": {
-        "m1": { "beforeTitle": "Broad Audience Targeting", "beforeDescription": "Campaigns target wide segments, resulting in low conversion rates and wasted ad spend.", "afterTitle": "AI-Driven Micro-Segmentation", "afterDescription": "AI identifies and targets hyper-specific micro-segments with the most relevant messaging." },
-        "m2": { "beforeTitle": "Difficult Campaign Attribution", "beforeDescription": "It's nearly impossible to know which marketing activities are actually driving revenue.", "afterTitle": "Clear, Real-time ROI Analysis", "afterDescription": "Track every touchpoint with AI-powered models that provide a clear view of your marketing ROI." },
-        "m3": { "beforeTitle": "Time-Consuming Content Creation", "beforeDescription": "The content team is a bottleneck, struggling to produce enough copy for ads, emails, and social media.", "afterTitle": "AI-Assisted Content Generation", "afterDescription": "Generate high-quality first drafts for ad copy, email campaigns, and social posts in seconds." },
-        "m4": { "beforeTitle": "Low Social Media Engagement", "beforeDescription": "Company social media accounts feel static, with slow responses to comments and messages.", "afterTitle": "Automated Social Engagement", "afterDescription": "Your AI agent can manage first-level engagement, respond to common questions, and schedule content." },
-        "m5": { "beforeTitle": "Static Email Campaigns", "beforeDescription": "All users receive the same email drip, regardless of their behavior or engagement level.", "afterTitle": "Dynamic & Adaptive Email Journeys", "afterDescription": "AI triggers email journeys that adapt in real-time based on user actions and engagement." }
-      },
-      "operations": {
-        "o1": { "beforeTitle": "Rigid, Manual Workflows", "beforeDescription": "Error-prone processes are difficult to follow and scale, creating operational bottlenecks.", "afterTitle": "AI-Powered Process Orchestration", "afterDescription": "Flexible automation of complex workflows that dynamically adapt to your business needs." },
-        "o2": { "beforeTitle": "Fragmented Data Silos", "beforeDescription": "Information is scattered across different systems, making a unified view impossible.", "afterTitle": "Unified Operational Dashboard", "afterDescription": "AI aggregates data from all sources into a single, real-time view for better decision-making." },
-        "o3": { "beforeTitle": "Reactive Problem Solving", "beforeDescription": "Issues are only addressed after they've already caused a disruption to the business.", "afterTitle": "Predictive Maintenance & Alerts", "afterDescription": "Your agent can predict potential issues and send alerts before they impact your operations." },
-        "o4": { "beforeTitle": "Manual Inventory Management", "beforeDescription": "Guesswork in inventory leads to stockouts or overstocking, affecting cash flow and sales.", "afterTitle": "Predictive Inventory Optimization", "afterDescription": "AI analyzes sales data and trends to recommend optimal inventory levels automatically." },
-        "o5": { "beforeTitle": "Inefficient Resource Allocation", "beforeDescription": "Assigning tasks and resources manually often leads to unbalanced workloads and project delays.", "afterTitle": "AI-Powered Resource Scheduling", "afterDescription": "Intelligently assign resources based on availability, skill, and priority for maximum efficiency." }
-      },
-      "support": {
-        "su1": { "beforeTitle": "Long Ticket Queues & Wait Times", "beforeDescription": "Customers are left waiting for hours or days to get answers to simple questions.", "afterTitle": "Instant L1 Support with 24/7 AI Agents", "afterDescription": "Provide immediate answers to common questions around the clock, drastically reducing wait times." },
-        "su2": { "beforeTitle": "Agent Burnout from Repetitive Questions", "beforeDescription": "Support agents spend most of their day answering the same questions over and over again.", "afterTitle": "Automated FAQ & KB Responses", "afterDescription": "Your AI frees up human agents by handling routine inquiries, allowing them to focus on complex cases." },
-        "su3": { "beforeTitle": "Lack of Personalization in Service", "beforeDescription": "Every customer gets a generic, scripted response that fails to acknowledge their history.", "afterTitle": "Context-Aware, Personalized Support", "afterDescription": "The AI agent has full context of the customer's history to provide a truly personal and effective response." },
-        "su4": { "beforeTitle": "No Proactive Support", "beforeDescription": "You only help customers after they complain, missing opportunities to build loyalty.", "afterTitle": "Proactive Issue Detection & Outreach", "afterDescription": "AI can detect signs of customer frustration or potential issues and proactively offer help." },
-        "su5": { "beforeTitle": "Limited Support Coverage (9-5)", "beforeDescription": "Your global customers can't get help outside of your local business hours.", "afterTitle": "24/7 AI-Powered Global Availability", "afterDescription": "Offer consistent, high-quality support to all your customers, no matter their time zone." }
-      },
-      "hr": {
-        "h1": { "beforeTitle": "Manual CV Screening Overload", "beforeDescription": "HR managers spend countless hours reading through hundreds of irrelevant resumes.", "afterTitle": "AI-Powered Candidate Matching", "afterDescription": "Your AI agent automatically screens, scores, and shortlists the most qualified candidates for any role." },
-        "h2": { "beforeTitle": "Chaotic Interview Scheduling", "beforeDescription": "The back-and-forth emails to schedule a single interview can take days.", "afterTitle": "Automated Calendar Coordination", "afterDescription": "The AI coordinates with candidates and interviewers to find the perfect time and books it automatically." },
-        "h3": { "beforeTitle": "Generic Employee Onboarding", "beforeDescription": "New hires receive a standard package that doesn't cater to their specific role or needs.", "afterTitle": "Personalized Onboarding Journeys", "afterDescription": "Create unique onboarding experiences with an AI agent that guides new hires through their specific tasks." },
-        "h4": { "beforeTitle": "Time-Consuming FAQ Answering", "beforeDescription": "HR staff are constantly interrupted with the same questions about policies, payroll, and benefits.", "afterTitle": "Instant HR & Policy AI Assistant", "afterDescription": "An internal AI assistant provides instant, accurate answers to employee questions 24/7." },
-        "h5": { "beforeTitle": "Low Employee Engagement Insights", "beforeDescription": "Annual surveys provide stale data that is difficult to act upon in a timely manner.", "afterTitle": "AI-Powered Engagement Analysis", "afterDescription": "AI analyzes feedback from multiple channels in real-time to provide a constant pulse on team morale." }
-      }
+  "sales": {
+    "s1": {
+      "beforeTitle": "Prospect Research Black Hole",
+      "beforeDescription": "Reps spend 3+ hours googling basic info, missing 90% of decision triggers and critical buying signals.",
+      "afterTitle": "AI-Powered Prospect Intelligence",
+      "afterDescription": "Our AI performs deep-dive research in minutes, finding executive moves, funding rounds, and 'why now' moments."
+    },
+    "s2": {
+      "beforeTitle": "Cold Lead Graveyard",
+      "beforeDescription": "80% of leads go cold after just 3 touches due to forgotten context and inconsistent messaging.",
+      "afterTitle": "AI-Powered Lead Resurrection",
+      "afterDescription": "Automated 15-touch sequences with perfect recall nurture deals for 6+ months without human intervention."
+    },
+    "s3": {
+      "beforeTitle": "Flying Blind in Sales Calls",
+      "beforeDescription": "Reps often miss key objections and competitive intel during live calls, putting important deals at risk.",
+      "afterTitle": "AI Real-Time Sales Coaching",
+      "afterDescription": "Get live battle cards and proven objection responses whispered in your ear during every single sales call."
+    },
+    "s4": {
+      "beforeTitle": "Deals Stuck in CRM Purgatory",
+      "beforeDescription": "Manual pipeline management leads to stalled deals and quarterly reviews when it is already too late to act.",
+      "afterTitle": "AI Deal Acceleration Engine",
+      "afterDescription": "Receive instant alerts when prospects visit pricing pages, with automated next-action suggestions."
+    },
+    "s5": {
+      "beforeTitle": "Time Spent on Lead Research",
+      "beforeDescription": "Your reps spend more time researching prospects on multiple platforms than actually talking to them.",
+      "afterTitle": "Instant Lead Enrichment",
+      "afterDescription": "The agent instantly enriches all your leads with company data, social profiles, and other key insights."
     }
+  },
+  "marketing": {
+    "m1": {
+      "beforeTitle": "Prospect Research Black Hole",
+      "beforeDescription": "Marketers research audiences for hours, missing 90% of micro-segments and high-intent buyer signals.",
+      "afterTitle": "AI-Driven Micro-Segmentation",
+      "afterDescription": "AI identifies and targets hyper-specific segments with the most relevant messaging for higher conversion potential."
+    },
+    "m2": {
+      "beforeTitle": "Generic Campaign Targeting",
+      "beforeDescription": "Campaigns targeting wide segments result in very low conversion rates and significantly wasted ad spend.",
+      "afterTitle": "Real-Time Campaign Optimization",
+      "afterDescription": "Our AI continuously optimizes your campaigns across all channels, maximizing ROI while minimizing ad spend."
+    },
+    "m3": {
+      "beforeTitle": "Content Creation Bottleneck",
+      "beforeDescription": "Content teams struggle with deadlines, producing generic copy for ads, emails, and social media posts.",
+      "afterTitle": "AI-Assisted Content Generation",
+      "afterDescription": "Generate high-quality first drafts for copy, email campaigns, and social media posts in seconds with brand consistency."
+    },
+    "m4": {
+      "beforeTitle": "Campaign Attribution Guesswork",
+      "beforeDescription": "It's nearly impossible to know which marketing activities are actually driving revenue and generating ROI.",
+      "afterTitle": "Clear Real-Time ROI Analysis",
+      "afterDescription": "Track every touchpoint with AI-powered attribution models that provide a clear, real-time view of marketing ROI."
+    },
+    "m5": {
+      "beforeTitle": "Static Email Campaigns",
+      "beforeDescription": "All users receive the same email drip campaign, regardless of their specific behavior or engagement level.",
+      "afterTitle": "Dynamic & Adaptive Email Journeys",
+      "afterDescription": "AI triggers unique email journeys that adapt in real-time based on individual user actions and engagement."
+    }
+  },
+  "operations": {
+    "o1": {
+      "beforeTitle": "Long Ticket Queues & Wait Times",
+      "beforeDescription": "Customers wait hours or even days to get answers to simple questions, generating frustration and churn.",
+      "afterTitle": "Instant L1 Support with 24/7 AI Agents",
+      "afterDescription": "Provide immediate, accurate answers to common questions around the clock, drastically reducing wait times."
+    },
+    "o2": {
+      "beforeTitle": "Agent Burnout & Repetitive Tasks",
+      "beforeDescription": "Support agents spend most of their day answering the same simple questions over and over again.",
+      "afterTitle": "Automated FAQ & KB Responses",
+      "afterDescription": "Our AI frees up human agents by handling routine inquiries, allowing them to focus on high-value, complex cases."
+    },
+    "o3": {
+      "beforeTitle": "Lack of Personalization in Service",
+      "beforeDescription": "Every customer gets a generic, scripted response that fails to acknowledge their history or specific context.",
+      "afterTitle": "Context-Aware, Personalized Support",
+      "afterDescription": "The AI agent has full context of the customer's history to provide a truly personal and effective response."
+    },
+    "o4": {
+      "beforeTitle": "No Proactive Support",
+      "beforeDescription": "You only help customers after they complain, missing key opportunities to build loyalty and prevent churn.",
+      "afterTitle": "Proactive Issue Detection & Outreach",
+      "afterDescription": "Our AI can detect early signs of customer frustration or potential issues and proactively offer an ideal solution."
+    },
+    "o5": {
+      "beforeTitle": "Inefficient Resource Allocation",
+      "beforeDescription": "Assigning tasks and resources manually often leads to unbalanced workloads and critical project delays.",
+      "afterTitle": "AI-Powered Resource Scheduling",
+      "afterDescription": "Intelligently assign all your resources based on availability, skill, and priority for maximum efficiency."
+    }
+  },
+  "support": {
+    "su1": {
+      "beforeTitle": "Long Ticket Queues & Wait Times",
+      "beforeDescription": "Customers are left waiting for hours or even days to get answers to their simple and common questions.",
+      "afterTitle": "Instant L1 Support with 24/7 AI Agents",
+      "afterDescription": "Provide immediate and accurate answers to common questions around the clock, drastically reducing wait times."
+    },
+    "su2": {
+      "beforeTitle": "Agent Burnout from Repetitive Tasks",
+      "beforeDescription": "Your support agents spend most of their day answering the same questions and inquiries over and over again.",
+      "afterTitle": "Automated FAQ & KB Responses",
+      "afterDescription": "The AI frees up human agents by instantly handling routine inquiries, letting them focus on complex cases."
+    },
+    "su3": {
+      "beforeTitle": "Lack of Personalization in Service",
+      "beforeDescription": "Every customer gets a generic, scripted response that completely fails to acknowledge their past history.",
+      "afterTitle": "Context-Aware, Personalized Support",
+      "afterDescription": "Our AI agent has full context of a customer's history to provide a truly personal and effective response."
+    },
+    "su4": {
+      "beforeTitle": "No Proactive Support",
+      "beforeDescription": "Your team only helps customers after they complain, missing great opportunities to build loyalty and prevent churn.",
+      "afterTitle": "Proactive Issue Detection & Outreach",
+      "afterDescription": "Our AI can detect signs of customer frustration or other potential issues and proactively offer effective help."
+    },
+    "su5": {
+      "beforeTitle": "Limited Support Coverage (9-5)",
+      "beforeDescription": "Your global customers are unable to get the help they need outside of your local business operating hours.",
+      "afterTitle": "24/7 AI-Powered Global Availability",
+      "afterDescription": "Offer consistent, high-quality support to all of your customers, no matter their current location or time zone."
+    }
+  },
+  "hr": {
+    "h1": {
+      "beforeTitle": "Manual CV Screening Overload",
+      "beforeDescription": "HR managers spend countless hours of their time reading through hundreds of mostly irrelevant resumes.",
+      "afterTitle": "AI-Powered Candidate Matching",
+      "afterDescription": "Your AI agent will automatically screen, score, and shortlist the most qualified candidates for any open role."
+    },
+    "h2": {
+      "beforeTitle": "Chaotic Interview Scheduling",
+      "beforeDescription": "The back-and-forth emails just to schedule a single interview with a candidate can take multiple days.",
+      "afterTitle": "Automated Calendar Coordination",
+      "afterDescription": "The AI agent coordinates with candidates and interviewers to find the perfect time and books it automatically."
+    },
+    "h3": {
+      "beforeTitle": "Generic Employee Onboarding",
+      "beforeDescription": "New hires receive a standard information package that doesn't cater to their specific role or needs.",
+      "afterTitle": "Personalized Onboarding Journeys",
+      "afterDescription": "Create unique onboarding experiences for every new hire with an AI agent that guides them through their tasks."
+    },
+    "h4": {
+      "beforeTitle": "Time-Consuming FAQ Answering",
+      "beforeDescription": "HR staff are constantly interrupted with the same questions about policies, payroll, and company benefits.",
+      "afterTitle": "Instant HR & Policy AI Assistant",
+      "afterDescription": "An internal AI assistant provides instant, accurate answers to all common employee questions 24/7."
+    },
+    "h5": {
+      "beforeTitle": "Low Employee Engagement Insights",
+      "beforeDescription": "Annual surveys provide stale data that is very difficult to act upon in a timely and effective manner.",
+      "afterTitle": "AI-Powered Engagement Analysis",
+      "afterDescription": "AI analyzes employee feedback from multiple channels in real-time to provide a constant pulse on team morale."
+    }
+  }
+}
   },
    "kpi": {
     "title": "The ElevAIte Impact: Measurable Results",
     "subtitle": "Discover how our crafted AI solutions translate into tangible benefits and significant growth for businesses like yours.",
     "cards": {
-      "kpi1": {
-        "description": "Global law firm automates compiling and analysis of legal docs with our AI.",
-        "label": "Reduction in Manual Task Time"
-      },
-      "kpi2": {
-        "description": "European fintech scales up new hire onboarding using AI agents.",
-        "label": "Faster Response & Resolution"
-      },
-      "kpi3": {
-        "description": "Leading SaaS company automates L1 support queries with custom AI.",
-        "label": "Increase in Lead Qualification"
-      },
-      "kpi4": {
-        "description": "Industrial market leader uses AI agent to augment customer support globally.",
-        "label": "Operational Efficiency Boost"
-      }
+    "kpi1": {
+      "capsule": "Sales Teams",
+      "description": "Swiss AI startup scales from $2M to $6M ARR in 18 months using our AI ecosystem.",
+      "label": "More Deals Closed",
+      "impactTitle": "Revenue Impact:",
+      "impactDescription": "Transform Your Close Rate Into Consistent Revenue Growth"
+    },
+    "kpi2": {
+      "capsule": "Marketing Teams",
+      "description": "B2B SaaS company reduces customer acquisition cost with our AI ecosystem.",
+      "label": "Cost Reduction",
+      "impactTitle": "Cost impact:",
+      "impactDescription": "Turn Marketing Spend Into Profit Centers"
+    },
+    "kpi3": {
+      "capsule": "Operations Teams",
+      "description": "E-commerce leader automates routine processes, freeing ops team to focus on strategic growth initiatives.",
+      "label": "90% Process Automation",
+      "impactTitle": "Scalability Impact:",
+      "impactDescription": "Build Systems That Scale Without Linear Costs"
+    },
+    "kpi4": {
+      "capsule": "Customer Support Teams",
+      "description": "Enterprise software company reduces churn and increases customer lifetime value.",
+      "label": "Churn Reduction",
+      "impactTitle": "Retention Impact: ",
+      "impactDescription": "Protect Existing Revenue While Reducing Support Costs"
     }
+  }
   },
   "whyElevaite": {
   "title": "The ElevAIte Launchpad: Your Journey to Automation",
@@ -237,7 +374,7 @@
     "stayUpdated": "Stay Updated"
   },
   "links": {
-    "features": "Features",
+    "features": "Use Cases",
     "caseStudies": "Case Studies",
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions",
@@ -992,7 +1129,7 @@
       ]
     },
     "hero": {
-      "title": "How We *Tripled* Demo Appointments With AI BDR Agents",
+      "title": "How We *Tripled Demo Appointments* With AI BDR Agents",
       "subtitle": "Strategic case study: Zytlyn achieved 400% ROI in 6 months, cut sales cycles by 55%, and scaled their pipeline without expensive human hiring.",
       "kpis": [
         { "label": "Demo Appointments" },
@@ -1087,8 +1224,210 @@
       "role": "Head of Growth",
       "company": "Zytlyn"
     }
+  },
+    "goodnite": {
+    "hero": {
+      "title": "How We Transformed Goodnite's *Guest Experience* with a Complete AI Ecosystem",
+      "subtitle": "Strategic case study: Goodnite achieved 6x ROI in 12 months, increased guest satisfaction by 11%, and transformed their operations with a 24/7 AI guest experience ecosystem.",
+      "kpis": [
+        { "label": "ROI in 12 Months" },
+        { "label": "Guest Satisfaction Increase" },
+        { "label": "More Reviews Generated" }
+      ]
+    },
+    "client": {
+      "name": "Goodnite",
+      "tagline": "Boutique Vacation Rentals",
+      "description": "Premium vacation rental company in Brno, Czech Republic, offering 68 original rooms and suites across 12 buildings with contactless reception and maximum comfort focus.",
+      "details": [
+        { "label": "Industry", "value": "Vacation Rentals & Hospitality" },
+        { "label": "Team Size", "value": "Small Operations Team" },
+        { "label": "Properties", "value": "68 Rooms & Suites" },
+        { "label": "Target Market", "value": "Business & Leisure Travelers" }
+      ]
+    },
+    "challenge": {
+      "beforeTitle": "Before ElevateLabs",
+      "points": [
+        "Limited after-hours guest support",
+        "Inconsistent guest communication",
+        "Low review generation rate"
+      ]
+    },
+    "challengeSection": {
+      "title": "The Challenge",
+      "subtitle": "Goodnite faced critical operational challenges that limited their guest experience and growth potential in the competitive vacation rental market.",
+      "challenges": [
+        { "title": "Limited Guest Support Hours", "description": "No availability for guest inquiries and support from 10 PM to 10 AM, leaving guests stranded during critical hours.", "impact": "Poor guest experience" },
+        { "title": "Inconsistent Communication", "description": "No standardized pre-arrival or post-stay communication process, leading to confusion and missed opportunities.", "impact": "Guest confusion and lost bookings" },
+        { "title": "Low Review Generation", "description": "Only 40% of guests were leaving reviews, significantly impacting online visibility and booking conversions.", "impact": "Reduced online presence" }
+      ],
+      "coreProblem": {
+        "title": "The Core Problem",
+        "quote": "We needed a complete AI guest experience ecosystem that could provide 24/7 support, guide guests through their journey, and actively collect feedback to improve our ratings and bookings.",
+        "author": "Tomáš Ustohal, Team Manager at Goodnite"
+      }
+    },
+    "solution": {
+      "title": "The Elevaitelabs Solution",
+      "subtitle": "Complete AI Guest Experience Ecosystem designed with Swiss precision to transform hospitality operations.",
+      "implementation": {
+        "title": "Strategic AI Implementation",
+        "description": "Leveraging 12 years of sales expertise and proven methodologies from scaling 3 startups from pre-seed to Series A, we developed a comprehensive AI ecosystem covering the complete guest journey.",
+        "features": [
+          { "title": "24/7 Night Shift Receptionist", "description": "AI-powered receptionist handling all guest inquiries from 10 PM to 10 AM with immediate response capability." },
+          { "title": "Pre-Arrival & Arrival Support", "description": "Automated calling system that explains everything before arrival and provides arrival day support." },
+          { "title": "Post-Stay Feedback Collection", "description": "AI agent that calls 2-3 days after stay to collect feedback and encourage positive reviews." }
+        ]
+      },
+      "coreFunctions": {
+        "title": "AI Ecosystem Core Functions",
+        "functions": ["Night Shift Support", "Pre-Arrival Guidance", "Arrival Day Support", "Feedback Collection", "Review Generation"]
+      }
+    },
+    "timeline": {
+      "title": "Implementation Timeline",
+      "subtitle": "Swift deployment with continuous optimization",
+      "phases": [
+        { "title": "Month 1: Development", "description": "Custom AI ecosystem development, integration setup, and personalization for Goodnite’s specific hospitality requirements." },
+        { "title": "Month 2: Integration & Testing", "description": "System integration with existing booking systems, comprehensive testing, and staff training on the new AI ecosystem." },
+        { "title": "Month 3: Go-Live & Results", "description": "Full system launch with immediate impact on guest satisfaction, review generation, and operational efficiency." }
+      ]
+    },
+    "impact": {
+      "title": "Measurable Impact",
+      "subtitle": "Transformational results delivered within 3 months",
+      "kpis": [
+        { "label": "Guest Satisfaction", "subLabel": "Up from 8.4 (11% increase)" },
+        { "label": "More Reviews", "subLabel": "40% → 71% review generation" },
+        { "label": "ROI Achieved", "subLabel": "Within 12 months" },
+        { "label": "Immediate Response", "subLabel": "Replaces 2-3 employees" }
+      ]
+    },
+    "roiAnalysis": {
+      "title": "ROI Analysis",
+      "subtitle": "Comprehensive financial impact assessment",
+      "calculator": {
+        "title": "Investment vs Human Staff Cost",
+        "items": [
+          { "label": "Traditional Staff Cost (2-3 employees)", "value": "€120k+/year" },
+          { "label": "AI Ecosystem Investment", "value": "15% of staff cost" },
+          { "label": "Performance Multiplier", "value": "3x efficiency" }
+        ],
+        "finalRoi": { "label": "Achieved within 12 months" }
+      },
+      "benefits": [
+        { "title": "Cost Efficiency", "description": "AI investment represents only 15% of traditional staffing costs, while delivering 3x the performance in guest satisfaction and review generation." },
+        { "title": "Revenue Acceleration", "description": "78% increase in review generation combined with 11% guest satisfaction improvement directly translates to higher booking rates and revenue growth." },
+        { "title": "Scalability Factor", "description": "AI ecosystem scales infinitely without additional hiring costs, providing sustainable competitive advantage as Goodnite expands." }
+      ]
+    }
+  },
+  "domus-labs": {
+    "hero": {
+      "title": "How We *Accelerated Project Delivery* With an AI Intelligence System",
+      "subtitle": "Strategic case study: Domus Labs achieved 160% ROI in 3 months, increased project completion by 77%, and saved 8 hours weekly executive time with automated project intelligence.",
+      "kpis": [
+        { "label": "Meeting Efficiency" },
+        { "label": "Project Completion" },
+        { "label": "ROI in 3 Months" }
+      ]
+    },
+    "client": {
+      "name": "Domus Labs",
+      "tagline": "Boutique Architecture Studio",
+      "description": "Innovative architecture and interior design studio creating meaningful spaces with a humanist perspective, expanding internationally across Barcelona, Germany, and France.",
+      "details": [
+        { "label": "Industry", "value": "Architecture & Interior Design" },
+        { "label": "Project Size", "value": "€500k-2M per project" },
+        { "label": "Team Size", "value": "17 Employees" },
+        { "label": "Target Market", "value": "International B2B" }
+      ]
+    },
+    "challenge": {
+      "beforeTitle": "Before ElevateLabs",
+      "points": [
+        "Manual meeting documentation consuming 2+ hours weekly",
+        "Poor project visibility across multiple initiatives",
+        "Inconsistent task tracking and accountability"
+      ]
+    },
+    "challengeSection": {
+      "title": "The Challenge",
+      "subtitle": "Domus Labs faced critical project management challenges limiting their international expansion potential.",
+      "challenges": [
+        { "title": "Manual Meeting Processing", "description": "Executives spending 2+ hours weekly manually documenting meetings, updating project status, and tracking tasks.", "impactLabel":"Impact","impact": "Executive time waste" },
+        { "title": "Project Visibility Gaps", "description": "Multiple projects running simultaneously with poor visibility into status, risks, and accountability across teams.", "impact": "Missed deadlines" },
+        { "title": "Accountability Challenges", "description": "Inconsistent task tracking and follow-up system preventing efficient project delivery and team coordination.", "impact": "Project delays" }
+      ],
+      "coreProblem": {
+        "title": "The Core Problem",
+        "quote": "We needed an AI system that could automatically capture meeting insights, update project status, and maintain accountability as we expand internationally. Manual processes were limiting our growth potential.",
+        "author": "Cosma Musacchio, General Manager & Creative Director, Domus Labs"
+      }
+    },
+    "solution": {
+      "title": "The Elevaitelabs Solution",
+      "subtitle": "Custom AI Project Intelligence System designed with Swiss precision to automate project management, meeting processing, and accountability tracking.",
+      "implementation": {
+        "title": "Strategic AI Implementation",
+        "description": "Leveraging 12 years of sales expertise and proven methodologies from scaling 3 startups from pre-seed to Series A, we developed a tailored AI Project Intelligence system.",
+        "features": [
+          { "title": "Automated Meeting Analysis", "description": "AI-powered system that processes meetings, generates summaries, and automatically updates project status in Notion." },
+          { "title": "Intelligent Project Tracking", "description": "Real-time project visibility with automated task assignment and progress monitoring across all initiatives." },
+          { "title": "24/7 Project Intelligence", "description": "Telegram-based AI assistant providing instant answers about project status, meeting summaries, and task updates." },
+          { "title": "Automated Accountability", "description": "Weekly automated reports for team members and executives with project status, risks, and required actions." }
+        ]
+      },
+      "coreFunctions": {
+        "title": "AI Project Intelligence Core Functions",
+        "functions": ["Meeting Analysis & Summary", "Automated Task Assignment", "Project Status Updates", "Telegram AI Assistant"]
+      }
+    },
+    "timeline": {
+      "title": "Implementation Timeline",
+      "subtitle": "Swift deployment with continuous optimization",
+      "phases": [
+        { "title": "Month 1: Development", "description": "Custom AI system development, Notion integration setup, and Telegram bot creation tailored for Domus Labs’ architecture workflows." },
+        { "title": "Month 2: Fine-tuning", "description": "System optimization, meeting processing refinement, and project management workflow customization based on initial feedback." },
+        { "title": "Month 3+: Results Delivery", "description": "Full system performance achieved with measurable impact on project completion rates, executive time savings, and team accountability." }
+      ]
+    },
+    "impact": {
+      "title": "Measurable Impact",
+      "subtitle": "Transformational results delivered within 3 months",
+      "kpis": [
+        { "label": "Meeting Efficiency", "subLabel": "2 hours → 10 minutes" },
+        { "label": "Project Completion", "subLabel": "47% → 83% success rate" },
+        { "label": "ROI Achieved", "subLabel": "Within 3 months" },
+        { "label": "Weekly Time Saved", "subLabel": "Per executive" }
+      ]
+    },
+    "roiAnalysis": {
+      "title": "ROI Analysis",
+      "subtitle": "Comprehensive financial impact assessment",
+      "calculator": {
+        "title": "Investment vs Executive Time Cost",
+        "items": [
+          { "label": "Traditional Executive Time Cost", "value": "€2,000+/month" },
+          { "label": "AI Investment Cost", "value": "€990/month" },
+          { "label": "Efficiency Multiplier", "value": "10x faster processing" }
+        ],
+        "finalRoi": { "label": "Achieved within 3 months" }
+      },
+      "benefits": [
+        { "title": "Cost Efficiency", "description": "AI investment represents 50% of traditional executive time costs, while delivering 10x the processing efficiency." },
+        { "title": "Project Acceleration", "description": "77% improvement in project completion rates directly translates to faster delivery and improved client satisfaction." },
+        { "title": "Scalability Factor", "description": "AI system scales infinitely across international locations without additional management overhead." }
+      ]
+    }
   }
 },
+ "case_studies_index": {
+    "title": "Case Studies",
+    "subtitle": "Discover how we have helped companies transform their sales processes with AI.",
+    "cta" : "Read the Case Study"
+  },
 "whyElevaiteStudyCase": {
   "title": "Why ElevaiteLabs",
   "subtitle": "Swiss-made precision meets proven sales expertise",

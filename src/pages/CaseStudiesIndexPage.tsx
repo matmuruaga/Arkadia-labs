@@ -1,17 +1,24 @@
 // src/pages/CaseStudiesIndexPage.tsx
 import React from 'react';
+import { useTranslation } from 'react-i18next'; // 1. Importar el hook
 import { caseStudies } from '../data/caseStudiesData';
 import CaseStudyCard from '../components/CaseStudyCard';
 
 const CaseStudiesIndexPage: React.FC = () => {
+  const { t } = useTranslation(); // 2. Inicializar el hook para obtener la función 't'
+
   return (
-    <>
-      <section className="py-20 bg-gray-50">
+    <div className="min-h-[calc(100vh-80px)] flex flex-col justify-center bg-gray-50 pt-24 pb-12">
+      <section>
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900">Casos de Estudio</h1>
+          <div className="text-center mb-16">
+            
+            {/* --- 3. TEXTOS CONECTADOS AL SISTEMA DE TRADUCCIÓN --- */}
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+              {t('case_studies_index.title', 'Casos de Estudio')}
+            </h1>
             <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-              Descubre cómo hemos ayudado a empresas a transformar sus procesos de ventas con IA.
+              {t('case_studies_index.subtitle', 'Descubre cómo hemos ayudado a empresas a transformar sus procesos de ventas con IA.')}
             </p>
           </div>
 
@@ -19,11 +26,10 @@ const CaseStudiesIndexPage: React.FC = () => {
             {Object.entries(caseStudies).map(([slug, study]) => (
               <CaseStudyCard key={slug} slug={slug} study={study} />
             ))}
-             {/* Cuando añadas más casos de estudio, aparecerán automáticamente aquí */}
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

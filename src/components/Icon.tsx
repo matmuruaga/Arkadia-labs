@@ -21,6 +21,14 @@ import {
   Target, 
   Award, 
   Settings2,
+  Home,
+  MessageSquareWarning,
+  Star,
+  Moon,
+  Send,
+  MessageCircle,
+  Smile,
+  Zap,
 } from 'lucide-react';
 
 // Mapeo completo de nombres a componentes de icono
@@ -43,6 +51,14 @@ const icons = {
   Target, 
   Award,
   Settings2,
+  Home,
+  MessageSquareWarning,
+  Star,
+  Moon,
+  Send,
+  MessageCircle,
+  Smile,
+  Zap,
 };
 
 interface IconProps extends LucideProps {

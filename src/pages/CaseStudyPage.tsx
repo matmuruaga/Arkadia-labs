@@ -38,7 +38,7 @@ const CaseStudyPage: React.FC = () => {
   return (
     <>
       <CaseStudyHero data={study.hero} studyKey={slug} />
-      <CaseStudyIntro client={study.client} studyKey={slug} challenge={study.challenge} />
+      <CaseStudyIntro client={study.client} challenge={study.challenge} studyKey={slug!} />
       <CaseStudyChallenge data={study.challengeSection} studyKey={slug} />
       <CaseStudySolution data={study.solution} studyKey={slug} />
       <CaseStudyTimeline data={study.timeline} studyKey={slug} />

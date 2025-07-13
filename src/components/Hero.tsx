@@ -107,7 +107,7 @@ const Hero = () => {
             )}
             <div className="w-full h-full bg-[#0D1B2A] rounded-full flex items-center justify-center">
                 <img 
-                    src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1750970201/u5837542839_Create_an_icon_of_a_robots_head_and_upper_torso_w_523f113d-4c43-4b45-ab0b-b1c5c47b834e_3_ysyfcr.png"
+                    src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1752395276/IMG_5938_bo87kh.png"
                     alt={t('hero.voice.altMascot')}
                     className={`w-16 h-16 object-cover rounded-full transition-transform duration-300 ${isSessionActive ? 'scale-110' : 'scale-100 group-hover:scale-105'}`}
                 />
