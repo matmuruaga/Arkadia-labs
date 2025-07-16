@@ -84,7 +84,7 @@ const Header = () => {
                 <Link to={`/${i18n.language}/#integrations`} onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>{t('header.integrations')}</Link>
                 
                 {/* --- ENLACE AÑADIDO (MÓVIL) --- */}
-                <Link to={`/${i18n.language}/case-studies`} onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>{t('header.useCases', 'Use Cases')}</Link>
+                <Link to={`/${i18n.language}/case-studies`} onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>{t('header.studyCase')}</Link>
 
                 <div className="pt-4 mt-4 border-t border-slate-200 flex flex-col space-y-3">
                   <button onClick={handleGetStartedClick} className={`w-full py-3 ${primaryButtonClasses}`}>

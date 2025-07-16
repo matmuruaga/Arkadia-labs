@@ -46,14 +46,19 @@ const CaseStudyIntro: React.FC<Props> = ({ client, challenge, studyKey }) => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="max-w-4xl">
-            <motion.div variants={itemVariants}>
-              <div className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-2 rounded-full shadow-md">
-                <h2 className="text-sm font-bold text-white uppercase tracking-wider">
-                  {t('caseStudies.client_overview_title', 'Client Overview')}
-                </h2>
-              </div>
-            </motion.div>
+         <div className="max-w-4xl">
+                <motion.div variants={itemVariants}>
+                  <div className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-2 rounded-full shadow-md">
+                    <h2 className="text-sm font-bold text-white uppercase tracking-wider">
+                      {/*
+                        * Se construye la clave dinámicamente usando `studyKey`.
+                        * El texto 'Client Overview' se queda como un fallback por si la traducción no se encuentra.
+                      */}
+                      {t(`caseStudies.${studyKey}.client.client_overview_title`, 'Client Overview')}
+                    </h2>
+                  </div>
+                </motion.div>
+
             
             <motion.div variants={itemVariants}>
               <div className="mt-8">

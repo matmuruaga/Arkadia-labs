@@ -1005,6 +1005,7 @@
 
 "caseStudies": {
   "zytlyn": {
+    "client_overview_title": "RESUMEN DEL CLIENTE",
     "client": {
       "tagline": "Inteligencia Predictiva con IA",
       "description": "Empresa líder en IA para viajes que proporciona soluciones de inteligencia predictiva a aerolíneas, aeropuertos, oficinas de turismo, OTAs y plataformas de metabúsqueda.",
@@ -1039,7 +1040,7 @@
       }
     },
     "challenge": {
-  "beforeTitle": "Antes de ElevateLabs",
+  "beforeTitle": "Antes de ElevaiteLabs",
   "points": [
     "Seguimiento de leads que consumía mucho tiempo",
     "Alto volumen de leads sin filtrar",
@@ -1114,6 +1115,7 @@
   },
   "goodnite": {
     "client": {
+      "client_overview_title": "RESUMEN DEL CLIENTE",
       "name": "Goodnite",
       "tagline": "Alquileres Vacacionales Boutique",
       "description": "Empresa de alquileres vacacionales premium en Brno, República Checa, que ofrece 68 habitaciones y suites originales en 12 edificios con recepción sin contacto y enfoque en el máximo confort.",
@@ -1134,7 +1136,7 @@
       ]
     },
     "challenge": {
-      "beforeTitle": "Antes de ElevateLabs",
+      "beforeTitle": "Antes de ElevaiteLabs",
       "points": [
         "Soporte al cliente limitado fuera de horario",
         "Comunicación inconsistente con los huéspedes",
@@ -1221,6 +1223,7 @@
       ]
     },
     "client": {
+      "client_overview_title": "RESUMEN DEL CLIENTE",
       "name": "Domus Labs",
       "tagline": "Estudio de Arquitectura Boutique",
       "description": "Innovador estudio de arquitectura y diseño de interiores que crea espacios significativos con una perspectiva humanista, expandiéndose internacionalmente por Barcelona, Alemania y Francia.",
@@ -1232,7 +1235,7 @@
       ]
     },
     "challenge": {
-      "beforeTitle": "Antes de ElevateLabs",
+      "beforeTitle": "Antes de ElevaiteLabs",
       "points": [
         "Documentación manual de reuniones que consumía más de 2 horas semanales",
         "Baja visibilidad de proyectos entre múltiples iniciativas",

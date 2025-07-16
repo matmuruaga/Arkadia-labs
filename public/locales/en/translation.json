@@ -1152,7 +1152,7 @@
       }
     },
       "challenge": {
-        "beforeTitle": "Before ElevateLabs",
+        "beforeTitle": "Before ElevaiteLabs",
         "points": [
           "Time-consuming lead follow-up",
           "High volume of unfiltered leads",
@@ -1247,7 +1247,7 @@
       ]
     },
     "challenge": {
-      "beforeTitle": "Before ElevateLabs",
+      "beforeTitle": "Before ElevaiteLabs",
       "points": [
         "Limited after-hours guest support",
         "Inconsistent guest communication",
@@ -1334,6 +1334,7 @@
       ]
     },
     "client": {
+      "client_overview_title": "CLIENT OVERVIEW",
       "name": "Domus Labs",
       "tagline": "Boutique Architecture Studio",
       "description": "Innovative architecture and interior design studio creating meaningful spaces with a humanist perspective, expanding internationally across Barcelona, Germany, and France.",
@@ -1345,7 +1346,7 @@
       ]
     },
     "challenge": {
-      "beforeTitle": "Before ElevateLabs",
+      "beforeTitle": "Before ElevaiteLabs",
       "points": [
         "Manual meeting documentation consuming 2+ hours weekly",
         "Poor project visibility across multiple initiatives",
