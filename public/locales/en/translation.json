@@ -284,30 +284,30 @@
   "title": "Trusted by Innovative Businesses",
   "subtitle": "Hear how our crafted AI solutions are making a real difference.",
   "mainLogos": {
-    "logo1": "Global Innovate",
-    "logo2": "NextGen Corp",
-    "logo3": "Alpha Solutions",
-    "logo4": "Peak Dynamics",
-    "logo5": "Core Systems"
+    "logo1": "Zytltn",
+    "logo2": "Domus Lab",
+    "logo3": "Goodnite",
+    "logo4": "Dacrafters",
+    "logo5": "LaserClick"
   },
   "cards": {
     "t1": {
-      "quote": "Before ElevAIte, our sales team was drowning in unqualified leads. The AI agent they built doesn't just filter; it learns and adapts to our ideal customer profile. Our team's morale is through the roof because they're finally focused on what they do best: building relationships and closing deals.",
-      "author": "Jessica Miller",
-      "title": "Head of Sales",
-      "company": "ApexConnect"
+      "quote": "With Elevate Labs, we automated key tasks and enhanced our guest experience. Their swift integration with our systems let us focus on what matters—delivering seamless, premium service. Within weeks, our processes ran smoother and guest reviews improved.",
+      "author": "Tomáš Ustohal",
+      "title": "Key Account Manager",
+      "company": "Goodnite - CoolPeople Technology"
     },
     "t2": {
-      "quote": "Our month-end reporting used to be a week-long, error-prone nightmare. The automation agent ElevAIte crafted for us now handles it in under an hour, with zero errors. It's not just a time-saver; it's given us back our sanity and lets us focus on strategy, not spreadsheets.",
-      "author": "Michael Carter",
-      "title": "Chief Operating Officer",
-      "company": "ScaleOps"
+      "quote": "Working with Elevate Labs streamlined our project management and gave us more time to focus on what matters—designing spaces that connect with people. Their practical approach and ability to adapt to our international workflow made a difference from day one.",
+      "author": "Cosma Musacchio",
+      "title": "Creative Director",
+      "company": "Domus Labs"
     },
     "t3": {
-      "quote": "We were worried an AI would feel impersonal, but it's been the opposite. The support agent handles all routine queries instantly, 24/7, which frees up our human experts to tackle complex issues with more care. Our customers now get faster answers for simple things and better support for big problems. It's a win-win.",
-      "author": "Sofia Rossi",
-      "title": "Director of Customer Experience",
-      "company": "Bright-Desk"
+      "quote": "Working with Elevate Labs made it easier to implement new automations in our data analysis processes for the travel industry. They adapted to the demands of our sector and delivered solutions that helped us optimize both time and resources. The collaboration was direct and efficient—exactly what we needed to keep innovating in predictive intelligence.",
+      "author": "Karel Duchon",
+      "title": "Global Sales Director & Revenue Lead ",
+      "company": "Zytltn"
     }
   },
   "caseStudyButton": "Read Full Story",

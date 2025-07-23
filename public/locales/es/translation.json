@@ -158,31 +158,31 @@
 "testimonials": {
   "title": "Con la Confianza de Empresas Innovadoras",
   "subtitle": "Descubre cómo nuestras soluciones de IA a medida están marcando una diferencia real.",
-  "mainLogos": {
-    "logo1": "Innova Global",
-    "logo2": "Corp NextGen",
-    "logo3": "Soluciones Alpha",
-    "logo4": "Dinámicas Peak",
-    "logo5": "Sistemas Core"
+ "mainLogos": {
+    "logo1": "Zytltn",
+    "logo2": "Domus Lab",
+    "logo3": "Goodnite",
+    "logo4": "Dacrafters",
+    "logo5": "LaserClick"
   },
   "cards": {
     "t1": {
-      "quote": "Antes de ElevAIte, nuestro equipo de ventas se ahogaba en leads no cualificados. El agente de IA que construyeron no solo filtra; aprende y se adapta a nuestro perfil de cliente ideal. La moral de nuestro equipo está por las nubes porque finalmente se centran en lo que mejor saben hacer: construir relaciones y cerrar tratos.",
-      "author": "Jessica Miller",
-      "title": "Directora de Ventas",
+      "quote": "Con Elevate Labs conseguimos automatizar tareas clave y mejorar la experiencia del huésped. Su integración con nuestros sistemas fue ágil y nos permitió centrarnos en lo que importa: ofrecer un servicio premium, sin fricciones. En pocas semanas, notamos procesos más fluidos y mejores valoraciones de los clientes.",
+      "author": "Tomáš Ustohal",
+      "title": "Director de Cuentas",
       "company": "ApexConnect"
     },
     "t2": {
-      "quote": "Nuestros informes de fin de mes solían ser una pesadilla de una semana, propensa a errores. El agente de automatización que ElevAIte creó para nosotros ahora lo gestiona en menos de una hora, con cero errores. No solo ahorra tiempo; nos ha devuelto la cordura y nos permite centrarnos en la estrategia, no en las hojas de cálculo.",
-      "author": "Michael Carter",
-      "title": "Director de Operaciones",
+      "quote": "La colaboración con Elevate Labs nos permitió optimizar la gestión de proyectos y dedicar más tiempo a lo que nos apasiona: diseñar espacios que conectan con las personas. Su enfoque práctico y su capacidad de adaptación a nuestro ritmo internacional marcaron la diferencia desde el primer momento.",
+      "author": "Cosma Musacchio",
+      "title": "Director Creativos",
       "company": "ScaleOps"
     },
     "t3": {
-      "quote": "Nos preocupaba que una IA se sintiera impersonal, pero ha sido todo lo contrario. El agente de soporte gestiona todas las consultas rutinarias al instante, 24/7, lo que libera a nuestros expertos humanos para abordar problemas complejos con más atención. Nuestros clientes ahora obtienen respuestas más rápidas para cosas simples y un mejor soporte para problemas grandes. Todos ganan.",
-      "author": "Sofia Rossi",
-      "title": "Directora de Experiencia del Cliente",
-      "company": "Bright-Desk"
+      "quote": "Trabajar con Elevate Labs hizo más sencillo implementar nuevas automatizaciones en nuestros procesos de análisis de datos para la industria de viajes. Supieron adaptarse a las exigencias del sector y ofrecieron soluciones que nos permitieron optimizar tiempos y recursos. La colaboración fue directa y eficiente, justo lo que necesitábamos para seguir innovando en inteligencia predictiva.",
+      "author": "Karel Duchon",
+      "title": "Director de Ventas Global",
+      "company": "Zytlyn"
     }
   },
   "caseStudyButton": "Leer Historia Completa",
