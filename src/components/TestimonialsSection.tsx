@@ -57,7 +57,6 @@ const mainClientLogoKeys = [
 ];
 
 const TestimonialsSection = () => {
-  // Obtenemos i18n para construir la URL con el idioma actual
   const { t, i18n } = useTranslation();
 
   return (
@@ -78,7 +77,7 @@ const TestimonialsSection = () => {
           </p>
         </motion.div>
 
-        <motion.div
+        <motion.div 
           className="mb-12 md:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +86,7 @@ const TestimonialsSection = () => {
         >
           <div className="flex flex-wrap justify-center items-center gap-x-10 sm:gap-x-14 gap-y-4">
             {mainClientLogoKeys.map((key, index) => (
-              <span key={index} className="text-lg font-medium text-[#0D1B2A]/50 italic">
+              <span key={index} className="text-lg font-medium text-[#0D1B2A]/50 italic"> 
                 {t(key)}
               </span>
             ))}
@@ -117,23 +116,26 @@ const TestimonialsSection = () => {
             {testimonialsData.map((testimonial) => {
               const author = t(testimonial.authorKey);
               const company = t(testimonial.companyKey);
-
+              
               return (
                 <SwiperSlide key={testimonial.id}>
                   <div className="bg-white rounded-xl shadow-xl overflow-hidden md:flex">
-                    <div className="w-full md:w-2/5 lg:w-1/3 min-h-[280px] md:min-h-0 bg-slate-100">
-                      <img
-                        src={testimonial.imageUrl}
-                        alt={t('testimonials.altText.portrait', { author })}
-                        className="w-full h-full object-cover"
+                    
+                    {/* --- INICIO DE LA CORRECCIÓN --- */}
+                    <div className="w-full md:w-2/5 lg:w-1/3 bg-slate-100 aspect-square md:aspect-auto">
+                      <img 
+                        src={testimonial.imageUrl} 
+                        alt={t('testimonials.altText.portrait', { author })} 
+                        className="w-full h-full object-cover" 
                       />
                     </div>
+                    {/* --- FIN DE LA CORRECCIÓN --- */}
 
                     <div className="w-full md:w-3/5 lg:w-2/3 p-6 py-8 md:p-8 lg:p-10 flex flex-col justify-center">
                       {testimonial.clientLogoUrl ? (
-                        <img
-                          src={testimonial.clientLogoUrl}
-                          alt={t('testimonials.altText.logo', { company })}
+                        <img 
+                          src={testimonial.clientLogoUrl} 
+                          alt={t('testimonials.altText.logo', { company })} 
                           className="h-8 md:h-9 mb-5 object-contain self-start"
                         />
                       ) : (
@@ -141,11 +143,11 @@ const TestimonialsSection = () => {
                           {company}
                         </div>
                       )}
-                      <Quote className="text-[#D0BFFF] w-7 h-7 md:w-8 md:h-8 mb-4" strokeWidth={1.5} />
+                      <Quote className="text-[#D0BFFF] w-7 h-7 md:w-8 md:h-8 mb-4" strokeWidth={1.5}/>
                       <p className="text-md md:text-lg text-[#0D1B2A]/90 mb-6 leading-relaxed italic">
                         "{t(testimonial.quoteKey)}"
                       </p>
-
+                      
                       <div className="flex items-center gap-2 mb-1">
                         <a href={testimonial.linkedinUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0D1B2A] hover:text-[#1C7ED6] transition-colors">{author}</a>
                         <a href={testimonial.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#1C7ED6] transition-colors">
@@ -153,7 +155,7 @@ const TestimonialsSection = () => {
                         </a>
                       </div>
                       <p className="text-sm text-[#0D1B2A]/70 mb-6">{t(testimonial.titleKey)}, {company}</p>
-
+                      
                       {testimonial.caseStudySlug && (
                         <Link
                           to={`/${i18n.language}/case-studies/${testimonial.caseStudySlug}`}

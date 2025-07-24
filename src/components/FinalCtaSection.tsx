@@ -2,9 +2,9 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, MessageCircle } from 'lucide-react';
-import { useTranslation } from 'react-i18next'; // 1. Importar
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom'; // <-- 1. Importar useNavigate
 
-// 2. Los datos ahora contienen claves de traducción (textKey)
 const cyclingWordsData = [
   { textKey: "finalCta.cyclingWords.w1", colorClass: "from-[#1C7ED6] to-[#69DB7C]" },
   { textKey: "finalCta.cyclingWords.w2", colorClass: "from-[#69DB7C] to-[#D0BFFF]" },
@@ -14,7 +14,9 @@ const cyclingWordsData = [
 ];
 
 const FinalCtaSection = () => {
-  const { t } = useTranslation(); // 3. Inicializar hook
+  // 2. Obtener i18n para el idioma y inicializar navigate
+  const { t, i18n } = useTranslation(); 
+  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -24,12 +26,9 @@ const FinalCtaSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handlePrimaryCtaClick = () => {
-    console.log("Primary CTA clicked - e.g., Get Your Custom AI Solution");
-  };
-
-  const handleSecondaryCtaClick = () => {
-    console.log("Secondary CTA clicked - e.g., Book a Consultation");
+  // 3. Crear una única función para manejar la navegación
+  const handleNavigateToContact = () => {
+    navigate(`/${i18n.language}/contact`);
   };
 
   return (
@@ -54,7 +53,6 @@ const FinalCtaSection = () => {
             className="relative z-10 p-8 md:p-12 lg:p-16 rounded-[2.5rem] shadow-xl 
                        bg-gradient-to-br from-violet-100 via-sky-100 to-emerald-100"
           >
-            {/* 4. Usar la función t() para traducir los textos */}
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#0D1B2A] leading-tight mb-10">
               <div className="flex flex-col items-center">
                 <span>{t('finalCta.heading.part1')}</span>
@@ -84,15 +82,16 @@ const FinalCtaSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+              {/* 4. Asignar la nueva función a ambos botones */}
               <button
-                onClick={handlePrimaryCtaClick}
+                onClick={handleNavigateToContact}
                 className="w-full sm:w-auto bg-[#1C7ED6] hover:bg-[#155CB0] text-white px-8 py-3.5 rounded-lg text-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-[#1C7ED6]/30 flex items-center justify-center gap-2"
               >
                 {t('finalCta.primaryCta')}
                 <ArrowRight size={20} strokeWidth={2.5}/>
               </button>
               <button
-                onClick={handleSecondaryCtaClick}
+                onClick={handleNavigateToContact}
                 className="w-full sm:w-auto border-2 border-[#0D1B2A]/30 hover:border-[#1C7ED6] text-[#0D1B2A] hover:text-[#1C7ED6] px-8 py-3.5 rounded-lg text-lg font-semibold transition-all duration-300 hover:bg-[#1C7ED6]/10 focus:outline-none focus:ring-4 focus:ring-[#1C7ED6]/20 flex items-center justify-center gap-2"
               >
                  <MessageCircle size={20} strokeWidth={2.5}/>
