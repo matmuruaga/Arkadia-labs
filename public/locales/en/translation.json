@@ -107,28 +107,28 @@
   },
   "operations": {
     "o1": {
-      "beforeTitle": "Long Ticket Queues & Wait Times",
-      "beforeDescription": "Customers wait hours or even days to get answers to simple questions, generating frustration and churn.",
-      "afterTitle": "Instant L1 Support with 24/7 AI Agents",
-      "afterDescription": "Provide immediate, accurate answers to common questions around the clock, drastically reducing wait times."
+      "beforeTitle": "Process Bottlenecks & Manual Workflows",
+      "beforeDescription": "Teams waste hours on repetitive tasks, manual data entry, and disconnected workflows that slow business velocity.",
+      "afterTitle": "Intelligent Process Automation",
+      "afterDescription": "AI orchestrates complex workflows across multiple systems, eliminating manual handoffs and accelerating business velocity."
     },
     "o2": {
-      "beforeTitle": "Agent Burnout & Repetitive Tasks",
-      "beforeDescription": "Support agents spend most of their day answering the same simple questions over and over again.",
-      "afterTitle": "Automated FAQ & KB Responses",
-      "afterDescription": "Our AI frees up human agents by handling routine inquiries, allowing them to focus on high-value, complex cases."
+      "beforeTitle": "AData Silos & Integration Chaos",
+      "beforeDescription": "Critical business data trapped in disconnected systems makes real-time decision-making nearly impossible.",
+      "afterTitle": "Real-Time Operational Intelligence",
+      "afterDescription": "AI provides instant insights into performance bottlenecks and opportunities with unified data visibility across all systems."
     },
     "o3": {
-      "beforeTitle": "Lack of Personalization in Service",
-      "beforeDescription": "Every customer gets a generic, scripted response that fails to acknowledge their history or specific context.",
-      "afterTitle": "Context-Aware, Personalized Support",
-      "afterDescription": "The AI agent has full context of the customer's history to provide a truly personal and effective response."
+      "beforeTitle": "Resource Planning Blindspots",
+      "beforeDescription": "Poor visibility into capacity, utilization, and performance metrics leads to inefficient resource allocation.",
+      "afterTitle": "Predictive Resource Optimization",
+      "afterDescription": "AI forecasts demand patterns and optimizes resource allocation to maximize efficiency and minimize waste."
     },
     "o4": {
-      "beforeTitle": "No Proactive Support",
-      "beforeDescription": "You only help customers after they complain, missing key opportunities to build loyalty and prevent churn.",
-      "afterTitle": "Proactive Issue Detection & Outreach",
-      "afterDescription": "Our AI can detect early signs of customer frustration or potential issues and proactively offer an ideal solution."
+      "beforeTitle": "Compliance & Quality Control Gaps",
+      "beforeDescription": "Manual auditing and quality checks result in errors, delays, and potential regulatory compliance risks.",
+      "afterTitle": "Automated Compliance Monitoring",
+      "afterDescription": "AI ensures continuous quality control and regulatory adherence with automated auditing and real-time alerts."
     },
     "o5": {
       "beforeTitle": "Inefficient Resource Allocation",

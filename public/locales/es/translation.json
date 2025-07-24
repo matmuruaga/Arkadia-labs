@@ -56,11 +56,30 @@
         "m5": { "beforeTitle": "Campañas de Email Estáticas", "beforeDescription": "Todos los usuarios reciben la misma secuencia de correos, sin importar su comportamiento.", "afterTitle": "Email Journeys Dinámicos y Adaptativos", "afterDescription": "La IA activa secuencias de emails que se adaptan en tiempo real según las acciones del usuario." }
       },
       "operations": {
-        "o1": { "beforeTitle": "Largas Colas de Tickets y Tiempos de Espera", "beforeDescription": "Los clientes esperan horas o días para obtener respuestas a preguntas simples, generando frustración y pérdida de retención.", "afterTitle": "Soporte L1 Instantáneo con Agentes IA 24/7", "afterDescription": "Proporciona respuestas inmediatas a preguntas comunes las 24 horas, reduciendo drásticamente los tiempos de espera." },
-        "o2": { "beforeTitle": "Agotamiento de Agentes por Preguntas Repetitivas", "beforeDescription": "Los agentes de soporte pasan la mayor parte del día respondiendo las mismas preguntas una y otra vez.", "afterTitle": "Respuestas Automatizadas de FAQ y KB", "afterDescription": "Tu IA libera a los agentes humanos manejando consultas rutinarias, permitiéndoles enfocarse en casos complejos." },
-        "o3": { "beforeTitle": "Falta de Personalización en el Servicio", "beforeDescription": "Cada cliente recibe una respuesta genérica y guionada que no reconoce su historial ni contexto específico.", "afterTitle": "Soporte Personalizado y Consciente del Contexto", "afterDescription": "El agente IA tiene el contexto completo del historial del cliente para brindar respuestas verdaderamente personales y efectivas." },
-        "o4": { "beforeTitle": "Sin Soporte Proactivo", "beforeDescription": "Solo ayudas a los clientes después de que se quejan, perdiendo oportunidades de construir lealtad y prevenir churn.", "afterTitle": "Detección Proactiva de Problemas y Alcance", "afterDescription": "La IA puede detectar señales de frustración del cliente o problemas potenciales y ofrecer ayuda proactivamente." },
-        "o5": { "beforeTitle": "Asignación Ineficiente de Recursos", "beforeDescription": "Asignar tareas y recursos manualmente a menudo conduce a cargas de trabajo desequilibradas y retrasos en los proyectos.", "afterTitle": "Programación de Recursos con IA", "afterDescription": "Asigna recursos de manera inteligente según la disponibilidad, habilidad y prioridad para una máxima eficiencia." }
+         "o1": {
+      "beforeTitle": "Cuellos de botella de procesos y flujos de trabajo manuales",
+      "beforeDescription": "Los equipos pierden horas en tareas repetitivas, introducción manual de datos y flujos de trabajo desconectados que ralentizan la velocidad empresarial.",
+      "afterTitle": "Automatización inteligente de procesos",
+      "afterDescription": "La IA orquesta flujos de trabajo complejos entre múltiples sistemas, elimina las transferencias manuales y acelera la velocidad del negocio."
+    },
+    "o2": {
+      "beforeTitle": "Silos de datos y caos de integración",
+      "beforeDescription": "Los datos empresariales críticos atrapados en sistemas desconectados hacen que la toma de decisiones en tiempo real sea casi imposible.",
+      "afterTitle": "Inteligencia operacional en tiempo real",
+      "afterDescription": "La IA ofrece información instantánea sobre cuellos de botella de rendimiento y oportunidades con una visibilidad de datos unificada en todos los sistemas."
+    },
+    "o3": {
+      "beforeTitle": "Puntos ciegos en la planificación de recursos",
+      "beforeDescription": "La escasa visibilidad sobre capacidad, utilización y métricas de rendimiento conduce a una asignación ineficiente de recursos.",
+      "afterTitle": "Optimización predictiva de recursos",
+      "afterDescription": "La IA pronostica patrones de demanda y optimiza la asignación de recursos para maximizar la eficiencia y minimizar el desperdicio."
+    },
+    "o4": {
+      "beforeTitle": "Brechas en cumplimiento y control de calidad",
+      "beforeDescription": "La auditoría manual y los controles de calidad resultan en errores, retrasos y posibles riesgos de cumplimiento normativo.",
+      "afterTitle": "Supervisión automatizada de cumplimiento",
+      "afterDescription": "La IA garantiza un control de calidad continuo y el cumplimiento normativo con auditorías automatizadas y alertas en tiempo real."
+    }
       },
       "support": {
         "su1": { "beforeTitle": "Largas Colas de Tickets y Tiempos de Espera", "beforeDescription": "Los clientes esperan horas o días para obtener respuestas a preguntas simples.", "afterTitle": "Soporte L1 Instantáneo con Agentes IA 24/7", "afterDescription": "Proporciona respuestas inmediatas a preguntas comunes las 24 horas, reduciendo drásticamente los tiempos de espera." },
