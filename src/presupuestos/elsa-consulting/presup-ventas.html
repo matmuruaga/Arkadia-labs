@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto Infraestructura de Ventas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @media print {
+            body {
+                background: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            
+            .container {
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                max-width: none !important;
+                margin: 0 !important;
+            }
+            
+            .header {
+                page-break-inside: avoid;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #ddd;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            width: 120px;
+            height: auto;
+            z-index: 10;
+        }
+        
+        .header-content {
+            margin-left: 140px;
+            text-align: left;
+        }
+        
+        @media print {
+            .header-content {
+                margin-left: 140px;
+            }
+        }
+        
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .price-box {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e6f3ff 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #3498db;
+            margin-bottom: 30px;
+        }
+        
+        .price-box h3 {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        
+        .price-description {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .features {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+        
+        .features h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .features ul {
+            list-style: none;
+        }
+        
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .features li:last-child {
+            border-bottom: none;
+        }
+        
+        .note {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border-left: 4px solid #f39c12;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .note h4 {
+            color: #d68910;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .note p {
+            color: #b7950b;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 40px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1750921938/Recurso_1_bdhxzq.png" alt="Logo" class="logo">
+            <div class="header-content">
+                <h1>Infraestructura de Ventas MVP</h1>
+                <p>Presupuesto para Elsa Consulting</p>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <div class="price-box">
+                    <h3>Costo de Creación de Infraestructura</h3>
+                    <div class="price">€1,890</div>
+                    <div class="price-description">
+                        Honorarios por implementación y configuración completa<br>
+                        <strong>Una sola vez - Sin costos de propiedad</strong>
+                    </div>
+                </div>
+                
+                <div class="features">
+                    <h4>🚀 Lo que incluye la implementación:</h4>
+                    <ul>
+                        <li>Configuración completa de la infraestructura de llamadas</li>
+                        <li>Integración de componentes tecnológicos</li>
+                        <li>Setup de sistemas de seguimiento y reporting</li>
+                        <li>Configuración de flujos de trabajo automatizados</li>
+                        <li>Pruebas y optimización inicial</li>
+                        <li>Documentación y entrega del sistema</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="note">
+                <h4>📋 Importante:</h4>
+                <p>Este presupuesto corresponde únicamente a los honorarios de creación e implementación de la infraestructura. No incluye la propiedad de la infraestructura ni los costos operativos por llamada.</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Presupuesto válido por 30 días • Precios en euros (EUR)</p>
+        </div>
+    </div>
+</body>
+</html>
