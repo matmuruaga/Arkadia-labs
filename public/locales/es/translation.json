@@ -197,7 +197,7 @@
       "title": "Director Creativos",
       "company": "ScaleOps"
     },
-    "t3": {
+    "XXXt3_HIDDEN": {
       "quote": "Trabajar con Elevate Labs hizo más sencillo implementar nuevas automatizaciones en nuestros procesos de análisis de datos para la industria de viajes. Supieron adaptarse a las exigencias del sector y ofrecieron soluciones que nos permitieron optimizar tiempos y recursos. ",
       "author": "Karel Duchon",
       "title": "Director de Ventas Global",
@@ -1023,7 +1023,7 @@
 },
 
 "caseStudies": {
-  "zytlyn": {
+  "XXXzytlyn_HIDDEN": {
     "client_overview_title": "RESUMEN DEL CLIENTE",
     "client": {
       "tagline": "Inteligencia Predictiva con IA",

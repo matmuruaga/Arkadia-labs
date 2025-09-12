@@ -24,6 +24,7 @@ const testimonialsData = [
     caseStudySlug: 'domus-labs', // Slug para la URL
     linkedinUrl: 'https://www.linkedin.com/in/cosmamusacchio', // URL de LinkedIn
   },
+  /* HIDDEN - Zytlyn testimonial
   {
     id: 2,
     imageUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1753272756/Karel-Duchon_f0bmib.jpg',
@@ -35,6 +36,7 @@ const testimonialsData = [
     caseStudySlug: 'zytlyn', // Slug para la URL
     linkedinUrl: 'https://www.linkedin.com/in/karelduchon/', // URL de ejemplo
   },
+  */
   {
     id: 3,
     imageUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1753272440/Tom%C3%A1%C5%A1_Ustohal_gnvg9j.jpg',

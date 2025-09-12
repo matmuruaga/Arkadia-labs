@@ -303,7 +303,7 @@
       "title": "Creative Director",
       "company": "Domus Labs"
     },
-    "t3": {
+    "XXXt3_HIDDEN": {
       "quote": "Working with Elevate Labs made it easier to implement new automations in our data analysis processes for the travel industry. They adapted to the demands of our sector and delivered solutions that helped us optimize both time and resources.",
       "author": "Karel Duchon",
       "title": "Global Sales Director & Revenue Lead ",
@@ -1117,7 +1117,7 @@
   },
 
   "caseStudies": {
-  "zytlyn": {
+  "XXXzytlyn_HIDDEN": {
     "client": {
       "tagline": "AI Predictive Intelligence",
       "description": "Leading travel AI company providing predictive intelligence solutions for airlines, airports, tourism boards, OTAs, and meta-search platforms.",

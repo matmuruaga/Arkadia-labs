@@ -98,6 +98,7 @@ export interface CaseStudy {
 }
 
 export const caseStudies: { [key: string]: CaseStudy } = {
+  /* HIDDEN - Zytlyn case study
   zytlyn: {
     client: {
       name: "Zytlyn",
@@ -298,6 +299,7 @@ export const caseStudies: { [key: string]: CaseStudy } = {
       company: "Zytlyn",
     },
   },
+  */ // END HIDDEN - Zytlyn case study
   goodnite: {
     // --- HERO SECTION ---
     hero: {
