@@ -178,11 +178,11 @@
   "title": "Con la Confianza de Empresas Innovadoras",
   "subtitle": "Descubre cómo nuestras soluciones de IA a medida están marcando una diferencia real.",
  "mainLogos": {
-    "logo1": "Zytltn",
-    "logo2": "Domus Lab",
-    "logo3": "Goodnite",
-    "logo4": "Dacrafters",
-    "logo5": "LaserClick"
+    "logo1": "Domus Lab",
+    "logo2": "Goodnite",
+    "logo3": "Dacrafters",
+    "logo4": "LaserClick",
+    "logo5": ""
   },
   "cards": {
     "t1": {
@@ -201,7 +201,7 @@
       "quote": "Trabajar con Elevate Labs hizo más sencillo implementar nuevas automatizaciones en nuestros procesos de análisis de datos para la industria de viajes. Supieron adaptarse a las exigencias del sector y ofrecieron soluciones que nos permitieron optimizar tiempos y recursos. ",
       "author": "Karel Duchon",
       "title": "Director de Ventas Global",
-      "company": "Zytlyn"
+      "company": "HIDDEN_COMPANY"
     }
   },
   "caseStudyButton": "Leer Historia Completa",

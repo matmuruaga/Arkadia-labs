@@ -11,7 +11,8 @@ export const ThankYouPage = () => {
   const { lang } = useParams<{ lang: string }>();
   const homeUrl = `/${lang || 'es'}`;
   const [isOpen, setIsOpen] = useState(false);
-  const calendlyUrl = "https://calendly.com/karel-elevaitelabs";
+  // const calendlyUrl = "https://calendly.com/karel-elevaitelabs"; // HIDDEN - Karel's Calendly URL
+  const calendlyUrl = ""; // Temporarily disabled
 
   // 2. Creamos una referencia para la sección de agendamiento
   const scheduleSectionRef = useRef<HTMLElement>(null);
@@ -99,7 +100,9 @@ export const ThankYouPage = () => {
               </p>
               <button
                 onClick={() => setIsOpen(true)}
-                className="bg-blue-600 text-white font-bold text-lg rounded-lg px-8 py-4 flex items-center gap-3 transition-transform duration-300 ease-in-out hover:scale-105 shadow-lg hover:shadow-blue-500/50 focus:outline-none focus:ring-4 focus:ring-blue-500/50"
+                disabled={true}
+                className="bg-gray-400 text-white font-bold text-lg rounded-lg px-8 py-4 flex items-center gap-3 cursor-not-allowed opacity-60 shadow-lg"
+                title="Temporarily unavailable"
               >
                 <Calendar className="h-6 w-6" />
                 {t('thankYouPage.cta.button')}
