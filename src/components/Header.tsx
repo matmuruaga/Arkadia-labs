@@ -35,7 +35,7 @@ const Header = () => {
     }`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         <Link to={`/${i18n.language}`} aria-label="Go to homepage">
-            <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1749155603/Recurso_14_wwxduv.svg" alt="ElevAIte Labs Logo" className="h-8 w-auto"/>
+            <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt="Arkadia Labs Logo" className="h-8 w-auto"/>
         </Link>
 
         {/* --- NAVEGACIÓN DE ESCRITORIO --- */}
@@ -51,7 +51,7 @@ const Header = () => {
               {t('header.getStarted')}
             </button>
             <a
-              href="https://app.elevaitelabs.io"
+              href="https://app.arkadialabs.io"
               target="_blank"
               rel="noopener noreferrer"
               className={secondaryButtonClasses}
@@ -91,7 +91,7 @@ const Header = () => {
                       {t('header.getStarted')}
                   </button>
                   <a
-                    href="https://app.elevaitelabs.io"
+                    href="https://app.arkadialabs.io"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`w-full text-center py-3 ${secondaryButtonClasses}`}

@@ -28,10 +28,10 @@
 "disclaimer": "To use the voice agent, a microphone on your computer and granting access are required. Calls are recorded for quality purposes and deleted within 30 days. By using this demo, you agree to our <terms>Terms of Use</terms> and our <privacy>Privacy Policy</privacy>. We recommend using Chrome for the best audio quality."
   },
   "beforeAfter": {
-    "title": "The ElevAIte Transformation: Before & After",
+    "title": "The Arkadia Transformation: Before & After",
     "subtitle": "Select a department to see how our custom AI agents outperform traditional tools and boost your operational efficiency.",
     "challengeTitle": "The Manual Challenge",
-    "solutionTitle": "The ElevAIte Solution",
+    "solutionTitle": "The Arkadia Solution",
     "cta": "Start Automating Now",
     "tabs": {
       "sales": "Sales",
@@ -204,7 +204,7 @@
 }
   },
    "kpi": {
-    "title": "The ElevAIte Impact: Measurable Results",
+    "title": "The Arkadia Impact: Measurable Results",
     "subtitle": "Discover how our crafted AI solutions translate into tangible benefits and significant growth for businesses like yours.",
     "cards": {
     "kpi1": {
@@ -238,7 +238,7 @@
   }
   },
   "whyElevaite": {
-  "title": "The ElevAIte Launchpad: Your Journey to Automation",
+  "title": "The Arkadia Launchpad: Your Journey to Automation",
   "subtitle": "Our Crafted Approach",
   "steps": {
     "s1": {
@@ -270,7 +270,7 @@
 },
 "integrationsComponent": {
   "title": "Seamless Integrations: Connect Your Entire Ecosystem",
-  "description": "ElevAIte's AI agents are designed to operate at the heart of your existing tools. We natively integrate with your CRMs, communication platforms, calendars, and more, amplifying your workflows without disruption and boosting overall productivity.",
+  "description": "Arkadia's AI agents are designed to operate at the heart of your existing tools. We natively integrate with your CRMs, communication platforms, calendars, and more, amplifying your workflows without disruption and boosting overall productivity.",
   "examples": {
     "e1": "Market-leading CRMs (Salesforce, HubSpot, etc.)",
     "e2": "Communication Platforms (Slack, Email, Microsoft Teams)",
@@ -292,19 +292,19 @@
   },
   "cards": {
     "t1": {
-      "quote": "With Elevate Labs, we automated key tasks and enhanced our guest experience. Their swift integration with our systems let us focus on what matters—delivering seamless, premium service. Within weeks, our processes ran smoother and guest reviews improved.",
+      "quote": "With Arkadia Labs, we automated key tasks and enhanced our guest experience. Their swift integration with our systems let us focus on what matters—delivering seamless, premium service. Within weeks, our processes ran smoother and guest reviews improved.",
       "author": "Tomáš Ustohal",
       "title": "Key Account Manager",
       "company": "Goodnite - CoolPeople Technology"
     },
     "t2": {
-      "quote": "Working with Elevate Labs streamlined our project management and gave us more time to focus on what matters—designing spaces that connect with people. Their practical approach and ability to adapt to our international workflow made a difference from day one.",
+      "quote": "Working with Arkadia Labs streamlined our project management and gave us more time to focus on what matters—designing spaces that connect with people. Their practical approach and ability to adapt to our international workflow made a difference from day one.",
       "author": "Cosma Musacchio",
       "title": "Creative Director",
       "company": "Domus Labs"
     },
     "XXXt3_HIDDEN": {
-      "quote": "Working with Elevate Labs made it easier to implement new automations in our data analysis processes for the travel industry. They adapted to the demands of our sector and delivered solutions that helped us optimize both time and resources.",
+      "quote": "Working with Arkadia Labs made it easier to implement new automations in our data analysis processes for the travel industry. They adapted to the demands of our sector and delivered solutions that helped us optimize both time and resources.",
       "author": "Karel Duchon",
       "title": "Global Sales Director & Revenue Lead ",
       "company": "Zytltn"
@@ -359,8 +359,8 @@
   "secondaryCta": "Book a Consultation"
 },
 "footer": {
-  "altLogo": "ElevAIte Labs Logo",
-  "companyName": "ElevAIte Labs",
+  "altLogo": "Arkadia Labs Logo",
+  "companyName": "Arkadia Labs",
   "description": "Transforming businesses with intelligent AI automation solutions.",
   "social": {
     "linkedin": "LinkedIn",
@@ -534,7 +534,7 @@
     "introduction": {
       "heading": "Introduction",
       "body": {
-        "p1": "This Privacy Policy describes how ElevAIte Labs AG (\"ElevAIte\", \"we\", \"us\", or \"our\") collects, uses, processes, and discloses your information in connection with your access to and use of our website (elevaitelabs.io), our AI-powered services, and other interactions you may have with us (collectively, the \"Services\").",
+        "p1": "This Privacy Policy describes how Arkadia Labs AG (\"Arkadia\", \"we\", \"us\", or \"our\") collects, uses, processes, and discloses your information in connection with your access to and use of our website (arkadialabs.io), our AI-powered services, and other interactions you may have with us (collectively, the \"Services\").",
         "p2": "We are committed to protecting your privacy and handling your data in an open and transparent manner. When you access our Website or use our Services, you are trusting us with your information. We understand this is a big responsibility and we work hard to protect your information and put you in control."
       }
     },
@@ -598,7 +598,7 @@
       "heading": "Contact Us",
       "body": {
         "p1": "If you have any questions, concerns, or comments about this Privacy Policy or our data practices, please do not hesitate to contact us. You can reach our privacy team by emailing: ",
-        "p1_email": "hello@elevaitelabs.io"
+        "p1_email": "hello@arkadialabs.io"
       }
     }
   }
@@ -610,7 +610,7 @@
     "agreement": {
       "heading": "1. Agreement to Terms",
       "body": {
-        "p1": "These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and ElevAIte Labs AG (“we,” “us,” or “our”), concerning your access to and use of our AI agent services and the elevaitelabs.io website (collectively, the “Services”).",
+        "p1": "These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and Arkadia Labs AG ("we," "us," or "our"), concerning your access to and use of our AI agent services and the arkadialabs.io website (collectively, the "Services").",
         "p2": "You agree that by accessing the Services, you have read, understood, and agree to be bound by all of these Terms and Conditions. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.",
         "p3": "Supplemental terms and conditions or documents that may be posted on the Website from time to time are hereby expressly incorporated herein by reference."
       }
@@ -618,7 +618,7 @@
     "description": {
       "heading": "2. Description of Service",
       "body": {
-        "p1": "ElevAIte Labs provides custom-built, AI-powered agents designed to automate and optimize business processes, including but not limited to sales, marketing, operations, and customer support. The specific functionalities, scope, and performance metrics of each AI agent are defined in the specific service plan and setup agreement (“Service Plan”) you subscribe to. The Service is provided on a subscription basis and may include a one-time setup fee."
+        "p1": "Arkadia Labs provides custom-built, AI-powered agents designed to automate and optimize business processes, including but not limited to sales, marketing, operations, and customer support. The specific functionalities, scope, and performance metrics of each AI agent are defined in the specific service plan and setup agreement ("Service Plan") you subscribe to. The Service is provided on a subscription basis and may include a one-time setup fee."
       }
     },
     "responsibilities": {
@@ -647,7 +647,7 @@
     "ip": {
       "heading": "6. Intellectual Property Rights",
       "body": {
-        "p1": "The Services, including the underlying AI models, software, algorithms, and all content on our Website (excluding your data), are the exclusive property of ElevAIte Labs AG and its licensors. These are protected by copyright, trademark, and other laws of Switzerland and foreign countries. Our trademarks may not be used in connection with any product or service without our prior written consent. You retain full ownership of the data you provide to the Service."
+        "p1": "The Services, including the underlying AI models, software, algorithms, and all content on our Website (excluding your data), are the exclusive property of Arkadia Labs AG and its licensors. These are protected by copyright, trademark, and other laws of Switzerland and foreign countries. Our trademarks may not be used in connection with any product or service without our prior written consent. You retain full ownership of the data you provide to the Service."
       }
     },
     "termination": {
@@ -737,7 +737,7 @@
       "heading": "Where can I get further information?",
       "body": {
         "p1_text": "If you have any questions about our use of cookies or other technologies, please email us at ",
-        "p1_email": "[Your contact email, e.g., privacy@elevaitelabs.io]"
+        "p1_email": "privacy@arkadialabs.io"
       }
     }
   }
@@ -825,7 +825,7 @@
 },
 "integrationsHero": {
   "title": "Connect with the Tools You Love",
-  "subtitle": "Elevaite Labs integrates with over 500 applications to supercharge your existing workflows."
+  "subtitle": "Arkadia Labs integrates with over 500 applications to supercharge your existing workflows."
 },
 "integrationCard": {
   "cta": "Get Started"
@@ -1152,7 +1152,7 @@
       }
     },
       "challenge": {
-        "beforeTitle": "Before ElevaiteLabs",
+        "beforeTitle": "Before Arkadia Labs",
         "points": [
           "Time-consuming lead follow-up",
           "High volume of unfiltered leads",
@@ -1160,7 +1160,7 @@
         ]
       },
     "solution": {
-      "title": "The ElevaitLabs Solution",
+      "title": "The Arkadia Labs Solution",
       "subtitle": "Custom AI BDR agents designed with Swiss precision to automate qualification, scheduling, and lead nurturing.",
       "implementation": {
         "title": "Strategic AI Implementation",
@@ -1269,7 +1269,7 @@
       }
     },
     "solution": {
-      "title": "The Elevaitelabs Solution",
+      "title": "The Arkadia Labs Solution",
       "subtitle": "Complete AI Guest Experience Ecosystem designed with Swiss precision to transform hospitality operations.",
       "implementation": {
         "title": "Strategic AI Implementation",
@@ -1368,7 +1368,7 @@
       }
     },
     "solution": {
-      "title": "The Elevaitelabs Solution",
+      "title": "The Arkadia Labs Solution",
       "subtitle": "Custom AI Project Intelligence System designed with Swiss precision to automate project management, meeting processing, and accountability tracking.",
       "implementation": {
         "title": "Strategic AI Implementation",
@@ -1430,7 +1430,7 @@
     "cta" : "Read the Case Study"
   },
 "whyElevaiteStudyCase": {
-  "title": "Why ElevaiteLabs",
+  "title": "Why Arkadia Labs",
   "subtitle": "Swiss-made precision meets proven sales expertise",
   "features": [
     {

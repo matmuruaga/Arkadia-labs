@@ -28,10 +28,10 @@
 "disclaimer": "Para usar el agente de voz, se necesita un micrófono en tu ordenador y concederle acceso. Las llamadas se graban por motivos de calidad y se eliminan en 30 días. Al usar esta demo, aceptas nuestros <terms>Términos de Uso</terms> y nuestra <privacy>Política de Privacidad</privacy>. Recomendamos usar Chrome para la mejor calidad de audio."
   },
   "beforeAfter": {
-    "title": "La Transformación ElevAIte: Antes y Después",
+    "title": "La Transformación Arkadia: Antes y Después",
     "subtitle": "Selecciona un departamento para ver cómo nuestros agentes de IA personalizados superan a las herramientas tradicionales.",
     "challengeTitle": "El Desafío Manual",
-    "solutionTitle": "La Solución ElevAIte",
+    "solutionTitle": "La Solución Arkadia",
     "cta": "Empieza a Automatizar",
     "tabs": {
       "sales": "Ventas",
@@ -98,7 +98,7 @@
     }
   },
  "kpi": {
-    "title": "El Impacto ElevAIte: Resultados Medibles",
+    "title": "El Impacto Arkadia: Resultados Medibles",
     "subtitle": "Descubre cómo nuestras soluciones de IA a medida se traducen en beneficios tangibles y un crecimiento significativo para negocios como el tuyo.",
     "cards": {
       "kpi1": {
@@ -132,7 +132,7 @@
     }
   },
   "whyElevaite": {
-  "title": "La Plataforma ElevAIte: Tu Viaje hacia la Automatización",
+  "title": "La Plataforma Arkadia: Tu Viaje hacia la Automatización",
   "subtitle": "Nuestro Enfoque Estratégico",
   "steps": {
     "s1": {
@@ -164,7 +164,7 @@
 },
 "integrationsComponent": {
   "title": "Integraciones Fluidas: Conecta Todo Tu Ecosistema",
-  "description": "Los agentes de IA de ElevAIte están diseñados para operar en el corazón de tus herramientas existentes. Nos integramos de forma nativa con tus CRMs, plataformas de comunicación, calendarios y más, amplificando tus flujos de trabajo sin interrupciones e impulsando la productividad general.",
+  "description": "Los agentes de IA de Arkadia están diseñados para operar en el corazón de tus herramientas existentes. Nos integramos de forma nativa con tus CRMs, plataformas de comunicación, calendarios y más, amplificando tus flujos de trabajo sin interrupciones e impulsando la productividad general.",
   "examples": {
     "e1": "CRMs líderes del mercado (Salesforce, HubSpot, etc.)",
     "e2": "Plataformas de Comunicación (Slack, Email, Microsoft Teams)",
@@ -253,8 +253,8 @@
   "secondaryCta": "Agenda una Consulta"
 },
 "footer": {
-  "altLogo": "Logo de ElevAIte Labs",
-  "companyName": "ElevAIte Labs",
+  "altLogo": "Logo de Arkadia Labs",
+  "companyName": "Arkadia Labs",
   "description": "Transformando negocios con soluciones inteligentes de automatización con IA.",
   "social": {
     "linkedin": "LinkedIn",
@@ -428,7 +428,7 @@
     "introduction": {
       "heading": "Introducción",
       "body": {
-        "p1": "Esta Política de Privacidad describe cómo ElevAIte Labs AG (\"ElevAIte\", \"nosotros\" o \"nuestro\") recopila, usa, procesa y divulga su información en relación con su acceso y uso de nuestro sitio web (elevaitelabs.io), nuestros servicios impulsados por IA y otras interacciones que pueda tener con nosotros (colectivamente, los \"Servicios\").",
+        "p1": "Esta Política de Privacidad describe cómo Arkadia Labs AG (\"Arkadia\", \"nosotros\" o \"nuestro\") recopila, usa, procesa y divulga su información en relación con su acceso y uso de nuestro sitio web (arkadialabs.io), nuestros servicios impulsados por IA y otras interacciones que pueda tener con nosotros (colectivamente, los \"Servicios\").",
         "p2": "Estamos comprometidos a proteger su privacidad y a manejar sus datos de manera abierta y transparente. Cuando accede a nuestro Sitio Web o utiliza nuestros Servicios, nos confía su información. Entendemos que esta es una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control."
       }
     },
@@ -492,7 +492,7 @@
       "heading": "Contáctenos",
       "body": {
         "p1": "Si tiene alguna pregunta, inquietud o comentario sobre esta Política de Privacidad o nuestras prácticas de datos, no dude en contactarnos. Puede comunicarse con nuestro equipo de privacidad enviando un correo electrónico a: ",
-        "p1_email": "hello@elevaitelabs.io"
+        "p1_email": "hello@arkadialabs.io"
       }
     }
   }
@@ -504,7 +504,7 @@
     "agreement": {
       "heading": "1. Aceptación de los Términos",
       "body": {
-        "p1": "Estos Términos y Condiciones constituyen un acuerdo legalmente vinculante entre usted, ya sea personalmente o en nombre de una entidad (\"usted\") y ElevAIte Labs AG (\"nosotros\" o \"nuestro\"), en relación con su acceso y uso de nuestros servicios de agentes de IA y el sitio web elevaitelabs.io (colectivamente, los \"Servicios\").",
+        "p1": "Estos Términos y Condiciones constituyen un acuerdo legalmente vinculante entre usted, ya sea personalmente o en nombre de una entidad (\"usted\") y Arkadia Labs AG (\"nosotros\" o \"nuestro\"), en relación con su acceso y uso de nuestros servicios de agentes de IA y el sitio web arkadialabs.io (colectivamente, los \"Servicios\").",
         "p2": "Usted acepta que al acceder o utilizar los Servicios, ha leído, entendido y aceptado estar sujeto a todos estos Términos y Condiciones. SI NO ESTÁ DE ACUERDO CON TODOS ESTOS TÉRMINOS, SE LE PROHÍBE EXPRESAMENTE EL USO DE LOS SERVICIOS Y DEBE INTERRUMPIR SU USO INMEDIATAMENTE.",
         "p3": "Los términos y condiciones suplementarios o documentos que puedan publicarse en el Sitio Web de vez en cuando se incorporan expresamente aquí por referencia.",
         "p4": "Estos Términos incluyen una renuncia a ciertos derechos legales, incluyendo su derecho a presentar una demanda judicial. En su lugar, se requiere que las disputas se resuelvan mediante arbitraje vinculante de forma individual. Por favor, lea esta sección detenidamente."
@@ -513,7 +513,7 @@
     "description": {
       "heading": "2. Descripción del Servicio",
       "body": {
-        "p1": "ElevAIte Labs proporciona agentes personalizados impulsados por IA diseñados para automatizar y optimizar procesos de negocio, incluyendo, entre otros, ventas, marketing, operaciones y soporte al cliente. Las funcionalidades específicas, el alcance y las métricas de rendimiento de cada agente de IA se definen en el plan de servicio y acuerdo de configuración específico (\"Plan de Servicio\") al que se suscriba. El Servicio se proporciona mediante suscripción y puede incluir una tarifa única de configuración."
+        "p1": "Arkadia Labs proporciona agentes personalizados impulsados por IA diseñados para automatizar y optimizar procesos de negocio, incluyendo, entre otros, ventas, marketing, operaciones y soporte al cliente. Las funcionalidades específicas, el alcance y las métricas de rendimiento de cada agente de IA se definen en el plan de servicio y acuerdo de configuración específico (\"Plan de Servicio\") al que se suscriba. El Servicio se proporciona mediante suscripción y puede incluir una tarifa única de configuración."
       }
     },
     "responsibilities": {
@@ -521,7 +521,7 @@
       "body": {
         "p1": "Para utilizar ciertas características del Servicio, es posible que se le solicite crear una cuenta. Usted es responsable de salvaguardar la contraseña de su cuenta y de cualquier actividad o acción bajo su cuenta. Usted se compromete a proporcionar y mantener información verdadera, precisa, actual y completa sobre usted según lo solicite el formulario de registro del servicio.",
         "p2": "Usted también es responsable de proporcionar los datos necesarios, el acceso a sistemas de terceros (p. ej., CRMs) y la orientación estratégica requerida para que podamos construir y mantener sus agentes de IA según lo establecido en su Plan de Servicio. Usted retiene todos los derechos de propiedad sobre sus datos subyacentes.",
-        "p3": "Al comprar o utilizar cualquiera de los materiales de ElevAIte Labs, se le otorga una licencia limitada, revocable y no transferible para uso personal y para fines internos de su negocio únicamente. No puede reproducir, compartir, distribuir ni utilizar nuestro contenido para fines comerciales sin nuestro permiso explícito por escrito."
+        "p3": "Al comprar o utilizar cualquiera de los materiales de Arkadia Labs, se le otorga una licencia limitada, revocable y no transferible para uso personal y para fines internos de su negocio únicamente. No puede reproducir, compartir, distribuir ni utilizar nuestro contenido para fines comerciales sin nuestro permiso explícito por escrito."
       }
     },
     "voiceAgent": {
@@ -552,7 +552,7 @@
     "ip": {
       "heading": "7. Derechos de Propiedad Intelectual",
       "body": {
-        "p1": "Los Servicios, incluidos los modelos de IA subyacentes, el software, los algoritmos y todo el contenido de nuestro Sitio Web (excluyendo sus datos), son propiedad exclusiva de ElevAIte Labs AG y sus licenciantes. Estos están protegidos por derechos de autor, marcas comerciales y otras leyes de Suiza y de países extranjeros. Nuestras marcas comerciales no pueden ser utilizadas en conexión con ningún producto o servicio sin nuestro consentimiento previo por escrito. Usted retiene la plena propiedad de los datos que proporciona al Servicio."
+        "p1": "Los Servicios, incluidos los modelos de IA subyacentes, el software, los algoritmos y todo el contenido de nuestro Sitio Web (excluyendo sus datos), son propiedad exclusiva de Arkadia Labs AG y sus licenciantes. Estos están protegidos por derechos de autor, marcas comerciales y otras leyes de Suiza y de países extranjeros. Nuestras marcas comerciales no pueden ser utilizadas en conexión con ningún producto o servicio sin nuestro consentimiento previo por escrito. Usted retiene la plena propiedad de los datos que proporciona al Servicio."
       }
     },
     "termination": {
@@ -643,7 +643,7 @@
       "heading": "¿Dónde puedo obtener más información?",
       "body": {
         "p1_text": "Si tiene alguna pregunta sobre nuestro uso de cookies u otras tecnologías, envíenos un correo electrónico a ",
-        "p1_email": "[Tu email de contacto, ej. privacy@elevaitelabs.io]"
+        "p1_email": "[Tu email de contacto, ej. privacy@arkadialabs.io]"
       }
     }
   }
@@ -731,7 +731,7 @@
 },
 "integrationsHero": {
   "title": "Conéctate con las Herramientas que Amas",
-  "subtitle": "Elevaite Labs se integra con más de 500 aplicaciones para potenciar tus flujos de trabajo existentes."
+  "subtitle": "Arkadia Labs se integra con más de 500 aplicaciones para potenciar tus flujos de trabajo existentes."
 },
 "integrationCard": {
   "cta": "Empezar"
@@ -1059,7 +1059,7 @@
       }
     },
     "challenge": {
-  "beforeTitle": "Antes de ElevaiteLabs",
+  "beforeTitle": "Antes de Arkadia Labs",
   "points": [
     "Seguimiento de leads que consumía mucho tiempo",
     "Alto volumen de leads sin filtrar",
@@ -1155,7 +1155,7 @@
       ]
     },
     "challenge": {
-      "beforeTitle": "Antes de ElevaiteLabs",
+      "beforeTitle": "Antes de Arkadia Labs",
       "points": [
         "Soporte al cliente limitado fuera de horario",
         "Comunicación inconsistente con los huéspedes",
@@ -1177,7 +1177,7 @@
       }
     },
     "solution": {
-      "title": "La Solución de Elevaitelabs",
+      "title": "La Solución de Arkadia Labs",
       "subtitle": "Un completo Ecosistema de Experiencia del Cliente con IA diseñado con precisión suiza para transformar las operaciones hoteleras.",
       "implementation": {
         "title": "Implementación Estratégica de IA",
@@ -1254,7 +1254,7 @@
       ]
     },
     "challenge": {
-      "beforeTitle": "Antes de ElevaiteLabs",
+      "beforeTitle": "Antes de Arkadia Labs",
       "points": [
         "Documentación manual de reuniones que consumía más de 2 horas semanales",
         "Baja visibilidad de proyectos entre múltiples iniciativas",
@@ -1276,7 +1276,7 @@
       }
     },
     "solution": {
-      "title": "La Solución de Elevaitelabs",
+      "title": "La Solución de Arkadia Labs",
       "subtitle": "Sistema de Inteligencia de Proyectos de IA a medida, diseñado con precisión suiza para automatizar la gestión de proyectos, el procesamiento de reuniones y el seguimiento de responsabilidades.",
       "implementation": {
         "title": "Implementación Estratégica de IA",
@@ -1338,7 +1338,7 @@
     "cta" : "Leer Caso de Estudio"
   },
 "whyElevaiteStudyCase": {
-  "title": "Por qué ElevaiteLabs",
+  "title": "Por qué Arkadia Labs",
   "subtitle": "Precisión suiza unida a una probada experiencia en ventas",
   "features": [
     {

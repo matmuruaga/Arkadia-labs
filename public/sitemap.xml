@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
+<urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://elevaitelabs.io/</loc>
-    <lastmod>2024-05-18</lastmod>
+    <loc>https://arkadialabs.io/</loc>
+    <lastmod>2025-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://elevaitelabs.io/contact</loc>
-    <lastmod>2024-05-18</lastmod>
+    <loc>https://arkadialabs.io/contact</loc>
+    <lastmod>2025-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

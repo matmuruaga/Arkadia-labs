@@ -56,7 +56,7 @@ const Footer = () => {
           
           <div className="md:col-span-2 lg:col-span-1">
             <Link to={`/${currentLang}`} className="flex items-center mb-4 cursor-pointer">
-              <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1749155603/Recurso_14_wwxduv.svg" alt={t('footer.altLogo')} className="h-8 w-auto mr-2" />
+              <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt={t('footer.altLogo')} className="h-8 w-auto mr-2" />
             </Link>
             <p className="text-gray-600 mb-6 text-sm">{t('footer.description')}</p>
             <div className="flex space-x-4">

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://elevaitelabs.io/sitemap.xml
+Sitemap: https://arkadialabs.io/sitemap.xml
