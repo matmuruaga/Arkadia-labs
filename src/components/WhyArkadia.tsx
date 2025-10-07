@@ -1,4 +1,4 @@
-// src/components/WhyElevaite.tsx
+// src/components/WhyArkadia.tsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -12,13 +12,13 @@ const journeyStepsData = [
   { id: 5, titleKey: 'whyElevaite.steps.s5.title', subtitleKey: 'whyElevaite.steps.s5.subtitle', descriptionKey: 'whyElevaite.steps.s5.description', Icon: TrendingUp, imageUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1752407519/u5837542839_In_a_3D_art_style_the_blue_robot_stands_proudly_i_1ce319e5-9405-4a83-a69a-de315d04921d_3_w90bzt.png', themeColor: '#D0BFFF' }
 ];
 
-const WhyElevaite = () => {
+const WhyArkadia = () => {
   const { t } = useTranslation();
   const [activeStep, setActiveStep] = useState(journeyStepsData[0].id);
   const activeStepData = journeyStepsData.find(step => step.id === activeStep);
 
   return (
-    <section id="why-elevaite" className="py-16 md:py-24 bg-white">
+    <section id="why-arkadia" className="py-16 md:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div
           className="text-center mb-12 md:mb-16"
@@ -83,4 +83,4 @@ const WhyElevaite = () => {
   );
 };
 
-export default WhyElevaite;
+export default WhyArkadia;

@@ -37,7 +37,7 @@ const Solutions = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          How ElevAIte Labs AI Systems Solve This Problem
+          How Arkadia Labs AI Systems Solve This Problem
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">

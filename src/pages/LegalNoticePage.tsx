@@ -20,7 +20,7 @@ const LegalNoticePage = () => {
           
           <h2 className={heading2Styles}>{t('legalNotice.headings.company')}</h2>
           <ul>
-            <li><strong>{t('legalNotice.companyInfo.name')}</strong> ElevAIte Labs AG</li>
+            <li><strong>{t('legalNotice.companyInfo.name')}</strong> Arkadia Labs AG</li>
             <li><strong>{t('legalNotice.companyInfo.address')}</strong> Bahnhofstrasse 1, 8001 Zürich, Switzerland</li>
             <li><strong>{t('legalNotice.companyInfo.representedBy')}</strong> {t('legalNotice.companyInfo.placeholder_ceo')}</li>
           </ul>

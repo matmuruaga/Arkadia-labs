@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a React + TypeScript web application for Elevaite Labs, built with Vite. It's a multi-language marketing website with internationalization support (Spanish and English).
+This is a React + TypeScript web application for Arkadia Labs, built with Vite. It's a multi-language marketing website with internationalization support (Spanish and English).
 
 ## Development Commands
 

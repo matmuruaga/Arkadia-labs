@@ -124,7 +124,7 @@ export const caseStudies: { [key: string]: CaseStudy } = {
       ],
     },
     challenge: {
-      beforeTitle: "Before ElevaiteLabs",
+      beforeTitle: "Before Arkadia Labs",
       points: [
         "Time-consuming lead follow-up",
         "High volume of unfiltered leads",
@@ -161,7 +161,7 @@ export const caseStudies: { [key: string]: CaseStudy } = {
       }
     },
    solution: {
-      title: "The ElevaiteLabs Solution",
+      title: "The Arkadia Labs Solution",
       subtitle: "Custom AI BDR agents designed with Swiss precision to automate qualification, scheduling, and lead nurturing.",
       implementation: {
         title: "Strategic AI Implementation",
@@ -370,7 +370,7 @@ export const caseStudies: { [key: string]: CaseStudy } = {
 
     // --- SOLUTION SECTION ---
     solution: {
-      title: "The Elevaitelabs Solution",
+      title: "The Arkadia Labs Solution",
       subtitle: "Complete AI Guest Experience Ecosystem designed with Swiss precision to transform hospitality operations.",
       implementation: {
         title: "Strategic AI Implementation",
@@ -485,7 +485,7 @@ export const caseStudies: { [key: string]: CaseStudy } = {
 
     // --- SOLUTION SECTION ---
     solution: {
-      title: "The Elevaitelabs Solution",
+      title: "The Arkadia Labs Solution",
       subtitle: "Custom AI Project Intelligence System designed with Swiss precision to automate project management, meeting processing, and accountability tracking.",
       implementation: {
         title: "Strategic AI Implementation",

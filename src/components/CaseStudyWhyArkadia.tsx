@@ -1,4 +1,4 @@
-// src/components/CaseStudyWhyElevaite.tsx
+// src/components/CaseStudyWhyArkadia.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -36,7 +36,7 @@ const featuresData = [
   },
 ];
 
-const CaseStudyWhyElevaite = () => {
+const CaseStudyWhyArkadia = () => {
   const { t } = useTranslation();
 
   return (
@@ -97,4 +97,4 @@ const CaseStudyWhyElevaite = () => {
   );
 };
 
-export default CaseStudyWhyElevaite;
+export default CaseStudyWhyArkadia;

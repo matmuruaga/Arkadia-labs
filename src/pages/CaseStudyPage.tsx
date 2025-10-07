@@ -15,7 +15,7 @@ import CaseStudyTimeline from '../components/CaseStudyTimeline';
 import CaseStudyImpact from '../components/CaseStudyImpact';
 import CaseStudyRoiAnalysis from '../components/CaseStudyRoiAnalysis';
 import CaseStudyChallenge from '../components/CaseStudyChallenge';
-import WhyElevaiteLabs from '../components/CaseStudyWhyElevaite';
+import WhyArkadiaLabs from '../components/CaseStudyWhyArkadia';
 
 
 const CaseStudyPage: React.FC = () => {
@@ -44,7 +44,7 @@ const CaseStudyPage: React.FC = () => {
       <CaseStudyTimeline data={study.timeline} studyKey={slug} />
       <CaseStudyImpact data={study.impact} studyKey={slug} />
       <CaseStudyRoiAnalysis data={study.roiAnalysis} studyKey={slug} />
-      <WhyElevaiteLabs />
+      <WhyArkadiaLabs />
       <FinalCtaSection />
       </>
   );

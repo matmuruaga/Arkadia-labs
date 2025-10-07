@@ -2,7 +2,7 @@
 import React from 'react';
 // Ya no se importa Layout aquí
 import Hero from "../components/Hero";
-import WhyElevaite from "../components/WhyElevaite";
+import WhyArkadia from "../components/WhyArkadia";
 import KpiSection from "../components/KpiSection";
 import BeforeAfterSection from "../components/BeforeAfterSection";
 import IntegrationsSection from "../components/IntegrationsSection";
@@ -21,7 +21,7 @@ const MainPage = () => {
       <Hero />
       <BeforeAfterSection />
       <KpiSection />
-      <WhyElevaite />
+      <WhyArkadia />
       <IntegrationsSection />
       <AnimatedSeparator />
       <TestimonialsSection />
