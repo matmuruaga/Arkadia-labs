@@ -76,7 +76,7 @@ const KpiSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 md:mb-20">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0D1B2A] mb-4">
-            {t('kpi.title', 'The ElevAite Impact: Measurable Results')}
+            {t('kpi.title')}
           </h2>
           <p className="mt-3 sm:mt-4 text-base sm:text-lg text-[#0D1B2A]/75 max-w-3xl mx-auto">
             {t('kpi.subtitle', 'Discover how our crafted AI solutions translate into tangible benefits and significant growth for businesses like yours.')}
