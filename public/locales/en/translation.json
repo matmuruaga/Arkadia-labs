@@ -610,7 +610,7 @@
     "agreement": {
       "heading": "1. Agreement to Terms",
       "body": {
-        "p1": "These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and Arkadia Labs AG ("we," "us," or "our"), concerning your access to and use of our AI agent services and the arkadialabs.io website (collectively, the "Services").",
+        "p1": "These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (\"you\") and Arkadia Labs AG (\"we,\" \"us,\" or \"our\"), concerning your access to and use of our AI agent services and the arkadialabs.io website (collectively, the \"Services\").",
         "p2": "You agree that by accessing the Services, you have read, understood, and agree to be bound by all of these Terms and Conditions. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.",
         "p3": "Supplemental terms and conditions or documents that may be posted on the Website from time to time are hereby expressly incorporated herein by reference."
       }
@@ -618,7 +618,7 @@
     "description": {
       "heading": "2. Description of Service",
       "body": {
-        "p1": "Arkadia Labs provides custom-built, AI-powered agents designed to automate and optimize business processes, including but not limited to sales, marketing, operations, and customer support. The specific functionalities, scope, and performance metrics of each AI agent are defined in the specific service plan and setup agreement ("Service Plan") you subscribe to. The Service is provided on a subscription basis and may include a one-time setup fee."
+        "p1": "Arkadia Labs provides custom-built, AI-powered agents designed to automate and optimize business processes, including but not limited to sales, marketing, operations, and customer support. The specific functionalities, scope, and performance metrics of each AI agent are defined in the specific service plan and setup agreement (\"Service Plan\") you subscribe to. The Service is provided on a subscription basis and may include a one-time setup fee."
       }
     },
     "responsibilities": {
@@ -1219,7 +1219,7 @@
       ]
     },
     "testimonial": {
-      "quote": "The AI agent from ElevaitLabs is more than a tool; it's a core part of our sales team now. It has completely cleared our pipeline's bottleneck, allowing our human team to focus on what they do best: closing deals. The 400% ROI speaks for itself.",
+      "quote": "The AI agent from Arkadia Labs is more than a tool; it's a core part of our sales team now. It has completely cleared our pipeline's bottleneck, allowing our human team to focus on what they do best: closing deals. The 400% ROI speaks for itself.",
       "author": "Jane Doe",
       "role": "Head of Growth",
       "company": "Zytlyn"

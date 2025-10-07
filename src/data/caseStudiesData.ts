@@ -329,7 +329,7 @@ export const caseStudies: { [key: string]: CaseStudy } = {
 
     // --- CHALLENGE (Before ElevateLabs) ---
     challenge: {
-      beforeTitle: "Before ElevateLabs",
+      beforeTitle: "Before Arkadia Labs",
       points: [
         "Limited after-hours guest support",
         "Inconsistent guest communication",
@@ -459,7 +459,7 @@ export const caseStudies: { [key: string]: CaseStudy } = {
 
     // --- CHALLENGE (Before ElevateLabs) ---
     challenge: {
-      beforeTitle: "Before ElevateLabs",
+      beforeTitle: "Before Arkadia Labs",
       points: [
         "Manual meeting documentation consuming 2+ hours weekly",
         "Poor project visibility across multiple initiatives",
