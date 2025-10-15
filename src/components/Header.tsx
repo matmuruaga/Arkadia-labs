@@ -166,9 +166,9 @@ const Header = () => {
             className="md:hidden px-4"
           >
             {/* Menú glass completo con logo, navegación y botón cerrar */}
-            <nav className="glass-nav-pill rounded-3xl px-6 py-6">
+            <nav className="glass-nav-pill rounded-[2rem] px-6 py-6">
               {/* Header del menú con logo y X */}
-              <div className="flex justify-between items-center mb-6 pb-4 border-b border-slate-200/30">
+              <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/20">
                 <Link to={`/${i18n.language}`} aria-label="Go to homepage" onClick={() => setIsMenuOpen(false)}>
                     <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt="Arkadia Labs Logo" className="h-8 w-auto"/>
                 </Link>
