@@ -1,10 +1,11 @@
 // src/pages/ContactPage.tsx
-import { useState, useMemo } from 'react';
-import { useForm, Controller } from 'react-hook-form'; 
+import { useState, useMemo, useEffect } from 'react';
+import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { trackPageView, trackFormStart, trackFormSubmit, trackFormSuccess } from '@/utils/dataLayer';
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,10 +19,23 @@ type ContactFormValues = z.infer<z.ZodObject<any>>;
 const backgroundImageUrl = 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1750796289/Gradient__42_klhn8c.jpg';
 
 export const ContactPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const location = useLocation();
   const [loading, setLoading] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
+  const [formStarted, setFormStarted] = useState(false);
   const { lang } = useParams<{ lang: string }>();
+
+  useEffect(() => {
+    trackPageView(location.pathname, 'Contact - Arkadia Labs', i18n.language);
+  }, [location.pathname, i18n.language]);
+
+  const handleFormInteraction = () => {
+    if (!formStarted) {
+      trackFormStart('contact_form', 'contact_page');
+      setFormStarted(true);
+    }
+  };
 
   // La lógica del formulario se mantiene intacta
   const contactFormSchema = useMemo(() => z.object({
@@ -40,6 +54,14 @@ export const ContactPage = () => {
   const onSubmit = async (data: ContactFormValues) => {
     setLoading(true);
     setServerError(null);
+
+    // Track form submit
+    trackFormSubmit('contact_form', {
+      companySize: data.companySize,
+      role: data.role,
+      formLocation: 'contact_page'
+    });
+
     try {
       const webhookUrl = 'https://n8n-elevaitelabs-u48215.vm.elestio.app/webhook/b8866b0b-beb2-4f71-b268-94a9663bfbc8';
       const response = await fetch(webhookUrl, {
@@ -54,6 +76,10 @@ export const ContactPage = () => {
       if (!response.ok) {
         throw new Error(t('contactPage.errors.server'));
       }
+
+      // Track form success
+      trackFormSuccess('contact_form', 'contact_page');
+
       window.location.href = `/${lang}/thank-you`;
     } catch (error: any) {
       setServerError(error.message || 'Failed to fetch');
@@ -94,7 +120,12 @@ export const ContactPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <Label htmlFor="fullName" className="text-white font-medium">{t('contactPage.labels.fullName')}</Label>
-                <Input id="fullName" {...register("fullName")} className="bg-white/10 border-white/20 text-white placeholder:text-gray-300 mt-2" />
+                <Input
+                  id="fullName"
+                  {...register("fullName")}
+                  onFocus={handleFormInteraction}
+                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-300 mt-2"
+                />
                 {errors.fullName && <p className="text-red-400 font-medium text-sm mt-1">{errors.fullName.message}</p>}
               </div>
               <div>

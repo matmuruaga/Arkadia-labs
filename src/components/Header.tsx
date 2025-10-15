@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
+import { trackNavigationClick, trackCtaClick, trackLoginClick, trackMobileMenuToggle } from '@/utils/dataLayer';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,8 +20,24 @@ const Header = () => {
   }, []);
   
   const handleGetStartedClick = () => {
+    trackCtaClick('get_started', 'header', t('header.getStarted'));
     setIsMenuOpen(false);
     navigate(`/${i18n.language}/contact`);
+  };
+
+  const handleMobileMenuToggle = () => {
+    const newState = !isMenuOpen;
+    trackMobileMenuToggle(newState ? 'open' : 'close');
+    setIsMenuOpen(newState);
+  };
+
+  const handleNavigationClick = (linkName: string, destination: string) => {
+    trackNavigationClick(linkName, destination);
+    setIsMenuOpen(false);
+  };
+
+  const handleLoginClick = () => {
+    trackLoginClick('header');
   };
 
   const linkClasses = "text-[#0D1B2A] hover:text-[#1C7ED6] transition-colors font-medium cursor-pointer";
@@ -40,11 +57,29 @@ const Header = () => {
 
         {/* --- NAVEGACIÓN DE ESCRITORIO --- */}
         <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
-          <Link to={`/${i18n.language}/#before-after`} className={linkClasses}>{t('header.features')}</Link>
-          <Link to={`/${i18n.language}/#integrations`} className={linkClasses}>{t('header.integrations')}</Link>
-          
+          <Link
+            to={`/${i18n.language}/#before-after`}
+            className={linkClasses}
+            onClick={() => handleNavigationClick(t('header.features'), `/${i18n.language}/#before-after`)}
+          >
+            {t('header.features')}
+          </Link>
+          <Link
+            to={`/${i18n.language}/#integrations`}
+            className={linkClasses}
+            onClick={() => handleNavigationClick(t('header.integrations'), `/${i18n.language}/#integrations`)}
+          >
+            {t('header.integrations')}
+          </Link>
+
           {/* --- ENLACE AÑADIDO --- */}
-          <Link to={`/${i18n.language}/case-studies`} className={linkClasses}>{t('header.studyCase')}</Link>
+          <Link
+            to={`/${i18n.language}/case-studies`}
+            className={linkClasses}
+            onClick={() => handleNavigationClick(t('header.studyCase'), `/${i18n.language}/case-studies`)}
+          >
+            {t('header.studyCase')}
+          </Link>
           
           <div className="flex items-center gap-2">
             <button onClick={handleGetStartedClick} className={primaryButtonClasses}>
@@ -55,6 +90,7 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
               className={secondaryButtonClasses}
+              onClick={handleLoginClick}
             >
               {t('header.login')}
             </a>
@@ -65,7 +101,7 @@ const Header = () => {
 
         {/* Mobile Toggle */}
         <div className="md:hidden">
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
+          <button onClick={handleMobileMenuToggle} aria-label="Toggle menu">
             {isMenuOpen ? <X className="text-[#0D1B2A]" size={28} /> : <Menu className="text-[#0D1B2A]" size={28} />}
           </button>
         </div>
@@ -80,11 +116,29 @@ const Header = () => {
           >
             <nav className="px-4 py-6">
               <div className="flex flex-col space-y-4">
-                <Link to={`/${i18n.language}/#before-after`} onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>{t('header.features')}</Link>
-                <Link to={`/${i18n.language}/#integrations`} onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>{t('header.integrations')}</Link>
-                
+                <Link
+                  to={`/${i18n.language}/#before-after`}
+                  onClick={() => handleNavigationClick(t('header.features'), `/${i18n.language}/#before-after`)}
+                  className={mobileLinkClasses}
+                >
+                  {t('header.features')}
+                </Link>
+                <Link
+                  to={`/${i18n.language}/#integrations`}
+                  onClick={() => handleNavigationClick(t('header.integrations'), `/${i18n.language}/#integrations`)}
+                  className={mobileLinkClasses}
+                >
+                  {t('header.integrations')}
+                </Link>
+
                 {/* --- ENLACE AÑADIDO (MÓVIL) --- */}
-                <Link to={`/${i18n.language}/case-studies`} onClick={() => setIsMenuOpen(false)} className={mobileLinkClasses}>{t('header.studyCase')}</Link>
+                <Link
+                  to={`/${i18n.language}/case-studies`}
+                  onClick={() => handleNavigationClick(t('header.studyCase'), `/${i18n.language}/case-studies`)}
+                  className={mobileLinkClasses}
+                >
+                  {t('header.studyCase')}
+                </Link>
 
                 <div className="pt-4 mt-4 border-t border-slate-200 flex flex-col space-y-3">
                   <button onClick={handleGetStartedClick} className={`w-full py-3 ${primaryButtonClasses}`}>
@@ -95,7 +149,10 @@ const Header = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`w-full text-center py-3 ${secondaryButtonClasses}`}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() => {
+                      handleLoginClick();
+                      setIsMenuOpen(false);
+                    }}
                   >
                     {t('header.login')}
                   </a>

@@ -5,6 +5,7 @@ import { useConversation } from '@elevenlabs/react';
 import { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import AccumulatingTypingEffect, { PhraseWithEmoji } from './AccumulatingTypingEffect';
+import { trackAiWidgetOpen, trackAiWidgetClose } from '@/utils/dataLayer';
 
 const Hero = () => {
   const { t, i18n } = useTranslation();
@@ -25,9 +26,13 @@ const Hero = () => {
     setIsLoading(true);
     try {
       if (status === 'disconnected') {
+        // Track AI widget open
+        trackAiWidgetOpen('hero', 'elevenlabs_voice_agent');
         await navigator.mediaDevices.getUserMedia({ audio: true });
         await startSession({ agentId: 'agent_01jynm32kjf7rvq5857ggj51ew' });
       } else if (status === 'connected') {
+        // Track AI widget close
+        trackAiWidgetClose('hero', 'elevenlabs_voice_agent');
         await endSession();
       }
     } catch (error) {

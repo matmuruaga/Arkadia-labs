@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Linkedin, Twitter, Youtube, Instagram, Send, Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { trackSocialClick, trackNavigationClick, trackFormStart, trackFormSubmit, trackFormSuccess } from '@/utils/dataLayer';
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
@@ -13,6 +14,14 @@ const Footer = () => {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
+  const [newsletterStarted, setNewsletterStarted] = useState(false);
+
+  const handleNewsletterInteraction = () => {
+    if (!newsletterStarted) {
+      trackFormStart('newsletter_form', 'footer');
+      setNewsletterStarted(true);
+    }
+  };
 
   const handleNewsletterSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -21,24 +30,28 @@ const Footer = () => {
     setLoading(true);
     setMessage('');
 
+    // Track form submit
+    trackFormSubmit('newsletter_form', { formLocation: 'footer' });
+
     try {
-      const webhookUrl = 'https://n8n-elevaitelabs-u48215.vm.elestio.app/webhook/b8866b0b-beb2-4f71-b268-94a9663bfbc8'; // Reemplaza con tu URL
+      const webhookUrl = 'https://n8n-elevaitelabs-u48215.vm.elestio.app/webhook/b8866b0b-beb2-4f71-b268-94a9663bfbc8';
 
       const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        // --- CAMBIO AQUÍ ---
-        // Añadimos el nuevo campo 'formulario' al objeto que se envía
-        body: JSON.stringify({ 
-          email: email, 
-          formulario: 'footer' 
+        body: JSON.stringify({
+          email: email,
+          formulario: 'footer'
         }),
       });
 
       if (!response.ok) {
         throw new Error('Hubo un error al procesar tu solicitud.');
       }
-      
+
+      // Track form success
+      trackFormSuccess('newsletter_form', 'footer');
+
       setMessage('¡Gracias por suscribirte!');
       setEmail('');
 
@@ -47,6 +60,14 @@ const Footer = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleSocialClick = (platform: string, url: string) => {
+    trackSocialClick(platform, url, 'footer');
+  };
+
+  const handleNavigationClick = (linkName: string, destination: string) => {
+    trackNavigationClick(linkName, destination);
   };
 
   return (
@@ -60,27 +81,106 @@ const Footer = () => {
             </Link>
             <p className="text-gray-600 mb-6 text-sm">{t('footer.description')}</p>
             <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/company/elevaite-labs-io/" className={socialLinkClasses} aria-label={t('footer.social.linkedin')}><Linkedin size={20} /></a>
-              <a href="#" className={socialLinkClasses} aria-label={t('footer.social.twitter')}><Twitter size={20} /></a>
-              <a href="#" className={socialLinkClasses} aria-label={t('footer.social.youtube')}><Youtube size={20} /></a>
-              <a href="#" className={socialLinkClasses} aria-label={t('footer.social.instagram')}><Instagram size={20} /></a>
+              <a
+                href="https://www.linkedin.com/company/elevaite-labs-io/"
+                className={socialLinkClasses}
+                aria-label={t('footer.social.linkedin')}
+                onClick={() => handleSocialClick('linkedin', 'https://www.linkedin.com/company/elevaite-labs-io/')}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="#"
+                className={socialLinkClasses}
+                aria-label={t('footer.social.twitter')}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSocialClick('twitter', '#');
+                }}
+              >
+                <Twitter size={20} />
+              </a>
+              <a
+                href="#"
+                className={socialLinkClasses}
+                aria-label={t('footer.social.youtube')}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSocialClick('youtube', '#');
+                }}
+              >
+                <Youtube size={20} />
+              </a>
+              <a
+                href="#"
+                className={socialLinkClasses}
+                aria-label={t('footer.social.instagram')}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSocialClick('instagram', '#');
+                }}
+              >
+                <Instagram size={20} />
+              </a>
             </div>
           </div>
 
           <div>
             <h3 className="text-[#0D1B2A] font-semibold mb-4">{t('footer.headings.quickLinks')}</h3>
             <ul className="space-y-2">
-              <li><Link to={`/${currentLang}/#before-after`} className={navLinkClasses}>{t('footer.links.features')}</Link></li>
-              <li><Link to={`/${currentLang}/#testimonials`} className={navLinkClasses}>{t('footer.links.caseStudies')}</Link></li>
+              <li>
+                <Link
+                  to={`/${currentLang}/#before-after`}
+                  className={navLinkClasses}
+                  onClick={() => handleNavigationClick(t('footer.links.features'), `/${currentLang}/#before-after`)}
+                >
+                  {t('footer.links.features')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={`/${currentLang}/#testimonials`}
+                  className={navLinkClasses}
+                  onClick={() => handleNavigationClick(t('footer.links.caseStudies'), `/${currentLang}/#testimonials`)}
+                >
+                  {t('footer.links.caseStudies')}
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-[#0D1B2A] font-semibold mb-4">{t('footer.headings.legal')}</h3>
             <ul className="space-y-2">
-              <li><Link to={`/${currentLang}/privacy-policy`} className={navLinkClasses}>{t('footer.links.privacy')}</Link></li>
-              <li><Link to={`/${currentLang}/terms-and-conditions`} className={navLinkClasses}>{t('footer.links.terms')}</Link></li>
-              <li><Link to={`/${currentLang}/cookie-policy`} className={navLinkClasses}>{t('footer.links.cookies')}</Link></li>
+              <li>
+                <Link
+                  to={`/${currentLang}/privacy-policy`}
+                  className={navLinkClasses}
+                  onClick={() => handleNavigationClick(t('footer.links.privacy'), `/${currentLang}/privacy-policy`)}
+                >
+                  {t('footer.links.privacy')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={`/${currentLang}/terms-and-conditions`}
+                  className={navLinkClasses}
+                  onClick={() => handleNavigationClick(t('footer.links.terms'), `/${currentLang}/terms-and-conditions`)}
+                >
+                  {t('footer.links.terms')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={`/${currentLang}/cookie-policy`}
+                  className={navLinkClasses}
+                  onClick={() => handleNavigationClick(t('footer.links.cookies'), `/${currentLang}/cookie-policy`)}
+                >
+                  {t('footer.links.cookies')}
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -88,12 +188,13 @@ const Footer = () => {
             <h3 className="text-[#0D1B2A] font-semibold mb-4">{t('footer.headings.stayUpdated')}</h3>
             <form onSubmit={handleNewsletterSubmit}>
               <div className="relative mb-2">
-                <input 
+                <input
                   type="email"
                   placeholder={t('footer.newsletter.placeholder')}
                   className="w-full bg-white text-[#0D1B2A] rounded-full py-2.5 pl-4 pr-12 border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#1C7ED6] focus:border-[#1C7ED6]"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  onFocus={handleNewsletterInteraction}
                   required
                   disabled={loading}
                 />

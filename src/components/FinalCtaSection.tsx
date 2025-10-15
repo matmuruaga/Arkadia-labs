@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom'; // <-- 1. Importar useNavigate
+import { useNavigate } from 'react-router-dom';
+import { trackCtaClick } from '@/utils/dataLayer';
 
 const cyclingWordsData = [
   { textKey: "finalCta.cyclingWords.w1", colorClass: "from-[#1C7ED6] to-[#69DB7C]" },
@@ -26,8 +27,14 @@ const FinalCtaSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // 3. Crear una única función para manejar la navegación
-  const handleNavigateToContact = () => {
+  // 3. Crear funciones para manejar la navegación con tracking
+  const handlePrimaryCtaClick = () => {
+    trackCtaClick('get_started', 'final_cta_section', t('finalCta.primaryCta'));
+    navigate(`/${i18n.language}/contact`);
+  };
+
+  const handleSecondaryCtaClick = () => {
+    trackCtaClick('talk_to_us', 'final_cta_section', t('finalCta.secondaryCta'));
     navigate(`/${i18n.language}/contact`);
   };
 
@@ -82,16 +89,15 @@ const FinalCtaSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
-              {/* 4. Asignar la nueva función a ambos botones */}
               <button
-                onClick={handleNavigateToContact}
+                onClick={handlePrimaryCtaClick}
                 className="w-full sm:w-auto bg-[#1C7ED6] hover:bg-[#155CB0] text-white px-8 py-3.5 rounded-lg text-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-[#1C7ED6]/30 flex items-center justify-center gap-2"
               >
                 {t('finalCta.primaryCta')}
                 <ArrowRight size={20} strokeWidth={2.5}/>
               </button>
               <button
-                onClick={handleNavigateToContact}
+                onClick={handleSecondaryCtaClick}
                 className="w-full sm:w-auto border-2 border-[#0D1B2A]/30 hover:border-[#1C7ED6] text-[#0D1B2A] hover:text-[#1C7ED6] px-8 py-3.5 rounded-lg text-lg font-semibold transition-all duration-300 hover:bg-[#1C7ED6]/10 focus:outline-none focus:ring-4 focus:ring-[#1C7ED6]/20 flex items-center justify-center gap-2"
               >
                  <MessageCircle size={20} strokeWidth={2.5}/>

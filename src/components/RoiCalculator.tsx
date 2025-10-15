@@ -1,7 +1,8 @@
 // src/components/RoiCalculator.tsx
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next'; // 1. Importar
+import { trackRoiCalculatorStart, trackRoiPlanChange, trackRoiResults } from '@/utils/dataLayer';
 
 // 2. La data de los planes ahora usa claves de traducción para el nombre
 const plans = [
@@ -16,6 +17,7 @@ const RoiCalculator = () => {
   const [numReps, setNumReps] = useState(5);
   const [avgDealSize, setAvgDealSize] = useState(5000);
   const [monthlyLeads, setMonthlyLeads] = useState(100);
+  const [calculatorStarted, setCalculatorStarted] = useState(false);
 
   // La función de formato de moneda ahora se adapta al idioma
   const formatCurrency = (value: number) => {
@@ -29,15 +31,44 @@ const RoiCalculator = () => {
     if (!selectedPlan) return { revenueGain: 0, hoursSaved: 0, roi: 0 };
 
     const additionalLeads = monthlyLeads * selectedPlan.leadIncrease;
-    const additionalDeals = additionalLeads * 0.10; 
+    const additionalDeals = additionalLeads * 0.10;
     const revenueGain = additionalDeals * avgDealSize;
     const hoursSaved = numReps * selectedPlan.savedHoursPerRep;
     const savingsFromHours = hoursSaved * 50;
     const totalMonthlyGain = revenueGain + savingsFromHours;
     const roi = ((totalMonthlyGain - selectedPlan.cost) / selectedPlan.cost) * 100;
-    
+
     return { revenueGain, hoursSaved, roi };
   }, [selectedPlanId, numReps, avgDealSize, monthlyLeads]);
+
+  // Track when calculator interaction starts
+  const handleCalculatorInteraction = () => {
+    if (!calculatorStarted) {
+      trackRoiCalculatorStart(selectedPlanId);
+      setCalculatorStarted(true);
+    }
+  };
+
+  // Track plan changes
+  const handlePlanChange = (planId: string) => {
+    const selectedPlan = plans.find(p => p.id === planId);
+    if (selectedPlan) {
+      trackRoiPlanChange(t(selectedPlan.nameKey));
+    }
+    setSelectedPlanId(planId);
+  };
+
+  // Track ROI results when calculation changes
+  useEffect(() => {
+    if (calculatorStarted && calculation.roi > 0) {
+      trackRoiResults(
+        calculation.revenueGain,
+        calculation.hoursSaved,
+        calculation.roi,
+        selectedPlanId
+      );
+    }
+  }, [calculation.revenueGain, calculation.hoursSaved, calculation.roi, selectedPlanId, calculatorStarted]);
 
   return (
     <div className="bg-white p-6 md:p-10 rounded-2xl shadow-xl border border-slate-200">
@@ -49,7 +80,7 @@ const RoiCalculator = () => {
         {plans.map(plan => (
           <button
             key={plan.id}
-            onClick={() => setSelectedPlanId(plan.id)}
+            onClick={() => handlePlanChange(plan.id)}
             className={`px-4 py-2 rounded-full font-semibold transition-all w-full text-sm ${selectedPlanId === plan.id ? 'bg-[#1C7ED6] text-white shadow' : 'text-gray-600 hover:bg-slate-200'}`}
           >
             {t(plan.nameKey)}
@@ -61,17 +92,46 @@ const RoiCalculator = () => {
         <div className="space-y-6">
           <div>
             <label htmlFor="numReps" className="block text-sm font-medium text-gray-700">{t('roiCalculator.inputs.reps')}</label>
-            <input id="numReps" type="range" min="1" max="50" value={numReps} onChange={e => setNumReps(Number(e.target.value))} className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#1C7ED6]" />
+            <input
+              id="numReps"
+              type="range"
+              min="1"
+              max="50"
+              value={numReps}
+              onChange={e => setNumReps(Number(e.target.value))}
+              onFocus={handleCalculatorInteraction}
+              className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#1C7ED6]"
+            />
             <span className="text-lg font-bold text-[#1C7ED6]">{numReps}</span>
           </div>
           <div>
             <label htmlFor="avgDealSize" className="block text-sm font-medium text-gray-700">{t('roiCalculator.inputs.dealSize')}</label>
-            <input id="avgDealSize" type="range" min="500" max="50000" step="500" value={avgDealSize} onChange={e => setAvgDealSize(Number(e.target.value))} className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#1C7ED6]" />
+            <input
+              id="avgDealSize"
+              type="range"
+              min="500"
+              max="50000"
+              step="500"
+              value={avgDealSize}
+              onChange={e => setAvgDealSize(Number(e.target.value))}
+              onFocus={handleCalculatorInteraction}
+              className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#1C7ED6]"
+            />
             <span className="text-lg font-bold text-[#1C7ED6]">{formatCurrency(avgDealSize)}</span>
           </div>
           <div>
             <label htmlFor="monthlyLeads" className="block text-sm font-medium text-gray-700">{t('roiCalculator.inputs.leads')}</label>
-            <input id="monthlyLeads" type="range" min="10" max="2000" step="10" value={monthlyLeads} onChange={e => setMonthlyLeads(Number(e.target.value))} className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#1C7ED6]" />
+            <input
+              id="monthlyLeads"
+              type="range"
+              min="10"
+              max="2000"
+              step="10"
+              value={monthlyLeads}
+              onChange={e => setMonthlyLeads(Number(e.target.value))}
+              onFocus={handleCalculatorInteraction}
+              className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#1C7ED6]"
+            />
             <span className="text-lg font-bold text-[#1C7ED6]">{monthlyLeads}</span>
           </div>
         </div>

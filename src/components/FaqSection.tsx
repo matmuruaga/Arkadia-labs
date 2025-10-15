@@ -2,7 +2,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import { useTranslation } from 'react-i18next'; // 1. Importar
+import { useTranslation } from 'react-i18next';
+import { trackFaqToggle } from '@/utils/dataLayer';
 
 // 2. La data ahora solo contiene los IDs y las claves de traducción
 const faqData = [
@@ -14,10 +15,18 @@ const faqData = [
 ];
 
 const FaqSection = () => {
-  const { t } = useTranslation(); // 3. Inicializar hook
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
+    const isOpening = activeIndex !== index;
+    const faq = faqData[index];
+
+    if (isOpening) {
+      // Track FAQ expansion
+      trackFaqToggle(t(faq.questionKey), 'open');
+    }
+
     setActiveIndex(activeIndex === index ? null : index);
   };
 
