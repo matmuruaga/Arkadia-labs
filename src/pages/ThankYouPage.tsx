@@ -1,23 +1,20 @@
 // src/pages/ThankYouPage.tsx
-import { useState, useRef } from 'react'; // 1. Importamos useRef
+import { useRef } from 'react'; // 1. Importamos useRef
 import { Link, useParams } from 'react-router-dom';
-import { PopupModal } from 'react-calendly';
 import { useTranslation } from 'react-i18next';
 import { CheckCircle, Calendar, ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
+import CalScheduler from '@/components/CalScheduler';
 
 export const ThankYouPage = () => {
   const { t } = useTranslation();
   const { lang } = useParams<{ lang: string }>();
   const homeUrl = `/${lang || 'es'}`;
-  const [isOpen, setIsOpen] = useState(false);
-  // const calendlyUrl = "https://calendly.com/karel-elevaitelabs"; // HIDDEN - Karel's Calendly URL
-  const calendlyUrl = ""; // Temporarily disabled
 
-  // 2. Creamos una referencia para la sección de agendamiento
+  // Creamos una referencia para la sección de agendamiento
   const scheduleSectionRef = useRef<HTMLElement>(null);
 
-  // 3. Creamos una función para manejar el scroll suave
+  // Creamos una función para manejar el scroll suave
   const handleScrollToSchedule = () => {
     scheduleSectionRef.current?.scrollIntoView({
       behavior: 'smooth',
@@ -98,37 +95,17 @@ export const ThankYouPage = () => {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 {t('thankYouPage.cta.description')}
               </p>
-              <button
-                onClick={() => setIsOpen(true)}
-                disabled={true}
-                className="bg-gray-400 text-white font-bold text-lg rounded-lg px-8 py-4 flex items-center gap-3 cursor-not-allowed opacity-60 shadow-lg"
-                title="Temporarily unavailable"
-              >
-                <Calendar className="h-6 w-6" />
-                {t('thankYouPage.cta.button')}
-              </button>
+              <CalScheduler
+                buttonText={t('thankYouPage.cta.button')}
+                buttonClassName="bg-[#1C7ED6] hover:bg-[#1971C2] text-white font-bold text-lg rounded-lg px-8 py-4 flex items-center gap-3 shadow-lg transition-colors"
+                namespace="30min"
+                calLink="karel-duchon-arkadialabs/30min"
+                layout="month_view"
+              />
             </motion.div>
           </div>
         </div>
       </section>
-      
-      <PopupModal
-        url={calendlyUrl}
-        onModalClose={() => setIsOpen(false)}
-        open={isOpen}
-        rootElement={document.getElementById("root") || document.body}
-        pageSettings={{
-            backgroundColor: 'ffffff',
-            hideEventTypeDetails: false,
-            hideLandingPageDetails: false,
-            primaryColor: '00a2ff',
-            textColor: '4d5055'
-        }}
-        onEventScheduled={(e) => {
-            console.log('Reunión Agendada:', e.data.payload);
-            setIsOpen(false);
-        }}
-      />
 
       <footer className="text-center py-12 bg-white">
         <Link to={homeUrl} className="text-base text-gray-500 hover:text-blue-600 hover:underline transition-colors">

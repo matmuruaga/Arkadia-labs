@@ -11,6 +11,13 @@
     <title>Arkadia Labs | AI Agents to Automate Your Business</title>
     <meta name="description" content="Arkadia Labs creates intelligent AI agents that help companies automate and optimize their processes for faster, smarter growth." />
     <meta name="google" content="notranslate" />
+
+    <!-- Preload de recursos críticos para reducir delay de carga -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="/locales/en/translation.json" as="fetch" crossorigin>
+    <link rel="preload" href="/locales/es/translation.json" as="fetch" crossorigin>
+
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -32,6 +39,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   </head>
   <body>
+    <!-- Script para aplicar fondo antes de que React monte - elimina FOUC -->
+    <script>
+      (function() {
+        // No hay páginas con fondo oscuro por ahora
+        // Get Started y Contact usan imagen de fondo degradado
+        const darkPageRoutes = [];
+        const currentPath = window.location.pathname;
+        const isDarkPage = darkPageRoutes.some(route => currentPath.includes(route));
+        if (isDarkPage) {
+          document.body.classList.add('dark-page');
+        }
+      })();
+    </script>
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNF4SGHF"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

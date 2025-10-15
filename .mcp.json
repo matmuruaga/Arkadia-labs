@@ -7,6 +7,14 @@
           "mcp-remote",
           "https://gtm-mcp.stape.ai/mcp"
         ]
-      }
+      },
+      "context7": {
+        "command": "npx",
+        "args": ["-y", "@upstash/context7-mcp", "--api-key", "ctx7sk-46e47b02-cd70-47e1-b4ed-fdbc10ab8a55"]
+      },
+      "chrome-devtools": {
+      "command": "npx",
+      "args": ["chrome-devtools-mcp@latest"]
+    }
     }
   }
