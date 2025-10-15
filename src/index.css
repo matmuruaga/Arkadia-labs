@@ -44,6 +44,12 @@ body {
   /* Asegúrate de que el color de texto por defecto tenga buen contraste con el fondo claro */
 }
 
+/* Clase para páginas con fondo oscuro - elimina el flash de pantalla blanca */
+body.dark-page {
+  background-color: #0C0F3F;
+  color: white;
+}
+
 /* ... (tus clases .gradient-text, .neon-border, etc., podrían necesitar ajustes de color si se usan sobre fondos claros) ... */
 /* Por ejemplo, tu .gradient-text actual está pensado para texto claro sobre fondo oscuro. */
 /* Si lo usas en el tema claro, podría necesitar un fondo degradado oscuro o colores diferentes. */
@@ -352,4 +358,67 @@ elevenlabs-convai {
   background-clip: text;
   color: transparent;
   display: inline-block; /* Asegura que el gradiente se aplique correctamente */
+}
+
+/* =============================================== */
+/* Liquid Glass Effect for Header Navigation      */
+/* iOS-style glassmorphism with capsule shape     */
+/* Enhanced with distortion and transparency      */
+/* =============================================== */
+.glass-nav-pill {
+  position: relative;
+  isolation: isolate; /* Create stacking context */
+
+  /* More transparent tinted background to see through better */
+  background: rgba(241, 243, 245, 0.45);
+
+  /* Subtle border with gradient for definition */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  /* Enhanced shadows for more depth and elevation */
+  box-shadow:
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.9),    /* Top highlight */
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.05),         /* Bottom shadow */
+    0 8px 32px rgba(0, 0, 0, 0.12),                 /* Outer shadow for elevation */
+    0 2px 8px rgba(0, 0, 0, 0.08);                  /* Subtle close shadow */
+
+  /* Smooth transitions */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Fallback for browsers without backdrop-filter support */
+  @supports not (backdrop-filter: blur(30px)) {
+    background: rgba(241, 243, 245, 0.92);
+  }
+}
+
+/* Pseudo-element for backdrop blur with distortion - behind content */
+.glass-nav-pill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px; /* Match parent's rounded-full */
+  z-index: -1;
+
+  /* Enhanced backdrop blur effect for more pronounced glass */
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+
+  /* SVG filter for liquid distortion effect - only on background */
+  filter: url(#liquid-glass-distortion);
+  -webkit-filter: url(#liquid-glass-distortion);
+}
+
+/* Enhanced glass effect on scroll for more depth */
+.glass-nav-pill.scrolled {
+  background: rgba(241, 243, 245, 0.55);
+  box-shadow:
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.08),
+    0 12px 40px rgba(0, 0, 0, 0.16),
+    0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.glass-nav-pill.scrolled::before {
+  backdrop-filter: blur(35px) saturate(200%);
+  -webkit-backdrop-filter: blur(35px) saturate(200%);
 }

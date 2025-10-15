@@ -13,6 +13,16 @@ const Header = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
+  // Detectar si estamos en una página con hero oscuro
+  const isDarkHeroPage = () => {
+    const path = window.location.pathname;
+    return path.includes('/integrations') ||
+           path.includes('/contact') ||
+           path.includes('/get-started');
+  };
+
+  const [hasDarkHero] = useState(isDarkHeroPage());
+
   useEffect(() => {
     const handleScroll = () => setScrolling(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
@@ -48,59 +58,96 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      scrolling ? "bg-[#F1F3F5]/80 backdrop-blur-md border-b border-slate-200 shadow-sm" : "bg-transparent"
+      hasDarkHero || scrolling ? "" : "bg-transparent"
     }`}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-        <Link to={`/${i18n.language}`} aria-label="Go to homepage">
-            <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt="Arkadia Labs Logo" className="h-8 w-auto"/>
-        </Link>
+      {/* SVG Filter for liquid glass distortion effect */}
+      <svg className="absolute" width="0" height="0" style={{ position: 'absolute' }}>
+        <defs>
+          <filter id="liquid-glass-distortion" x="-50%" y="-50%" width="200%" height="200%">
+            {/* Turbulence for noise/distortion */}
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.012 0.008"
+              numOctaves="3"
+              seed="2"
+              result="turbulence"
+            />
+            {/* Displacement map for distortion effect */}
+            <feDisplacementMap
+              in="SourceGraphic"
+              in2="turbulence"
+              scale="8"
+              xChannelSelector="R"
+              yChannelSelector="G"
+              result="displacement"
+            />
+            {/* Slight blur to smooth the distortion */}
+            <feGaussianBlur in="displacement" stdDeviation="0.5" result="blur" />
+            {/* Composite back with original for subtle effect */}
+            <feComposite in="blur" in2="SourceGraphic" operator="atop" />
+          </filter>
+        </defs>
+      </svg>
 
-        {/* --- NAVEGACIÓN DE ESCRITORIO --- */}
-        <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
-          <Link
-            to={`/${i18n.language}/#before-after`}
-            className={linkClasses}
-            onClick={() => handleNavigationClick(t('header.features'), `/${i18n.language}/#before-after`)}
-          >
-            {t('header.features')}
-          </Link>
-          <Link
-            to={`/${i18n.language}/#integrations`}
-            className={linkClasses}
-            onClick={() => handleNavigationClick(t('header.integrations'), `/${i18n.language}/#integrations`)}
-          >
-            {t('header.integrations')}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
+        {/* --- DESKTOP: Cápsula completa con logo + navegación --- */}
+        <div className={`hidden md:flex items-center justify-between glass-nav-pill rounded-full px-6 py-3 ${
+          scrolling ? 'scrolled' : ''
+        }`}>
+          <Link to={`/${i18n.language}`} aria-label="Go to homepage">
+              <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt="Arkadia Labs Logo" className="h-8 w-auto"/>
           </Link>
 
-          {/* --- ENLACE AÑADIDO --- */}
-          <Link
-            to={`/${i18n.language}/case-studies`}
-            className={linkClasses}
-            onClick={() => handleNavigationClick(t('header.studyCase'), `/${i18n.language}/case-studies`)}
-          >
-            {t('header.studyCase')}
-          </Link>
-          
-          <div className="flex items-center gap-2">
-            <button onClick={handleGetStartedClick} className={primaryButtonClasses}>
-              {t('header.getStarted')}
-            </button>
-            <a
-              href="https://app.arkadialabs.io"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={secondaryButtonClasses}
-              onClick={handleLoginClick}
+          <nav className="flex items-center space-x-4 lg:space-x-6">
+            <Link
+              to={`/${i18n.language}/#before-after`}
+              className={linkClasses}
+              onClick={() => handleNavigationClick(t('header.features'), `/${i18n.language}/#before-after`)}
             >
-              {t('header.login')}
-            </a>
-          </div>
+              {t('header.features')}
+            </Link>
+            <Link
+              to={`/${i18n.language}/#integrations`}
+              className={linkClasses}
+              onClick={() => handleNavigationClick(t('header.integrations'), `/${i18n.language}/#integrations`)}
+            >
+              {t('header.integrations')}
+            </Link>
 
-          <LanguageSwitcher />
-        </nav>
+            {/* --- ENLACE AÑADIDO --- */}
+            <Link
+              to={`/${i18n.language}/case-studies`}
+              className={linkClasses}
+              onClick={() => handleNavigationClick(t('header.studyCase'), `/${i18n.language}/case-studies`)}
+            >
+              {t('header.studyCase')}
+            </Link>
 
-        {/* Mobile Toggle */}
-        <div className="md:hidden">
+            <div className="flex items-center gap-2">
+              <button onClick={handleGetStartedClick} className={primaryButtonClasses}>
+                {t('header.getStarted')}
+              </button>
+              <a
+                href="https://app.arkadialabs.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={secondaryButtonClasses}
+                onClick={handleLoginClick}
+              >
+                {t('header.login')}
+              </a>
+            </div>
+
+            <LanguageSwitcher />
+          </nav>
+        </div>
+
+        {/* --- MOBILE: Layout original --- */}
+        <div className="md:hidden flex justify-between items-center">
+          <Link to={`/${i18n.language}`} aria-label="Go to homepage">
+              <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt="Arkadia Labs Logo" className="h-8 w-auto"/>
+          </Link>
+
           <button onClick={handleMobileMenuToggle} aria-label="Toggle menu">
             {isMenuOpen ? <X className="text-[#0D1B2A]" size={28} /> : <Menu className="text-[#0D1B2A]" size={28} />}
           </button>
