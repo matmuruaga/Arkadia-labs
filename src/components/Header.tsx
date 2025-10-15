@@ -142,18 +142,20 @@ const Header = () => {
           </nav>
         </div>
 
-        {/* --- MOBILE: Cápsula glass con logo + hamburguesa --- */}
-        <div className={`md:hidden flex justify-between items-center glass-nav-pill rounded-full px-6 py-3 ${
-          scrolling ? 'scrolled' : ''
-        }`}>
-          <Link to={`/${i18n.language}`} aria-label="Go to homepage">
-              <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt="Arkadia Labs Logo" className="h-8 w-auto"/>
-          </Link>
+        {/* --- MOBILE: Solo visible cuando el menú está cerrado --- */}
+        {!isMenuOpen && (
+          <div className={`md:hidden flex justify-between items-center glass-nav-pill rounded-full px-6 py-3 ${
+            scrolling ? 'scrolled' : ''
+          }`}>
+            <Link to={`/${i18n.language}`} aria-label="Go to homepage">
+                <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt="Arkadia Labs Logo" className="h-8 w-auto"/>
+            </Link>
 
-          <button onClick={handleMobileMenuToggle} aria-label="Toggle menu">
-            {isMenuOpen ? <X className="text-[#0D1B2A]" size={28} /> : <Menu className="text-[#0D1B2A]" size={28} />}
-          </button>
-        </div>
+            <button onClick={handleMobileMenuToggle} aria-label="Toggle menu">
+              <Menu className="text-[#0D1B2A]" size={28} />
+            </button>
+          </div>
+        )}
       </div>
 
       <AnimatePresence>
@@ -161,9 +163,21 @@ const Header = () => {
           <motion.div
             initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }}
-            className="md:hidden"
+            className="md:hidden px-4"
           >
-            <nav className="mx-4 my-3 glass-nav-pill rounded-3xl px-4 py-6 border border-slate-200/50">
+            {/* Menú glass completo con logo, navegación y botón cerrar */}
+            <nav className="glass-nav-pill rounded-3xl px-6 py-6">
+              {/* Header del menú con logo y X */}
+              <div className="flex justify-between items-center mb-6 pb-4 border-b border-slate-200/30">
+                <Link to={`/${i18n.language}`} aria-label="Go to homepage" onClick={() => setIsMenuOpen(false)}>
+                    <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt="Arkadia Labs Logo" className="h-8 w-auto"/>
+                </Link>
+                <button onClick={handleMobileMenuToggle} aria-label="Close menu">
+                  <X className="text-[#0D1B2A]" size={28} />
+                </button>
+              </div>
+
+              {/* Contenido del menú */}
               <div className="flex flex-col space-y-4">
                 <Link
                   to={`/${i18n.language}/#before-after`}
