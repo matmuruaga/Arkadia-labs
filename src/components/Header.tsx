@@ -124,8 +124,13 @@ const Header = () => {
             </Link>
 
             <div className="flex items-center gap-2">
-              <button onClick={handleGetStartedClick} className={primaryButtonClasses}>
-                {t('header.getStarted')}
+              <button
+                onClick={handleGetStartedClick}
+                className="relative bg-[#1C7ED6] text-white hover:bg-[#155CB0] h-[42px] px-6 py-2.5 rounded-full font-semibold transition-all duration-300 overflow-hidden
+                  shadow-[0_0_6px_rgba(0,0,0,0.03),0_2px_6px_rgba(0,0,0,0.08),inset_3px_3px_0.5px_-3px_rgba(0,0,0,0.4),inset_-3px_-3px_0.5px_-3px_rgba(0,0,0,0.4),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.3),inset_-1px_-1px_1px_-0.5px_rgba(255,255,255,0.3),inset_0_0_6px_6px_rgba(255,255,255,0.08)]
+                  hover:shadow-[0_0_8px_rgba(0,0,0,0.05),0_4px_12px_rgba(0,0,0,0.1),inset_3px_3px_0.5px_-3px_rgba(0,0,0,0.5),inset_-3px_-3px_0.5px_-3px_rgba(0,0,0,0.5),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.4),inset_-1px_-1px_1px_-0.5px_rgba(255,255,255,0.4),inset_0_0_8px_8px_rgba(255,255,255,0.1)]"
+              >
+                <span className="relative z-10">{t('header.getStarted')}</span>
               </button>
               <a
                 href="https://app.arkadialabs.io"
@@ -204,8 +209,13 @@ const Header = () => {
                 </Link>
 
                 <div className="pt-4 mt-4 border-t border-slate-200 flex flex-col space-y-3">
-                  <button onClick={handleGetStartedClick} className={`w-full py-3 ${primaryButtonClasses}`}>
-                      {t('header.getStarted')}
+                  <button
+                    onClick={handleGetStartedClick}
+                    className="relative w-full bg-[#1C7ED6] text-white hover:bg-[#155CB0] h-[48px] rounded-full font-semibold transition-all duration-300 overflow-hidden
+                      shadow-[0_0_6px_rgba(0,0,0,0.03),0_2px_6px_rgba(0,0,0,0.08),inset_3px_3px_0.5px_-3px_rgba(0,0,0,0.4),inset_-3px_-3px_0.5px_-3px_rgba(0,0,0,0.4),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.3),inset_-1px_-1px_1px_-0.5px_rgba(255,255,255,0.3),inset_0_0_6px_6px_rgba(255,255,255,0.08)]
+                      hover:shadow-[0_0_8px_rgba(0,0,0,0.05),0_4px_12px_rgba(0,0,0,0.1),inset_3px_3px_0.5px_-3px_rgba(0,0,0,0.5),inset_-3px_-3px_0.5px_-3px_rgba(0,0,0,0.5),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.4),inset_-1px_-1px_1px_-0.5px_rgba(255,255,255,0.4),inset_0_0_8px_8px_rgba(255,255,255,0.1)]"
+                  >
+                    <span className="relative z-10">{t('header.getStarted')}</span>
                   </button>
                   <a
                     href="https://app.arkadialabs.io"
