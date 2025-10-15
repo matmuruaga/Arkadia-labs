@@ -142,8 +142,10 @@ const Header = () => {
           </nav>
         </div>
 
-        {/* --- MOBILE: Layout original --- */}
-        <div className="md:hidden flex justify-between items-center">
+        {/* --- MOBILE: Cápsula glass con logo + hamburguesa --- */}
+        <div className={`md:hidden flex justify-between items-center glass-nav-pill rounded-full px-6 py-3 ${
+          scrolling ? 'scrolled' : ''
+        }`}>
           <Link to={`/${i18n.language}`} aria-label="Go to homepage">
               <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt="Arkadia Labs Logo" className="h-8 w-auto"/>
           </Link>
@@ -159,9 +161,9 @@ const Header = () => {
           <motion.div
             initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }}
-            className="md:hidden bg-[#F1F3F5] border-t border-slate-300 shadow-lg"
+            className="md:hidden"
           >
-            <nav className="px-4 py-6">
+            <nav className="mx-4 my-3 glass-nav-pill rounded-3xl px-4 py-6 border border-slate-200/50">
               <div className="flex flex-col space-y-4">
                 <Link
                   to={`/${i18n.language}/#before-after`}
