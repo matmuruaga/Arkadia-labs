@@ -23,11 +23,17 @@ if (typeof window !== 'undefined' && !window.dataLayer) {
 
 /**
  * Generic function to push events to dataLayer
+ * In development mode, logs events to console for debugging
+ * In production mode, silently pushes to dataLayer without console output
  */
 const pushToDataLayer = (eventData: Record<string, any>) => {
   if (typeof window !== 'undefined' && window.dataLayer) {
     window.dataLayer.push(eventData);
-    console.log('GA4 Event:', eventData); // For debugging - remove in production if needed
+
+    // Only log in development mode
+    if (import.meta.env.DEV) {
+      console.log('GA4 Event:', eventData);
+    }
   }
 };
 
