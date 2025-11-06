@@ -16,7 +16,7 @@ const CaseStudyChallenge: React.FC<Props> = ({ data, studyKey }) => {
   const { t } = useTranslation(); // <-- 3. Inicializar
 
   return (
-    <section className="bg-gray-50 py-24">
+    <section className="bg-gray-50 py-12 md:py-20">
       <div className="container mx-auto px-4">
 
         {/* --- Parte 1: The Challenge --- */}

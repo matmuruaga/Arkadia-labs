@@ -35,8 +35,11 @@ const CaseStudyIntro: React.FC<Props> = ({ client, challenge, studyKey }) => {
 
   if (!client || !challenge) return null;
 
+  // Detectar si usa estructura antigua (details array) o nueva (campos directos)
+  const hasDetailsArray = client.details && client.details.length > 0;
+
   return (
-    <section className="bg-gray-100 py-24">
+    <section className="bg-gray-100 py-12 md:py-20">
       <div className="container mx-auto px-4">
         
         <motion.div 
@@ -88,7 +91,7 @@ const CaseStudyIntro: React.FC<Props> = ({ client, challenge, studyKey }) => {
             transition={{ duration: 1, delay: 0.5 }}
           />
           
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-12"
             variants={containerVariants}
             initial="hidden"
@@ -96,19 +99,85 @@ const CaseStudyIntro: React.FC<Props> = ({ client, challenge, studyKey }) => {
             viewport={{ once: true, delay: 0.6 }}
           >
             <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
-              {client.details.map((detail, index) => (
-                <motion.div key={index} variants={itemVariants}>
-                  <div className="flex items-center gap-3 mb-2">
-                    <Icon name={detail.icon as any} className="h-6 w-6 text-slate-400" />
-                    <h4 className="text-sm font-semibold text-slate-500 tracking-wider uppercase">
-                      {t(`caseStudies.${studyKey}.client.details.${index}.label`, detail.label)}
-                    </h4>
-                  </div>
-                  <p className="text-lg font-semibold text-slate-800">
-                    {t(`caseStudies.${studyKey}.client.details.${index}.value`, detail.value)}
-                  </p>
-                </motion.div>
-              ))}
+              {hasDetailsArray ? (
+                // Estructura antigua: usar client.details array
+                client.details!.map((detail, index) => (
+                  <motion.div key={index} variants={itemVariants}>
+                    <div className="flex items-center gap-3 mb-2">
+                      <Icon name={detail.icon as any} className="h-6 w-6 text-slate-400" />
+                      <h4 className="text-sm font-semibold text-slate-500 tracking-wider uppercase">
+                        {t(`caseStudies.${studyKey}.client.details.${index}.label`, detail.label)}
+                      </h4>
+                    </div>
+                    <p className="text-lg font-semibold text-slate-800">
+                      {t(`caseStudies.${studyKey}.client.details.${index}.value`, detail.value)}
+                    </p>
+                  </motion.div>
+                ))
+              ) : (
+                // Estructura nueva: usar campos directos
+                <>
+                  {/* Industry */}
+                  {client.industry && (
+                    <motion.div variants={itemVariants}>
+                      <div className="flex items-center gap-3 mb-2">
+                        <Icon name="Building2" className="h-6 w-6 text-slate-400" />
+                        <h4 className="text-sm font-semibold text-slate-500 tracking-wider uppercase">
+                          {t('case_study.industry', 'Industry')}
+                        </h4>
+                      </div>
+                      <p className="text-lg font-semibold text-slate-800">
+                        {client.industry}
+                      </p>
+                    </motion.div>
+                  )}
+
+                  {/* Deal Size */}
+                  {client.dealSize && (
+                    <motion.div variants={itemVariants}>
+                      <div className="flex items-center gap-3 mb-2">
+                        <Icon name="DollarSign" className="h-6 w-6 text-slate-400" />
+                        <h4 className="text-sm font-semibold text-slate-500 tracking-wider uppercase">
+                          {t('case_study.deal_size', 'Deal Size')}
+                        </h4>
+                      </div>
+                      <p className="text-lg font-semibold text-slate-800">
+                        {client.dealSize}
+                      </p>
+                    </motion.div>
+                  )}
+
+                  {/* Sales Team */}
+                  {client.salesTeam && (
+                    <motion.div variants={itemVariants}>
+                      <div className="flex items-center gap-3 mb-2">
+                        <Icon name="Users" className="h-6 w-6 text-slate-400" />
+                        <h4 className="text-sm font-semibold text-slate-500 tracking-wider uppercase">
+                          {t('case_study.sales_team', 'Sales Team')}
+                        </h4>
+                      </div>
+                      <p className="text-lg font-semibold text-slate-800">
+                        {client.salesTeam}
+                      </p>
+                    </motion.div>
+                  )}
+
+                  {/* Target Market */}
+                  {client.targetMarket && (
+                    <motion.div variants={itemVariants}>
+                      <div className="flex items-center gap-3 mb-2">
+                        <Icon name="Target" className="h-6 w-6 text-slate-400" />
+                        <h4 className="text-sm font-semibold text-slate-500 tracking-wider uppercase">
+                          {t('case_study.target_market', 'Target Market')}
+                        </h4>
+                      </div>
+                      <p className="text-lg font-semibold text-slate-800">
+                        {client.targetMarket}
+                      </p>
+                    </motion.div>
+                  )}
+                </>
+              )}
             </div>
 
             {/* --- SECCIÓN DE BULLETS MEJORADA --- */}

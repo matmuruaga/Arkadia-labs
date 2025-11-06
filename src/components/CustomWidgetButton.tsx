@@ -3,17 +3,20 @@ import { Bot } from 'lucide-react';
 import { useElevenLabsWidget } from './ElevenLabsWidgetContext';
 
 export const CustomWidgetButton = () => {
-  // Ahora también obtenemos el estado 'isReady'
-  const { toggleConversation, isReady } = useElevenLabsWidget();
+  // Obtenemos estado y función para precargar
+  const { toggleConversation, isReady, isLoading, preloadScript } = useElevenLabsWidget();
 
   return (
     <button
       onClick={toggleConversation}
+      onMouseEnter={preloadScript} // Precargar script en hover para UX instantánea
+      onTouchStart={preloadScript} // Precargar en touch para móviles
       aria-label="Toggle AI agent conversation"
-      // Si el widget no está listo, el botón estará deshabilitado y ligeramente transparente
-      disabled={!isReady}
       className="group fixed bottom-10 left-1/2 -translate-x-1/2 z-50 flex h-16 w-16 items-center justify-center transition-opacity duration-300"
-      style={{ opacity: isReady ? 1 : 0.5, cursor: isReady ? 'pointer' : 'not-allowed' }}
+      style={{
+        opacity: isLoading ? 0.7 : isReady ? 1 : 0.9,
+        cursor: 'pointer'
+      }}
     >
       {/* El efecto de pulso solo se muestra cuando el botón está listo */}
       {isReady && (

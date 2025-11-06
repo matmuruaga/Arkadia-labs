@@ -1,24 +1,29 @@
 // src/App.tsx
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
 
-// Componentes y Páginas
+// Componentes críticos (no lazy - necesarios para render inicial)
 import ScrollToTop from "./components/ScrollToTop";
 import LanguageHandler from "./components/LanguageHandler";
 import Layout from "./components/Layout";
 import LoadingScreen from "./components/LoadingScreen";
+
+// Lazy loading de páginas para code splitting y mejor performance
+// MainPage se carga de forma normal porque es la ruta principal
 import MainPage from "./pages/MainPage";
-import PricingPage from "./pages/PricingPage";
-import GetStarted from "./pages/GetStarted";
-import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
-import TermsPage from "./pages/TermsPage";
-import CookiePolicyPage from "./pages/CookiePolicyPage";
-import LegalNoticePage from "./pages/LegalNoticePage";
-import { ContactPage } from './pages/ContactPage';
-import { ThankYouPage } from './pages/ThankYouPage';
-import { IntegrationsPage } from './pages/IntegrationsPage';
-import  CaseStudyPage  from './pages/CaseStudyPage';
-import CaseStudiesIndexPage from './pages/CaseStudiesIndexPage';
+
+// Todas las demás páginas se cargan bajo demanda (lazy)
+const PricingPage = lazy(() => import("./pages/PricingPage"));
+const GetStarted = lazy(() => import("./pages/GetStarted"));
+const PrivacyPolicyPage = lazy(() => import("./pages/PrivacyPolicyPage"));
+const TermsPage = lazy(() => import("./pages/TermsPage"));
+const CookiePolicyPage = lazy(() => import("./pages/CookiePolicyPage"));
+const LegalNoticePage = lazy(() => import("./pages/LegalNoticePage"));
+const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
+const ThankYouPage = lazy(() => import('./pages/ThankYouPage').then(m => ({ default: m.ThankYouPage })));
+const IntegrationsPage = lazy(() => import('./pages/IntegrationsPage').then(m => ({ default: m.IntegrationsPage })));
+const CaseStudyPage = lazy(() => import('./pages/CaseStudyPage'));
+const CaseStudiesIndexPage = lazy(() => import('./pages/CaseStudiesIndexPage'));
 
 
 /**

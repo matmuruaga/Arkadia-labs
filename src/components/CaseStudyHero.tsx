@@ -42,16 +42,16 @@ const CaseStudyHero: React.FC<Props> = ({ data, studyKey }) => {
   const yContent = useTransform(scrollYProgress, [0, 1], ['0%', '-20%']);
   
   return (
-    <section ref={targetRef} className="relative min-h-screen bg-gradient-to-br from-orange-100 via-purple-100 to-blue-200 overflow-hidden">
-      
+    <section ref={targetRef} className="relative bg-gradient-to-br from-orange-100 via-purple-100 to-blue-200 overflow-hidden py-12 md:py-20">
+
       <motion.div
         className="absolute inset-0 z-0 hidden md:block"
         style={{ y: yBg, opacity: opacityBg }}
       />
-      
-      <motion.div 
+
+      <motion.div
         style={{ y: window.innerWidth >= 768 ? yContent : 0 }}
-        className="relative z-10 flex flex-col items-center justify-center container mx-auto px-4 text-center h-full pt-28 pb-20"
+        className="relative z-10 flex flex-col items-center justify-center container mx-auto px-4 text-center pt-16 md:pt-24 pb-16"
       >
         <motion.div 
           className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-1.5 rounded-full shadow-md mb-6"
@@ -116,9 +116,9 @@ const CaseStudyHero: React.FC<Props> = ({ data, studyKey }) => {
           ))}
         </motion.div>
 
-        <motion.a 
+        <motion.a
             href="#CaseStudyIntro"
-            className="absolute bottom-1 left-1/2 -translate-x-1/2"
+            className="mt-12 md:mt-16"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}

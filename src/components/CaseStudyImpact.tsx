@@ -45,7 +45,7 @@ const CaseStudyImpact: React.FC<Props> = ({ data }) => {
   if (!data) return null;
 
   return (
-    <section className="bg-gray-900 py-24">
+    <section className="bg-gray-900 py-12 md:py-20">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white">{data.title}</h2>

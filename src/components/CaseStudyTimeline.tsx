@@ -13,7 +13,7 @@ const CaseStudyTimeline: React.FC<Props> = ({ data, studyKey }) => {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-gray-50 py-24 overflow-x-hidden"> {/* Añadido overflow-x-hidden por seguridad */}
+    <section className="bg-gray-50 py-12 md:py-20 overflow-x-hidden"> {/* Añadido overflow-x-hidden por seguridad */}
       <div className="container mx-auto px-4">
         <div className="text-center max-w-4xl mx-auto mb-20">
           <motion.div

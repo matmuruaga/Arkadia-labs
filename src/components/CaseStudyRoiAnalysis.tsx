@@ -48,7 +48,7 @@ const CaseStudyRoiAnalysis: React.FC<Props> = ({ data, studyKey }) => {
   if (!data) return null;
 
   return (
-    <section className="bg-gray-50 py-24">
+    <section className="bg-gray-50 py-12 md:py-20">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-2 rounded-full shadow-md">

@@ -6,6 +6,7 @@ import { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import AccumulatingTypingEffect, { PhraseWithEmoji } from './AccumulatingTypingEffect';
 import { trackAiWidgetOpen, trackAiWidgetClose } from '@/utils/dataLayer';
+import OptimizedImage from './OptimizedImage';
 
 const Hero = () => {
   const { t, i18n } = useTranslation();
@@ -111,9 +112,12 @@ const Hero = () => {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#1C7ED6] to-[#D0BFFF] opacity-60 blur-lg animate-pulse-slow -z-10"></div>
             )}
             <div className="w-full h-full bg-[#0D1B2A] rounded-full flex items-center justify-center">
-                <img 
+                <OptimizedImage
                     src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1752395276/IMG_5938_bo87kh.png"
                     alt={t('hero.voice.altMascot')}
+                    width={64}
+                    height={64}
+                    priority={true}
                     className={`w-16 h-16 object-cover rounded-full transition-transform duration-300 ${isSessionActive ? 'scale-110' : 'scale-100 group-hover:scale-105'}`}
                 />
             </div>

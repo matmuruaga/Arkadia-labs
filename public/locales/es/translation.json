@@ -1330,6 +1330,162 @@
         { "title": "Factor de Escalabilidad", "description": "El sistema de IA escala infinitamente en ubicaciones internacionales sin gastos generales de gestión adicionales." }
       ]
     }
+  },
+  "elsa-consulting": {
+    "hero": {
+      "title": "Cómo Transformamos las *Operaciones de Ventas* de ELSA Consulting con una Plataforma de Inteligencia de IA Completa",
+      "subtitle": "Caso de estudio estratégico: ELSA Consulting logró tasas de respuesta 3.5x más altas en 2 meses, aumentó la eficiencia en un 80% y ahorró más de €3,461 con el sistema completo de inteligencia de ventas con IA de ContactIQ - desde la validación de contactos hasta la sincronización con el CRM.",
+      "kpis": [
+        { "label": "ROI en 2 Meses" },
+        { "label": "Aumento de Tasa de Respuesta" },
+        { "label": "Tiempo Ahorrado" }
+      ]
+    },
+    "client": {
+      "client_overview_title": "RESUMEN DEL CLIENTE",
+      "name": "ELSA Consulting",
+      "tagline": "Agencia de Ventas",
+      "description": "Agencia de consultoría de ventas con sede en Barcelona especializada en generación de leads outbound y optimización de ventas B2B para empresas de mercado medio en España y mercados LATAM."
+    },
+    "challenge": {
+      "beforeTitle": "Antes de la Implementación de ContactIQ",
+      "points": [
+        "Solo 7% de tasa de respuesta en llamadas en frío (promedio de la industria)",
+        "BDRs desperdiciando 93 de 100 llamadas en números inválidos/sin respuesta",
+        "Costo de equipo de €57.69/hora quemándose en listas de leads no calificados sin inteligencia de conversación"
+      ]
+    },
+    "challengeSection": {
+      "title": "El Desafío",
+      "subtitle": "ELSA Consulting enfrentaba desafíos operativos críticos que limitaban su eficiencia de ventas y potencial de crecimiento en el competitivo mercado B2B.",
+      "challenges": [
+        {
+          "title": "Pérdida Masiva de Tiempo",
+          "description": "El equipo BDR pasaba 75-80% de su día llamando a números inválidos, buzones de voz y contactos desconectados sin forma de precalificar listas.",
+          "impact": "Baja productividad del equipo"
+        },
+        {
+          "title": "Calidad de Contacto Impredecible",
+          "description": "Sin sistema estandarizado para validar qué contactos realmente responderían, generando problemas de generación de pipeline inconsistente y pronósticos.",
+          "impact": "Pipeline de ventas no confiable"
+        },
+        {
+          "title": "Sin Inteligencia de Conversación",
+          "description": "Cero visibilidad sobre calidad de llamadas, sentimiento o qué realmente funcionaba. Toma de notas manual desperdiciaba tiempo, y sin sincronización CRM significaba seguimientos perdidos y contexto perdido.",
+          "impact": "Oportunidades de ingresos perdidas"
+        }
+      ],
+      "coreProblem": {
+        "title": "El Problema Principal",
+        "quote": "Necesitábamos un ecosistema completo de inteligencia de ventas con IA que pudiera validar contactos antes de llamarlos, analizar la calidad de conversación en tiempo real, generar scripts ganadores automáticamente y sincronizar todo con nuestro CRM sin trabajo manual. La prospección manual y toma de notas estaba matando nuestra eficiencia y moral del equipo.",
+        "author": "Calixto Carbone, Fundador y CEO de ELSA Consulting"
+      }
+    },
+    "solution": {
+      "title": "La Solución ContactIQ",
+      "subtitle": "Plataforma Completa de Inteligencia de Leads con IA - Sistema integral impulsado por IA que valida contactos antes de la llamada, analiza conversaciones durante la llamada, genera scripts ganadores automáticamente y sincroniza todo con tu CRM - sin trabajo manual.",
+      "implementation": {
+        "title": "Implementación Estratégica de IA",
+        "description": "Aprovechando 12 años de experiencia en ventas y metodologías probadas al escalar 3 startups desde pre-seed hasta Serie A, desarrollamos un sistema completo de inteligencia de ventas con IA cubriendo el viaje completo de prospección a cierre.",
+        "features": [
+          {
+            "title": "Validación e Inteligencia Pre-Llamada",
+            "description": "El sistema de IA llama automáticamente a listas completas de contactos (1000+ leads), valida números, detecta buzones de voz, analiza sentimiento y puntúa cada contacto del 0-9 según calidad de engagement - todo antes de que tus BDRs hagan una sola llamada."
+          },
+          {
+            "title": "Generación de Scripts y Transcripción con IA",
+            "description": "Genera automáticamente guiones ideales basados en análisis de sentimiento de llamadas de validación, luego transcribe y resume cada llamada BDR con detección de emociones (feliz, frustrado, interesado) y extracción de puntos clave."
+          },
+          {
+            "title": "Sincronización CRM Sin Intervención",
+            "description": "Cada llamada, transcripción, puntaje de sentimiento y tarea de seguimiento se sincroniza automáticamente a Salesforce/HubSpot. Sin registro manual, sin notas perdidas, historial completo de conversación accesible instantáneamente para todo el equipo."
+          }
+        ]
+      },
+      "coreFunctions": {
+        "title": "Funciones Principales de ContactIQ",
+        "functions": [
+          "Validación y Puntuación de Contactos (0-9)",
+          "Análisis de Sentimiento y Emoción",
+          "Guiones de Conversación Generados por IA",
+          "Transcripción y Resúmenes de Llamadas",
+          "Sincronización Automática con CRM"
+        ]
+      }
+    },
+    "timeline": {
+      "title": "Cronograma de Implementación",
+      "subtitle": "Despliegue rápido con optimización continua",
+      "phases": [
+        {
+          "title": "Mes 1: Desarrollo de Plataforma",
+          "description": "Plataforma completa de inteligencia de ventas con IA construida: motor de validación de contactos, sistema de análisis de sentimiento, generador de scripts, pipeline de transcripción de llamadas y conectores CRM integrados con la instancia de Salesforce de ELSA."
+        },
+        {
+          "title": "Mes 2: Pruebas y Optimización",
+          "description": "Programa piloto con lote de prueba de 5,000 contactos, algoritmos de puntuación refinados y plantillas de scripts basadas en patrones reales de respuesta y datos de sentimiento, equipo BDR entrenado en nuevo flujo asistido por IA con registro automático en CRM."
+        },
+        {
+          "title": "Mes 3: Despliegue Completo y Resultados",
+          "description": "Lanzamiento completo de plataforma en todas las campañas outbound con mejora inmediata de 3.5x en tasa de respuesta, cero toma de notas manual, 80% de ahorro de tiempo en prospección y ROI medible en los primeros 60 días."
+        }
+      ]
+    },
+    "impact": {
+      "title": "Impacto Medible",
+      "subtitle": "Resultados transformacionales entregados en 2 meses",
+      "kpis": [
+        {
+          "label": "Tasa de Respuesta",
+          "subLabel": "Desde el 7% promedio de la industria"
+        },
+        {
+          "label": "Contactos Válidos",
+          "subLabel": "Números funcionales identificados"
+        },
+        {
+          "label": "Múltiplo de ROI",
+          "subLabel": "En 60 días"
+        },
+        {
+          "label": "Tiempo Ahorrado",
+          "subLabel": "En actividades de prospección"
+        }
+      ]
+    },
+    "roiAnalysis": {
+      "title": "Análisis de ROI",
+      "subtitle": "Evaluación completa del impacto financiero",
+      "calculator": {
+        "title": "Inversión vs Ahorro de Costos",
+        "items": [
+          { "label": "Costo de Equipo BDR de 3 Personas" },
+          { "label": "Inversión en Plataforma ContactIQ" },
+          { "label": "Ahorro de Costos (2 meses)" }
+        ],
+        "finalRoi": { "label": "Logrado en 2 meses" }
+      },
+      "benefits": [
+        {
+          "title": "Eficiencia de Costos",
+          "description": "La inversión en plataforma de IA representa solo el 15% de los costos de personal, mientras entrega una mejora de rendimiento de 3.5x y elimina toda la toma de notas manual y entrada de datos en CRM."
+        },
+        {
+          "title": "Aceleración de Ingresos",
+          "description": "Tasa de respuesta 3.5x más alta + scripts optimizados por IA + enriquecimiento automático de CRM = generación de pipeline más rápida, tasas de reserva más altas y mejor ejecución de seguimientos."
+        },
+        {
+          "title": "Captura de Conocimiento Institucional",
+          "description": "Cada llamada transcrita y analizada construye una biblioteca de lo que funciona. Los nuevos BDRs se adaptan 3x más rápido usando scripts de mejores prácticas generados por IA de los mejores representantes."
+        }
+      ]
+    },
+    "testimonial": {
+      "quote": "ContactIQ transformó cómo opera nuestro equipo BDR. En lugar de quemar cientos de llamadas sin salida cada día, ahora están teniendo conversaciones reales con prospectos calificados usando scripts generados por IA que realmente funcionan. La transcripción automática y sincronización CRM eliminó toda la toma de notas manual - nuestro equipo pasó de gastar 20 minutos por llamada en trabajo administrativo a cero. Cuando sabes que la próxima llamada llegará a un humano Y tienes el script perfecto listo, todo cambia.",
+      "author": "Calixto Carbone",
+      "role": "Fundador y CEO",
+      "company": "ELSA Consulting"
+    }
   }
 },
  "case_studies_index": {

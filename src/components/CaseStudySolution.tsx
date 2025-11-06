@@ -17,8 +17,8 @@ const CaseStudySolution: React.FC<Props> = ({ data, studyKey }) => {
   const backgroundImageUrl = 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1751365219/liquid_gradient_component_IA_1_shkjpf.jpg';
 
   return (
-    <section 
-      className="relative py-24 bg-cover bg-center bg-no-repeat"
+    <section
+      className="relative py-12 md:py-20 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5)), url(${backgroundImageUrl})` }}
     >
       <div className="container mx-auto px-4">
