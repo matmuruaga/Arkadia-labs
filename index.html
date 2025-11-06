@@ -59,6 +59,14 @@
         background-color: #F1F3F5;
         color: #0D1B2A;
         -webkit-font-smoothing: antialiased;
+        /* Performance: Enable hardware acceleration */
+        transform: translateZ(0);
+      }
+
+      /* CSS Containment - Optimize rendering performance */
+      section {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 500px;
       }
 
       /* Hero section critical styles */

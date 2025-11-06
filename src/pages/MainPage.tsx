@@ -1,17 +1,21 @@
 // src/pages/MainPage.tsx
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
-// Ya no se importa Layout aquí
+
+// Critical components - Load immediately (above the fold)
 import Hero from "../components/Hero";
-import WhyArkadia from "../components/WhyArkadia";
-import KpiSection from "../components/KpiSection";
 import BeforeAfterSection from "../components/BeforeAfterSection";
-import IntegrationsSection from "../components/IntegrationsSection";
-import AnimatedSeparator from "../components/AnimatedSeparator";
-import TestimonialsSection from "../components/TestimonialsSection";
-import FaqSection from "../components/FaqSection";
-import FinalCtaSection from "../components/FinalCtaSection";
+import KpiSection from "../components/KpiSection";
+
+// Below-the-fold components - Lazy load for better initial performance
+const WhyArkadia = lazy(() => import("../components/WhyArkadia"));
+const IntegrationsSection = lazy(() => import("../components/IntegrationsSection"));
+const AnimatedSeparator = lazy(() => import("../components/AnimatedSeparator"));
+const TestimonialsSection = lazy(() => import("../components/TestimonialsSection"));
+const FaqSection = lazy(() => import("../components/FaqSection"));
+const FinalCtaSection = lazy(() => import("../components/FinalCtaSection"));
+
 import { trackPageView } from '@/utils/dataLayer';
 
 const MainPage = () => {
@@ -23,17 +27,21 @@ const MainPage = () => {
   }, [location.pathname, i18n.language]);
 
   return (
-    // Ya no se necesita el componente <Layout> aquí
     <>
+      {/* Critical above-the-fold content - loaded immediately */}
       <Hero />
       <BeforeAfterSection />
       <KpiSection />
-      <WhyArkadia />
-      <IntegrationsSection />
-      <AnimatedSeparator />
-      <TestimonialsSection />
-      <FaqSection />
-      <FinalCtaSection />
+
+      {/* Below-the-fold content - lazy loaded for better initial performance */}
+      <Suspense fallback={<div className="h-20" />}>
+        <WhyArkadia />
+        <IntegrationsSection />
+        <AnimatedSeparator />
+        <TestimonialsSection />
+        <FaqSection />
+        <FinalCtaSection />
+      </Suspense>
     </>
   );
 };
