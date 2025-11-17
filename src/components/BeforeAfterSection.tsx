@@ -1,5 +1,5 @@
 // src/components/BeforeAfterSection.tsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useRef, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
@@ -10,16 +10,38 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+// Optimized hook with debouncing to prevent excessive re-renders
 const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState({
     width: typeof window !== 'undefined' ? window.innerWidth : 0,
   });
+
+  const rafRef = useRef<number | null>(null);
+
   useEffect(() => {
-    function handleResize() { setWindowSize({ width: window.innerWidth }); }
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
+    const handleResize = () => {
+      // Cancel previous RAF if it exists
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+      }
+
+      // Schedule update for next frame
+      rafRef.current = requestAnimationFrame(() => {
+        setWindowSize({ width: window.innerWidth });
+      });
+    };
+
+    window.addEventListener("resize", handleResize, { passive: true });
+    handleResize(); // Initial call
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+      }
+    };
   }, []);
+
   return windowSize;
 };
 
@@ -38,9 +60,10 @@ const contentKeysBySegment = {
 };
 
 // --- SUB-COMPONENTE PARA LA TARJETA "ANTES" ---
-const BeforeCard = ({ t, activeSegment }) => (
+// Memoized to prevent unnecessary re-renders when parent re-renders
+const BeforeCard = memo(({ t, activeSegment }: { t: any; activeSegment: string }) => (
   // SOLUCIÓN 1: Se añade 'flex flex-col' para que el contenido se estire
-  <motion.div 
+  <motion.div
     className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-200 h-full flex flex-col"
     initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}
   >
@@ -49,10 +72,10 @@ const BeforeCard = ({ t, activeSegment }) => (
     <ul className="space-y-5 flex flex-col flex-grow">
       <AnimatePresence mode="wait">
         {contentKeysBySegment[activeSegment].map((itemKey, index) => (
-          <motion.li 
-            key={`${activeSegment}-${itemKey}`} 
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} 
-            transition={{ duration: 0.2, delay: index * 0.1 }} 
+          <motion.li
+            key={`${activeSegment}-${itemKey}`}
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            transition={{ duration: 0.2, delay: index * 0.1 }}
             // SOLUCIÓN 1: Cada elemento de la lista crece para alinearse
             className="flex items-start gap-4 flex-grow"
           >
@@ -69,10 +92,12 @@ const BeforeCard = ({ t, activeSegment }) => (
       </AnimatePresence>
     </ul>
   </motion.div>
-);
+));
+BeforeCard.displayName = 'BeforeCard';
 
 // --- SUB-COMPONENTE PARA LA TARJETA "DESPUÉS" ---
-const AfterCard = ({ t, activeSegment }) => (
+// Memoized to prevent unnecessary re-renders when parent re-renders
+const AfterCard = memo(({ t, activeSegment }: { t: any; activeSegment: string }) => (
   // SOLUCIÓN 1: Se añade 'flex flex-col'
   <motion.div className="bg-white p-6 md:p-8 rounded-2xl shadow-xl border-2 border-[#1C7ED6] h-full flex flex-col"
     initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} >
@@ -81,9 +106,9 @@ const AfterCard = ({ t, activeSegment }) => (
     <ul className="space-y-5 flex flex-col flex-grow">
       <AnimatePresence mode="wait">
         {contentKeysBySegment[activeSegment].map((itemKey, index) => (
-          <motion.li 
-            key={`${activeSegment}-${itemKey}`} 
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} 
+          <motion.li
+            key={`${activeSegment}-${itemKey}`}
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             transition={{ duration: 0.2, delay: index * 0.1 }}
             // SOLUCIÓN 1: Cada elemento de la lista crece para alinearse
             className="flex items-start gap-4 flex-grow"
@@ -101,7 +126,8 @@ const AfterCard = ({ t, activeSegment }) => (
       </AnimatePresence>
     </ul>
   </motion.div>
-);
+));
+AfterCard.displayName = 'AfterCard';
 
 
 const BeforeAfterSection = () => {

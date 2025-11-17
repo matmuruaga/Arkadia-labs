@@ -50,32 +50,54 @@ const WhyArkadia = () => {
             ))}
           </div>
 
-          {/* --- COLUMNA DERECHA RECONSTRUIDA --- */}
-          {/* 1. El contenedor ahora tiene una altura mínima para evitar que se colapse */}
-          <div className="lg:w-2/3 min-h-[500px]">
-            {/* 2. AnimatePresence ahora usa 'mode="wait"' para una transición limpia */}
-            <AnimatePresence mode="wait">
+          {/* --- COLUMNA DERECHA - Crossfade fluido entre imágenes --- */}
+          <div className="lg:w-2/3 relative">
+            <AnimatePresence initial={false}>
               {activeStepData && (
                 <motion.div
                   key={activeStepData.id}
-                  // 3. Ya no es 'absolute'. Está en el flujo normal del documento.
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -15 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute inset-0"
                 >
                   <div className="bg-[#F1F3F5] rounded-xl shadow-xl overflow-hidden">
-                    <div className="aspect-w-16 aspect-h-9 bg-gray-200">
-                      <img src={activeStepData.imageUrl} alt={t(activeStepData.titleKey)} className="w-full h-full object-cover"/>
+                    {/* Imagen con aspect ratio fijo */}
+                    <div className="relative w-full bg-gray-200" style={{ paddingBottom: '56.25%' }}>
+                      <img
+                        src={activeStepData.imageUrl}
+                        alt={t(activeStepData.titleKey)}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        loading="eager"
+                      />
                     </div>
+                    {/* Contenido del texto */}
                     <div className="p-6 md:p-8">
-                      <h3 className="text-2xl font-semibold mb-3" style={{color: activeStepData.themeColor}}>{t(activeStepData.titleKey)}</h3>
-                      <p className="text-[#0D1B2A]/80 leading-relaxed">{t(activeStepData.descriptionKey)}</p>
+                      <h3 className="text-2xl font-semibold mb-3" style={{color: activeStepData.themeColor}}>
+                        {t(activeStepData.titleKey)}
+                      </h3>
+                      <p className="text-[#0D1B2A]/80 leading-relaxed">
+                        {t(activeStepData.descriptionKey)}
+                      </p>
                     </div>
                   </div>
                 </motion.div>
               )}
             </AnimatePresence>
+            {/* Spacer para mantener la altura mientras las imágenes hacen crossfade */}
+            <div className="invisible">
+              <div className="bg-[#F1F3F5] rounded-xl shadow-xl overflow-hidden">
+                <div className="relative w-full bg-gray-200" style={{ paddingBottom: '56.25%' }}></div>
+                <div className="p-6 md:p-8">
+                  <h3 className="text-2xl font-semibold mb-3">Placeholder</h3>
+                  <p className="text-[#0D1B2A]/80 leading-relaxed">Placeholder text</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

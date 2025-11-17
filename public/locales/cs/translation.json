@@ -1,0 +1,1755 @@
+{
+  "languageCode": "cs",
+  "header": {
+    "features": "Případy použití",
+    "plans": "Ceník",
+    "integrations": "Integrace",
+    "studyCase": "Případové studie",
+    "getStarted": "Začít",
+    "login": "Přihlásit se"
+  },
+  "hero": {
+    "title_part1": "Adaptivní AI systémy:",
+    "title_part2": "které šetří čas a generují příjmy.",
+    "subtitle": "Automatizujte obchodní procesy a dosahujte vynikající efektivity s AI řešeními na míru.",
+    "phrases": {
+      "p1": "Marketingový agent podporující růst...",
+      "p2": "Automatizační agent zefektivňující úkoly...",
+      "p3": "Recepční agent spravující dotazy...",
+      "p4": "Prodejní AI asistent posilující obchody...",
+      "p5": "Podpůrný AI agent zlepšující zákaznickou zkušenost...",
+      "p6": "Agent pro analýzu dat odhalující příležitosti..."
+    },
+    "voice": {
+      "ariaLabel": "Přepnout AI agenta",
+      "altMascot": "Maskot AI agenta",
+      "caption": "Pojďme si promluvit"
+    },
+    "disclaimer": "Pro použití hlasového agenta je vyžadován mikrofon ve vašem počítači a udělení přístupu. Hovory jsou nahrávány pro účely kontroly kvality a odstraněny do 30 dnů. Používáním této ukázky souhlasíte s našimi <terms>Podmínkami použití</terms> a našimi <privacy>Zásadami ochrany osobních údajů</privacy>. Pro nejlepší kvalitu zvuku doporučujeme používat Chrome."
+  },
+  "beforeAfter": {
+    "title": "Transformace Arkadia: Před a po",
+    "subtitle": "Vyberte oddělení a zjistěte, jak naši AI agenti na míru překonávají tradiční nástroje a zvyšují vaši provozní efektivitu.",
+    "challengeTitle": "Manuální výzva",
+    "solutionTitle": "Řešení Arkadia",
+    "cta": "Začněte automatizovat nyní",
+    "tabs": {
+      "sales": "Prodej",
+      "marketing": "Marketing",
+      "operations": "Provoz",
+      "support": "Podpora",
+      "hr": "HR a nábor"
+    },
+    "content": {
+      "sales": {
+        "s1": {
+          "beforeTitle": "Černá díra průzkumu potenciálních klientů",
+          "beforeDescription": "Obchodníci tráví 3+ hodin vyhledáváním základních informací na Googlu a přehlížejí 90% spouštěčů rozhodnutí a kritických nákupních signálů.",
+          "afterTitle": "AI inteligence pro potenciální klienty",
+          "afterDescription": "Naše AI provádí hloubkový výzkum během minut a nachází přesuny vedoucích pracovníků, kola financování a momenty 'proč právě teď'."
+        },
+        "s2": {
+          "beforeTitle": "Hřbitov studených kontaktů",
+          "beforeDescription": "80% potenciálních klientů vychladne po pouhých 3 dotycích kvůli zapomenutému kontextu a nekonzistentnímu sdělení.",
+          "afterTitle": "AI vzkříšení kontaktů",
+          "afterDescription": "Automatizované 15-dotykové sekvence s dokonalou pamětí pečují o obchody po dobu 6+ měsíců bez lidského zásahu."
+        },
+        "s3": {
+          "beforeTitle": "Létání naslepo v prodejních hovorech",
+          "beforeDescription": "Obchodníci často přehlédnou klíčové námitky a konkurenční informace během živých hovorů, čímž ohrožují důležité obchody.",
+          "afterTitle": "AI koučování prodeje v reálném čase",
+          "afterDescription": "Získejte živé bojové karty a osvědčené odpovědi na námitky našeptávané do ucha během každého prodejního hovoru."
+        },
+        "s4": {
+          "beforeTitle": "Obchody uvízlé v očistci CRM",
+          "beforeDescription": "Manuální řízení prodejního pipeline vede k zaseknutým obchodům a čtvrtletním revizím, když je již příliš pozdě jednat.",
+          "afterTitle": "AI motor pro akceleraci obchodů",
+          "afterDescription": "Získejte okamžité upozornění, když potenciální klienti navštíví cenové stránky, s automatizovanými návrhy dalších kroků."
+        },
+        "s5": {
+          "beforeTitle": "Čas strávený výzkumem kontaktů",
+          "beforeDescription": "Vaši obchodníci tráví více času výzkumem potenciálních klientů na různých platformách než vlastním jednáním s nimi.",
+          "afterTitle": "Okamžité obohacení kontaktů",
+          "afterDescription": "Agent okamžitě obohacuje všechny vaše kontakty o firemní data, sociální profily a další klíčové informace."
+        }
+      },
+      "marketing": {
+        "m1": {
+          "beforeTitle": "Černá díra průzkumu potenciálních klientů",
+          "beforeDescription": "Marketéři hodiny zkoumají cílové skupiny a přehlížejí 90% mikrosegmentů a signálů kupujících s vysokým záměrem.",
+          "afterTitle": "AI mikrosegmentace",
+          "afterDescription": "AI identifikuje a cílí na hyperpřesné segmenty s nejrelevantnějším sdělením pro vyšší potenciál konverze."
+        },
+        "m2": {
+          "beforeTitle": "Obecné cílení kampaní",
+          "beforeDescription": "Kampaně cílící na široké segmenty vedou k velmi nízkým mírám konverze a výrazně promarněným reklamním výdajům.",
+          "afterTitle": "Optimalizace kampaní v reálném čase",
+          "afterDescription": "Naše AI průběžně optimalizuje vaše kampaně napříč všemi kanály, maximalizuje ROI a minimalizuje reklamní výdaje."
+        },
+        "m3": {
+          "beforeTitle": "Úzké hrdlo tvorby obsahu",
+          "beforeDescription": "Obsahové týmy bojují s termíny a vytvářejí obecné texty pro reklamy, e-maily a příspěvky na sociálních sítích.",
+          "afterTitle": "AI asistovaná tvorba obsahu",
+          "afterDescription": "Generujte kvalitní první návrhy textů, e-mailových kampaní a příspěvků na sociální sítě během několika sekund s konzistencí značky."
+        },
+        "m4": {
+          "beforeTitle": "Atribuce kampaní na základě odhadů",
+          "beforeDescription": "Je téměř nemožné vědět, které marketingové aktivity skutečně generují příjmy a ROI.",
+          "afterTitle": "Jasná ROI analýza v reálném čase",
+          "afterDescription": "Sledujte každý dotykový bod s AI atribučními modely, které poskytují jasný pohled na marketingové ROI v reálném čase."
+        },
+        "m5": {
+          "beforeTitle": "Statické e-mailové kampaně",
+          "beforeDescription": "Všichni uživatelé dostávají stejnou e-mailovou kampaň bez ohledu na jejich konkrétní chování nebo úroveň zapojení.",
+          "afterTitle": "Dynamické a adaptivní e-mailové cesty",
+          "afterDescription": "AI spouští unikátní e-mailové cesty, které se v reálném čase přizpůsobují na základě individuálních akcí a zapojení uživatelů."
+        }
+      },
+      "operations": {
+        "o1": {
+          "beforeTitle": "Úzká hrdla procesů a manuální workflow",
+          "beforeDescription": "Týmy plýtvají hodinami na opakujících se úkolech, manuálním zadávání dat a nepropojených workflow, které zpomalují obchodní rychlost.",
+          "afterTitle": "Inteligentní automatizace procesů",
+          "afterDescription": "AI orchestruje složité workflow napříč více systémy, eliminuje manuální předávání a zrychluje obchodní rychlost."
+        },
+        "o2": {
+          "beforeTitle": "Datová sila a integrační chaos",
+          "beforeDescription": "Kritická obchodní data uvězněná v nepropojených systémech téměř znemožňují rozhodování v reálném čase.",
+          "afterTitle": "Provozní inteligence v reálném čase",
+          "afterDescription": "AI poskytuje okamžité přehledy o úzkých hrdlech výkonu a příležitostech s jednotným přehledem dat napříč všemi systémy."
+        },
+        "o3": {
+          "beforeTitle": "Slepá místa plánování zdrojů",
+          "beforeDescription": "Špatná viditelnost kapacity, využití a metrik výkonu vede k neefektivní alokaci zdrojů.",
+          "afterTitle": "Prediktivní optimalizace zdrojů",
+          "afterDescription": "AI předpovídá vzorce poptávky a optimalizuje alokaci zdrojů pro maximalizaci efektivity a minimalizaci plýtvání."
+        },
+        "o4": {
+          "beforeTitle": "Mezery v dodržování předpisů a kontrole kvality",
+          "beforeDescription": "Manuální audity a kontroly kvality vedou k chybám, zpožděním a potenciálním rizikům dodržování předpisů.",
+          "afterTitle": "Automatizované monitorování dodržování předpisů",
+          "afterDescription": "AI zajišťuje nepřetržitou kontrolu kvality a dodržování předpisů s automatizovanými audity a upozorněními v reálném čase."
+        },
+        "o5": {
+          "beforeTitle": "Neefektivní alokace zdrojů",
+          "beforeDescription": "Manuální přiřazování úkolů a zdrojů často vede k nevyváženému pracovnímu vytížení a kritickým zpožděním projektů.",
+          "afterTitle": "AI plánování zdrojů",
+          "afterDescription": "Inteligentně přidělujte všechny své zdroje na základě dostupnosti, dovedností a priority pro maximální efektivitu."
+        }
+      },
+      "support": {
+        "su1": {
+          "beforeTitle": "Přetížené podpůrné týmy",
+          "beforeDescription": "Agenti tráví 70% času odpovídáním na opakující se dotazy, což vede k dlouhým čekacím dobám a frustrovaným zákazníkům.",
+          "afterTitle": "AI asistent první linky",
+          "afterDescription": "AI okamžitě řeší 80% běžných dotazů 24/7, uvolňuje agenty pro složité problémy a kriticky snižuje čekací doby."
+        },
+        "su2": {
+          "beforeTitle": "Nekonzistentní zkušenosti zákazníků",
+          "beforeDescription": "Kvalita podpory se liší podle agenta, směny a úrovně energie, což vede k nespolehlivé zákaznické zkušenosti.",
+          "afterTitle": "Konzistentní excelentní podpora",
+          "afterDescription": "AI zajišťuje stejnou kvalitu odpovědí 24/7 s dokonalou znalostí značky a tónu napříč všemi interakcemi."
+        },
+        "su3": {
+          "beforeTitle": "Ztracené znalosti a kontext",
+          "beforeDescription": "Kritické informace o zákaznících jsou rozptýleny napříč e-maily, lístky a hovorů, což vyžaduje opakované dotazy.",
+          "afterTitle": "Jednotný pohled na zákazníka",
+          "afterDescription": "AI okamžitě přistupuje k celé historii zákazníka napříč všemi kanály a poskytuje personalizovanou podporu s dokonalou pamětí."
+        },
+        "su4": {
+          "beforeTitle": "Reaktivní management problémů",
+          "beforeDescription": "Týmy čekají na stížnosti zákazníků místo identifikace a řešení problémů před jejich eskalací.",
+          "afterTitle": "Proaktivní prevence problémů",
+          "afterDescription": "AI identifikuje vzorce naznačující potenciální problémy a automaticky aktivuje preventivní opatření před dopadem na zákazníky."
+        },
+        "su5": {
+          "beforeTitle": "Pomalé doby vyřešení",
+          "beforeDescription": "Agenti tráví hodiny hledáním správných odpovědí v databázích znalostí a interní dokumentaci.",
+          "afterTitle": "Okamžité přesné odpovědi",
+          "afterDescription": "AI agenti poskytují přesné odpovědi během sekund s relevantními odkazy na dokumentaci a navrhovanými dalšími kroky."
+        }
+      },
+      "hr": {
+        "h1": {
+          "beforeTitle": "Manuální screening CV",
+          "beforeDescription": "HR týmy tráví hodiny čtením CV, přehlížejí kvalifikované kandidáty a vkládají nevědomé předsudky do procesu.",
+          "afterTitle": "AI screening kandidátů",
+          "afterDescription": "AI analyzuje tisíce CV během minut, identifikuje nejlepší shody na základě dovedností a zkušeností a eliminuje předsudky."
+        },
+        "h2": {
+          "beforeTitle": "Nekonzistentní pohovory",
+          "beforeDescription": "Kvalita pohovoru se liší podle tazatele, což vede k subjektivnímu hodnocení a potenciálně zmeškaným talentům.",
+          "afterTitle": "Standardizované hodnocení pohovorů",
+          "afterDescription": "AI poskytuje konzistentní rámce hodnocení a zaznamenává klíčové informace pro spravedlivější, datově podložená rozhodnutí o najímání."
+        },
+        "h3": {
+          "beforeTitle": "Pomalý nábor",
+          "beforeDescription": "Průměrná doba zaplnění pozice je 42 dní, během nichž špičkoví kandidáti akceptují jiné nabídky.",
+          "afterTitle": "Zrychlený proces náboru",
+          "afterDescription": "AI automatizuje plánování, komunikaci a následné kroky, snižuje čas zaplnění o 60% a zajišťuje nejlepší talenty."
+        },
+        "h4": {
+          "beforeTitle": "Špatná zkušenost kandidátů",
+          "beforeDescription": "Kandidáti čelí dlouhým čekacím dobám, neosobní komunikaci a nejasným dalším krokům během procesu náboru.",
+          "afterTitle": "Vynikající zkušenost kandidátů",
+          "afterDescription": "AI zajišťuje okamžité odpovědi, personalizovanou komunikaci a průhledné aktualizace, které zvyšují míru přijetí nabídky."
+        },
+        "h5": {
+          "beforeTitle": "Omezený talent pool",
+          "beforeDescription": "Recruitéři spoléhají na tradiční jobové desky a sítě, přehlížejí 85% pasivních kandidátů otevřených novým příležitostem.",
+          "afterTitle": "AI vyhledávání talentů",
+          "afterDescription": "AI identifikuje a oslovuje kvalifikované pasivní kandidáty napříč platformami, dramaticky rozšiřuje váš talent pool."
+        }
+      }
+    }
+  },
+  "useCases": {
+    "title": "Případy použití",
+    "subtitle": "AI řešení navržená pro každé oddělení",
+    "viewDetails": "Zobrazit podrobnosti",
+    "overview": "Přehled",
+    "details": "Podrobnosti",
+    "cases": {
+      "sales": {
+        "name": "AI Prodejní Agent",
+        "tagline": "Výkonné AI pro generování a konverzi potenciálních klientů",
+        "description": "Automatizujte svůj prodejní pipeline s AI agentem, který kvalifikuje, obohacuje a angažuje potenciální klienty 24/7. Zvyšuje míry konverze až o 300%.",
+        "keyFeatures": "Klíčové funkce",
+        "features": [
+          {
+            "title": "Automatizované generování potenciálních klientů",
+            "description": "AI neustále vyhledává a kvalifikuje potenciální klienty na základě vašeho ideálního zákaznického profilu napříč více kanály a datovými zdroji."
+          },
+          {
+            "title": "Inteligentní obohacování dat",
+            "description": "Automaticky obohacuje záznamy kontaktů o aktuální informace o společnosti, kontakty rozhodovacích činitelů a spouštěče nákupních signálů."
+          },
+          {
+            "title": "Personalizovaný multi-kanálový outreach",
+            "description": "Vytváří a realizuje personalizované prodejní sekvence napříč e-mailem, LinkedIn a telefonními hovory s dokonalým timingem."
+          },
+          {
+            "title": "Konverzační AI kvalifikace",
+            "description": "Zapojuje potenciální klienty prostřednictvím přirozených konverzací, kvalifikuje jejich potřeby a plánuje schůzky s vaším prodejním týmem."
+          },
+          {
+            "title": "CRM automatická synchronizace",
+            "description": "Udržuje vaše CRM perfektně aktuální s automatickými aktualizacemi aktivity, stavu potenciálních klientů a skóre zapojení."
+          },
+          {
+            "title": "Prediktivní analýza obchodů",
+            "description": "Analyzuje vzorce chování potenciálních klientů a předpovídá pravděpodobnost uzavření a optimální načasování následných kroků."
+          }
+        ],
+        "roiMetrics": "ROI metriky",
+        "metrics": [
+          {
+            "label": "Zvýšení míry konverze potenciálních klientů",
+            "value": "300%"
+          },
+          {
+            "label": "Snížení doby prodejního cyklu",
+            "value": "40%"
+          },
+          {
+            "label": "Zvýšení zapojení potenciálních klientů",
+            "value": "250%"
+          },
+          {
+            "label": "Pokrytí pipeline",
+            "value": "24/7"
+          }
+        ],
+        "idealFor": "Ideální pro",
+        "targetCompanies": [
+          "B2B softwarové společnosti s komplexními prodejními cykly",
+          "SaaS platformy zaměřené na růst ARR",
+          "Profesionální služby potřebující kvalifikované potenciální klienty",
+          "Prodejní týmy zvládající velké objemy outreachu"
+        ],
+        "implementationTimeline": "Časový plán implementace",
+        "timeline": [
+          {
+            "phase": "Týden 1-2",
+            "description": "Integrace CRM, nastavení datových zdrojů a konfigurace AI agenta"
+          },
+          {
+            "phase": "Týden 3-4",
+            "description": "Testování sekvencí outreachu, optimalizace sdělení a doladění kvalifikačních kritérií"
+          },
+          {
+            "phase": "Týden 5+",
+            "description": "Plná produkce s průběžným učením a optimalizací výkonu"
+          }
+        ],
+        "cta": "Spusťte svého AI prodejního agenta"
+      },
+      "marketing": {
+        "name": "AI Marketingový Agent",
+        "tagline": "Automatizujte a optimalizujte svou marketingovou strategii",
+        "description": "Zvyšte svůj marketing s AI agentem, který vytváří obsah, řídí kampaně a optimalizuje ROI v reálném čase. Dosáhněte až 5x lepší výkon kampaní.",
+        "keyFeatures": "Klíčové funkce",
+        "features": [
+          {
+            "title": "AI tvorba obsahu",
+            "description": "Generuje vysokou kvalitu blogových příspěvků, social media copy, e-mailových kampaní a reklamních textů konzistentních s hlasem vaší značky."
+          },
+          {
+            "title": "Automatické řízení kampaní",
+            "description": "Spouští a řídí multi-kanálové kampaně napříč platformami s inteligentním časováním a personalizovaným cílením publika."
+          },
+          {
+            "title": "Dynamická segmentace publika",
+            "description": "Neustále analyzuje zákaznická data pro vytváření a aktualizaci hyperpřesných segmentů pro cílený outreach."
+          },
+          {
+            "title": "Real-time optimalizace výkonu",
+            "description": "Monitoruje metriky kampaní a automaticky upravuje nabídky, cílení a kreativu pro maximalizaci ROI."
+          },
+          {
+            "title": "Prediktivní atribuce",
+            "description": "Sleduje zákaznické cesty napříč dotykových bodů a přesně určuje, které marketingové aktivity generují konverze."
+          },
+          {
+            "title": "Automatizace personalizace",
+            "description": "Doručuje 1:1 personalizované zprávy ve velkém měřítku na základě chování, preferencí a stádia v kupní cestě."
+          }
+        ],
+        "roiMetrics": "ROI metriky",
+        "metrics": [
+          {
+            "label": "Zvýšení výkonu kampaní",
+            "value": "400%"
+          },
+          {
+            "label": "Snížení nákladů na získání zákazníka",
+            "value": "50%"
+          },
+          {
+            "label": "Zvýšení produkce obsahu",
+            "value": "300%"
+          },
+          {
+            "label": "Zlepšení marketing ROI",
+            "value": "250%"
+          }
+        ],
+        "idealFor": "Ideální pro",
+        "targetCompanies": [
+          "E-commerce značky škálující digitální marketing",
+          "B2C společnosti se složitými zákaznickými cestami",
+          "Marketingové agentury řídící více zákaznických kampaní",
+          "Growth týmy optimalizující akvizici a retenci"
+        ],
+        "implementationTimeline": "Časový plán implementace",
+        "timeline": [
+          {
+            "phase": "Týden 1-2",
+            "description": "Nastavení marketingového stacku, analýza publika a konfigurace AI agenta"
+          },
+          {
+            "phase": "Týden 3-4",
+            "description": "První produkce obsahu, spuštění kampaní a nastavení sledování výkonu"
+          },
+          {
+            "phase": "Týden 5+",
+            "description": "Plný provoz s průběžným učením a autonomní optimalizací kampaní"
+          }
+        ],
+        "cta": "Spusťte svého AI marketingového agenta"
+      },
+      "operations": {
+        "name": "AI Provozní Agent",
+        "tagline": "Zefektivněte obchodní operace s inteligentní automatizací",
+        "description": "Transformujte vaše operace s AI agentem, který automatizuje workflow, optimalizuje zdroje a poskytuje real-time inteligenci. Snižte provozní náklady až o 60%.",
+        "keyFeatures": "Klíčové funkce",
+        "features": [
+          {
+            "title": "Inteligentní orchestrace workflow",
+            "description": "Automatizuje složité procesy napříč systémy, eliminuje manuální předávání a zajišťuje konzistentní provedení."
+          },
+          {
+            "title": "Real-time provozní inteligence",
+            "description": "Poskytuje okamžité přehledy o úzkých hrdlech výkonu, využití zdrojů a provozní efektivitě."
+          },
+          {
+            "title": "Prediktivní plánování zdrojů",
+            "description": "Předpovídá vzorce poptávky a automaticky přiděluje zdroje pro maximalizaci efektivity a minimalizaci plýtvání."
+          },
+          {
+            "title": "Automatické monitorování dodržování předpisů",
+            "description": "Neustále audituje procesy pro dodržování předpisů, identifikuje potenciální problémy před tím, než stanou rizikem."
+          },
+          {
+            "title": "Cross-systémová integrace",
+            "description": "Bezproblémově se připojuje k vašemu existujícímu tech stacku pro vytvoření jednotného provozního ekosystému."
+          },
+          {
+            "title": "Výkonové dashboardy",
+            "description": "Poskytuje přizpůsobitelné real-time dashboardy s akčními insights pro podporu rozhodování."
+          }
+        ],
+        "roiMetrics": "ROI metriky",
+        "metrics": [
+          {
+            "label": "Snížení provozních nákladů",
+            "value": "60%"
+          },
+          {
+            "label": "Zvýšení procesní efektivity",
+            "value": "400%"
+          },
+          {
+            "label": "Snížení manuálních úkolů",
+            "value": "80%"
+          },
+          {
+            "label": "Zlepšení využití zdrojů",
+            "value": "250%"
+          }
+        ],
+        "idealFor": "Ideální pro",
+        "targetCompanies": [
+          "Rostoucí společnosti škálující operace",
+          "Výrobní firmy optimalizující dodavatelské řetězce",
+          "Poskytovatelé služeb řídící složité workflow",
+          "Podniky s vysokými požadavky na dodržování předpisů"
+        ],
+        "implementationTimeline": "Časový plán implementace",
+        "timeline": [
+          {
+            "phase": "Týden 1-2",
+            "description": "Mapování procesů, analýza systémů a návrh integrace AI agenta"
+          },
+          {
+            "phase": "Týden 3-4",
+            "description": "Nastavení automatizace workflow, konfigurace integrace systémů a testování"
+          },
+          {
+            "phase": "Týden 5+",
+            "description": "Plné nasazení s kontinuálním učením a optimalizací procesů"
+          }
+        ],
+        "cta": "Spusťte svého AI provozního agenta"
+      },
+      "support": {
+        "name": "AI Podpůrný Agent",
+        "tagline": "Poskytujte vynikající zákaznickou podporu 24/7",
+        "description": "Zvyšte zákaznickou podporu s AI agentem, který řeší dotazy, řeší problémy a posiluje vaše zákazníky 24/7. Zlepšete CSAT skóre až o 400%.",
+        "keyFeatures": "Klíčové funkce",
+        "features": [
+          {
+            "title": "Inteligentní automatizace prvního kontaktu",
+            "description": "Okamžitě řeší 80% běžných dotazů s přirozenými odpověďmi, které si udržují hlas a tón vaší značky."
+          },
+          {
+            "title": "Kontextové porozumění",
+            "description": "Přistupuje ke kompletní historii zákazníka napříč kanály pro poskytování personalizované podpory s dokonalou pamětí."
+          },
+          {
+            "title": "Multi-kanálová přítomnost",
+            "description": "Zapojuje zákazníky tam, kde jsou - web chat, e-mail, SMS, WhatsApp a sociální média z jednoho AI."
+          },
+          {
+            "title": "Inteligentní eskalace",
+            "description": "Rozpoznává, kdy je zapotřebí lidský agent, a bezproblémově předává s úplným kontextem pro efektivní řešení."
+          },
+          {
+            "title": "Proaktivní podpora",
+            "description": "Identifikuje potenciální problémy před tím, než se stanou, a automaticky oslovuje zákazníky s řešeními."
+          },
+          {
+            "title": "Analýza sentimentu",
+            "description": "Monitoruje spokojenost zákazníků v reálném čase a varuje týmy před rizikovými situacemi vyžadujícími okamžitou pozornost."
+          }
+        ],
+        "roiMetrics": "ROI metriky",
+        "metrics": [
+          {
+            "label": "Zlepšení CSAT skóre",
+            "value": "400%"
+          },
+          {
+            "label": "Snížení doby první odpovědi",
+            "value": "95%"
+          },
+          {
+            "label": "Zvýšení efektivity agentů",
+            "value": "300%"
+          },
+          {
+            "label": "Snížení nákladů na podporu",
+            "value": "70%"
+          }
+        ],
+        "idealFor": "Ideální pro",
+        "targetCompanies": [
+          "E-commerce platformy s vysokými objemy dotazů",
+          "SaaS společnosti poskytující technickou podporu",
+          "Poskytovatelé služeb řídící zákaznickou zkušenost",
+          "Růstové firmy škálující podporu bez zvyšování zaměstnanců"
+        ],
+        "implementationTimeline": "Časový plán implementace",
+        "timeline": [
+          {
+            "phase": "Týden 1-2",
+            "description": "Integrace znalostní báze, nastavení podporních kanálů a trénink AI agenta"
+          },
+          {
+            "phase": "Týden 3-4",
+            "description": "Testování odpovědí, optimalizace cest eskalace a doladění hlasu značky"
+          },
+          {
+            "phase": "Týden 5+",
+            "description": "Plná produkce s neustálým učením z interakcí a zpětnou vazbou zákazníků"
+          }
+        ],
+        "cta": "Spusťte svého AI podpůrného agenta"
+      },
+      "hr": {
+        "name": "AI HR Agent",
+        "tagline": "Revolucionizujte nábor a zapojení zaměstnanců",
+        "description": "Transformujte HR s AI agentem, který automatizuje nábor, zlepšuje zkušenosti kandidátů a zvyšuje zapojení zaměstnanců. Snižte čas zaplnění pozic o 60%.",
+        "keyFeatures": "Klíčové funkce",
+        "features": [
+          {
+            "title": "Inteligentní screening kandidátů",
+            "description": "Automaticky analyzuje tisíce CV během minut, identifikuje nejlepší shody a eliminuje předsudky z procesu screeningu."
+          },
+          {
+            "title": "AI plánování pohovorů",
+            "description": "Koordinuje dostupnost napříč kandidáty a tazateli, automaticky plánuje pohovory a posílá připomenutí."
+          },
+          {
+            "title": "Podpora zkušeností kandidátů",
+            "description": "Udržuje kandidáty informované s personalizovanými aktualizacemi, okamžitými odpověďmi a průhlednou komunikací."
+          },
+          {
+            "title": "Hodnocení pohovorů",
+            "description": "Poskytuje standardizované rámce hodnocení a zaznamenává klíčové insights pro spravedlivější, datově podložená rozhodnutí."
+          },
+          {
+            "title": "Onboarding automatizace",
+            "description": "Zjednodušuje proces onboardingu novým zaměstnancům s automatizovanými workflow a personalizovanými cestami učení."
+          },
+          {
+            "title": "Monitoring zapojení zaměstnanců",
+            "description": "Neustále měří spokojenost zaměstnanců, identifikuje rizika odchodu a navrhuje intervence pro retention."
+          }
+        ],
+        "roiMetrics": "ROI metriky",
+        "metrics": [
+          {
+            "label": "Snížení času zaplnění pozice",
+            "value": "60%"
+          },
+          {
+            "label": "Zlepšení kvality najímání",
+            "value": "250%"
+          },
+          {
+            "label": "Zvýšení efektivity recruitérů",
+            "value": "400%"
+          },
+          {
+            "label": "Zlepšení retention zaměstnanců",
+            "value": "150%"
+          }
+        ],
+        "idealFor": "Ideální pro",
+        "targetCompanies": [
+          "Rychle rostoucí společnosti škálující najímání",
+          "HR týmy řídící velké objemy kandidátů",
+          "Organizace zaměřené na zlepšení employee experience",
+          "Společnosti snažící se snížit předsudky v náborových procesech"
+        ],
+        "implementationTimeline": "Časový plán implementace",
+        "timeline": [
+          {
+            "phase": "Týden 1-2",
+            "description": "Integrace ATS, nastavení pracovních workflow a konfigurace AI agenta"
+          },
+          {
+            "phase": "Týden 3-4",
+            "description": "Testování screeningových kritérií, optimalizace komunikačních šablon a trénink"
+          },
+          {
+            "phase": "Týden 5+",
+            "description": "Plná produkce s neustálým učením z výsledků najímání a zpětnou vazbou"
+          }
+        ],
+        "cta": "Spusťte svého AI HR agenta"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Ceník",
+    "subtitle": "Vyberte plán, který nejlépe vyhovuje vašim potřebám",
+    "perAgent": "/agent/měsíc",
+    "annually": "Ročně",
+    "monthly": "Měsíčně",
+    "save20": "Ušetřete 20%",
+    "starterAgentName": "Starter",
+    "starterAgentDescription": "Pro malé týmy začínající s AI automatizací",
+    "starterAgentFeatures": [
+      "1 AI agent (jakýkoli use case)",
+      "Až 1 000 konverzací měsíčně",
+      "Základní analytika a reporty",
+      "Standardní podpora",
+      "Komunita přístup"
+    ],
+    "getStartedButton": "Začít",
+    "professionalAgentName": "Professional",
+    "professionalAgentDescription": "Pro rostoucí týmy potřebující více AI agentů",
+    "professionalAgentFeatures": [
+      "Až 3 AI agenti (různé use cases)",
+      "Až 5 000 konverzací měsíčně",
+      "Pokročilá analytika a reporty",
+      "Prioritní podpora",
+      "Přizpůsobitelná integrace"
+    ],
+    "contactSalesButton": "Kontaktovat prodej",
+    "enterpriseAgentName": "Enterprise",
+    "enterpriseAgentDescription": "Pro velké organizace s vlastními požadavky",
+    "enterpriseAgentFeatures": [
+      "Neomezené AI agenti",
+      "Neomezené konverzace",
+      "Vlastní analytika a dashboardy",
+      "Dedikovaný account manager",
+      "SLA garance",
+      "Vlastní integrace a workflow"
+    ],
+    "tryForFreeButton": "Vyzkoušet zdarma 14 dní",
+    "faqTitle": "Často kladené otázky",
+    "faqQuestions": [
+      {
+        "question": "Co je AI agent a jak funguje?",
+        "answer": "AI agent je inteligentní softwarový systém, který dokáže provádět úkoly autonomně. Naši AI agenti používají pokročilé LLM (Large Language Models) k porozumění, rozhodování a realizaci akcí bez lidského zásahu, přizpůsobují se datům vaší společnosti a procesům."
+      },
+      {
+        "question": "Jak dlouho trvá implementace AI agenta?",
+        "answer": "Typická implementace trvá 4-6 týdnů od podpisu smlouvy k plné produkci. Časový plán zahrnuje: (1) Týden 1-2: Konfigurace a integrace, (2) Týden 3-4: Testování a optimalizace, (3) Týden 5+: Plná produkce s neustálým zlepšováním."
+      },
+      {
+        "question": "Můžu přizpůsobit AI agenty pro specifické potřeby mého podnikání?",
+        "answer": "Ano! Všichni naši AI agenti jsou vysoce přizpůsobitelní. Můžete přizpůsobit jejich chování, tón hlasu, integrační body a workflow tak, aby perfektně vyhovovaly vašim obchodním procesům a požadavkům značky."
+      },
+      {
+        "question": "Jaké integrace AI agenti podporují?",
+        "answer": "Naši AI agenti se integrují s běžnými obchodními platformami včetně: CRM (Salesforce, HubSpot), komunikačními kanály (e-mail, SMS, WhatsApp), helpdeskovými systémy (Zendesk, Intercom), marketingovými nástroji (Mailchimp, Google Ads) a mnoha dalšími. Vlastní integrace jsou k dispozici v plánech Professional a Enterprise."
+      },
+      {
+        "question": "Je moje data v bezpečí u AI agentů?",
+        "answer": "Absolutně. Bereme bezpečnost dat velmi vážně. Všechna data jsou šifrovaná jak při přenosu, tak při uložení. Dodržujeme GDPR a další příslušné data privacy předpisy. AI agenti zpracovávají data pouze v rámci vašeho tenanta a nikdy netrénují na vašich proprietárních datech."
+      },
+      {
+        "question": "Co se stane, když překročím limit konverzací?",
+        "answer": "Budeme vás informovat, jakmile se blížíte k limitu. Můžete buď upgradovat na vyšší plán nebo zakoupit dodatečné konverzace. Starter: €0.50/konverzace nad limit, Professional: €0.30/konverzace nad limit."
+      },
+      {
+        "question": "Nabízíte bezplatnou zkušební dobu?",
+        "answer": "Ano! Nabízíme 14denní bezplatnou zkušební dobu na Starter a Professional plánech. Nevyžadujeme kreditní kartu na registraci a máte přístup ke všem funkcím během zkušební doby."
+      },
+      {
+        "question": "Můžu kdykoli zrušit?",
+        "answer": "Ano, můžete zrušit vaše předplatné kdykoli. Měsíční plány nemají žádnou minimální dobu trvání. Roční plány nabízejí 20% slevu, ale vyžadují dodržení 12měsíční doby trvání."
+      }
+    ]
+  },
+  "contactPage": {
+    "title": "Pojďme si promluvit o vašem projektu",
+    "subtitle": "Vyplňte tento formulář pro naplánování schůzky s naším týmem.",
+    "whyInfoTitle": "Poslední krok před spojením",
+    "whyInfoBody": "Vyplnění tohoto formuláře je prvním krokem k úspěšné spolupráci. Znalost vašeho projektu a výzev nám umožňuje připravit se na konverzaci a přijít s nápady, které skutečně přidávají hodnotu. Těšíme se na rozhovor s vámi!",
+    "labels": {
+      "fullName": "Celé jméno",
+      "workEmail": "Pracovní e-mail",
+      "companyName": "Název společnosti",
+      "role": "Role (Volitelné)",
+      "companySize": "Velikost společnosti",
+      "challenge": "Jaká je vaše hlavní výzva nebo potřeba?"
+    },
+    "placeholders": {
+      "companySize": "Vyberte rozsah"
+    },
+    "options": {
+      "size1": "1-10 zaměstnanců",
+      "size2": "11-50 zaměstnanců",
+      "size3": "51-200 zaměstnanců",
+      "size4": "201+ zaměstnanců"
+    },
+    "button": {
+      "submit": "Naplánovat schůzku"
+    },
+    "validation": {
+      "fullName": "Jméno musí mít alespoň 3 znaky.",
+      "email": "Zadejte prosím platný e-mail.",
+      "companyName": "Název společnosti je povinný.",
+      "companySize": "Vyberte prosím velikost společnosti.",
+      "challenge": "Váš popis musí mít alespoň 10 znaků."
+    },
+    "errors": {
+      "server": "Při odesílání vaší žádosti došlo k problému. Zkuste to prosím znovu."
+    }
+  },
+  "integrationsHero": {
+    "title": "Připojte se k nástrojům, které milujete",
+    "subtitle": "Arkadia Labs se integruje s více než 500 aplikacemi pro posílení vašich existujících workflow."
+  },
+  "integrationCard": {
+    "cta": "Začít"
+  },
+  "integrationsPage": {
+    "categories": {
+      "marketing": "Marketingová automatizace",
+      "crm": "CRM",
+      "communication": "Komunikace",
+      "support": "Podpora",
+      "productivity": "Produktivita"
+    },
+    "list": {
+      "salesforce": {
+        "name": "Salesforce",
+        "description": "Synchronizujte potenciální klienty a prodejní aktivity přímo s vedoucím CRM na trhu."
+      },
+      "hubspot": {
+        "name": "HubSpot",
+        "description": "Automatizujte vytváření kontaktů a zaznamenávejte interakce ve vašem HubSpot CRM."
+      },
+      "zoom": {
+        "name": "Zoom",
+        "description": "Přepis a analýza vašich Zoom schůzek v reálném čase."
+      },
+      "google_meet": {
+        "name": "Google Meet",
+        "description": "Integrujte našeho AI agenta do vašich Google Meets pro automatizaci poznámek."
+      },
+      "ms_teams": {
+        "name": "Microsoft Teams",
+        "description": "Vylepšete spolupráci s inteligentními odpověďmi ve vašich kanálech a hovorech."
+      },
+      "slack": {
+        "name": "Slack",
+        "description": "Přijímejte notifikace a provádějte akce od vašich AI agentů přímo ve Slacku."
+      },
+      "amazon_chime": {
+        "name": "Amazon Chime"
+      },
+      "cisco_webex": {
+        "name": "Cisco WebEx"
+      },
+      "intercom": {
+        "name": "Intercom"
+      },
+      "jira": {
+        "name": "Jira"
+      },
+      "notion": {
+        "name": "Notion"
+      },
+      "trello": {
+        "name": "Trello"
+      },
+      "asana": {
+        "name": "Asana"
+      },
+      "gmail": {
+        "name": "Gmail"
+      },
+      "google_drive": {
+        "name": "Google Drive"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Vaše nástroje, naše inteligence. Bezproblémová automatizace.",
+    "p1": "Zapomeňte na technickou složitost. Navrhujeme a konfigurujeme inteligentní workflow, které vaši AI agenti potřebují k provozu.",
+    "p2": "Díky našim nativním integracím s vedoucími nástroji na trhu, naši agenti zvládnou vše: od aktualizace vašeho CRM po správu podporních úkolů, vše autonomně a efektivně. Stačí je připojit a sledovat, jak pracují.",
+    "altImage": "Automatizované integrace workflow"
+  },
+  "ctaSection": {
+    "title": "Je něco, co nemůžete automatizovat s AI?",
+    "subtitle": "Rozlučte se s manuálními úkoly. Začněte budovat ještě dnes.",
+    "button": "Začít automatizovat"
+  },
+  "integrations": {
+    "title": "Vaše nástroje, bez limitů.",
+    "subtitle": "Naši agenti mluví jazykem všech vašich aplikací. Připojte své oblíbené nástroje a automatizujte své workflow.",
+    "searchPlaceholder": "Vyhledávání podle názvu integrace...",
+    "count_one": "{{count}} integrace",
+    "count_other": "{{count}} integrací",
+    "showMore": "Zobrazit více",
+    "categoriesTitle": "Kategorie",
+    "allApplications": "Všechny aplikace",
+    "openai": {
+      "name": "OpenAI",
+      "description": "Přístup k nejsilnějším AI modelům jako GPT-4."
+    },
+    "google_ai_studio": {
+      "name": "Google AI Studio (Gemini)",
+      "description": "Vytvářejte s nejmodernějšími modely rodiny Gemini."
+    },
+    "hugging_face": {
+      "name": "Hugging Face",
+      "description": "Spouštějte tisíce modelů z komunity Hugging Face."
+    },
+    "aws_bedrock": {
+      "name": "AWS Bedrock"
+    },
+    "claude": {
+      "name": "Claude",
+      "description": "Sada AI modelů pro různé aplikace."
+    },
+    "cohere": {
+      "name": "Cohere"
+    },
+    "groq": {
+      "name": "Groq"
+    },
+    "google_vertex_ai": {
+      "name": "Google Vertex AI",
+      "description": "Jednotná platforma pro strojové učení od Google."
+    },
+    "anthropic": {
+      "name": "Anthropic"
+    },
+    "ollama": {
+      "name": "Ollama"
+    },
+    "mistral_ai": {
+      "name": "Mistral AI"
+    },
+    "embeddings_openai": {
+      "name": "Embeddings OpenAI"
+    },
+    "embeddings_ollama": {
+      "name": "Embeddings Ollama"
+    },
+    "azure_openai_chat": {
+      "name": "Azure OpenAI Chat"
+    },
+    "mongodb_chat_memory": {
+      "name": "MongoDB Chat Memory"
+    },
+    "deepl": {
+      "name": "DeepL",
+      "description": "Překládejte texty s vysokou přesností a nuancí."
+    },
+    "google_analytics": {
+      "name": "Google Analytics"
+    },
+    "mixpanel": {
+      "name": "Mixpanel"
+    },
+    "posthog": {
+      "name": "PostHog"
+    },
+    "segment": {
+      "name": "Segment"
+    },
+    "chartmogul": {
+      "name": "ChartMogul"
+    },
+    "slack": {
+      "name": "Slack",
+      "description": "Automatizujte zprávy a notifikace ve vašich kanálech."
+    },
+    "discord": {
+      "name": "Discord"
+    },
+    "gmail": {
+      "name": "Gmail",
+      "description": "Posílejte e-maily, vyhledávejte zprávy a spravujte koncepty."
+    },
+    "microsoft_outlook": {
+      "name": "Microsoft Outlook"
+    },
+    "telegram": {
+      "name": "Telegram",
+      "description": "Jedna z nejrychlejších a nejbezpečnějších messaging služeb."
+    },
+    "twilio": {
+      "name": "Twilio"
+    },
+    "whatsapp": {
+      "name": "WhatsApp Business"
+    },
+    "mattermost": {
+      "name": "Mattermost"
+    },
+    "hubspot": {
+      "name": "HubSpot",
+      "description": "Synchronizujte kontakty, obchody a marketingové aktivity."
+    },
+    "salesforce": {
+      "name": "Salesforce"
+    },
+    "pipedrive": {
+      "name": "Pipedrive"
+    },
+    "zoho_crm": {
+      "name": "Zoho CRM"
+    },
+    "activecampaign": {
+      "name": "ActiveCampaign"
+    },
+    "mysql": {
+      "name": "MySQL",
+      "description": "Připojte se a spouštějte dotazy na vaší relační databázi."
+    },
+    "mongodb": {
+      "name": "MongoDB"
+    },
+    "postgres": {
+      "name": "PostgreSQL"
+    },
+    "redis": {
+      "name": "Redis"
+    },
+    "aws_s3": {
+      "name": "AWS S3"
+    },
+    "milvus": {
+      "name": "Milvus Vector Store"
+    },
+    "github": {
+      "name": "GitHub",
+      "description": "Automaticky spravujte repozitáře, issues a akce."
+    },
+    "jira": {
+      "name": "Jira Software"
+    },
+    "grafana": {
+      "name": "Grafana"
+    },
+    "stripe": {
+      "name": "Stripe",
+      "description": "Automatizujte platby, faktury a správu zákazníků."
+    },
+    "shopify": {
+      "name": "Shopify"
+    },
+    "woocommerce": {
+      "name": "WooCommerce"
+    },
+    "profitwell": {
+      "name": "ProfitWell"
+    },
+    "mailchimp": {
+      "name": "Mailchimp"
+    },
+    "sendgrid": {
+      "name": "SendGrid"
+    },
+    "lemlist": {
+      "name": "lemlist"
+    },
+    "convertkit": {
+      "name": "ConvertKit"
+    },
+    "linkedin": {
+      "name": "LinkedIn"
+    },
+    "google_ads": {
+      "name": "Google Ads"
+    },
+    "orbit": {
+      "name": "Orbit"
+    },
+    "notion": {
+      "name": "Notion",
+      "description": "Vytvářejte a aktualizujte stránky, databáze a další."
+    },
+    "google_sheets": {
+      "name": "Google Sheets",
+      "description": "Automaticky čtěte, pište a aktualizujte tabulky."
+    },
+    "google_calendar": {
+      "name": "Google Calendar"
+    },
+    "monday": {
+      "name": "monday.com"
+    },
+    "microsoft_excel": {
+      "name": "Microsoft Excel"
+    },
+    "trello": {
+      "name": "Trello"
+    },
+    "clickup": {
+      "name": "ClickUp"
+    },
+    "todoist": {
+      "name": "Todoist"
+    },
+    "wordpress": {
+      "name": "WordPress"
+    },
+    "webflow": {
+      "name": "Webflow"
+    },
+    "securityscorecard": {
+      "name": "SecurityScorecard"
+    },
+    "virustotal": {
+      "name": "VirusTotal"
+    },
+    "cortex": {
+      "name": "Cortex"
+    },
+    "bitly": {
+      "name": "Bitly"
+    },
+    "spotify": {
+      "name": "Spotify"
+    },
+    "youtube": {
+      "name": "YouTube"
+    },
+    "categories": {
+      "ai": "Umělá inteligence",
+      "analytics": "Analytika",
+      "communication": "Komunikace",
+      "crm": "CRM",
+      "data_storage": "Data a úložiště",
+      "developer_tools": "Vývojářské nástroje",
+      "finance": "Finance",
+      "marketing": "Marketing",
+      "productivity": "Produktivita",
+      "cybersecurity": "Kybernetická bezpečnost",
+      "utility": "Utility"
+    }
+  },
+  "case_studies_index": {
+    "title": "Případové studie",
+    "subtitle": "Objevte, jak jsme pomohli společnostem transformovat jejich prodejní procesy s AI.",
+    "cta": "Přečíst případovou studii"
+  },
+  "whyElevaiteStudyCase": {
+    "title": "Proč Arkadia Labs",
+    "subtitle": "Švýcarská preciznost spojená s osvědčenými prodejními zkušenostmi",
+    "features": [
+      {
+        "title": "Švýcarská kvalita",
+        "description": "Precizní inženýrství a standardy spolehlivosti aplikované na vývoj AI."
+      },
+      {
+        "title": "Osvědčená historie",
+        "description": "12 let zkušeností s prodejem škálujících 3 startupů z pre-seed do Series A."
+      },
+      {
+        "title": "Vlastní řešení",
+        "description": "Přizpůsobení AI agenti navržení specificky pro vaše obchodní požadavky."
+      }
+    ]
+  },
+  "caseStudies": {
+    "goodnite": {
+      "hero": {
+        "title": "Jak jsme *zautomatizovali zákaznický zážitek* pomocí AI ekosystému",
+        "subtitle": "Strategická případová studie: Goodnite dosáhla 240% ROI za 6 měsíců, zvýšila generování recenzí o 78% a ušetřila 95% času s automatizovaným AI ekosystémem pro zákaznickou zkušenost.",
+        "kpis": [
+          {
+            "label": "Spokojenost hostů"
+          },
+          {
+            "label": "Generování recenzí"
+          },
+          {
+            "label": "ROI za 6 měsíců"
+          }
+        ]
+      },
+      "client": {
+        "client_overview_title": "PŘEHLED KLIENTA",
+        "name": "Goodnite",
+        "tagline": "Platforma pro správu krátkodobých pronájmů",
+        "description": "Progresivní startup digitalizující správu krátkodobých pronájmů s inovativním Customer Experience Automation řešením sídlícím v Barceloně.",
+        "details": [
+          {
+            "label": "Odvětví",
+            "value": "PropTech & Hospitality"
+          },
+          {
+            "label": "Velikost společnosti",
+            "value": "Série A"
+          },
+          {
+            "label": "Trh",
+            "value": "Globální"
+          },
+          {
+            "label": "Klíčoví zákazníci",
+            "value": "Správci nemovitostí"
+          }
+        ]
+      },
+      "challenge": {
+        "beforeTitle": "Před Arkadia Labs",
+        "points": [
+          "Manuální hostitelská komunikace konzumující 3+ hodin denně",
+          "Nekonzistentní management recenzí hostů",
+          "Nula automatizace v engagement flow"
+        ]
+      },
+      "challengeSection": {
+        "title": "Výzva",
+        "subtitle": "Goodnite potřebovala škálovat své Customer Experience operace bez zvýšení personálních nákladů.",
+        "challenges": [
+          {
+            "title": "Manuální hostitelské workflow",
+            "description": "Tým trávil 3+ hodiny denně ručním odesíláním zpráv hostům, koordinací check-inů a odpovídáním na dotazy.",
+            "impactLabel": "Dopad",
+            "impact": "Vysoké personální náklady"
+          },
+          {
+            "title": "Podpora hostiče 24/7",
+            "description": "Hostitelé potřebovali okamžité odpovědi na dotazy během check-inu, což vyžadovalo dostupnost mimo hodiny.",
+            "impact": "Přetížení zaměstnanců"
+          },
+          {
+            "title": "Nekonzistentní generování recenzí",
+            "description": "Žádný systematický proces pro shromažďování recenzí hostů, což vedlo ke ztrátě důležité sociální důvěry.",
+            "impact": "Pomalý růst"
+          }
+        ],
+        "coreProblem": {
+          "title": "Jádro problému",
+          "quote": "Potřebovali jsme AI ekosystém, který by mohl automatizovat hostitelské interakce, poskytovat podporu 24/7 a systematicky generovat recenze při škálování. Nemůžete růst s manuálními procesy.",
+          "author": "David Yim, CEO, Goodnite"
+        }
+      },
+      "solution": {
+        "title": "Řešení Arkadia Labs",
+        "subtitle": "Vlastní AI Ekosystém navržený se švýcarskou precizností pro automatizaci celé zákaznické cesty od rezervace po check-out.",
+        "implementation": {
+          "title": "Strategická AI implementace",
+          "description": "Využitím 12 let zkušeností s prodejem a osvědčených metodologií ze škálování 3 startupů z pre-seed do Series A, vyvinuli jsme komplexní AI Customer Experience Automation pro Goodnite.",
+          "features": [
+            {
+              "title": "AI Hostitelský asistent",
+              "description": "Konverzační AI s pokročilými LLM odpovídajícími na dotazy hostitelů 24/7, řídícími check-iny a poskytujícími personalizovaná místní doporučení."
+            },
+            {
+              "title": "Automatizované cestování zákazníka",
+              "description": "Inteligentní systém zasílání zpráv doručující kontextové aktualizace rezervace, pokyny pro check-in a personalizované welcome zprávy."
+            },
+            {
+              "title": "AI motor pro generování recenzí",
+              "description": "Automatizovaný systém následných kroků, který strategicky požaduje recenze hostů ve správný čas s optimalizovaným sdělením."
+            },
+            {
+              "title": "Multi-jazyčná podpora",
+              "description": "AI ekosystém podporující 12+ jazyků, zajišťující bezproblémovou komunikaci s mezinárodními hosty napříč tržišti."
+            }
+          ]
+        },
+        "coreFunctions": {
+          "title": "AI ekosystém core funkce",
+          "functions": [
+            "24/7 hostitelská podpora",
+            "Automatizace rezervací",
+            "Generování recenzí",
+            "Multi-jazyčná komunikace"
+          ]
+        }
+      },
+      "timeline": {
+        "title": "Časový plán implementace",
+        "subtitle": "Rychlé nasazení s neustálou optimalizací",
+        "phases": [
+          {
+            "title": "Měsíc 1: Vývoj",
+            "description": "Vývoj vlastního AI ekosystému, integrace platformy správy nemovitostí a vytvoření multi-jazyčných konverzačních flow přizpůsobených procesu Goodnite."
+          },
+          {
+            "title": "Měsíc 2-3: Doladění",
+            "description": "Optimalizace systému, zdokonalení komunikačních vzorů a přizpůsobení workflow zákaznické cesty na základě zpětné vazby od hostů."
+          },
+          {
+            "title": "Měsíc 4+: Dodávání výsledků",
+            "description": "Plný výkon systému dosaženého s měřitelným dopadem na spokojenost hostů, generování recenzí a provozní efektivitu."
+          }
+        ]
+      },
+      "impact": {
+        "title": "Měřitelný dopad",
+        "subtitle": "Transformační výsledky dodané během 6 měsíců",
+        "kpis": [
+          {
+            "label": "Spokojenost hostů",
+            "subLabel": "8.1 → 9.0 skóre"
+          },
+          {
+            "label": "Generování recenzí",
+            "subLabel": "23% → 41% míra"
+          },
+          {
+            "label": "ROI dosaženo",
+            "subLabel": "Za 6 měsíců"
+          },
+          {
+            "label": "Ušetřený čas",
+            "subLabel": "3h/den → 10min/den"
+          }
+        ]
+      },
+      "roiAnalysis": {
+        "title": "ROI analýza",
+        "subtitle": "Komplexní hodnocení finančního dopadu",
+        "calculator": {
+          "title": "Investice vs personální náklady",
+          "items": [
+            {
+              "label": "Tradiční personální náklady (2-3 zaměstnanci)",
+              "value": "€120k+/rok"
+            },
+            {
+              "label": "Investice do AI ekosystému",
+              "value": "15% personálních nákladů"
+            },
+            {
+              "label": "Multiplikátor výkonu",
+              "value": "3x efektivita"
+            }
+          ],
+          "finalRoi": {
+            "label": "Dosaženo během 12 měsíců"
+          }
+        },
+        "benefits": [
+          {
+            "title": "Nákladová efektivita",
+            "description": "Investice do AI představuje pouze 15% tradičních personálních nákladů, přičemž poskytuje 3x výkon ve spokojenosti hostů a generování recenzí."
+          },
+          {
+            "title": "Akcelerace příjmů",
+            "description": "78% zvýšení generování recenzí v kombinaci s 11% zlepšením spokojenosti hostů se přímo překládá do vyšších rezervací a růstu příjmů."
+          },
+          {
+            "title": "Faktor škálovatelnosti",
+            "description": "AI ekosystém se škáluje nekonečně bez dodatečných nákladů na zaměstnance, poskytuje udržitelnou konkurenční výhodu při expanzi Goodnite."
+          }
+        ]
+      }
+    },
+    "domus-labs": {
+      "hero": {
+        "title": "Jak jsme *zrychlili dodávku projektů* pomocí AI inteligentního systému",
+        "subtitle": "Strategická případová studie: Domus Labs dosáhla 160% ROI za 3 měsíce, zvýšila dokončení projektů o 77% a ušetřila 8 hodin týdně výkonného času s automatizovanou projektovou inteligencí.",
+        "kpis": [
+          {
+            "label": "Efektivita schůzek"
+          },
+          {
+            "label": "Dokončení projektů"
+          },
+          {
+            "label": "ROI za 3 měsíce"
+          }
+        ]
+      },
+      "client": {
+        "client_overview_title": "PŘEHLED KLIENTA",
+        "name": "Domus Labs",
+        "tagline": "Butikové architektonické studio",
+        "description": "Inovativní architektonické a interiérové designové studio vytvářející smysluplné prostory s humanistickou perspektivou, expandující mezinárodně napříč Barcelonou, Německem a Francií.",
+        "details": [
+          {
+            "label": "Odvětví",
+            "value": "Architektura & Interiérový design"
+          },
+          {
+            "label": "Velikost projektu",
+            "value": "€500k-2M za projekt"
+          },
+          {
+            "label": "Velikost týmu",
+            "value": "17 zaměstnanců"
+          },
+          {
+            "label": "Cílový trh",
+            "value": "Mezinárodní B2B"
+          }
+        ]
+      },
+      "challenge": {
+        "beforeTitle": "Před Arkadia Labs",
+        "points": [
+          "Manuální dokumentace schůzek konzumující 2+ hodiny týdně",
+          "Špatná viditelnost projektů napříč více iniciativami",
+          "Nekonzistentní sledování úkolů a odpovědnosti"
+        ]
+      },
+      "challengeSection": {
+        "title": "Výzva",
+        "subtitle": "Domus Labs čelila kritickým výzvám v project managementu, které omezovaly jejich potenciál mezinárodní expanze.",
+        "challenges": [
+          {
+            "title": "Manuální zpracování schůzek",
+            "description": "Vedoucí pracovníci trávili 2+ hodiny týdně manuální dokumentací schůzek, aktualizací stavu projektů a sledováním úkolů.",
+            "impactLabel": "Dopad",
+            "impact": "Plýtvání výkonného času"
+          },
+          {
+            "title": "Mezery ve viditelnosti projektů",
+            "description": "Více projektů běžících současně se špatnou viditelností stavu, rizik a odpovědnosti napříč týmy.",
+            "impact": "Zmeškané termíny"
+          },
+          {
+            "title": "Výzvy odpovědnosti",
+            "description": "Nekonzistentní systém sledování úkolů a následných kroků bránící efektivnímu dodávání projektů a koordinaci týmu.",
+            "impact": "Zpoždění projektů"
+          }
+        ],
+        "coreProblem": {
+          "title": "Jádro problému",
+          "quote": "Potřebovali jsme AI systém, který by mohl automaticky zachytit insights ze schůzek, aktualizovat stav projektů a udržovat odpovědnost při mezinárodní expanzi. Manuální procesy omezovaly náš růstový potenciál.",
+          "author": "Cosma Musacchio, General Manager & Creative Director, Domus Labs"
+        }
+      },
+      "solution": {
+        "title": "Řešení Arkadia Labs",
+        "subtitle": "Vlastní AI systém projektové inteligence navržený se švýcarskou precizností pro automatizaci project managementu, zpracování schůzek a sledování odpovědnosti.",
+        "implementation": {
+          "title": "Strategická AI implementace",
+          "description": "Využitím 12 let zkušeností s prodejem a osvědčených metodologií ze škálování 3 startupů z pre-seed do Series A, vyvinuli jsme přizpůsobený AI systém projektové inteligence.",
+          "features": [
+            {
+              "title": "Automatizovaná analýza schůzek",
+              "description": "AI systém zpracovávající schůzky, generující souhrny a automaticky aktualizující stav projektů v Notion."
+            },
+            {
+              "title": "Inteligentní sledování projektů",
+              "description": "Real-time viditelnost projektů s automatizovaným přiřazováním úkolů a sledováním pokroku napříč všemi iniciativami."
+            },
+            {
+              "title": "24/7 projektová inteligence",
+              "description": "Telegram-based AI asistent poskytující okamžité odpovědi o stavu projektů, souhrnech schůzek a aktualizacích úkolů."
+            },
+            {
+              "title": "Automatizovaná odpovědnost",
+              "description": "Týdenní automatizované reporty pro členy týmu a vedoucí pracovníky se stavem projektů, riziky a požadovanými akcemi."
+            }
+          ]
+        },
+        "coreFunctions": {
+          "title": "AI projektová inteligence core funkce",
+          "functions": [
+            "Analýza a souhrn schůzek",
+            "Automatizované přiřazování úkolů",
+            "Aktualizace stavu projektů",
+            "Telegram AI asistent"
+          ]
+        }
+      },
+      "timeline": {
+        "title": "Časový plán implementace",
+        "subtitle": "Rychlé nasazení s neustálou optimalizací",
+        "phases": [
+          {
+            "title": "Měsíc 1: Vývoj",
+            "description": "Vývoj vlastního AI systému, nastavení integrace Notion a vytvoření Telegram bota přizpůsobeného architektonickým workflow Domus Labs."
+          },
+          {
+            "title": "Měsíc 2: Doladění",
+            "description": "Optimalizace systému, zdokonalení zpracování schůzek a přizpůsobení workflow project managementu na základě počáteční zpětné vazby."
+          },
+          {
+            "title": "Měsíc 3+: Dodávání výsledků",
+            "description": "Plný výkon systému dosaženého s měřitelným dopadem na míry dokončení projektů, úspory výkonného času a odpovědnost týmu."
+          }
+        ]
+      },
+      "impact": {
+        "title": "Měřitelný dopad",
+        "subtitle": "Transformační výsledky dodané během 3 měsíců",
+        "kpis": [
+          {
+            "label": "Efektivita schůzek",
+            "subLabel": "2 hodiny → 10 minut"
+          },
+          {
+            "label": "Dokončení projektů",
+            "subLabel": "47% → 83% úspěšnost"
+          },
+          {
+            "label": "ROI dosaženo",
+            "subLabel": "Během 3 měsíců"
+          },
+          {
+            "label": "Ušetřený týdenní čas",
+            "subLabel": "Na vedoucího pracovníka"
+          }
+        ]
+      },
+      "roiAnalysis": {
+        "title": "ROI analýza",
+        "subtitle": "Komplexní hodnocení finančního dopadu",
+        "calculator": {
+          "title": "Investice vs náklady výkonného času",
+          "items": [
+            {
+              "label": "Tradiční náklady výkonného času",
+              "value": "€2 000+/měsíc"
+            },
+            {
+              "label": "Náklady na AI investici",
+              "value": "€990/měsíc"
+            },
+            {
+              "label": "Multiplikátor efektivity",
+              "value": "10x rychlejší zpracování"
+            }
+          ],
+          "finalRoi": {
+            "label": "Dosaženo během 3 měsíců"
+          }
+        },
+        "benefits": [
+          {
+            "title": "Nákladová efektivita",
+            "description": "Investice do AI představuje 50% tradičních nákladů výkonného času, přičemž poskytuje 10x efektivitu zpracování."
+          },
+          {
+            "title": "Akcelerace projektů",
+            "description": "77% zlepšení míry dokončení projektů se přímo překládá do rychlejšího dodání a zlepšené spokojenosti klientů."
+          },
+          {
+            "title": "Faktor škálovatelnosti",
+            "description": "AI systém se škáluje nekonečně napříč mezinárodními lokacemi bez dodatečné režie managementu."
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "altLogo": "Logo Arkadia Labs",
+    "companyName": "Arkadia Labs",
+    "description": "Transformace podniků s inteligentními AI automatizačními řešeními.",
+    "social": {
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "youtube": "YouTube",
+      "instagram": "Instagram"
+    },
+    "headings": {
+      "quickLinks": "Rychlé odkazy",
+      "legal": "Právní informace",
+      "stayUpdated": "Zůstaňte informováni"
+    },
+    "links": {
+      "features": "Případy použití",
+      "caseStudies": "Případové studie",
+      "privacy": "Zásady ochrany osobních údajů",
+      "terms": "Podmínky použití",
+      "cookies": "Zásady cookies",
+      "legal": "Právní upozornění"
+    },
+    "newsletter": {
+      "placeholder": "Váš e-mail",
+      "button": "Odebírat",
+      "success": "Děkujeme za přihlášení k odběru!",
+      "error": "Něco se pokazilo. Zkuste to prosím znovu."
+    },
+    "copyright": "© {{year}} Arkadia Labs. Všechna práva vyhrazena."
+  },
+  "modal": {
+    "close": "Zavřít modal"
+  },
+  "logoCloud": {
+    "title": "Více než 500 připojení k vašemu rozhodnutí",
+    "subtitle": "Od CRM a marketingových nástrojů až po váš software pro řízení projektů."
+  },
+  "featuredIntegrations": {
+    "badge": "Integrace",
+    "title": "Integrujte své stávající nástroje",
+    "subtitle": "V Arkadia Labs se propojujeme s aplikacemi, které váš tým již každý den používá."
+  },
+  "kpi": {
+    "title": "Dopad Arkadia: Měřitelné výsledky",
+    "subtitle": "Objevte, jak se naše AI řešení překládají do hmatatelných výhod a významného růstu pro podniky jako je ten váš.",
+    "cards": {
+      "kpi1": {
+        "capsule": "Prodejní týmy",
+        "description": "Švýcarský AI startup škáluje z $2M na $6M ARR za 18 měsíců pomocí našeho AI ekosystému.",
+        "label": "Více uzavřených obchodů",
+        "impactTitle": "Dopad na příjmy:",
+        "impactDescription": "Transformujte svou míru uzavírání na konzistentní růstový motor."
+      },
+      "kpi2": {
+        "capsule": "Marketingové týmy",
+        "description": "E-commerce značka zvýšila konverze o 340% díky AI personalizaci a cílení.",
+        "label": "Zvýšení konverze",
+        "impactTitle": "Dopad na růst:",
+        "impactDescription": "Proměňte návštěvníky na zákazníky s AI-řízeným engagementem."
+      },
+      "kpi3": {
+        "capsule": "Operační týmy",
+        "description": "Logistická firma snížila provozní náklady o 65% pomocí inteligentní automatizace workflow.",
+        "label": "Snížení nákladů",
+        "impactTitle": "Dopad na efektivitu:",
+        "impactDescription": "Eliminujte plýtvání a optimalizujte každý proces s AI."
+      },
+      "kpi4": {
+        "capsule": "Podpůrné týmy",
+        "description": "SaaS společnost zlepšila CSAT o 400% s AI agenty poskytujícími okamžitou podporu 24/7.",
+        "label": "Zlepšení CSAT",
+        "impactTitle": "Dopad na spokojenost:",
+        "impactDescription": "Poskytujte vynikající zákaznickou zkušenost v každém dotykům bodě."
+      }
+    }
+  },
+  "finalCta": {
+    "heading": {
+      "part1": "Posílit váš",
+      "part2": "s AI agenty na míru"
+    },
+    "cyclingWords": {
+      "w1": "Prodej",
+      "w2": "Marketing",
+      "w3": "Operace",
+      "w4": "Podpora",
+      "w5": "Růst"
+    },
+    "description": "Jste připraveni odemknout bezprecedentní efektivitu a škálování s AI agenty postavenými pro vaše unikátní obchodní potřeby? Pojďme společně postavit vaši budoucnost.",
+    "primaryCta": "Získejte vlastní AI řešení",
+    "secondaryCta": "Rezervovat konzultaci"
+  },
+  "thankYouPage": {
+    "header": {
+      "title": "Děkujeme za váš zájem!",
+      "subtitle": "Obdrželi jsme vaši žádost a náš tým vás brzy kontaktuje."
+    },
+    "cta": {
+      "altImage": "Ilustrace AI agenta",
+      "title": "Udělejte další krok",
+      "description": "Pro větší flexibilitu a zajištění času, který vám vyhovuje, můžete si přímo rezervovat 15minutový hovor v našem kalendáři.",
+      "button": "Naplánovat schůzku"
+    },
+    "footer": {
+      "backToHome": "Zpět na hlavní stránku"
+    }
+  },
+  "whyElevaite": {
+    "title": "Arkadia Launchpad: Vaše cesta k automatizaci",
+    "subtitle": "Náš přístup na míru",
+    "steps": {
+      "s1": {
+        "title": "Porozumění vašim potřebám",
+        "subtitle": "Discovery & strategické sladění",
+        "description": "Začínáme hlubokým ponořením do vašich unikátních obchodních procesů, výzev a strategických cílů. Tato fáze spolupráce je klíčová pro zajištění, že vaše AI řešení je perfektně sladěno s vaší vizí a přináší maximální dopad."
+      },
+      "s2": {
+        "title": "Vlastní AI architektura",
+        "subtitle": "Design & vývoj řešení",
+        "description": "Naši odborníci navrhují a budují AI agenty přizpůsobené vašim specifickým potřebám. Od konverzační AI po prediktivní analytiku, vytváříme řešení, která se bezproblémově integrují s vašim existujícím ekosystémem."
+      },
+      "s3": {
+        "title": "Bezproblémová integrace",
+        "subtitle": "Nasazení & optimalizace",
+        "description": "Zajišťujeme hladkou integraci s vašimi stávajícími nástroji a systémy. Naše AI řešení jsou navržena tak, aby zlepšovala vaše workflow, ne aby je narušovala, s kontinuální optimalizací pro maximální výkon."
+      },
+      "s4": {
+        "title": "Pokračující podpora",
+        "subtitle": "Růst & škálování",
+        "description": "Vaše AI agenti se učí a zlepšují v průběhu času. Poskytujeme pokračující podporu, aktualizace a optimalizace, aby vaše řešení rostlo s vaším podnikáním a zůstalo špičkovým."
+      }
+    }
+  },
+  "roiCalculator": {
+    "title": "Vypočítat vaše ROI",
+    "subtitle": "Upravte posuvníky pro zobrazení vašich potenciálních úspor a růstu příjmů.",
+    "plans": {
+      "employee": "AI Zaměstnanec",
+      "team": "AI Prodejní tým",
+      "partner": "AI Růstový partner"
+    },
+    "inputs": {
+      "reps": "Počet prodejních zástupců",
+      "dealSize": "Průměrná velikost obchodu",
+      "leads": "Aktuální měsíční potenciální klienti"
+    },
+    "results": {
+      "gain": "POTENCIÁLNÍ MĚSÍČNÍ ZISK*",
+      "hoursSaved": "UŠETŘENÉ HODINY*",
+      "roi": "ODHADOVANÉ ROI*",
+      "perMonthSuffix": "/měsíc"
+    },
+    "disclaimer": "*Odhady založené na typických datech klientů. Skutečné výsledky se mohou lišit."
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "subtitle": "Najděte rychlé odpovědi na běžné otázky o našich AI řešeních.",
+    "questions": {
+      "q1": {
+        "question": "Jaký druh AI agentů můžete postavit?",
+        "answer": "Vytváříme širokou škálu AI agentů přizpůsobených specifickým obchodním potřebám, včetně marketingových agentů, automatizačních agentů pro operační úkoly, inteligentních recepčních agentů, prodejních AI asistentů pro posílení vašeho pipeline, AI podpůrných agentů pro vylepšenou zákaznickou zkušenost a mnoho dalšího."
+      },
+      "q2": {
+        "question": "Jak dlouho trvá implementace AI agenta?",
+        "answer": "Čas implementace se liší podle komplexnosti a rozsahu projektu. Typicky jednoduché AI agenty můžeme nasadit za 2-4 týdny, zatímco komplexnější systémy mohou trvat 6-12 týdnů. Poskytujeme detailní časový plán během fáze discovery."
+      },
+      "q3": {
+        "question": "Potřebuji technické znalosti pro používání AI agentů?",
+        "answer": "Ne! Navrhujeme naše AI agenty tak, aby byly uživatelsky přívětivé a intuitivní. Poskytujeme kompletní školení a pokračující podporu, aby váš tým mohl maximalizovat hodnotu AI řešení bez nutnosti technické odbornosti."
+      },
+      "q4": {
+        "question": "Jakou podporu poskytujete po nasazení?",
+        "answer": "Nabízíme komplexní pokračující podporu včetně monitorování výkonu, pravidelných aktualizací, optimalizace a dedikovaného account managera. Naše AI agenti se neustále učí a zlepšují, aby rostli s vaším podnikáním."
+      },
+      "q5": {
+        "question": "Jsou moje data v bezpečí?",
+        "answer": "Absolutně. Bezpečnost dat je naší nejvyšší prioritou. Dodržujeme nejlepší průmyslové praktiky, používáme enterprise-grade šifrování a jsme plně v souladu s GDPR a dalšími relevantními předpisy. Vaše data nikdy nesdílíme s třetími stranami."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Důvěřují nám inovativní podniky",
+    "subtitle": "Slyšte, jak naše AI řešení dělají skutečný rozdíl.",
+    "mainLogos": {
+      "logo1": "Domus Lab",
+      "logo2": "Goodnite",
+      "logo3": "Dacrafters",
+      "logo4": "LaserClick",
+      "logo5": ""
+    },
+    "cards": {
+      "t1": {
+        "quote": "S Arkadia Labs jsme automatizovali klíčové úkoly a vylepšili zákaznickou zkušenost. Jejich rychlá integrace s našimi systémy nám umožnila soustředit se na to, na čem záleží—poskytování bezproblémové, prémiové služby. Velmi doporučujeme!",
+        "author": "Tomáš Ustohal",
+        "role": "Team Manager",
+        "company": "Goodnite"
+      },
+      "t2": {
+        "quote": "AI řešení od Arkadia Labs transformovalo naše operace. Automatizovali jsme manuální procesy, ušetřili nespočet hodin a zlepšili koordinaci týmu. Je to jako mít dalšího člena týmu, který nikdy nespí.",
+        "author": "Cosma Musacchio",
+        "role": "General Manager & Creative Director",
+        "company": "Domus Labs"
+      },
+      "t3": {
+        "quote": "Švýcarská preciznost Arkadia Labs v kombinaci s jejich odborností v AI nám pomohla škálovat naše prodejní operace bez zvýšení nákladů na zaměstnance. ROI překonalo naše očekávání.",
+        "author": "Innovation Leader",
+        "role": "Head of Growth",
+        "company": "Tech Startup"
+      }
+    }
+  },
+  "featureComparison": {
+    "title": "Porovnejte plány vedle sebe",
+    "subtitle": "Najděte přesné funkce, které potřebujete k růstu.",
+    "roiButton": "Vypočítat vaše potenciální ROI",
+    "tableHeader": {
+      "features": "Funkce",
+      "plan1": "AI Zaměstnanec",
+      "plan2": "AI Prodejní tým",
+      "plan3": "AI Růstový partner"
+    },
+    "features": {
+      "f1": {
+        "name": "AI prodejní systémy postavené a vyškolené",
+        "plan1": "1",
+        "plan2": "3",
+        "plan3": "10"
+      },
+      "f2": {
+        "name": "Měsíční strategické hovory",
+        "plan1": "1/měsíc",
+        "plan2": "2/měsíc",
+        "plan3": "4/měsíc"
+      },
+      "f3": {
+        "name": "Dedikovaný account manager",
+        "plan1": "Ne",
+        "plan2": "Ano",
+        "plan3": "Ano"
+      },
+      "f4": {
+        "name": "Vlastní integrace",
+        "plan1": "Základní",
+        "plan2": "Pokročilé",
+        "plan3": "Neomezené"
+      },
+      "f5": {
+        "name": "Prioritní podpora",
+        "plan1": "Ne",
+        "plan2": "Ano",
+        "plan3": "24/7"
+      },
+      "f6": {
+        "name": "Měsíční reporty výkonu",
+        "plan1": "Základní",
+        "plan2": "Detailní",
+        "plan3": "Pokročilá analytika"
+      },
+      "f7": {
+        "name": "AI školení a optimalizace",
+        "plan1": "Čtvrtletně",
+        "plan2": "Měsíčně",
+        "plan3": "Týdně"
+      },
+      "f8": {
+        "name": "Vlastní AI workflow",
+        "plan1": "Ne",
+        "plan2": "Ano",
+        "plan3": "Neomezené"
+      },
+      "f9": {
+        "name": "Multi-jazyčná podpora",
+        "plan1": "Ne",
+        "plan2": "Ano",
+        "plan3": "Ano"
+      },
+      "f10": {
+        "name": "SLA garance",
+        "plan1": "Ne",
+        "plan2": "99% uptime",
+        "plan3": "99.9% uptime"
+      }
+    }
+  },
+  "categories": {
+    "ai": "Umělá inteligence",
+    "analytics": "Analytika",
+    "communication": "Komunikace",
+    "crm": "CRM",
+    "data_storage": "Data a úložiště",
+    "developer_tools": "Vývojářské nástroje",
+    "finance": "Finance",
+    "marketing": "Marketing",
+    "productivity": "Produktivita",
+    "cybersecurity": "Kybernetická bezpečnost",
+    "utility": "Utility"
+  },
+  "integrationsComponent": {
+    "title": "Bezproblémové integrace: Připojte celý ekosystém",
+    "description": "AI agenti Arkadia jsou navrženi k provozu v srdci vašich existujících nástrojů. Nativně se integrujeme s vašimi CRM, komunikačními platformami, kalendáři a dalšími, posilujeme vaše workflow bez narušení a zvyšujeme celkovou produktivitu.",
+    "examples": {
+      "e1": "Vedoucí CRM na trhu (Salesforce, HubSpot, atd.)",
+      "e2": "Komunikační platformy (Slack, Email, Microsoft Teams)",
+      "e3": "Inteligentní kalendářové systémy (Google Calendar, Outlook)",
+      "e4": "Automatizace marketingu (Mailchimp, ActiveCampaign)",
+      "e5": "A mnoho dalšího..."
+    }
+  },
+  "cookiePolicy": {
+    "title": "Zásady cookies",
+    "lastUpdated": "Poslední aktualizace: {{date}}",
+    "content": "Tato stránka používá cookies pro zlepšení uživatelské zkušenosti. Pokračováním v používání této stránky souhlasíte s naším používáním cookies."
+  },
+  "privacyPolicy": {
+    "title": "Zásady ochrany osobních údajů",
+    "lastUpdated": "Poslední aktualizace: {{date}}",
+    "content": "V Arkadia Labs bereme ochranu vašich osobních údajů velmi vážně. Tato zásada popisuje, jak shromažďujeme, používáme a chráníme vaše informace."
+  },
+  "termsAndConditions": {
+    "title": "Podmínky použití",
+    "lastUpdated": "Poslední aktualizace: {{date}}",
+    "content": "Používáním služeb Arkadia Labs souhlasíte s těmito podmínkami. Přečtěte si je prosím pečlivě."
+  },
+  "legalNotice": {
+    "title": "Právní upozornění",
+    "lastUpdated": "Poslední aktualizace: {{date}}",
+    "content": "Informace o právním postavení a provozu Arkadia Labs."
+  }
+}

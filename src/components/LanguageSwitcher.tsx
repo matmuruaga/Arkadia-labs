@@ -32,6 +32,13 @@ const LanguageSwitcher = () => {
       >
         ES
       </Link>
+      <Link
+        to={`/cs${currentPath === '/' ? '' : currentPath}`}
+        className={`px-3 py-1 text-sm rounded-full font-semibold transition-colors ${i18n.language.startsWith('cs') ? 'bg-white text-[#1C7ED6] shadow' : 'text-slate-600'}`}
+        onClick={() => handleLanguageSwitch('cs')}
+      >
+        CS
+      </Link>
     </div>
   );
 };

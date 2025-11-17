@@ -1,5 +1,5 @@
 // src/components/Header.tsx
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
@@ -13,6 +13,10 @@ const Header = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
+  // Ref for requestAnimationFrame throttling
+  const rafRef = useRef<number | null>(null);
+  const lastScrollY = useRef(0);
+
   // Detectar si estamos en una página con hero oscuro
   const isDarkHeroPage = () => {
     const path = window.location.pathname;
@@ -23,32 +27,60 @@ const Header = () => {
 
   const [hasDarkHero] = useState(isDarkHeroPage());
 
+  // Optimized scroll handler with requestAnimationFrame throttling
   useEffect(() => {
-    const handleScroll = () => setScrolling(window.scrollY > 10);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      // Cancel previous frame if it exists
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+      }
+
+      // Schedule update for next frame
+      rafRef.current = requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+
+        // Only update if scroll position changed significantly
+        if (Math.abs(currentScrollY - lastScrollY.current) > 5) {
+          const isScrolled = currentScrollY > 10;
+          setScrolling(isScrolled);
+          lastScrollY.current = currentScrollY;
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+      }
+    };
   }, []);
-  
-  const handleGetStartedClick = () => {
+
+  // Memoized handlers to prevent recreation on every render
+  const handleGetStartedClick = useCallback(() => {
     trackCtaClick('get_started', 'header', t('header.getStarted'));
     setIsMenuOpen(false);
     navigate(`/${i18n.language}/contact`);
-  };
+  }, [navigate, i18n.language, t]);
 
-  const handleMobileMenuToggle = () => {
-    const newState = !isMenuOpen;
-    trackMobileMenuToggle(newState ? 'open' : 'close');
-    setIsMenuOpen(newState);
-  };
+  const handleMobileMenuToggle = useCallback(() => {
+    setIsMenuOpen(prev => {
+      const newState = !prev;
+      trackMobileMenuToggle(newState ? 'open' : 'close');
+      return newState;
+    });
+  }, []);
 
-  const handleNavigationClick = (linkName: string, destination: string) => {
+  const handleNavigationClick = useCallback((linkName: string, destination: string) => {
     trackNavigationClick(linkName, destination);
     setIsMenuOpen(false);
-  };
+  }, []);
 
-  const handleLoginClick = () => {
+  const handleLoginClick = useCallback(() => {
     trackLoginClick('header');
-  };
+  }, []);
 
   const linkClasses = "text-[#0D1B2A] hover:text-[#1C7ED6] transition-colors font-medium cursor-pointer";
   const mobileLinkClasses = `block py-3 text-center text-lg ${linkClasses}`;
@@ -147,98 +179,113 @@ const Header = () => {
           </nav>
         </div>
 
-        {/* --- MOBILE: Solo visible cuando el menú está cerrado --- */}
-        {!isMenuOpen && (
-          <div className={`md:hidden flex justify-between items-center glass-nav-pill rounded-full px-6 py-3 ${
-            scrolling ? 'scrolled' : ''
-          }`}>
-            <Link to={`/${i18n.language}`} aria-label="Go to homepage">
-                <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt="Arkadia Labs Logo" className="h-8 w-auto"/>
-            </Link>
-
-            <button onClick={handleMobileMenuToggle} aria-label="Toggle menu">
-              <Menu className="text-[#0D1B2A]" size={28} />
-            </button>
-          </div>
-        )}
-      </div>
-
-      <AnimatePresence>
-        {isMenuOpen && (
+        {/* --- MOBILE: Navbar con expansión tipo acordeón --- */}
+        <div className="md:hidden">
           <motion.div
-            initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }}
-            className="md:hidden px-4"
+            className={`glass-nav-pill px-6 py-3 ${scrolling ? 'scrolled' : ''}`}
+            style={{
+              borderRadius: "1.5rem",
+              overflow: isMenuOpen ? "visible" : "hidden"
+            }}
           >
-            {/* Menú glass completo con logo, navegación y botón cerrar */}
-            <nav className="glass-nav-pill rounded-[2rem] px-6 py-6">
-              {/* Header del menú con logo y X */}
-              <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/20">
-                <Link to={`/${i18n.language}`} aria-label="Go to homepage" onClick={() => setIsMenuOpen(false)}>
-                    <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt="Arkadia Labs Logo" className="h-8 w-auto"/>
-                </Link>
-                <button onClick={handleMobileMenuToggle} aria-label="Close menu">
-                  <X className="text-[#0D1B2A]" size={28} />
-                </button>
-              </div>
+            {/* Header siempre visible */}
+            <div className="flex justify-between items-center">
+              <Link to={`/${i18n.language}`} aria-label="Go to homepage">
+                <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt="Arkadia Labs Logo" className="h-8 w-auto"/>
+              </Link>
 
-              {/* Contenido del menú */}
-              <div className="flex flex-col space-y-4">
-                <Link
-                  to={`/${i18n.language}/#before-after`}
-                  onClick={() => handleNavigationClick(t('header.features'), `/${i18n.language}/#before-after`)}
-                  className={mobileLinkClasses}
+              <button onClick={handleMobileMenuToggle} aria-label="Toggle menu">
+                <motion.div
+                  animate={{ rotate: isMenuOpen ? 180 : 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
-                  {t('header.features')}
-                </Link>
-                <Link
-                  to={`/${i18n.language}/#integrations`}
-                  onClick={() => handleNavigationClick(t('header.integrations'), `/${i18n.language}/#integrations`)}
-                  className={mobileLinkClasses}
-                >
-                  {t('header.integrations')}
-                </Link>
+                  {isMenuOpen ? (
+                    <X className="text-[#0D1B2A]" size={28} />
+                  ) : (
+                    <Menu className="text-[#0D1B2A]" size={28} />
+                  )}
+                </motion.div>
+              </button>
+            </div>
 
-                {/* --- ENLACE AÑADIDO (MÓVIL) --- */}
-                <Link
-                  to={`/${i18n.language}/case-studies`}
-                  onClick={() => handleNavigationClick(t('header.studyCase'), `/${i18n.language}/case-studies`)}
-                  className={mobileLinkClasses}
-                >
-                  {t('header.studyCase')}
-                </Link>
-
-                <div className="pt-4 mt-4 border-t border-slate-200 flex flex-col space-y-3">
-                  <button
-                    onClick={handleGetStartedClick}
-                    className="relative w-full bg-[#1C7ED6] text-white hover:bg-[#155CB0] h-[48px] rounded-full font-semibold transition-all duration-300 overflow-hidden
-                      shadow-[0_0_6px_rgba(0,0,0,0.03),0_2px_6px_rgba(0,0,0,0.08),inset_3px_3px_0.5px_-3px_rgba(0,0,0,0.4),inset_-3px_-3px_0.5px_-3px_rgba(0,0,0,0.4),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.3),inset_-1px_-1px_1px_-0.5px_rgba(255,255,255,0.3),inset_0_0_6px_6px_rgba(255,255,255,0.08)]
-                      hover:shadow-[0_0_8px_rgba(0,0,0,0.05),0_4px_12px_rgba(0,0,0,0.1),inset_3px_3px_0.5px_-3px_rgba(0,0,0,0.5),inset_-3px_-3px_0.5px_-3px_rgba(0,0,0,0.5),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.4),inset_-1px_-1px_1px_-0.5px_rgba(255,255,255,0.4),inset_0_0_8px_8px_rgba(255,255,255,0.1)]"
+            {/* Menú expandible con animación de altura */}
+            <motion.div
+              initial={false}
+              animate={{
+                height: isMenuOpen ? "auto" : 0,
+                opacity: isMenuOpen ? 1 : 0
+              }}
+              transition={{
+                height: {
+                  duration: 0.4,
+                  ease: [0.4, 0, 0.2, 1]
+                },
+                opacity: {
+                  duration: 0.3,
+                  ease: "easeInOut"
+                }
+              }}
+              style={{ overflow: "hidden" }}
+            >
+              <div className="pt-6 pb-2">
+                {/* Contenido del menú */}
+                <div className="flex flex-col space-y-4">
+                  <Link
+                    to={`/${i18n.language}/#before-after`}
+                    onClick={() => handleNavigationClick(t('header.features'), `/${i18n.language}/#before-after`)}
+                    className={mobileLinkClasses}
                   >
-                    <span className="relative z-10">{t('header.getStarted')}</span>
-                  </button>
-                  <a
-                    href="https://app.arkadialabs.io"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`w-full text-center py-3 ${secondaryButtonClasses}`}
-                    onClick={() => {
-                      handleLoginClick();
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    {t('header.login')}
-                  </a>
-                </div>
+                    {t('header.features')}
+                  </Link>
 
-                <div className="flex justify-center pt-4 mt-4 border-t border-slate-200">
-                  <LanguageSwitcher />
+                  <Link
+                    to={`/${i18n.language}/#integrations`}
+                    onClick={() => handleNavigationClick(t('header.integrations'), `/${i18n.language}/#integrations`)}
+                    className={mobileLinkClasses}
+                  >
+                    {t('header.integrations')}
+                  </Link>
+
+                  <Link
+                    to={`/${i18n.language}/case-studies`}
+                    onClick={() => handleNavigationClick(t('header.studyCase'), `/${i18n.language}/case-studies`)}
+                    className={mobileLinkClasses}
+                  >
+                    {t('header.studyCase')}
+                  </Link>
+
+                  <div className="pt-4 mt-4 border-t border-slate-200 flex flex-col space-y-3">
+                    <button
+                      onClick={handleGetStartedClick}
+                      className="relative w-full bg-[#1C7ED6] text-white hover:bg-[#155CB0] h-[48px] rounded-full font-semibold transition-all duration-300 overflow-hidden
+                        shadow-[0_0_6px_rgba(0,0,0,0.03),0_2px_6px_rgba(0,0,0,0.08),inset_3px_3px_0.5px_-3px_rgba(0,0,0,0.4),inset_-3px_-3px_0.5px_-3px_rgba(0,0,0,0.4),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.3),inset_-1px_-1px_1px_-0.5px_rgba(255,255,255,0.3),inset_0_0_6px_6px_rgba(255,255,255,0.08)]
+                        hover:shadow-[0_0_8px_rgba(0,0,0,0.05),0_4px_12px_rgba(0,0,0,0.1),inset_3px_3px_0.5px_-3px_rgba(0,0,0,0.5),inset_-3px_-3px_0.5px_-3px_rgba(0,0,0,0.5),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.4),inset_-1px_-1px_1px_-0.5px_rgba(255,255,255,0.4),inset_0_0_8px_8px_rgba(255,255,255,0.1)]"
+                    >
+                      <span className="relative z-10">{t('header.getStarted')}</span>
+                    </button>
+                    <a
+                      href="https://app.arkadialabs.io"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-full text-center py-3 ${secondaryButtonClasses}`}
+                      onClick={() => {
+                        handleLoginClick();
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      {t('header.login')}
+                    </a>
+                  </div>
+
+                  <div className="flex justify-center pt-4 mt-4 border-t border-slate-200">
+                    <LanguageSwitcher />
+                  </div>
                 </div>
               </div>
-            </nav>
+            </motion.div>
           </motion.div>
-        )}
-      </AnimatePresence>
+        </div>
+      </div>
     </header>
   );
 };
