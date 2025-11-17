@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation, Trans } from 'react-i18next';
 import { useConversation } from '@elevenlabs/react';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import AccumulatingTypingEffect, { PhraseWithEmoji } from './AccumulatingTypingEffect';
 import { trackAiWidgetOpen, trackAiWidgetClose } from '@/utils/dataLayer';
@@ -10,18 +10,20 @@ import OptimizedImage from './OptimizedImage';
 
 const Hero = () => {
   const { t, i18n } = useTranslation();
-  
+
   const { startSession, endSession, status } = useConversation();
   const [isLoading, setIsLoading] = useState(false);
 
-  const aiAgentPhrases: PhraseWithEmoji[] = [
+  // Memoize phrases to prevent recreation on every render
+  // Only recreate when translations change (t function)
+  const aiAgentPhrases: PhraseWithEmoji[] = useMemo(() => [
     { emoji: "📈", text: t('hero.phrases.p1') },
     { emoji: "⚙️", text: t('hero.phrases.p2') },
     { emoji: "💁‍♀️", text: t('hero.phrases.p3') },
     { emoji: "💼", text: t('hero.phrases.p4') },
     { emoji: "💬", text: t('hero.phrases.p5') },
     { emoji: "📊", text: t('hero.phrases.p6') }
-  ];
+  ], [t]);
 
   const handleToggleConversation = useCallback(async () => {
     setIsLoading(true);

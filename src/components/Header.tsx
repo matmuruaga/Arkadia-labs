@@ -1,5 +1,5 @@
 // src/components/Header.tsx
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
@@ -13,6 +13,10 @@ const Header = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
+  // Ref for requestAnimationFrame throttling
+  const rafRef = useRef<number | null>(null);
+  const lastScrollY = useRef(0);
+
   // Detectar si estamos en una página con hero oscuro
   const isDarkHeroPage = () => {
     const path = window.location.pathname;
@@ -23,32 +27,60 @@ const Header = () => {
 
   const [hasDarkHero] = useState(isDarkHeroPage());
 
+  // Optimized scroll handler with requestAnimationFrame throttling
   useEffect(() => {
-    const handleScroll = () => setScrolling(window.scrollY > 10);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      // Cancel previous frame if it exists
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+      }
+
+      // Schedule update for next frame
+      rafRef.current = requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+
+        // Only update if scroll position changed significantly
+        if (Math.abs(currentScrollY - lastScrollY.current) > 5) {
+          const isScrolled = currentScrollY > 10;
+          setScrolling(isScrolled);
+          lastScrollY.current = currentScrollY;
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+      }
+    };
   }, []);
-  
-  const handleGetStartedClick = () => {
+
+  // Memoized handlers to prevent recreation on every render
+  const handleGetStartedClick = useCallback(() => {
     trackCtaClick('get_started', 'header', t('header.getStarted'));
     setIsMenuOpen(false);
     navigate(`/${i18n.language}/contact`);
-  };
+  }, [navigate, i18n.language, t]);
 
-  const handleMobileMenuToggle = () => {
-    const newState = !isMenuOpen;
-    trackMobileMenuToggle(newState ? 'open' : 'close');
-    setIsMenuOpen(newState);
-  };
+  const handleMobileMenuToggle = useCallback(() => {
+    setIsMenuOpen(prev => {
+      const newState = !prev;
+      trackMobileMenuToggle(newState ? 'open' : 'close');
+      return newState;
+    });
+  }, []);
 
-  const handleNavigationClick = (linkName: string, destination: string) => {
+  const handleNavigationClick = useCallback((linkName: string, destination: string) => {
     trackNavigationClick(linkName, destination);
     setIsMenuOpen(false);
-  };
+  }, []);
 
-  const handleLoginClick = () => {
+  const handleLoginClick = useCallback(() => {
     trackLoginClick('header');
-  };
+  }, []);
 
   const linkClasses = "text-[#0D1B2A] hover:text-[#1C7ED6] transition-colors font-medium cursor-pointer";
   const mobileLinkClasses = `block py-3 text-center text-lg ${linkClasses}`;

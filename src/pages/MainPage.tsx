@@ -33,13 +33,32 @@ const MainPage = () => {
       <BeforeAfterSection />
       <KpiSection />
 
-      {/* Below-the-fold content - lazy loaded for better initial performance */}
-      <Suspense fallback={<div className="h-20" />}>
+      {/*
+        Below-the-fold content - lazy loaded with individual Suspense boundaries
+        This allows progressive loading and prevents waterfall effects
+        Each component loads independently for better UX
+      */}
+      <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
         <WhyArkadia />
+      </Suspense>
+
+      <Suspense fallback={<div className="h-40 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading integrations...</div></div>}>
         <IntegrationsSection />
+      </Suspense>
+
+      <Suspense fallback={<div className="h-16" />}>
         <AnimatedSeparator />
+      </Suspense>
+
+      <Suspense fallback={<div className="h-48 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading testimonials...</div></div>}>
         <TestimonialsSection />
+      </Suspense>
+
+      <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading FAQ...</div></div>}>
         <FaqSection />
+      </Suspense>
+
+      <Suspense fallback={<div className="h-24 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
         <FinalCtaSection />
       </Suspense>
     </>
