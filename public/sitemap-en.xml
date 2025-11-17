@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://arkadialabs.io/en</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkadialabs.io/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkadialabs.io/es"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://arkadialabs.io/cs"/>
+  </url>
+
+  <!-- Integrations Page -->
+  <url>
+    <loc>https://arkadialabs.io/en/integrations</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkadialabs.io/en/integrations"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkadialabs.io/es/integrations"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://arkadialabs.io/cs/integrations"/>
+  </url>
+
+  <!-- Pricing Page -->
+  <url>
+    <loc>https://arkadialabs.io/en/pricing</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkadialabs.io/en/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkadialabs.io/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://arkadialabs.io/cs/pricing"/>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://arkadialabs.io/en/contact</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkadialabs.io/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkadialabs.io/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://arkadialabs.io/cs/contact"/>
+  </url>
+
+  <!-- Case Studies -->
+  <url>
+    <loc>https://arkadialabs.io/en/case-study/goodnite</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkadialabs.io/en/case-study/goodnite"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkadialabs.io/es/case-study/goodnite"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://arkadialabs.io/cs/case-study/goodnite"/>
+  </url>
+
+  <url>
+    <loc>https://arkadialabs.io/en/case-study/flowlibrary</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkadialabs.io/en/case-study/flowlibrary"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkadialabs.io/es/case-study/flowlibrary"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://arkadialabs.io/cs/case-study/flowlibrary"/>
+  </url>
+
+  <url>
+    <loc>https://arkadialabs.io/en/case-study/hotelcrafters</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkadialabs.io/en/case-study/hotelcrafters"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkadialabs.io/es/case-study/hotelcrafters"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://arkadialabs.io/cs/case-study/hotelcrafters"/>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://arkadialabs.io/en/privacy-policy</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkadialabs.io/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkadialabs.io/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://arkadialabs.io/cs/privacy-policy"/>
+  </url>
+
+  <url>
+    <loc>https://arkadialabs.io/en/terms-and-conditions</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkadialabs.io/en/terms-and-conditions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkadialabs.io/es/terms-and-conditions"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://arkadialabs.io/cs/terms-and-conditions"/>
+  </url>
+
+  <url>
+    <loc>https://arkadialabs.io/en/cookie-policy</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkadialabs.io/en/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkadialabs.io/es/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://arkadialabs.io/cs/cookie-policy"/>
+  </url>
+
+</urlset>

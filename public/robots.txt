@@ -1,4 +1,27 @@
+# robots.txt for Arkadia Labs
+# Multi-language site supporting EN, ES, CS
+
 User-agent: *
 Allow: /
 
+# Allow all language versions
+Allow: /en/
+Allow: /es/
+Allow: /cs/
+
+# Allow all public assets
+Allow: /assets/
+Allow: /locales/
+
+# Disallow admin or private paths (if any)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Crawl delay (optional - adjust if needed)
+# Crawl-delay: 1
+
+# Sitemaps
 Sitemap: https://arkadialabs.io/sitemap.xml
+Sitemap: https://arkadialabs.io/sitemap-en.xml
+Sitemap: https://arkadialabs.io/sitemap-es.xml
+Sitemap: https://arkadialabs.io/sitemap-cs.xml
