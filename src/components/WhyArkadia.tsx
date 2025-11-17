@@ -50,21 +50,20 @@ const WhyArkadia = () => {
             ))}
           </div>
 
-          {/* --- COLUMNA DERECHA - Efecto carrusel/slider --- */}
-          <div className="lg:w-2/3 overflow-hidden">
-            <AnimatePresence mode="wait" custom={activeStep}>
+          {/* --- COLUMNA DERECHA - Crossfade fluido entre imágenes --- */}
+          <div className="lg:w-2/3 relative">
+            <AnimatePresence initial={false}>
               {activeStepData && (
                 <motion.div
                   key={activeStepData.id}
-                  custom={activeStep}
-                  initial={{ x: 300, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{ x: -300, opacity: 0 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
                   transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 30
+                    duration: 0.5,
+                    ease: "easeInOut"
                   }}
+                  className="absolute inset-0"
                 >
                   <div className="bg-[#F1F3F5] rounded-xl shadow-xl overflow-hidden">
                     {/* Imagen con aspect ratio fijo */}
@@ -89,6 +88,16 @@ const WhyArkadia = () => {
                 </motion.div>
               )}
             </AnimatePresence>
+            {/* Spacer para mantener la altura mientras las imágenes hacen crossfade */}
+            <div className="invisible">
+              <div className="bg-[#F1F3F5] rounded-xl shadow-xl overflow-hidden">
+                <div className="relative w-full bg-gray-200" style={{ paddingBottom: '56.25%' }}></div>
+                <div className="p-6 md:p-8">
+                  <h3 className="text-2xl font-semibold mb-3">Placeholder</h3>
+                  <p className="text-[#0D1B2A]/80 leading-relaxed">Placeholder text</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
