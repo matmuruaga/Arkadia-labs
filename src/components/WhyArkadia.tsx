@@ -50,31 +50,33 @@ const WhyArkadia = () => {
             ))}
           </div>
 
-          {/* --- COLUMNA DERECHA OPTIMIZADA --- */}
-          {/* Contenedor con altura fija para prevenir layout shift */}
-          <div className="lg:w-2/3 relative">
-            {/* AnimatePresence sin mode="wait" para crossfade suave */}
-            <AnimatePresence initial={false}>
+          {/* --- COLUMNA DERECHA - Efecto carrusel/slider --- */}
+          <div className="lg:w-2/3 overflow-hidden">
+            <AnimatePresence mode="wait" custom={activeStep}>
               {activeStepData && (
                 <motion.div
                   key={activeStepData.id}
-                  // Position absolute para que los elementos se superpongan durante la transición
-                  className="w-full"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  custom={activeStep}
+                  initial={{ x: 300, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: -300, opacity: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 30
+                  }}
                 >
                   <div className="bg-[#F1F3F5] rounded-xl shadow-xl overflow-hidden">
-                    {/* Aspect ratio container mantiene el espacio de la imagen */}
-                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}> {/* 16:9 aspect ratio */}
+                    {/* Imagen con aspect ratio fijo */}
+                    <div className="relative w-full bg-gray-200" style={{ paddingBottom: '56.25%' }}>
                       <img
                         src={activeStepData.imageUrl}
                         alt={t(activeStepData.titleKey)}
                         className="absolute inset-0 w-full h-full object-cover"
-                        loading="lazy"
+                        loading="eager"
                       />
                     </div>
+                    {/* Contenido del texto */}
                     <div className="p-6 md:p-8">
                       <h3 className="text-2xl font-semibold mb-3" style={{color: activeStepData.themeColor}}>
                         {t(activeStepData.titleKey)}
