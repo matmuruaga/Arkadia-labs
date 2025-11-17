@@ -365,6 +365,18 @@ elevenlabs-convai {
 /* iOS-style glassmorphism with capsule shape     */
 /* Enhanced with distortion and transparency      */
 /* =============================================== */
+
+/* Ensure header stays fixed at top - The transform in body was breaking position:fixed */
+/* Now that transform is removed from body, this just reinforces the fixed positioning */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 50;
+}
+
 .glass-nav-pill {
   position: relative;
   isolation: isolate; /* Create stacking context */

@@ -59,8 +59,8 @@
         background-color: #F1F3F5;
         color: #0D1B2A;
         -webkit-font-smoothing: antialiased;
-        /* Performance: Enable hardware acceleration */
-        transform: translateZ(0);
+        /* Performance: Enable hardware acceleration - REMOVED transform because it breaks position:fixed */
+        /* transform: translateZ(0); */
       }
 
       /* CSS Containment - Optimize rendering performance */
