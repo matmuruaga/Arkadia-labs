@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { CaseStudy } from '../data/caseStudiesData';
 import Icon from './Icon';
+import { useTranslation } from 'react-i18next';
 
 // El componente de animación se mantiene igual
 function AnimatedNumber({ value, suffix }: { value: number, suffix: string }) {
@@ -39,17 +40,20 @@ const cardVariants = {
 
 interface Props {
   data: CaseStudy['impact'];
+  studyKey: string;
 }
 
-const CaseStudyImpact: React.FC<Props> = ({ data }) => {
+const CaseStudyImpact: React.FC<Props> = ({ data, studyKey }) => {
+  const { t } = useTranslation();
+
   if (!data) return null;
 
   return (
     <section className="bg-gray-900 py-12 md:py-20">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">{data.title}</h2>
-          <p className="text-lg text-gray-400 mt-4">{data.subtitle}</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">{t(`caseStudies.${studyKey}.impact.title`)}</h2>
+          <p className="text-lg text-gray-400 mt-4">{t(`caseStudies.${studyKey}.impact.subtitle`)}</p>
         </div>
         
         <motion.div 
@@ -59,19 +63,19 @@ const CaseStudyImpact: React.FC<Props> = ({ data }) => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          {data.kpis.map((kpi) => {
+          {data.kpis.map((kpi, index) => {
             const styles = themeStyles[kpi.theme];
             const originalValue = String(kpi.value);
             const numericValue = parseFloat(originalValue.replace(/[^0-9.]/g, ''));
             const suffix = originalValue.includes('%') ? '%' : originalValue.includes('x') ? 'x' : '';
-            
+
             // --- LÓGICA DE DECISIÓN AÑADIDA ---
             // Comprobamos si el valor original contiene caracteres que no queremos animar (como '/')
             const isStaticText = originalValue.includes('/') || isNaN(numericValue);
 
             return (
               <motion.div
-                key={kpi.label} 
+                key={index}
                 className={`relative p-8 rounded-2xl text-center shadow-2xl bg-gradient-to-br ${styles.gradient} border border-white/10`}
                 variants={cardVariants}
                 whileHover={{ y: -8, scale: 1.03, transition: { type: 'spring', stiffness: 300 } }}
@@ -89,9 +93,9 @@ const CaseStudyImpact: React.FC<Props> = ({ data }) => {
                       <AnimatedNumber value={numericValue} suffix={suffix} />
                     )}
                   </div>
-                  
-                  <p className="mt-2 text-lg font-bold text-white">{kpi.label}</p>
-                  <p className="mt-1 text-sm text-gray-400">{kpi.subLabel}</p>
+
+                  <p className="mt-2 text-lg font-bold text-white">{t(`caseStudies.${studyKey}.impact.kpis.${index}.label`)}</p>
+                  <p className="mt-1 text-sm text-gray-400">{t(`caseStudies.${studyKey}.impact.kpis.${index}.subLabel`)}</p>
                 </div>
               </motion.div>
             );

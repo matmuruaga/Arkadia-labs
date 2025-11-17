@@ -4,7 +4,7 @@ import { useParams, Outlet, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Layout from './Layout'; 
 
-const supportedLngs = ['en', 'es'];
+const supportedLngs = ['en', 'es', 'cs'];
 
 const LanguageHandler = () => {
   const { lang } = useParams<{ lang: string }>(); 

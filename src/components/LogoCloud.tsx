@@ -2,8 +2,11 @@
 import Marquee from "react-fast-marquee";
 import { allIntegrationsLogos } from "../data/integrations";
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export const LogoCloud = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-slate-50 py-16 md:py-20">
        <motion.div
@@ -13,9 +16,9 @@ export const LogoCloud = () => {
           viewport={{ once: true, amount: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Más de 500 Conexiones a tu Disposición</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t('logoCloud.title')}</h2>
           <p className="text-lg text-gray-600 mt-2 max-w-2xl mx-auto">
-            Desde CRMs y herramientas de marketing hasta tu software de gestión de proyectos.
+            {t('logoCloud.subtitle')}
           </p>
         </motion.div>
       

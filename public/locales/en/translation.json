@@ -203,6 +203,15 @@
   }
 }
   },
+  "logoCloud": {
+    "title": "Over 500 Connections at Your Disposal",
+    "subtitle": "From CRMs and marketing tools to your project management software."
+  },
+  "featuredIntegrations": {
+    "badge": "Integrations",
+    "title": "Integrate Your Existing Tools",
+    "subtitle": "At Arkadia Labs we connect with the applications your team already uses every day."
+  },
    "kpi": {
     "title": "The Arkadia Impact: Measurable Results",
     "subtitle": "Discover how our crafted AI solutions translate into tangible benefits and significant growth for businesses like yours.",

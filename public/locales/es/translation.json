@@ -97,6 +97,15 @@
       }
     }
   },
+  "logoCloud": {
+    "title": "Más de 500 Conexiones a tu Disposición",
+    "subtitle": "Desde CRMs y herramientas de marketing hasta tu software de gestión de proyectos."
+  },
+  "featuredIntegrations": {
+    "badge": "Integraciones",
+    "title": "Integra tus Herramientas Existentes",
+    "subtitle": "En Arkadia Labs conectamos con las aplicaciones que tu equipo ya utiliza todos los días."
+  },
  "kpi": {
     "title": "El Impacto Arkadia: Resultados Medibles",
     "subtitle": "Descubre cómo nuestras soluciones de IA a medida se traducen en beneficios tangibles y un crecimiento significativo para negocios como el tuyo.",
