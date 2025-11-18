@@ -31,13 +31,27 @@
     <link rel="preload" href="/locales/en/translation.json" as="fetch" crossorigin>
     <link rel="preload" href="/locales/es/translation.json" as="fetch" crossorigin>
 
-    <!-- Google Tag Manager - Optimized (Non-blocking) -->
+    <!-- Google Tag Manager with Consent Mode v2 - GDPR Compliant -->
 <script>
-  // Inicializar dataLayer inmediatamente para encolar eventos
+  // 1. Inicializar dataLayer inmediatamente para encolar eventos
   window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
 
-  // Cargar GTM después del load para no bloquear render crítico
-  // Ahorra ~4 segundos en First Contentful Paint
+  // 2. Configurar CONSENT MODE V2 - Estado DEFAULT (denegado hasta que usuario acepte)
+  // Esto previene que GTM establezca cookies antes del consentimiento
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'denied',
+    'personalization_storage': 'denied',
+    'security_storage': 'granted', // Siempre permitido (necesario)
+    'wait_for_update': 500 // Espera 500ms para que Usercentrics actualice el consentimiento
+  });
+
+  // 3. Cargar GTM después del load para no bloquear render crítico
+  // Ahora GTM respetará el consent mode y NO establecerá cookies hasta que el usuario acepte
   window.addEventListener('load', function() {
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -45,6 +59,9 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MNF4SGHF');
   });
+
+  // 4. Usercentrics actualizará automáticamente el consent a 'granted' cuando el usuario acepte
+  // Esto se hace a través de gtag('consent', 'update', {...}) desde Usercentrics
 </script>
 <!-- End Google Tag Manager -->
 
