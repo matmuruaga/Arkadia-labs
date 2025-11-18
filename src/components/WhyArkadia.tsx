@@ -18,7 +18,7 @@ const WhyArkadia = () => {
   const activeStepData = journeyStepsData.find(step => step.id === activeStep);
 
   return (
-    <section id="why-arkadia" className="py-16 md:py-24 bg-white">
+    <section id="why-arkadia" className="py-16 md:py-24 pb-24 md:pb-32 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div
           className="text-center mb-12 md:mb-16"
@@ -51,7 +51,7 @@ const WhyArkadia = () => {
           </div>
 
           {/* --- COLUMNA DERECHA - Crossfade fluido entre imágenes --- */}
-          <div className="lg:w-2/3 relative">
+          <div className="lg:w-2/3 relative min-h-[500px]">
             <AnimatePresence initial={false}>
               {activeStepData && (
                 <motion.div
@@ -63,7 +63,7 @@ const WhyArkadia = () => {
                     duration: 0.5,
                     ease: "easeInOut"
                   }}
-                  className="absolute inset-0"
+                  className="absolute top-0 left-0 right-0"
                 >
                   <div className="bg-[#F1F3F5] rounded-xl shadow-xl overflow-hidden">
                     {/* Imagen con aspect ratio fijo */}
