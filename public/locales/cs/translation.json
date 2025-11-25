@@ -1421,6 +1421,162 @@
           }
         ]
       }
+    },
+    "elsa-consulting": {
+      "hero": {
+        "title": "Jak jsme transformovali *prodejní operace* ELSA Consulting s kompletní AI platformou pro inteligenci",
+        "subtitle": "Strategická případová studie: ELSA Consulting dosáhla 3,5x vyšší míry odpovědí za 2 měsíce, zvýšila efektivitu o 80% a ušetřila více než 3 461 € s kompletním AI systémem prodejní inteligence ContactIQ - od validace kontaktů po synchronizaci s CRM.",
+        "kpis": [
+          { "label": "ROI za 2 měsíce" },
+          { "label": "Zvýšení míry odpovědí" },
+          { "label": "Ušetřený čas" }
+        ]
+      },
+      "client": {
+        "client_overview_title": "PŘEHLED KLIENTA",
+        "name": "ELSA Consulting",
+        "tagline": "Prodejní agentura",
+        "description": "Barcelonská konzultační agentura specializující se na outbound generování leadů a optimalizaci B2B prodeje pro středně velké společnosti ve Španělsku a na trzích LATAM."
+      },
+      "challenge": {
+        "beforeTitle": "Před implementací ContactIQ",
+        "points": [
+          "Pouze 7% míra odpovědí na studené hovory (průměr odvětví)",
+          "BDR tým plýtval 93 ze 100 hovorů na neplatná/nereagující čísla",
+          "Náklady týmu €57,69/hodinu vypalované na nekvalifikovaných seznamech leadů bez konverzační inteligence"
+        ]
+      },
+      "challengeSection": {
+        "title": "Výzva",
+        "subtitle": "ELSA Consulting čelila kritickým provozním výzvám, které omezovaly jejich prodejní efektivitu a růstový potenciál na konkurenčním B2B trhu.",
+        "challenges": [
+          {
+            "title": "Masivní plýtvání časem",
+            "description": "BDR tým trávil 75-80% svého dne voláním na neplatná čísla, hlasové schránky a odpojené kontakty bez možnosti předem kvalifikovat seznamy.",
+            "impact": "Nízká produktivita týmu"
+          },
+          {
+            "title": "Nepředvídatelná kvalita kontaktů",
+            "description": "Žádný standardizovaný systém pro validaci, které kontakty skutečně odpoví, což způsobovalo nekonzistentní generování pipeline a problémy s prognózováním.",
+            "impact": "Nespolehlivý prodejní pipeline"
+          },
+          {
+            "title": "Nulová konverzační inteligence",
+            "description": "Nulová viditelnost kvality hovorů, sentimentu nebo toho, co skutečně funguje. Manuální zapisování poznámek plýtvalo časem a bez synchronizace s CRM to znamenalo zmeškané follow-upy a ztracený kontext.",
+            "impact": "Zmeškané příležitosti k příjmům"
+          }
+        ],
+        "coreProblem": {
+          "title": "Jádro problému",
+          "quote": "Potřebovali jsme kompletní AI ekosystém prodejní inteligence, který by mohl validovat kontakty před voláním, analyzovat kvalitu konverzace v reálném čase, automaticky generovat vítězné skripty a synchronizovat vše s naším CRM bez manuální práce. Manuální prospecting a zapisování poznámek zabíjelo naši efektivitu a morálku týmu.",
+          "author": "Calixto Carbone, zakladatel a CEO ELSA Consulting"
+        }
+      },
+      "solution": {
+        "title": "Řešení ContactIQ",
+        "subtitle": "Kompletní AI platforma pro inteligenci leadů - Komplexní AI systém, který validuje kontakty před hovorem, analyzuje konverzace během hovoru, automaticky generuje vítězné skripty a synchronizuje vše s vaším CRM - nulová manuální práce.",
+        "implementation": {
+          "title": "Strategická AI implementace",
+          "description": "Využitím 12 let zkušeností s prodejem a osvědčených metodologií ze škálování 3 startupů z pre-seed do Series A jsme vyvinuli kompletní AI systém prodejní inteligence pokrývající celou cestu od prospectingu k uzavření.",
+          "features": [
+            {
+              "title": "Pre-hovorová validace a inteligence",
+              "description": "AI systém automaticky volá celé seznamy kontaktů (1000+ leadů), validuje čísla, detekuje hlasové schránky, analyzuje sentiment a hodnotí každý kontakt od 0-9 podle kvality zapojení - vše předtím, než vaši BDR udělají jediný hovor."
+            },
+            {
+              "title": "AI generování skriptů a transkripce",
+              "description": "Automaticky generuje ideální skripty na základě analýzy sentimentu z validačních hovorů, poté přepisuje a sumarizuje každý BDR hovor s detekcí emocí (šťastný, frustrovaný, zaujatý) a extrakcí klíčových bodů."
+            },
+            {
+              "title": "Bezdotyková synchronizace s CRM",
+              "description": "Každý hovor, transkripce, skóre sentimentu a follow-up úkol se automaticky synchronizuje do Salesforce/HubSpot. Nulové manuální logování, žádné zmeškané poznámky, kompletní historie konverzací okamžitě přístupná celému týmu."
+            }
+          ]
+        },
+        "coreFunctions": {
+          "title": "Hlavní funkce ContactIQ",
+          "functions": [
+            "Validace a hodnocení kontaktů (0-9)",
+            "Analýza sentimentu a emocí",
+            "AI generované konverzační skripty",
+            "Transkripce hovorů a souhrny",
+            "Automatická synchronizace s CRM"
+          ]
+        }
+      },
+      "timeline": {
+        "title": "Časový plán implementace",
+        "subtitle": "Rychlé nasazení s průběžnou optimalizací",
+        "phases": [
+          {
+            "title": "Měsíc 1: Vývoj platformy",
+            "description": "Postavena kompletní AI platforma prodejní inteligence: motor validace kontaktů, systém analýzy sentimentu, generátor skriptů, pipeline transkripce hovorů a CRM konektory integrované s instancí Salesforce ELSA."
+          },
+          {
+            "title": "Měsíc 2: Testování a optimalizace",
+            "description": "Pilotní program s testovací dávkou 5 000 kontaktů, vyladěné algoritmy hodnocení a šablony skriptů na základě skutečných vzorců odpovědí a dat sentimentu, BDR tým vyškolen na nový AI-asistovaný workflow s automatickým logováním do CRM."
+          },
+          {
+            "title": "Měsíc 3: Plné nasazení a výsledky",
+            "description": "Plné spuštění platformy napříč všemi outbound kampaněmi s okamžitým 3,5x zlepšením míry odpovědí, nulovým manuálním zapisováním poznámek, 80% úsporou času na prospectingu a měřitelným ROI během prvních 60 dnů."
+          }
+        ]
+      },
+      "impact": {
+        "title": "Měřitelný dopad",
+        "subtitle": "Transformační výsledky dodané za 2 měsíce",
+        "kpis": [
+          {
+            "label": "Míra odpovědí",
+            "subLabel": "Ze 7% průměru odvětví"
+          },
+          {
+            "label": "Platné kontakty",
+            "subLabel": "Identifikovaná funkční čísla"
+          },
+          {
+            "label": "Násobek ROI",
+            "subLabel": "Za 60 dní"
+          },
+          {
+            "label": "Ušetřený čas",
+            "subLabel": "Na prospectingových aktivitách"
+          }
+        ]
+      },
+      "roiAnalysis": {
+        "title": "Analýza ROI",
+        "subtitle": "Komplexní hodnocení finančního dopadu",
+        "calculator": {
+          "title": "Investice vs úspora nákladů",
+          "items": [
+            { "label": "Náklady 3členného BDR týmu" },
+            { "label": "Investice do platformy ContactIQ" },
+            { "label": "Úspora nákladů (2 měsíce)" }
+          ],
+          "finalRoi": { "label": "Dosaženo za 2 měsíce" }
+        },
+        "benefits": [
+          {
+            "title": "Nákladová efektivita",
+            "description": "Investice do AI platformy představuje pouze 15% personálních nákladů, přičemž přináší 3,5x zlepšení výkonu a eliminuje veškeré manuální zapisování poznámek a zadávání dat do CRM."
+          },
+          {
+            "title": "Akcelerace příjmů",
+            "description": "3,5x vyšší míra odpovědí + AI optimalizované skripty + automatické obohacení CRM = rychlejší generování pipeline, vyšší míry rezervací a lepší provádění follow-upů."
+          },
+          {
+            "title": "Zachycení institucionálních znalostí",
+            "description": "Každý hovor přepsaný a analyzovaný buduje knihovnu toho, co funguje. Noví BDR se adaptují 3x rychleji pomocí AI generovaných skriptů osvědčených postupů od nejlepších výkonných pracovníků."
+          }
+        ]
+      },
+      "testimonial": {
+        "quote": "ContactIQ transformoval způsob, jakým náš BDR tým funguje. Místo spalování stovek marných hovorů každý den nyní vedou skutečné konverzace s kvalifikovanými potenciálními zákazníky pomocí AI generovaných skriptů, které skutečně fungují. Automatická transkripce a synchronizace s CRM eliminovala veškeré manuální zapisování poznámek - náš tým přešel z 20 minut administrativní práce na hovor na nulu. Když víte, že váš další hovor se spojí s člověkem A máte připravený perfektní skript, vše se mění.",
+        "author": "Calixto Carbone",
+        "role": "Zakladatel a CEO",
+        "company": "ELSA Consulting"
+      }
     }
   },
   "footer": {

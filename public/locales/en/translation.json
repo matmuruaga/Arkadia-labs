@@ -1431,6 +1431,162 @@
         { "title": "Scalability Factor", "description": "AI system scales infinitely across international locations without additional management overhead." }
       ]
     }
+  },
+  "elsa-consulting": {
+    "hero": {
+      "title": "How We Transformed *Sales Operations* at ELSA Consulting with a Complete AI Intelligence Platform",
+      "subtitle": "Strategic case study: ELSA Consulting achieved 3.5x higher response rates in 2 months, increased efficiency by 80%, and saved over €3,461 with ContactIQ's complete AI-powered sales intelligence system - from contact validation to CRM sync.",
+      "kpis": [
+        { "label": "ROI in 2 Months" },
+        { "label": "Response Rate Increase" },
+        { "label": "Time Saved" }
+      ]
+    },
+    "client": {
+      "client_overview_title": "CLIENT OVERVIEW",
+      "name": "ELSA Consulting",
+      "tagline": "Sales Agency",
+      "description": "Barcelona-based sales consulting agency specializing in outbound lead generation and B2B sales optimization for mid-market companies across Spain and LATAM markets."
+    },
+    "challenge": {
+      "beforeTitle": "Before ContactIQ Implementation",
+      "points": [
+        "Only 7% response rate on cold calls (industry average)",
+        "BDRs wasting 93 out of 100 calls on invalid/unresponsive numbers",
+        "Team cost of €57.69/hour burning on unqualified lead lists with zero conversation intelligence"
+      ]
+    },
+    "challengeSection": {
+      "title": "The Challenge",
+      "subtitle": "ELSA Consulting faced critical operational challenges that limited their sales efficiency and growth potential in the competitive B2B market.",
+      "challenges": [
+        {
+          "title": "Massive Time Waste",
+          "description": "BDR team spent 75-80% of their day calling invalid numbers, voicemails, and disconnected contacts with no way to pre-qualify lists.",
+          "impact": "Low team productivity"
+        },
+        {
+          "title": "Unpredictable Contact Quality",
+          "description": "No standardized system to validate which contacts would actually respond, causing inconsistent pipeline generation and forecasting problems.",
+          "impact": "Unreliable sales pipeline"
+        },
+        {
+          "title": "Zero Conversation Intelligence",
+          "description": "Zero visibility into call quality, sentiment, or what was actually working. Manual note-taking wasted time, and no CRM sync meant missed follow-ups and lost context.",
+          "impact": "Missed revenue opportunities"
+        }
+      ],
+      "coreProblem": {
+        "title": "The Core Problem",
+        "quote": "We needed a complete AI-powered sales intelligence ecosystem that could validate contacts before calling them, analyze conversation quality in real-time, generate winning scripts automatically, and sync everything to our CRM without manual work. Manual prospecting and note-taking was killing our efficiency and team morale.",
+        "author": "Calixto Carbone, Founder & CEO of ELSA Consulting"
+      }
+    },
+    "solution": {
+      "title": "The ContactIQ Solution",
+      "subtitle": "Complete AI-Powered Lead Intelligence Platform - Comprehensive AI-driven system that validates contacts before the call, analyzes conversations during the call, generates winning scripts automatically, and syncs everything to your CRM - zero manual work.",
+      "implementation": {
+        "title": "Strategic AI Implementation",
+        "description": "Leveraging 12 years of sales expertise and proven methodologies from scaling 3 startups from pre-seed to Series A, we developed a complete AI-powered sales intelligence system covering the entire journey from prospecting to closing.",
+        "features": [
+          {
+            "title": "Pre-Call Validation & Intelligence",
+            "description": "AI system automatically calls entire contact lists (1000+ leads), validates numbers, detects voicemails, analyzes sentiment, and scores each contact from 0-9 based on engagement quality - all before your BDRs make a single call."
+          },
+          {
+            "title": "AI Script Generation & Transcription",
+            "description": "Automatically generates ideal scripts based on sentiment analysis from validation calls, then transcribes and summarizes each BDR call with emotion detection (happy, frustrated, interested) and key points extraction."
+          },
+          {
+            "title": "Zero-Touch CRM Sync",
+            "description": "Every call, transcription, sentiment score, and follow-up task automatically syncs to Salesforce/HubSpot. Zero manual logging, zero missed notes, complete conversation history instantly accessible to the entire team."
+          }
+        ]
+      },
+      "coreFunctions": {
+        "title": "ContactIQ Core Functions",
+        "functions": [
+          "Contact Validation & Scoring (0-9)",
+          "Sentiment & Emotion Analysis",
+          "AI-Generated Conversation Scripts",
+          "Call Transcription & Summaries",
+          "Automatic CRM Sync"
+        ]
+      }
+    },
+    "timeline": {
+      "title": "Implementation Timeline",
+      "subtitle": "Rapid deployment with continuous optimization",
+      "phases": [
+        {
+          "title": "Month 1: Platform Development",
+          "description": "Complete AI sales intelligence platform built: contact validation engine, sentiment analysis system, script generator, call transcription pipeline, and CRM connectors integrated with ELSA's Salesforce instance."
+        },
+        {
+          "title": "Month 2: Testing & Optimization",
+          "description": "Pilot program with 5,000 contact test batch, refined scoring algorithms and script templates based on actual response patterns and sentiment data, BDR team trained on new AI-assisted workflow with automatic CRM logging."
+        },
+        {
+          "title": "Month 3: Full Deployment & Results",
+          "description": "Full platform rollout across all outbound campaigns with immediate 3.5x response rate improvement, zero manual note-taking, 80% time savings on prospecting, and measurable ROI within the first 60 days."
+        }
+      ]
+    },
+    "impact": {
+      "title": "Measurable Impact",
+      "subtitle": "Transformational results delivered in 2 months",
+      "kpis": [
+        {
+          "label": "Response Rate",
+          "subLabel": "From 7% industry average"
+        },
+        {
+          "label": "Valid Contacts",
+          "subLabel": "Working numbers identified"
+        },
+        {
+          "label": "ROI Multiple",
+          "subLabel": "In 60 days"
+        },
+        {
+          "label": "Time Saved",
+          "subLabel": "On prospecting activities"
+        }
+      ]
+    },
+    "roiAnalysis": {
+      "title": "ROI Analysis",
+      "subtitle": "Comprehensive financial impact assessment",
+      "calculator": {
+        "title": "Investment vs Cost Savings",
+        "items": [
+          { "label": "3-Person BDR Team Cost" },
+          { "label": "ContactIQ Platform Investment" },
+          { "label": "Cost Savings (2 months)" }
+        ],
+        "finalRoi": { "label": "Achieved in 2 months" }
+      },
+      "benefits": [
+        {
+          "title": "Cost Efficiency",
+          "description": "AI platform investment represents only 15% of staffing costs, while delivering 3.5x performance improvement and eliminating all manual note-taking and CRM data entry."
+        },
+        {
+          "title": "Revenue Acceleration",
+          "description": "3.5x higher response rate + AI-optimized scripts + automatic CRM enrichment = faster pipeline generation, higher booking rates, and better follow-up execution."
+        },
+        {
+          "title": "Institutional Knowledge Capture",
+          "description": "Every call transcribed and analyzed builds a library of what works. New BDRs ramp 3x faster using AI-generated best practice scripts from top performers."
+        }
+      ]
+    },
+    "testimonial": {
+      "quote": "ContactIQ transformed how our BDR team operates. Instead of burning through hundreds of dead-end calls every day, they're now having real conversations with qualified prospects using AI-generated scripts that actually work. The automatic transcription and CRM sync eliminated all manual note-taking - our team went from spending 20 minutes per call on admin work to zero. When you know your next call will reach a human AND you have the perfect script ready, everything changes.",
+      "author": "Calixto Carbone",
+      "role": "Founder & CEO",
+      "company": "ELSA Consulting"
+    }
   }
 },
  "case_studies_index": {

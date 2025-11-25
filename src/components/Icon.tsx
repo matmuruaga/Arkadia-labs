@@ -1,25 +1,25 @@
 // src/components/Icon.tsx
 import React from 'react';
 // Añade todos los iconos que estamos usando en el proyecto
-import { 
-  TrendingUp, 
-  CalendarDays, 
-  UserCheck, 
-  Shield, 
-  Clock, 
-  DollarSign, 
-  Lightbulb, 
-  Calendar, 
-  Users, 
-  UserX, 
+import {
+  TrendingUp,
+  CalendarDays,
+  UserCheck,
+  Shield,
+  Clock,
+  DollarSign,
+  Lightbulb,
+  Calendar,
+  Users,
+  UserX,
   Search,
   Rocket,
   ShieldCheck,
   Infinity,
   LucideProps,
   Briefcase,
-  Target, 
-  Award, 
+  Target,
+  Award,
   Settings2,
   Home,
   MessageSquareWarning,
@@ -29,6 +29,8 @@ import {
   MessageCircle,
   Smile,
   Zap,
+  Phone,
+  CheckCircle2,
 } from 'lucide-react';
 
 // Mapeo completo de nombres a componentes de icono
@@ -48,7 +50,7 @@ const icons = {
   ShieldCheck,
   Infinity,
   Briefcase,
-  Target, 
+  Target,
   Award,
   Settings2,
   Home,
@@ -59,6 +61,8 @@ const icons = {
   MessageCircle,
   Smile,
   Zap,
+  Phone,
+  CheckCircle2,
 };
 
 interface IconProps extends LucideProps {
