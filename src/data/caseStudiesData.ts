@@ -570,7 +570,7 @@ export const caseStudies: { [key: string]: CaseStudy } = {
       tagline: "Sales Agency",
       logoUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1762353602/274eba1b-f596-40b9-8e4e-2e05d51d1048_yadkpm.png',
       description: "Barcelona-based sales consulting agency specializing in outbound lead generation and B2B sales optimization for mid-market companies across Spain and LATAM markets.",
-      website: "elsa-consulting.com",
+      website: "web.elsaconsulting.io",
       industry: 'Sales Consulting & BDR Services',
       dealSize: '',
       salesTeam: '3 BDR Team Members',
