@@ -15,6 +15,7 @@
       "marketing": "Marketing y Contenido",
       "operations": "Operaciones"
     },
+    "back": "Volver",
     "solutionsItems": {
       "leadValidator": {
         "name": "Validador de Leads",
@@ -448,8 +449,9 @@
     "scoreAnimation": {
       "title": "Mira la Calificación de Leads en Tiempo Real",
       "subtitle": "Desplázate para ver cómo nuestra IA valida y puntúa leads basándose en múltiples criterios",
+      "mobileHint": "Toca cada paso para ver el cambio de puntuación",
       "leadName": "Marcus Chen",
-      "leadCompany": "Velocity Partners",
+      "leadCompany": "TechFlow Inc.",
       "statusCold": "Lead Frío",
       "statusWarm": "Lead Tibio",
       "statusHot": "Lead Caliente",
@@ -458,10 +460,15 @@
       "scrollHint": "↓ Sigue desplazándote para ver el proceso de validación ↓",
       "steps": {
         "phoneRings": "El teléfono suena",
+        "phoneRingsShort": "Teléfono Suena",
         "ownerVerified": "Propietario verificado",
+        "ownerVerifiedShort": "Dueño Verificado",
         "callAnswered": "Llamada contestada",
+        "callAnsweredShort": "Llamada Contestada",
         "engaged": "Involucrado en conversación",
-        "requestedInfo": "Solicitó información"
+        "engagedShort": "En Conversación",
+        "requestedInfo": "Solicitó información",
+        "requestedInfoShort": "Info Solicitada"
       }
     },
     "platform": {

@@ -550,8 +550,9 @@
     "scoreAnimation": {
       "title": "Watch Lead Qualification in Real-Time",
       "subtitle": "Scroll to see how our AI validates and scores leads based on multiple criteria",
+      "mobileHint": "Tap each step to see the score change",
       "leadName": "Marcus Chen",
-      "leadCompany": "Velocity Partners",
+      "leadCompany": "TechFlow Inc.",
       "statusCold": "Cold Lead",
       "statusWarm": "Warm Lead",
       "statusHot": "Hot Lead",
@@ -560,10 +561,15 @@
       "scrollHint": "↓ Keep scrolling to see the validation process ↓",
       "steps": {
         "phoneRings": "Phone rings",
+        "phoneRingsShort": "Phone Rings",
         "ownerVerified": "Owner verified",
+        "ownerVerifiedShort": "Owner Verified",
         "callAnswered": "Call answered",
+        "callAnsweredShort": "Call Answered",
         "engaged": "Engaged in conversation",
-        "requestedInfo": "Requested information"
+        "engagedShort": "Engaged",
+        "requestedInfo": "Requested information",
+        "requestedInfoShort": "Info Requested"
       }
     },
     "useCases": {

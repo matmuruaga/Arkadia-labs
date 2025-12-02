@@ -6,7 +6,8 @@
     "integrations": "Integrace",
     "studyCase": "Případové studie",
     "getStarted": "Začít",
-    "login": "Přihlásit se"
+    "login": "Přihlásit se",
+    "back": "Zpět"
   },
   "hero": {
     "title_part1": "Adaptivní AI systémy:",
@@ -2048,8 +2049,9 @@
     "scoreAnimation": {
       "title": "Sledujte Kvalifikaci Leadů v Reálném Čase",
       "subtitle": "Scrollujte a podívejte se, jak naše AI validuje a hodnotí leady na základě více kritérií",
+      "mobileHint": "Klepněte na každý krok pro změnu skóre",
       "leadName": "Marcus Chen",
-      "leadCompany": "Velocity Partners",
+      "leadCompany": "TechFlow Inc.",
       "statusCold": "Studený Lead",
       "statusWarm": "Teplý Lead",
       "statusHot": "Horký Lead",
@@ -2058,10 +2060,15 @@
       "scrollHint": "↓ Pokračujte ve scrollování pro zobrazení procesu validace ↓",
       "steps": {
         "phoneRings": "Telefon zvoní",
+        "phoneRingsShort": "Telefon Zvoní",
         "ownerVerified": "Vlastník ověřen",
+        "ownerVerifiedShort": "Vlastník Ověřen",
         "callAnswered": "Hovor přijat",
+        "callAnsweredShort": "Hovor Přijat",
         "engaged": "Zapojen do konverzace",
-        "requestedInfo": "Požádal o informace"
+        "engagedShort": "V Konverzaci",
+        "requestedInfo": "Požádal o informace",
+        "requestedInfoShort": "Info Požadováno"
       }
     },
     "platform": {
