@@ -1,14 +1,13 @@
 // src/components/LoadingScreen.tsx
 const LoadingScreen = () => {
   return (
-    <div className="min-h-screen bg-[#0C0F3F] flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-sky-50/30 to-cyan-50/40 flex items-center justify-center">
       <div className="text-center">
-        {/* Logo o spinner animado */}
-        <div className="mb-6">
-          <div className="w-16 h-16 mx-auto border-4 border-[#5CE1E6] border-t-transparent rounded-full animate-spin"></div>
+        {/* Spinner with gradient effect */}
+        <div className="relative w-12 h-12 mx-auto">
+          <div className="absolute inset-0 rounded-full border-2 border-slate-200"></div>
+          <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-sky-500 border-r-teal-500 animate-spin"></div>
         </div>
-        {/* Texto de carga */}
-        <p className="text-white/70 text-lg font-medium">Loading...</p>
       </div>
     </div>
   );

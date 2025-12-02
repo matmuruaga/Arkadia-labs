@@ -1,15 +1,50 @@
 // src/components/Header.tsx
 import { useEffect, useState, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, PhoneIncoming, Image, Share2, UserCheck, ShoppingCart, CalendarCheck, Cog } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import { trackNavigationClick, trackCtaClick, trackLoginClick, trackMobileMenuToggle } from '@/utils/dataLayer';
 
+// Solutions menu data structure
+const solutionsData = [
+  {
+    category: 'outbound',
+    items: [
+      { id: 'lead-validator', icon: Phone, translationKey: 'leadValidator' },
+      { id: 'sales-qualifier', icon: PhoneIncoming, translationKey: 'salesQualifier' },
+      { id: 'sales-agent', icon: ShoppingCart, translationKey: 'salesAgent' },
+    ]
+  },
+  {
+    category: 'inbound',
+    items: [
+      { id: 'virtual-receptionist', icon: UserCheck, translationKey: 'virtualReceptionist' },
+      { id: 'booking-agent', icon: CalendarCheck, translationKey: 'bookingAgent' },
+    ]
+  },
+  {
+    category: 'marketing',
+    items: [
+      { id: 'content-creator', icon: Image, translationKey: 'contentCreator' },
+      { id: 'social-manager', icon: Share2, translationKey: 'socialManager' },
+    ]
+  },
+  {
+    category: 'operations',
+    items: [
+      { id: 'operations-agent', icon: Cog, translationKey: 'operationsAgent' },
+    ]
+  }
+];
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false);
+  const solutionsDropdownRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
@@ -58,6 +93,23 @@ const Header = () => {
     };
   }, []);
 
+  // Close solutions dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (solutionsDropdownRef.current && !solutionsDropdownRef.current.contains(event.target as Node)) {
+        setIsSolutionsOpen(false);
+      }
+    };
+
+    if (isSolutionsOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isSolutionsOpen]);
+
   // Memoized handlers to prevent recreation on every render
   const handleGetStartedClick = useCallback(() => {
     trackCtaClick('get_started', 'header', t('header.getStarted'));
@@ -82,11 +134,9 @@ const Header = () => {
     trackLoginClick('header');
   }, []);
 
-  const linkClasses = "text-[#0D1B2A] hover:text-[#1C7ED6] transition-colors font-medium cursor-pointer";
-  const mobileLinkClasses = `block py-3 text-center text-lg ${linkClasses}`;
-  
-  const primaryButtonClasses = "bg-[#1C7ED6] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-[#155CB0] transition-all duration-300";
-  const secondaryButtonClasses = "border border-[#1C7ED6] text-[#1C7ED6] px-6 py-2.5 rounded-full font-semibold hover:bg-[#1C7ED6]/10 transition-all duration-300";
+  const linkClasses = "text-[#0D1B2A] hover:text-[#1C7ED6] transition-colors font-medium cursor-pointer text-sm whitespace-nowrap";
+  const mobileLinkClasses = `block py-3 text-center text-lg text-[#0D1B2A] hover:text-[#1C7ED6] transition-colors font-medium cursor-pointer`;
+  const secondaryButtonClasses = "border border-[#1C7ED6] text-[#1C7ED6] px-4 py-2 rounded-full font-semibold text-sm hover:bg-[#1C7ED6]/10 transition-all duration-300 whitespace-nowrap";
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -121,16 +171,16 @@ const Header = () => {
         </defs>
       </svg>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
         {/* --- DESKTOP: Cápsula completa con logo + navegación --- */}
-        <div className={`hidden md:flex items-center justify-between glass-nav-pill rounded-full px-6 py-3 ${
+        <div className={`hidden lg:flex items-center justify-between glass-nav-pill rounded-full px-5 py-2.5 ${
           scrolling ? 'scrolled' : ''
         }`}>
-          <Link to={`/${i18n.language}`} aria-label="Go to homepage">
-              <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt="Arkadia Labs Logo" className="h-8 w-auto"/>
+          <Link to={`/${i18n.language}`} aria-label="Go to homepage" className="flex-shrink-0">
+              <img src="https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg" alt="Arkadia Labs Logo" className="h-7 w-auto"/>
           </Link>
 
-          <nav className="flex items-center space-x-4 lg:space-x-6">
+          <nav className="flex items-center space-x-3 xl:space-x-5">
             <Link
               to={`/${i18n.language}/#before-after`}
               className={linkClasses}
@@ -146,7 +196,107 @@ const Header = () => {
               {t('header.integrations')}
             </Link>
 
-            {/* --- ENLACE AÑADIDO --- */}
+            {/* --- SOLUTIONS DROPDOWN --- */}
+            <div
+              ref={solutionsDropdownRef}
+              className="relative"
+              onMouseEnter={() => setIsSolutionsOpen(true)}
+              onMouseLeave={() => setIsSolutionsOpen(false)}
+            >
+              <button
+                className={`${linkClasses} flex items-center gap-1`}
+                onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
+                aria-expanded={isSolutionsOpen}
+                aria-haspopup="true"
+              >
+                {t('header.solutions')}
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform duration-200 ${isSolutionsOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+
+              <AnimatePresence>
+                {isSolutionsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[480px] z-50"
+                  >
+                    {/* Glassmorphism container */}
+                    <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_16px_48px_-12px_rgba(0,0,0,0.15)] border border-slate-200/60 overflow-hidden">
+                      {/* Subtle gradient accent at top */}
+                      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-sky-400 via-cyan-400 to-teal-400" />
+
+                      <div className="p-4">
+                        <div className="grid grid-cols-2 gap-4">
+                          {solutionsData.map((category) => (
+                            <div key={category.category}>
+                              <div className="flex items-center gap-1.5 mb-2 px-2">
+                                <div className={`w-1.5 h-1.5 rounded-full ${
+                                  category.category === 'outbound' ? 'bg-sky-500' :
+                                  category.category === 'inbound' ? 'bg-emerald-500' :
+                                  category.category === 'marketing' ? 'bg-teal-500' :
+                                  'bg-orange-500'
+                                }`} />
+                                <h4 className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
+                                  {t(`header.solutionsCategories.${category.category}`)}
+                                </h4>
+                              </div>
+                              <div className="space-y-0.5">
+                                {category.items.map((item) => {
+                                  const IconComponent = item.icon;
+                                  return (
+                                    <Link
+                                      key={item.id}
+                                      to={`/${i18n.language}/solutions/${item.id}`}
+                                      className="flex items-center gap-2.5 px-2 py-2 rounded-xl hover:bg-gradient-to-r hover:from-sky-50/80 hover:to-cyan-50/80 transition-all duration-200 group"
+                                      onClick={() => {
+                                        handleNavigationClick(t(`header.solutionsItems.${item.translationKey}.name`), `/${i18n.language}/solutions/${item.id}`);
+                                        setIsSolutionsOpen(false);
+                                      }}
+                                    >
+                                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-500 to-teal-500 flex items-center justify-center text-white shadow-md shadow-sky-500/20 group-hover:shadow-lg group-hover:scale-105 transition-all duration-200">
+                                        <IconComponent className="h-4 w-4" />
+                                      </div>
+                                      <div className="flex-1 min-w-0">
+                                        <p className="text-xs font-semibold text-slate-700 group-hover:text-sky-600 transition-colors truncate">
+                                          {t(`header.solutionsItems.${item.translationKey}.name`)}
+                                        </p>
+                                        <p className="text-[10px] text-slate-400 truncate leading-tight">
+                                          {t(`header.solutionsItems.${item.translationKey}.description`)}
+                                        </p>
+                                      </div>
+                                    </Link>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Footer CTA */}
+                        <div className="mt-3 pt-3 border-t border-slate-100/80">
+                          <Link
+                            to={`/${i18n.language}/solutions`}
+                            className="flex items-center justify-center gap-1.5 py-2 text-xs font-semibold bg-gradient-to-r from-sky-500 to-teal-500 text-white rounded-xl shadow-md shadow-sky-500/20 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+                            onClick={() => {
+                              handleNavigationClick(t('header.viewAllSolutions'), `/${i18n.language}/solutions`);
+                              setIsSolutionsOpen(false);
+                            }}
+                          >
+                            {t('header.viewAllSolutions')}
+                            <ChevronDown className="h-3.5 w-3.5 -rotate-90" />
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             <Link
               to={`/${i18n.language}/case-studies`}
               className={linkClasses}
@@ -155,10 +305,10 @@ const Header = () => {
               {t('header.studyCase')}
             </Link>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-shrink-0">
               <button
                 onClick={handleGetStartedClick}
-                className="relative bg-[#1C7ED6] text-white hover:bg-[#155CB0] h-[42px] px-6 py-2.5 rounded-full font-semibold transition-all duration-300 overflow-hidden
+                className="relative bg-[#1C7ED6] text-white hover:bg-[#155CB0] h-[36px] px-4 py-2 rounded-full font-semibold text-sm transition-all duration-300 overflow-hidden whitespace-nowrap
                   shadow-[0_0_6px_rgba(0,0,0,0.03),0_2px_6px_rgba(0,0,0,0.08),inset_3px_3px_0.5px_-3px_rgba(0,0,0,0.4),inset_-3px_-3px_0.5px_-3px_rgba(0,0,0,0.4),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.3),inset_-1px_-1px_1px_-0.5px_rgba(255,255,255,0.3),inset_0_0_6px_6px_rgba(255,255,255,0.08)]
                   hover:shadow-[0_0_8px_rgba(0,0,0,0.05),0_4px_12px_rgba(0,0,0,0.1),inset_3px_3px_0.5px_-3px_rgba(0,0,0,0.5),inset_-3px_-3px_0.5px_-3px_rgba(0,0,0,0.5),inset_1px_1px_1px_-0.5px_rgba(255,255,255,0.4),inset_-1px_-1px_1px_-0.5px_rgba(255,255,255,0.4),inset_0_0_8px_8px_rgba(255,255,255,0.1)]"
               >
@@ -175,12 +325,14 @@ const Header = () => {
               </a>
             </div>
 
-            <LanguageSwitcher />
+            <div className="flex-shrink-0">
+              <LanguageSwitcher />
+            </div>
           </nav>
         </div>
 
         {/* --- MOBILE: Navbar con expansión tipo acordeón --- */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <motion.div
             className={`glass-nav-pill px-6 py-3 ${scrolling ? 'scrolled' : ''}`}
             style={{
@@ -245,6 +397,93 @@ const Header = () => {
                   >
                     {t('header.integrations')}
                   </Link>
+
+                  {/* --- SOLUTIONS ACCORDION MOBILE --- */}
+                  <div className="border-t border-slate-100 pt-2">
+                    <button
+                      onClick={() => setIsMobileSolutionsOpen(!isMobileSolutionsOpen)}
+                      className={`${mobileLinkClasses} w-full flex items-center justify-center gap-2`}
+                      aria-expanded={isMobileSolutionsOpen}
+                    >
+                      {t('header.solutions')}
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-300 ${isMobileSolutionsOpen ? 'rotate-180' : ''}`}
+                      />
+                    </button>
+
+                    <AnimatePresence>
+                      {isMobileSolutionsOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: 'easeInOut' }}
+                          className="overflow-hidden"
+                        >
+                          <div className="py-4 space-y-5">
+                            {solutionsData.map((category) => (
+                              <div key={category.category}>
+                                <div className="flex items-center justify-center gap-2 mb-3">
+                                  <div className={`w-2 h-2 rounded-full ${
+                                    category.category === 'outbound' ? 'bg-sky-500' :
+                                    category.category === 'inbound' ? 'bg-emerald-500' :
+                                    category.category === 'marketing' ? 'bg-teal-500' :
+                                    'bg-orange-500'
+                                  }`} />
+                                  <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                                    {t(`header.solutionsCategories.${category.category}`)}
+                                  </h4>
+                                </div>
+                                <div className="space-y-1">
+                                  {category.items.map((item) => {
+                                    const IconComponent = item.icon;
+                                    return (
+                                      <Link
+                                        key={item.id}
+                                        to={`/${i18n.language}/solutions/${item.id}`}
+                                        className="flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-gradient-to-r hover:from-sky-50 hover:to-cyan-50 active:bg-sky-100 transition-all duration-200 mx-2"
+                                        onClick={() => {
+                                          handleNavigationClick(t(`header.solutionsItems.${item.translationKey}.name`), `/${i18n.language}/solutions/${item.id}`);
+                                          setIsMobileSolutionsOpen(false);
+                                          setIsMenuOpen(false);
+                                        }}
+                                      >
+                                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-teal-500 flex items-center justify-center text-white shadow-lg shadow-sky-500/20">
+                                          <IconComponent className="h-5 w-5" />
+                                        </div>
+                                        <div className="flex-1 text-left">
+                                          <p className="text-sm font-semibold text-slate-800">
+                                            {t(`header.solutionsItems.${item.translationKey}.name`)}
+                                          </p>
+                                          <p className="text-xs text-slate-500">
+                                            {t(`header.solutionsItems.${item.translationKey}.description`)}
+                                          </p>
+                                        </div>
+                                      </Link>
+                                    );
+                                  })}
+                                </div>
+                              </div>
+                            ))}
+
+                            {/* View All Solutions Link */}
+                            <Link
+                              to={`/${i18n.language}/solutions`}
+                              className="flex items-center justify-center gap-2 py-3 mx-4 text-sm font-semibold bg-gradient-to-r from-sky-500 to-teal-500 text-white rounded-2xl shadow-lg shadow-sky-500/20 transition-all duration-300"
+                              onClick={() => {
+                                handleNavigationClick(t('header.viewAllSolutions'), `/${i18n.language}/solutions`);
+                                setIsMobileSolutionsOpen(false);
+                                setIsMenuOpen(false);
+                              }}
+                            >
+                              {t('header.viewAllSolutions')}
+                              <ChevronDown className="h-4 w-4 -rotate-90" />
+                            </Link>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
 
                   <Link
                     to={`/${i18n.language}/case-studies`}
