@@ -1907,5 +1907,305 @@
     "title": "Právní upozornění",
     "lastUpdated": "Poslední aktualizace: {{date}}",
     "content": "Informace o právním postavení a provozu Arkadia Labs."
+  },
+  "solutions": {
+    "platform": {
+      "daily": "Denně",
+      "weekly": "Týdně"
+    },
+    "index": {
+      "seo": {
+        "title": "AI Agenti a Řešení | Arkadia Labs",
+        "description": "Objevte naši sadu AI agentů navržených pro automatizaci prodeje, zákaznické podpory, marketingu a provozu. Transformujte své podnikání s inteligentní automatizací."
+      },
+      "badge": "Řešení poháněná AI",
+      "title": "AI Agenti, Kteří Pracují Pro Vás",
+      "subtitle": "Specializovaní AI agenti navrženi k automatizaci každého aspektu vašeho podnikání. Od outbound prodeje po zákaznickou podporu, máme řešení pro vás.",
+      "learnMore": "Zjistit více",
+      "comingSoon": "Již brzy"
+    },
+    "lead-validator": {
+    "seo": {
+      "title": "Lead Validator AI Agent | Arkadia Labs",
+      "description": "Automaticky ověřujte, obohacujte a hodnoťte své leady pomocí AI. Snižte zbytečné hovory o 80% a zaměřte se na potenciální zákazníky, kteří skutečně konvertují."
+    },
+    "hero": {
+      "badge": "Prodej a Outbound",
+      "title": "Přestaňte Ztrácet Čas na Mrtvé Leady",
+      "subtitle": "Validace Leadů Poháněná AI",
+      "description": "Automaticky ověřujte kontaktní informace, obohacujte data a hodnoťte každý lead před tím, než váš tým zvedne telefon. Vězte přesně, komu volat a proč.",
+      "primaryCta": "Začít Validovat Leady",
+      "secondaryCta": "Zobrazit Demo"
+    },
+    "problem": {
+      "badge": "Problém",
+      "headline": "Váš Obchodní Tým Pálí Peníze na Špatných Datech",
+      "description": "Každý zbytečný hovor stojí čas, energii a příležitost. Většina B2B obchodních týmů tráví 70% času honěním leadů, které nikdy nekonvertují.",
+      "painPoints": {
+        "0": {
+          "title": "Neplatné Kontaktní Informace",
+          "description": "Zastaralé emaily, špatná telefonní čísla a odpojené linky plýtvají hodinami produktivního času vašeho týmu každý den."
+        },
+        "1": {
+          "title": "Žádná Inteligence o Leadech",
+          "description": "Váš tým volá bez kontextu—neví, zda je lead připraven koupit, správný rozhodovatel, nebo zda je vůbec stále ve firmě."
+        },
+        "2": {
+          "title": "Nekonzistentní Kvalifikace",
+          "description": "Ruční hodnocení leadů je subjektivní a nekonzistentní. Vysoce hodnotné leady proklouznou, zatímco váš tým honí slepé uličky."
+        },
+        "3": {
+          "title": "Plýtvání Obchodní Kapacitou",
+          "description": "Vaši drazí obchodníci dělají zadávání dat a průzkum místo toho, aby vedli rozhovory, které uzavírají obchody."
+        }
+      },
+      "statistics": {
+        "0": { "label": "B2B dat ročně zastarává" },
+        "1": { "label": "obchodního času jsou neprodejní aktivity" },
+        "2": { "label": "leadů nikdy nekonvertuje na prodej" }
+      }
+    },
+    "howItWorks": {
+      "badge": "Jak To Funguje",
+      "title": "Jak Lead Validator Funguje",
+      "subtitle": "Od surového leadu ke kvalifikované příležitosti během minut",
+      "steps": {
+        "0": {
+          "title": "Připojte Své Zdroje Leadů",
+          "description": "Importujte leady z vašeho CRM, marketingové automatizace nebo CSV souborů. Naše AI se bezproblémově připojí ke všem vašim zdrojům dat."
+        },
+        "1": {
+          "title": "AI Validuje a Obohacuje",
+          "description": "Naše AI ověřuje kontaktní informace, přidává firemní data, identifikuje rozhodovatele a detekuje nákupní signály v reálném čase."
+        },
+        "2": {
+          "title": "Chytré Hodnocení a Prioritizace",
+          "description": "Každý lead dostane skóre 0-100 na základě validity, záměru a vhodnosti. Váš tým přesně ví, komu volat jako prvnímu."
+        },
+        "3": {
+          "title": "Synchronizace do Vašeho CRM",
+          "description": "Validované leady se automaticky synchronizují zpět do Salesforce, HubSpot nebo vašeho CRM se všemi obohacenými daty."
+        }
+      }
+    },
+    "features": {
+      "badge": "Funkce",
+      "title": "Vše Co Potřebujete pro Čisté, Akční Leady",
+      "subtitle": "Komplexní validace a obohacení v jedné platformě",
+      "features": {
+        "0": {
+          "title": "Ověření Emailu",
+          "description": "Validace emailu v reálném čase s hodnocením doručitelnosti. Eliminujte odražené zprávy dříve, než poškodí vaši reputaci odesílatele."
+        },
+        "1": {
+          "title": "Validace Telefonu",
+          "description": "Ověřte telefonní čísla, detekujte typ linky (mobil/pevná) a automaticky identifikujte odpojená čísla."
+        },
+        "2": {
+          "title": "Obohacení Dat",
+          "description": "Přidejte 50+ datových bodů včetně velikosti firmy, odvětví, příjmů, tech stacku a sociálních profilů."
+        },
+        "3": {
+          "title": "Detekce Signálů Záměru",
+          "description": "Identifikujte leady aktivně zkoumající řešení jako to vaše na základě webového chování a spotřeby obsahu."
+        },
+        "4": {
+          "title": "Detekce Duplicit",
+          "description": "Automaticky identifikujte a slučte duplicitní záznamy, aby bylo vaše CRM čisté a přesné."
+        },
+        "5": {
+          "title": "AI Hodnocení Leadů",
+          "description": "Strojové učení hodnotí leady na základě vašich historických konverzních dat. Model se zlepšuje s každým obchodem."
+        }
+      }
+    },
+    "metrics": {
+      "badge": "Výsledky",
+      "title": "Měřitelný Dopad na Váš Obchodní Pipeline",
+      "subtitle": "Skutečné výsledky od týmů používajících Lead Validator",
+      "metrics": {
+        "0": { "label": "Snížení Zbytečných Hovorů", "description": "Méně času voláním na špatná čísla" },
+        "1": { "label": "Vyšší Míra Spojení", "description": "Dosáhněte více rozhodovatelů" },
+        "2": { "label": "Rychlejší Lead-to-Opportunity", "description": "Urychlete svůj prodejní cyklus" },
+        "3": { "label": "Méně Času na Zadávání Dat", "description": "Auto-obohacení dělá práci" }
+      },
+      "comparisonTitle": "Před vs Po Lead Validator",
+      "before": {
+        "0": "Volání na neplatná čísla 40% času",
+        "1": "Ruční průzkum: 20 minut na lead",
+        "2": "Nekonzistentní kvalifikace leadů",
+        "3": "Žádná viditelnost do záměru leadu",
+        "4": "CRM plné duplicitních záznamů"
+      },
+      "after": {
+        "0": "95%+ míra platných kontaktů",
+        "1": "Okamžité obohacení: 0 ručního průzkumu",
+        "2": "Konzistentní hodnocení poháněné AI",
+        "3": "Signály nákupního záměru v reálném čase",
+        "4": "Čistá, deduplikovaná databáze"
+      }
+    },
+    "scoreAnimation": {
+      "title": "Sledujte Kvalifikaci Leadů v Reálném Čase",
+      "subtitle": "Scrollujte a podívejte se, jak naše AI validuje a hodnotí leady na základě více kritérií",
+      "leadName": "Marcus Chen",
+      "leadCompany": "Velocity Partners",
+      "statusCold": "Studený Lead",
+      "statusWarm": "Teplý Lead",
+      "statusHot": "Horký Lead",
+      "statusQualified": "Kvalifikovaný Lead",
+      "points": "bodů",
+      "scrollHint": "↓ Pokračujte ve scrollování pro zobrazení procesu validace ↓",
+      "steps": {
+        "phoneRings": "Telefon zvoní",
+        "ownerVerified": "Vlastník ověřen",
+        "callAnswered": "Hovor přijat",
+        "engaged": "Zapojen do konverzace",
+        "requestedInfo": "Požádal o informace"
+      }
+    },
+    "platform": {
+      "badge": "Náhled Platformy",
+      "title": "Vaše Velitelské Centrum pro Inteligenci Leadů",
+      "subtitle": "Podívejte se přesně, jak Lead Validator funguje s real-time dashboardem, který vám dává kompletní přehled o kvalitě leadů a validačním pipeline.",
+      "kpis": {
+        "0": { "label": "Prům. Skóre Kvality" },
+        "1": { "label": "Prům. Skóre Leadu" },
+        "2": { "label": "Prům. Čas Validace" },
+        "3": { "label": "Náklad na Lead" }
+      },
+      "mainChart": {
+        "title": "Výkon Validace",
+        "subtitle": "Denně validované leady"
+      },
+      "scoreCard": {
+        "title": "Skóre Kvality Leadu",
+        "description": "Nad cílovým prahem"
+      },
+      "activity": {
+        "title": "Nedávná Aktivita",
+        "items": {
+          "0": "Dávka #4521 validována: 156 leadů",
+          "1": "CRM synchronizace probíhá...",
+          "2": "Detekován lead s vysokým záměrem: Acme Corp",
+          "3": "Auto-obohacení dokončeno: 89 leadů"
+        }
+      },
+      "charts": {
+        "validation": "Míra Validace",
+        "conversion": "Trend Konverze"
+      }
+    },
+    "useCases": {
+      "badge": "Případy Použití",
+      "title": "Vytvořeno pro Týmy, Které Potřebují Výsledky",
+      "subtitle": "Podívejte se, jak různá odvětví používají Lead Validator",
+      "resultsTitle": "Klíčové Výsledky",
+      "useCases": {
+        "0": {
+          "industry": "SaaS",
+          "title": "B2B SaaS Obchodní Týmy",
+          "description": "Validujte příchozí leady z marketingu, obohacujte o data tech stacku a prioritizujte podle signálů záměru.",
+          "results": {
+            "0": "3x rychlejší doba odezvy na leady",
+            "1": "40% nárůst rezervovaných demo",
+            "2": "25% vyšší míra uzavření"
+          }
+        },
+        "1": {
+          "industry": "Agentury",
+          "title": "Marketingové a Obchodní Agentury",
+          "description": "Čistěte seznamy leadů klientů před outreach kampaněmi. Zajistěte doručitelnost a maximalizujte ROI kampaní.",
+          "results": {
+            "0": "90% snížení odražených emailů",
+            "1": "2x míra odezvy kampaní",
+            "2": "Spokojenější klienti s lepšími výsledky"
+          }
+        },
+        "2": {
+          "industry": "Reality",
+          "title": "Realitní Profesionálové",
+          "description": "Ověřte informace o vlastnících nemovitostí, identifikujte motivované prodejce a zaměřte se na leady připravené k transakci.",
+          "results": {
+            "0": "60% méně slepých hovorů",
+            "1": "Přesné kontaktní údaje vlastníků",
+            "2": "Rychlejší čas k uzavření obchodů"
+          }
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integrace",
+      "title": "Funguje s Vaším Existujícím Stackem",
+      "subtitle": "Nativní integrace s nástroji, které již používáte",
+      "viewAll": "Zobrazit všech 500+ integrací"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Často Kladené Otázky",
+      "subtitle": "Vše, co potřebujete vědět o Lead Validatoru",
+      "moreQuestions": "Máte další otázky?",
+      "contactUs": "Kontaktujte náš tým",
+      "faqs": {
+        "0": {
+          "question": "Jak přesná je validace leadů?",
+          "answer": "Naše AI dosahuje 95%+ přesnosti při validaci emailů a 90%+ při ověřování telefonů. Používáme více zdrojů dat a ověření v reálném čase pro zajištění nejvyšší možné přesnosti."
+        },
+        "1": {
+          "question": "Jak dlouho trvá validace?",
+          "answer": "Většina leadů je validována a obohacena během sekund. Dávkové zpracování 10 000+ leadů obvykle trvá méně než 30 minut."
+        },
+        "2": {
+          "question": "S jakými CRM se integrujete?",
+          "answer": "Máme nativní integrace se Salesforce, HubSpot, Pipedrive, Zoho CRM a dalšími. Podporujeme také webhooky a Zapier pro vlastní workflow."
+        },
+        "3": {
+          "question": "Jsou moje data v bezpečí?",
+          "answer": "Absolutně. Jsme SOC 2 kompatibilní, používáme šifrování na úrovni bank a nikdy nesdílíme ani neprodáváme vaše data. Vaše leady zůstávají vaše."
+        },
+        "4": {
+          "question": "Mohu to vyzkoušet před závazkem?",
+          "answer": "Ano! Nabízíme bezplatný pilotní program, kde můžete validovat 500 leadů zdarma. Podívejte se na výsledky, než se rozhodnete."
+        },
+        "5": {
+          "question": "Jak funguje hodnocení leadů?",
+          "answer": "Naše AI analyzuje 50+ signálů včetně validity kontaktu, vhodnosti firmy, dat o záměru a historie zapojení. Model se učí z vašich specifických konverzních vzorců a postupem času se zlepšuje."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Začněte Dnes",
+      "title": "Připraveni Přestat Ztrácet Čas na Špatné Leady?",
+      "subtitle": "Připojte se ke stovkám obchodních týmů, které validují před voláním.",
+      "primaryCta": "Spustit Bezplatný Pilot",
+      "secondaryCta": "Promluvit s Obchodem",
+      "trust1": "Bez kreditní karty",
+      "trust2": "Bezplatný pilotní program",
+      "trust3": "Nastavení během minut"
+    },
+    "inlineCta1": {
+      "title": "Připraveni transformovat kvalitu vašich leadů?",
+      "subtitle": "Začněte validovat leady během minut, ne dní.",
+      "cta": "Začít"
+    },
+    "inlineCta2": {
+      "badge": "Spusťte Bezplatný Pilot",
+      "title": "Podívejte se na Lead Validator v Akci",
+      "subtitle": "Připojte se k 500+ firmám, které již zlepšují kvalitu leadů s naší AI validací.",
+      "primaryCta": "Naplánovat Demo",
+      "stats": {
+        "0": "Míra Přesnosti",
+        "1": "Čas Nastavení",
+        "2": "Spokojených Klientů",
+        "3": "Podpora"
+      }
+    },
+    "inlineCta3": {
+      "urgency": "Omezená místa tento měsíc",
+      "title": "Připraveni to vidět v akci?",
+      "subtitle": "Rezervujte si personalizované demo s naším týmem.",
+      "cta": "Rezervovat Demo"
+    }
+    }
   }
 }

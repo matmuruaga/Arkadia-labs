@@ -24,6 +24,8 @@ const ThankYouPage = lazy(() => import('./pages/ThankYouPage').then(m => ({ defa
 const IntegrationsPage = lazy(() => import('./pages/IntegrationsPage').then(m => ({ default: m.IntegrationsPage })));
 const CaseStudyPage = lazy(() => import('./pages/CaseStudyPage'));
 const CaseStudiesIndexPage = lazy(() => import('./pages/CaseStudiesIndexPage'));
+const SolutionDetailPage = lazy(() => import('./pages/solutions/SolutionDetailPage'));
+const SolutionsIndexPage = lazy(() => import('./pages/solutions/SolutionsIndexPage'));
 
 
 /**
@@ -61,6 +63,8 @@ function App() {
                 <Route path="integrations" element={<IntegrationsPage />} />
                 <Route path="case-studies" element={<CaseStudiesIndexPage />} />
                 <Route path="case-studies/:slug" element={<CaseStudyPage />} />
+                <Route path="solutions" element={<SolutionsIndexPage />} />
+                <Route path="solutions/:slug" element={<SolutionDetailPage />} />
             </Route>
 
           </Route>

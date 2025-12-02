@@ -4,9 +4,51 @@
     "features": "Use Cases",
     "plans": "Plans",
     "integrations": "Integrations",
+    "solutions": "Solutions",
     "studyCase": "Case Studies",
     "getStarted": "Get Started",
-    "login": "Login"
+    "login": "Login",
+    "viewAllSolutions": "View All Solutions",
+    "solutionsCategories": {
+      "outbound": "Sales & Outbound",
+      "inbound": "Customer Service",
+      "marketing": "Marketing & Content",
+      "operations": "Operations"
+    },
+    "solutionsItems": {
+      "leadValidator": {
+        "name": "Lead Validator",
+        "description": "Verify and enrich leads automatically"
+      },
+      "salesQualifier": {
+        "name": "Sales Qualifier",
+        "description": "Qualify prospects with conversational AI"
+      },
+      "salesAgent": {
+        "name": "Sales Agent",
+        "description": "Close sales 24/7 with AI intelligence"
+      },
+      "virtualReceptionist": {
+        "name": "Virtual Receptionist",
+        "description": "Handle calls and manage inquiries"
+      },
+      "bookingAgent": {
+        "name": "Booking Agent",
+        "description": "Manage reservations and appointments"
+      },
+      "contentCreator": {
+        "name": "Content Creator",
+        "description": "Generate visual content with AI"
+      },
+      "socialManager": {
+        "name": "Social Manager",
+        "description": "Automate and optimize social media"
+      },
+      "operationsAgent": {
+        "name": "Operations Agent",
+        "description": "Automate internal business workflows"
+      }
+    }
   },
   "hero": {
     "title_part1": "Adaptive AI Systems:",
@@ -366,6 +408,275 @@
   "description": "Ready to unlock unprecedented efficiency and scale with AI agents built for your unique business needs? Let's build your future, together.",
   "primaryCta": "Get Your Custom AI Solution",
   "secondaryCta": "Book a Consultation"
+},
+"solutions": {
+  "index": {
+    "seo": {
+      "title": "AI Agents & Solutions | Arkadia Labs",
+      "description": "Discover our suite of AI agents designed to automate sales, customer service, marketing, and operations. Transform your business with intelligent automation."
+    },
+    "badge": "AI-Powered Solutions",
+    "title": "AI Agents That Work For You",
+    "subtitle": "Specialized AI agents designed to automate every aspect of your business. From sales outreach to customer support, we have a solution for you.",
+    "learnMore": "Learn more",
+    "comingSoon": "Coming Soon",
+    "cta": {
+      "title": "Can't Find What You Need?",
+      "subtitle": "We build custom AI agents tailored to your specific business needs. Tell us about your challenges and we'll design the perfect solution.",
+      "button": "Talk to Our Team"
+    }
+  },
+  "lead-validator": {
+    "seo": {
+      "title": "Lead Validator AI Agent | Arkadia Labs",
+      "description": "Automatically verify, enrich, and score your leads with AI. Reduce wasted calls by 80% and focus on prospects that actually convert."
+    },
+    "hero": {
+      "badge": "Sales & Outbound",
+      "title": "Stop Wasting Time on Dead Leads",
+      "subtitle": "AI-Powered Lead Validation",
+      "description": "Automatically verify contact information, enrich data, and score every lead before your team picks up the phone. Know exactly who to call and why.",
+      "primaryCta": "Start Validating Leads",
+      "secondaryCta": "See Demo"
+    },
+    "problem": {
+      "badge": "The Problem",
+      "headline": "Your Sales Team Is Burning Money on Bad Data",
+      "description": "Every wasted call costs time, energy, and opportunity. Most B2B sales teams spend 70% of their time chasing leads that will never convert.",
+      "painPoints": {
+        "0": {
+          "title": "Invalid Contact Information",
+          "description": "Outdated emails, wrong phone numbers, and disconnected lines waste hours of your team's productive time every single day."
+        },
+        "1": {
+          "title": "No Lead Intelligence",
+          "description": "Your team calls without context—no idea if the lead is ready to buy, the right decision-maker, or even still at the company."
+        },
+        "2": {
+          "title": "Inconsistent Qualification",
+          "description": "Manual lead scoring is subjective and inconsistent. High-value leads slip through while your team chases dead ends."
+        },
+        "3": {
+          "title": "Wasted Sales Capacity",
+          "description": "Your expensive sales reps are doing data entry and research instead of having conversations that close deals."
+        }
+      },
+      "statistics": {
+        "0": { "label": "of B2B data decays annually" },
+        "1": { "label": "of sales time is non-selling activities" },
+        "2": { "label": "of leads never convert to sales" }
+      }
+    },
+    "howItWorks": {
+      "badge": "How It Works",
+      "title": "How Lead Validator Works",
+      "subtitle": "From raw lead to qualified opportunity in minutes",
+      "steps": {
+        "0": {
+          "title": "Connect Your Lead Sources",
+          "description": "Import leads from your CRM, marketing automation, or CSV files. Our AI connects to all your data sources seamlessly."
+        },
+        "1": {
+          "title": "AI Validates & Enriches",
+          "description": "Our AI verifies contact info, appends company data, identifies decision-makers, and detects buying signals in real-time."
+        },
+        "2": {
+          "title": "Smart Scoring & Prioritization",
+          "description": "Each lead receives a 0-100 score based on validity, intent, and fit. Your team knows exactly who to call first."
+        },
+        "3": {
+          "title": "Sync to Your CRM",
+          "description": "Validated leads automatically sync back to Salesforce, HubSpot, or your CRM with all enrichment data attached."
+        }
+      }
+    },
+    "features": {
+      "badge": "Features",
+      "title": "Everything You Need for Clean, Actionable Leads",
+      "subtitle": "Comprehensive validation and enrichment in one platform",
+      "features": {
+        "0": {
+          "title": "Email Verification",
+          "description": "Real-time email validation with deliverability scoring. Eliminate bounces before they hurt your sender reputation."
+        },
+        "1": {
+          "title": "Phone Validation",
+          "description": "Verify phone numbers, detect line type (mobile/landline), and identify disconnected numbers automatically."
+        },
+        "2": {
+          "title": "Data Enrichment",
+          "description": "Append 50+ data points including company size, industry, revenue, tech stack, and social profiles."
+        },
+        "3": {
+          "title": "Intent Signal Detection",
+          "description": "Identify leads actively researching solutions like yours based on web behavior and content consumption."
+        },
+        "4": {
+          "title": "Duplicate Detection",
+          "description": "Automatically identify and merge duplicate records to keep your CRM clean and accurate."
+        },
+        "5": {
+          "title": "AI Lead Scoring",
+          "description": "Machine learning scores leads based on your historical conversion data. The model improves with every deal."
+        }
+      }
+    },
+    "metrics": {
+      "badge": "Results",
+      "title": "Measurable Impact on Your Sales Pipeline",
+      "subtitle": "Real results from teams using Lead Validator",
+      "metrics": {
+        "0": { "label": "Reduction in Wasted Calls", "description": "Less time dialing wrong numbers" },
+        "1": { "label": "Higher Connection Rate", "description": "Reach more decision-makers" },
+        "2": { "label": "Faster Lead-to-Opportunity", "description": "Accelerate your sales cycle" },
+        "3": { "label": "Less Time on Data Entry", "description": "Auto-enrichment does the work" }
+      },
+      "comparisonTitle": "Before vs After Lead Validator",
+      "before": {
+        "0": "Calling invalid numbers 40% of the time",
+        "1": "Manual research: 20 minutes per lead",
+        "2": "Inconsistent lead qualification",
+        "3": "No visibility into lead intent",
+        "4": "CRM full of duplicate records"
+      },
+      "after": {
+        "0": "95%+ valid contact rate",
+        "1": "Instant enrichment: 0 manual research",
+        "2": "AI-powered consistent scoring",
+        "3": "Real-time buying intent signals",
+        "4": "Clean, deduplicated database"
+      }
+    },
+    "scoreAnimation": {
+      "title": "Watch Lead Qualification in Real-Time",
+      "subtitle": "Scroll to see how our AI validates and scores leads based on multiple criteria",
+      "leadName": "Marcus Chen",
+      "leadCompany": "Velocity Partners",
+      "statusCold": "Cold Lead",
+      "statusWarm": "Warm Lead",
+      "statusHot": "Hot Lead",
+      "statusQualified": "Qualified Lead",
+      "points": "points",
+      "scrollHint": "↓ Keep scrolling to see the validation process ↓",
+      "steps": {
+        "phoneRings": "Phone rings",
+        "ownerVerified": "Owner verified",
+        "callAnswered": "Call answered",
+        "engaged": "Engaged in conversation",
+        "requestedInfo": "Requested information"
+      }
+    },
+    "useCases": {
+      "badge": "Use Cases",
+      "title": "Built for Teams That Need Results",
+      "subtitle": "See how different industries use Lead Validator",
+      "resultsTitle": "Key Results",
+      "useCases": {
+        "0": {
+          "industry": "SaaS",
+          "title": "B2B SaaS Sales Teams",
+          "description": "Validate inbound leads from marketing, enrich with tech stack data, and prioritize by intent signals.",
+          "results": {
+            "0": "3x faster lead response time",
+            "1": "40% increase in demo bookings",
+            "2": "25% higher close rates"
+          }
+        },
+        "1": {
+          "industry": "Agencies",
+          "title": "Marketing & Sales Agencies",
+          "description": "Clean client lead lists before outreach campaigns. Ensure deliverability and maximize campaign ROI.",
+          "results": {
+            "0": "90% reduction in email bounces",
+            "1": "2x campaign response rates",
+            "2": "Happier clients with better results"
+          }
+        },
+        "2": {
+          "industry": "Real Estate",
+          "title": "Real Estate Professionals",
+          "description": "Verify property owner information, identify motivated sellers, and focus on leads ready to transact.",
+          "results": {
+            "0": "60% fewer dead-end calls",
+            "1": "Accurate owner contact info",
+            "2": "Faster time to close deals"
+          }
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integrations",
+      "title": "Works With Your Existing Stack",
+      "subtitle": "Native integrations with the tools you already use",
+      "viewAll": "View all 500+ integrations"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about Lead Validator",
+      "moreQuestions": "Still have questions?",
+      "contactUs": "Contact our team",
+      "faqs": {
+        "0": {
+          "question": "How accurate is the lead validation?",
+          "answer": "Our AI achieves 95%+ accuracy on email validation and 90%+ on phone verification. We use multiple data sources and real-time verification to ensure the highest accuracy possible."
+        },
+        "1": {
+          "question": "How long does validation take?",
+          "answer": "Most leads are validated and enriched within seconds. Batch processing of 10,000+ leads typically completes in under 30 minutes."
+        },
+        "2": {
+          "question": "Which CRMs do you integrate with?",
+          "answer": "We have native integrations with Salesforce, HubSpot, Pipedrive, Zoho CRM, and more. We also support webhooks and Zapier for custom workflows."
+        },
+        "3": {
+          "question": "Is my data secure?",
+          "answer": "Absolutely. We're SOC 2 compliant, use bank-level encryption, and never share or sell your data. Your leads remain yours."
+        },
+        "4": {
+          "question": "Can I try it before committing?",
+          "answer": "Yes! We offer a free pilot program where you can validate 500 leads at no cost. See the results before you decide."
+        },
+        "5": {
+          "question": "How does lead scoring work?",
+          "answer": "Our AI analyzes 50+ signals including contact validity, company fit, intent data, and engagement history. The model learns from your specific conversion patterns to improve over time."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Get Started Today",
+      "title": "Ready to Stop Wasting Time on Bad Leads?",
+      "subtitle": "Join hundreds of sales teams who validate before they dial.",
+      "primaryCta": "Start Free Pilot",
+      "secondaryCta": "Talk to Sales",
+      "trust1": "No credit card required",
+      "trust2": "Free pilot program",
+      "trust3": "Setup in minutes"
+    },
+    "inlineCta1": {
+      "title": "Ready to transform your lead quality?",
+      "subtitle": "Start validating leads in minutes, not days.",
+      "cta": "Get Started"
+    },
+    "inlineCta2": {
+      "badge": "Start Your Free Pilot",
+      "title": "See Lead Validator in Action",
+      "subtitle": "Join 500+ companies already improving their lead quality with our AI-powered validation.",
+      "primaryCta": "Schedule Demo",
+      "stats": {
+        "0": "Accuracy Rate",
+        "1": "Setup Time",
+        "2": "Happy Clients",
+        "3": "Support"
+      }
+    },
+    "inlineCta3": {
+      "urgency": "Limited spots this month",
+      "title": "Ready to see it in action?",
+      "subtitle": "Book a personalized demo with our team.",
+      "cta": "Book Demo"
+    }
+  }
 },
 "footer": {
   "altLogo": "Arkadia Labs Logo",

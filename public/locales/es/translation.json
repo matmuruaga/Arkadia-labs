@@ -4,9 +4,51 @@
     "features": "Casos de Uso",
     "plans": "Planes",
     "integrations": "Integraciones",
+    "solutions": "Soluciones",
     "studyCase": "Casos de Estudio",
     "getStarted": "Empezar",
-    "login": "Iniciar Sesión"
+    "login": "Iniciar Sesión",
+    "viewAllSolutions": "Ver Todas las Soluciones",
+    "solutionsCategories": {
+      "outbound": "Ventas Outbound",
+      "inbound": "Atención al Cliente",
+      "marketing": "Marketing y Contenido",
+      "operations": "Operaciones"
+    },
+    "solutionsItems": {
+      "leadValidator": {
+        "name": "Validador de Leads",
+        "description": "Verifica y enriquece leads automáticamente"
+      },
+      "salesQualifier": {
+        "name": "Calificador de Ventas",
+        "description": "Califica prospectos con IA conversacional"
+      },
+      "salesAgent": {
+        "name": "Agente de Ventas",
+        "description": "Cierra ventas 24/7 con inteligencia artificial"
+      },
+      "virtualReceptionist": {
+        "name": "Recepcionista Virtual",
+        "description": "Atiende llamadas y gestiona consultas"
+      },
+      "bookingAgent": {
+        "name": "Agente de Reservas",
+        "description": "Gestiona reservas y citas sin fricciones"
+      },
+      "contentCreator": {
+        "name": "Creador de Contenido",
+        "description": "Genera contenido visual con IA"
+      },
+      "socialManager": {
+        "name": "Gestor de Redes Sociales",
+        "description": "Automatiza y optimiza redes sociales"
+      },
+      "operationsAgent": {
+        "name": "Agente de Operaciones",
+        "description": "Automatiza flujos de trabajo internos"
+      }
+    }
   },
   "hero": {
     "title_part1": "Sistemas de IA Adaptativos:",
@@ -260,6 +302,311 @@
   "description": "¿Listo para desbloquear una eficiencia y escalabilidad sin precedentes con agentes de IA creados para las necesidades únicas de tu negocio? Construyamos tu futuro, juntos.",
   "primaryCta": "Obtén Tu Solución de IA",
   "secondaryCta": "Agenda una Consulta"
+},
+"solutions": {
+  "platform": {
+    "daily": "Diario",
+    "weekly": "Semanal"
+  },
+  "index": {
+    "seo": {
+      "title": "Agentes y Soluciones de IA | Arkadia Labs",
+      "description": "Descubre nuestra suite de agentes de IA diseñados para automatizar ventas, atención al cliente, marketing y operaciones. Transforma tu negocio con automatización inteligente."
+    },
+    "badge": "Soluciones con IA",
+    "title": "Agentes de IA Que Trabajan Para Ti",
+    "subtitle": "Agentes de IA especializados diseñados para automatizar cada aspecto de tu negocio. Desde ventas outbound hasta soporte al cliente, tenemos una solución para ti.",
+    "learnMore": "Saber más",
+    "comingSoon": "Próximamente",
+    "cta": {
+      "title": "¿No Encuentras lo que Necesitas?",
+      "subtitle": "Construimos agentes de IA personalizados adaptados a las necesidades específicas de tu negocio. Cuéntanos tus desafíos y diseñaremos la solución perfecta.",
+      "button": "Habla con Nuestro Equipo"
+    }
+  },
+  "lead-validator": {
+    "seo": {
+      "title": "Agente Validador de Leads | Arkadia Labs",
+      "description": "Verifica, enriquece y puntúa tus leads automáticamente con IA. Reduce llamadas inútiles un 80% y enfócate en prospectos que realmente convierten."
+    },
+    "hero": {
+      "badge": "Ventas & Outbound",
+      "title": "Deja de Perder Tiempo en Leads Muertos",
+      "subtitle": "Validación de Leads con IA",
+      "description": "Verifica automáticamente la información de contacto, enriquece datos y puntúa cada lead antes de que tu equipo levante el teléfono. Sabe exactamente a quién llamar y por qué.",
+      "primaryCta": "Empezar a Validar Leads",
+      "secondaryCta": "Ver Demo"
+    },
+    "problem": {
+      "badge": "El Problema",
+      "headline": "Tu Equipo de Ventas Está Quemando Dinero en Datos Malos",
+      "description": "Cada llamada desperdiciada cuesta tiempo, energía y oportunidades. La mayoría de equipos de ventas B2B gastan el 70% de su tiempo persiguiendo leads que nunca convertirán.",
+      "painPoints": {
+        "0": {
+          "title": "Información de Contacto Inválida",
+          "description": "Emails desactualizados, números de teléfono incorrectos y líneas desconectadas desperdician horas del tiempo productivo de tu equipo cada día."
+        },
+        "1": {
+          "title": "Sin Inteligencia de Leads",
+          "description": "Tu equipo llama sin contexto—sin saber si el lead está listo para comprar, si es el decisor correcto, o si sigue en la empresa."
+        },
+        "2": {
+          "title": "Calificación Inconsistente",
+          "description": "El scoring manual de leads es subjetivo e inconsistente. Leads de alto valor se escapan mientras tu equipo persigue callejones sin salida."
+        },
+        "3": {
+          "title": "Capacidad de Ventas Desperdiciada",
+          "description": "Tus costosos vendedores están haciendo entrada de datos e investigación en lugar de tener conversaciones que cierran deals."
+        }
+      },
+      "statistics": {
+        "0": { "label": "de datos B2B decae anualmente" },
+        "1": { "label": "del tiempo de ventas es en actividades que no venden" },
+        "2": { "label": "de los leads nunca convierten a ventas" }
+      }
+    },
+    "howItWorks": {
+      "badge": "Cómo Funciona",
+      "title": "Cómo Funciona Lead Validator",
+      "subtitle": "De lead en crudo a oportunidad calificada en minutos",
+      "steps": {
+        "0": {
+          "title": "Conecta Tus Fuentes de Leads",
+          "description": "Importa leads desde tu CRM, automatización de marketing, o archivos CSV. Nuestra IA conecta con todas tus fuentes de datos sin problemas."
+        },
+        "1": {
+          "title": "La IA Valida y Enriquece",
+          "description": "Nuestra IA verifica info de contacto, añade datos de empresa, identifica decisores, y detecta señales de compra en tiempo real."
+        },
+        "2": {
+          "title": "Scoring Inteligente y Priorización",
+          "description": "Cada lead recibe una puntuación 0-100 basada en validez, intención y encaje. Tu equipo sabe exactamente a quién llamar primero."
+        },
+        "3": {
+          "title": "Sincroniza con Tu CRM",
+          "description": "Los leads validados se sincronizan automáticamente con Salesforce, HubSpot, o tu CRM con todos los datos de enriquecimiento adjuntos."
+        }
+      }
+    },
+    "features": {
+      "badge": "Características",
+      "title": "Todo lo que Necesitas para Leads Limpios y Accionables",
+      "subtitle": "Validación y enriquecimiento completo en una sola plataforma",
+      "features": {
+        "0": {
+          "title": "Verificación de Email",
+          "description": "Validación de email en tiempo real con scoring de entregabilidad. Elimina rebotes antes de que dañen tu reputación de remitente."
+        },
+        "1": {
+          "title": "Validación de Teléfono",
+          "description": "Verifica números de teléfono, detecta tipo de línea (móvil/fijo), e identifica números desconectados automáticamente."
+        },
+        "2": {
+          "title": "Enriquecimiento de Datos",
+          "description": "Añade 50+ puntos de datos incluyendo tamaño de empresa, industria, ingresos, stack tecnológico, y perfiles sociales."
+        },
+        "3": {
+          "title": "Detección de Señales de Intención",
+          "description": "Identifica leads investigando activamente soluciones como la tuya basándose en comportamiento web y consumo de contenido."
+        },
+        "4": {
+          "title": "Detección de Duplicados",
+          "description": "Identifica y fusiona automáticamente registros duplicados para mantener tu CRM limpio y preciso."
+        },
+        "5": {
+          "title": "Scoring de Leads con IA",
+          "description": "Machine learning puntúa leads basándose en tus datos históricos de conversión. El modelo mejora con cada deal."
+        }
+      }
+    },
+    "metrics": {
+      "badge": "Resultados",
+      "title": "Impacto Medible en Tu Pipeline de Ventas",
+      "subtitle": "Resultados reales de equipos usando Lead Validator",
+      "metrics": {
+        "0": { "label": "Reducción en Llamadas Desperdiciadas", "description": "Menos tiempo marcando números incorrectos" },
+        "1": { "label": "Mayor Tasa de Conexión", "description": "Alcanza más decisores" },
+        "2": { "label": "Lead-a-Oportunidad más Rápido", "description": "Acelera tu ciclo de ventas" },
+        "3": { "label": "Menos Tiempo en Entrada de Datos", "description": "El auto-enriquecimiento hace el trabajo" }
+      },
+      "comparisonTitle": "Antes vs Después de Lead Validator",
+      "before": {
+        "0": "Llamando a números inválidos el 40% del tiempo",
+        "1": "Investigación manual: 20 minutos por lead",
+        "2": "Calificación de leads inconsistente",
+        "3": "Sin visibilidad de la intención del lead",
+        "4": "CRM lleno de registros duplicados"
+      },
+      "after": {
+        "0": "95%+ tasa de contacto válido",
+        "1": "Enriquecimiento instantáneo: 0 investigación manual",
+        "2": "Scoring consistente con IA",
+        "3": "Señales de intención de compra en tiempo real",
+        "4": "Base de datos limpia y sin duplicados"
+      }
+    },
+    "scoreAnimation": {
+      "title": "Mira la Calificación de Leads en Tiempo Real",
+      "subtitle": "Desplázate para ver cómo nuestra IA valida y puntúa leads basándose en múltiples criterios",
+      "leadName": "Marcus Chen",
+      "leadCompany": "Velocity Partners",
+      "statusCold": "Lead Frío",
+      "statusWarm": "Lead Tibio",
+      "statusHot": "Lead Caliente",
+      "statusQualified": "Lead Calificado",
+      "points": "puntos",
+      "scrollHint": "↓ Sigue desplazándote para ver el proceso de validación ↓",
+      "steps": {
+        "phoneRings": "El teléfono suena",
+        "ownerVerified": "Propietario verificado",
+        "callAnswered": "Llamada contestada",
+        "engaged": "Involucrado en conversación",
+        "requestedInfo": "Solicitó información"
+      }
+    },
+    "platform": {
+      "badge": "Vista Previa de la Plataforma",
+      "title": "Tu Centro de Comando para Inteligencia de Leads",
+      "subtitle": "Ve exactamente cómo funciona Lead Validator con un dashboard en tiempo real que te da visibilidad completa de la calidad de tus leads y el pipeline de validación.",
+      "kpis": {
+        "0": { "label": "Puntaje Calidad Prom." },
+        "1": { "label": "Puntaje Lead Prom." },
+        "2": { "label": "Tiempo Valid. Prom." },
+        "3": { "label": "Costo por Lead" }
+      },
+      "mainChart": {
+        "title": "Rendimiento de Validación",
+        "subtitle": "Leads validados diariamente"
+      },
+      "scoreCard": {
+        "title": "Puntaje de Calidad de Lead",
+        "description": "Por encima del umbral objetivo"
+      },
+      "activity": {
+        "title": "Actividad Reciente",
+        "items": {
+          "0": "Lote #4521 validado: 156 leads",
+          "1": "Sincronización CRM en progreso...",
+          "2": "Lead alta intención detectado: Acme Corp",
+          "3": "Auto-enriquecimiento completado: 89 leads"
+        }
+      },
+      "charts": {
+        "validation": "Tasa de Validación",
+        "conversion": "Tendencia de Conversión"
+      }
+    },
+    "useCases": {
+      "badge": "Casos de Uso",
+      "title": "Construido para Equipos que Necesitan Resultados",
+      "subtitle": "Ve cómo diferentes industrias usan Lead Validator",
+      "resultsTitle": "Resultados Clave",
+      "useCases": {
+        "0": {
+          "industry": "SaaS",
+          "title": "Equipos de Ventas B2B SaaS",
+          "description": "Valida leads entrantes de marketing, enriquece con datos de stack tecnológico, y prioriza por señales de intención.",
+          "results": {
+            "0": "3x más rápido tiempo de respuesta a leads",
+            "1": "40% incremento en demos agendadas",
+            "2": "25% mayor tasa de cierre"
+          }
+        },
+        "1": {
+          "industry": "Agencias",
+          "title": "Agencias de Marketing y Ventas",
+          "description": "Limpia listas de leads de clientes antes de campañas de outreach. Asegura entregabilidad y maximiza el ROI de campañas.",
+          "results": {
+            "0": "90% reducción en rebotes de email",
+            "1": "2x tasas de respuesta de campañas",
+            "2": "Clientes más satisfechos con mejores resultados"
+          }
+        },
+        "2": {
+          "industry": "Inmobiliaria",
+          "title": "Profesionales Inmobiliarios",
+          "description": "Verifica información de propietarios, identifica vendedores motivados, y enfócate en leads listos para transaccionar.",
+          "results": {
+            "0": "60% menos llamadas sin salida",
+            "1": "Info de contacto de propietarios precisa",
+            "2": "Tiempo más rápido para cerrar deals"
+          }
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integraciones",
+      "title": "Funciona con Tu Stack Actual",
+      "subtitle": "Integraciones nativas con las herramientas que ya usas",
+      "viewAll": "Ver las 500+ integraciones"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre Lead Validator",
+      "moreQuestions": "¿Aún tienes preguntas?",
+      "contactUs": "Contacta a nuestro equipo",
+      "faqs": {
+        "0": {
+          "question": "¿Qué tan precisa es la validación de leads?",
+          "answer": "Nuestra IA logra más del 95% de precisión en validación de email y más del 90% en verificación de teléfono. Usamos múltiples fuentes de datos y verificación en tiempo real para asegurar la mayor precisión posible."
+        },
+        "1": {
+          "question": "¿Cuánto tiempo toma la validación?",
+          "answer": "La mayoría de leads se validan y enriquecen en segundos. El procesamiento por lotes de más de 10,000 leads típicamente se completa en menos de 30 minutos."
+        },
+        "2": {
+          "question": "¿Con qué CRMs se integran?",
+          "answer": "Tenemos integraciones nativas con Salesforce, HubSpot, Pipedrive, Zoho CRM, y más. También soportamos webhooks y Zapier para flujos de trabajo personalizados."
+        },
+        "3": {
+          "question": "¿Mis datos están seguros?",
+          "answer": "Absolutamente. Cumplimos con SOC 2, usamos encriptación de nivel bancario, y nunca compartimos ni vendemos tus datos. Tus leads siguen siendo tuyos."
+        },
+        "4": {
+          "question": "¿Puedo probarlo antes de comprometerme?",
+          "answer": "¡Sí! Ofrecemos un programa piloto gratuito donde puedes validar 500 leads sin costo. Ve los resultados antes de decidir."
+        },
+        "5": {
+          "question": "¿Cómo funciona el scoring de leads?",
+          "answer": "Nuestra IA analiza más de 50 señales incluyendo validez de contacto, encaje de empresa, datos de intención, e historial de engagement. El modelo aprende de tus patrones específicos de conversión para mejorar con el tiempo."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Empieza Hoy",
+      "title": "¿Listo para Dejar de Perder Tiempo en Leads Malos?",
+      "subtitle": "Únete a cientos de equipos de ventas que validan antes de marcar.",
+      "primaryCta": "Iniciar Piloto Gratis",
+      "secondaryCta": "Hablar con Ventas",
+      "trust1": "Sin tarjeta de crédito",
+      "trust2": "Programa piloto gratuito",
+      "trust3": "Configuración en minutos"
+    },
+    "inlineCta1": {
+      "title": "¿Listo para transformar la calidad de tus leads?",
+      "subtitle": "Comienza a validar leads en minutos, no en días.",
+      "cta": "Comenzar"
+    },
+    "inlineCta2": {
+      "badge": "Comienza tu Piloto Gratis",
+      "title": "Mira Lead Validator en Acción",
+      "subtitle": "Únete a más de 500 empresas que ya mejoran la calidad de sus leads con nuestra validación impulsada por IA.",
+      "primaryCta": "Agendar Demo",
+      "stats": {
+        "0": "Tasa de Precisión",
+        "1": "Tiempo de Setup",
+        "2": "Clientes Felices",
+        "3": "Soporte"
+      }
+    },
+    "inlineCta3": {
+      "urgency": "Cupos limitados este mes",
+      "title": "¿Listo para verlo en acción?",
+      "subtitle": "Agenda una demo personalizada con nuestro equipo.",
+      "cta": "Agendar Demo"
+    }
+  }
 },
 "footer": {
   "altLogo": "Logo de Arkadia Labs",
