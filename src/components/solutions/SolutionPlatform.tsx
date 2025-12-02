@@ -73,8 +73,33 @@ const KPICard: React.FC<{
   trend?: string;
   trendUp?: boolean;
   delay: number;
-}> = ({ icon, label, value, trend, trendUp, delay }) => {
+  isMobile?: boolean;
+}> = ({ icon, label, value, trend, trendUp, delay, isMobile = false }) => {
   const IconComponent = iconMap[icon] || Activity;
+
+  // Static version for mobile - no animations
+  if (isMobile) {
+    return (
+      <div className="bg-white rounded-xl border border-slate-200/80 p-3 shadow-sm">
+        <div className="flex items-center justify-between mb-1">
+          <span className="text-[10px] font-medium text-slate-500 uppercase tracking-wide">{label}</span>
+          <div className="w-6 h-6 rounded-lg bg-blue-50 flex items-center justify-center">
+            <IconComponent className="h-3 w-3 text-blue-600" />
+          </div>
+        </div>
+        <div className="text-lg font-bold text-slate-900">{value}</div>
+        {trend && (
+          <div className={cn(
+            "text-[10px] font-medium mt-0.5 flex items-center gap-1",
+            trendUp ? "text-green-600" : "text-red-500"
+          )}>
+            <TrendingUp className={cn("h-2.5 w-2.5", !trendUp && "rotate-180")} />
+            {trend}
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <motion.div
@@ -280,7 +305,7 @@ const SolutionPlatform: React.FC<Props> = React.memo(({ data, solutionId }) => {
   const { t } = useTranslation();
   const gaugeGradientId = useId();
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true); // Default to mobile to avoid flash
 
   // Check for mobile/tablet with debounced resize handler
   useEffect(() => {
@@ -301,14 +326,15 @@ const SolutionPlatform: React.FC<Props> = React.memo(({ data, solutionId }) => {
   }, []);
 
   // Scroll-based transforms for 3D effect (desktop only)
+  // Only create scroll listeners on desktop to avoid performance issues on mobile
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: isMobile ? undefined : containerRef,
     offset: ['start end', 'center center'],
   });
 
-  const rotate = useTransform(scrollYProgress, [0, 1], [15, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
-  const scrollOpacity = useTransform(scrollYProgress, [0, 0.5], [0.7, 1]);
+  const rotate = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [15, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], isMobile ? [1, 1] : [0.9, 1]);
+  const scrollOpacity = useTransform(scrollYProgress, [0, 0.5], isMobile ? [1, 1] : [0.7, 1]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -319,14 +345,18 @@ const SolutionPlatform: React.FC<Props> = React.memo(({ data, solutionId }) => {
   };
 
   return (
-    <section ref={containerRef} className="relative py-20 md:py-28 overflow-hidden">
+    <section ref={containerRef} className="relative py-12 md:py-28 overflow-hidden">
       {/* Glass gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-50" />
 
-      {/* Aurora gradient blobs */}
-      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-br from-sky-200/40 via-cyan-100/30 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-tl from-teal-200/30 via-blue-100/20 to-transparent rounded-full blur-3xl" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-100/20 via-cyan-50/30 to-teal-100/20 rounded-full blur-3xl rotate-12" />
+      {/* Aurora gradient blobs - Hidden on mobile for performance */}
+      {!isMobile && (
+        <>
+          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-br from-sky-200/40 via-cyan-100/30 to-transparent rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-tl from-teal-200/30 via-blue-100/20 to-transparent rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-100/20 via-cyan-50/30 to-teal-100/20 rounded-full blur-3xl rotate-12" />
+        </>
+      )}
 
       <div className="relative container mx-auto px-4 sm:px-6">
         <motion.div
@@ -379,8 +409,10 @@ const SolutionPlatform: React.FC<Props> = React.memo(({ data, solutionId }) => {
               transition={isMobile ? { duration: 0.8, delay: 0.2 } : undefined}
               className="relative"
             >
-              {/* Glow effect */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-sky-500/20 via-cyan-500/15 to-teal-500/20 rounded-3xl blur-2xl opacity-60 pointer-events-none" />
+              {/* Glow effect - Hidden on mobile for performance */}
+              {!isMobile && (
+                <div className="absolute -inset-4 bg-gradient-to-r from-sky-500/20 via-cyan-500/15 to-teal-500/20 rounded-3xl blur-2xl opacity-60 pointer-events-none" />
+              )}
 
               {/* Browser Chrome */}
               <div className="relative bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden">
@@ -401,9 +433,9 @@ const SolutionPlatform: React.FC<Props> = React.memo(({ data, solutionId }) => {
                 </div>
 
                 {/* Dashboard Content - Bento Grid */}
-                <div className="p-6 bg-slate-50/50">
+                <div className="p-3 md:p-6 bg-slate-50/50">
                   {/* Top KPIs Row */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 mb-4 md:mb-6">
                     {data.kpis.map((kpi, index) => (
                       <KPICard
                         key={kpi.label}
@@ -413,113 +445,163 @@ const SolutionPlatform: React.FC<Props> = React.memo(({ data, solutionId }) => {
                         trend={kpi.trend}
                         trendUp={kpi.trendUp}
                         delay={0.1 + index * 0.1}
+                        isMobile={isMobile}
                       />
                     ))}
                   </div>
 
-                  {/* Main Bento Grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {/* Main Bento Grid - Simplified on mobile */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
                     {/* Large Chart Card - Spans 2 columns */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.3 }}
-                      className="md:col-span-2 bg-white rounded-xl border border-slate-200/80 p-5 shadow-sm"
-                    >
-                      <div className="flex items-center justify-between mb-4">
-                        <div>
-                          <h3 className="font-semibold text-slate-900">
+                    {isMobile ? (
+                      // Static version for mobile
+                      <div className="bg-white rounded-xl border border-slate-200/80 p-3 shadow-sm">
+                        <div className="flex items-center justify-between mb-2">
+                          <h3 className="text-sm font-semibold text-slate-900">
                             {t(`solutions.${solutionId}.platform.mainChart.title`, data.mainChart?.title || 'Performance Overview')}
                           </h3>
-                          <p className="text-sm text-slate-500">
-                            {t(`solutions.${solutionId}.platform.mainChart.subtitle`, data.mainChart?.subtitle || 'Last 30 days')}
-                          </p>
                         </div>
-                        <div className="flex gap-2">
-                          <span className="px-3 py-1 bg-blue-50 text-blue-600 text-xs font-medium rounded-full">
-                            {t('solutions.platform.daily', 'Daily')}
-                          </span>
-                          <span className="px-3 py-1 bg-slate-100 text-slate-500 text-xs font-medium rounded-full">
-                            {t('solutions.platform.weekly', 'Weekly')}
-                          </span>
+                        <div className="h-24 flex items-end gap-1">
+                          {[35, 55, 70, 80, 60, 85, 70].map((height, i) => (
+                            <div key={i} className="flex-1 h-full flex flex-col justify-end">
+                              <div
+                                className="w-full bg-gradient-to-t from-sky-500 to-teal-400 rounded-t-sm"
+                                style={{ height: `${height}%` }}
+                              />
+                            </div>
+                          ))}
                         </div>
                       </div>
-
-                      {/* Chart Area */}
-                      <div className="h-48 flex items-end gap-2">
-                        {[35, 55, 40, 70, 45, 80, 60, 75, 50, 85, 65, 90, 55, 95, 70].map((height, i) => (
-                          <div key={i} className="flex-1 h-full flex flex-col justify-end">
-                            <motion.div
-                              className="w-full bg-gradient-to-t from-sky-500 to-teal-400 rounded-t-sm"
-                              initial={{ height: 0 }}
-                              whileInView={{ height: `${height}%` }}
-                              viewport={{ once: true }}
-                              transition={{ duration: 0.8, delay: 0.4 + i * 0.05, ease: 'easeOut' }}
-                            />
+                    ) : (
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        className="md:col-span-2 bg-white rounded-xl border border-slate-200/80 p-5 shadow-sm"
+                      >
+                        <div className="flex items-center justify-between mb-4">
+                          <div>
+                            <h3 className="font-semibold text-slate-900">
+                              {t(`solutions.${solutionId}.platform.mainChart.title`, data.mainChart?.title || 'Performance Overview')}
+                            </h3>
+                            <p className="text-sm text-slate-500">
+                              {t(`solutions.${solutionId}.platform.mainChart.subtitle`, data.mainChart?.subtitle || 'Last 30 days')}
+                            </p>
                           </div>
-                        ))}
-                      </div>
-                      <div className="flex justify-between mt-3 text-xs text-slate-400">
-                        {['1', '5', '10', '15', '20', '25', '30'].map((day) => (
-                          <span key={day}>{day}</span>
-                        ))}
-                      </div>
-                    </motion.div>
+                          <div className="flex gap-2">
+                            <span className="px-3 py-1 bg-blue-50 text-blue-600 text-xs font-medium rounded-full">
+                              {t('solutions.platform.daily', 'Daily')}
+                            </span>
+                            <span className="px-3 py-1 bg-slate-100 text-slate-500 text-xs font-medium rounded-full">
+                              {t('solutions.platform.weekly', 'Weekly')}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="h-48 flex items-end gap-2">
+                          {[35, 55, 40, 70, 45, 80, 60, 75, 50, 85, 65, 90, 55, 95, 70].map((height, i) => (
+                            <div key={i} className="flex-1 h-full flex flex-col justify-end">
+                              <motion.div
+                                className="w-full bg-gradient-to-t from-sky-500 to-teal-400 rounded-t-sm"
+                                initial={{ height: 0 }}
+                                whileInView={{ height: `${height}%` }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8, delay: 0.4 + i * 0.05, ease: 'easeOut' }}
+                              />
+                            </div>
+                          ))}
+                        </div>
+                        <div className="flex justify-between mt-3 text-xs text-slate-400">
+                          {['1', '5', '10', '15', '20', '25', '30'].map((day) => (
+                            <span key={day}>{day}</span>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
 
-                    {/* Lead Score Card */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.4 }}
-                      className="bg-white rounded-xl border border-slate-200/80 p-5 shadow-sm flex flex-col items-center justify-center"
-                    >
-                      <h3 className="font-semibold text-slate-900 mb-4">
-                        {t(`solutions.${solutionId}.platform.scoreCard.title`, 'Lead Quality Score')}
-                      </h3>
-                      <LeadScoreGauge score={data.scoreCard?.score || 87} delay={0.5} gradientId={gaugeGradientId} />
-                      <p className="text-sm text-slate-500 mt-3 text-center">
-                        {t(`solutions.${solutionId}.platform.scoreCard.description`, data.scoreCard?.description || 'Above target threshold')}
-                      </p>
-                    </motion.div>
+                    {/* Lead Score Card - Hidden on mobile */}
+                    {!isMobile && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                        className="bg-white rounded-xl border border-slate-200/80 p-5 shadow-sm flex flex-col items-center justify-center"
+                      >
+                        <h3 className="font-semibold text-slate-900 mb-4">
+                          {t(`solutions.${solutionId}.platform.scoreCard.title`, 'Lead Quality Score')}
+                        </h3>
+                        <LeadScoreGauge score={data.scoreCard?.score || 87} delay={0.5} gradientId={gaugeGradientId} />
+                        <p className="text-sm text-slate-500 mt-3 text-center">
+                          {t(`solutions.${solutionId}.platform.scoreCard.description`, data.scoreCard?.description || 'Above target threshold')}
+                        </p>
+                      </motion.div>
+                    )}
 
-                    {/* Activity Feed */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.5 }}
-                      className="bg-white rounded-xl border border-slate-200/80 p-5 shadow-sm"
-                    >
-                      <div className="flex items-center justify-between mb-3">
-                        <h3 className="font-semibold text-slate-900">
+                    {/* Activity Feed - Simplified on mobile */}
+                    {isMobile ? (
+                      <div className="bg-white rounded-xl border border-slate-200/80 p-3 shadow-sm">
+                        <h3 className="text-sm font-semibold text-slate-900 mb-2">
                           {t(`solutions.${solutionId}.platform.activity.title`, 'Recent Activity')}
                         </h3>
-                        <RefreshCw className="h-4 w-4 text-slate-400" />
+                        <div className="space-y-1">
+                          {data.activityFeed?.slice(0, 2).map((item, index) => {
+                            const IconComponent = iconMap[item.icon] || Activity;
+                            const statusColors = {
+                              success: 'bg-green-100 text-green-600',
+                              pending: 'bg-yellow-100 text-yellow-600',
+                              processing: 'bg-blue-100 text-blue-600',
+                            };
+                            return (
+                              <div key={index} className="flex items-center gap-2 py-1">
+                                <div className={cn("w-6 h-6 rounded-lg flex items-center justify-center", statusColors[item.status as keyof typeof statusColors])}>
+                                  <IconComponent className="h-3 w-3" />
+                                </div>
+                                <p className="text-xs text-slate-700 truncate flex-1">{t(`solutions.${solutionId}.platform.activity.items.${index}`, item.text)}</p>
+                              </div>
+                            );
+                          })}
+                        </div>
                       </div>
-                      <div className="space-y-1">
-                        {data.activityFeed?.slice(0, 4).map((item, index) => (
-                          <ActivityItem
-                            key={index}
-                            icon={item.icon}
-                            text={t(`solutions.${solutionId}.platform.activity.items.${index}`, item.text)}
-                            time={item.time}
-                            status={item.status as 'success' | 'pending' | 'processing'}
-                            delay={0.6 + index * 0.1}
-                          />
-                        ))}
-                      </div>
-                    </motion.div>
+                    ) : (
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                        className="bg-white rounded-xl border border-slate-200/80 p-5 shadow-sm"
+                      >
+                        <div className="flex items-center justify-between mb-3">
+                          <h3 className="font-semibold text-slate-900">
+                            {t(`solutions.${solutionId}.platform.activity.title`, 'Recent Activity')}
+                          </h3>
+                          <RefreshCw className="h-4 w-4 text-slate-400" />
+                        </div>
+                        <div className="space-y-1">
+                          {data.activityFeed?.slice(0, 4).map((item, index) => (
+                            <ActivityItem
+                              key={index}
+                              icon={item.icon}
+                              text={t(`solutions.${solutionId}.platform.activity.items.${index}`, item.text)}
+                              time={item.time}
+                              status={item.status as 'success' | 'pending' | 'processing'}
+                              delay={0.6 + index * 0.1}
+                            />
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
 
-                    {/* Lead Scoring Table & Conversion Chart */}
-                    <div className="md:col-span-2 grid grid-cols-2 gap-4">
-                      <LeadScoringTable delay={0.6} />
-                      <MiniChart
-                        title={t(`solutions.${solutionId}.platform.charts.conversion`, 'Conversion Trend')}
-                        delay={0.7}
-                      />
-                    </div>
+                    {/* Lead Scoring Table & Conversion Chart - Hidden on mobile for performance */}
+                    {!isMobile && (
+                      <div className="md:col-span-2 grid grid-cols-2 gap-4">
+                        <LeadScoringTable delay={0.6} />
+                        <MiniChart
+                          title={t(`solutions.${solutionId}.platform.charts.conversion`, 'Conversion Trend')}
+                          delay={0.7}
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
