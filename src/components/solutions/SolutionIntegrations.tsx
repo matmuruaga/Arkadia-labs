@@ -42,7 +42,7 @@ integrationLogos['twilio'] = {
 };
 integrationLogos['calendly'] = {
   name: 'Calendly',
-  logo: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1751366238/google_calendar_nqrijg.svg', // Using Google Calendar as placeholder
+  logo: 'https://cdn.brandfetch.io/calendly.com/w/502/h/512/symbol?c=1idlz7Gfw8u57og_9Pu',
 };
 
 interface Props {

@@ -3,7 +3,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   MailCheck, PhoneCall, Database, Target, Copy, Star,
-  CheckCircle, Shield, Zap, Settings, Building, Sparkles
+  CheckCircle, Shield, Zap, Settings, Building, Sparkles,
+  Brain, Calendar, ClipboardCheck, MessageCircle, Search,
+  Mic, Users, TrendingUp, Clock, Headphones
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { SolutionFeatures as SolutionFeaturesType } from '@/data/solutions/types';
@@ -21,6 +23,16 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   'zap': Zap,
   'settings': Settings,
   'building': Building,
+  'brain': Brain,
+  'calendar': Calendar,
+  'clipboard-check': ClipboardCheck,
+  'message-circle': MessageCircle,
+  'search': Search,
+  'mic': Mic,
+  'users': Users,
+  'trending-up': TrendingUp,
+  'clock': Clock,
+  'headphones': Headphones,
 };
 
 interface Props {

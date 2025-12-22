@@ -1,7 +1,11 @@
 // src/components/solutions/SolutionHowItWorks.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Upload, Cpu, BarChart, RefreshCw, Zap } from 'lucide-react';
+import {
+  Upload, Cpu, BarChart, RefreshCw, Zap, Search, MessageCircle,
+  CheckCircle, Calendar, Database, Brain, Shield, ClipboardCheck,
+  Mic, Users, Target, Headphones
+} from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { SolutionHowItWorks as SolutionHowItWorksType } from '@/data/solutions/types';
 
@@ -12,6 +16,18 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   'bar-chart': BarChart,
   'refresh-cw': RefreshCw,
   'zap': Zap,
+  'search': Search,
+  'message-circle': MessageCircle,
+  'check-circle': CheckCircle,
+  'calendar': Calendar,
+  'database': Database,
+  'brain': Brain,
+  'shield': Shield,
+  'clipboard-check': ClipboardCheck,
+  'mic': Mic,
+  'users': Users,
+  'target': Target,
+  'headphones': Headphones,
 };
 
 interface Props {

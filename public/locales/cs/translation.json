@@ -968,6 +968,12 @@
     "google_calendar": {
       "name": "Google Calendar"
     },
+    "calendly": {
+      "name": "Calendly"
+    },
+    "zoom": {
+      "name": "Zoom"
+    },
     "monday": {
       "name": "monday.com"
     },
@@ -2213,6 +2219,243 @@
       "subtitle": "Rezervujte si personalizované demo s naším týmem.",
       "cta": "Rezervovat Demo"
     }
+  },
+  "sales-qualifier": {
+    "seo": {
+      "title": "Sales Qualifier AI Agent | Konverzační Kvalifikace Leadů | Elevaite Labs",
+      "description": "AI hlasový agent, který kvalifikuje leady prostřednictvím přirozené konverzace. 5+ minut kontextového dialogu, obohacení v reálném čase a automatické rezervace schůzek."
+    },
+    "hero": {
+      "badge": "Prodej a Inbound",
+      "title": "Váš AI Obchodní Zástupce, Který Skutečně Kvalifikuje",
+      "subtitle": "Konverzační Inteligence Leadů",
+      "description": "AI hlasový agent, který hluboce rozumí vašim potenciálním zákazníkům, udržuje přirozené 5+ minutové konverzace, kvalifikuje s přesností a rezervuje schůzky—zatímco vy se soustředíte na uzavírání obchodů.",
+      "primaryCta": "Vidět v Akci",
+      "secondaryCta": "Promluvit s Obchodem"
+    },
+    "problem": {
+      "badge": "Problém",
+      "headline": "Vaše Nejlepší Leady Vám Proklouzávají",
+      "description": "Příchozí leady očekávají okamžité, inteligentní odpovědi. Ale váš tým nemůže být všude najednou—a generičtí chatboti jen frustrují potenciální zákazníky.",
+      "painPoints": {
+        "0": {
+          "title": "Pomalé Časy Odezvy",
+          "description": "Leady čekají hodiny (nebo dny) na odpověď. Do té doby už mluvili s vaší konkurencí, která odpověděla za 30 sekund."
+        },
+        "1": {
+          "title": "Generické, Robotické Interakce",
+          "description": "Chatboti pokládají stejné předepsané otázky bez ohledu na kontext. Potenciální zákazníci se cítí jako číslo, ne jako hodnotný klient."
+        },
+        "2": {
+          "title": "Nekonzistentní Kvalifikace",
+          "description": "Různí obchodníci kvalifikují různě. Někteří propouští nekvalifikované leady, jiní odmítají skutečné příležitosti příliš rychle."
+        },
+        "3": {
+          "title": "Zmeškané Příležitosti Mimo Pracovní Dobu",
+          "description": "40% leadů přichází mimo pracovní dobu. Bez 24/7 pokrytí necháváte peníze na stole."
+        }
+      },
+      "statistics": {
+        "0": { "label": "kupujících si vybírá prvního, kdo odpoví" },
+        "1": { "label": "doba odezvy zvyšuje kvalifikaci 10x" },
+        "2": { "label": "prodejů jde k prvnímu dodavateli, který odpoví" }
+      }
+    },
+    "howItWorks": {
+      "badge": "Jak To Funguje",
+      "title": "Jak Sales Qualifier Funguje",
+      "subtitle": "Od neznámého volajícího ke kvalifikované schůzce v jedné konverzaci",
+      "steps": {
+        "0": {
+          "title": "Okamžité Obohacení Leadu",
+          "description": "Před zahájením konverzace naše AI obohatí lead o firemní data, tech stack, nedávné zprávy a nákupní signály. Ví, s kým mluví."
+        },
+        "1": {
+          "title": "Přirozená Konverzace",
+          "description": "AI vede skutečný dialog—klade chytré otázky, zvládá námitky a přizpůsobuje se tónu a tempu potenciálního zákazníka. Žádné skripty, žádné trapné pauzy."
+        },
+        "2": {
+          "title": "Hluboká Kvalifikace",
+          "description": "Pomocí BANT, MEDDIC nebo vašeho vlastního frameworku AI kvalifikuje rozpočet, autoritu, potřebu a časový rámec přirozeně během konverzace."
+        },
+        "3": {
+          "title": "Schůzka Rezervována a CRM Aktualizováno",
+          "description": "Kvalifikované leady dostanou okamžitě naplánovanou schůzku. Všechna konverzační data, poznámky ke kvalifikaci a další kroky se automaticky synchronizují do vašeho CRM."
+        }
+      }
+    },
+    "features": {
+      "badge": "Funkce",
+      "title": "Postaveno pro Skutečné Obchodní Konverzace",
+      "subtitle": "Každá schopnost navržena pro přeměnu konverzací v pipeline",
+      "features": {
+        "0": {
+          "title": "Obohacení Leadu v Reálném Čase",
+          "description": "Firemní data, tech stack, financování, organizační struktura a nákupní signály—vše dostupné před a během konverzace."
+        },
+        "1": {
+          "title": "5+ Minutová Paměť Kontextu",
+          "description": "Udržuje kompletní kontext konverzace napříč prodlouženými dialogy. Přirozeně odkazuje na dřívější body, nikdy neztrácí nit."
+        },
+        "2": {
+          "title": "Inteligentní Zvládání Námitek",
+          "description": "Trénováno na tisících obchodních konverzací pro zvládání běžných námitek s empatií a přesností."
+        },
+        "3": {
+          "title": "Vlastní Kvalifikační Frameworky",
+          "description": "Nakonfigurujte BANT, MEDDIC, GPCTBA/C&I nebo vlastní kvalifikační kritéria. AI přizpůsobí své otázky podle toho."
+        },
+        "4": {
+          "title": "Přímá Rezervace v Kalendáři",
+          "description": "Kontroluje dostupnost v reálném čase a rezervuje schůzky přímo. Žádné emaily tam a zpět, žádné plánovací odkazy."
+        },
+        "5": {
+          "title": "Systém Nulových Halucinací",
+          "description": "Samo-validující promptová architektura zajišťuje, že AI nikdy nevymýšlí informace. Pokud něco neví, přizná to."
+        }
+      }
+    },
+    "metrics": {
+      "badge": "Výsledky",
+      "title": "Výsledky, Které Mluví Samy za Sebe",
+      "subtitle": "Měřený dopad od týmů používajících Sales Qualifier",
+      "metrics": {
+        "0": { "label": "Přesnost Kvalifikace", "description": "Odpovídá výkonu lidských SDR" },
+        "1": { "label": "Více Rezervovaných Schůzek", "description": "Ve srovnání s kvalifikací pomocí formulářů" },
+        "2": { "label": "Průměrná Doba Odezvy", "description": "Okamžité zapojení, 24/7" },
+        "3": { "label": "Snížení Nákladů", "description": "vs. najímání dalších SDR" }
+      },
+      "comparisonTitle": "Před vs Po Sales Qualifier",
+      "before": {
+        "0": "Leady čekají 4+ hodiny na odpověď",
+        "1": "Generický chatbot frustruje potenciální zákazníky",
+        "2": "Nekonzistentní kvalifikace napříč týmem",
+        "3": "Žádné pokrytí mimo pracovní dobu",
+        "4": "Ruční plánování schůzek přes email"
+      },
+      "after": {
+        "0": "Okamžitá odpověď, pokaždé",
+        "1": "Přirozené konverzace s kontextem",
+        "2": "Konzistentní kvalifikační framework",
+        "3": "24/7 inteligentní pokrytí",
+        "4": "Automatická rezervace v kalendáři"
+      }
+    },
+    "platform": {
+      "badge": "Živý Dashboard",
+      "title": "Sledujte Každou Konverzaci v Reálném Čase",
+      "subtitle": "Monitorujte míry kvalifikace, kvalitu konverzací a rezervace schůzek z jednoho dashboardu."
+    },
+    "useCases": {
+      "badge": "Případy Použití",
+      "title": "Perfektní pro Týmy s Vysokým Objemem Inbound",
+      "subtitle": "Podívejte se, jak různá odvětví využívají AI kvalifikaci",
+      "resultsTitle": "Klíčové Výsledky",
+      "useCases": {
+        "0": {
+          "industry": "SaaS",
+          "title": "SaaS Inbound Kvalifikace",
+          "description": "Kvalifikujte registrace na trial a žádosti o demo okamžitě. Pochopte jejich tech stack, současná řešení a bolestivé body před obchodním hovorem.",
+          "results": {
+            "0": "90% snížení doby odezvy",
+            "1": "3x nárůst účasti na demo",
+            "2": "40% vyšší ACV na kvalifikovaných obchodech"
+          }
+        },
+        "1": {
+          "industry": "Finanční Služby",
+          "title": "Kvalifikace Finančního Poradenství",
+          "description": "Předkvalifikujte potenciální zákazníky pro investiční minima, toleranci rizika a časový rámec. Směrujte ke správnému poradci na základě potřeb.",
+          "results": {
+            "0": "85% zlepšení míry uzavření při prvním hovoru",
+            "1": "Záznamy konverzací připravené pro compliance",
+            "2": "24/7 zapojení potenciálních zákazníků"
+          }
+        },
+        "2": {
+          "industry": "Reality",
+          "title": "Kvalifikace Realitních Leadů",
+          "description": "Pochopte preference kupujícího, rozpočtový rozsah, časový rámec a stav předschválení před první prohlídkou.",
+          "results": {
+            "0": "50% méně nekvalifikovaných prohlídek",
+            "1": "Okamžitá odpověď na dotazy k nemovitostem",
+            "2": "Vyšší konverze u horkých leadů"
+          }
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integrace",
+      "title": "Připojí Se k Celému Vašemu Obchodnímu Stacku",
+      "subtitle": "Nativní integrace s nástroji, které váš tým již používá",
+      "viewAll": "Zobrazit všech 500+ integrací"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Často Kladené Otázky",
+      "subtitle": "Vše, co potřebujete vědět o Sales Qualifier",
+      "moreQuestions": "Máte další otázky?",
+      "contactUs": "Kontaktujte náš tým",
+      "faqs": {
+        "0": {
+          "question": "Jak přirozeně konverzace skutečně zní?",
+          "answer": "Naše AI udržuje přirozený, lidský dialog po dobu 5+ minut bez ztráty kontextu. Přizpůsobuje se tónu potenciálního zákazníka, elegantně zvládá přerušení a nikdy nezní předepsaně. Většina potenciálních zákazníků si neuvědomí, že mluví s AI, dokud jim to neřekneme."
+        },
+        "1": {
+          "question": "Jak AI předchází vymýšlení věcí?",
+          "answer": "Používáme samo-validující promptovou architekturu, která křížově ověřuje každou odpověď proti vaší znalostní bázi a informacím o produktu. Pokud AI něco neví, upřímně to přizná místo vymýšlení odpovědi."
+        },
+        "2": {
+          "question": "Mohu přizpůsobit kvalifikační kritéria?",
+          "answer": "Absolutně. Můžete nakonfigurovat BANT, MEDDIC, GPCTBA/C&I nebo vytvořit kompletně vlastní kvalifikační framework. AI přirozeně včlení tyto otázky do konverzace."
+        },
+        "3": {
+          "question": "Jak funguje rezervace schůzek?",
+          "answer": "AI má přístup v reálném čase ke kalendářům vašeho týmu. Když je lead kvalifikovaný a má zájem, nabídne dostupné termíny, zvládne konverze časových pásem a rezervuje přímo—žádné plánovací odkazy nejsou potřeba."
+        },
+        "4": {
+          "question": "Co se děje s nekvalifikovanými leady?",
+          "answer": "Nekvalifikované leady se nezahazují. Jsou označeny důvody diskvalifikace a mohou být přidány do nurturing kampaní. AI je také může přesměrovat na vhodné zdroje nebo self-service možnosti."
+        },
+        "5": {
+          "question": "Jak rychle můžeme začít?",
+          "answer": "Většina týmů je živá do 2 týdnů. Zvládneme nastavení integrace, natrénujeme AI na váš produkt a kvalifikační kritéria a spustíme pilotní období pro doladění výkonu před plným nasazením."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Začněte Dnes",
+      "title": "Připraveni Kvalifikovat Leady, Zatímco Spíte?",
+      "subtitle": "Podívejte se, jak Sales Qualifier zvládá skutečnou konverzaci—s vaším produktem, vašimi kvalifikačními kritérii, vaším hlasem.",
+      "primaryCta": "Požádat o Živé Demo",
+      "secondaryCta": "Promluvit s Obchodem",
+      "trust1": "Bez kreditní karty",
+      "trust2": "Bezplatný pilotní program",
+      "trust3": "Nastavení do 2 týdnů"
+    },
+    "inlineCta1": {
+      "title": "Podívejte se na Qualifier v Akci",
+      "subtitle": "Sledujte živé demo 5minutové kvalifikační konverzace.",
+      "cta": "Sledovat Demo"
+    },
+    "inlineCta2": {
+      "badge": "94% Přesnost Kvalifikace",
+      "title": "Podívejte se na Sales Qualifier v Akci",
+      "subtitle": "Naše AI odpovídá výkonu vašeho nejlepšího SDR—za zlomek nákladů.",
+      "primaryCta": "Naplánovat Demo",
+      "stats": {
+        "0": "Více Schůzek",
+        "1": "Snížení Nákladů",
+        "2": "Spokojených Klientů",
+        "3": "Podpora"
+      }
+    },
+    "inlineCta3": {
+      "urgency": "Vaše konkurence odpovídá rychleji",
+      "title": "78% Kupujících Si Vybírá Prvního, Kdo Odpoví",
+      "subtitle": "Neztrácejte obchody kvůli pomalému follow-upu.",
+      "cta": "Začít Dnes"
     }
+  }
   }
 }

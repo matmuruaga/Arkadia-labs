@@ -613,6 +613,243 @@
       "subtitle": "Agenda una demo personalizada con nuestro equipo.",
       "cta": "Agendar Demo"
     }
+  },
+  "sales-qualifier": {
+    "seo": {
+      "title": "Agente Calificador de Ventas con IA | Calificación Conversacional de Leads | Elevaite Labs",
+      "description": "Agente de voz con IA que califica leads a través de conversación natural. 5+ minutos de diálogo con contexto, enriquecimiento en tiempo real, y agendamiento automático de reuniones."
+    },
+    "hero": {
+      "badge": "Ventas & Inbound",
+      "title": "Tu Representante de Ventas con IA que Realmente Califica",
+      "subtitle": "Inteligencia de Leads Conversacional",
+      "description": "Un agente de voz con IA que entiende profundamente a tus prospectos, mantiene conversaciones naturales de 5+ minutos, califica con precisión, y agenda reuniones—todo mientras tú te enfocas en cerrar deals.",
+      "primaryCta": "Verlo en Acción",
+      "secondaryCta": "Hablar con Ventas"
+    },
+    "problem": {
+      "badge": "El Problema",
+      "headline": "Tus Mejores Leads Se Te Están Escapando",
+      "description": "Los leads entrantes esperan respuestas inmediatas e inteligentes. Pero tu equipo no puede estar en todos lados a la vez—y los chatbots genéricos solo frustran a los prospectos.",
+      "painPoints": {
+        "0": {
+          "title": "Tiempos de Respuesta Lentos",
+          "description": "Los leads esperan horas (o días) por una respuesta. Para entonces, ya hablaron con tu competidor que respondió en 30 segundos."
+        },
+        "1": {
+          "title": "Interacciones Genéricas y Robóticas",
+          "description": "Los chatbots hacen las mismas preguntas guionizadas sin importar el contexto. Los prospectos se sienten como un número, no como un cliente valorado."
+        },
+        "2": {
+          "title": "Calificación Inconsistente",
+          "description": "Diferentes representantes califican diferente. Algunos dejan pasar leads no calificados, otros descartan oportunidades reales demasiado rápido."
+        },
+        "3": {
+          "title": "Oportunidades Perdidas Fuera de Horario",
+          "description": "El 40% de los leads llegan fuera del horario laboral. Sin cobertura 24/7, estás dejando dinero sobre la mesa."
+        }
+      },
+      "statistics": {
+        "0": { "label": "de compradores eligen al primero en responder" },
+        "1": { "label": "de tiempo de respuesta aumenta 10x la calificación" },
+        "2": { "label": "de ventas van al primer proveedor en responder" }
+      }
+    },
+    "howItWorks": {
+      "badge": "Cómo Funciona",
+      "title": "Cómo Funciona el Sales Qualifier",
+      "subtitle": "De llamada desconocida a reunión calificada en una conversación",
+      "steps": {
+        "0": {
+          "title": "Enriquecimiento Instantáneo del Lead",
+          "description": "Antes de que comience la conversación, nuestra IA enriquece el lead con datos de empresa, stack tecnológico, noticias recientes, y señales de compra. Sabe con quién está hablando."
+        },
+        "1": {
+          "title": "Conversación Natural",
+          "description": "La IA entabla diálogo genuino—haciendo preguntas inteligentes, manejando objeciones, y adaptándose al tono y ritmo del prospecto. Sin guiones, sin pausas incómodas."
+        },
+        "2": {
+          "title": "Calificación Profunda",
+          "description": "Usando BANT, MEDDIC, o tu framework personalizado, la IA califica presupuesto, autoridad, necesidad y tiempo de forma natural dentro de la conversación."
+        },
+        "3": {
+          "title": "Reunión Agendada y CRM Actualizado",
+          "description": "Los leads calificados obtienen una reunión agendada al instante. Todos los datos de la conversación, notas de calificación, y próximos pasos se sincronizan automáticamente a tu CRM."
+        }
+      }
+    },
+    "features": {
+      "badge": "Características",
+      "title": "Construido para Conversaciones de Ventas Reales",
+      "subtitle": "Cada capacidad diseñada para convertir conversaciones en pipeline",
+      "features": {
+        "0": {
+          "title": "Enriquecimiento de Lead en Tiempo Real",
+          "description": "Datos de empresa, stack tecnológico, financiamiento, estructura organizacional, y señales de compra—todo disponible antes y durante la conversación."
+        },
+        "1": {
+          "title": "Memoria de Contexto de 5+ Minutos",
+          "description": "Mantiene contexto completo de la conversación a través de diálogos extendidos. Referencia puntos anteriores naturalmente, nunca pierde el hilo."
+        },
+        "2": {
+          "title": "Manejo Inteligente de Objeciones",
+          "description": "Entrenado en miles de conversaciones de ventas para manejar objeciones comunes con empatía y precisión."
+        },
+        "3": {
+          "title": "Frameworks de Calificación Personalizados",
+          "description": "Configura BANT, MEDDIC, GPCTBA/C&I, o tus propios criterios de calificación. La IA adapta sus preguntas acordemente."
+        },
+        "4": {
+          "title": "Agendamiento Directo de Calendario",
+          "description": "Revisa disponibilidad en tiempo real y agenda reuniones directamente. Sin emails de ida y vuelta, sin links de agendamiento."
+        },
+        "5": {
+          "title": "Sistema Cero Alucinaciones",
+          "description": "Arquitectura de prompts auto-validante asegura que la IA nunca invente información. Si no sabe algo, lo admite."
+        }
+      }
+    },
+    "metrics": {
+      "badge": "Resultados",
+      "title": "Resultados que Hablan por Sí Mismos",
+      "subtitle": "Impacto medido de equipos usando el Sales Qualifier",
+      "metrics": {
+        "0": { "label": "Precisión de Calificación", "description": "Iguala el rendimiento de SDRs humanos" },
+        "1": { "label": "Más Reuniones Agendadas", "description": "Comparado con calificación por formularios" },
+        "2": { "label": "Tiempo Promedio de Respuesta", "description": "Engagement instantáneo, 24/7" },
+        "3": { "label": "Reducción de Costos", "description": "vs. contratar SDRs adicionales" }
+      },
+      "comparisonTitle": "Antes vs Después del Sales Qualifier",
+      "before": {
+        "0": "Leads esperan 4+ horas por respuesta",
+        "1": "Chatbot genérico frustra prospectos",
+        "2": "Calificación inconsistente en el equipo",
+        "3": "Sin cobertura fuera de horario laboral",
+        "4": "Agendamiento manual de reuniones por email"
+      },
+      "after": {
+        "0": "Respuesta instantánea, siempre",
+        "1": "Conversaciones naturales con contexto",
+        "2": "Framework de calificación consistente",
+        "3": "Cobertura inteligente 24/7",
+        "4": "Agendamiento automático de calendario"
+      }
+    },
+    "platform": {
+      "badge": "Dashboard en Vivo",
+      "title": "Ve Cada Conversación en Tiempo Real",
+      "subtitle": "Monitorea tasas de calificación, calidad de conversación, y reuniones agendadas desde un solo dashboard."
+    },
+    "useCases": {
+      "badge": "Casos de Uso",
+      "title": "Perfecto para Equipos de Alto Volumen Inbound",
+      "subtitle": "Ve cómo diferentes industrias aprovechan la calificación con IA",
+      "resultsTitle": "Resultados Clave",
+      "useCases": {
+        "0": {
+          "industry": "SaaS",
+          "title": "Calificación Inbound de SaaS",
+          "description": "Califica registros de prueba y solicitudes de demo al instante. Entiende su stack tecnológico, soluciones actuales, y puntos de dolor antes de la llamada de ventas.",
+          "results": {
+            "0": "90% reducción en tiempo de respuesta",
+            "1": "3x incremento en asistencia a demos",
+            "2": "40% mayor ACV en deals calificados"
+          }
+        },
+        "1": {
+          "industry": "Servicios Financieros",
+          "title": "Calificación de Asesoría Financiera",
+          "description": "Pre-califica prospectos para mínimos de inversión, tolerancia al riesgo, y timeline. Dirige al asesor correcto basado en necesidades.",
+          "results": {
+            "0": "85% mejora en tasa de cierre primera llamada",
+            "1": "Logs de conversación listos para compliance",
+            "2": "Engagement 24/7 con prospectos"
+          }
+        },
+        "2": {
+          "industry": "Inmobiliaria",
+          "title": "Calificación de Leads Inmobiliarios",
+          "description": "Entiende preferencias del comprador, rango de presupuesto, timeline, y estado de pre-aprobación antes de la primera visita.",
+          "results": {
+            "0": "50% menos visitas no calificadas",
+            "1": "Respuesta instantánea a consultas de propiedades",
+            "2": "Mayor conversión en leads calientes"
+          }
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integraciones",
+      "title": "Conecta con Todo Tu Stack de Ventas",
+      "subtitle": "Integraciones nativas con las herramientas que tu equipo ya usa",
+      "viewAll": "Ver las 500+ integraciones"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre el Sales Qualifier",
+      "moreQuestions": "¿Aún tienes preguntas?",
+      "contactUs": "Contacta a nuestro equipo",
+      "faqs": {
+        "0": {
+          "question": "¿Qué tan naturales suenan realmente las conversaciones?",
+          "answer": "Nuestra IA mantiene diálogo natural, similar al humano, por 5+ minutos sin perder contexto. Se adapta al tono del prospecto, maneja interrupciones con gracia, y nunca suena guionizada. La mayoría de prospectos no se dan cuenta que están hablando con IA hasta que se los decimos."
+        },
+        "1": {
+          "question": "¿Cómo evita la IA inventar cosas?",
+          "answer": "Usamos una arquitectura de prompts auto-validante que cruza cada respuesta contra tu base de conocimiento e información del producto. Si la IA no sabe algo, lo reconoce honestamente en lugar de fabricar una respuesta."
+        },
+        "2": {
+          "question": "¿Puedo personalizar los criterios de calificación?",
+          "answer": "Absolutamente. Puedes configurar BANT, MEDDIC, GPCTBA/C&I, o crear un framework de calificación completamente personalizado. La IA integrará naturalmente estas preguntas en la conversación."
+        },
+        "3": {
+          "question": "¿Cómo funciona el agendamiento de reuniones?",
+          "answer": "La IA tiene acceso en tiempo real a los calendarios de tu equipo. Cuando un lead está calificado e interesado, ofrece horarios disponibles, maneja conversiones de zona horaria, y agenda directamente—sin necesidad de links de agendamiento."
+        },
+        "4": {
+          "question": "¿Qué pasa con los leads no calificados?",
+          "answer": "Los leads no calificados no se descartan. Se etiquetan con razones de descalificación y pueden agregarse a campañas de nurturing. La IA también puede redirigirlos a recursos apropiados u opciones de autoservicio."
+        },
+        "5": {
+          "question": "¿Qué tan rápido podemos empezar?",
+          "answer": "La mayoría de equipos están en vivo en 2 semanas. Manejamos la configuración de integración, entrenamos la IA en tu producto y criterios de calificación, y ejecutamos un período piloto para afinar el rendimiento antes del despliegue completo."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Empieza Hoy",
+      "title": "¿Listo para Calificar Leads Mientras Duermes?",
+      "subtitle": "Ve cómo el Sales Qualifier maneja una conversación real—con tu producto, tus criterios de calificación, tu voz.",
+      "primaryCta": "Solicitar Demo en Vivo",
+      "secondaryCta": "Hablar con Ventas",
+      "trust1": "Sin tarjeta de crédito",
+      "trust2": "Programa piloto gratuito",
+      "trust3": "Setup en 2 semanas"
+    },
+    "inlineCta1": {
+      "title": "Ve el Qualifier en Acción",
+      "subtitle": "Mira una demo en vivo de una conversación de calificación de 5 minutos.",
+      "cta": "Ver Demo"
+    },
+    "inlineCta2": {
+      "badge": "94% Precisión de Calificación",
+      "title": "Ve el Sales Qualifier en Acción",
+      "subtitle": "Nuestra IA iguala el rendimiento de tu mejor SDR—a una fracción del costo.",
+      "primaryCta": "Agendar Demo",
+      "stats": {
+        "0": "Más Reuniones",
+        "1": "Reducción de Costos",
+        "2": "Clientes Felices",
+        "3": "Soporte"
+      }
+    },
+    "inlineCta3": {
+      "urgency": "Tu competencia está respondiendo más rápido",
+      "title": "78% de Compradores Eligen al Primero en Responder",
+      "subtitle": "No pierdas deals por seguimiento lento.",
+      "cta": "Empezar Hoy"
+    }
   }
 },
 "footer": {
@@ -1330,6 +1567,12 @@
     },
     "google_calendar": {
       "name": "Google Calendar"
+    },
+    "calendly": {
+      "name": "Calendly"
+    },
+    "zoom": {
+      "name": "Zoom"
     },
     "monday": {
       "name": "monday.com"
