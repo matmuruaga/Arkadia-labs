@@ -1434,9 +1434,15 @@
         "title": "Jak jsme transformovali *prodejní operace* ELSA Consulting s kompletní AI platformou pro inteligenci",
         "subtitle": "Strategická případová studie: ELSA Consulting dosáhla 3,5x vyšší míry odpovědí za 2 měsíce, zvýšila efektivitu o 80% a ušetřila více než 3 461 € s kompletním AI systémem prodejní inteligence ContactIQ - od validace kontaktů po synchronizaci s CRM.",
         "kpis": [
-          { "label": "ROI za 2 měsíce" },
-          { "label": "Zvýšení míry odpovědí" },
-          { "label": "Ušetřený čas" }
+          {
+            "label": "ROI za 2 měsíce"
+          },
+          {
+            "label": "Zvýšení míry odpovědí"
+          },
+          {
+            "label": "Ušetřený čas"
+          }
         ]
       },
       "client": {
@@ -1557,11 +1563,19 @@
         "calculator": {
           "title": "Investice vs úspora nákladů",
           "items": [
-            { "label": "Náklady 3členného BDR týmu" },
-            { "label": "Investice do platformy ContactIQ" },
-            { "label": "Úspora nákladů (2 měsíce)" }
+            {
+              "label": "Náklady 3členného BDR týmu"
+            },
+            {
+              "label": "Investice do platformy ContactIQ"
+            },
+            {
+              "label": "Úspora nákladů (2 měsíce)"
+            }
           ],
-          "finalRoi": { "label": "Dosaženo za 2 měsíce" }
+          "finalRoi": {
+            "label": "Dosaženo za 2 měsíce"
+          }
         },
         "benefits": [
           {
@@ -1902,8 +1916,245 @@
   },
   "privacyPolicy": {
     "title": "Zásady ochrany osobních údajů",
-    "lastUpdated": "Poslední aktualizace: {{date}}",
-    "content": "V Arkadia Labs bereme ochranu vašich osobních údajů velmi vážně. Tato zásada popisuje, jak shromažďujeme, používáme a chráníme vaše informace."
+    "lastUpdated": "9. března 2026",
+    "dataController": {
+      "label": "Správce údajů:",
+      "value": "ARCADIA TECHNOLOGIES ARTIFICIAL INTELLIGENCE DEVELOPING SERVICES - FZCO, obchodující jako Arkadia Labs (\"Arkadia\", \"my\", \"nás\" nebo \"naše\")",
+      "addressLabel": "Sídlo společnosti:",
+      "address": "IFZA Business Park, Dubai Digital Park, Building A2, 342001, Nadd Hessa — Dubai Silicon Oasis, Dubai, United Arab Emirates",
+      "licenceLabel": "Obchodní licence:",
+      "licence": "72235",
+      "privacyLabel": "Kontakt pro ochranu soukromí:"
+    },
+    "sections": {
+      "introduction": {
+        "heading": "1. Úvod",
+        "body": {
+          "p1": "Tyto Zásady ochrany osobních údajů popisují, jakým způsobem společnost Arkadia shromažďuje, používá, zpracovává a zpřístupňuje vaše údaje, když přistupujete k našim webovým stránkám na adrese arkadialabs.io, využíváte naše služby v oblasti VoIP a automatizace s podporou AI nebo s námi jinak komunikujete (souhrnně dále jen „Služby“).",
+          "p2": "Zavazujeme se chránit vaše soukromí a nakládat s vašimi údaji otevřeně a transparentně v souladu s obecným nařízením EU o ochraně osobních údajů (GDPR — nařízení 2016/679), spolkovým zákonným výnosem SAE č. 45 z roku 2021 o ochraně osobních údajů a dalšími platnými předpisy na ochranu osobních údajů.",
+          "p3": "Přístupem k našim Službám berete na vědomí, že jste si tyto Zásady ochrany osobních údajů přečetli a porozuměli jim. Pokud s postupy zde popsanými nesouhlasíte, naše Služby prosím nepoužívejte."
+        }
+      },
+      "informationWeCollect": {
+        "heading": "2. Údaje, které shromažďujeme",
+        "body": {
+          "h3a": "A. Údaje, které nám poskytnete",
+          "p1": "Jedná se o údaje, které nám dobrovolně poskytnete při vytváření účtu, žádosti o ukázku, předplatném našich služeb, kontaktování našeho obchodního nebo podpůrného týmu nebo při jiné komunikaci s námi. Mohou zahrnovat:",
+          "li1": "Celé jméno, e-mailová adresa, telefonní číslo",
+          "li2": "Název společnosti, pracovní pozice, obchodní adresa",
+          "li3": "Fakturační a platební údaje",
+          "li4": "Obsah komunikace s naším týmem",
+          "h3b": "B. Údaje shromažďované automaticky",
+          "p2": "Při procházení našich webových stránek nebo používání našich Služeb můžeme automaticky shromažďovat určité údaje z vašeho zařízení, včetně:",
+          "li5": "IP adresa a přibližná zeměpisná poloha",
+          "li6": "Typ zařízení, typ prohlížeče a operační systém",
+          "li7": "Navštívené stránky, kliknuté odkazy a vzorce používání",
+          "li8": "Odkazující URL adresy a délka relace",
+          "p3": "Pro tyto účely používáme nástroje jako Google Analytics 4 (GA4). Podrobnosti naleznete v části 9 (Cookies).",
+          "h3c": "C. Údaje zpracovávané jménem našich klientů",
+          "p4": "Jako zpracovatel údajů zpracovává společnost Arkadia osobní údaje nahrané nebo vygenerované našimi klienty prostřednictvím naší platformy, včetně seznamů kontaktů, metadat hovorů a nahrávek hovorů. Tyto údaje jsou zpracovávány výhradně v souladu s pokyny našich klientů a naší Smlouvou o zpracování osobních údajů (DPA). Tyto Zásady ochrany osobních údajů se nevztahují na údaje zpracovávané jménem klientů — informace o tom, jak nakládají s vašimi údaji, naleznete v zásadách ochrany osobních údajů příslušného klienta."
+        }
+      },
+      "legalBasis": {
+        "heading": "3. Právní základy zpracování",
+        "body": {
+          "p1": "Podle GDPR se při zpracování vašich osobních údajů opíráme o následující právní základy:",
+          "th1": "Účel",
+          "th2": "Právní základ (článek GDPR)",
+          "r1c1": "Poskytování a správa našich Služeb",
+          "r1c2": "Plnění smlouvy (Art. 6(1)(b))",
+          "r2c1": "Odpovídání na dotazy a poskytování podpory",
+          "r2c2": "Plnění smlouvy / Oprávněný zájem (Art. 6(1)(b) / (f))",
+          "r3c1": "Zasílání marketingové komunikace",
+          "r3c2": "Souhlas (Art. 6(1)(a)) nebo Oprávněný zájem (Art. 6(1)(f)) u stávajících klientů",
+          "r4c1": "Analytika a zlepšování služeb",
+          "r4c2": "Oprávněný zájem (Art. 6(1)(f))",
+          "r5c1": "Prevence podvodů a bezpečnost",
+          "r5c2": "Oprávněný zájem (Art. 6(1)(f))",
+          "r6c1": "Plnění právních a daňových povinností",
+          "r6c2": "Právní povinnost (Art. 6(1)(c))",
+          "r7c1": "Fakturace a zpracování plateb",
+          "r7c2": "Plnění smlouvy (Art. 6(1)(b))",
+          "p2": "Pokud se opíráme o oprávněný zájem, provedli jsme test proporcionality, abychom zajistili, že naše zájmy nepřevažují nad vašimi základními právy a svobodami. O podrobnosti tohoto posouzení nás můžete požádat na adrese"
+        }
+      },
+      "howWeUse": {
+        "heading": "4. Jak vaše údaje používáme",
+        "body": {
+          "p1": "Shromážděné údaje používáme k těmto účelům:",
+          "li1_strong": "Poskytování, provozování a údržba našich Služeb —",
+          "li1_text": "zřízení a správa vašeho účtu, zpracování transakcí a poskytování vámi požadovaných služeb.",
+          "li2_strong": "Zlepšování, personalizace a rozvoj našich Služeb —",
+          "li2_text": "porozumění způsobu, jakým naše Služby používáte, a vývoj nových funkcí a možností.",
+          "li3_strong": "Komunikace s vámi —",
+          "li3_text": "zasílání transakčních zpráv, technických oznámení, aktualizací, bezpečnostních upozornění a zpráv podpory. V souladu s vašimi preferencemi vám můžeme zasílat také marketingovou komunikaci.",
+          "li4_strong": "Zajištění bezpečnosti a prevence podvodů —",
+          "li4_text": "odhalování a prevence podvodných aktivit, zneužití a bezpečnostních hrozeb.",
+          "li5_strong": "Plnění právních povinností —",
+          "li5_text": "dodržování platných daňových, účetních a regulatorních požadavků a reakce na zákonné žádosti veřejných orgánů."
+        }
+      },
+      "howWeShare": {
+        "heading": "5. Jak vaše údaje sdílíme",
+        "body": {
+          "p1": "Vaše osobní údaje neprodáváme. Vaše údaje můžeme sdílet s třetími stranami pouze za následujících okolností:",
+          "h3a": "Poskytovatelé služeb (dílčí zpracovatelé)",
+          "p2": "Spolupracujeme s poskytovateli služeb třetích stran, kteří zpracovávají údaje naším jménem na základě smluvních závazků zajišťujících odpovídající ochranu údajů. Naši současní dílčí zpracovatelé jsou:",
+          "th1": "Poskytovatel",
+          "th2": "Účel",
+          "th3": "Sídlo",
+          "th4": "Mechanismus přenosu",
+          "r1c1": "Twilio Inc.",
+          "r1c2": "Hlasová komunikace a směrování hovorů",
+          "r1c3": "Spojené státy americké",
+          "r1c4": "EU-US Data Privacy Framework",
+          "r2c1": "CommPeak Ltd.",
+          "r2c2": "Telefonní infrastruktura a DID čísla",
+          "r2c3": "Hongkong",
+          "r2c4": "Standardní smluvní doložky (SCCs)",
+          "r3c1": "Vercel Inc.",
+          "r3c2": "Hosting a doručování webových stránek",
+          "r3c3": "Spojené státy americké",
+          "r3c4": "EU-US Data Privacy Framework",
+          "r4c1": "Amazon Web Services (AWS)",
+          "r4c2": "Cloudová infrastruktura",
+          "r4c3": "EU (Frankfurt) / Spojené státy americké",
+          "r4c4": "SCCs / EU-US Data Privacy Framework",
+          "r5c1": "Google LLC (Analytics)",
+          "r5c2": "Analytika webových stránek",
+          "r5c3": "Spojené státy americké",
+          "r5c4": "EU-US Data Privacy Framework",
+          "h3b": "Právní požadavky",
+          "p3": "Vaše údaje můžeme zpřístupnit, pokud to vyžaduje platný zákon, nařízení, právní řízení nebo žádost státního orgánu.",
+          "h3c": "Obchodní převody",
+          "p4": "V souvislosti s jakoukoli fúzí, akvizicí, prodejem aktiv nebo obdobnou transakcí mohou být vaše údaje převedeny jako součást obchodních aktiv. O každé takové změně a o možnostech, které máte ve vztahu ke svým údajům, vás budeme informovat."
+        }
+      },
+      "international": {
+        "heading": "6. Mezinárodní přenosy údajů",
+        "body": {
+          "p1": "Společnost Arkadia je usazena v Dubaji ve Spojených arabských emirátech, které v současnosti nejsou Evropskou komisí uznány jako země poskytující odpovídající úroveň ochrany osobních údajů. Při přenosu osobních údajů z EU/EHP do SAE nebo do jiných třetích zemí se opíráme o následující záruky:",
+          "li1_strong": "Standardní smluvní doložky (SCCs) —",
+          "li1_text": "přijaté Evropskou komisí na základě prováděcího rozhodnutí (EU) 2021/914, začleněné do našich Smluv o zpracování osobních údajů.",
+          "li2_strong": "Rámec pro ochranu osobních údajů EU-USA (DPF) —",
+          "li2_text": "pro přenosy poskytovatelům se sídlem v USA certifikovaným v rámci tohoto Rámce, jak uznal rozhodnutí Evropské komise o odpovídající ochraně ze dne 10. července 2023.",
+          "li3_strong": "Doplňková opatření —",
+          "li3_text": "včetně šifrování při přenosu i v klidovém stavu, řízení přístupu a smluvních závazků dílčích zpracovatelů, v souladu s doporučeními Evropského sboru pro ochranu osobních údajů (EDPB).",
+          "p2": "Kopii příslušných záruk pro přenos údajů si můžete vyžádat na adrese"
+        }
+      },
+      "retention": {
+        "heading": "7. Uchovávání údajů",
+        "body": {
+          "p1": "Vaše osobní údaje uchováváme pouze po dobu nezbytnou k naplnění účelů popsaných v těchto Zásadách ochrany osobních údajů, ledaže zákon vyžaduje nebo umožňuje delší dobu uchovávání. Naše obecné doby uchovávání jsou:",
+          "th1": "Kategorie údajů",
+          "th2": "Doba uchovávání",
+          "th3": "Základ",
+          "r1c1": "Údaje o účtu",
+          "r1c2": "Trvání smluvního vztahu + 30 dní",
+          "r1c3": "Plnění smlouvy",
+          "r2c1": "Fakturační a účetní záznamy",
+          "r2c2": "7 let",
+          "r2c3": "Zákon o obchodních společnostech SAE / daňové povinnosti",
+          "r3c1": "Údaje z analytiky webových stránek",
+          "r3c2": "14 měsíců",
+          "r3c3": "Výchozí doba uchovávání GA4",
+          "r4c1": "Korespondence s podporou",
+          "r4c2": "24 měsíců po vyřešení",
+          "r4c3": "Oprávněný zájem",
+          "r5c1": "Záznamy o marketingovém souhlasu",
+          "r5c2": "Trvání souhlasu + 36 měsíců",
+          "r5c3": "Odpovědnost (Art. 5(2) GDPR)",
+          "p2": "Jakmile údaje již nejsou potřebné, jsou bezpečně smazány nebo anonymizovány. U údajů zpracovávaných jménem našich klientů se doba uchovávání řídí příslušnou Smlouvou o zpracování osobních údajů."
+        }
+      },
+      "rights": {
+        "heading": "8. Vaše práva na ochranu osobních údajů",
+        "body": {
+          "p1": "Nacházíte-li se v EU/EHP, máte podle GDPR následující práva:",
+          "li1_strong": "Právo na přístup (Art. 15) —",
+          "li1_text": "získat potvrzení o tom, zda jsou vaše údaje zpracovávány, a požádat o jejich kopii.",
+          "li2_strong": "Právo na opravu (Art. 16) —",
+          "li2_text": "požádat o opravu nepřesných nebo neúplných údajů.",
+          "li3_strong": "Právo na výmaz (Art. 17) —",
+          "li3_text": "požádat o vymazání vašich údajů, pokud neexistuje závažný důvod pro pokračování ve zpracování.",
+          "li4_strong": "Právo na omezení zpracování (Art. 18) —",
+          "li4_text": "požádat, abychom za určitých okolností omezili způsob zpracování vašich údajů.",
+          "li5_strong": "Právo na přenositelnost údajů (Art. 20) —",
+          "li5_text": "obdržet své údaje ve strukturovaném, běžně používaném a strojově čitelném formátu.",
+          "li6_strong": "Právo vznést námitku (Art. 21) —",
+          "li6_text": "vznést námitku proti zpracování založenému na oprávněném zájmu nebo pro účely přímého marketingu.",
+          "li7_strong": "Právo odvolat souhlas (Art. 7(3)) —",
+          "li7_text": "pokud je zpracování založeno na souhlasu, kdykoli jej odvolat, aniž by tím byla dotčena zákonnost zpracování provedeného před odvoláním.",
+          "p2": "Pro uplatnění kteréhokoli z těchto práv nás prosím kontaktujte na adrese",
+          "p2b": "nebo podejte žádost prostřednictvím portálu GDPR našeho zástupce v EU (viz část 11).",
+          "p3": "Na vaši žádost odpovíme do 30 dnů. Ve složitých případech může být tato lhůta prodloužena o dalších 60 dnů; o případném prodloužení vás budeme informovat.",
+          "complaint_label": "Právo podat stížnost:",
+          "complaint_text": "Domníváte-li se, že naše zpracování vašich osobních údajů porušuje GDPR, máte právo podat stížnost u dozorového úřadu v členském státě EU, kde máte obvyklé bydliště, pracoviště nebo kde k údajnému porušení došlo. Pro Španělsko jím je",
+          "complaint_aepd": "Agencia Española de Protección de Datos (AEPD)",
+          "complaint_list": "Seznam všech dozorových úřadů EU je k dispozici na adrese"
+        }
+      },
+      "cookies": {
+        "heading": "9. Cookies a sledovací technologie",
+        "body": {
+          "p1": "Naše webové stránky používají cookies a podobné sledovací technologie ke zlepšení vašeho zážitku z prohlížení a k analýze návštěvnosti.",
+          "h3": "Typy cookies, které používáme",
+          "th1": "Typ",
+          "th2": "Účel",
+          "th3": "Příklady",
+          "r1c1": "Nezbytně nutné",
+          "r1c2": "Nezbytné pro fungování webových stránek",
+          "r1c3": "Relační cookies, autentizace",
+          "r2c1": "Analytické",
+          "r2c2": "Pomáhají nám porozumět interakci návštěvníků s našimi stránkami",
+          "r2c3": "Google Analytics 4",
+          "r3c1": "Marketingové",
+          "r3c2": "Slouží ke sledování návštěvníků napříč webovými stránkami pro reklamní účely",
+          "r3c3": "Mohou zahrnovat retargetingové pixely (pokud jsou relevantní)",
+          "p2": "Předvolby cookies můžete spravovat v nastavení svého prohlížeče. Zakázání určitých cookies může ovlivnit funkčnost našich webových stránek. Další informace naleznete v banneru cookies, který se zobrazí při vaší první návštěvě."
+        }
+      },
+      "children": {
+        "heading": "10. Ochrana soukromí dětí",
+        "body": {
+          "p1": "Naše Služby nejsou určeny osobám mladším 18 let. Vědomě neshromažďujeme osobní údaje dětí. Zjistíte-li, že nám dítě poskytlo své osobní údaje, kontaktujte nás prosím na adrese",
+          "p1b": "a my podnikneme kroky k jejich vymazání."
+        }
+      },
+      "euRep": {
+        "heading": "11. Zástupce v EU/EHP (článek 27 GDPR)",
+        "body": {
+          "p1": "Jelikož je společnost Arkadia usazena mimo EU/EHP, jmenovali jsme zástupce v Evropské unii v souladu s článkem 27 GDPR:",
+          "rep_label": "Zástupce v EU:",
+          "rep_name": "Euverify Ltd (Ireland)",
+          "rep_address": "Unit 3D North Point House, North Point Business Park, New Mallow Road, Cork, T23 AT2P, Ireland",
+          "rep_email_label": "E-mail:",
+          "rep_portal_label": "Portál GDPR žádostí:",
+          "rep_portal_text": "Pro podání žádosti o přístup subjektu údajů (DSAR), žádosti o výmaz údajů nebo jiného dotazu souvisejícího s GDPR prosím využijte náš zabezpečený portál:",
+          "rep_portal_url": "https://gdpr.euverify.com/verify/f39563a3-7807-4804-abaf-9eb3e4cc2bad",
+          "rep_portal_note": "Žádosti podané prostřednictvím tohoto portálu jsou evidovány a sledovány pro zajištění včasné odpovědi a souladu s předpisy."
+        }
+      },
+      "changes": {
+        "heading": "12. Změny těchto Zásad",
+        "body": {
+          "p1": "Tyto Zásady ochrany osobních údajů můžeme čas od času aktualizovat, aby odrážely změny v našich postupech, technologiích, právních požadavcích nebo jiných faktorech. V případě podstatných změn vás upozorníme aktualizací data „Poslední aktualizace“ v záhlaví této stránky a případně dalším oznámením (například e-mailem nebo výrazným upozorněním na našich webových stránkách).",
+          "p2": "Doporučujeme vám tyto Zásady ochrany osobních údajů pravidelně kontrolovat, abyste byli informováni o tom, jak vaše údaje chráníme."
+        }
+      },
+      "contact": {
+        "heading": "13. Kontaktujte nás",
+        "body": {
+          "p1": "Máte-li jakékoli dotazy, připomínky nebo žádosti týkající se těchto Zásad ochrany osobních údajů nebo našeho nakládání s údaji, kontaktujte nás:",
+          "li1_label": "Kontakt pro ochranu soukromí:",
+          "li2_label": "Obecné dotazy:",
+          "li3_label": "Korespondenční adresa:",
+          "li3_text": "ARCADIA TECHNOLOGIES ARTIFICIAL INTELLIGENCE DEVELOPING SERVICES - FZCO, IFZA Business Park, Dubai Digital Park, Building A2, 342001, Nadd Hessa — Dubai Silicon Oasis, Dubai, United Arab Emirates",
+          "p2": "V případě dotazů souvisejících s GDPR můžete kontaktovat přímo našeho zástupce v EU (viz část 11)."
+        }
+      }
+    }
   },
   "termsAndConditions": {
     "title": "Podmínky použití",
@@ -1932,530 +2183,574 @@
       "comingSoon": "Již brzy"
     },
     "lead-validator": {
-    "seo": {
-      "title": "Lead Validator AI Agent | Arkadia Labs",
-      "description": "Automaticky ověřujte, obohacujte a hodnoťte své leady pomocí AI. Snižte zbytečné hovory o 80% a zaměřte se na potenciální zákazníky, kteří skutečně konvertují."
-    },
-    "hero": {
-      "badge": "Prodej a Outbound",
-      "title": "Přestaňte Ztrácet Čas na Mrtvé Leady",
-      "subtitle": "Validace Leadů Poháněná AI",
-      "description": "Automaticky ověřujte kontaktní informace, obohacujte data a hodnoťte každý lead před tím, než váš tým zvedne telefon. Vězte přesně, komu volat a proč.",
-      "primaryCta": "Začít Validovat Leady",
-      "secondaryCta": "Zobrazit Demo"
-    },
-    "problem": {
-      "badge": "Problém",
-      "headline": "Váš Obchodní Tým Pálí Peníze na Špatných Datech",
-      "description": "Každý zbytečný hovor stojí čas, energii a příležitost. Většina B2B obchodních týmů tráví 70% času honěním leadů, které nikdy nekonvertují.",
-      "painPoints": {
-        "0": {
-          "title": "Neplatné Kontaktní Informace",
-          "description": "Zastaralé emaily, špatná telefonní čísla a odpojené linky plýtvají hodinami produktivního času vašeho týmu každý den."
+      "seo": {
+        "title": "Lead Validator AI Agent | Arkadia Labs",
+        "description": "Automaticky ověřujte, obohacujte a hodnoťte své leady pomocí AI. Snižte zbytečné hovory o 80% a zaměřte se na potenciální zákazníky, kteří skutečně konvertují."
+      },
+      "hero": {
+        "badge": "Prodej a Outbound",
+        "title": "Přestaňte Ztrácet Čas na Mrtvé Leady",
+        "subtitle": "Validace Leadů Poháněná AI",
+        "description": "Automaticky ověřujte kontaktní informace, obohacujte data a hodnoťte každý lead před tím, než váš tým zvedne telefon. Vězte přesně, komu volat a proč.",
+        "primaryCta": "Začít Validovat Leady",
+        "secondaryCta": "Zobrazit Demo"
+      },
+      "problem": {
+        "badge": "Problém",
+        "headline": "Váš Obchodní Tým Pálí Peníze na Špatných Datech",
+        "description": "Každý zbytečný hovor stojí čas, energii a příležitost. Většina B2B obchodních týmů tráví 70% času honěním leadů, které nikdy nekonvertují.",
+        "painPoints": {
+          "0": {
+            "title": "Neplatné Kontaktní Informace",
+            "description": "Zastaralé emaily, špatná telefonní čísla a odpojené linky plýtvají hodinami produktivního času vašeho týmu každý den."
+          },
+          "1": {
+            "title": "Žádná Inteligence o Leadech",
+            "description": "Váš tým volá bez kontextu—neví, zda je lead připraven koupit, správný rozhodovatel, nebo zda je vůbec stále ve firmě."
+          },
+          "2": {
+            "title": "Nekonzistentní Kvalifikace",
+            "description": "Ruční hodnocení leadů je subjektivní a nekonzistentní. Vysoce hodnotné leady proklouznou, zatímco váš tým honí slepé uličky."
+          },
+          "3": {
+            "title": "Plýtvání Obchodní Kapacitou",
+            "description": "Vaši drazí obchodníci dělají zadávání dat a průzkum místo toho, aby vedli rozhovory, které uzavírají obchody."
+          }
         },
-        "1": {
-          "title": "Žádná Inteligence o Leadech",
-          "description": "Váš tým volá bez kontextu—neví, zda je lead připraven koupit, správný rozhodovatel, nebo zda je vůbec stále ve firmě."
-        },
-        "2": {
-          "title": "Nekonzistentní Kvalifikace",
-          "description": "Ruční hodnocení leadů je subjektivní a nekonzistentní. Vysoce hodnotné leady proklouznou, zatímco váš tým honí slepé uličky."
-        },
-        "3": {
-          "title": "Plýtvání Obchodní Kapacitou",
-          "description": "Vaši drazí obchodníci dělají zadávání dat a průzkum místo toho, aby vedli rozhovory, které uzavírají obchody."
+        "statistics": {
+          "0": {
+            "label": "B2B dat ročně zastarává"
+          },
+          "1": {
+            "label": "obchodního času jsou neprodejní aktivity"
+          },
+          "2": {
+            "label": "leadů nikdy nekonvertuje na prodej"
+          }
         }
       },
-      "statistics": {
-        "0": { "label": "B2B dat ročně zastarává" },
-        "1": { "label": "obchodního času jsou neprodejní aktivity" },
-        "2": { "label": "leadů nikdy nekonvertuje na prodej" }
-      }
-    },
-    "howItWorks": {
-      "badge": "Jak To Funguje",
-      "title": "Jak Lead Validator Funguje",
-      "subtitle": "Od surového leadu ke kvalifikované příležitosti během minut",
-      "steps": {
-        "0": {
-          "title": "Připojte Své Zdroje Leadů",
-          "description": "Importujte leady z vašeho CRM, marketingové automatizace nebo CSV souborů. Naše AI se bezproblémově připojí ke všem vašim zdrojům dat."
-        },
-        "1": {
-          "title": "AI Validuje a Obohacuje",
-          "description": "Naše AI ověřuje kontaktní informace, přidává firemní data, identifikuje rozhodovatele a detekuje nákupní signály v reálném čase."
-        },
-        "2": {
-          "title": "Chytré Hodnocení a Prioritizace",
-          "description": "Každý lead dostane skóre 0-100 na základě validity, záměru a vhodnosti. Váš tým přesně ví, komu volat jako prvnímu."
-        },
-        "3": {
-          "title": "Synchronizace do Vašeho CRM",
-          "description": "Validované leady se automaticky synchronizují zpět do Salesforce, HubSpot nebo vašeho CRM se všemi obohacenými daty."
+      "howItWorks": {
+        "badge": "Jak To Funguje",
+        "title": "Jak Lead Validator Funguje",
+        "subtitle": "Od surového leadu ke kvalifikované příležitosti během minut",
+        "steps": {
+          "0": {
+            "title": "Připojte Své Zdroje Leadů",
+            "description": "Importujte leady z vašeho CRM, marketingové automatizace nebo CSV souborů. Naše AI se bezproblémově připojí ke všem vašim zdrojům dat."
+          },
+          "1": {
+            "title": "AI Validuje a Obohacuje",
+            "description": "Naše AI ověřuje kontaktní informace, přidává firemní data, identifikuje rozhodovatele a detekuje nákupní signály v reálném čase."
+          },
+          "2": {
+            "title": "Chytré Hodnocení a Prioritizace",
+            "description": "Každý lead dostane skóre 0-100 na základě validity, záměru a vhodnosti. Váš tým přesně ví, komu volat jako prvnímu."
+          },
+          "3": {
+            "title": "Synchronizace do Vašeho CRM",
+            "description": "Validované leady se automaticky synchronizují zpět do Salesforce, HubSpot nebo vašeho CRM se všemi obohacenými daty."
+          }
         }
-      }
-    },
-    "features": {
-      "badge": "Funkce",
-      "title": "Vše Co Potřebujete pro Čisté, Akční Leady",
-      "subtitle": "Komplexní validace a obohacení v jedné platformě",
+      },
       "features": {
-        "0": {
-          "title": "Ověření Emailu",
-          "description": "Validace emailu v reálném čase s hodnocením doručitelnosti. Eliminujte odražené zprávy dříve, než poškodí vaši reputaci odesílatele."
-        },
-        "1": {
-          "title": "Validace Telefonu",
-          "description": "Ověřte telefonní čísla, detekujte typ linky (mobil/pevná) a automaticky identifikujte odpojená čísla."
-        },
-        "2": {
-          "title": "Obohacení Dat",
-          "description": "Přidejte 50+ datových bodů včetně velikosti firmy, odvětví, příjmů, tech stacku a sociálních profilů."
-        },
-        "3": {
-          "title": "Detekce Signálů Záměru",
-          "description": "Identifikujte leady aktivně zkoumající řešení jako to vaše na základě webového chování a spotřeby obsahu."
-        },
-        "4": {
-          "title": "Detekce Duplicit",
-          "description": "Automaticky identifikujte a slučte duplicitní záznamy, aby bylo vaše CRM čisté a přesné."
-        },
-        "5": {
-          "title": "AI Hodnocení Leadů",
-          "description": "Strojové učení hodnotí leady na základě vašich historických konverzních dat. Model se zlepšuje s každým obchodem."
+        "badge": "Funkce",
+        "title": "Vše Co Potřebujete pro Čisté, Akční Leady",
+        "subtitle": "Komplexní validace a obohacení v jedné platformě",
+        "features": {
+          "0": {
+            "title": "Ověření Emailu",
+            "description": "Validace emailu v reálném čase s hodnocením doručitelnosti. Eliminujte odražené zprávy dříve, než poškodí vaši reputaci odesílatele."
+          },
+          "1": {
+            "title": "Validace Telefonu",
+            "description": "Ověřte telefonní čísla, detekujte typ linky (mobil/pevná) a automaticky identifikujte odpojená čísla."
+          },
+          "2": {
+            "title": "Obohacení Dat",
+            "description": "Přidejte 50+ datových bodů včetně velikosti firmy, odvětví, příjmů, tech stacku a sociálních profilů."
+          },
+          "3": {
+            "title": "Detekce Signálů Záměru",
+            "description": "Identifikujte leady aktivně zkoumající řešení jako to vaše na základě webového chování a spotřeby obsahu."
+          },
+          "4": {
+            "title": "Detekce Duplicit",
+            "description": "Automaticky identifikujte a slučte duplicitní záznamy, aby bylo vaše CRM čisté a přesné."
+          },
+          "5": {
+            "title": "AI Hodnocení Leadů",
+            "description": "Strojové učení hodnotí leady na základě vašich historických konverzních dat. Model se zlepšuje s každým obchodem."
+          }
         }
-      }
-    },
-    "metrics": {
-      "badge": "Výsledky",
-      "title": "Měřitelný Dopad na Váš Obchodní Pipeline",
-      "subtitle": "Skutečné výsledky od týmů používajících Lead Validator",
+      },
       "metrics": {
-        "0": { "label": "Snížení Zbytečných Hovorů", "description": "Méně času voláním na špatná čísla" },
-        "1": { "label": "Vyšší Míra Spojení", "description": "Dosáhněte více rozhodovatelů" },
-        "2": { "label": "Rychlejší Lead-to-Opportunity", "description": "Urychlete svůj prodejní cyklus" },
-        "3": { "label": "Méně Času na Zadávání Dat", "description": "Auto-obohacení dělá práci" }
-      },
-      "comparisonTitle": "Před vs Po Lead Validator",
-      "before": {
-        "0": "Volání na neplatná čísla 40% času",
-        "1": "Ruční průzkum: 20 minut na lead",
-        "2": "Nekonzistentní kvalifikace leadů",
-        "3": "Žádná viditelnost do záměru leadu",
-        "4": "CRM plné duplicitních záznamů"
-      },
-      "after": {
-        "0": "95%+ míra platných kontaktů",
-        "1": "Okamžité obohacení: 0 ručního průzkumu",
-        "2": "Konzistentní hodnocení poháněné AI",
-        "3": "Signály nákupního záměru v reálném čase",
-        "4": "Čistá, deduplikovaná databáze"
-      }
-    },
-    "scoreAnimation": {
-      "title": "Sledujte Kvalifikaci Leadů v Reálném Čase",
-      "subtitle": "Scrollujte a podívejte se, jak naše AI validuje a hodnotí leady na základě více kritérií",
-      "mobileHint": "Klepněte na každý krok pro změnu skóre",
-      "leadName": "Marcus Chen",
-      "leadCompany": "TechFlow Inc.",
-      "statusCold": "Studený Lead",
-      "statusWarm": "Teplý Lead",
-      "statusHot": "Horký Lead",
-      "statusQualified": "Kvalifikovaný Lead",
-      "points": "bodů",
-      "scrollHint": "↓ Pokračujte ve scrollování pro zobrazení procesu validace ↓",
-      "steps": {
-        "phoneRings": "Telefon zvoní",
-        "phoneRingsShort": "Telefon Zvoní",
-        "ownerVerified": "Vlastník ověřen",
-        "ownerVerifiedShort": "Vlastník Ověřen",
-        "callAnswered": "Hovor přijat",
-        "callAnsweredShort": "Hovor Přijat",
-        "engaged": "Zapojen do konverzace",
-        "engagedShort": "V Konverzaci",
-        "requestedInfo": "Požádal o informace",
-        "requestedInfoShort": "Info Požadováno"
-      }
-    },
-    "platform": {
-      "badge": "Náhled Platformy",
-      "title": "Vaše Velitelské Centrum pro Inteligenci Leadů",
-      "subtitle": "Podívejte se přesně, jak Lead Validator funguje s real-time dashboardem, který vám dává kompletní přehled o kvalitě leadů a validačním pipeline.",
-      "kpis": {
-        "0": { "label": "Prům. Skóre Kvality" },
-        "1": { "label": "Prům. Skóre Leadu" },
-        "2": { "label": "Prům. Čas Validace" },
-        "3": { "label": "Náklad na Lead" }
-      },
-      "mainChart": {
-        "title": "Výkon Validace",
-        "subtitle": "Denně validované leady"
-      },
-      "scoreCard": {
-        "title": "Skóre Kvality Leadu",
-        "description": "Nad cílovým prahem"
-      },
-      "activity": {
-        "title": "Nedávná Aktivita",
-        "items": {
-          "0": "Dávka #4521 validována: 156 leadů",
-          "1": "CRM synchronizace probíhá...",
-          "2": "Detekován lead s vysokým záměrem: Acme Corp",
-          "3": "Auto-obohacení dokončeno: 89 leadů"
+        "badge": "Výsledky",
+        "title": "Měřitelný Dopad na Váš Obchodní Pipeline",
+        "subtitle": "Skutečné výsledky od týmů používajících Lead Validator",
+        "metrics": {
+          "0": {
+            "label": "Snížení Zbytečných Hovorů",
+            "description": "Méně času voláním na špatná čísla"
+          },
+          "1": {
+            "label": "Vyšší Míra Spojení",
+            "description": "Dosáhněte více rozhodovatelů"
+          },
+          "2": {
+            "label": "Rychlejší Lead-to-Opportunity",
+            "description": "Urychlete svůj prodejní cyklus"
+          },
+          "3": {
+            "label": "Méně Času na Zadávání Dat",
+            "description": "Auto-obohacení dělá práci"
+          }
+        },
+        "comparisonTitle": "Před vs Po Lead Validator",
+        "before": {
+          "0": "Volání na neplatná čísla 40% času",
+          "1": "Ruční průzkum: 20 minut na lead",
+          "2": "Nekonzistentní kvalifikace leadů",
+          "3": "Žádná viditelnost do záměru leadu",
+          "4": "CRM plné duplicitních záznamů"
+        },
+        "after": {
+          "0": "95%+ míra platných kontaktů",
+          "1": "Okamžité obohacení: 0 ručního průzkumu",
+          "2": "Konzistentní hodnocení poháněné AI",
+          "3": "Signály nákupního záměru v reálném čase",
+          "4": "Čistá, deduplikovaná databáze"
         }
       },
-      "charts": {
-        "validation": "Míra Validace",
-        "conversion": "Trend Konverze"
-      }
-    },
-    "useCases": {
-      "badge": "Případy Použití",
-      "title": "Vytvořeno pro Týmy, Které Potřebují Výsledky",
-      "subtitle": "Podívejte se, jak různá odvětví používají Lead Validator",
-      "resultsTitle": "Klíčové Výsledky",
+      "scoreAnimation": {
+        "title": "Sledujte Kvalifikaci Leadů v Reálném Čase",
+        "subtitle": "Scrollujte a podívejte se, jak naše AI validuje a hodnotí leady na základě více kritérií",
+        "mobileHint": "Klepněte na každý krok pro změnu skóre",
+        "leadName": "Marcus Chen",
+        "leadCompany": "TechFlow Inc.",
+        "statusCold": "Studený Lead",
+        "statusWarm": "Teplý Lead",
+        "statusHot": "Horký Lead",
+        "statusQualified": "Kvalifikovaný Lead",
+        "points": "bodů",
+        "scrollHint": "↓ Pokračujte ve scrollování pro zobrazení procesu validace ↓",
+        "steps": {
+          "phoneRings": "Telefon zvoní",
+          "phoneRingsShort": "Telefon Zvoní",
+          "ownerVerified": "Vlastník ověřen",
+          "ownerVerifiedShort": "Vlastník Ověřen",
+          "callAnswered": "Hovor přijat",
+          "callAnsweredShort": "Hovor Přijat",
+          "engaged": "Zapojen do konverzace",
+          "engagedShort": "V Konverzaci",
+          "requestedInfo": "Požádal o informace",
+          "requestedInfoShort": "Info Požadováno"
+        }
+      },
+      "platform": {
+        "badge": "Náhled Platformy",
+        "title": "Vaše Velitelské Centrum pro Inteligenci Leadů",
+        "subtitle": "Podívejte se přesně, jak Lead Validator funguje s real-time dashboardem, který vám dává kompletní přehled o kvalitě leadů a validačním pipeline.",
+        "kpis": {
+          "0": {
+            "label": "Prům. Skóre Kvality"
+          },
+          "1": {
+            "label": "Prům. Skóre Leadu"
+          },
+          "2": {
+            "label": "Prům. Čas Validace"
+          },
+          "3": {
+            "label": "Náklad na Lead"
+          }
+        },
+        "mainChart": {
+          "title": "Výkon Validace",
+          "subtitle": "Denně validované leady"
+        },
+        "scoreCard": {
+          "title": "Skóre Kvality Leadu",
+          "description": "Nad cílovým prahem"
+        },
+        "activity": {
+          "title": "Nedávná Aktivita",
+          "items": {
+            "0": "Dávka #4521 validována: 156 leadů",
+            "1": "CRM synchronizace probíhá...",
+            "2": "Detekován lead s vysokým záměrem: Acme Corp",
+            "3": "Auto-obohacení dokončeno: 89 leadů"
+          }
+        },
+        "charts": {
+          "validation": "Míra Validace",
+          "conversion": "Trend Konverze"
+        }
+      },
       "useCases": {
-        "0": {
-          "industry": "SaaS",
-          "title": "B2B SaaS Obchodní Týmy",
-          "description": "Validujte příchozí leady z marketingu, obohacujte o data tech stacku a prioritizujte podle signálů záměru.",
-          "results": {
-            "0": "3x rychlejší doba odezvy na leady",
-            "1": "40% nárůst rezervovaných demo",
-            "2": "25% vyšší míra uzavření"
+        "badge": "Případy Použití",
+        "title": "Vytvořeno pro Týmy, Které Potřebují Výsledky",
+        "subtitle": "Podívejte se, jak různá odvětví používají Lead Validator",
+        "resultsTitle": "Klíčové Výsledky",
+        "useCases": {
+          "0": {
+            "industry": "SaaS",
+            "title": "B2B SaaS Obchodní Týmy",
+            "description": "Validujte příchozí leady z marketingu, obohacujte o data tech stacku a prioritizujte podle signálů záměru.",
+            "results": {
+              "0": "3x rychlejší doba odezvy na leady",
+              "1": "40% nárůst rezervovaných demo",
+              "2": "25% vyšší míra uzavření"
+            }
+          },
+          "1": {
+            "industry": "Agentury",
+            "title": "Marketingové a Obchodní Agentury",
+            "description": "Čistěte seznamy leadů klientů před outreach kampaněmi. Zajistěte doručitelnost a maximalizujte ROI kampaní.",
+            "results": {
+              "0": "90% snížení odražených emailů",
+              "1": "2x míra odezvy kampaní",
+              "2": "Spokojenější klienti s lepšími výsledky"
+            }
+          },
+          "2": {
+            "industry": "Reality",
+            "title": "Realitní Profesionálové",
+            "description": "Ověřte informace o vlastnících nemovitostí, identifikujte motivované prodejce a zaměřte se na leady připravené k transakci.",
+            "results": {
+              "0": "60% méně slepých hovorů",
+              "1": "Přesné kontaktní údaje vlastníků",
+              "2": "Rychlejší čas k uzavření obchodů"
+            }
           }
-        },
-        "1": {
-          "industry": "Agentury",
-          "title": "Marketingové a Obchodní Agentury",
-          "description": "Čistěte seznamy leadů klientů před outreach kampaněmi. Zajistěte doručitelnost a maximalizujte ROI kampaní.",
-          "results": {
-            "0": "90% snížení odražených emailů",
-            "1": "2x míra odezvy kampaní",
-            "2": "Spokojenější klienti s lepšími výsledky"
-          }
-        },
-        "2": {
-          "industry": "Reality",
-          "title": "Realitní Profesionálové",
-          "description": "Ověřte informace o vlastnících nemovitostí, identifikujte motivované prodejce a zaměřte se na leady připravené k transakci.",
-          "results": {
-            "0": "60% méně slepých hovorů",
-            "1": "Přesné kontaktní údaje vlastníků",
-            "2": "Rychlejší čas k uzavření obchodů"
-          }
-        }
-      }
-    },
-    "integrations": {
-      "badge": "Integrace",
-      "title": "Funguje s Vaším Existujícím Stackem",
-      "subtitle": "Nativní integrace s nástroji, které již používáte",
-      "viewAll": "Zobrazit všech 500+ integrací"
-    },
-    "faq": {
-      "badge": "FAQ",
-      "title": "Často Kladené Otázky",
-      "subtitle": "Vše, co potřebujete vědět o Lead Validatoru",
-      "moreQuestions": "Máte další otázky?",
-      "contactUs": "Kontaktujte náš tým",
-      "faqs": {
-        "0": {
-          "question": "Jak přesná je validace leadů?",
-          "answer": "Naše AI dosahuje 95%+ přesnosti při validaci emailů a 90%+ při ověřování telefonů. Používáme více zdrojů dat a ověření v reálném čase pro zajištění nejvyšší možné přesnosti."
-        },
-        "1": {
-          "question": "Jak dlouho trvá validace?",
-          "answer": "Většina leadů je validována a obohacena během sekund. Dávkové zpracování 10 000+ leadů obvykle trvá méně než 30 minut."
-        },
-        "2": {
-          "question": "S jakými CRM se integrujete?",
-          "answer": "Máme nativní integrace se Salesforce, HubSpot, Pipedrive, Zoho CRM a dalšími. Podporujeme také webhooky a Zapier pro vlastní workflow."
-        },
-        "3": {
-          "question": "Jsou moje data v bezpečí?",
-          "answer": "Absolutně. Jsme SOC 2 kompatibilní, používáme šifrování na úrovni bank a nikdy nesdílíme ani neprodáváme vaše data. Vaše leady zůstávají vaše."
-        },
-        "4": {
-          "question": "Mohu to vyzkoušet před závazkem?",
-          "answer": "Ano! Nabízíme bezplatný pilotní program, kde můžete validovat 500 leadů zdarma. Podívejte se na výsledky, než se rozhodnete."
-        },
-        "5": {
-          "question": "Jak funguje hodnocení leadů?",
-          "answer": "Naše AI analyzuje 50+ signálů včetně validity kontaktu, vhodnosti firmy, dat o záměru a historie zapojení. Model se učí z vašich specifických konverzních vzorců a postupem času se zlepšuje."
-        }
-      }
-    },
-    "cta": {
-      "badge": "Začněte Dnes",
-      "title": "Připraveni Přestat Ztrácet Čas na Špatné Leady?",
-      "subtitle": "Připojte se ke stovkám obchodních týmů, které validují před voláním.",
-      "primaryCta": "Spustit Bezplatný Pilot",
-      "secondaryCta": "Promluvit s Obchodem",
-      "trust1": "Bez kreditní karty",
-      "trust2": "Bezplatný pilotní program",
-      "trust3": "Nastavení během minut"
-    },
-    "inlineCta1": {
-      "title": "Připraveni transformovat kvalitu vašich leadů?",
-      "subtitle": "Začněte validovat leady během minut, ne dní.",
-      "cta": "Začít"
-    },
-    "inlineCta2": {
-      "badge": "Spusťte Bezplatný Pilot",
-      "title": "Podívejte se na Lead Validator v Akci",
-      "subtitle": "Připojte se k 500+ firmám, které již zlepšují kvalitu leadů s naší AI validací.",
-      "primaryCta": "Naplánovat Demo",
-      "stats": {
-        "0": "Míra Přesnosti",
-        "1": "Čas Nastavení",
-        "2": "Spokojených Klientů",
-        "3": "Podpora"
-      }
-    },
-    "inlineCta3": {
-      "urgency": "Omezená místa tento měsíc",
-      "title": "Připraveni to vidět v akci?",
-      "subtitle": "Rezervujte si personalizované demo s naším týmem.",
-      "cta": "Rezervovat Demo"
-    }
-  },
-  "sales-qualifier": {
-    "seo": {
-      "title": "Sales Qualifier AI Agent | Konverzační Kvalifikace Leadů | Elevaite Labs",
-      "description": "AI hlasový agent, který kvalifikuje leady prostřednictvím přirozené konverzace. 5+ minut kontextového dialogu, obohacení v reálném čase a automatické rezervace schůzek."
-    },
-    "hero": {
-      "badge": "Prodej a Inbound",
-      "title": "Váš AI Obchodní Zástupce, Který Skutečně Kvalifikuje",
-      "subtitle": "Konverzační Inteligence Leadů",
-      "description": "AI hlasový agent, který hluboce rozumí vašim potenciálním zákazníkům, udržuje přirozené 5+ minutové konverzace, kvalifikuje s přesností a rezervuje schůzky—zatímco vy se soustředíte na uzavírání obchodů.",
-      "primaryCta": "Vidět v Akci",
-      "secondaryCta": "Promluvit s Obchodem"
-    },
-    "problem": {
-      "badge": "Problém",
-      "headline": "Vaše Nejlepší Leady Vám Proklouzávají",
-      "description": "Příchozí leady očekávají okamžité, inteligentní odpovědi. Ale váš tým nemůže být všude najednou—a generičtí chatboti jen frustrují potenciální zákazníky.",
-      "painPoints": {
-        "0": {
-          "title": "Pomalé Časy Odezvy",
-          "description": "Leady čekají hodiny (nebo dny) na odpověď. Do té doby už mluvili s vaší konkurencí, která odpověděla za 30 sekund."
-        },
-        "1": {
-          "title": "Generické, Robotické Interakce",
-          "description": "Chatboti pokládají stejné předepsané otázky bez ohledu na kontext. Potenciální zákazníci se cítí jako číslo, ne jako hodnotný klient."
-        },
-        "2": {
-          "title": "Nekonzistentní Kvalifikace",
-          "description": "Různí obchodníci kvalifikují různě. Někteří propouští nekvalifikované leady, jiní odmítají skutečné příležitosti příliš rychle."
-        },
-        "3": {
-          "title": "Zmeškané Příležitosti Mimo Pracovní Dobu",
-          "description": "40% leadů přichází mimo pracovní dobu. Bez 24/7 pokrytí necháváte peníze na stole."
         }
       },
-      "statistics": {
-        "0": { "label": "kupujících si vybírá prvního, kdo odpoví" },
-        "1": { "label": "doba odezvy zvyšuje kvalifikaci 10x" },
-        "2": { "label": "prodejů jde k prvnímu dodavateli, který odpoví" }
-      }
-    },
-    "howItWorks": {
-      "badge": "Jak To Funguje",
-      "title": "Jak Sales Qualifier Funguje",
-      "subtitle": "Od neznámého volajícího ke kvalifikované schůzce v jedné konverzaci",
-      "steps": {
-        "0": {
-          "title": "Okamžité Obohacení Leadu",
-          "description": "Před zahájením konverzace naše AI obohatí lead o firemní data, tech stack, nedávné zprávy a nákupní signály. Ví, s kým mluví."
-        },
-        "1": {
-          "title": "Přirozená Konverzace",
-          "description": "AI vede skutečný dialog—klade chytré otázky, zvládá námitky a přizpůsobuje se tónu a tempu potenciálního zákazníka. Žádné skripty, žádné trapné pauzy."
-        },
-        "2": {
-          "title": "Hluboká Kvalifikace",
-          "description": "Pomocí BANT, MEDDIC nebo vašeho vlastního frameworku AI kvalifikuje rozpočet, autoritu, potřebu a časový rámec přirozeně během konverzace."
-        },
-        "3": {
-          "title": "Schůzka Rezervována a CRM Aktualizováno",
-          "description": "Kvalifikované leady dostanou okamžitě naplánovanou schůzku. Všechna konverzační data, poznámky ke kvalifikaci a další kroky se automaticky synchronizují do vašeho CRM."
+      "integrations": {
+        "badge": "Integrace",
+        "title": "Funguje s Vaším Existujícím Stackem",
+        "subtitle": "Nativní integrace s nástroji, které již používáte",
+        "viewAll": "Zobrazit všech 500+ integrací"
+      },
+      "faq": {
+        "badge": "FAQ",
+        "title": "Často Kladené Otázky",
+        "subtitle": "Vše, co potřebujete vědět o Lead Validatoru",
+        "moreQuestions": "Máte další otázky?",
+        "contactUs": "Kontaktujte náš tým",
+        "faqs": {
+          "0": {
+            "question": "Jak přesná je validace leadů?",
+            "answer": "Naše AI dosahuje 95%+ přesnosti při validaci emailů a 90%+ při ověřování telefonů. Používáme více zdrojů dat a ověření v reálném čase pro zajištění nejvyšší možné přesnosti."
+          },
+          "1": {
+            "question": "Jak dlouho trvá validace?",
+            "answer": "Většina leadů je validována a obohacena během sekund. Dávkové zpracování 10 000+ leadů obvykle trvá méně než 30 minut."
+          },
+          "2": {
+            "question": "S jakými CRM se integrujete?",
+            "answer": "Máme nativní integrace se Salesforce, HubSpot, Pipedrive, Zoho CRM a dalšími. Podporujeme také webhooky a Zapier pro vlastní workflow."
+          },
+          "3": {
+            "question": "Jsou moje data v bezpečí?",
+            "answer": "Absolutně. Jsme SOC 2 kompatibilní, používáme šifrování na úrovni bank a nikdy nesdílíme ani neprodáváme vaše data. Vaše leady zůstávají vaše."
+          },
+          "4": {
+            "question": "Mohu to vyzkoušet před závazkem?",
+            "answer": "Ano! Nabízíme bezplatný pilotní program, kde můžete validovat 500 leadů zdarma. Podívejte se na výsledky, než se rozhodnete."
+          },
+          "5": {
+            "question": "Jak funguje hodnocení leadů?",
+            "answer": "Naše AI analyzuje 50+ signálů včetně validity kontaktu, vhodnosti firmy, dat o záměru a historie zapojení. Model se učí z vašich specifických konverzních vzorců a postupem času se zlepšuje."
+          }
         }
+      },
+      "cta": {
+        "badge": "Začněte Dnes",
+        "title": "Připraveni Přestat Ztrácet Čas na Špatné Leady?",
+        "subtitle": "Připojte se ke stovkám obchodních týmů, které validují před voláním.",
+        "primaryCta": "Spustit Bezplatný Pilot",
+        "secondaryCta": "Promluvit s Obchodem",
+        "trust1": "Bez kreditní karty",
+        "trust2": "Bezplatný pilotní program",
+        "trust3": "Nastavení během minut"
+      },
+      "inlineCta1": {
+        "title": "Připraveni transformovat kvalitu vašich leadů?",
+        "subtitle": "Začněte validovat leady během minut, ne dní.",
+        "cta": "Začít"
+      },
+      "inlineCta2": {
+        "badge": "Spusťte Bezplatný Pilot",
+        "title": "Podívejte se na Lead Validator v Akci",
+        "subtitle": "Připojte se k 500+ firmám, které již zlepšují kvalitu leadů s naší AI validací.",
+        "primaryCta": "Naplánovat Demo",
+        "stats": {
+          "0": "Míra Přesnosti",
+          "1": "Čas Nastavení",
+          "2": "Spokojených Klientů",
+          "3": "Podpora"
+        }
+      },
+      "inlineCta3": {
+        "urgency": "Omezená místa tento měsíc",
+        "title": "Připraveni to vidět v akci?",
+        "subtitle": "Rezervujte si personalizované demo s naším týmem.",
+        "cta": "Rezervovat Demo"
       }
     },
-    "features": {
-      "badge": "Funkce",
-      "title": "Postaveno pro Skutečné Obchodní Konverzace",
-      "subtitle": "Každá schopnost navržena pro přeměnu konverzací v pipeline",
+    "sales-qualifier": {
+      "seo": {
+        "title": "Sales Qualifier AI Agent | Konverzační Kvalifikace Leadů | Elevaite Labs",
+        "description": "AI hlasový agent, který kvalifikuje leady prostřednictvím přirozené konverzace. 5+ minut kontextového dialogu, obohacení v reálném čase a automatické rezervace schůzek."
+      },
+      "hero": {
+        "badge": "Prodej a Inbound",
+        "title": "Váš AI Obchodní Zástupce, Který Skutečně Kvalifikuje",
+        "subtitle": "Konverzační Inteligence Leadů",
+        "description": "AI hlasový agent, který hluboce rozumí vašim potenciálním zákazníkům, udržuje přirozené 5+ minutové konverzace, kvalifikuje s přesností a rezervuje schůzky—zatímco vy se soustředíte na uzavírání obchodů.",
+        "primaryCta": "Vidět v Akci",
+        "secondaryCta": "Promluvit s Obchodem"
+      },
+      "problem": {
+        "badge": "Problém",
+        "headline": "Vaše Nejlepší Leady Vám Proklouzávají",
+        "description": "Příchozí leady očekávají okamžité, inteligentní odpovědi. Ale váš tým nemůže být všude najednou—a generičtí chatboti jen frustrují potenciální zákazníky.",
+        "painPoints": {
+          "0": {
+            "title": "Pomalé Časy Odezvy",
+            "description": "Leady čekají hodiny (nebo dny) na odpověď. Do té doby už mluvili s vaší konkurencí, která odpověděla za 30 sekund."
+          },
+          "1": {
+            "title": "Generické, Robotické Interakce",
+            "description": "Chatboti pokládají stejné předepsané otázky bez ohledu na kontext. Potenciální zákazníci se cítí jako číslo, ne jako hodnotný klient."
+          },
+          "2": {
+            "title": "Nekonzistentní Kvalifikace",
+            "description": "Různí obchodníci kvalifikují různě. Někteří propouští nekvalifikované leady, jiní odmítají skutečné příležitosti příliš rychle."
+          },
+          "3": {
+            "title": "Zmeškané Příležitosti Mimo Pracovní Dobu",
+            "description": "40% leadů přichází mimo pracovní dobu. Bez 24/7 pokrytí necháváte peníze na stole."
+          }
+        },
+        "statistics": {
+          "0": {
+            "label": "kupujících si vybírá prvního, kdo odpoví"
+          },
+          "1": {
+            "label": "doba odezvy zvyšuje kvalifikaci 10x"
+          },
+          "2": {
+            "label": "prodejů jde k prvnímu dodavateli, který odpoví"
+          }
+        }
+      },
+      "howItWorks": {
+        "badge": "Jak To Funguje",
+        "title": "Jak Sales Qualifier Funguje",
+        "subtitle": "Od neznámého volajícího ke kvalifikované schůzce v jedné konverzaci",
+        "steps": {
+          "0": {
+            "title": "Okamžité Obohacení Leadu",
+            "description": "Před zahájením konverzace naše AI obohatí lead o firemní data, tech stack, nedávné zprávy a nákupní signály. Ví, s kým mluví."
+          },
+          "1": {
+            "title": "Přirozená Konverzace",
+            "description": "AI vede skutečný dialog—klade chytré otázky, zvládá námitky a přizpůsobuje se tónu a tempu potenciálního zákazníka. Žádné skripty, žádné trapné pauzy."
+          },
+          "2": {
+            "title": "Hluboká Kvalifikace",
+            "description": "Pomocí BANT, MEDDIC nebo vašeho vlastního frameworku AI kvalifikuje rozpočet, autoritu, potřebu a časový rámec přirozeně během konverzace."
+          },
+          "3": {
+            "title": "Schůzka Rezervována a CRM Aktualizováno",
+            "description": "Kvalifikované leady dostanou okamžitě naplánovanou schůzku. Všechna konverzační data, poznámky ke kvalifikaci a další kroky se automaticky synchronizují do vašeho CRM."
+          }
+        }
+      },
       "features": {
-        "0": {
-          "title": "Obohacení Leadu v Reálném Čase",
-          "description": "Firemní data, tech stack, financování, organizační struktura a nákupní signály—vše dostupné před a během konverzace."
-        },
-        "1": {
-          "title": "5+ Minutová Paměť Kontextu",
-          "description": "Udržuje kompletní kontext konverzace napříč prodlouženými dialogy. Přirozeně odkazuje na dřívější body, nikdy neztrácí nit."
-        },
-        "2": {
-          "title": "Inteligentní Zvládání Námitek",
-          "description": "Trénováno na tisících obchodních konverzací pro zvládání běžných námitek s empatií a přesností."
-        },
-        "3": {
-          "title": "Vlastní Kvalifikační Frameworky",
-          "description": "Nakonfigurujte BANT, MEDDIC, GPCTBA/C&I nebo vlastní kvalifikační kritéria. AI přizpůsobí své otázky podle toho."
-        },
-        "4": {
-          "title": "Přímá Rezervace v Kalendáři",
-          "description": "Kontroluje dostupnost v reálném čase a rezervuje schůzky přímo. Žádné emaily tam a zpět, žádné plánovací odkazy."
-        },
-        "5": {
-          "title": "Systém Nulových Halucinací",
-          "description": "Samo-validující promptová architektura zajišťuje, že AI nikdy nevymýšlí informace. Pokud něco neví, přizná to."
+        "badge": "Funkce",
+        "title": "Postaveno pro Skutečné Obchodní Konverzace",
+        "subtitle": "Každá schopnost navržena pro přeměnu konverzací v pipeline",
+        "features": {
+          "0": {
+            "title": "Obohacení Leadu v Reálném Čase",
+            "description": "Firemní data, tech stack, financování, organizační struktura a nákupní signály—vše dostupné před a během konverzace."
+          },
+          "1": {
+            "title": "5+ Minutová Paměť Kontextu",
+            "description": "Udržuje kompletní kontext konverzace napříč prodlouženými dialogy. Přirozeně odkazuje na dřívější body, nikdy neztrácí nit."
+          },
+          "2": {
+            "title": "Inteligentní Zvládání Námitek",
+            "description": "Trénováno na tisících obchodních konverzací pro zvládání běžných námitek s empatií a přesností."
+          },
+          "3": {
+            "title": "Vlastní Kvalifikační Frameworky",
+            "description": "Nakonfigurujte BANT, MEDDIC, GPCTBA/C&I nebo vlastní kvalifikační kritéria. AI přizpůsobí své otázky podle toho."
+          },
+          "4": {
+            "title": "Přímá Rezervace v Kalendáři",
+            "description": "Kontroluje dostupnost v reálném čase a rezervuje schůzky přímo. Žádné emaily tam a zpět, žádné plánovací odkazy."
+          },
+          "5": {
+            "title": "Systém Nulových Halucinací",
+            "description": "Samo-validující promptová architektura zajišťuje, že AI nikdy nevymýšlí informace. Pokud něco neví, přizná to."
+          }
         }
-      }
-    },
-    "metrics": {
-      "badge": "Výsledky",
-      "title": "Výsledky, Které Mluví Samy za Sebe",
-      "subtitle": "Měřený dopad od týmů používajících Sales Qualifier",
+      },
       "metrics": {
-        "0": { "label": "Přesnost Kvalifikace", "description": "Odpovídá výkonu lidských SDR" },
-        "1": { "label": "Více Rezervovaných Schůzek", "description": "Ve srovnání s kvalifikací pomocí formulářů" },
-        "2": { "label": "Průměrná Doba Odezvy", "description": "Okamžité zapojení, 24/7" },
-        "3": { "label": "Snížení Nákladů", "description": "vs. najímání dalších SDR" }
+        "badge": "Výsledky",
+        "title": "Výsledky, Které Mluví Samy za Sebe",
+        "subtitle": "Měřený dopad od týmů používajících Sales Qualifier",
+        "metrics": {
+          "0": {
+            "label": "Přesnost Kvalifikace",
+            "description": "Odpovídá výkonu lidských SDR"
+          },
+          "1": {
+            "label": "Více Rezervovaných Schůzek",
+            "description": "Ve srovnání s kvalifikací pomocí formulářů"
+          },
+          "2": {
+            "label": "Průměrná Doba Odezvy",
+            "description": "Okamžité zapojení, 24/7"
+          },
+          "3": {
+            "label": "Snížení Nákladů",
+            "description": "vs. najímání dalších SDR"
+          }
+        },
+        "comparisonTitle": "Před vs Po Sales Qualifier",
+        "before": {
+          "0": "Leady čekají 4+ hodiny na odpověď",
+          "1": "Generický chatbot frustruje potenciální zákazníky",
+          "2": "Nekonzistentní kvalifikace napříč týmem",
+          "3": "Žádné pokrytí mimo pracovní dobu",
+          "4": "Ruční plánování schůzek přes email"
+        },
+        "after": {
+          "0": "Okamžitá odpověď, pokaždé",
+          "1": "Přirozené konverzace s kontextem",
+          "2": "Konzistentní kvalifikační framework",
+          "3": "24/7 inteligentní pokrytí",
+          "4": "Automatická rezervace v kalendáři"
+        }
       },
-      "comparisonTitle": "Před vs Po Sales Qualifier",
-      "before": {
-        "0": "Leady čekají 4+ hodiny na odpověď",
-        "1": "Generický chatbot frustruje potenciální zákazníky",
-        "2": "Nekonzistentní kvalifikace napříč týmem",
-        "3": "Žádné pokrytí mimo pracovní dobu",
-        "4": "Ruční plánování schůzek přes email"
+      "platform": {
+        "badge": "Živý Dashboard",
+        "title": "Sledujte Každou Konverzaci v Reálném Čase",
+        "subtitle": "Monitorujte míry kvalifikace, kvalitu konverzací a rezervace schůzek z jednoho dashboardu."
       },
-      "after": {
-        "0": "Okamžitá odpověď, pokaždé",
-        "1": "Přirozené konverzace s kontextem",
-        "2": "Konzistentní kvalifikační framework",
-        "3": "24/7 inteligentní pokrytí",
-        "4": "Automatická rezervace v kalendáři"
-      }
-    },
-    "platform": {
-      "badge": "Živý Dashboard",
-      "title": "Sledujte Každou Konverzaci v Reálném Čase",
-      "subtitle": "Monitorujte míry kvalifikace, kvalitu konverzací a rezervace schůzek z jednoho dashboardu."
-    },
-    "useCases": {
-      "badge": "Případy Použití",
-      "title": "Perfektní pro Týmy s Vysokým Objemem Inbound",
-      "subtitle": "Podívejte se, jak různá odvětví využívají AI kvalifikaci",
-      "resultsTitle": "Klíčové Výsledky",
       "useCases": {
-        "0": {
-          "industry": "SaaS",
-          "title": "SaaS Inbound Kvalifikace",
-          "description": "Kvalifikujte registrace na trial a žádosti o demo okamžitě. Pochopte jejich tech stack, současná řešení a bolestivé body před obchodním hovorem.",
-          "results": {
-            "0": "90% snížení doby odezvy",
-            "1": "3x nárůst účasti na demo",
-            "2": "40% vyšší ACV na kvalifikovaných obchodech"
-          }
-        },
-        "1": {
-          "industry": "Finanční Služby",
-          "title": "Kvalifikace Finančního Poradenství",
-          "description": "Předkvalifikujte potenciální zákazníky pro investiční minima, toleranci rizika a časový rámec. Směrujte ke správnému poradci na základě potřeb.",
-          "results": {
-            "0": "85% zlepšení míry uzavření při prvním hovoru",
-            "1": "Záznamy konverzací připravené pro compliance",
-            "2": "24/7 zapojení potenciálních zákazníků"
-          }
-        },
-        "2": {
-          "industry": "Reality",
-          "title": "Kvalifikace Realitních Leadů",
-          "description": "Pochopte preference kupujícího, rozpočtový rozsah, časový rámec a stav předschválení před první prohlídkou.",
-          "results": {
-            "0": "50% méně nekvalifikovaných prohlídek",
-            "1": "Okamžitá odpověď na dotazy k nemovitostem",
-            "2": "Vyšší konverze u horkých leadů"
+        "badge": "Případy Použití",
+        "title": "Perfektní pro Týmy s Vysokým Objemem Inbound",
+        "subtitle": "Podívejte se, jak různá odvětví využívají AI kvalifikaci",
+        "resultsTitle": "Klíčové Výsledky",
+        "useCases": {
+          "0": {
+            "industry": "SaaS",
+            "title": "SaaS Inbound Kvalifikace",
+            "description": "Kvalifikujte registrace na trial a žádosti o demo okamžitě. Pochopte jejich tech stack, současná řešení a bolestivé body před obchodním hovorem.",
+            "results": {
+              "0": "90% snížení doby odezvy",
+              "1": "3x nárůst účasti na demo",
+              "2": "40% vyšší ACV na kvalifikovaných obchodech"
+            }
+          },
+          "1": {
+            "industry": "Finanční Služby",
+            "title": "Kvalifikace Finančního Poradenství",
+            "description": "Předkvalifikujte potenciální zákazníky pro investiční minima, toleranci rizika a časový rámec. Směrujte ke správnému poradci na základě potřeb.",
+            "results": {
+              "0": "85% zlepšení míry uzavření při prvním hovoru",
+              "1": "Záznamy konverzací připravené pro compliance",
+              "2": "24/7 zapojení potenciálních zákazníků"
+            }
+          },
+          "2": {
+            "industry": "Reality",
+            "title": "Kvalifikace Realitních Leadů",
+            "description": "Pochopte preference kupujícího, rozpočtový rozsah, časový rámec a stav předschválení před první prohlídkou.",
+            "results": {
+              "0": "50% méně nekvalifikovaných prohlídek",
+              "1": "Okamžitá odpověď na dotazy k nemovitostem",
+              "2": "Vyšší konverze u horkých leadů"
+            }
           }
         }
-      }
-    },
-    "integrations": {
-      "badge": "Integrace",
-      "title": "Připojí Se k Celému Vašemu Obchodnímu Stacku",
-      "subtitle": "Nativní integrace s nástroji, které váš tým již používá",
-      "viewAll": "Zobrazit všech 500+ integrací"
-    },
-    "faq": {
-      "badge": "FAQ",
-      "title": "Často Kladené Otázky",
-      "subtitle": "Vše, co potřebujete vědět o Sales Qualifier",
-      "moreQuestions": "Máte další otázky?",
-      "contactUs": "Kontaktujte náš tým",
-      "faqs": {
-        "0": {
-          "question": "Jak přirozeně konverzace skutečně zní?",
-          "answer": "Naše AI udržuje přirozený, lidský dialog po dobu 5+ minut bez ztráty kontextu. Přizpůsobuje se tónu potenciálního zákazníka, elegantně zvládá přerušení a nikdy nezní předepsaně. Většina potenciálních zákazníků si neuvědomí, že mluví s AI, dokud jim to neřekneme."
-        },
-        "1": {
-          "question": "Jak AI předchází vymýšlení věcí?",
-          "answer": "Používáme samo-validující promptovou architekturu, která křížově ověřuje každou odpověď proti vaší znalostní bázi a informacím o produktu. Pokud AI něco neví, upřímně to přizná místo vymýšlení odpovědi."
-        },
-        "2": {
-          "question": "Mohu přizpůsobit kvalifikační kritéria?",
-          "answer": "Absolutně. Můžete nakonfigurovat BANT, MEDDIC, GPCTBA/C&I nebo vytvořit kompletně vlastní kvalifikační framework. AI přirozeně včlení tyto otázky do konverzace."
-        },
-        "3": {
-          "question": "Jak funguje rezervace schůzek?",
-          "answer": "AI má přístup v reálném čase ke kalendářům vašeho týmu. Když je lead kvalifikovaný a má zájem, nabídne dostupné termíny, zvládne konverze časových pásem a rezervuje přímo—žádné plánovací odkazy nejsou potřeba."
-        },
-        "4": {
-          "question": "Co se děje s nekvalifikovanými leady?",
-          "answer": "Nekvalifikované leady se nezahazují. Jsou označeny důvody diskvalifikace a mohou být přidány do nurturing kampaní. AI je také může přesměrovat na vhodné zdroje nebo self-service možnosti."
-        },
-        "5": {
-          "question": "Jak rychle můžeme začít?",
-          "answer": "Většina týmů je živá do 2 týdnů. Zvládneme nastavení integrace, natrénujeme AI na váš produkt a kvalifikační kritéria a spustíme pilotní období pro doladění výkonu před plným nasazením."
+      },
+      "integrations": {
+        "badge": "Integrace",
+        "title": "Připojí Se k Celému Vašemu Obchodnímu Stacku",
+        "subtitle": "Nativní integrace s nástroji, které váš tým již používá",
+        "viewAll": "Zobrazit všech 500+ integrací"
+      },
+      "faq": {
+        "badge": "FAQ",
+        "title": "Často Kladené Otázky",
+        "subtitle": "Vše, co potřebujete vědět o Sales Qualifier",
+        "moreQuestions": "Máte další otázky?",
+        "contactUs": "Kontaktujte náš tým",
+        "faqs": {
+          "0": {
+            "question": "Jak přirozeně konverzace skutečně zní?",
+            "answer": "Naše AI udržuje přirozený, lidský dialog po dobu 5+ minut bez ztráty kontextu. Přizpůsobuje se tónu potenciálního zákazníka, elegantně zvládá přerušení a nikdy nezní předepsaně. Většina potenciálních zákazníků si neuvědomí, že mluví s AI, dokud jim to neřekneme."
+          },
+          "1": {
+            "question": "Jak AI předchází vymýšlení věcí?",
+            "answer": "Používáme samo-validující promptovou architekturu, která křížově ověřuje každou odpověď proti vaší znalostní bázi a informacím o produktu. Pokud AI něco neví, upřímně to přizná místo vymýšlení odpovědi."
+          },
+          "2": {
+            "question": "Mohu přizpůsobit kvalifikační kritéria?",
+            "answer": "Absolutně. Můžete nakonfigurovat BANT, MEDDIC, GPCTBA/C&I nebo vytvořit kompletně vlastní kvalifikační framework. AI přirozeně včlení tyto otázky do konverzace."
+          },
+          "3": {
+            "question": "Jak funguje rezervace schůzek?",
+            "answer": "AI má přístup v reálném čase ke kalendářům vašeho týmu. Když je lead kvalifikovaný a má zájem, nabídne dostupné termíny, zvládne konverze časových pásem a rezervuje přímo—žádné plánovací odkazy nejsou potřeba."
+          },
+          "4": {
+            "question": "Co se děje s nekvalifikovanými leady?",
+            "answer": "Nekvalifikované leady se nezahazují. Jsou označeny důvody diskvalifikace a mohou být přidány do nurturing kampaní. AI je také může přesměrovat na vhodné zdroje nebo self-service možnosti."
+          },
+          "5": {
+            "question": "Jak rychle můžeme začít?",
+            "answer": "Většina týmů je živá do 2 týdnů. Zvládneme nastavení integrace, natrénujeme AI na váš produkt a kvalifikační kritéria a spustíme pilotní období pro doladění výkonu před plným nasazením."
+          }
         }
+      },
+      "cta": {
+        "badge": "Začněte Dnes",
+        "title": "Připraveni Kvalifikovat Leady, Zatímco Spíte?",
+        "subtitle": "Podívejte se, jak Sales Qualifier zvládá skutečnou konverzaci—s vaším produktem, vašimi kvalifikačními kritérii, vaším hlasem.",
+        "primaryCta": "Požádat o Živé Demo",
+        "secondaryCta": "Promluvit s Obchodem",
+        "trust1": "Bez kreditní karty",
+        "trust2": "Bezplatný pilotní program",
+        "trust3": "Nastavení do 2 týdnů"
+      },
+      "inlineCta1": {
+        "title": "Podívejte se na Qualifier v Akci",
+        "subtitle": "Sledujte živé demo 5minutové kvalifikační konverzace.",
+        "cta": "Sledovat Demo"
+      },
+      "inlineCta2": {
+        "badge": "94% Přesnost Kvalifikace",
+        "title": "Podívejte se na Sales Qualifier v Akci",
+        "subtitle": "Naše AI odpovídá výkonu vašeho nejlepšího SDR—za zlomek nákladů.",
+        "primaryCta": "Naplánovat Demo",
+        "stats": {
+          "0": "Více Schůzek",
+          "1": "Snížení Nákladů",
+          "2": "Spokojených Klientů",
+          "3": "Podpora"
+        }
+      },
+      "inlineCta3": {
+        "urgency": "Vaše konkurence odpovídá rychleji",
+        "title": "78% Kupujících Si Vybírá Prvního, Kdo Odpoví",
+        "subtitle": "Neztrácejte obchody kvůli pomalému follow-upu.",
+        "cta": "Začít Dnes"
       }
-    },
-    "cta": {
-      "badge": "Začněte Dnes",
-      "title": "Připraveni Kvalifikovat Leady, Zatímco Spíte?",
-      "subtitle": "Podívejte se, jak Sales Qualifier zvládá skutečnou konverzaci—s vaším produktem, vašimi kvalifikačními kritérii, vaším hlasem.",
-      "primaryCta": "Požádat o Živé Demo",
-      "secondaryCta": "Promluvit s Obchodem",
-      "trust1": "Bez kreditní karty",
-      "trust2": "Bezplatný pilotní program",
-      "trust3": "Nastavení do 2 týdnů"
-    },
-    "inlineCta1": {
-      "title": "Podívejte se na Qualifier v Akci",
-      "subtitle": "Sledujte živé demo 5minutové kvalifikační konverzace.",
-      "cta": "Sledovat Demo"
-    },
-    "inlineCta2": {
-      "badge": "94% Přesnost Kvalifikace",
-      "title": "Podívejte se na Sales Qualifier v Akci",
-      "subtitle": "Naše AI odpovídá výkonu vašeho nejlepšího SDR—za zlomek nákladů.",
-      "primaryCta": "Naplánovat Demo",
-      "stats": {
-        "0": "Více Schůzek",
-        "1": "Snížení Nákladů",
-        "2": "Spokojených Klientů",
-        "3": "Podpora"
-      }
-    },
-    "inlineCta3": {
-      "urgency": "Vaše konkurence odpovídá rychleji",
-      "title": "78% Kupujících Si Vybírá Prvního, Kdo Odpoví",
-      "subtitle": "Neztrácejte obchody kvůli pomalému follow-upu.",
-      "cta": "Začít Dnes"
     }
-  }
   }
 }
