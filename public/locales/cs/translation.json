@@ -1904,8 +1904,245 @@
   },
   "privacyPolicy": {
     "title": "Zásady ochrany osobních údajů",
-    "lastUpdated": "Poslední aktualizace: {{date}}",
-    "content": "V Arkadia Labs bereme ochranu vašich osobních údajů velmi vážně. Tato zásada popisuje, jak shromažďujeme, používáme a chráníme vaše informace."
+    "lastUpdated": "9. března 2026",
+    "dataController": {
+      "label": "Správce údajů:",
+      "value": "ARCADIA TECHNOLOGIES ARTIFICIAL INTELLIGENCE DEVELOPING SERVICES - FZCO, obchodující jako Arkadia Labs (\"Arkadia\", \"my\", \"nás\" nebo \"naše\")",
+      "addressLabel": "Sídlo společnosti:",
+      "address": "IFZA Business Park, Dubai Digital Park, Building A2, 342001, Nadd Hessa — Dubai Silicon Oasis, Dubai, United Arab Emirates",
+      "licenceLabel": "Obchodní licence:",
+      "licence": "72235",
+      "privacyLabel": "Kontakt pro ochranu soukromí:"
+    },
+    "sections": {
+      "introduction": {
+        "heading": "1. Úvod",
+        "body": {
+          "p1": "Tyto Zásady ochrany osobních údajů popisují, jakým způsobem společnost Arkadia shromažďuje, používá, zpracovává a zpřístupňuje vaše údaje, když přistupujete k našim webovým stránkám na adrese arkadialabs.io, využíváte naše služby v oblasti VoIP a automatizace s podporou AI nebo s námi jinak komunikujete (souhrnně dále jen „Služby“).",
+          "p2": "Zavazujeme se chránit vaše soukromí a nakládat s vašimi údaji otevřeně a transparentně v souladu s obecným nařízením EU o ochraně osobních údajů (GDPR — nařízení 2016/679), spolkovým zákonným výnosem SAE č. 45 z roku 2021 o ochraně osobních údajů a dalšími platnými předpisy na ochranu osobních údajů.",
+          "p3": "Přístupem k našim Službám berete na vědomí, že jste si tyto Zásady ochrany osobních údajů přečetli a porozuměli jim. Pokud s postupy zde popsanými nesouhlasíte, naše Služby prosím nepoužívejte."
+        }
+      },
+      "informationWeCollect": {
+        "heading": "2. Údaje, které shromažďujeme",
+        "body": {
+          "h3a": "A. Údaje, které nám poskytnete",
+          "p1": "Jedná se o údaje, které nám dobrovolně poskytnete při vytváření účtu, žádosti o ukázku, předplatném našich služeb, kontaktování našeho obchodního nebo podpůrného týmu nebo při jiné komunikaci s námi. Mohou zahrnovat:",
+          "li1": "Celé jméno, e-mailová adresa, telefonní číslo",
+          "li2": "Název společnosti, pracovní pozice, obchodní adresa",
+          "li3": "Fakturační a platební údaje",
+          "li4": "Obsah komunikace s naším týmem",
+          "h3b": "B. Údaje shromažďované automaticky",
+          "p2": "Při procházení našich webových stránek nebo používání našich Služeb můžeme automaticky shromažďovat určité údaje z vašeho zařízení, včetně:",
+          "li5": "IP adresa a přibližná zeměpisná poloha",
+          "li6": "Typ zařízení, typ prohlížeče a operační systém",
+          "li7": "Navštívené stránky, kliknuté odkazy a vzorce používání",
+          "li8": "Odkazující URL adresy a délka relace",
+          "p3": "Pro tyto účely používáme nástroje jako Google Analytics 4 (GA4). Podrobnosti naleznete v části 9 (Cookies).",
+          "h3c": "C. Údaje zpracovávané jménem našich klientů",
+          "p4": "Jako zpracovatel údajů zpracovává společnost Arkadia osobní údaje nahrané nebo vygenerované našimi klienty prostřednictvím naší platformy, včetně seznamů kontaktů, metadat hovorů a nahrávek hovorů. Tyto údaje jsou zpracovávány výhradně v souladu s pokyny našich klientů a naší Smlouvou o zpracování osobních údajů (DPA). Tyto Zásady ochrany osobních údajů se nevztahují na údaje zpracovávané jménem klientů — informace o tom, jak nakládají s vašimi údaji, naleznete v zásadách ochrany osobních údajů příslušného klienta."
+        }
+      },
+      "legalBasis": {
+        "heading": "3. Právní základy zpracování",
+        "body": {
+          "p1": "Podle GDPR se při zpracování vašich osobních údajů opíráme o následující právní základy:",
+          "th1": "Účel",
+          "th2": "Právní základ (článek GDPR)",
+          "r1c1": "Poskytování a správa našich Služeb",
+          "r1c2": "Plnění smlouvy (Art. 6(1)(b))",
+          "r2c1": "Odpovídání na dotazy a poskytování podpory",
+          "r2c2": "Plnění smlouvy / Oprávněný zájem (Art. 6(1)(b) / (f))",
+          "r3c1": "Zasílání marketingové komunikace",
+          "r3c2": "Souhlas (Art. 6(1)(a)) nebo Oprávněný zájem (Art. 6(1)(f)) u stávajících klientů",
+          "r4c1": "Analytika a zlepšování služeb",
+          "r4c2": "Oprávněný zájem (Art. 6(1)(f))",
+          "r5c1": "Prevence podvodů a bezpečnost",
+          "r5c2": "Oprávněný zájem (Art. 6(1)(f))",
+          "r6c1": "Plnění právních a daňových povinností",
+          "r6c2": "Právní povinnost (Art. 6(1)(c))",
+          "r7c1": "Fakturace a zpracování plateb",
+          "r7c2": "Plnění smlouvy (Art. 6(1)(b))",
+          "p2": "Pokud se opíráme o oprávněný zájem, provedli jsme test proporcionality, abychom zajistili, že naše zájmy nepřevažují nad vašimi základními právy a svobodami. O podrobnosti tohoto posouzení nás můžete požádat na adrese"
+        }
+      },
+      "howWeUse": {
+        "heading": "4. Jak vaše údaje používáme",
+        "body": {
+          "p1": "Shromážděné údaje používáme k těmto účelům:",
+          "li1_strong": "Poskytování, provozování a údržba našich Služeb —",
+          "li1_text": "zřízení a správa vašeho účtu, zpracování transakcí a poskytování vámi požadovaných služeb.",
+          "li2_strong": "Zlepšování, personalizace a rozvoj našich Služeb —",
+          "li2_text": "porozumění způsobu, jakým naše Služby používáte, a vývoj nových funkcí a možností.",
+          "li3_strong": "Komunikace s vámi —",
+          "li3_text": "zasílání transakčních zpráv, technických oznámení, aktualizací, bezpečnostních upozornění a zpráv podpory. V souladu s vašimi preferencemi vám můžeme zasílat také marketingovou komunikaci.",
+          "li4_strong": "Zajištění bezpečnosti a prevence podvodů —",
+          "li4_text": "odhalování a prevence podvodných aktivit, zneužití a bezpečnostních hrozeb.",
+          "li5_strong": "Plnění právních povinností —",
+          "li5_text": "dodržování platných daňových, účetních a regulatorních požadavků a reakce na zákonné žádosti veřejných orgánů."
+        }
+      },
+      "howWeShare": {
+        "heading": "5. Jak vaše údaje sdílíme",
+        "body": {
+          "p1": "Vaše osobní údaje neprodáváme. Vaše údaje můžeme sdílet s třetími stranami pouze za následujících okolností:",
+          "h3a": "Poskytovatelé služeb (dílčí zpracovatelé)",
+          "p2": "Spolupracujeme s poskytovateli služeb třetích stran, kteří zpracovávají údaje naším jménem na základě smluvních závazků zajišťujících odpovídající ochranu údajů. Naši současní dílčí zpracovatelé jsou:",
+          "th1": "Poskytovatel",
+          "th2": "Účel",
+          "th3": "Sídlo",
+          "th4": "Mechanismus přenosu",
+          "r1c1": "Twilio Inc.",
+          "r1c2": "Hlasová komunikace a směrování hovorů",
+          "r1c3": "Spojené státy americké",
+          "r1c4": "EU-US Data Privacy Framework",
+          "r2c1": "CommPeak Ltd.",
+          "r2c2": "Telefonní infrastruktura a DID čísla",
+          "r2c3": "Hongkong",
+          "r2c4": "Standardní smluvní doložky (SCCs)",
+          "r3c1": "Vercel Inc.",
+          "r3c2": "Hosting a doručování webových stránek",
+          "r3c3": "Spojené státy americké",
+          "r3c4": "EU-US Data Privacy Framework",
+          "r4c1": "Amazon Web Services (AWS)",
+          "r4c2": "Cloudová infrastruktura",
+          "r4c3": "EU (Frankfurt) / Spojené státy americké",
+          "r4c4": "SCCs / EU-US Data Privacy Framework",
+          "r5c1": "Google LLC (Analytics)",
+          "r5c2": "Analytika webových stránek",
+          "r5c3": "Spojené státy americké",
+          "r5c4": "EU-US Data Privacy Framework",
+          "h3b": "Právní požadavky",
+          "p3": "Vaše údaje můžeme zpřístupnit, pokud to vyžaduje platný zákon, nařízení, právní řízení nebo žádost státního orgánu.",
+          "h3c": "Obchodní převody",
+          "p4": "V souvislosti s jakoukoli fúzí, akvizicí, prodejem aktiv nebo obdobnou transakcí mohou být vaše údaje převedeny jako součást obchodních aktiv. O každé takové změně a o možnostech, které máte ve vztahu ke svým údajům, vás budeme informovat."
+        }
+      },
+      "international": {
+        "heading": "6. Mezinárodní přenosy údajů",
+        "body": {
+          "p1": "Společnost Arkadia je usazena v Dubaji ve Spojených arabských emirátech, které v současnosti nejsou Evropskou komisí uznány jako země poskytující odpovídající úroveň ochrany osobních údajů. Při přenosu osobních údajů z EU/EHP do SAE nebo do jiných třetích zemí se opíráme o následující záruky:",
+          "li1_strong": "Standardní smluvní doložky (SCCs) —",
+          "li1_text": "přijaté Evropskou komisí na základě prováděcího rozhodnutí (EU) 2021/914, začleněné do našich Smluv o zpracování osobních údajů.",
+          "li2_strong": "Rámec pro ochranu osobních údajů EU-USA (DPF) —",
+          "li2_text": "pro přenosy poskytovatelům se sídlem v USA certifikovaným v rámci tohoto Rámce, jak uznal rozhodnutí Evropské komise o odpovídající ochraně ze dne 10. července 2023.",
+          "li3_strong": "Doplňková opatření —",
+          "li3_text": "včetně šifrování při přenosu i v klidovém stavu, řízení přístupu a smluvních závazků dílčích zpracovatelů, v souladu s doporučeními Evropského sboru pro ochranu osobních údajů (EDPB).",
+          "p2": "Kopii příslušných záruk pro přenos údajů si můžete vyžádat na adrese"
+        }
+      },
+      "retention": {
+        "heading": "7. Uchovávání údajů",
+        "body": {
+          "p1": "Vaše osobní údaje uchováváme pouze po dobu nezbytnou k naplnění účelů popsaných v těchto Zásadách ochrany osobních údajů, ledaže zákon vyžaduje nebo umožňuje delší dobu uchovávání. Naše obecné doby uchovávání jsou:",
+          "th1": "Kategorie údajů",
+          "th2": "Doba uchovávání",
+          "th3": "Základ",
+          "r1c1": "Údaje o účtu",
+          "r1c2": "Trvání smluvního vztahu + 30 dní",
+          "r1c3": "Plnění smlouvy",
+          "r2c1": "Fakturační a účetní záznamy",
+          "r2c2": "7 let",
+          "r2c3": "Zákon o obchodních společnostech SAE / daňové povinnosti",
+          "r3c1": "Údaje z analytiky webových stránek",
+          "r3c2": "14 měsíců",
+          "r3c3": "Výchozí doba uchovávání GA4",
+          "r4c1": "Korespondence s podporou",
+          "r4c2": "24 měsíců po vyřešení",
+          "r4c3": "Oprávněný zájem",
+          "r5c1": "Záznamy o marketingovém souhlasu",
+          "r5c2": "Trvání souhlasu + 36 měsíců",
+          "r5c3": "Odpovědnost (Art. 5(2) GDPR)",
+          "p2": "Jakmile údaje již nejsou potřebné, jsou bezpečně smazány nebo anonymizovány. U údajů zpracovávaných jménem našich klientů se doba uchovávání řídí příslušnou Smlouvou o zpracování osobních údajů."
+        }
+      },
+      "rights": {
+        "heading": "8. Vaše práva na ochranu osobních údajů",
+        "body": {
+          "p1": "Nacházíte-li se v EU/EHP, máte podle GDPR následující práva:",
+          "li1_strong": "Právo na přístup (Art. 15) —",
+          "li1_text": "získat potvrzení o tom, zda jsou vaše údaje zpracovávány, a požádat o jejich kopii.",
+          "li2_strong": "Právo na opravu (Art. 16) —",
+          "li2_text": "požádat o opravu nepřesných nebo neúplných údajů.",
+          "li3_strong": "Právo na výmaz (Art. 17) —",
+          "li3_text": "požádat o vymazání vašich údajů, pokud neexistuje závažný důvod pro pokračování ve zpracování.",
+          "li4_strong": "Právo na omezení zpracování (Art. 18) —",
+          "li4_text": "požádat, abychom za určitých okolností omezili způsob zpracování vašich údajů.",
+          "li5_strong": "Právo na přenositelnost údajů (Art. 20) —",
+          "li5_text": "obdržet své údaje ve strukturovaném, běžně používaném a strojově čitelném formátu.",
+          "li6_strong": "Právo vznést námitku (Art. 21) —",
+          "li6_text": "vznést námitku proti zpracování založenému na oprávněném zájmu nebo pro účely přímého marketingu.",
+          "li7_strong": "Právo odvolat souhlas (Art. 7(3)) —",
+          "li7_text": "pokud je zpracování založeno na souhlasu, kdykoli jej odvolat, aniž by tím byla dotčena zákonnost zpracování provedeného před odvoláním.",
+          "p2": "Pro uplatnění kteréhokoli z těchto práv nás prosím kontaktujte na adrese",
+          "p2b": "nebo podejte žádost prostřednictvím portálu GDPR našeho zástupce v EU (viz část 11).",
+          "p3": "Na vaši žádost odpovíme do 30 dnů. Ve složitých případech může být tato lhůta prodloužena o dalších 60 dnů; o případném prodloužení vás budeme informovat.",
+          "complaint_label": "Právo podat stížnost:",
+          "complaint_text": "Domníváte-li se, že naše zpracování vašich osobních údajů porušuje GDPR, máte právo podat stížnost u dozorového úřadu v členském státě EU, kde máte obvyklé bydliště, pracoviště nebo kde k údajnému porušení došlo. Pro Španělsko jím je",
+          "complaint_aepd": "Agencia Española de Protección de Datos (AEPD)",
+          "complaint_list": "Seznam všech dozorových úřadů EU je k dispozici na adrese"
+        }
+      },
+      "cookies": {
+        "heading": "9. Cookies a sledovací technologie",
+        "body": {
+          "p1": "Naše webové stránky používají cookies a podobné sledovací technologie ke zlepšení vašeho zážitku z prohlížení a k analýze návštěvnosti.",
+          "h3": "Typy cookies, které používáme",
+          "th1": "Typ",
+          "th2": "Účel",
+          "th3": "Příklady",
+          "r1c1": "Nezbytně nutné",
+          "r1c2": "Nezbytné pro fungování webových stránek",
+          "r1c3": "Relační cookies, autentizace",
+          "r2c1": "Analytické",
+          "r2c2": "Pomáhají nám porozumět interakci návštěvníků s našimi stránkami",
+          "r2c3": "Google Analytics 4",
+          "r3c1": "Marketingové",
+          "r3c2": "Slouží ke sledování návštěvníků napříč webovými stránkami pro reklamní účely",
+          "r3c3": "Mohou zahrnovat retargetingové pixely (pokud jsou relevantní)",
+          "p2": "Předvolby cookies můžete spravovat v nastavení svého prohlížeče. Zakázání určitých cookies může ovlivnit funkčnost našich webových stránek. Další informace naleznete v banneru cookies, který se zobrazí při vaší první návštěvě."
+        }
+      },
+      "children": {
+        "heading": "10. Ochrana soukromí dětí",
+        "body": {
+          "p1": "Naše Služby nejsou určeny osobám mladším 18 let. Vědomě neshromažďujeme osobní údaje dětí. Zjistíte-li, že nám dítě poskytlo své osobní údaje, kontaktujte nás prosím na adrese",
+          "p1b": "a my podnikneme kroky k jejich vymazání."
+        }
+      },
+      "euRep": {
+        "heading": "11. Zástupce v EU/EHP (článek 27 GDPR)",
+        "body": {
+          "p1": "Jelikož je společnost Arkadia usazena mimo EU/EHP, jmenovali jsme zástupce v Evropské unii v souladu s článkem 27 GDPR:",
+          "rep_label": "Zástupce v EU:",
+          "rep_name": "Euverify Ltd (Ireland)",
+          "rep_address": "Unit 3D North Point House, North Point Business Park, New Mallow Road, Cork, T23 AT2P, Ireland",
+          "rep_email_label": "E-mail:",
+          "rep_portal_label": "Portál GDPR žádostí:",
+          "rep_portal_text": "Pro podání žádosti o přístup subjektu údajů (DSAR), žádosti o výmaz údajů nebo jiného dotazu souvisejícího s GDPR prosím využijte náš zabezpečený portál:",
+          "rep_portal_url": "https://gdpr.euverify.com/verify/f39563a3-7807-4804-abaf-9eb3e4cc2bad",
+          "rep_portal_note": "Žádosti podané prostřednictvím tohoto portálu jsou evidovány a sledovány pro zajištění včasné odpovědi a souladu s předpisy."
+        }
+      },
+      "changes": {
+        "heading": "12. Změny těchto Zásad",
+        "body": {
+          "p1": "Tyto Zásady ochrany osobních údajů můžeme čas od času aktualizovat, aby odrážely změny v našich postupech, technologiích, právních požadavcích nebo jiných faktorech. V případě podstatných změn vás upozorníme aktualizací data „Poslední aktualizace“ v záhlaví této stránky a případně dalším oznámením (například e-mailem nebo výrazným upozorněním na našich webových stránkách).",
+          "p2": "Doporučujeme vám tyto Zásady ochrany osobních údajů pravidelně kontrolovat, abyste byli informováni o tom, jak vaše údaje chráníme."
+        }
+      },
+      "contact": {
+        "heading": "13. Kontaktujte nás",
+        "body": {
+          "p1": "Máte-li jakékoli dotazy, připomínky nebo žádosti týkající se těchto Zásad ochrany osobních údajů nebo našeho nakládání s údaji, kontaktujte nás:",
+          "li1_label": "Kontakt pro ochranu soukromí:",
+          "li2_label": "Obecné dotazy:",
+          "li3_label": "Korespondenční adresa:",
+          "li3_text": "ARCADIA TECHNOLOGIES ARTIFICIAL INTELLIGENCE DEVELOPING SERVICES - FZCO, IFZA Business Park, Dubai Digital Park, Building A2, 342001, Nadd Hessa — Dubai Silicon Oasis, Dubai, United Arab Emirates",
+          "p2": "V případě dotazů souvisejících s GDPR můžete kontaktovat přímo našeho zástupce v EU (viz část 11)."
+        }
+      }
+    }
   },
   "termsAndConditions": {
     "title": "Podmínky použití",

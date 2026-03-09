@@ -1976,76 +1976,242 @@
 },
 "privacyPolicy": {
   "title": "Política de Privacidad",
-  "lastUpdated": "10 de junio de 2025",
+  "lastUpdated": "9 de marzo de 2026",
+  "dataController": {
+    "label": "Responsable del Tratamiento:",
+    "value": "ARCADIA TECHNOLOGIES ARTIFICIAL INTELLIGENCE DEVELOPING SERVICES - FZCO, que opera bajo el nombre comercial Arkadia Labs (\"Arkadia\", \"nosotros\" o \"nuestro\")",
+    "addressLabel": "Domicilio social:",
+    "address": "IFZA Business Park, Dubai Digital Park, Building A2, 342001, Nadd Hessa — Dubai Silicon Oasis, Dubai, United Arab Emirates",
+    "licenceLabel": "Licencia Comercial:",
+    "licence": "72235",
+    "privacyLabel": "Contacto de privacidad:"
+  },
   "sections": {
     "introduction": {
-      "heading": "Introducción",
+      "heading": "1. Introducción",
       "body": {
-        "p1": "Esta Política de Privacidad describe cómo Arkadia Labs AG (\"Arkadia\", \"nosotros\" o \"nuestro\") recopila, usa, procesa y divulga su información en relación con su acceso y uso de nuestro sitio web (arkadialabs.io), nuestros servicios impulsados por IA y otras interacciones que pueda tener con nosotros (colectivamente, los \"Servicios\").",
-        "p2": "Estamos comprometidos a proteger su privacidad y a manejar sus datos de manera abierta y transparente. Cuando accede a nuestro Sitio Web o utiliza nuestros Servicios, nos confía su información. Entendemos que esta es una gran responsabilidad y trabajamos arduamente para proteger su información y darle el control."
+        "p1": "Esta Política de Privacidad describe cómo Arkadia recopila, usa, procesa y divulga su información cuando usted accede o utiliza nuestro sitio web en arkadialabs.io, nuestros servicios de VoIP y automatización basados en inteligencia artificial, y cualquier otra interacción que pueda tener con nosotros (colectivamente, los \"Servicios\").",
+        "p2": "Nos comprometemos a proteger su privacidad y a tratar sus datos de manera abierta y transparente, de conformidad con el Reglamento General de Protección de Datos de la UE (GDPR — Reglamento 2016/679), el Decreto-Ley Federal n.º 45 de 2021 de los EAU sobre la Protección de Datos Personales, y demás legislación aplicable en materia de protección de datos.",
+        "p3": "Al acceder a nuestros Servicios, usted reconoce que ha leído y comprendido esta Política de Privacidad. Si no está de acuerdo con las prácticas aquí descritas, le rogamos que no utilice nuestros Servicios."
       }
     },
     "informationWeCollect": {
-      "heading": "Información que Recopilamos",
+      "heading": "2. Información que Recopilamos",
       "body": {
-        "p1": "Recopilamos información para proporcionar mejores servicios a todos nuestros usuarios. Los tipos de información personal que podemos recopilar dependen de su interacción con nosotros y se pueden clasificar de la siguiente manera:",
-        "h4_1": "A. Información que Usted Nos Proporciona",
-        "p2": "Esto incluye los datos que proporciona voluntariamente cuando crea una cuenta, solicita una demostración, se pone en contacto con nuestros equipos de ventas o soporte, o se comunica de otra manera con nosotros. Esto puede incluir su nombre completo, dirección de correo electrónico, número de teléfono, nombre de la empresa, cargo y el contenido de sus comunicaciones.",
-        "h4_2": "B. Información que Recopilamos Automáticamente",
-        "p3": "Cuando navega por nuestro Sitio Web o utiliza nuestros Servicios, podemos recopilar cierta información automáticamente desde su dispositivo. Esto incluye su dirección IP, tipo de dispositivo, tipo de navegador, sistema operativo, identificadores únicos de dispositivo y ubicación geográfica general. También recopilamos información sobre cómo su dispositivo ha interactuado con nuestro Sitio Web, incluidas las páginas visitadas y los enlaces en los que ha hecho clic. Utilizamos herramientas como Google Analytics 4 (GA4) para este propósito. Para más detalles, consulte nuestra Política de Cookies."
+        "h3a": "A. Información que usted nos proporciona",
+        "p1": "Esto incluye los datos que usted facilita voluntariamente cuando crea una cuenta, solicita una demostración, se suscribe a nuestros servicios, contacta con nuestros equipos de ventas o soporte, o se comunica con nosotros de cualquier otro modo. Esto puede incluir:",
+        "li1": "Nombre completo, dirección de correo electrónico, número de teléfono",
+        "li2": "Nombre de la empresa, cargo, dirección comercial",
+        "li3": "Información de facturación y pago",
+        "li4": "Contenido de las comunicaciones con nuestro equipo",
+        "h3b": "B. Información recopilada automáticamente",
+        "p2": "Cuando usted navega por nuestro sitio web o utiliza nuestros Servicios, podemos recopilar automáticamente cierta información de su dispositivo, incluyendo:",
+        "li5": "Dirección IP y ubicación geográfica aproximada",
+        "li6": "Tipo de dispositivo, tipo de navegador y sistema operativo",
+        "li7": "Páginas visitadas, enlaces pulsados y patrones de uso",
+        "li8": "URL de referencia y duración de la sesión",
+        "p3": "Para este fin utilizamos herramientas como Google Analytics 4 (GA4). Consulte la Sección 9 (Cookies) para más información.",
+        "h3c": "C. Información tratada en nombre de nuestros clientes",
+        "p4": "En calidad de encargado del tratamiento, Arkadia trata datos personales cargados o generados por nuestros clientes a través de nuestra plataforma, incluyendo listas de contactos, metadatos de llamadas y grabaciones de llamadas. Estos datos se tratan estrictamente conforme a las instrucciones de nuestros clientes y a nuestro Acuerdo de Tratamiento de Datos (DPA). Esta Política de Privacidad no rige los datos tratados en nombre de los clientes; por favor, consulte la política de privacidad del cliente correspondiente para obtener información sobre cómo tratan sus datos."
       }
     },
-    "howWeUseInformation": {
-      "heading": "Cómo Utilizamos Su Información",
+    "legalBasis": {
+      "heading": "3. Bases Legales del Tratamiento",
       "body": {
-        "p1": "Utilizamos la información que recopilamos para diversos fines comerciales, que incluyen:",
-        "li1_strong": "Proporcionar, Operar y Mantener nuestros Servicios: ",
-        "li1_text": "Para configurar y gestionar su cuenta, procesar transacciones y proporcionarle los servicios de agentes de IA que solicita.",
-        "li2_strong": "Mejorar, Personalizar y Ampliar nuestros Servicios: ",
-        "li2_text": "Para comprender y analizar cómo utiliza nuestros Servicios y para desarrollar nuevos productos, servicios, características y funcionalidades.",
-        "li3_strong": "Comunicarnos con Usted: ",
-        "li3_text": "Para enviarle mensajes transaccionales, avisos técnicos, actualizaciones, alertas de seguridad y mensajes de soporte. También podemos enviarle comunicaciones de marketing (de acuerdo con sus preferencias) sobre nuestros productos y servicios.",
-        "li4_strong": "Para Seguridad y Prevención de Fraude: ",
-        "li4_text": "Para detectar y prevenir actividades fraudulentas, abusos y otras actividades perjudiciales para protegerlo a usted, a nuestros otros clientes y a nosotros mismos.",
-        "li5_strong": "Para el Cumplimiento Legal: ",
-        "li5_text": "Para cumplir con los requisitos legales aplicables, como las obligaciones fiscales y contables, y para responder a solicitudes legales de las autoridades públicas."
+        "p1": "En virtud del GDPR, nos basamos en las siguientes bases legales para tratar sus datos personales:",
+        "th1": "Finalidad",
+        "th2": "Base Legal (Artículo del GDPR)",
+        "r1c1": "Prestación y gestión de nuestros Servicios",
+        "r1c2": "Ejecución de un contrato (Art. 6(1)(b))",
+        "r2c1": "Respuesta a consultas y prestación de soporte",
+        "r2c2": "Ejecución de un contrato / Interés legítimo (Art. 6(1)(b) / (f))",
+        "r3c1": "Envío de comunicaciones comerciales",
+        "r3c2": "Consentimiento (Art. 6(1)(a)) o Interés legítimo (Art. 6(1)(f)) para clientes existentes",
+        "r4c1": "Análisis y mejora del servicio",
+        "r4c2": "Interés legítimo (Art. 6(1)(f))",
+        "r5c1": "Prevención del fraude y seguridad",
+        "r5c2": "Interés legítimo (Art. 6(1)(f))",
+        "r6c1": "Cumplimiento legal y obligaciones tributarias",
+        "r6c2": "Obligación legal (Art. 6(1)(c))",
+        "r7c1": "Facturación y procesamiento de pagos",
+        "r7c2": "Ejecución de un contrato (Art. 6(1)(b))",
+        "p2": "Cuando nos basamos en el interés legítimo, hemos realizado una prueba de ponderación para garantizar que nuestros intereses no prevalezcan sobre sus derechos y libertades fundamentales. Puede solicitar los detalles de esta evaluación poniéndose en contacto con nosotros en"
       }
     },
-    "dataSharing": {
-      "heading": "Cómo Compartimos Su Información",
+    "howWeUse": {
+      "heading": "4. Cómo Utilizamos Su Información",
       "body": {
-        "p1": "No vendemos sus datos personales. Podemos compartir su información con terceros que prestan servicios en nuestro nombre, pero solo en las siguientes circunstancias:",
-        "li1_strong": "Con Proveedores de Servicios: ",
-        "li1_text": "Trabajamos con proveedores de servicios de terceros para respaldar nuestras operaciones comerciales, como alojamiento en la nube (p. ej., Vercel, AWS), plataformas de CRM, proveedores de análisis y procesadores de pagos. Estos proveedores solo tienen acceso a la información necesaria para realizar sus funciones y están obligados por contrato a protegerla.",
-        "li2_strong": "Por Razones Legales: ",
-        "li2_text": "Podemos divulgar su información si creemos que es requerido por la ley, regulación, proceso legal o solicitud gubernamental aplicable.",
-        "li3_strong": "Transferencias Comerciales: ",
-        "li3_text": "En relación con cualquier fusión, venta de activos de la empresa, financiación o adquisición de la totalidad o una parte de nuestro negocio por otra empresa."
+        "p1": "Utilizamos la información que recopilamos para:",
+        "li1_strong": "Prestar, operar y mantener nuestros Servicios —",
+        "li1_text": "configurar y gestionar su cuenta, procesar transacciones y prestar los servicios que usted solicita.",
+        "li2_strong": "Mejorar, personalizar y desarrollar nuestros Servicios —",
+        "li2_text": "comprender cómo utiliza nuestros Servicios y desarrollar nuevas funcionalidades.",
+        "li3_strong": "Comunicarnos con usted —",
+        "li3_text": "enviar mensajes transaccionales, avisos técnicos, actualizaciones, alertas de seguridad y mensajes de soporte. También podemos enviarle comunicaciones comerciales de acuerdo con sus preferencias.",
+        "li4_strong": "Garantizar la seguridad y prevenir el fraude —",
+        "li4_text": "detectar y prevenir actividades fraudulentas, abusos y amenazas de seguridad.",
+        "li5_strong": "Cumplir con obligaciones legales —",
+        "li5_text": "satisfacer los requisitos tributarios, contables y regulatorios aplicables, y atender solicitudes legítimas de las autoridades públicas."
       }
     },
-    "dataRetention": {
-      "heading": "Retención de Datos",
+    "howWeShare": {
+      "heading": "5. Cómo Compartimos Su Información",
       "body": {
-        "p1": "Retendremos su información personal solo durante el tiempo que sea necesario para los fines establecidos en esta Política de Privacidad. Retendremos y utilizaremos su información en la medida necesaria para cumplir con nuestras obligaciones legales (por ejemplo, si se nos exige retener sus datos para cumplir con las leyes aplicables), resolver disputas y hacer cumplir nuestros acuerdos y políticas legales. Una vez que los datos ya no son necesarios para estos fines, se eliminan de forma segura o se anonimizan."
+        "p1": "No vendemos sus datos personales. Únicamente compartimos su información con terceros en las siguientes circunstancias:",
+        "h3a": "Proveedores de Servicios (Subencargados del tratamiento)",
+        "p2": "Trabajamos con proveedores de servicios externos que tratan datos en nuestro nombre, sujetos a obligaciones contractuales que garantizan una protección de datos adecuada. Nuestros subencargados del tratamiento actuales incluyen:",
+        "th1": "Proveedor",
+        "th2": "Finalidad",
+        "th3": "Ubicación",
+        "th4": "Mecanismo de Transferencia",
+        "r1c1": "Twilio Inc.",
+        "r1c2": "Comunicación de voz y enrutamiento de llamadas",
+        "r1c3": "Estados Unidos",
+        "r1c4": "Marco de Privacidad de Datos UE-EE.UU.",
+        "r2c1": "CommPeak Ltd.",
+        "r2c2": "Infraestructura de telefonía y números DID",
+        "r2c3": "Hong Kong",
+        "r2c4": "Cláusulas Contractuales Tipo (SCCs)",
+        "r3c1": "Vercel Inc.",
+        "r3c2": "Alojamiento y distribución del sitio web",
+        "r3c3": "Estados Unidos",
+        "r3c4": "Marco de Privacidad de Datos UE-EE.UU.",
+        "r4c1": "Amazon Web Services (AWS)",
+        "r4c2": "Infraestructura en la nube",
+        "r4c3": "UE (Fráncfort) / Estados Unidos",
+        "r4c4": "SCCs / Marco de Privacidad de Datos UE-EE.UU.",
+        "r5c1": "Google LLC (Analytics)",
+        "r5c2": "Analítica web",
+        "r5c3": "Estados Unidos",
+        "r5c4": "Marco de Privacidad de Datos UE-EE.UU.",
+        "h3b": "Requisitos legales",
+        "p3": "Podemos divulgar su información cuando así lo exija la legislación aplicable, un reglamento, un proceso judicial o una solicitud de la Administración.",
+        "h3c": "Transmisiones empresariales",
+        "p4": "En el marco de cualquier fusión, adquisición, venta de activos o transacción similar, su información podrá ser transferida como parte de los activos empresariales. Le notificaremos cualquier cambio de esta naturaleza y las opciones de las que disponga en relación con sus datos."
       }
     },
-    "yourRights": {
-      "heading": "Sus Derechos de Protección de Datos",
+    "international": {
+      "heading": "6. Transferencias Internacionales de Datos",
       "body": {
-        "p1": "Dependiendo de su ubicación, puede tener los siguientes derechos con respecto a sus datos personales:",
-        "li1_text1": "El derecho a ", "li1_strong1": "acceder", "li1_strong2": "actualizar", "li1_text2": " o ", "li1_strong3": "eliminar", "li1_text3": " la información que tenemos sobre usted.",
-        "li2_text1": "El derecho de ", "li2_strong": "rectificación", "li2_text2": " si esa información es inexacta o incompleta.",
-        "li3_text1": "El derecho a ", "li3_strong": "oponerse", "li3_text2": " a nuestro procesamiento de sus datos personales.",
-        "li4_text1": "El derecho a solicitar que ", "li4_strong": "restrinjamos", "li4_text2": " el procesamiento de su información personal.",
-        "li5_text1": "El derecho a la ", "li5_strong": "portabilidad de los datos", "li5_text2": ", permitiéndole recibir una copia de su información en un formato estructurado y legible por máquina.",
-        "li6_text1": "El derecho a ", "li6_strong": "retirar el consentimiento", "li6_text2": " en cualquier momento en que nos hayamos basado en su consentimiento para procesar su información."
+        "p1": "Arkadia tiene su sede en Dubái, Emiratos Árabes Unidos, país que actualmente no cuenta con una decisión de adecuación de la Comisión Europea en materia de protección de datos. Cuando transferimos datos personales desde la UE/EEE a los EAU o a otros terceros países, nos basamos en las siguientes garantías:",
+        "li1_strong": "Cláusulas Contractuales Tipo (SCCs) —",
+        "li1_text": "adoptadas por la Comisión Europea mediante la Decisión de Ejecución (UE) 2021/914, incorporadas en nuestros Acuerdos de Tratamiento de Datos.",
+        "li2_strong": "Marco de Privacidad de Datos UE-EE.UU. (DPF) —",
+        "li2_text": "para transferencias a proveedores establecidos en EE.UU. certificados en el Marco, conforme a la Decisión de Adecuación de la Comisión Europea de 10 de julio de 2023.",
+        "li3_strong": "Medidas complementarias —",
+        "li3_text": "incluyendo cifrado en tránsito y en reposo, controles de acceso y obligaciones contractuales para los subencargados del tratamiento, según las recomendaciones del Comité Europeo de Protección de Datos (EDPB).",
+        "p2": "Puede solicitar una copia de las garantías de transferencia aplicables poniéndose en contacto con nosotros en"
+      }
+    },
+    "retention": {
+      "heading": "7. Conservación de Datos",
+      "body": {
+        "p1": "Conservamos sus datos personales únicamente durante el tiempo necesario para cumplir las finalidades descritas en esta Política de Privacidad, salvo que la ley exija o permita un plazo de conservación superior. Nuestros plazos generales de conservación son los siguientes:",
+        "th1": "Categoría de datos",
+        "th2": "Plazo de conservación",
+        "th3": "Fundamento",
+        "r1c1": "Información de la cuenta",
+        "r1c2": "Duración de la relación contractual + 30 días",
+        "r1c3": "Ejecución del contrato",
+        "r2c1": "Registros de facturación",
+        "r2c2": "7 años",
+        "r2c3": "Ley de Sociedades Mercantiles de los EAU / obligaciones tributarias",
+        "r3c1": "Datos de analítica web",
+        "r3c2": "14 meses",
+        "r3c3": "Conservación predeterminada de GA4",
+        "r4c1": "Correspondencia de soporte",
+        "r4c2": "24 meses tras la resolución",
+        "r4c3": "Interés legítimo",
+        "r5c1": "Registros de consentimiento de marketing",
+        "r5c2": "Duración del consentimiento + 36 meses",
+        "r5c3": "Responsabilidad proactiva (Art. 5(2) GDPR)",
+        "p2": "Una vez que los datos ya no son necesarios, se eliminan de forma segura o se anonimizan. En el caso de datos tratados en nombre de nuestros clientes, la conservación se rige por el Acuerdo de Tratamiento de Datos correspondiente."
+      }
+    },
+    "rights": {
+      "heading": "8. Sus Derechos en Materia de Protección de Datos",
+      "body": {
+        "p1": "Si usted se encuentra en la UE/EEE, dispone de los siguientes derechos en virtud del GDPR:",
+        "li1_strong": "Derecho de acceso (Art. 15) —",
+        "li1_text": "obtener confirmación de si sus datos están siendo tratados y solicitar una copia de los mismos.",
+        "li2_strong": "Derecho de rectificación (Art. 16) —",
+        "li2_text": "solicitar la corrección de datos inexactos o incompletos.",
+        "li3_strong": "Derecho de supresión (Art. 17) —",
+        "li3_text": "solicitar la eliminación de sus datos cuando no exista una razón imperiosa para continuar el tratamiento.",
+        "li4_strong": "Derecho a la limitación del tratamiento (Art. 18) —",
+        "li4_text": "solicitar que limitemos la forma en que tratamos sus datos en determinadas circunstancias.",
+        "li5_strong": "Derecho a la portabilidad de los datos (Art. 20) —",
+        "li5_text": "recibir sus datos en un formato estructurado, de uso común y lectura mecánica.",
+        "li6_strong": "Derecho de oposición (Art. 21) —",
+        "li6_text": "oponerse al tratamiento basado en el interés legítimo o con fines de mercadotecnia directa.",
+        "li7_strong": "Derecho a retirar el consentimiento (Art. 7(3)) —",
+        "li7_text": "cuando el tratamiento se base en el consentimiento, retirarlo en cualquier momento sin que ello afecte a la licitud del tratamiento previo.",
+        "p2": "Para ejercer cualquiera de estos derechos, póngase en contacto con nosotros en",
+        "p2b": "o presente una solicitud a través del portal GDPR de nuestro Representante en la UE (véase la Sección 11).",
+        "p3": "Responderemos a su solicitud en un plazo de 30 días. En casos complejos, dicho plazo podrá ampliarse 60 días adicionales, y le informaremos de cualquier prórroga.",
+        "complaint_label": "Derecho a presentar una reclamación:",
+        "complaint_text": "Si considera que el tratamiento de sus datos personales infringe el GDPR, tiene derecho a presentar una reclamación ante la autoridad de control del Estado miembro de la UE de su residencia habitual, lugar de trabajo o lugar de la presunta infracción. En España, dicha autoridad es la",
+        "complaint_aepd": "Agencia Española de Protección de Datos (AEPD)",
+        "complaint_list": "Puede consultar la lista de todas las autoridades de control de la UE en"
+      }
+    },
+    "cookies": {
+      "heading": "9. Cookies y Tecnologías de Seguimiento",
+      "body": {
+        "p1": "Nuestro sitio web utiliza cookies y tecnologías de seguimiento similares para mejorar su experiencia de navegación y analizar el tráfico web.",
+        "h3": "Tipos de cookies que utilizamos",
+        "th1": "Tipo",
+        "th2": "Finalidad",
+        "th3": "Ejemplos",
+        "r1c1": "Estrictamente necesarias",
+        "r1c2": "Esenciales para el funcionamiento del sitio web",
+        "r1c3": "Cookies de sesión, autenticación",
+        "r2c1": "Analíticas",
+        "r2c2": "Nos ayudan a comprender cómo interactúan los visitantes con nuestro sitio web",
+        "r2c3": "Google Analytics 4",
+        "r3c1": "De marketing",
+        "r3c2": "Se utilizan para realizar un seguimiento de los visitantes en los distintos sitios web con fines publicitarios",
+        "r3c3": "Pueden incluir píxeles de retargeting (si procede)",
+        "p2": "Puede gestionar sus preferencias de cookies a través de la configuración de su navegador. Desactivar determinadas cookies puede afectar a la funcionalidad de nuestro sitio web. Para más información, consulte el banner de cookies que aparece al visitar nuestro sitio web por primera vez."
+      }
+    },
+    "children": {
+      "heading": "10. Privacidad de los Menores",
+      "body": {
+        "p1": "Nuestros Servicios no están dirigidos a personas menores de 18 años. No recopilamos deliberadamente datos personales de menores. Si tiene conocimiento de que un menor nos ha facilitado datos personales, póngase en contacto con nosotros en",
+        "p1b": "y adoptaremos las medidas necesarias para eliminar dicha información."
+      }
+    },
+    "euRep": {
+      "heading": "11. Representante en la UE/EEE (Artículo 27 del GDPR)",
+      "body": {
+        "p1": "Dado que Arkadia está establecida fuera de la UE/EEE, hemos designado un representante en la Unión Europea de conformidad con el artículo 27 del GDPR:",
+        "rep_label": "Representante en la UE:",
+        "rep_name": "Euverify Ltd (Ireland)",
+        "rep_address": "Unit 3D North Point House, North Point Business Park, New Mallow Road, Cork, T23 AT2P, Ireland",
+        "rep_email_label": "Email:",
+        "rep_portal_label": "Portal de solicitudes GDPR:",
+        "rep_portal_text": "Para presentar una Solicitud de Acceso del Interesado (DSAR), una solicitud de supresión de datos o cualquier otra consulta relacionada con el GDPR, utilice nuestro portal seguro:",
+        "rep_portal_url": "https://gdpr.euverify.com/verify/f39563a3-7807-4804-abaf-9eb3e4cc2bad",
+        "rep_portal_note": "Las solicitudes presentadas a través de este portal se registran y se hace un seguimiento de las mismas para garantizar una respuesta oportuna y el cumplimiento normativo."
+      }
+    },
+    "changes": {
+      "heading": "12. Modificaciones de esta Política",
+      "body": {
+        "p1": "Podemos actualizar esta Política de Privacidad periódicamente para reflejar cambios en nuestras prácticas, tecnologías, requisitos legales u otros factores. Cuando realicemos cambios sustanciales, le informaremos actualizando la fecha de \"Última actualización\" en la parte superior de esta página y, cuando proceda, proporcionándole una notificación adicional (como un aviso por correo electrónico o un aviso destacado en nuestro sitio web).",
+        "p2": "Le recomendamos que revise esta Política de Privacidad periódicamente para mantenerse informado sobre cómo protegemos su información."
       }
     },
     "contact": {
-      "heading": "Contáctenos",
+      "heading": "13. Contacto",
       "body": {
-        "p1": "Si tiene alguna pregunta, inquietud o comentario sobre esta Política de Privacidad o nuestras prácticas de datos, no dude en contactarnos. Puede comunicarse con nuestro equipo de privacidad enviando un correo electrónico a: ",
-        "p1_email": "hello@arkadialabs.io"
+        "p1": "Si tiene alguna pregunta, inquietud o solicitud en relación con esta Política de Privacidad o nuestras prácticas en materia de datos, póngase en contacto con nosotros:",
+        "li1_label": "Contacto de privacidad:",
+        "li2_label": "Consultas generales:",
+        "li3_label": "Dirección postal:",
+        "li3_text": "ARCADIA TECHNOLOGIES ARTIFICIAL INTELLIGENCE DEVELOPING SERVICES - FZCO, IFZA Business Park, Dubai Digital Park, Building A2, 342001, Nadd Hessa — Dubai Silicon Oasis, Dubai, United Arab Emirates",
+        "p2": "Para consultas específicas sobre el GDPR, también puede contactar directamente con nuestro Representante en la UE (véase la Sección 11)."
       }
     }
   }
