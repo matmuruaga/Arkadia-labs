@@ -21,10 +21,12 @@
       "p5": "Podpůrný AI agent zlepšující zákaznickou zkušenost...",
       "p6": "Agent pro analýzu dat odhalující příležitosti..."
     },
+    "badge": "Automatizace s AI",
     "voice": {
       "ariaLabel": "Přepnout AI agenta",
       "altMascot": "Maskot AI agenta",
-      "caption": "Pojďme si promluvit"
+      "caption": "Pojďme si promluvit",
+      "clickToStart": "Klikněte pro spuštění"
     },
     "disclaimer": "Pro použití hlasového agenta je vyžadován mikrofon ve vašem počítači a udělení přístupu. Hovory jsou nahrávány pro účely kontroly kvality a odstraněny do 30 dnů. Používáním této ukázky souhlasíte s našimi <terms>Podmínkami použití</terms> a našimi <privacy>Zásadami ochrany osobních údajů</privacy>. Pro nejlepší kvalitu zvuku doporučujeme používat Chrome."
   },
@@ -2456,6 +2458,957 @@
       "subtitle": "Neztrácejte obchody kvůli pomalému follow-upu.",
       "cta": "Začít Dnes"
     }
+  },
+  "sales-agent": {
+    "seo": {
+      "title": "AI Prodejní Agent | Autonomní Prodej a Upselling | Elevaite Labs",
+      "description": "AI hlasový agent, který autonomně prodává vaše produkty a služby. Zvládá příchozí i odchozí hovory, uzavírá obchody a zvyšuje prodeje. Generování příjmů 24/7 na autopilota."
+    },
+    "hero": {
+      "badge": "Prodej a Příjmy",
+      "title": "Váš AI Prodejce, Který Skutečně Uzavírá Obchody",
+      "subtitle": "Autonomní Generování Příjmů",
+      "description": "AI hlasový agent nabitý vaším katalogem produktů, který prodává, dělá upselling a uzavírá obchody—příchozí i odchozí. Pracuje 24/7, nikdy si nebere pauzu a s každou konverzací se zlepšuje.",
+      "primaryCta": "Sledovat Prodej",
+      "secondaryCta": "Mluvit s Prodejem"
+    },
+    "problem": {
+      "badge": "Problém",
+      "headline": "Váš Prodejní Tým Nemůže Škálovat—Ale Vaše Konkurence Ano",
+      "description": "Každý zmeškaný hovor je zmeškaný prodej. Každý pomalý follow-up jsou peníze odcházející ze dveří. Váš tým zvládne jen omezený počet konverzací, ale poptávka nečeká.",
+      "painPoints": {
+        "0": {
+          "title": "Omezená Prodejní Kapacita",
+          "description": "Váš tým zvládne jen určitý počet hovorů denně. Špičkové hodiny znamenají ztracené příležitosti a škálování znamená drahé najímání."
+        },
+        "1": {
+          "title": "Nekonzistentní Prodejní Výkon",
+          "description": "Někteří prodejci uzavírají 30%, jiní 10%. Špatné dny, nízká energie a fluktuace znamenají nepředvídatelné příjmy."
+        },
+        "2": {
+          "title": "Zmeškaný Příležitosti k Upsellingu",
+          "description": "Prodejci se soustředí na uzavření hlavního prodeje a zapomínají nabízet doplňky, upgrady nebo produkty, které zvyšují průměrnou hodnotu objednávky."
+        },
+        "3": {
+          "title": "Žádné Příjmy Mimo Pracovní Dobu",
+          "description": "60% nákupních rozhodnutí probíhá mimo pracovní dobu. Bez pokrytí nejsou žádné prodeje, když jsou zákazníci připraveni koupit."
+        }
+      },
+      "statistics": {
+        "0": { "label": "prodejů jde prvnímu prodejci, který se ozve" },
+        "1": { "label": "příjmů jde prodejcům, kteří reagují rychle" },
+        "2": { "label": "prodejů vyžaduje 5+ follow-upů" }
+      }
+    },
+    "howItWorks": {
+      "badge": "Jak To Funguje",
+      "title": "Jak Prodejní Agent Funguje",
+      "subtitle": "Od katalogu produktů k uzavřenému obchodu v jedné konverzaci",
+      "steps": {
+        "0": {
+          "title": "Nahrajte Svůj Katalog Produktů",
+          "description": "Nahrajte své produkty, služby, ceny a prodejní skripty. AI se naučí vaši nabídku, techniky zvládání námitek a uzavírací techniky."
+        },
+        "1": {
+          "title": "Obsluhujte Příchozí nebo Odchozí",
+          "description": "Zvládejte příchozí prodejní hovory nebo proaktivně oslovujte leady. AI přizpůsobuje svůj přístup podle kontextu a signálů zákazníka."
+        },
+        "2": {
+          "title": "Prodávejte a Upselujte Přirozeně",
+          "description": "Prezentujte produkty, zvládejte námitky a identifikujte příležitosti k upsellingu. AI ví, kdy tlačit a kdy naslouchat."
+        },
+        "3": {
+          "title": "Uzavřete a Zpracujte",
+          "description": "Zajistěte závazek, zpracujte objednávky a automaticky synchronizujte vše do vašeho CRM a e-commerce platformy."
+        }
+      }
+    },
+    "features": {
+      "badge": "Funkce",
+      "title": "Vytvořeno Pro Prodej, Ne Jen Pro Mluvení",
+      "subtitle": "Každá funkce navržena pro generování příjmů a uzavírání obchodů",
+      "features": {
+        "0": {
+          "title": "Hluboká Znalost Produktů",
+          "description": "Nabitý celým vaším katalogem, cenovými úrovněmi, akcemi a konkurenčním positioningem. Okamžitě zodpoví jakoukoli otázku o produktu."
+        },
+        "1": {
+          "title": "Dynamický Upselling Engine",
+          "description": "Identifikuje příležitosti k upsellingu a cross-sellingu na základě potřeb zákazníka, historie nákupů a kontextu konverzace."
+        },
+        "2": {
+          "title": "Mistrovství v Námitkách",
+          "description": "Vytrénován na tisících prodejních konverzací pro zvládání cenových námitek, srovnání s konkurencí a váhání při nákupu."
+        },
+        "3": {
+          "title": "Připraven Pro Příchozí i Odchozí",
+          "description": "Zvládá příchozí prodejní dotazy a proaktivně volá leady z vašeho pipeline. Stejná AI, dva zdroje příjmů."
+        },
+        "4": {
+          "title": "Integrované Zpracování Objednávek",
+          "description": "Přijímá objednávky, zpracovává platby a potvrzuje nákupy přímo během hovoru. Žádné tření, žádné ztracené prodeje."
+        },
+        "5": {
+          "title": "Kontinuální Učení Výkonu",
+          "description": "Analyzuje každou konverzaci pro zlepšení míry uzavření. Učí se, co funguje pro vaše konkrétní produkty a zákazníky."
+        }
+      }
+    },
+    "metrics": {
+      "badge": "Výsledky",
+      "title": "Výsledky Příjmů, Na Kterých Záleží",
+      "subtitle": "Měřený dopad od týmů používajících Prodejního Agenta",
+      "metrics": {
+        "0": { "label": "Nárůst Příjmů", "description": "Průměrný nárůst měsíčních prodejů" },
+        "1": { "label": "Konverze Upsellingu", "description": "Zákazníci přijímající dodatečné nabídky" },
+        "2": { "label": "Pokrytí Prodeje", "description": "Nikdy nepromeškejte moment nákupu" },
+        "3": { "label": "Snížení Nákladů", "description": "vs. ekvivalentní lidský personál" }
+      },
+      "comparisonTitle": "Před vs Po Prodejním Agentovi",
+      "before": {
+        "0": "Omezeno na prodej v pracovní době",
+        "1": "Nekonzistentní výkon prodejců",
+        "2": "Zmeškaný příležitosti k upsellingu",
+        "3": "Manuální zpracování objednávek",
+        "4": "Pomalý follow-up leadů"
+      },
+      "after": {
+        "0": "Generování příjmů 24/7",
+        "1": "Konzistentní metodologie uzavírání",
+        "2": "28% míra upsellingu při každém hovoru",
+        "3": "Automatizované zachycení objednávek",
+        "4": "Okamžité zapojení leadů"
+      }
+    },
+    "platform": {
+      "badge": "Dashboard Příjmů",
+      "title": "Sledujte Každou Korunu v Reálném Čase",
+      "subtitle": "Monitorujte prodejní výkon, míry konverze a příjmy z jednoho dashboardu."
+    },
+    "useCases": {
+      "badge": "Případy Užití",
+      "title": "Ověřeno Napříč Odvětvími",
+      "subtitle": "Podívejte se, jak různá odvětví generují příjmy s AI prodejem",
+      "resultsTitle": "Klíčové Výsledky",
+      "useCases": {
+        "0": {
+          "industry": "Pojištění",
+          "title": "Prodej a Obnova Pojistek",
+          "description": "Prodávejte nové pojistky, zvládejte obnovy a upselujte navýšení krytí. Konverzace připravené pro compliance s kompletním audit trailem.",
+          "results": {
+            "0": "42% nárůst obnovených pojistek",
+            "1": "3.2x více upsellů na hovor",
+            "2": "Plná regulační shoda"
+          }
+        },
+        "1": {
+          "industry": "Telekomunikace",
+          "title": "Upgrady Telecom Plánů a Doplňky",
+          "description": "Upgradujte plány, prodávejte ochranu zařízení a balíčkujte služby. Zvládejte technické dotazy a fakturaci při prodeji.",
+          "results": {
+            "0": "+$8.50 nárůst ARPU",
+            "1": "35% míra připojení ochrany zařízení",
+            "2": "60% snížení hovorů o odchodu"
+          }
+        },
+        "2": {
+          "industry": "Domácí Služby",
+          "title": "Rezervace a Upselling Domácích Služeb",
+          "description": "Rezervujte schůzky, prodávejte servisní plány a upselujte prémiové služby. Převádějte dotazy na zarezervované příjmy.",
+          "results": {
+            "0": "89% míra dokončení rezervací",
+            "1": "45% připojení servisních plánů",
+            "2": "Rezervace schůzek 24/7"
+          }
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integrace",
+      "title": "Připojuje Se k Vašemu Revenue Stacku",
+      "subtitle": "Nativní integrace s e-commerce a CRM platformami",
+      "viewAll": "Zobrazit všech 500+ integrací"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Často Kladené Otázky",
+      "subtitle": "Vše, co potřebujete vědět o Prodejním Agentovi",
+      "moreQuestions": "Máte stále otázky?",
+      "contactUs": "Kontaktujte náš tým",
+      "faqs": {
+        "0": {
+          "question": "Může AI skutečně uzavírat prodeje, ne jen kvalifikovat?",
+          "answer": "Ano. Prodejní Agent je vytrénován k uzavírání obchodů, ne jen ke sběru informací. Zvládá námitky, vytváří naléhavost, prezentuje nabídky a zajišťuje závazky. Pro komplexní prodeje může také zahřívat leady a rezervovat schůzky s vaším týmem."
+        },
+        "1": {
+          "question": "Jak zná moje produkty a ceny?",
+          "answer": "Nahrajete svůj katalog produktů, cenové úrovně, akce a prodejní skripty. AI se naučí vaši nabídku a může zodpovědět jakoukoli otázku o produktu, dávat doporučení a automaticky aplikovat správné ceny."
+        },
+        "2": {
+          "question": "Zvládne příchozí hovory i odchozí kampaně?",
+          "answer": "Rozhodně. Stejná AI zvládá příchozí prodejní dotazy a může proaktivně volat leady z vašeho pipeline. Vy kontrolujete odchozí kadenci, skripty a kritéria cílení."
+        },
+        "3": {
+          "question": "Jak funguje upselling?",
+          "answer": "AI identifikuje příležitosti k upsellingu na základě toho, co zákazník kupuje, jeho historie a signálů konverzace. Přirozeně prezentuje relevantní doplňky—záruky, upgrady, balíčky, komplementární produkty—bez nátlaku."
+        },
+        "4": {
+          "question": "Může zpracovávat platby během hovoru?",
+          "answer": "Ano. Prodejní Agent se integruje s platebními procesory jako Stripe pro bezpečné zachycení platebních údajů a zpracování objednávek v reálném čase. Zákazníci mohou dokončit nákup bez zavěšení."
+        },
+        "5": {
+          "question": "Co se stane s komplexními prodeji, které potřebují lidský přístup?",
+          "answer": "Pro vysokohodnotné nebo komplexní obchody může AI zahřát příležitost a plynule předat vašemu prodejnímu týmu s úplným kontextem. Vy nastavujete pravidla, kdy eskalovat."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Začněte Dnes",
+      "title": "Připraveni Dát Prodeje na Autopilota?",
+      "subtitle": "Podívejte se, jak Prodejní Agent uzavírá obchody s vašimi produkty, vašimi cenami, vaší prodejní metodologií.",
+      "primaryCta": "Požádat o Živé Demo",
+      "secondaryCta": "Mluvit s Prodejem",
+      "trust1": "Bez kreditní karty",
+      "trust2": "Bezplatný pilotní program",
+      "trust3": "Nastavení za 2 týdny"
+    },
+    "inlineCta1": {
+      "title": "Podívejte se na Prodejního Agenta v Akci",
+      "subtitle": "Sledujte živé demo uzavírající skutečný prodej.",
+      "cta": "Sledovat Demo"
+    },
+    "inlineCta2": {
+      "badge": "+35% Nárůst Příjmů",
+      "title": "Podívejte se na Prodejního Agenta v Akci",
+      "subtitle": "Naše AI prodává vaše produkty 24/7—i když váš tým spí.",
+      "primaryCta": "Naplánovat Demo",
+      "stats": {
+        "0": "Nárůst Příjmů",
+        "1": "Míra Upsellingu",
+        "2": "Spokojených Klientů",
+        "3": "Podpora"
+      }
+    },
+    "inlineCta3": {
+      "urgency": "Vaše konkurence nikdy nespí",
+      "title": "60% Nákupů Probíhá Mimo Pracovní Dobu",
+      "subtitle": "Neztrácejte příjmy, když máte zavřeno.",
+      "cta": "Začít Dnes"
+    }
+  },
+  "virtual-receptionist": {
+    "seo": {
+      "title": "AI Virtuální Recepční | Obsluha Hovorů 24/7 | Elevaite Labs",
+      "description": "Virtuální recepční poháněná AI, která přijímá hovory, spravuje dotazy a poskytuje výjimečné zážitky hostům 24/7. Nikdy nepromeškejte hovor, nikdy neztratíte zákazníka."
+    },
+    "hero": {
+      "badge": "Zákaznický Servis",
+      "title": "Váš AI Recepční 24/7, Který Nikdy Nepromešká Hovor",
+      "subtitle": "Vždy Dostupný, Vždy Profesionální",
+      "description": "AI hlasový agent, který přijímá hovory, zpracovává dotazy, přijímá zprávy a směruje konverzace—s teplem a profesionalitou vašeho nejlepšího recepčního. Dostupný nepřetržitě.",
+      "primaryCta": "Poslechněte si Naživo",
+      "secondaryCta": "Mluvit s Prodejem"
+    },
+    "problem": {
+      "badge": "Problém",
+      "headline": "Každý Zmeškaný Hovor Je Zmeškaná Příležitost",
+      "description": "Váš telefon zvoní ve 2 ráno. Potenciální zákazník volá během oběda. Víkendové dotazy jdou na záznamník. Bez pokrytí 24/7 ztrácíte byznys konkurentům, kteří odpovídají.",
+      "painPoints": {
+        "0": {
+          "title": "Mezery Mimo Pracovní Dobu",
+          "description": "62% hovorů přichází mimo pracovní dobu. Záznamník zabíjí konverze—zákazníci zavěsí a volají vaší konkurenci."
+        },
+        "1": {
+          "title": "Přetížená Recepce",
+          "description": "Váš recepční žongluje s návštěvami, emaily a telefonáty. Špičkové hodiny znamenají dlouhé čekání a frustrované volající."
+        },
+        "2": {
+          "title": "Nekonzistentní Zkušenost",
+          "description": "Různý personál, různé úrovně služeb. Noví zaměstnanci potřebují měsíce na naučení vašich procesů. Nemocenské znamenají problémy."
+        },
+        "3": {
+          "title": "Vysoké Personální Náklady",
+          "description": "Recepční na plný úvazek stojí $35,000-$50,000/rok. Pokrytí 24/7 vyžaduje více zaměstnanců nebo drahé telefonní služby."
+        }
+      },
+      "statistics": {
+        "0": { "label": "hovorů přichází mimo pracovní dobu" },
+        "1": { "label": "volajících nezavolá zpět po záznamníku" },
+        "2": { "label": "zákazníků zavěsí, když se nedovolají člověku" }
+      }
+    },
+    "howItWorks": {
+      "badge": "Jak To Funguje",
+      "title": "Jak Virtuální Recepční Funguje",
+      "subtitle": "Od příchozího hovoru k vyřešenému dotazu za sekundy",
+      "steps": {
+        "0": {
+          "title": "Přijměte Každý Hovor Okamžitě",
+          "description": "Žádné vyzvánění, žádná čekací hudba. AI odpovídá okamžitě s vřelým, profesionálním pozdravem přizpůsobeným vaší značce."
+        },
+        "1": {
+          "title": "Pochopte a Reagujte Přirozeně",
+          "description": "Zvládá běžné otázky, poskytuje informace a vede přirozenou konverzaci—jako by to dělal váš nejlepší recepční."
+        },
+        "2": {
+          "title": "Směrujte nebo Vyřešte",
+          "description": "Buď vyřeší dotaz přímo, nebo inteligentně přesměruje na správnou osobu s plným kontextem. Žádné studené transfery."
+        },
+        "3": {
+          "title": "Zaznamenejte a Sledujte",
+          "description": "Každá interakce je zaznamenána, přepsána a synchronizována s vašimi systémy. Automatické follow-upy zajistí, že nic nepropadne."
+        }
+      }
+    },
+    "features": {
+      "badge": "Funkce",
+      "title": "Vytvořeno Pro Výjimečné Zážitky Hostů",
+      "subtitle": "Každá funkce navržena tak, aby se volající cítili oceněni",
+      "features": {
+        "0": {
+          "title": "Okamžité Přijímání Hovorů",
+          "description": "Nulová čekací doba. Každý hovor přijat na první zazvonění s konzistentním, profesionálním pozdravem 24/7/365."
+        },
+        "1": {
+          "title": "Přirozený Tok Konverzace",
+          "description": "Žádné robotické skripty. AI udržuje přirozený dialog, zvládá přerušení a přizpůsobuje se emocím volajícího."
+        },
+        "2": {
+          "title": "Inteligentní Směrování Hovorů",
+          "description": "Směruje hovory na správné oddělení nebo osobu podle typu dotazu, naléhavosti a dostupnosti."
+        },
+        "3": {
+          "title": "Vícejazyčná Podpora",
+          "description": "Mluví plynně více jazyky. Automaticky detekuje jazyk volajícího a odpovídá odpovídajícím způsobem."
+        },
+        "4": {
+          "title": "Plánování Schůzek",
+          "description": "Rezervuje schůzky, spravuje rezervace a synchronizuje s vašimi kalendářními systémy v reálném čase."
+        },
+        "5": {
+          "title": "Integrace s CRM a Systémy",
+          "description": "Připojuje se k vašim stávajícím nástrojům. Zaznamenává hovory, aktualizuje záznamy a spouští workflows automaticky."
+        }
+      }
+    },
+    "metrics": {
+      "badge": "Výsledky",
+      "title": "Reálné Výsledky, Reálný Dopad",
+      "subtitle": "Měřené výsledky od firem používajících Virtuálního Recepčního",
+      "metrics": {
+        "0": { "label": "Přijatých Hovorů", "description": "Nikdy nepromeškejte další příležitost" },
+        "1": { "label": "Spokojenost Hostů", "description": "Vyšší CSAT skóre celkově" },
+        "2": { "label": "Více Recenzí", "description": "Zvýšená generace pozitivních recenzí" },
+        "3": { "label": "ROI za 12 Měsíců", "description": "Prokázaná návratnost investice" }
+      },
+      "comparisonTitle": "Před vs Po Virtuálním Recepčním",
+      "before": {
+        "0": "Zmeškané hovory mimo pracovní dobu",
+        "1": "Dlouhé čekací doby ve špičkách",
+        "2": "Nekonzistentní zkušenost volajících",
+        "3": "Omezená jazyková podpora",
+        "4": "Manuální příjem zpráv a směrování"
+      },
+      "after": {
+        "0": "Okamžité přijímání hovorů 24/7",
+        "1": "Nulová čekací doba u každého hovoru",
+        "2": "Konzistentní, profesionální služba",
+        "3": "Vícejazyčné konverzace",
+        "4": "Automatizované logování a follow-up"
+      }
+    },
+    "platform": {
+      "badge": "Dashboard Recepce",
+      "title": "Sledujte Každou Interakci v Reálném Čase",
+      "subtitle": "Monitorujte objemy hovorů, míry vyřešení a spokojenost hostů z jednoho dashboardu."
+    },
+    "useCases": {
+      "badge": "Případy Užití",
+      "title": "Ideální Pro Firmy Zaměřené na Zákazníky",
+      "subtitle": "Podívejte se, jak různá odvětví poskytují výjimečné zážitky s AI recepcí",
+      "resultsTitle": "Klíčové Výsledky",
+      "caseStudyCta": "Přečíst Celou Případovou Studii",
+      "useCases": {
+        "0": {
+          "industry": "Pohostinství",
+          "title": "Hotely a Rekreační Pronájmy",
+          "description": "Vyřizujte dotazy hostů, spravujte rezervace a poskytujte concierge služby 24/7 bez rozšiřování personálu.",
+          "results": {
+            "0": "11% nárůst spokojenosti hostů",
+            "1": "78% více pozitivních recenzí",
+            "2": "Podpora hostů 24/7"
+          }
+        },
+        "1": {
+          "industry": "Zdravotnictví",
+          "title": "Lékařské a Zubní Ordinace",
+          "description": "Plánujte schůzky, vyřizujte žádosti o recepty a třiďte urgentní hovory—v souladu s HIPAA.",
+          "results": {
+            "0": "40% snížení absencí",
+            "1": "90% hovorů vyřešeno bez personálu",
+            "2": "Směrování urgencí mimo pracovní dobu"
+          }
+        },
+        "2": {
+          "industry": "Profesionální Služby",
+          "title": "Advokátní Kanceláře a Poradenství",
+          "description": "Prověřujte potenciální klienty, plánujte konzultace a zajistěte, že každý dotaz dostane profesionální odpověď.",
+          "results": {
+            "0": "35% více kvalifikovaných konzultací",
+            "1": "Žádné zmeškané hovory klientů",
+            "2": "Vylepšený proces přijímání klientů"
+          }
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integrace",
+      "title": "Připojuje Se k Vašim Firemním Systémům",
+      "subtitle": "Nativní integrace s nástroji, které již používáte",
+      "viewAll": "Zobrazit všechny integrace"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Často Kladené Otázky",
+      "subtitle": "Vše, co potřebujete vědět o Virtuálním Recepčním",
+      "moreQuestions": "Máte stále otázky?",
+      "contactUs": "Kontaktujte náš tým",
+      "faqs": {
+        "0": {
+          "question": "Zní to jako skutečný člověk?",
+          "answer": "Ano. Naše AI používá pokročilou syntézu hlasu pro přirozené, vřelé konverzace. Většina volajících si neuvědomí, že mluví s AI. Můžete přizpůsobit hlas, tón a osobnost tak, aby odpovídaly vaší značce."
+        },
+        "1": {
+          "question": "Zvládne složité dotazy?",
+          "answer": "AI zvládá většinu běžných dotazů samostatně. U složitých situací plynule přepojí na člověka s plným kontextem—volající se nikdy nemusí opakovat."
+        },
+        "2": {
+          "question": "Jak se naučí o mém podnikání?",
+          "answer": "Trénujeme AI na vašem konkrétním podnikání: službách, politikách, FAQ a procesech. Může odpovídat na otázky o vašem podnikání stejně přesně jako vyškolený zaměstnanec."
+        },
+        "3": {
+          "question": "Jaké jazyky podporuje?",
+          "answer": "Virtuální Recepční podporuje 20+ jazyků včetně angličtiny, španělštiny, francouzštiny, němčiny a mandarínštiny. Automaticky detekuje jazyk volajícího a odpovídá odpovídajícím způsobem."
+        },
+        "4": {
+          "question": "Může rezervovat schůzky?",
+          "answer": "Ano. AI se integruje s Google Calendar, Outlook, Calendly a dalšími plánovacími systémy pro rezervaci schůzek v reálném čase, kontrolu dostupnosti a odesílání potvrzení."
+        },
+        "5": {
+          "question": "Co se stane při výpadku?",
+          "answer": "Naše infrastruktura běží na redundantních systémech s 99.99% dostupností. V ojedinělém případě problému lze hovory nakonfigurovat k přesměrování na záložní číslo nebo záznamník."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Začněte Dnes",
+      "title": "Připraveni Nikdy Nepromeškat Další Hovor?",
+      "subtitle": "Podívejte se, jak Virtuální Recepční zpracovává vaše hovory—s informacemi o vašem podnikání, hlasem vaší značky, vašimi procesy.",
+      "primaryCta": "Požádat o Živé Demo",
+      "secondaryCta": "Mluvit s Prodejem",
+      "trust1": "Bez kreditní karty",
+      "trust2": "Bezplatný pilotní program",
+      "trust3": "Nastavení za 2 týdny"
+    },
+    "inlineCta1": {
+      "title": "Poslechněte si AI Recepčního Naživo",
+      "subtitle": "Zažijte skutečný hovor zpracovaný naší AI.",
+      "cta": "Poslechnout Nyní"
+    },
+    "inlineCta2": {
+      "badge": "99.9% Přijatých Hovorů",
+      "title": "Podívejte se na Virtuálního Recepčního v Akci",
+      "subtitle": "Nikdy nepromeškejte další příležitost—naše AI přijímá každý hovor, 24/7.",
+      "primaryCta": "Naplánovat Demo",
+      "stats": {
+        "0": "Přijatých Hovorů",
+        "1": "Spokojenost Hostů",
+        "2": "Spokojených Klientů",
+        "3": "Podpora"
+      }
+    },
+    "inlineCta3": {
+      "urgency": "62% hovorů přichází mimo pracovní dobu",
+      "title": "Vaše Konkurence Odpovídá, Když Vy Ne",
+      "subtitle": "Neztrácejte zákazníky kvůli záznamníku.",
+      "cta": "Začít Dnes"
+    }
+  },
+  "booking-agent": {
+    "seo": {
+      "title": "AI Rezervační Agent | Automatizované Rezervace pro Restaurace a Hotely | Elevaite Labs",
+      "description": "Rezervační agent poháněný AI, který zpracovává rezervace 24/7 pro restaurace, hotely a pohostinské podniky. Maximalizujte obsazenost, snižte no-shows a poskytněte bezproblémové zážitky hostům."
+    },
+    "hero": {
+      "badge": "Rezervace a Pohostinství",
+      "title": "Váš AI Rezervační Agent, Který Nikdy Nespí",
+      "subtitle": "Každý Stůl Obsazený, Každý Pokoj Zarezervovaný",
+      "description": "AI hlasový agent, který zpracovává rezervace, spravuje dostupnost, potvrzuje rezervace a snižuje no-shows—pro restaurace, hotely, lázně a jakýkoli podnik, kde záleží na každém místě. 24/7, vícejazyčný, plně integrovaný.",
+      "primaryCta": "Poslechněte si v Akci",
+      "secondaryCta": "Mluvit s Prodejem"
+    },
+    "problem": {
+      "badge": "Problém",
+      "headline": "Prázdné Stoly a Volné Pokoje Vás Stojí Tisíce",
+      "description": "Každý nezvednutý hovor je ztracená rezervace. Každý no-show je promrhaný inventář. Váš personál je přetížený ve špičkách, zatímco hovory mimo pracovní dobu jdou na záznamník. Výsledek? Ztracené příjmy a frustrovaní hosté.",
+      "painPoints": {
+        "0": {
+          "title": "Zmeškané Rezervační Hovory",
+          "description": "35% hovorů do restaurací zůstává nezvednutých ve špičkách. Každý zmeškaný hovor je potenciální stůl za $150+, který odchází."
+        },
+        "1": {
+          "title": "Nákladné No-Shows",
+          "description": "Průměrná restaurace ztrácí $75,000/rok kvůli no-shows. Hotely vidí míru no-show 10-15%, což stojí miliony na ztracených příjmech."
+        },
+        "2": {
+          "title": "Přetížený Personál",
+          "description": "Váš tým žongluje s walk-ins, telefonáty a online požadavky. Špičkové hodiny znamenají dlouhé čekání a chyby v rezervacích."
+        },
+        "3": {
+          "title": "Prázdnota Mimo Pracovní Dobu",
+          "description": "40% rezervací je požadováno mimo pracovní dobu. Záznamník znamená ztracené rezervace konkurentům, kteří odpovídají."
+        }
+      },
+      "statistics": {
+        "0": { "label": "hovorů do restaurací zůstává nezvednutých ve špičkách" },
+        "1": { "label": "průměrných ročních příjmů ztracených kvůli no-shows" },
+        "2": { "label": "rezervačních požadavků přichází mimo pracovní dobu" }
+      }
+    },
+    "howItWorks": {
+      "badge": "Jak To Funguje",
+      "title": "Jak Rezervační Agent Funguje",
+      "subtitle": "Od příchozího hovoru k potvrzené rezervaci za sekundy",
+      "steps": {
+        "0": {
+          "title": "Přijměte Každý Rezervační Hovor",
+          "description": "Okamžité zvednutí, žádná čekací hudba. AI vřele pozdraví a pochopí, že chtějí udělat, upravit nebo zrušit rezervaci."
+        },
+        "1": {
+          "title": "Zkontrolujte Dostupnost v Reálném Čase",
+          "description": "Připojuje se k vašemu PMS nebo rezervačnímu systému pro kontrolu živé dostupnosti. Nabízí alternativy, pokud je požadovaný čas plný."
+        },
+        "2": {
+          "title": "Potvrďte a Zachyťte Detaily",
+          "description": "Vytvoří rezervaci, zachytí speciální požadavky, dietní potřeby a detaily příležitosti. Odešle okamžité potvrzení SMS nebo emailem."
+        },
+        "3": {
+          "title": "Automaticky Snižte No-Shows",
+          "description": "Odesílá chytré připomínky v optimální časy. Zpracovává potvrzení, úpravy a správu čekací listiny automaticky."
+        }
+      }
+    },
+    "features": {
+      "badge": "Funkce",
+      "title": "Vytvořeno Pro Excelenci v Pohostinství",
+      "subtitle": "Každá funkce navržena pro maximalizaci obsazenosti a spokojenosti hostů",
+      "features": {
+        "0": {
+          "title": "Okamžitá Rezervace",
+          "description": "Rezervuje stoly a pokoje v reálném čase. Synchronizuje s vaším PMS, OpenTable, Resy nebo jakýmkoli rezervačním systémem okamžitě."
+        },
+        "1": {
+          "title": "Inteligentní Správa Čekací Listiny",
+          "description": "Automaticky spravuje čekací listiny, upozorňuje hosty, když se uvolní stoly, a vyplňuje zrušení během minut."
+        },
+        "2": {
+          "title": "Systém Prevence No-Shows",
+          "description": "Chytré potvrzovací připomínky v optimální časy. Detekuje rizikové rezervace a proaktivně potvrzuje."
+        },
+        "3": {
+          "title": "Zpracování Speciálních Požadavků",
+          "description": "Zachycuje dietní omezení, alergie, oslavy a preference. Předává detaily vašemu týmu automaticky."
+        },
+        "4": {
+          "title": "Vícejazyčné Rezervace",
+          "description": "Přijímá rezervace ve 20+ jazycích. Ideální pro mezinárodní hosty a turistické destinace."
+        },
+        "5": {
+          "title": "Optimalizace Příjmů",
+          "description": "Navrhuje optimální časy rezervací, nabízí prémiové možnosti a maximalizuje pokrytí za službu."
+        }
+      }
+    },
+    "metrics": {
+      "badge": "Výsledky",
+      "title": "Reálné Výsledky Pro Pohostinství",
+      "subtitle": "Měřené výsledky od restaurací a hotelů používajících Rezervačního Agenta",
+      "metrics": {
+        "0": { "label": "Více Rezervací", "description": "Zachycením každého hovoru 24/7" },
+        "1": { "label": "Míra No-Show", "description": "Díky chytrému potvrzovacímu systému" },
+        "2": { "label": "Využití Stolů", "description": "Optimalizované obsazení a obrat" },
+        "3": { "label": "ROI v Prvním Roce", "description": "Příjmy získané jen z no-shows" }
+      },
+      "comparisonTitle": "Před vs Po Rezervačním Agentovi",
+      "before": {
+        "0": "Zmeškané hovory ve špičkách",
+        "1": "Míra no-show 15-20%",
+        "2": "Manuální potvrzovací hovory",
+        "3": "Prázdné stoly z pozdních zrušení",
+        "4": "Jazykové bariéry s mezinárodními hosty"
+      },
+      "after": {
+        "0": "100% hovorů přijato okamžitě",
+        "1": "Míra no-show pod 5%",
+        "2": "Automatické chytré připomínky",
+        "3": "Čekací listina vyplní zrušení během minut",
+        "4": "Bezproblémová vícejazyčná služba"
+      }
+    },
+    "platform": {
+      "badge": "Dashboard Rezervací",
+      "title": "Sledujte Každou Rezervaci v Reálném Čase",
+      "subtitle": "Monitorujte rezervace, míry no-show a obsazenost z jednoho dashboardu."
+    },
+    "useCases": {
+      "badge": "Případy Užití",
+      "title": "Vytvořeno Pro Každý Pohostinský Podnik",
+      "subtitle": "Podívejte se, jak různá odvětví maximalizují rezervace s AI",
+      "resultsTitle": "Klíčové Výsledky",
+      "caseStudyCta": "Přečíst Celou Případovou Studii",
+      "useCases": {
+        "0": {
+          "industry": "Restaurace",
+          "title": "Fine Dining a Casual Restaurace",
+          "description": "Zpracovávejte rezervační hovory 24/7, spravujte čekací listiny, snižujte no-shows a automaticky zachycujte detaily speciálních příležitostí.",
+          "results": {
+            "0": "32% nárůst rezervací",
+            "1": "67% snížení no-shows",
+            "2": "94% využití stolů dosaženo"
+          }
+        },
+        "1": {
+          "industry": "Hotely",
+          "title": "Hotely a Rekreační Pronájmy",
+          "description": "Rezervujte pokoje, spravujte dostupnost napříč kanály, zpracovávejte úpravy a maximalizujte obsazenost s hovory poháněnými AI.",
+          "results": {
+            "0": "+18% přímých rezervací",
+            "1": "45% snížení závislosti na OTA",
+            "2": "Pokrytí rezervací 24/7"
+          }
+        },
+        "2": {
+          "industry": "Lázně a Wellness",
+          "title": "Lázně, Salony a Wellness Centra",
+          "description": "Plánujte schůzky, spravujte dostupnost terapeutů, zpracovávejte balíčkové rezervace a odesílejte automatické připomínky.",
+          "results": {
+            "0": "40% více zarezervovaných schůzek",
+            "1": "55% méně last-minute zrušení",
+            "2": "Bezproblémový upselling balíčků"
+          }
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integrace",
+      "title": "Připojuje Se k Vašemu Pohostinskému Stacku",
+      "subtitle": "Nativní integrace s vedoucími PMS a rezervačními platformami",
+      "viewAll": "Zobrazit všechny integrace"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Často Kladené Otázky",
+      "subtitle": "Vše, co potřebujete vědět o Rezervačním Agentovi",
+      "moreQuestions": "Máte stále otázky?",
+      "contactUs": "Kontaktujte náš tým",
+      "faqs": {
+        "0": {
+          "question": "S jakými rezervačními systémy se integruje?",
+          "answer": "Rezervační Agent se integruje s OpenTable, Resy, SevenRooms, Yelp Reservations a vlastními POS/PMS systémy. Pro hotely podporujeme Cloudbeds, Mews, Oracle Opera a hlavní channel managery."
+        },
+        "1": {
+          "question": "Jak snižuje no-shows?",
+          "answer": "AI odesílá chytré potvrzovací připomínky v optimální časy na základě vzorců rezervací. Detekuje rizikové rezervace a proaktivně potvrzuje. U vysoce hodnotných rezervací může vyžadovat zadržení kreditní karty nebo zálohu."
+        },
+        "2": {
+          "question": "Zvládne složité rezervační požadavky?",
+          "answer": "Ano. AI zvládá změny velikosti skupiny, speciální požadavky na sezení, dietní požadavky, detaily oslav a vícedenní hotelové pobyty. V okrajových případech plynule přepojí na váš personál s plným kontextem."
+        },
+        "3": {
+          "question": "Co s walk-ins a telefonickými rezervacemi dohromady?",
+          "answer": "Systém udržuje synchronizaci dostupnosti v reálném čase. Když je walk-in usazen, dostupnost se okamžitě aktualizuje. AI nabízí pouze časy, které jsou skutečně dostupné."
+        },
+        "4": {
+          "question": "Funguje pro více lokalit?",
+          "answer": "Rozhodně. Rezervační Agent může spravovat rezervace napříč více restauracemi nebo hotely z jednoho systému, automaticky směruje volající na správnou provozovnu."
+        },
+        "5": {
+          "question": "Jak funguje správa čekací listiny?",
+          "answer": "Když je plno, AI nabídne přidání hostů na čekací listinu. Když dojde ke zrušení, automaticky kontaktuje hosty na čekací listině v pořadí a zarezervuje prvního, kdo potvrdí—obvykle vyplní místo během minut."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Začněte Dnes",
+      "title": "Připraveni Naplnit Každý Stůl, Každý Večer?",
+      "subtitle": "Podívejte se, jak Rezervační Agent zpracovává vaše rezervace—s vaší dostupností, vašimi pravidly, vaším zážitkem pro hosty.",
+      "primaryCta": "Požádat o Živé Demo",
+      "secondaryCta": "Mluvit s Prodejem",
+      "trust1": "Bez kreditní karty",
+      "trust2": "Bezplatný pilotní program",
+      "trust3": "Nastavení za 2 týdny"
+    },
+    "inlineCta1": {
+      "title": "Poslechněte si AI Rezervačního Agenta Naživo",
+      "subtitle": "Zažijte skutečný rezervační hovor zpracovaný naší AI.",
+      "cta": "Poslechnout Nyní"
+    },
+    "inlineCta2": {
+      "badge": "67% Méně No-Shows",
+      "title": "Podívejte se na Rezervačního Agenta v Akci",
+      "subtitle": "Naplňte každý stůl, každý večer—naše AI zpracovává rezervace 24/7.",
+      "primaryCta": "Naplánovat Demo",
+      "stats": {
+        "0": "Více Rezervací",
+        "1": "Snížení No-Shows",
+        "2": "Spokojených Restaurací",
+        "3": "Podpora"
+      }
+    },
+    "inlineCta3": {
+      "urgency": "40% rezervací požadováno mimo pracovní dobu",
+      "title": "Vaše Konkurence Přijímá Rezervace, Když Vy Ne",
+      "subtitle": "Neztrácejte hosty kvůli záznamníku.",
+      "cta": "Začít Dnes"
+    }
+  },
+  "content-creator": {
+    "seo": {
+      "title": "AI Tvůrce Obsahu | Automatizovaný Obsah a Publikování na Sociálních Sítích | Elevaite Labs",
+      "description": "Tvůrce obsahu poháněný AI, který generuje obrázky, videa a příspěvky. Analyzuje konkurenci, nachází optimální časy publikování a automaticky publikuje na všech platformách."
+    },
+    "hero": {
+      "badge": "Marketing a Obsah",
+      "title": "Váš AI Obsahový Tým, Který Nikdy Nepřestane Tvořit",
+      "subtitle": "Zkoumejte. Tvořte. Publikujte. Optimalizujte. Opakujte.",
+      "description": "AI agent, který analyzuje obsah konkurence, generuje úžasné obrázky a videa, identifikuje nejlepší časy publikování, automaticky publikuje a sleduje výkon—vše zatímco se soustředíte na strategii.",
+      "primaryCta": "Sledujte Tvorbu",
+      "secondaryCta": "Mluvit s Prodejem"
+    },
+    "problem": {
+      "badge": "Problém",
+      "headline": "Tvorba Obsahu Vyčerpává Váš Marketingový Tým",
+      "description": "Bestie sociálních médií není nikdy spokojená. Potřebujete čerstvý obsah denně na více platformách, ale váš tým se topí v produkci, zatímco konkurence vás předbíhá.",
+      "painPoints": {
+        "0": {
+          "title": "Kolotoč Obsahu",
+          "description": "Sociální algoritmy vyžadují 3-5 příspěvků denně na platformu. Váš tým tráví 60% času tvorbou obsahu místo strategie."
+        },
+        "1": {
+          "title": "Nekonzistentní Publikování",
+          "description": "Zmeškané časy publikování potápějí engagement. Optimální časy se liší podle platformy a publika, a váš tým nemůže být online 24/7."
+        },
+        "2": {
+          "title": "Kreativní Vyhoření",
+          "description": "Produkce čerstvého, poutavého obsahu denně vede k vyhoření a klesající kvalitě. Skvělé nápady se mění v recyklovanou průměrnost."
+        },
+        "3": {
+          "title": "Slepá Konkurence",
+          "description": "Vítězné strategie konkurentů zůstávají záhadou. Manuální monitoring je časově náročný a poznatky přicházejí příliš pozdě."
+        }
+      },
+      "statistics": {
+        "0": { "label": "marketérů utrácí za tvorbu obsahu vs strategii" },
+        "1": { "label": "značek bojuje s konzistentním publikováním" },
+        "2": { "label": "obsahových týmů hlásí kreativní vyhoření" }
+      }
+    },
+    "howItWorks": {
+      "badge": "Jak To Funguje",
+      "title": "Jak Tvůrce Obsahu Funguje",
+      "subtitle": "Od konkurenčního vhledu k virálnímu obsahu během minut",
+      "steps": {
+        "0": {
+          "title": "Analyzujte a Zkoumejte",
+          "description": "Analyzuje obsah konkurence, identifikuje trendy a analyzuje, co funguje ve vašem oboru. Nachází mezery a příležitosti obsahu."
+        },
+        "1": {
+          "title": "Generujte Obsah",
+          "description": "Vytváří úžasné obrázky, poutavá videa a přesvědčivé texty pomocí AI. Dokonale odpovídá hlasu vaší značky a vizuálnímu stylu."
+        },
+        "2": {
+          "title": "Optimalizujte a Naplánujte",
+          "description": "Identifikuje optimální čas publikování pro každou platformu na základě dat vašeho publika. Naplánuje obsah pro maximální engagement."
+        },
+        "3": {
+          "title": "Publikujte a Sledujte",
+          "description": "Automaticky publikuje na všech platformách. Monitoruje výkon a učí se, co funguje pro zlepšení budoucího obsahu."
+        }
+      }
+    },
+    "features": {
+      "badge": "Funkce",
+      "title": "Váš Kompletní Obsahový Motor",
+      "subtitle": "Každá funkce navržena k překonání vaší konkurence",
+      "features": {
+        "0": {
+          "title": "Konkurenční Inteligence",
+          "description": "Automaticky analyzuje obsah konkurence. Identifikuje jejich nejlepší příspěvky a dešifruje vítězné strategie."
+        },
+        "1": {
+          "title": "AI Generování Obrázků",
+          "description": "Vytváří vizuály zastavující scrollování ve vašem stylu značky. Produktové fotky, lifestyle snímky, infografiky—vše automaticky a on-brand."
+        },
+        "2": {
+          "title": "AI Tvorba Videí",
+          "description": "Produkuje krátká videa pro TikTok, Reels a Shorts. Trendové formáty, titulky a hudba—připraveno k publikování."
+        },
+        "3": {
+          "title": "Chytré Časy Publikování",
+          "description": "Analyzuje vzorce engagementu vašeho publika pro nalezení ideálního okna publikování pro každou platformu a typ obsahu."
+        },
+        "4": {
+          "title": "Auto-Publikování Všude",
+          "description": "Publikuje na Instagram, TikTok, Facebook, X, LinkedIn a další—vše z jednoho místa, vše automaticky naplánováno."
+        },
+        "5": {
+          "title": "Analytika Výkonu",
+          "description": "Sleduje engagement, dosah a konverze. AI se učí, co funguje a neustále zlepšuje vaši obsahovou strategii."
+        }
+      }
+    },
+    "metrics": {
+      "badge": "Výsledky",
+      "title": "Obsah, Který Konvertuje",
+      "subtitle": "Měřené výsledky od týmů používajících Tvůrce Obsahu",
+      "metrics": {
+        "0": { "label": "Míra Engagementu", "description": "Průměrný nárůst lajků, komentářů, sdílení" },
+        "1": { "label": "Ušetřený Čas Týdně", "description": "Získaný zpět pro strategii a kreativitu" },
+        "2": { "label": "Objem Obsahu", "description": "Více příspěvků bez většího týmu" },
+        "3": { "label": "Růst Sledujících", "description": "Konzistentní publikování pohání růst publika" }
+      },
+      "comparisonTitle": "Před vs Po Tvůrci Obsahu",
+      "before": {
+        "0": "Manuální denní tvorba obsahu",
+        "1": "Zmeškané optimální časy publikování",
+        "2": "Žádná konkurenční inteligence",
+        "3": "Nekonzistentní vizuály značky",
+        "4": "Reaktivní obsahová strategie"
+      },
+      "after": {
+        "0": "AI generuje obsah na autopilota",
+        "1": "Perfektní timing každého příspěvku",
+        "2": "Konkurenční vhledy v reálném čase",
+        "3": "On-brand vizuály automaticky",
+        "4": "Datově řízená obsahová strategie"
+      }
+    },
+    "platform": {
+      "badge": "Dashboard Obsahu",
+      "title": "Ovládněte Své Obsahové Impérium",
+      "subtitle": "Monitorujte tvorbu, plánování a výkon z jednoho dashboardu."
+    },
+    "useCases": {
+      "badge": "Případy Užití",
+      "title": "Obsah, Který Funguje Pro Každé Odvětví",
+      "subtitle": "Podívejte se, jak různé podniky škálují svou sociální přítomnost s AI",
+      "resultsTitle": "Klíčové Výsledky",
+      "caseStudyCta": "Přečíst Celou Případovou Studii",
+      "useCases": {
+        "0": {
+          "industry": "E-commerce",
+          "title": "Produktový a Lifestyle Obsah",
+          "description": "Generujte nekonečné produktové fotky, lifestyle snímky a propagační obsah. Škálujte svou sociální přítomnost bez škálování týmu.",
+          "results": {
+            "0": "156% nárůst engagementu",
+            "1": "10x více vyprodukovaného obsahu",
+            "2": "45% snížení nákladů na obsah"
+          }
+        },
+        "1": {
+          "industry": "Agentury",
+          "title": "Multi-Klientská Správa Obsahu",
+          "description": "Spravujte obsah pro desítky klientů současně. Každá značka získá unikátní, on-brand obsah bez overheadu.",
+          "results": {
+            "0": "Obsloužení 5x více klientů",
+            "1": "80% snížení produkčního času",
+            "2": "Konzistentní kvalita napříč účty"
+          }
+        },
+        "2": {
+          "industry": "Pohostinství",
+          "title": "Restaurace a Hotely",
+          "description": "Prezentujte svůj podnik, menu a zážitky s úžasným vizuálním obsahem. Udržujte sociální feedy čerstvé bez vytahování personálu.",
+          "results": {
+            "0": "89% růst sledujících za 6 měsíců",
+            "1": "Automaticky čerstvý obsah denně",
+            "2": "3x více uživatelsky generovaného obsahu"
+          }
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integrace",
+      "title": "Publikuje Kde Potřebujete",
+      "subtitle": "Nativní integrace se všemi hlavními sociálními platformami a nástroji",
+      "viewAll": "Zobrazit všechny integrace"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Často Kladené Otázky",
+      "subtitle": "Vše, co potřebujete vědět o Tvůrci Obsahu",
+      "moreQuestions": "Máte stále otázky?",
+      "contactUs": "Kontaktujte náš tým",
+      "faqs": {
+        "0": {
+          "question": "Jaké typy obsahu dokáže vytvořit?",
+          "answer": "Tvůrce Obsahu generuje obrázky (produktové fotky, lifestyle, infografiky), krátká videa (TikTok, Reels, Shorts), karusely, příběhy a textové příspěvky. Veškerý obsah je generován ve vašem stylu značky s vaším hlasem."
+        },
+        "1": {
+          "question": "Jak funguje analýza konkurence?",
+          "answer": "AI monitoruje veřejné sociální profily vašich specifikovaných konkurentů, analyzuje jejich nejlepší obsah, vzorce publikování, hashtagové strategie a trendy engagementu. Identifikuje, co funguje a adaptuje poznatky pro vaši značku."
+        },
+        "2": {
+          "question": "Mohu obsah zkontrolovat před publikováním?",
+          "answer": "Rozhodně. Můžete nastavit schvalovací workflow pro jakýkoli nebo veškerý obsah. Kontrolujte v dávkách, provádějte úpravy, nebo nechte schválené typy obsahu publikovat automaticky, zatímco kontrolujete ostatní."
+        },
+        "3": {
+          "question": "Jak určuje optimální časy publikování?",
+          "answer": "AI analyzuje vaše historická data engagementu, vzorce online aktivity publika a specifické algoritmy platforem, aby identifikovala, kdy váš obsah získá maximální viditelnost a engagement. Neustále se učí a adaptuje."
+        },
+        "4": {
+          "question": "Udržuje hlas a styl mé značky?",
+          "answer": "Ano. Během nastavení se AI naučí vaše brand guidelines, vizuální styl, tón hlasu a preferenace obsahu. Generuje obsah nerozeznatelný od toho, co by vytvořil váš tým."
+        },
+        "5": {
+          "question": "Které sociální platformy podporuje?",
+          "answer": "Instagram, TikTok, Facebook, X (Twitter), LinkedIn, Pinterest, YouTube Shorts a další. Také se integrujeme s nástroji pro správu jako Hootsuite, Buffer a Sprout Social."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Začněte Dnes",
+      "title": "Připraveni 10x Znásobit Produkci Obsahu?",
+      "subtitle": "Podívejte se, jak Tvůrce Obsahu generuje poutavý obsah pro vaši značku—automaticky, konzistentně, on-brand.",
+      "primaryCta": "Požádat o Živé Demo",
+      "secondaryCta": "Mluvit s Prodejem",
+      "trust1": "Bez kreditní karty",
+      "trust2": "Bezplatný pilotní program",
+      "trust3": "Nastavení za 2 týdny"
+    },
+    "inlineCta1": {
+      "title": "Sledujte AI Tvůrce Obsahu v Akci",
+      "subtitle": "Zažijte automatizovanou tvorbu obsahu pro vaši značku.",
+      "cta": "Sledovat Demo"
+    },
+    "inlineCta2": {
+      "badge": "+156% Engagement",
+      "title": "Podívejte se na Tvůrce Obsahu v Akci",
+      "subtitle": "Tvořte, plánujte a publikujte automaticky—naše AI spravuje váš obsah 24/7.",
+      "primaryCta": "Naplánovat Demo",
+      "stats": {
+        "0": "Více Engagementu",
+        "1": "Ušetřený Čas",
+        "2": "Spokojených Klientů",
+        "3": "Podpora"
+      }
+    },
+    "inlineCta3": {
+      "urgency": "Vaše konkurence publikuje 3-5x denně",
+      "title": "Vaši Konkurenti Tvoří Více Obsahu Než Vy",
+      "subtitle": "Nezůstávejte pozadu v závodu o obsah.",
+      "cta": "Začít Dnes"
+    }
   }
-  }
+}
 }

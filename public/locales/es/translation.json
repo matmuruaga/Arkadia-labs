@@ -63,10 +63,12 @@
   "p5": "Agente de Soporte IA mejorando la CX...",
   "p6": "Agente Analista de Datos revelando insights..."
 },
+"badge": "Automatización con IA",
 "voice": {
   "ariaLabel": "Activar/Desactivar Agente de IA",
   "altMascot": "Mascota del agente de IA",
-  "caption": "Hablemos"
+  "caption": "Hablemos",
+  "clickToStart": "Haz clic para iniciar"
 },
 "disclaimer": "Para usar el agente de voz, se necesita un micrófono en tu ordenador y concederle acceso. Las llamadas se graban por motivos de calidad y se eliminan en 30 días. Al usar esta demo, aceptas nuestros <terms>Términos de Uso</terms> y nuestra <privacy>Política de Privacidad</privacy>. Recomendamos usar Chrome para la mejor calidad de audio."
   },
@@ -850,7 +852,958 @@
       "subtitle": "No pierdas deals por seguimiento lento.",
       "cta": "Empezar Hoy"
     }
+  },
+  "sales-agent": {
+    "seo": {
+      "title": "Agente de Ventas IA | Venta y Upselling Autónomo | Elevaite Labs",
+      "description": "Agente de voz con IA que vende tus productos y servicios de forma autónoma. Maneja llamadas entrantes y salientes, cierra ventas e impulsa upsells. Generación de ingresos 24/7 en piloto automático."
+    },
+    "hero": {
+      "badge": "Ventas e Ingresos",
+      "title": "Tu Representante de Ventas IA Que Realmente Cierra",
+      "subtitle": "Generación de Ingresos Autónoma",
+      "description": "Un agente de voz IA cargado con tu catálogo de productos que vende, hace upselling y cierra ventas—entrante o saliente. Trabaja 24/7, nunca descansa y mejora con cada conversación.",
+      "primaryCta": "Verlo Vender",
+      "secondaryCta": "Hablar con Ventas"
+    },
+    "problem": {
+      "badge": "El Problema",
+      "headline": "Tu Equipo de Ventas No Puede Escalar—Pero Tu Competencia Sí",
+      "description": "Cada llamada perdida es una venta perdida. Cada seguimiento lento es dinero yéndose por la puerta. Tu equipo solo puede manejar tantas conversaciones, pero la demanda no espera.",
+      "painPoints": {
+        "0": {
+          "title": "Capacidad de Ventas Limitada",
+          "description": "Tu equipo solo puede atender cierto número de llamadas al día. Las horas pico significan oportunidades perdidas, y escalar significa contratar caro."
+        },
+        "1": {
+          "title": "Rendimiento de Ventas Inconsistente",
+          "description": "Algunos vendedores cierran al 30%, otros al 10%. Días malos, baja energía y rotación significan ingresos impredecibles."
+        },
+        "2": {
+          "title": "Oportunidades de Upsell Perdidas",
+          "description": "Los vendedores se enfocan en cerrar la venta principal y olvidan ofrecer complementos, upgrades o productos que aumentan el ticket promedio."
+        },
+        "3": {
+          "title": "Sin Ingresos Fuera de Horario",
+          "description": "El 60% de las decisiones de compra ocurren fuera del horario laboral. Sin cobertura no hay ventas cuando los clientes están listos para comprar."
+        }
+      },
+      "statistics": {
+        "0": { "label": "de las ventas van al primer vendedor en contactar" },
+        "1": { "label": "de los ingresos van a vendedores que responden rápido" },
+        "2": { "label": "de las ventas requieren 5+ seguimientos" }
+      }
+    },
+    "howItWorks": {
+      "badge": "Cómo Funciona",
+      "title": "Cómo Funciona el Agente de Ventas",
+      "subtitle": "Del catálogo de productos a venta cerrada en una conversación",
+      "steps": {
+        "0": {
+          "title": "Carga Tu Catálogo de Productos",
+          "description": "Sube tus productos, servicios, precios y scripts de ventas. La IA aprende tu oferta, manejadores de objeciones y técnicas de cierre."
+        },
+        "1": {
+          "title": "Atiende Entrante o Saliente",
+          "description": "Maneja llamadas de ventas entrantes o contacta proactivamente a leads. La IA adapta su enfoque según el contexto y señales del cliente."
+        },
+        "2": {
+          "title": "Vende y Hace Upsell Naturalmente",
+          "description": "Presenta productos, maneja objeciones e identifica oportunidades de upsell. La IA sabe cuándo presionar y cuándo escuchar."
+        },
+        "3": {
+          "title": "Cierra y Procesa",
+          "description": "Asegura el compromiso, procesa pedidos y sincroniza todo con tu CRM y plataforma de comercio automáticamente."
+        }
+      }
+    },
+    "features": {
+      "badge": "Características",
+      "title": "Construido para Vender, No Solo Hablar",
+      "subtitle": "Cada característica diseñada para generar ingresos y cerrar ventas",
+      "features": {
+        "0": {
+          "title": "Conocimiento Profundo del Producto",
+          "description": "Cargado con todo tu catálogo, niveles de precios, promociones y posicionamiento competitivo. Responde cualquier pregunta de producto al instante."
+        },
+        "1": {
+          "title": "Motor de Upselling Dinámico",
+          "description": "Identifica oportunidades de upsell y cross-sell basándose en necesidades del cliente, historial de compras y contexto de conversación."
+        },
+        "2": {
+          "title": "Maestría en Objeciones",
+          "description": "Entrenado en miles de conversaciones de ventas para manejar objeciones de precio, comparaciones con competidores y hesitación de compra."
+        },
+        "3": {
+          "title": "Listo para Entrante y Saliente",
+          "description": "Maneja consultas de ventas entrantes y llama proactivamente a leads de tu pipeline. Misma IA, dos fuentes de ingresos."
+        },
+        "4": {
+          "title": "Procesamiento de Pedidos Integrado",
+          "description": "Toma pedidos, procesa pagos y confirma compras directamente en la llamada. Sin fricción, sin ventas perdidas."
+        },
+        "5": {
+          "title": "Aprendizaje Continuo de Rendimiento",
+          "description": "Analiza cada conversación para mejorar tasas de cierre. Aprende qué funciona para tus productos y clientes específicos."
+        }
+      }
+    },
+    "metrics": {
+      "badge": "Resultados",
+      "title": "Resultados de Ingresos Que Importan",
+      "subtitle": "Impacto medido de equipos usando el Agente de Ventas",
+      "metrics": {
+        "0": { "label": "Aumento de Ingresos", "description": "Incremento promedio en ventas mensuales" },
+        "1": { "label": "Conversión de Upsell", "description": "Clientes aceptando ofertas adicionales" },
+        "2": { "label": "Cobertura de Ventas", "description": "Nunca pierdas un momento de compra" },
+        "3": { "label": "Reducción de Costos", "description": "vs. personal humano equivalente" }
+      },
+      "comparisonTitle": "Antes vs Después del Agente de Ventas",
+      "before": {
+        "0": "Limitado a ventas en horario laboral",
+        "1": "Rendimiento inconsistente de vendedores",
+        "2": "Oportunidades de upsell perdidas",
+        "3": "Procesamiento manual de pedidos",
+        "4": "Seguimiento lento de leads"
+      },
+      "after": {
+        "0": "Generación de ingresos 24/7",
+        "1": "Metodología de cierre consistente",
+        "2": "28% de tasa de upsell en cada llamada",
+        "3": "Captura automática de pedidos",
+        "4": "Engagement instantáneo con leads"
+      }
+    },
+    "platform": {
+      "badge": "Dashboard de Ingresos",
+      "title": "Rastrea Cada Peso en Tiempo Real",
+      "subtitle": "Monitorea rendimiento de ventas, tasas de conversión e ingresos desde un solo dashboard."
+    },
+    "useCases": {
+      "badge": "Casos de Uso",
+      "title": "Probado en Múltiples Industrias",
+      "subtitle": "Ve cómo diferentes sectores generan ingresos con ventas IA",
+      "resultsTitle": "Resultados Clave",
+      "useCases": {
+        "0": {
+          "industry": "Seguros",
+          "title": "Ventas y Renovaciones de Pólizas de Seguros",
+          "description": "Vende nuevas pólizas, maneja renovaciones y hace upsell de coberturas. Conversaciones listas para cumplimiento con auditoría completa.",
+          "results": {
+            "0": "42% de aumento en renovaciones de pólizas",
+            "1": "3.2x más upsells por llamada",
+            "2": "Cumplimiento regulatorio completo"
+          }
+        },
+        "1": {
+          "industry": "Telecomunicaciones",
+          "title": "Upgrades de Planes Telecom y Add-ons",
+          "description": "Mejora planes, vende protección de dispositivos y agrupa servicios. Maneja preguntas técnicas y de facturación mientras vende.",
+          "results": {
+            "0": "+$8.50 de aumento en ARPU",
+            "1": "35% de tasa de adhesión a protección de dispositivos",
+            "2": "60% de reducción en llamadas de churn"
+          }
+        },
+        "2": {
+          "industry": "Servicios del Hogar",
+          "title": "Reservas y Upselling de Servicios del Hogar",
+          "description": "Agenda citas, vende planes de mantenimiento y hace upsell de servicios premium. Convierte consultas en ingresos reservados.",
+          "results": {
+            "0": "89% de tasa de completación de reservas",
+            "1": "45% de adhesión a planes de mantenimiento",
+            "2": "Reserva de citas 24/7"
+          }
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integraciones",
+      "title": "Se Conecta a Tu Stack de Ingresos",
+      "subtitle": "Integraciones nativas con plataformas de comercio y CRM",
+      "viewAll": "Ver las 500+ integraciones"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre el Agente de Ventas",
+      "moreQuestions": "¿Aún tienes preguntas?",
+      "contactUs": "Contacta a nuestro equipo",
+      "faqs": {
+        "0": {
+          "question": "¿La IA realmente puede cerrar ventas, no solo calificar?",
+          "answer": "Sí. El Agente de Ventas está entrenado para cerrar ventas, no solo recopilar información. Maneja objeciones, crea urgencia, presenta ofertas y asegura compromisos. Para ventas complejas, también puede calentar leads y agendar reuniones con tu equipo."
+        },
+        "1": {
+          "question": "¿Cómo conoce mis productos y precios?",
+          "answer": "Subes tu catálogo de productos, niveles de precios, promociones y scripts de ventas. La IA aprende tu oferta y puede responder cualquier pregunta de producto, hacer recomendaciones y aplicar los precios correctos automáticamente."
+        },
+        "2": {
+          "question": "¿Puede manejar llamadas entrantes y campañas salientes?",
+          "answer": "Absolutamente. La misma IA maneja consultas de ventas entrantes y puede llamar proactivamente a leads de tu pipeline. Tú controlas la cadencia saliente, scripts y criterios de segmentación."
+        },
+        "3": {
+          "question": "¿Cómo funciona el upselling?",
+          "answer": "La IA identifica oportunidades de upsell basándose en lo que el cliente está comprando, su historial y señales de conversación. Presenta complementos relevantes naturalmente—garantías, upgrades, paquetes, productos complementarios—sin ser insistente."
+        },
+        "4": {
+          "question": "¿Puede procesar pagos en la llamada?",
+          "answer": "Sí. El Agente de Ventas se integra con procesadores de pago como Stripe para capturar detalles de pago de forma segura y procesar pedidos en tiempo real. Los clientes pueden completar su compra sin colgar."
+        },
+        "5": {
+          "question": "¿Qué pasa con ventas complejas que necesitan toque humano?",
+          "answer": "Para ventas de alto valor o complejas, la IA puede calentar la oportunidad y transferir sin problemas a tu equipo de ventas con contexto completo. Tú defines las reglas de cuándo escalar."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Empieza Hoy",
+      "title": "¿Listo para Poner las Ventas en Piloto Automático?",
+      "subtitle": "Ve cómo el Agente de Ventas cierra ventas con tus productos, tus precios, tu metodología de ventas.",
+      "primaryCta": "Solicitar Demo en Vivo",
+      "secondaryCta": "Hablar con Ventas",
+      "trust1": "Sin tarjeta de crédito",
+      "trust2": "Programa piloto gratis",
+      "trust3": "Setup en 2 semanas"
+    },
+    "inlineCta1": {
+      "title": "Ve el Agente de Ventas en Acción",
+      "subtitle": "Mira una demo en vivo cerrando una venta real.",
+      "cta": "Ver Demo"
+    },
+    "inlineCta2": {
+      "badge": "+35% Aumento de Ingresos",
+      "title": "Ve el Agente de Ventas en Acción",
+      "subtitle": "Nuestra IA vende tus productos 24/7—incluso cuando tu equipo duerme.",
+      "primaryCta": "Agendar Demo",
+      "stats": {
+        "0": "Aumento de Ingresos",
+        "1": "Tasa de Upsell",
+        "2": "Clientes Felices",
+        "3": "Soporte"
+      }
+    },
+    "inlineCta3": {
+      "urgency": "Tu competencia nunca duerme",
+      "title": "60% de las Compras Ocurren Fuera de Horario Laboral",
+      "subtitle": "No pierdas ingresos mientras estás cerrado.",
+      "cta": "Empezar Hoy"
+    }
+  },
+  "virtual-receptionist": {
+    "seo": {
+      "title": "Recepcionista Virtual IA | Atención de Llamadas 24/7 | Elevaite Labs",
+      "description": "Recepcionista virtual con IA que atiende llamadas, gestiona consultas y ofrece experiencias excepcionales 24/7. Nunca pierdas una llamada, nunca pierdas un cliente."
+    },
+    "hero": {
+      "badge": "Atención al Cliente",
+      "title": "Tu Recepcionista IA 24/7 Que Nunca Pierde una Llamada",
+      "subtitle": "Siempre Disponible, Siempre Profesional",
+      "description": "Un agente de voz IA que contesta llamadas, maneja consultas, toma mensajes y enruta conversaciones—con la calidez y profesionalismo de tu mejor recepcionista. Disponible las 24 horas.",
+      "primaryCta": "Escúchalo en Vivo",
+      "secondaryCta": "Hablar con Ventas"
+    },
+    "problem": {
+      "badge": "El Problema",
+      "headline": "Cada Llamada Perdida Es una Oportunidad Perdida",
+      "description": "Tu teléfono suena a las 2 AM. Un cliente potencial llama durante la hora pico. Las consultas del fin de semana van al buzón de voz. Sin cobertura 24/7, estás perdiendo negocios ante competidores que sí contestan.",
+      "painPoints": {
+        "0": {
+          "title": "Brechas Fuera de Horario",
+          "description": "El 62% de las llamadas ocurren fuera del horario laboral. El buzón de voz mata las conversiones—los clientes cuelgan y llaman a tu competencia."
+        },
+        "1": {
+          "title": "Recepción Abrumada",
+          "description": "Tu recepcionista hace malabares con visitas, emails y llamadas. Las horas pico significan largas esperas y clientes frustrados."
+        },
+        "2": {
+          "title": "Experiencia Inconsistente",
+          "description": "Diferente personal, diferentes niveles de servicio. Los nuevos empleados tardan meses en aprender tus procesos. Los días de enfermedad significan errores."
+        },
+        "3": {
+          "title": "Altos Costos de Personal",
+          "description": "Los recepcionistas a tiempo completo cuestan $35,000-$50,000/año. La cobertura 24/7 requiere múltiples contrataciones o servicios de contestador caros."
+        }
+      },
+      "statistics": {
+        "0": { "label": "de las llamadas ocurren fuera del horario laboral" },
+        "1": { "label": "de los que llaman no vuelven a llamar después del buzón de voz" },
+        "2": { "label": "de los clientes cuelgan cuando no pueden hablar con una persona" }
+      }
+    },
+    "howItWorks": {
+      "badge": "Cómo Funciona",
+      "title": "Cómo Funciona el Recepcionista Virtual",
+      "subtitle": "De llamada entrante a consulta resuelta en segundos",
+      "steps": {
+        "0": {
+          "title": "Contesta Cada Llamada al Instante",
+          "description": "Sin tonos, sin música de espera. La IA contesta inmediatamente con un saludo cálido y profesional personalizado para tu marca."
+        },
+        "1": {
+          "title": "Entiende y Responde Naturalmente",
+          "description": "Maneja preguntas comunes, proporciona información y mantiene conversaciones naturales—como lo haría tu mejor recepcionista."
+        },
+        "2": {
+          "title": "Enruta o Resuelve",
+          "description": "Resuelve la consulta directamente o enruta inteligentemente a la persona correcta con contexto completo. Sin transferencias frías."
+        },
+        "3": {
+          "title": "Registra y Da Seguimiento",
+          "description": "Cada interacción se registra, transcribe y sincroniza con tus sistemas. Los seguimientos automatizados aseguran que nada se pierda."
+        }
+      }
+    },
+    "features": {
+      "badge": "Características",
+      "title": "Construido para Experiencias Excepcionales",
+      "subtitle": "Cada característica diseñada para que los clientes se sientan valorados",
+      "features": {
+        "0": {
+          "title": "Respuesta Instantánea de Llamadas",
+          "description": "Cero tiempo de espera. Cada llamada contestada al primer tono con un saludo consistente y profesional 24/7/365."
+        },
+        "1": {
+          "title": "Flujo de Conversación Natural",
+          "description": "Sin scripts robóticos. La IA mantiene diálogos naturales, maneja interrupciones y se adapta a las emociones del cliente."
+        },
+        "2": {
+          "title": "Enrutamiento Inteligente de Llamadas",
+          "description": "Enruta llamadas al departamento o persona correcta según el tipo de consulta, urgencia y disponibilidad."
+        },
+        "3": {
+          "title": "Soporte Multilingüe",
+          "description": "Habla múltiples idiomas con fluidez. Detecta automáticamente el idioma del cliente y responde acorde."
+        },
+        "4": {
+          "title": "Programación de Citas",
+          "description": "Agenda citas, gestiona reservas y sincroniza con tus sistemas de calendario en tiempo real."
+        },
+        "5": {
+          "title": "Integración con CRM y Sistemas",
+          "description": "Se conecta con tus herramientas existentes. Registra llamadas, actualiza registros y activa flujos de trabajo automáticamente."
+        }
+      }
+    },
+    "metrics": {
+      "badge": "Resultados",
+      "title": "Resultados Reales, Impacto Real",
+      "subtitle": "Resultados medidos de negocios usando el Recepcionista Virtual",
+      "metrics": {
+        "0": { "label": "Llamadas Contestadas", "description": "Nunca pierdas otra oportunidad" },
+        "1": { "label": "Satisfacción del Cliente", "description": "Mejores puntuaciones CSAT en general" },
+        "2": { "label": "Más Reseñas", "description": "Mayor generación de reseñas positivas" },
+        "3": { "label": "ROI en 12 Meses", "description": "Retorno de inversión comprobado" }
+      },
+      "comparisonTitle": "Antes vs Después del Recepcionista Virtual",
+      "before": {
+        "0": "Llamadas perdidas fuera de horario",
+        "1": "Largos tiempos de espera en horas pico",
+        "2": "Experiencia inconsistente para clientes",
+        "3": "Soporte de idiomas limitado",
+        "4": "Toma de mensajes y enrutamiento manual"
+      },
+      "after": {
+        "0": "Respuesta instantánea 24/7",
+        "1": "Cero tiempo de espera en cada llamada",
+        "2": "Servicio consistente y profesional",
+        "3": "Conversaciones multilingües",
+        "4": "Registro y seguimiento automatizado"
+      }
+    },
+    "platform": {
+      "badge": "Dashboard de Recepción",
+      "title": "Ve Cada Interacción en Tiempo Real",
+      "subtitle": "Monitorea volúmenes de llamadas, tasas de resolución y satisfacción del cliente desde un solo dashboard."
+    },
+    "useCases": {
+      "badge": "Casos de Uso",
+      "title": "Perfecto para Negocios Centrados en el Cliente",
+      "subtitle": "Ve cómo diferentes industrias ofrecen experiencias excepcionales con recepción IA",
+      "resultsTitle": "Resultados Clave",
+      "caseStudyCta": "Leer Caso de Estudio Completo",
+      "useCases": {
+        "0": {
+          "industry": "Hospitalidad",
+          "title": "Hoteles y Alquileres Vacacionales",
+          "description": "Maneja consultas de huéspedes, gestiona reservas y ofrece servicio de conserjería 24/7 sin expandir el personal.",
+          "results": {
+            "0": "11% de aumento en satisfacción del huésped",
+            "1": "78% más reseñas positivas",
+            "2": "Cobertura de soporte al huésped 24/7"
+          }
+        },
+        "1": {
+          "industry": "Salud",
+          "title": "Consultorios Médicos y Dentales",
+          "description": "Programa citas, maneja solicitudes de recetas y triaja llamadas urgentes—cumple con HIPAA.",
+          "results": {
+            "0": "40% de reducción en ausencias",
+            "1": "90% de llamadas resueltas sin personal",
+            "2": "Enrutamiento de urgencias fuera de horario"
+          }
+        },
+        "2": {
+          "industry": "Servicios Profesionales",
+          "title": "Bufetes de Abogados y Consultorías",
+          "description": "Filtra clientes potenciales, programa consultas y asegura que cada consulta reciba una respuesta profesional.",
+          "results": {
+            "0": "35% más consultas calificadas",
+            "1": "Cero llamadas de clientes perdidas",
+            "2": "Mejor proceso de captación de clientes"
+          }
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integraciones",
+      "title": "Se Conecta a Tus Sistemas de Negocio",
+      "subtitle": "Integraciones nativas con las herramientas que ya usas",
+      "viewAll": "Ver todas las integraciones"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre el Recepcionista Virtual",
+      "moreQuestions": "¿Aún tienes preguntas?",
+      "contactUs": "Contacta a nuestro equipo",
+      "faqs": {
+        "0": {
+          "question": "¿Suena como una persona real?",
+          "answer": "Sí. Nuestra IA usa síntesis de voz avanzada para ofrecer conversaciones naturales y cálidas. La mayoría de los clientes no se dan cuenta de que están hablando con IA. Puedes personalizar la voz, tono y personalidad para que coincida con tu marca."
+        },
+        "1": {
+          "question": "¿Puede manejar consultas complejas?",
+          "answer": "La IA maneja la mayoría de consultas comunes de forma independiente. Para situaciones complejas, transfiere sin problemas a un humano con contexto completo—el cliente nunca tiene que repetirse."
+        },
+        "2": {
+          "question": "¿Cómo aprende sobre mi negocio?",
+          "answer": "Entrenamos la IA con tu negocio específico: servicios, políticas, FAQs y procesos. Puede responder preguntas sobre tu negocio tan precisamente como un empleado entrenado."
+        },
+        "3": {
+          "question": "¿Qué idiomas soporta?",
+          "answer": "El Recepcionista Virtual soporta más de 20 idiomas incluyendo inglés, español, francés, alemán y mandarín. Detecta automáticamente el idioma del cliente y responde acorde."
+        },
+        "4": {
+          "question": "¿Puede agendar citas?",
+          "answer": "Sí. La IA se integra con Google Calendar, Outlook, Calendly y otros sistemas de programación para agendar citas en tiempo real, verificando disponibilidad y enviando confirmaciones."
+        },
+        "5": {
+          "question": "¿Qué pasa durante una interrupción?",
+          "answer": "Nuestra infraestructura funciona en sistemas redundantes con 99.99% de uptime. En el raro caso de un problema, las llamadas pueden configurarse para redirigir a tu número de respaldo o buzón de voz."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Empieza Hoy",
+      "title": "¿Listo para No Perder Nunca Más una Llamada?",
+      "subtitle": "Ve cómo el Recepcionista Virtual maneja tus llamadas—con la info de tu negocio, la voz de tu marca, tus procesos.",
+      "primaryCta": "Solicitar Demo en Vivo",
+      "secondaryCta": "Hablar con Ventas",
+      "trust1": "Sin tarjeta de crédito",
+      "trust2": "Programa piloto gratis",
+      "trust3": "Setup en 2 semanas"
+    },
+    "inlineCta1": {
+      "title": "Escucha al Recepcionista IA en Vivo",
+      "subtitle": "Experimenta una llamada real manejada por nuestra IA.",
+      "cta": "Escuchar Ahora"
+    },
+    "inlineCta2": {
+      "badge": "99.9% Llamadas Contestadas",
+      "title": "Ve el Recepcionista Virtual en Acción",
+      "subtitle": "Nunca pierdas otra oportunidad—nuestra IA contesta cada llamada, 24/7.",
+      "primaryCta": "Agendar Demo",
+      "stats": {
+        "0": "Llamadas Contestadas",
+        "1": "Satisfacción del Cliente",
+        "2": "Clientes Felices",
+        "3": "Soporte"
+      }
+    },
+    "inlineCta3": {
+      "urgency": "62% de las llamadas ocurren fuera de horario",
+      "title": "Tu Competencia Está Contestando Cuando Tú No",
+      "subtitle": "No pierdas clientes por el buzón de voz.",
+      "cta": "Empezar Hoy"
+    }
+  },
+  "booking-agent": {
+    "seo": {
+      "title": "Agente de Reservas IA | Reservaciones Automatizadas para Restaurantes y Hoteles | Elevaite Labs",
+      "description": "Agente de reservas con IA que gestiona reservaciones 24/7 para restaurantes, hoteles y negocios de hospitalidad. Maximiza la ocupación, reduce no-shows y ofrece experiencias excepcionales."
+    },
+    "hero": {
+      "badge": "Reservas y Hospitalidad",
+      "title": "Tu Agente de Reservas IA Que Nunca Duerme",
+      "subtitle": "Cada Mesa Llena, Cada Habitación Ocupada",
+      "description": "Un agente de voz IA que gestiona reservaciones, maneja disponibilidad, confirma reservas y reduce no-shows—para restaurantes, hoteles, spas y cualquier negocio donde cada asiento importa. 24/7, multilingüe, completamente integrado.",
+      "primaryCta": "Escúchalo en Acción",
+      "secondaryCta": "Hablar con Ventas"
+    },
+    "problem": {
+      "badge": "El Problema",
+      "headline": "Las Mesas Vacías y Habitaciones Libres Te Cuestan Miles",
+      "description": "Cada llamada sin contestar es una reserva perdida. Cada no-show es inventario desperdiciado. Tu personal está abrumado en horas pico mientras las llamadas fuera de horario van al buzón de voz. ¿El resultado? Ingresos perdidos y huéspedes frustrados.",
+      "painPoints": {
+        "0": {
+          "title": "Llamadas de Reserva Perdidas",
+          "description": "El 35% de las llamadas a restaurantes no se contestan en horas pico. Cada llamada perdida es una mesa potencial de $150+ que se va."
+        },
+        "1": {
+          "title": "No-Shows Costosos",
+          "description": "El restaurante promedio pierde $75,000/año por no-shows. Los hoteles ven tasas de 10-15%, costando millones en ingresos perdidos."
+        },
+        "2": {
+          "title": "Personal Abrumado",
+          "description": "Tu equipo hace malabares con walk-ins, llamadas y solicitudes online. Las horas pico significan largas esperas y errores de reserva."
+        },
+        "3": {
+          "title": "Vacío Fuera de Horario",
+          "description": "El 40% de las reservas se solicitan fuera del horario laboral. El buzón de voz significa reservas perdidas ante competidores que sí contestan."
+        }
+      },
+      "statistics": {
+        "0": { "label": "de llamadas a restaurantes no se contestan en hora pico" },
+        "1": { "label": "de ingresos anuales promedio perdidos por no-shows" },
+        "2": { "label": "de solicitudes de reserva ocurren fuera de horario" }
+      }
+    },
+    "howItWorks": {
+      "badge": "Cómo Funciona",
+      "title": "Cómo Funciona el Agente de Reservas",
+      "subtitle": "De llamada entrante a reservación confirmada en segundos",
+      "steps": {
+        "0": {
+          "title": "Contesta Cada Llamada de Reserva",
+          "description": "Respuesta instantánea, sin música de espera. La IA saluda cálidamente y entiende que quieren hacer, modificar o cancelar una reserva."
+        },
+        "1": {
+          "title": "Verifica Disponibilidad en Tiempo Real",
+          "description": "Se conecta a tu PMS o sistema de reservas para verificar disponibilidad en vivo. Ofrece alternativas si el horario solicitado está lleno."
+        },
+        "2": {
+          "title": "Confirma y Captura Detalles",
+          "description": "Hace la reserva, captura solicitudes especiales, necesidades dietéticas y detalles de ocasión. Envía confirmación instantánea por SMS o email."
+        },
+        "3": {
+          "title": "Reduce No-Shows Automáticamente",
+          "description": "Envía recordatorios inteligentes en momentos óptimos. Maneja confirmaciones, modificaciones y gestión de lista de espera automáticamente."
+        }
+      }
+    },
+    "features": {
+      "badge": "Características",
+      "title": "Construido para la Excelencia en Hospitalidad",
+      "subtitle": "Cada característica diseñada para maximizar ocupación y satisfacción del huésped",
+      "features": {
+        "0": {
+          "title": "Reservación Instantánea",
+          "description": "Reserva mesas y habitaciones en tiempo real. Sincroniza con tu PMS, OpenTable, Resy o cualquier sistema de reservas al instante."
+        },
+        "1": {
+          "title": "Gestión Inteligente de Lista de Espera",
+          "description": "Gestiona automáticamente listas de espera, notifica a huéspedes cuando hay mesas disponibles y llena cancelaciones en minutos."
+        },
+        "2": {
+          "title": "Sistema de Prevención de No-Shows",
+          "description": "Recordatorios de confirmación inteligentes en momentos óptimos. Detecta reservas en riesgo y reconfirma proactivamente."
+        },
+        "3": {
+          "title": "Manejo de Solicitudes Especiales",
+          "description": "Captura restricciones dietéticas, alergias, celebraciones y preferencias. Pasa los detalles a tu equipo automáticamente."
+        },
+        "4": {
+          "title": "Reservaciones Multilingües",
+          "description": "Toma reservas en más de 20 idiomas. Perfecto para huéspedes internacionales y destinos turísticos."
+        },
+        "5": {
+          "title": "Optimización de Ingresos",
+          "description": "Sugiere horarios óptimos de reserva, vende opciones premium y maximiza cubiertos por servicio."
+        }
+      }
+    },
+    "metrics": {
+      "badge": "Resultados",
+      "title": "Resultados Reales para Hospitalidad",
+      "subtitle": "Resultados medidos de restaurantes y hoteles usando el Agente de Reservas",
+      "metrics": {
+        "0": { "label": "Más Reservaciones", "description": "Capturando cada llamada 24/7" },
+        "1": { "label": "Tasa de No-Show", "description": "Mediante sistema de confirmación inteligente" },
+        "2": { "label": "Utilización de Mesas", "description": "Asientos y rotación optimizados" },
+        "3": { "label": "ROI en el Primer Año", "description": "Ingresos recuperados solo de no-shows" }
+      },
+      "comparisonTitle": "Antes vs Después del Agente de Reservas",
+      "before": {
+        "0": "Llamadas perdidas en horas pico",
+        "1": "Tasa de no-show del 15-20%",
+        "2": "Llamadas de confirmación manuales",
+        "3": "Mesas vacías por cancelaciones tardías",
+        "4": "Barreras de idioma con huéspedes internacionales"
+      },
+      "after": {
+        "0": "100% de llamadas contestadas al instante",
+        "1": "Tasa de no-show menor al 5%",
+        "2": "Recordatorios inteligentes automatizados",
+        "3": "Lista de espera llena cancelaciones en minutos",
+        "4": "Servicio multilingüe sin problemas"
+      }
+    },
+    "platform": {
+      "badge": "Dashboard de Reservaciones",
+      "title": "Ve Cada Reserva en Tiempo Real",
+      "subtitle": "Monitorea reservaciones, tasas de no-show y ocupación desde un solo dashboard."
+    },
+    "useCases": {
+      "badge": "Casos de Uso",
+      "title": "Construido para Todo Negocio de Hospitalidad",
+      "subtitle": "Ve cómo diferentes industrias maximizan reservas con IA",
+      "resultsTitle": "Resultados Clave",
+      "caseStudyCta": "Leer Caso de Estudio Completo",
+      "useCases": {
+        "0": {
+          "industry": "Restaurantes",
+          "title": "Restaurantes Finos y Casuales",
+          "description": "Maneja llamadas de reserva 24/7, gestiona listas de espera, reduce no-shows y captura detalles de ocasiones especiales automáticamente.",
+          "results": {
+            "0": "32% de aumento en reservaciones",
+            "1": "67% de reducción en no-shows",
+            "2": "94% de utilización de mesas alcanzado"
+          }
+        },
+        "1": {
+          "industry": "Hoteles",
+          "title": "Hoteles y Alquileres Vacacionales",
+          "description": "Reserva habitaciones, gestiona disponibilidad entre canales, maneja modificaciones y maximiza ocupación con llamadas potenciadas por IA.",
+          "results": {
+            "0": "+18% reservas directas",
+            "1": "45% reducción en dependencia de OTAs",
+            "2": "Cobertura de reservaciones 24/7"
+          }
+        },
+        "2": {
+          "industry": "Spas y Bienestar",
+          "title": "Spas, Salones y Centros de Bienestar",
+          "description": "Programa citas, gestiona disponibilidad de terapeutas, maneja reservas de paquetes y envía recordatorios automatizados.",
+          "results": {
+            "0": "40% más citas agendadas",
+            "1": "55% menos cancelaciones de último minuto",
+            "2": "Venta de paquetes sin esfuerzo"
+          }
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integraciones",
+      "title": "Se Conecta a Tu Stack de Hospitalidad",
+      "subtitle": "Integraciones nativas con plataformas líderes de PMS y reservaciones",
+      "viewAll": "Ver todas las integraciones"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre el Agente de Reservas",
+      "moreQuestions": "¿Aún tienes preguntas?",
+      "contactUs": "Contacta a nuestro equipo",
+      "faqs": {
+        "0": {
+          "question": "¿Con qué sistemas de reservas se integra?",
+          "answer": "El Agente de Reservas se integra con OpenTable, Resy, SevenRooms, Yelp Reservations y sistemas POS/PMS personalizados. Para hoteles, soportamos Cloudbeds, Mews, Oracle Opera y los principales channel managers."
+        },
+        "1": {
+          "question": "¿Cómo reduce los no-shows?",
+          "answer": "La IA envía recordatorios de confirmación inteligentes en momentos óptimos basados en patrones de reserva. Detecta reservas en riesgo y reconfirma proactivamente. Para reservas de alto valor, puede requerir retención de tarjeta de crédito o depósitos."
+        },
+        "2": {
+          "question": "¿Puede manejar solicitudes de reserva complejas?",
+          "answer": "Sí. La IA maneja cambios de tamaño de grupo, solicitudes especiales de asientos, requisitos dietéticos, detalles de celebraciones y estadías de hotel de varios días. Para casos extremos, transfiere sin problemas a tu personal con contexto completo."
+        },
+        "3": {
+          "question": "¿Qué pasa con walk-ins y reservas por teléfono juntos?",
+          "answer": "El sistema mantiene sincronización de disponibilidad en tiempo real. Cuando un walk-in se sienta, la disponibilidad se actualiza al instante. La IA solo ofrece horarios que están genuinamente disponibles."
+        },
+        "4": {
+          "question": "¿Funciona para múltiples ubicaciones?",
+          "answer": "Absolutamente. El Agente de Reservas puede gestionar reservaciones en múltiples restaurantes o hoteles desde un solo sistema, enrutando a los clientes a la propiedad correcta automáticamente."
+        },
+        "5": {
+          "question": "¿Cómo funciona la gestión de lista de espera?",
+          "answer": "Cuando está lleno, la IA ofrece agregar huéspedes a la lista de espera. Cuando ocurren cancelaciones, contacta automáticamente a los huéspedes en lista de espera en orden y reserva al primero en confirmar—usualmente llenando el espacio en minutos."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Empieza Hoy",
+      "title": "¿Listo para Llenar Cada Mesa, Cada Noche?",
+      "subtitle": "Ve cómo el Agente de Reservas maneja tus reservaciones—con tu disponibilidad, tus políticas, tu experiencia de huésped.",
+      "primaryCta": "Solicitar Demo en Vivo",
+      "secondaryCta": "Hablar con Ventas",
+      "trust1": "Sin tarjeta de crédito",
+      "trust2": "Programa piloto gratis",
+      "trust3": "Setup en 2 semanas"
+    },
+    "inlineCta1": {
+      "title": "Escucha al Agente de Reservas IA en Vivo",
+      "subtitle": "Experimenta una llamada de reservación real manejada por nuestra IA.",
+      "cta": "Escuchar Ahora"
+    },
+    "inlineCta2": {
+      "badge": "67% Menos No-Shows",
+      "title": "Ve el Agente de Reservas en Acción",
+      "subtitle": "Llena cada mesa, cada noche—nuestra IA maneja reservaciones 24/7.",
+      "primaryCta": "Agendar Demo",
+      "stats": {
+        "0": "Más Reservaciones",
+        "1": "Reducción de No-Shows",
+        "2": "Restaurantes Felices",
+        "3": "Soporte"
+      }
+    },
+    "inlineCta3": {
+      "urgency": "40% de reservas solicitadas fuera de horario",
+      "title": "Tu Competencia Está Tomando Reservas Cuando Tú No",
+      "subtitle": "No pierdas huéspedes por el buzón de voz.",
+      "cta": "Empezar Hoy"
+    }
+  },
+  "content-creator": {
+  "seo": {
+    "title": "Creador de Contenido IA | Contenido y Publicación Automática para Redes Sociales | Elevaite Labs",
+    "description": "Creador de contenido potenciado por IA que genera imágenes, videos y publicaciones. Analiza competidores, encuentra horarios óptimos de publicación y publica automáticamente en todas las plataformas."
+  },
+  "hero": {
+    "badge": "Marketing y Contenido",
+    "title": "Tu Equipo de Contenido IA Que Nunca Deja de Crear",
+    "subtitle": "Investiga. Crea. Publica. Optimiza. Repite.",
+    "description": "Un agente de IA que analiza contenido de competidores, genera imágenes y videos impresionantes, identifica los mejores horarios de publicación, publica automáticamente y hace seguimiento del rendimiento—todo mientras tú te enfocas en la estrategia.",
+    "primaryCta": "Míralo Crear",
+    "secondaryCta": "Hablar con Ventas"
+  },
+  "problem": {
+    "badge": "El Problema",
+    "headline": "La Creación de Contenido Está Agotando a Tu Equipo de Marketing",
+    "description": "La bestia de las redes sociales nunca está satisfecha. Necesitas contenido fresco diario en múltiples plataformas, pero tu equipo se ahoga en producción mientras los competidores te superan.",
+    "painPoints": {
+      "0": {
+        "title": "La Rueda del Contenido",
+        "description": "Los algoritmos sociales demandan 3-5 publicaciones por plataforma al día. Tu equipo pasa el 60% de su tiempo creando contenido en lugar de estrategia."
+      },
+      "1": {
+        "title": "Publicación Inconsistente",
+        "description": "Los horarios de publicación perdidos hunden el engagement. Los horarios óptimos varían por plataforma y audiencia, y tu equipo no puede estar online 24/7."
+      },
+      "2": {
+        "title": "Agotamiento Creativo",
+        "description": "Producir contenido fresco y atractivo diariamente lleva al agotamiento y calidad decreciente. Las grandes ideas se convierten en mediocridad reciclada."
+      },
+      "3": {
+        "title": "Competencia a Ciegas",
+        "description": "Las estrategias ganadoras de los competidores siguen siendo un misterio. El monitoreo manual consume tiempo y los insights llegan demasiado tarde."
+      }
+    },
+    "statistics": {
+      "0": { "label": "de marketers gastan en creación de contenido vs estrategia" },
+      "1": { "label": "de marcas luchan con publicación consistente" },
+      "2": { "label": "de equipos de contenido reportan agotamiento creativo" }
+    }
+  },
+  "howItWorks": {
+    "badge": "Cómo Funciona",
+    "title": "Cómo Funciona el Creador de Contenido",
+    "subtitle": "De insight competitivo a contenido viral en minutos",
+    "steps": {
+      "0": {
+        "title": "Analiza e Investiga",
+        "description": "Analiza contenido de competidores, identifica tendencias y analiza qué funciona en tu nicho. Encuentra brechas y oportunidades de contenido."
+      },
+      "1": {
+        "title": "Genera Contenido",
+        "description": "Crea imágenes impresionantes, videos atractivos y textos convincentes usando IA. Coincide perfectamente con tu voz de marca y estilo visual."
+      },
+      "2": {
+        "title": "Optimiza y Programa",
+        "description": "Identifica el horario óptimo de publicación para cada plataforma basado en datos de tu audiencia. Programa contenido para máximo engagement."
+      },
+      "3": {
+        "title": "Publica y Rastrea",
+        "description": "Publica automáticamente en todas las plataformas. Monitorea rendimiento y aprende qué funciona para mejorar contenido futuro."
+      }
+    }
+  },
+  "features": {
+    "badge": "Características",
+    "title": "Tu Motor de Contenido Completo",
+    "subtitle": "Cada característica diseñada para superar a tu competencia",
+    "features": {
+      "0": {
+        "title": "Inteligencia Competitiva",
+        "description": "Analiza automáticamente contenido de competidores. Identifica sus mejores publicaciones y descifra estrategias ganadoras."
+      },
+      "1": {
+        "title": "Generación de Imágenes IA",
+        "description": "Crea visuales que detienen el scroll en tu estilo de marca. Fotos de productos, imágenes lifestyle, infografías—todo automático y on-brand."
+      },
+      "2": {
+        "title": "Creación de Videos IA",
+        "description": "Produce videos cortos para TikTok, Reels y Shorts. Formatos trending, subtítulos y música—listos para publicar."
+      },
+      "3": {
+        "title": "Horarios Inteligentes",
+        "description": "Analiza patrones de engagement de tu audiencia para encontrar la ventana perfecta de publicación para cada plataforma y tipo de contenido."
+      },
+      "4": {
+        "title": "Auto-Publicación Everywhere",
+        "description": "Publica en Instagram, TikTok, Facebook, X, LinkedIn y más—todo desde un lugar, todo programado automáticamente."
+      },
+      "5": {
+        "title": "Analítica de Rendimiento",
+        "description": "Rastrea engagement, alcance y conversiones. La IA aprende qué funciona y mejora continuamente tu estrategia de contenido."
+      }
+    }
+  },
+  "metrics": {
+    "badge": "Resultados",
+    "title": "Contenido Que Convierte",
+    "subtitle": "Resultados medidos de equipos usando el Creador de Contenido",
+    "metrics": {
+      "0": { "label": "Tasa de Engagement", "description": "Aumento promedio en likes, comentarios, shares" },
+      "1": { "label": "Tiempo Ahorrado Semanalmente", "description": "Recuperado para estrategia y creatividad" },
+      "2": { "label": "Volumen de Contenido", "description": "Más publicaciones sin más personal" },
+      "3": { "label": "Crecimiento de Seguidores", "description": "La publicación consistente impulsa crecimiento de audiencia" }
+    },
+    "comparisonTitle": "Antes vs Después del Creador de Contenido",
+    "before": {
+      "0": "Creación manual de contenido diaria",
+      "1": "Horarios óptimos de publicación perdidos",
+      "2": "Sin inteligencia competitiva",
+      "3": "Visuales de marca inconsistentes",
+      "4": "Estrategia de contenido reactiva"
+    },
+    "after": {
+      "0": "IA genera contenido en autopiloto",
+      "1": "Timing perfecto en cada publicación",
+      "2": "Insights competitivos en tiempo real",
+      "3": "Visuales on-brand automáticamente",
+      "4": "Estrategia de contenido basada en datos"
+    }
+  },
+  "platform": {
+    "badge": "Dashboard de Contenido",
+    "title": "Comanda Tu Imperio de Contenido",
+    "subtitle": "Monitorea creación, programación y rendimiento desde un solo dashboard."
+  },
+  "useCases": {
+    "badge": "Casos de Uso",
+    "title": "Contenido Que Funciona para Cada Industria",
+    "subtitle": "Mira cómo diferentes negocios escalan su presencia social con IA",
+    "resultsTitle": "Resultados Clave",
+    "caseStudyCta": "Leer Caso de Estudio Completo",
+    "useCases": {
+      "0": {
+        "industry": "E-commerce",
+        "title": "Contenido de Producto y Lifestyle",
+        "description": "Genera fotos de productos infinitas, imágenes lifestyle y contenido promocional. Escala tu presencia social sin escalar tu equipo.",
+        "results": {
+          "0": "156% de aumento en engagement",
+          "1": "10x más contenido producido",
+          "2": "45% de reducción en costos de contenido"
+        }
+      },
+      "1": {
+        "industry": "Agencias",
+        "title": "Gestión de Contenido Multi-Cliente",
+        "description": "Gestiona contenido para docenas de clientes simultáneamente. Cada marca obtiene contenido único y on-brand sin el overhead.",
+        "results": {
+          "0": "Maneja 5x más clientes",
+          "1": "80% de reducción en tiempo de producción",
+          "2": "Calidad consistente en todas las cuentas"
+        }
+      },
+      "2": {
+        "industry": "Hospitalidad",
+        "title": "Restaurantes y Hoteles",
+        "description": "Muestra tu local, menú y experiencias con contenido visual impresionante. Mantén feeds sociales frescos sin sacar personal.",
+        "results": {
+          "0": "89% crecimiento de seguidores en 6 meses",
+          "1": "Contenido fresco diario automáticamente",
+          "2": "3x más contenido generado por usuarios"
+        }
+      }
+    }
+  },
+  "integrations": {
+    "badge": "Integraciones",
+    "title": "Publica Donde Lo Necesites",
+    "subtitle": "Integraciones nativas con todas las principales plataformas sociales y herramientas",
+    "viewAll": "Ver todas las integraciones"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre el Creador de Contenido",
+    "moreQuestions": "¿Aún tienes preguntas?",
+    "contactUs": "Contacta a nuestro equipo",
+    "faqs": {
+      "0": {
+        "question": "¿Qué tipos de contenido puede crear?",
+        "answer": "El Creador de Contenido genera imágenes (fotos de productos, lifestyle, infografías), videos cortos (TikTok, Reels, Shorts), carruseles, stories y publicaciones escritas. Todo el contenido se genera en tu estilo de marca con tu voz."
+      },
+      "1": {
+        "question": "¿Cómo funciona el análisis de competidores?",
+        "answer": "La IA monitorea los perfiles sociales públicos de tus competidores especificados, analizando su contenido de mejor rendimiento, patrones de publicación, estrategias de hashtags y tendencias de engagement. Identifica qué funciona y adapta los insights para tu marca."
+      },
+      "2": {
+        "question": "¿Puedo revisar el contenido antes de publicarlo?",
+        "answer": "Absolutamente. Puedes configurar flujos de aprobación para cualquier o todo el contenido. Revisa en lotes, haz ediciones, o deja que los tipos de contenido aprobados se publiquen automáticamente mientras revisas otros."
+      },
+      "3": {
+        "question": "¿Cómo determina los horarios óptimos de publicación?",
+        "answer": "La IA analiza tus datos históricos de engagement, patrones de audiencia online y algoritmos específicos de plataforma para identificar cuándo tu contenido obtendrá máxima visibilidad y engagement. Aprende y se adapta continuamente."
+      },
+      "4": {
+        "question": "¿Mantiene mi voz y estilo de marca?",
+        "answer": "Sí. Durante la configuración, la IA aprende tus guías de marca, estilo visual, tono de voz y preferencias de contenido. Genera contenido indistinguible de lo que crearía tu equipo."
+      },
+      "5": {
+        "question": "¿Qué plataformas sociales soporta?",
+        "answer": "Instagram, TikTok, Facebook, X (Twitter), LinkedIn, Pinterest, YouTube Shorts y más. También nos integramos con herramientas de gestión como Hootsuite, Buffer y Sprout Social."
+      }
+    }
+  },
+  "cta": {
+    "badge": "Empieza Hoy",
+    "title": "¿Listo para Multiplicar x10 Tu Producción de Contenido?",
+    "subtitle": "Mira cómo el Creador de Contenido genera contenido atractivo para tu marca—automáticamente, consistentemente, on-brand.",
+    "primaryCta": "Solicitar Demo en Vivo",
+    "secondaryCta": "Hablar con Ventas",
+    "trust1": "Sin tarjeta de crédito",
+    "trust2": "Programa piloto gratis",
+    "trust3": "Setup en 2 semanas"
+  },
+  "inlineCta1": {
+    "title": "Mira al Creador de Contenido IA en Acción",
+    "subtitle": "Experimenta creación de contenido automatizada para tu marca.",
+    "cta": "Ver Demo"
+  },
+  "inlineCta2": {
+    "badge": "+156% Engagement",
+    "title": "Mira el Creador de Contenido en Acción",
+    "subtitle": "Crea, programa y publica automáticamente—nuestra IA maneja tu contenido 24/7.",
+    "primaryCta": "Agendar Demo",
+    "stats": {
+      "0": "Más Engagement",
+      "1": "Ahorro de Tiempo",
+      "2": "Clientes Felices",
+      "3": "Soporte"
+    }
+  },
+  "inlineCta3": {
+    "urgency": "Tu competencia publica 3-5 veces al día",
+    "title": "Tus Competidores Están Creando Más Contenido Que Tú",
+    "subtitle": "No te quedes atrás en la carrera del contenido.",
+    "cta": "Empezar Hoy"
   }
+}
 },
 "footer": {
   "altLogo": "Logo de Arkadia Labs",

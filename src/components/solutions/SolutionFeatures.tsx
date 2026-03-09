@@ -5,7 +5,8 @@ import {
   MailCheck, PhoneCall, Database, Target, Copy, Star,
   CheckCircle, Shield, Zap, Settings, Building, Sparkles,
   Brain, Calendar, ClipboardCheck, MessageCircle, Search,
-  Mic, Users, TrendingUp, Clock, Headphones
+  Mic, Users, TrendingUp, Clock, Headphones, Phone, GitBranch,
+  Globe, ShoppingCart, DollarSign, Bell, List, Image, Video, Send, BarChart
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { SolutionFeatures as SolutionFeaturesType } from '@/data/solutions/types';
@@ -33,6 +34,18 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   'trending-up': TrendingUp,
   'clock': Clock,
   'headphones': Headphones,
+  'phone': Phone,
+  'git-branch': GitBranch,
+  'globe': Globe,
+  'shopping-cart': ShoppingCart,
+  'dollar-sign': DollarSign,
+  'bell': Bell,
+  'list': List,
+  'image': Image,
+  'video': Video,
+  'send': Send,
+  'bar-chart': BarChart,
+  'sparkles': Sparkles,
 };
 
 interface Props {
