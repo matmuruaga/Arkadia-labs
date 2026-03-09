@@ -87,6 +87,8 @@ export const allIntegrations: Integration[] = [
     { id: 'notion', nameKey: 'integrations.notion.name', logoUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1751366249/notion_mvxavi.svg', categoryKey: 'productivity', descriptionKey: 'integrations.notion.description' },
     { id: 'google_sheets', nameKey: 'integrations.google_sheets.name', logoUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1751366241/google_sheets_mfc938.svg', categoryKey: 'productivity', descriptionKey: 'integrations.google_sheets.description' },
     { id: 'google_calendar', nameKey: 'integrations.google_calendar.name', logoUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1751366238/google_calendar_nqrijg.svg', categoryKey: 'productivity' },
+    { id: 'calendly', nameKey: 'integrations.calendly.name', logoUrl: 'https://cdn.brandfetch.io/calendly.com/w/502/h/512/symbol?c=1idlz7Gfw8u57og_9Pu', categoryKey: 'productivity' },
+    { id: 'zoom', nameKey: 'integrations.zoom.name', logoUrl: 'https://cdn.brandfetch.io/zoom.us/w/400/h/400', categoryKey: 'communication' },
     { id: 'mondaycom', nameKey: 'integrations.monday.name', logoUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1751366247/mondaycom_tndso7.svg', categoryKey: 'productivity' },
     { id: 'microsoft_excel', nameKey: 'integrations.microsoft_excel.name', logoUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1751366246/microsoft_excel_ymxfgl.svg', categoryKey: 'productivity' },
     { id: 'trello', nameKey: 'integrations.trello.name', logoUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1751366276/trello_nhrkfh.svg', categoryKey: 'productivity' },

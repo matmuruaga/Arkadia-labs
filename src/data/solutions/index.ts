@@ -1,12 +1,13 @@
 // src/data/solutions/index.ts
 import { Solution, SolutionsMap } from './types';
 import { leadValidatorSolution } from './lead-validator';
+import { salesQualifierSolution } from './sales-qualifier';
 
 // Export all solutions
 export const solutions: SolutionsMap = {
   'lead-validator': leadValidatorSolution,
+  'sales-qualifier': salesQualifierSolution,
   // Add more solutions here as they are created:
-  // 'sales-qualifier': salesQualifierSolution,
   // 'sales-agent': salesAgentSolution,
   // 'virtual-receptionist': virtualReceptionistSolution,
   // 'booking-agent': bookingAgentSolution,
