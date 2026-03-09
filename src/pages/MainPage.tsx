@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
 // Critical components - Load immediately (above the fold)
-import Hero from "../components/Hero";
+import HeroFramed from "../components/HeroFramed";
 import BeforeAfterSection from "../components/BeforeAfterSection";
 import KpiSection from "../components/KpiSection";
 
@@ -29,7 +29,7 @@ const MainPage = () => {
   return (
     <>
       {/* Critical above-the-fold content - loaded immediately */}
-      <Hero />
+      <HeroFramed />
       <BeforeAfterSection />
       <KpiSection />
 
