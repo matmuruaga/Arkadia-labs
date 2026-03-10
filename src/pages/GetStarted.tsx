@@ -13,6 +13,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Loader2 } from 'lucide-react';
+import SEO from '@/components/SEO';
 
 type GetStartedFormValues = z.infer<z.ZodObject<any>>;
 
@@ -61,13 +62,14 @@ const GetStarted = () => {
     });
 
     try {
-      const webhookUrl = 'https://n8n-elevaitelabs-u48215.vm.elestio.app/webhook/b8866b0b-beb2-4f71-b268-94a9663bfbc8';
-      const response = await fetch(webhookUrl, {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...data,
-          formulario: 'get-started'
+          formulario: 'get-started',
+          language: i18n.language,
+          source: window.location.href,
         }),
       });
 
@@ -86,6 +88,8 @@ const GetStarted = () => {
   };
 
   return (
+    <>
+    <SEO titleKey="seo.getStarted.title" descriptionKey="seo.getStarted.description" path="/get-started" />
     <div
       className="min-h-screen w-full bg-cover bg-center flex items-center justify-center px-4 pt-32 pb-12 sm:px-8"
       style={{ backgroundImage: `url(${backgroundImageUrl})` }}
@@ -179,6 +183,7 @@ const GetStarted = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

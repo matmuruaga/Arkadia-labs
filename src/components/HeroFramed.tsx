@@ -68,14 +68,14 @@ const HeroFramed = () => {
                 {' '}{t('hero.title_part2')}
               </motion.h1>
 
-              <motion.h2
+              <motion.p
                 className="text-lg sm:text-xl text-[#0D1B2A]/80"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
               >
                 {t('hero.subtitle')}
-              </motion.h2>
+              </motion.p>
             </div>
 
             <motion.div
@@ -243,8 +243,11 @@ const HeroFramed = () => {
                       {' '}{t('hero.title_part2')}
                     </h1>
 
-                    <p className="text-lg text-slate-600">
+                    <p className="text-lg text-slate-600 mb-3">
                       {t('hero.subtitle')}
+                    </p>
+                    <p className="text-sm text-slate-500 leading-relaxed">
+                      {t('hero.definition')}
                     </p>
                   </motion.div>
 

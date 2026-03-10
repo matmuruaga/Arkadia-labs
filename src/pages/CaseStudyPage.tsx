@@ -1,8 +1,10 @@
 // src/pages/CaseStudyPage.tsx
 
 import React from 'react';
-import { useParams } from 'react-router-dom'; // Usaremos esto para obtener el 'slug' del caso de estudio
+import { useParams } from 'react-router-dom';
 import { caseStudies, CaseStudy } from '../data/caseStudiesData';
+import SEO from '@/components/SEO';
+import { SITE_CONFIG } from '@/config/site';
 
 // Componentes Reutilizables Existentes
 import FinalCtaSection from '../components/FinalCtaSection';
@@ -37,6 +39,32 @@ const CaseStudyPage: React.FC = () => {
 
   return (
     <>
+      <SEO
+        title={study.hero.title.replace(/\*/g, '')}
+        description={study.hero.subtitle}
+        path={`/case-studies/${slug}`}
+        ogType="article"
+        breadcrumbs={[
+          { name: 'Case Studies', path: '/case-studies' },
+          { name: study.hero.title.replace(/\*/g, ''), path: `/case-studies/${slug}` },
+        ]}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: study.hero.title.replace(/\*/g, ''),
+          description: study.hero.subtitle,
+          dateModified: '2026-03-10',
+          author: {
+            '@type': 'Organization',
+            name: SITE_CONFIG.name,
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: SITE_CONFIG.name,
+            logo: { '@type': 'ImageObject', url: SITE_CONFIG.logo },
+          },
+        }}
+      />
       <CaseStudyHero data={study.hero} studyKey={slug} />
       <CaseStudyIntro client={study.client} challenge={study.challenge} studyKey={slug!} />
       <CaseStudyChallenge data={study.challengeSection} studyKey={slug} />

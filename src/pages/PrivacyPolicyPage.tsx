@@ -1,6 +1,7 @@
 // src/pages/PrivacyPolicyPage.tsx
 import LegalPageLayout from '@/components/LegalPageLayout';
 import { useTranslation } from 'react-i18next';
+import SEO from '@/components/SEO';
 
 const PrivacyPolicyPage = () => {
   const { t } = useTranslation();
@@ -323,11 +324,14 @@ const PrivacyPolicyPage = () => {
   ];
 
   return (
+    <>
+    <SEO titleKey="seo.privacyPolicy.title" descriptionKey="seo.privacyPolicy.description" path="/privacy-policy" />
     <LegalPageLayout
       title={t('privacyPolicy.title')}
       lastUpdated={t('privacyPolicy.lastUpdated')}
       content={content}
     />
+    </>
   );
 };
 

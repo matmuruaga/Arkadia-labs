@@ -1,7 +1,6 @@
 // src/pages/solutions/SolutionsIndexPage.tsx
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import {
@@ -9,6 +8,7 @@ import {
   Image, Share2, Cog, ArrowRight, Sparkles
 } from 'lucide-react';
 import { trackPageView, trackCtaClick } from '@/utils/dataLayer';
+import SEO from '@/components/SEO';
 import { getAllSolutions } from '@/data/solutions';
 
 // Icon mapping
@@ -73,14 +73,7 @@ const SolutionsIndexPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{t('solutions.index.seo.title', 'AI Agents & Solutions | Arkadia Labs')}</title>
-        <meta
-          name="description"
-          content={t('solutions.index.seo.description', 'Discover our suite of AI agents designed to automate sales, customer service, marketing, and operations. Transform your business with intelligent automation.')}
-        />
-        <link rel="canonical" href={`https://arkadialabs.io/${i18n.language}/solutions`} />
-      </Helmet>
+      <SEO titleKey="seo.solutionsIndex.title" descriptionKey="seo.solutionsIndex.description" path="/solutions" />
 
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 bg-gradient-to-br from-slate-50 via-sky-50/30 to-cyan-50/40 overflow-hidden">

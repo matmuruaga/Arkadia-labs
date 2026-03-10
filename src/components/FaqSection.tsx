@@ -1,5 +1,6 @@
 // src/components/FaqSection.tsx
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -18,6 +19,20 @@ const FaqSection = () => {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
+  // FAQPage JSON-LD for rich results and AEO
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqData.map((faq) => ({
+      '@type': 'Question',
+      name: t(faq.questionKey),
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: t(faq.answerKey),
+      },
+    })),
+  };
+
   const toggleFaq = (index: number) => {
     const isOpening = activeIndex !== index;
     const faq = faqData[index];
@@ -31,6 +46,10 @@ const FaqSection = () => {
   };
 
   return (
+    <>
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+    </Helmet>
     <section id="faq" className="py-16 md:py-24 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <motion.div
@@ -101,6 +120,7 @@ const FaqSection = () => {
         </motion.div>
       </div>
     </section>
+    </>
   );
 };
 

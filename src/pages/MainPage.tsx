@@ -3,6 +3,9 @@ import React, { useEffect, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
+// SEO
+import SEO from '@/components/SEO';
+
 // Critical components - Load immediately (above the fold)
 import HeroFramed from "@/components/HeroFramed";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
@@ -28,6 +31,7 @@ const MainPage = () => {
 
   return (
     <>
+      <SEO titleKey="seo.home.title" descriptionKey="seo.home.description" path="" />
       {/* Critical above-the-fold content - loaded immediately */}
       <HeroFramed />
       <BeforeAfterSection />

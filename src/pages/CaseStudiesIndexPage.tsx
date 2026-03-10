@@ -3,12 +3,14 @@ import React from 'react';
 import { useTranslation } from 'react-i18next'; // 1. Importar el hook
 import { caseStudies } from '../data/caseStudiesData';
 import CaseStudyCard from '../components/CaseStudyCard';
+import SEO from '@/components/SEO';
 
 const CaseStudiesIndexPage: React.FC = () => {
   const { t } = useTranslation(); // 2. Inicializar el hook para obtener la función 't'
 
   return (
     <div className="min-h-[calc(100vh-80px)] flex flex-col justify-center bg-gray-50 pt-24 pb-12">
+      <SEO titleKey="seo.caseStudiesIndex.title" descriptionKey="seo.caseStudiesIndex.description" path="/case-studies" />
       <section>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">

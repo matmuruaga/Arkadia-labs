@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { CheckCircle, Calendar, ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import CalScheduler from '@/components/CalScheduler';
+import SEO from '@/components/SEO';
 
 export const ThankYouPage = () => {
   const { t } = useTranslation();
@@ -23,6 +24,8 @@ export const ThankYouPage = () => {
   };
 
   return (
+    <>
+    <SEO titleKey="seo.thankYou.title" descriptionKey="seo.thankYou.description" path="/thank-you" noindex />
     <div className="bg-slate-50">
       <header className="relative w-full h-screen overflow-hidden flex items-center justify-center text-white text-center p-4">
         {/* ... (código del fondo y del título se mantiene igual) ... */}
@@ -113,5 +116,6 @@ export const ThankYouPage = () => {
         </Link>
       </footer>
     </div>
+    </>
   );
 };
