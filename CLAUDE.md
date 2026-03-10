@@ -158,3 +158,38 @@ Do NOT track:
 ---
 
 **Remember**: Analytics tracking is critical for understanding user behavior and measuring business success. Treat dataLayer maintenance with the same importance as feature development.
+
+## Installed Skills
+
+This project has curated skills in `.claude/skills/` (symlinked from `.agents/skills/`). Skills are auto-discovered by Claude Code and activate based on task context. You can also invoke them directly with `/skill-name`.
+
+### Development Core
+- **vercel-react-best-practices** - React patterns, performance, and best practices
+- **vercel-composition-patterns** - Component composition and refactoring strategies
+- **vite** - Vite build tool configuration and optimization
+- **tailwind-design-system** - Tailwind CSS design system patterns
+- **typescript-advanced-types** - Advanced TypeScript type patterns
+
+### Design & UX
+- **web-design-guidelines** - Accessibility, performance, and UX standards
+- **frontend-design** - Frontend design principles
+- **responsive-design** - Responsive layout patterns
+- **design-system-patterns** - Design system architecture
+- **interaction-design** - Interaction and micro-interaction patterns
+- **visual-design-foundations** - Visual design fundamentals
+
+### Marketing & SEO
+- **seo-audit** - SEO audit and optimization
+- **ai-seo** - AI search optimization (AEO, GEO, LLMO, AI Overviews)
+- **schema-markup** - Structured data and schema.org markup
+- **copywriting** - Marketing copywriting guidelines
+- **content-strategy** - Content planning and strategy
+- **analytics-tracking** - Analytics implementation patterns
+- **page-cro** - Page conversion rate optimization
+- **form-cro** - Form conversion rate optimization
+- **site-architecture** - Information architecture and site structure
+
+### Quality
+- **accessibility-compliance** - WCAG accessibility compliance
+- **webapp-testing** - Web application testing strategies
+- **brand-guidelines** - Brand consistency guidelines

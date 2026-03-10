@@ -50,11 +50,11 @@ const categoryConfig: Record<string, { label: string; color: string; bgColor: st
 // All available solutions (even those not yet fully implemented)
 const allSolutions = [
   { id: 'lead-validator', category: 'outbound', available: true },
-  { id: 'sales-qualifier', category: 'outbound', available: false },
-  { id: 'sales-agent', category: 'outbound', available: false },
-  { id: 'virtual-receptionist', category: 'inbound', available: false },
-  { id: 'booking-agent', category: 'inbound', available: false },
-  { id: 'content-creator', category: 'marketing', available: false },
+  { id: 'sales-qualifier', category: 'outbound', available: true },
+  { id: 'sales-agent', category: 'outbound', available: true },
+  { id: 'virtual-receptionist', category: 'inbound', available: true },
+  { id: 'booking-agent', category: 'inbound', available: true },
+  { id: 'content-creator', category: 'marketing', available: true },
   { id: 'social-manager', category: 'marketing', available: false },
   { id: 'operations-agent', category: 'operations', available: false },
 ];

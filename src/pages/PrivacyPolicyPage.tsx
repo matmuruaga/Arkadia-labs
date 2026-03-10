@@ -1,5 +1,5 @@
 // src/pages/PrivacyPolicyPage.tsx
-import LegalPageLayout from '../components/LegalPageLayout';
+import LegalPageLayout from '@/components/LegalPageLayout';
 import { useTranslation } from 'react-i18next';
 
 const PrivacyPolicyPage = () => {
@@ -22,7 +22,7 @@ const PrivacyPolicyPage = () => {
             <p><strong>{t('privacyPolicy.dataController.addressLabel')}</strong> {t('privacyPolicy.dataController.address')}</p>
             <p><strong>{t('privacyPolicy.dataController.licenceLabel')}</strong> {t('privacyPolicy.dataController.licence')}</p>
             <p><strong>{t('privacyPolicy.dataController.privacyLabel')}</strong>{' '}
-              <a href="mailto:dpo@arkadialabs.io" className={linkClass}>dpo@arkadialabs.io</a>
+              <a href="mailto:dpo@arkadialabs.com" className={linkClass}>dpo@arkadialabs.com</a>
             </p>
           </div>
           <p>{t('privacyPolicy.sections.introduction.body.p1')}</p>
@@ -83,7 +83,7 @@ const PrivacyPolicyPage = () => {
             </tbody>
           </table>
           <p>{t('privacyPolicy.sections.legalBasis.body.p2')}{' '}
-            <a href="mailto:dpo@arkadialabs.io" className={linkClass}>dpo@arkadialabs.io</a>.
+            <a href="mailto:dpo@arkadialabs.com" className={linkClass}>dpo@arkadialabs.com</a>.
           </p>
         </>
       ),
@@ -156,7 +156,7 @@ const PrivacyPolicyPage = () => {
             <li><strong>{t('privacyPolicy.sections.international.body.li3_strong')}</strong> {t('privacyPolicy.sections.international.body.li3_text')}</li>
           </ul>
           <p>{t('privacyPolicy.sections.international.body.p2')}{' '}
-            <a href="mailto:dpo@arkadialabs.io" className={linkClass}>dpo@arkadialabs.io</a>.
+            <a href="mailto:dpo@arkadialabs.com" className={linkClass}>dpo@arkadialabs.com</a>.
           </p>
         </>
       ),
@@ -205,7 +205,7 @@ const PrivacyPolicyPage = () => {
             <li><strong>{t('privacyPolicy.sections.rights.body.li7_strong')}</strong> {t('privacyPolicy.sections.rights.body.li7_text')}</li>
           </ul>
           <p>{t('privacyPolicy.sections.rights.body.p2')}{' '}
-            <a href="mailto:dpo@arkadialabs.io" className={linkClass}>dpo@arkadialabs.io</a>{' '}
+            <a href="mailto:dpo@arkadialabs.com" className={linkClass}>dpo@arkadialabs.com</a>{' '}
             {t('privacyPolicy.sections.rights.body.p2b')}
           </p>
           <p>{t('privacyPolicy.sections.rights.body.p3')}</p>
@@ -258,7 +258,7 @@ const PrivacyPolicyPage = () => {
       heading: t('privacyPolicy.sections.children.heading'),
       body: (
         <p>{t('privacyPolicy.sections.children.body.p1')}{' '}
-          <a href="mailto:dpo@arkadialabs.io" className={linkClass}>dpo@arkadialabs.io</a>{' '}
+          <a href="mailto:dpo@arkadialabs.com" className={linkClass}>dpo@arkadialabs.com</a>{' '}
           {t('privacyPolicy.sections.children.body.p1b')}
         </p>
       ),
@@ -276,7 +276,7 @@ const PrivacyPolicyPage = () => {
             <p className="mt-2"><strong>{t('privacyPolicy.sections.euRep.body.rep_email_label')}</strong>{' '}
               <a href="mailto:gdpr@euverify.com" className={linkClass}>gdpr@euverify.com</a>
             </p>
-            <p className="mt-2">
+            <p className="mt-2"><strong>{t('privacyPolicy.sections.euRep.body.rep_portal_label')}</strong>{' '}
               {t('privacyPolicy.sections.euRep.body.rep_portal_text')}
             </p>
             <p>
@@ -307,7 +307,7 @@ const PrivacyPolicyPage = () => {
           <p>{t('privacyPolicy.sections.contact.body.p1')}</p>
           <ul>
             <li><strong>{t('privacyPolicy.sections.contact.body.li1_label')}</strong>{' '}
-              <a href="mailto:dpo@arkadialabs.io" className={linkClass}>dpo@arkadialabs.io</a>
+              <a href="mailto:dpo@arkadialabs.com" className={linkClass}>dpo@arkadialabs.com</a>
             </li>
             <li><strong>{t('privacyPolicy.sections.contact.body.li2_label')}</strong>{' '}
               <a href="mailto:hello@arkadialabs.io" className={linkClass}>hello@arkadialabs.io</a>

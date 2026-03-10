@@ -222,7 +222,7 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[480px] z-50"
+                    className="absolute top-full left-0 mt-3 w-[480px] z-50"
                   >
                     {/* Glassmorphism container */}
                     <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_16px_48px_-12px_rgba(0,0,0,0.15)] border border-slate-200/60 overflow-hidden">

@@ -106,4 +106,27 @@ export const allIntegrations: Integration[] = [
     { id: 'bitly', nameKey: 'integrations.bitly.name', logoUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1751366229/bitly_r0ssrk.svg', categoryKey: 'utility' },
     { id: 'spotify', nameKey: 'integrations.spotify.name', logoUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1751366255/spotify_wo0skl.svg', categoryKey: 'utility' },
     { id: 'youtube', nameKey: 'integrations.youtube.name', logoUrl: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1751366277/youtube_byodkh.png', categoryKey: 'utility' },
+    { id: 'zapier', nameKey: 'integrations.zapier.name', logoUrl: 'https://cdn.brandfetch.io/zapier.com/w/400/h/400?c=1idlz7Gfw8u57og_9Pu', categoryKey: 'utility' },
+
+    // Hospitality & Revenue Management
+    { id: 'opentable', nameKey: 'integrations.opentable.name', logoUrl: 'https://cdn.brandfetch.io/opentable.com/w/400/h/400', categoryKey: 'productivity' },
+    { id: 'resy', nameKey: 'integrations.resy.name', logoUrl: 'https://cdn.brandfetch.io/resy.com/w/400/h/400', categoryKey: 'productivity' },
+    { id: 'sevenrooms', nameKey: 'integrations.sevenrooms.name', logoUrl: 'https://cdn.brandfetch.io/sevenrooms.com/w/400/h/400', categoryKey: 'productivity' },
+    { id: 'cloudbeds', nameKey: 'integrations.cloudbeds.name', logoUrl: 'https://cdn.brandfetch.io/cloudbeds.com/w/400/h/400', categoryKey: 'productivity' },
+    { id: 'mews', nameKey: 'integrations.mews.name', logoUrl: 'https://cdn.brandfetch.io/mews.com/w/400/h/400', categoryKey: 'productivity' },
+    { id: 'oracle_opera', nameKey: 'integrations.oracle_opera.name', logoUrl: 'https://cdn.brandfetch.io/oracle.com/w/400/h/400', categoryKey: 'productivity' },
+    { id: 'revinate', nameKey: 'integrations.revinate.name', logoUrl: 'https://cdn.brandfetch.io/revinate.com/w/400/h/400', categoryKey: 'productivity' },
+    { id: 'duetto', nameKey: 'integrations.duetto.name', logoUrl: 'https://cdn.brandfetch.io/duettoresearch.com/w/400/h/400', categoryKey: 'productivity' },
+
+    // Social Media & Content
+    { id: 'hootsuite', nameKey: 'integrations.hootsuite.name', logoUrl: 'https://cdn.brandfetch.io/hootsuite.com/w/400/h/400', categoryKey: 'marketing' },
+    { id: 'buffer', nameKey: 'integrations.buffer.name', logoUrl: 'https://cdn.brandfetch.io/buffer.com/w/400/h/400', categoryKey: 'marketing' },
+    { id: 'later', nameKey: 'integrations.later.name', logoUrl: 'https://cdn.brandfetch.io/later.com/w/400/h/400', categoryKey: 'marketing' },
+    { id: 'sprout_social', nameKey: 'integrations.sprout_social.name', logoUrl: 'https://cdn.brandfetch.io/sproutsocial.com/w/400/h/400', categoryKey: 'marketing' },
+    { id: 'instagram', nameKey: 'integrations.instagram.name', logoUrl: 'https://cdn.brandfetch.io/instagram.com/w/400/h/400', categoryKey: 'marketing' },
+    { id: 'tiktok', nameKey: 'integrations.tiktok.name', logoUrl: 'https://cdn.brandfetch.io/tiktok.com/w/400/h/400', categoryKey: 'marketing' },
+    { id: 'facebook', nameKey: 'integrations.facebook.name', logoUrl: 'https://cdn.brandfetch.io/facebook.com/w/400/h/400', categoryKey: 'marketing' },
+    { id: 'x_twitter', nameKey: 'integrations.x_twitter.name', logoUrl: 'https://cdn.brandfetch.io/x.com/w/400/h/400', categoryKey: 'marketing' },
+    { id: 'canva', nameKey: 'integrations.canva.name', logoUrl: 'https://cdn.brandfetch.io/canva.com/w/400/h/400', categoryKey: 'productivity' },
+    { id: 'figma', nameKey: 'integrations.figma.name', logoUrl: 'https://cdn.brandfetch.io/figma.com/w/400/h/400', categoryKey: 'productivity' },
 ];

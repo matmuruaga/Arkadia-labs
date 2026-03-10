@@ -1,7 +1,7 @@
 // src/components/solutions/SolutionUseCases.tsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code, Megaphone, Home, Building2, ShoppingCart, Briefcase, Check } from 'lucide-react';
+import { Code, Megaphone, Home, Building2, ShoppingCart, Briefcase, Check, UtensilsCrossed, Heart, Phone, Shield } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { SolutionUseCases as SolutionUseCasesType } from '@/data/solutions/types';
 import { trackCtaClick } from '@/utils/dataLayer';
@@ -14,6 +14,11 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   'building': Building2,
   'shopping-cart': ShoppingCart,
   'briefcase': Briefcase,
+  'utensils': UtensilsCrossed,
+  'heart': Heart,
+  'phone': Phone,
+  'shield': Shield,
+  'heart-pulse': Heart,
 };
 
 interface Props {
@@ -171,7 +176,7 @@ const SolutionUseCases: React.FC<Props> = ({ data, solutionId }) => {
                       {data.useCases[activeTab].industry}
                     </p>
                     <p className="text-slate-500">
-                      Industry Solution
+                      {t('solutions.common.industrySolution')}
                     </p>
                   </div>
                 </div>
