@@ -1351,17 +1351,17 @@
         }
       },
       "euRep": {
-        "heading": "11. EU/EEA Representative (Article 27 GDPR)",
+        "heading": "11. EU/EEA GDPR Representative (Article 27)",
         "body": {
-          "p1": "As Arkadia is established outside the EU/EEA, we have appointed a representative in the European Union in accordance with Article 27 of the GDPR:",
+          "p1": "If you are located in the EU and have questions or concerns regarding your personal data, you may contact our appointed GDPR representative:",
           "rep_label": "EU Representative:",
           "rep_name": "Euverify Ltd (Ireland)",
           "rep_address": "Unit 3D North Point House, North Point Business Park, New Mallow Road, Cork, T23 AT2P, Ireland",
           "rep_email_label": "Email:",
-          "rep_portal_label": "GDPR Request Portal:",
-          "rep_portal_text": "To submit a Data Subject Access Request (DSAR), data deletion request, or any other GDPR-related enquiry, please use our secure portal:",
+          "rep_portal_label": "",
+          "rep_portal_text": "To submit a Data Subject Access Request (DSAR), data deletion request, or any other GDPR-related inquiry, please use our secure portal at:",
           "rep_portal_url": "https://gdpr.euverify.com/verify/f39563a3-7807-4804-abaf-9eb3e4cc2bad",
-          "rep_portal_note": "Requests submitted through this portal are logged and tracked to ensure timely response and compliance."
+          "rep_portal_note": "This link allows you to verify our appointed representative and submit GDPR requests directly. Requests submitted through this portal are logged and tracked to ensure timely response and compliance."
         }
       },
       "changes": {

@@ -276,7 +276,7 @@ const PrivacyPolicyPage = () => {
             <p className="mt-2"><strong>{t('privacyPolicy.sections.euRep.body.rep_email_label')}</strong>{' '}
               <a href="mailto:gdpr@euverify.com" className={linkClass}>gdpr@euverify.com</a>
             </p>
-            <p className="mt-2"><strong>{t('privacyPolicy.sections.euRep.body.rep_portal_label')}</strong>{' '}
+            <p className="mt-2">
               {t('privacyPolicy.sections.euRep.body.rep_portal_text')}
             </p>
             <p>
