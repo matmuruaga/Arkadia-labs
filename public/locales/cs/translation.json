@@ -1,5 +1,56 @@
 {
   "languageCode": "cs",
+  "seo": {
+    "organizationDescription": "Arkadia Labs vyvíjí inteligentní AI agenty, kteří automatizují obchodní operace v oblasti prodeje, marketingu, zákaznické podpory a provozu. Společnost byla založena s cílem pomáhat firmám eliminovat opakující se práci a rychleji růst. Řešení Arkadia Labs fungují nepřetržitě, integrují se se stávajícími nástroji a přinášejí měřitelné výsledky bez potřeby technických znalostí.",
+    "home": {
+      "title": "AI agenti, kteří automatizují vaše firemní operace",
+      "description": "Nasaďte inteligentní AI agenty pro prodej, marketing, zákaznický servis a provoz. Arkadia Labs automatizuje opakující se práci, aby se váš tým mohl soustředit na růst."
+    },
+    "pricing": {
+      "title": "Jednoduché a transparentní ceny AI automatizace",
+      "description": "Vyberte správný plán AI automatizace pro vaši firmu. Flexibilní ceny bez skrytých poplatků — začněte automatizovat prodej, podporu a provoz ještě dnes."
+    },
+    "contact": {
+      "title": "Promluvte si s našimi specialisty na AI automatizaci",
+      "description": "Máte dotazy ohledně AI agentů pro vaši firmu? Kontaktujte tým Arkadia Labs. Pomůžeme vám najít správné řešení automatizace pro vaše potřeby."
+    },
+    "integrations": {
+      "title": "Propojte AI agenty s vašimi stávajícími nástroji",
+      "description": "Arkadia Labs se integruje s CRM systémy, helpdesky, marketingovými platformami a více než 100 firemními nástroji. Nasaďte AI agenty bez změny vašich procesů."
+    },
+    "caseStudiesIndex": {
+      "title": "Skutečné výsledky AI automatizace — příběhy zákazníků",
+      "description": "Zjistěte, jak firmy využívají AI agenty Arkadia Labs k uzavírání více obchodů, rychlejšímu řešení podpory a automatizaci provozu ve velkém měřítku."
+    },
+    "solutionsIndex": {
+      "title": "AI řešení pro každou oblast firemního provozu",
+      "description": "Prozkoumejte AI řešení Arkadia Labs pro kvalifikaci prodeje, validaci leadů, zákaznickou podporu, marketing a automatizaci firemního provozu."
+    },
+    "getStarted": {
+      "title": "Začněte s AI automatizací firemních procesů",
+      "description": "Začněte automatizovat prodej, marketing a provoz s AI agenty Arkadia Labs. Nastavení během několika minut — bez technických znalostí."
+    },
+    "thankYou": {
+      "title": "Přijato — další kroky pro vaši AI automatizaci",
+      "description": "Děkujeme za kontaktování Arkadia Labs. Člen našeho týmu vás brzy kontaktuje a prodiskutuje vaše potřeby v oblasti AI automatizace."
+    },
+    "privacyPolicy": {
+      "title": "Zásady ochrany osobních údajů — jak nakládáme s vašimi daty",
+      "description": "Přečtěte si zásady ochrany osobních údajů Arkadia Labs a zjistěte, jak shromažďujeme, používáme a chráníme vaše osobní údaje v souladu s GDPR."
+    },
+    "termsAndConditions": {
+      "title": "Obchodní podmínky služby",
+      "description": "Prostudujte obchodní podmínky upravující používání služeb AI automatizace Arkadia Labs, softwaru a souvisejících platforem."
+    },
+    "cookiePolicy": {
+      "title": "Zásady používání cookies — sledování a předvolby",
+      "description": "Zjistěte, jak Arkadia Labs využívá soubory cookie ke zlepšení výkonu webu, personalizaci vaší zkušenosti a měření analytiky. Spravujte své předvolby."
+    },
+    "legalNotice": {
+      "title": "Právní upozornění a informace o společnosti",
+      "description": "Oficiální právní upozornění a firemní informace o Arkadia Labs, včetně registračních údajů, kontaktních informací a zákonných sdělení."
+    }
+  },
   "header": {
     "features": "Případy použití",
     "plans": "Ceník",
@@ -13,6 +64,7 @@
     "title_part1": "Adaptivní AI systémy:",
     "title_part2": "které šetří čas a generují příjmy.",
     "subtitle": "Automatizujte obchodní procesy a dosahujte vynikající efektivity s AI řešeními na míru.",
+    "definition": "Arkadia Labs je technologická společnost, která vyvíjí vlastní AI agenty pro firmy. Naše řešení automatizují obchodní prospekci, kvalifikaci leadů, zákaznický servis, rezervaci schůzek a tvorbu obsahu — pomáháme firmám snížit provozní náklady a rychleji růst.",
     "phrases": {
       "p1": "Marketingový agent podporující růst...",
       "p2": "Automatizační agent zefektivňující úkoly...",

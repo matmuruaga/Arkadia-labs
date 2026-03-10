@@ -1,10 +1,11 @@
 // src/pages/solutions/SolutionDetailPage.tsx
 import React, { useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { getSolutionBySlug } from '@/data/solutions';
 import { trackPageView, trackSectionView } from '@/utils/dataLayer';
+import SEO from '@/components/SEO';
+import { SITE_CONFIG } from '@/config/site';
 
 // Import all solution section components
 import SolutionHero from '@/components/solutions/SolutionHero';
@@ -45,14 +46,17 @@ const SolutionDetailPage: React.FC = () => {
   }
 
   // Generate JSON-LD structured data for SEO
-  const jsonLd = {
+  const productJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: t(`solutions.${solution.id}.hero.title`, solution.hero.title),
+    '@type': 'SoftwareApplication',
+    name: t(`solutions.${solution.id}.seo.title`, solution.seo.title),
     description: t(`solutions.${solution.id}.seo.description`, solution.seo.description),
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    dateModified: '2026-03-10',
     brand: {
       '@type': 'Brand',
-      name: 'Arkadia Labs',
+      name: SITE_CONFIG.name,
     },
     offers: {
       '@type': 'Offer',
@@ -64,67 +68,17 @@ const SolutionDetailPage: React.FC = () => {
 
   return (
     <>
-      {/* SEO Meta Tags */}
-      <Helmet>
-        <title>{t(`solutions.${solution.id}.seo.title`, solution.seo.title)}</title>
-        <meta
-          name="description"
-          content={t(`solutions.${solution.id}.seo.description`, solution.seo.description)}
-        />
-        <meta name="keywords" content={solution.seo.keywords.join(', ')} />
-
-        {/* Open Graph */}
-        <meta
-          property="og:title"
-          content={t(`solutions.${solution.id}.seo.title`, solution.seo.title)}
-        />
-        <meta
-          property="og:description"
-          content={t(`solutions.${solution.id}.seo.description`, solution.seo.description)}
-        />
-        <meta property="og:type" content="product" />
-        <meta
-          property="og:url"
-          content={`https://arkadialabs.io/${i18n.language}/solutions/${slug}`}
-        />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content={t(`solutions.${solution.id}.seo.title`, solution.seo.title)}
-        />
-        <meta
-          name="twitter:description"
-          content={t(`solutions.${solution.id}.seo.description`, solution.seo.description)}
-        />
-
-        {/* Canonical URL */}
-        <link
-          rel="canonical"
-          href={`https://arkadialabs.io/${i18n.language}/solutions/${slug}`}
-        />
-
-        {/* Hreflang for language alternatives */}
-        <link
-          rel="alternate"
-          hrefLang="en"
-          href={`https://arkadialabs.io/en/solutions/${slug}`}
-        />
-        <link
-          rel="alternate"
-          hrefLang="es"
-          href={`https://arkadialabs.io/es/solutions/${slug}`}
-        />
-        <link
-          rel="alternate"
-          hrefLang="x-default"
-          href={`https://arkadialabs.io/en/solutions/${slug}`}
-        />
-
-        {/* JSON-LD Structured Data */}
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      <SEO
+        titleKey={`solutions.${solution.id}.seo.title`}
+        descriptionKey={`solutions.${solution.id}.seo.description`}
+        path={`/solutions/${slug}`}
+        ogType="product"
+        jsonLd={productJsonLd}
+        breadcrumbs={[
+          { name: t('seo.solutionsIndex.title', 'Solutions'), path: '/solutions' },
+          { name: t(`solutions.${solution.id}.seo.title`, solution.seo.title), path: `/solutions/${slug}` },
+        ]}
+      />
 
       {/* Page Sections */}
       <main>

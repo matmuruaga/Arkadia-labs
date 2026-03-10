@@ -6,6 +6,7 @@ import FeatureComparisonTable from '../components/FeatureComparisonTable';
 import RoiCalculator from '../components/RoiCalculator';
 import Modal from '../components/Modal';
 import FinalCtaSection from "../components/FinalCtaSection";
+import SEO from '@/components/SEO';
 
 const PricingPage = () => {
   const [isRoiModalOpen, setIsRoiModalOpen] = useState(false);
@@ -15,6 +16,7 @@ const PricingPage = () => {
 
   return (
     <>
+      <SEO titleKey="seo.pricing.title" descriptionKey="seo.pricing.description" path="/pricing" />
       {/* 2. Usar el nuevo componente de cabecera */}
       <PricingHeader />
 

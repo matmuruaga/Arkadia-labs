@@ -1,5 +1,56 @@
 {
   "languageCode": "es",
+  "seo": {
+    "organizationDescription": "Arkadia Labs desarrolla agentes de inteligencia artificial que automatizan operaciones empresariales en ventas, marketing, atención al cliente y operaciones. Fundada para ayudar a las empresas a eliminar el trabajo repetitivo y crecer más rápido, Arkadia Labs ofrece soluciones de IA que funcionan 24/7, se integran con las herramientas existentes y generan resultados medibles sin necesidad de conocimientos técnicos.",
+    "home": {
+      "title": "Agentes de IA que Automatizan tus Operaciones de Negocio",
+      "description": "Despliega agentes de IA inteligentes para ventas, marketing, atención al cliente y operaciones. Arkadia Labs automatiza el trabajo repetitivo para que tu equipo se enfoque en el crecimiento."
+    },
+    "pricing": {
+      "title": "Precios Simples y Transparentes para Automatización con IA",
+      "description": "Elige el plan de automatización con IA adecuado para tu negocio. Precios flexibles sin costos ocultos — comienza a automatizar ventas, soporte y operaciones hoy."
+    },
+    "contact": {
+      "title": "Habla con Nuestros Especialistas en Automatización IA",
+      "description": "¿Tienes preguntas sobre agentes de IA para tu empresa? Contacta al equipo de Arkadia Labs. Te ayudaremos a identificar la solución de automatización adecuada."
+    },
+    "integrations": {
+      "title": "Conecta Agentes de IA con tus Herramientas Actuales",
+      "description": "Arkadia Labs se integra con CRMs, plataformas de soporte, herramientas de marketing y más de 100 aplicaciones empresariales sin cambiar tu flujo de trabajo."
+    },
+    "caseStudiesIndex": {
+      "title": "Resultados Reales de Automatización IA — Casos de Clientes",
+      "description": "Descubre cómo las empresas usan los agentes de IA de Arkadia Labs para cerrar más ventas, resolver tickets más rápido y automatizar operaciones a escala."
+    },
+    "solutionsIndex": {
+      "title": "Soluciones de Agentes IA para Cada Área del Negocio",
+      "description": "Explora las soluciones de IA de Arkadia Labs para calificación de ventas, validación de leads, soporte al cliente, marketing y automatización de operaciones."
+    },
+    "getStarted": {
+      "title": "Comienza con la Automatización Empresarial con IA",
+      "description": "Empieza a automatizar tus ventas, marketing y operaciones con los agentes de IA de Arkadia Labs. Configuración en minutos, sin conocimientos técnicos."
+    },
+    "thankYou": {
+      "title": "Recibido — Próximos Pasos para tu Automatización con IA",
+      "description": "Gracias por contactar a Arkadia Labs. Un miembro de nuestro equipo se comunicará contigo pronto para hablar sobre tus necesidades de automatización con IA."
+    },
+    "privacyPolicy": {
+      "title": "Política de Privacidad — Cómo Gestionamos tus Datos",
+      "description": "Lee la política de privacidad de Arkadia Labs para entender cómo recopilamos, usamos y protegemos tus datos personales conforme al RGPD y normativas aplicables."
+    },
+    "termsAndConditions": {
+      "title": "Términos y Condiciones del Servicio",
+      "description": "Consulta los términos y condiciones que rigen el uso de los servicios de automatización con IA de Arkadia Labs, software y plataformas relacionadas."
+    },
+    "cookiePolicy": {
+      "title": "Política de Cookies — Seguimiento y Preferencias",
+      "description": "Conoce cómo Arkadia Labs utiliza cookies para mejorar el rendimiento del sitio, personalizar tu experiencia y medir analíticas. Gestiona tus preferencias."
+    },
+    "legalNotice": {
+      "title": "Aviso Legal e Información de la Empresa",
+      "description": "Aviso legal oficial e información corporativa de Arkadia Labs, incluyendo datos de registro empresarial, información de contacto y declaraciones legales."
+    }
+  },
   "header": {
     "features": "Casos de Uso",
     "plans": "Planes",
@@ -55,6 +106,7 @@
     "title_part1": "Sistemas de IA Adaptativos:",
     "title_part2": "que ahorran tiempo y generan ingresos.",
     "subtitle": "Automatiza operaciones de negocio para lograr una eficiencia superior con soluciones de IA a medida.",
+    "definition": "Arkadia Labs es una empresa tecnologica que desarrolla agentes de IA personalizados para empresas. Nuestras soluciones automatizan la prospección de ventas, cualificación de leads, atención al cliente, reserva de citas y creación de contenido, ayudando a las empresas a reducir costes operativos y escalar más rápido.",
 "phrases": {
   "p1": "Agente de Marketing impulsando el crecimiento...",
   "p2": "Agente de Automatización optimizando tareas...",
