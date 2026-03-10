@@ -2170,6 +2170,10 @@
       "learnMore": "Zjistit více",
       "comingSoon": "Již brzy"
     },
+    "common": {
+      "industrySolution": "Průmyslové řešení",
+      "moreFeatures": "+{{count}} dalších"
+    },
     "lead-validator": {
     "seo": {
       "title": "Lead Validator AI Agent | Arkadia Labs",

@@ -327,6 +327,11 @@
       "button": "Habla con Nuestro Equipo"
     }
   },
+  "common": {
+    "industrySolution": "Solución Industrial",
+    "moreFeatures": "+{{count}} más"
+
+  },
   "lead-validator": {
     "seo": {
       "title": "Agente Validador de Leads | Arkadia Labs",

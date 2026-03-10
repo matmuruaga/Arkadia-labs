@@ -176,7 +176,7 @@ const SolutionUseCases: React.FC<Props> = ({ data, solutionId }) => {
                       {data.useCases[activeTab].industry}
                     </p>
                     <p className="text-slate-500">
-                      Industry Solution
+                      {t('solutions.common.industrySolution')}
                     </p>
                   </div>
                 </div>

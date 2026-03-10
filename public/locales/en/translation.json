@@ -428,6 +428,10 @@
         "button": "Talk to Our Team"
       }
     },
+    "common": {
+      "industrySolution": "Industry Solution",
+      "moreFeatures": "+{{count}} more"
+    },
     "lead-validator": {
       "seo": {
         "title": "Lead Validator AI Agent | Arkadia Labs",

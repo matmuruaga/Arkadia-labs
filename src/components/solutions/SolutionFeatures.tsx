@@ -234,7 +234,7 @@ const SolutionFeatures: React.FC<Props> = ({ data, solutionId }) => {
             >
               <div className="flex items-center gap-1.5 md:gap-2 bg-gradient-to-r from-sky-500 to-teal-500 text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full shadow-lg shadow-sky-500/25 text-xs md:text-sm font-medium">
                 <CheckCircle className="h-3.5 w-3.5 md:h-4 md:w-4" />
-                <span>+{data.features.length > 6 ? data.features.length - 6 : 0} more</span>
+                <span>{t('solutions.common.moreFeatures', { count: data.features.length > 6 ? data.features.length - 6 : 0 })}</span>
               </div>
             </motion.div>
 

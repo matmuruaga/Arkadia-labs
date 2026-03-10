@@ -1,5 +1,5 @@
 // src/pages/PrivacyPolicyPage.tsx
-import LegalPageLayout from '../components/LegalPageLayout';
+import LegalPageLayout from '@/components/LegalPageLayout';
 import { useTranslation } from 'react-i18next';
 
 const PrivacyPolicyPage = () => {
