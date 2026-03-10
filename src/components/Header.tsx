@@ -139,7 +139,7 @@ const Header = () => {
   const secondaryButtonClasses = "border border-[#1C7ED6] text-[#1C7ED6] px-4 py-2 rounded-full font-semibold text-sm hover:bg-[#1C7ED6]/10 transition-all duration-300 whitespace-nowrap";
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 w-full z-50 transition-[background,box-shadow,border] duration-300 ${
       hasDarkHero || scrolling ? "" : "bg-transparent"
     }`}>
       {/* SVG Filter for liquid glass distortion effect */}
