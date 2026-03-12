@@ -25,12 +25,13 @@ export const salesAgentSolution: Solution = {
   },
 
   hero: {
-    badge: 'Sales & Revenue',
-    title: 'Your AI Sales Rep That Actually Closes Deals',
-    subtitle: 'Autonomous Revenue Generation',
-    description: 'An AI voice agent loaded with your product catalog that sells, upsells, and closes deals—inbound or outbound. Works 24/7, never takes a break, and gets better with every conversation.',
+    badge: 'AI Sales',
+    title: 'Revenue on Autopilot',
+    subtitle: 'An AI That Actually Closes Deals',
+    description: 'Sells, upsells, and closes—inbound or outbound, 24/7. Loaded with your catalog and trained on your best pitches.',
     primaryCta: 'See It Sell',
     secondaryCta: 'Talk to Sales',
+    heroVisualType: 'revenue-ticker',
     trustBadges: [
       { icon: 'trending-up', label: 'Revenue Increase', value: '+35%' },
       { icon: 'shopping-cart', label: 'Upsell Rate', value: '28%' },
@@ -216,6 +217,7 @@ export const salesAgentSolution: Solution = {
           'Full regulatory compliance',
         ],
         icon: 'shield',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320586/sa-insurance_copia_sgqzrz.webp',
       },
       {
         id: 'telecom',
@@ -228,6 +230,7 @@ export const salesAgentSolution: Solution = {
           '60% reduction in churn calls',
         ],
         icon: 'phone',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320586/sa-telecom_copia_nvpzqe.webp',
       },
       {
         id: 'home-services',
@@ -240,6 +243,7 @@ export const salesAgentSolution: Solution = {
           '24/7 appointment booking',
         ],
         icon: 'home',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320586/sa-homeservices_copia_hpah7q.webp',
       },
     ],
   },

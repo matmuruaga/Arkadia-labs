@@ -25,12 +25,13 @@ export const contentCreatorSolution: Solution = {
   },
 
   hero: {
-    badge: 'Marketing & Content',
-    title: 'Your AI Content Team That Never Stops Creating',
-    subtitle: 'Research. Create. Publish. Optimize. Repeat.',
-    description: 'An AI agent that scrapes competitor content, generates stunning images and videos, identifies the best posting times, publishes automatically, and tracks performance—all while you focus on strategy.',
+    badge: 'AI Content',
+    title: 'Content That Creates Itself',
+    subtitle: 'From Idea to Published in Minutes',
+    description: 'Generates images, videos, and posts—then publishes at the perfect time across all your platforms.',
     primaryCta: 'See It Create',
     secondaryCta: 'Talk to Sales',
+    heroVisualType: 'content-feed',
     trustBadges: [
       { icon: 'trending-up', label: 'Engagement Increase', value: '+156%' },
       { icon: 'clock', label: 'Time Saved', value: '20hrs/week' },
@@ -216,6 +217,7 @@ export const contentCreatorSolution: Solution = {
           '45% reduction in content costs',
         ],
         icon: 'shopping-cart',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320584/cc-ecommerce_copia_qd9csf.webp',
       },
       {
         id: 'agencies',
@@ -228,6 +230,7 @@ export const contentCreatorSolution: Solution = {
           'Consistent quality across accounts',
         ],
         icon: 'briefcase',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320584/cc-agencies_copia_qnzfzj.webp',
       },
       {
         id: 'hospitality',
@@ -240,6 +243,7 @@ export const contentCreatorSolution: Solution = {
           '3x more user-generated content',
         ],
         icon: 'utensils',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320584/cc-hospitality_copia_oa0wa6.webp',
       },
     ],
   },

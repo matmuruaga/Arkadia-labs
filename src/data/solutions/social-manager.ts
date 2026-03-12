@@ -28,12 +28,13 @@ export const socialManagerSolution: Solution = {
   },
 
   hero: {
-    badge: 'Marketing & Social',
-    title: 'Your AI Social Media Manager That Never Sleeps',
-    subtitle: 'Monitor. Engage. Analyze. Grow. Protect.',
-    description: 'An AI agent that responds to every comment and DM in seconds, monitors brand mentions across the web, tracks competitor performance, identifies trending opportunities, and alerts you to reputation crises—all before your team starts their morning.',
+    badge: 'AI Social',
+    title: 'Own Every Conversation Online',
+    subtitle: 'Monitor. Engage. Protect. Grow.',
+    description: 'Responds to comments and DMs in seconds, monitors mentions, and alerts you to reputation risks—24/7.',
     primaryCta: 'See It in Action',
     secondaryCta: 'Talk to Sales',
+    heroVisualType: 'social-radar',
     trustBadges: [
       { icon: 'message-circle', label: 'Response Time', value: '<2 min' },
       { icon: 'eye', label: 'Mentions Monitored', value: '24/7' },
@@ -232,6 +233,7 @@ export const socialManagerSolution: Solution = {
           '91% reduction in unanswered comments',
         ],
         icon: 'shopping-cart',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320587/sm-retail_copia_halxdv.webp',
       },
       {
         id: 'brands-agencies',
@@ -244,6 +246,7 @@ export const socialManagerSolution: Solution = {
           '60% reduction in community management costs',
         ],
         icon: 'briefcase',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320587/sm-agencies_copia_tu9ecs.webp',
       },
       {
         id: 'hospitality-restaurants',
@@ -256,6 +259,7 @@ export const socialManagerSolution: Solution = {
           '2.3x more positive word-of-mouth mentions',
         ],
         icon: 'utensils',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320587/sm-hospitality_copia_rfjwik.webp',
       },
     ],
   },

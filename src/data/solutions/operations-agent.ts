@@ -28,12 +28,13 @@ export const operationsAgentSolution: Solution = {
   },
 
   hero: {
-    badge: 'Operations & Automation',
-    title: 'Your AI Operations Agent That Runs the Back Office',
-    subtitle: 'Automate. Orchestrate. Monitor. Sync. Escalate.',
-    description: 'An AI agent that orchestrates workflows across every tool your team uses, auto-generates reports from multiple data sources, tracks task completion and escalates blockers, monitors processes with intelligent alerts, and keeps your entire operation synchronized—without manual coordination.',
+    badge: 'AI Operations',
+    title: 'Your Back Office on Autopilot',
+    subtitle: 'Workflows That Run Themselves',
+    description: 'Orchestrates tasks across every tool, generates reports automatically, and escalates blockers before they become problems.',
     primaryCta: 'See It in Action',
     secondaryCta: 'Talk to Sales',
+    heroVisualType: 'workflow-orchestrator',
     trustBadges: [
       { icon: 'clock', label: 'Hours Saved Weekly', value: '20+' },
       { icon: 'zap', label: 'Workflows Automated', value: '100%' },
@@ -232,6 +233,7 @@ export const operationsAgentSolution: Solution = {
           '2-day faster time-to-first-deliverable',
         ],
         icon: 'briefcase',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320586/oa-professional_copia_dowf8g.webp',
       },
       {
         id: 'ecommerce-operations',
@@ -244,6 +246,7 @@ export const operationsAgentSolution: Solution = {
           'Eliminated 15 hours/week of manual stock checking',
         ],
         icon: 'package',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320585/oa-ecommerce_copia_efuye3.webp',
       },
       {
         id: 'finance-operations',
@@ -256,6 +259,7 @@ export const operationsAgentSolution: Solution = {
           'Zero late regulatory reports in 12 months',
         ],
         icon: 'shield',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320585/oa-finance_copia_ojgjxv.webp',
       },
     ],
   },

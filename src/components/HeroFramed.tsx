@@ -30,8 +30,15 @@ const HeroFramed = () => {
     try {
       if (status === 'disconnected') {
         trackAiWidgetOpen('hero', 'elevenlabs_voice_agent');
-        await navigator.mediaDevices.getUserMedia({ audio: true });
-        await startSession({ agentId: 'agent_01jynm32kjf7rvq5857ggj51ew' });
+        // Check mic permission then immediately release the stream.
+        // If we leave it open the browser has two simultaneous audio tracks
+        // (this one + the SDK's own stream) which cuts off the session ~1s in.
+        const permissionStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        permissionStream.getTracks().forEach(track => track.stop());
+        await startSession({
+          agentId: 'agent_01jynm32kjf7rvq5857ggj51ew',
+          connectionType: 'webrtc',
+        });
       } else if (status === 'connected') {
         trackAiWidgetClose('hero', 'elevenlabs_voice_agent');
         await endSession();

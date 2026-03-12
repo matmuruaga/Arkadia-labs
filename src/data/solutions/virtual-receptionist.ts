@@ -25,11 +25,12 @@ export const virtualReceptionistSolution: Solution = {
   },
 
   hero: {
-    badge: 'Customer Service',
-    title: 'Your 24/7 AI Receptionist That Never Misses a Call',
-    subtitle: 'Always Available, Always Professional',
-    description: 'An AI voice agent that answers calls, handles inquiries, takes messages, and routes conversations—with the warmth and professionalism of your best front desk staff. Available around the clock.',
+    badge: 'AI Receptionist',
+    title: 'Never Miss a Call Again',
+    subtitle: 'AI That Answers Like Your Best Employee',
+    description: 'Handles calls, routes inquiries, and books appointments 24/7—with the warmth of your best front desk staff.',
     primaryCta: 'Hear It Live',
+    primaryCtaAction: 'elevenlabs',
     secondaryCta: 'Talk to Sales',
     trustBadges: [
       { icon: 'phone', label: 'Calls Handled', value: '99.9%' },
@@ -199,6 +200,8 @@ export const virtualReceptionistSolution: Solution = {
       { icon: 'message-circle', text: 'Message taken for maintenance team', time: '8 min ago', status: 'processing' },
       { icon: 'calendar', text: 'Appointment booked: Property viewing tomorrow 3PM', time: '12 min ago', status: 'success' },
     ],
+    floatingBadge1: { title: 'Call Resolved ✓', subtitle: 'Guest inquiry handled' },
+    floatingBadge2: { title: '+12 calls today', subtitle: '100% answered' },
   },
 
   useCases: {
@@ -216,6 +219,7 @@ export const virtualReceptionistSolution: Solution = {
           '24/7 guest support coverage',
         ],
         icon: 'building',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320589/vr-hospitality_copia_wynin7.webp',
         caseStudySlug: 'goodnite',
       },
       {
@@ -229,6 +233,7 @@ export const virtualReceptionistSolution: Solution = {
           'After-hours urgent care routing',
         ],
         icon: 'heart-pulse',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320588/vr-healthcare_copia_zosngp.webp',
       },
       {
         id: 'professional-services',
@@ -241,6 +246,7 @@ export const virtualReceptionistSolution: Solution = {
           'Improved client intake process',
         ],
         icon: 'briefcase',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320590/vr-professional_copia_bjql1g.webp',
       },
     ],
   },

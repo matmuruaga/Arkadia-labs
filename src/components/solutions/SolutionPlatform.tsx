@@ -476,7 +476,7 @@ const SolutionPlatform: React.FC<Props> = React.memo(({ data, solutionId }) => {
                   <div className="flex-1 flex justify-center">
                     <div className="bg-white border border-slate-200 rounded-lg px-4 py-1.5 flex items-center gap-2 text-sm text-slate-500 min-w-[300px]">
                       <Search className="h-3.5 w-3.5" />
-                      <span>app.arkadialabs.io/dashboard</span>
+                      <span>app.elevaitelabs.io/dashboard</span>
                     </div>
                   </div>
                   <div className="w-16" />

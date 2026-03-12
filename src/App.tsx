@@ -39,8 +39,6 @@ const PublicLayout = () => (
 ); 
 
 function App() {
-  // Ya no se necesita el ElevenLabsContextProvider.
-  // El hook useConversation funciona de forma independiente.
   return (
     <BrowserRouter>
       <ScrollToTop />
