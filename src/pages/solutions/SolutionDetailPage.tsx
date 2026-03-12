@@ -28,8 +28,9 @@ const SolutionDetailPage: React.FC = () => {
   // Get solution data
   const solution = slug ? getSolutionBySlug(slug) : undefined;
 
-  // Track page view
+  // Scroll to top and track page view on mount (key={slug} forces remount)
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (solution) {
       trackPageView(
         `/${i18n.language}/solutions/${slug}`,
@@ -76,8 +77,10 @@ const SolutionDetailPage: React.FC = () => {
         }),
   };
 
+  // Key on slug forces full remount when navigating between solutions,
+  // ensuring Framer Motion animations replay on each page transition
   return (
-    <>
+    <React.Fragment key={slug}>
       <SEO
         titleKey={`solutions.${solution.id}.seo.title`}
         descriptionKey={`solutions.${solution.id}.seo.description`}
@@ -120,7 +123,7 @@ const SolutionDetailPage: React.FC = () => {
         <SolutionFAQ data={solution.faq} solutionId={solution.id} />
         <SolutionCTA data={solution.cta} solutionId={solution.id} />
       </main>
-    </>
+    </React.Fragment>
   );
 };
 
