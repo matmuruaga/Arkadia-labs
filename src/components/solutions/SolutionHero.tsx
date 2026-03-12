@@ -1,12 +1,12 @@
 // src/components/solutions/SolutionHero.tsx
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, CheckCircle, Clock, TrendingUp, ArrowDown, Phone, Star } from 'lucide-react';
+import { ArrowRight, CheckCircle, Clock, TrendingUp, ArrowDown, Phone, Star, Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import { useConversation } from '@elevenlabs/react';
 import { SolutionHero as SolutionHeroType } from '@/data/solutions/types';
-import { trackCtaClick } from '@/utils/dataLayer';
-import { useElevenLabsWidget } from '@/components/ElevenLabsWidgetContext';
+import { trackCtaClick, trackAiWidgetOpen, trackAiWidgetClose } from '@/utils/dataLayer';
 
 // Map icon strings to Lucide components
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -25,7 +25,8 @@ interface Props {
 const SolutionHero: React.FC<Props> = ({ data, solutionId }) => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  const { toggleConversation, preloadScript } = useElevenLabsWidget();
+  const { startSession, endSession, status } = useConversation();
+  const [isVoiceLoading, setIsVoiceLoading] = useState(false);
   const targetRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -45,10 +46,28 @@ const SolutionHero: React.FC<Props> = ({ data, solutionId }) => {
   const yContent = useTransform(scrollYProgress, [0, 1], ['0%', '-15%']);
   const opacityContent = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
 
+  const handleToggleVoice = useCallback(async () => {
+    setIsVoiceLoading(true);
+    try {
+      if (status === 'disconnected') {
+        trackAiWidgetOpen(`solution_hero_${solutionId}`, 'elevenlabs_voice_agent');
+        await navigator.mediaDevices.getUserMedia({ audio: true });
+        await startSession({ agentId: 'agent_01jynm32kjf7rvq5857ggj51ew' });
+      } else if (status === 'connected') {
+        trackAiWidgetClose(`solution_hero_${solutionId}`, 'elevenlabs_voice_agent');
+        await endSession();
+      }
+    } catch (error) {
+      console.error('Error managing voice session:', error);
+    } finally {
+      setIsVoiceLoading(false);
+    }
+  }, [status, startSession, endSession, solutionId]);
+
   const handlePrimaryCta = () => {
     trackCtaClick('solution_primary_cta', `solution_hero_${solutionId}`, data.primaryCta);
     if (data.primaryCtaAction === 'elevenlabs') {
-      toggleConversation();
+      handleToggleVoice();
     } else {
       navigate(`/${i18n.language}/contact`);
     }
@@ -140,11 +159,22 @@ const SolutionHero: React.FC<Props> = ({ data, solutionId }) => {
           >
             <button
               onClick={handlePrimaryCta}
-              onMouseEnter={data.primaryCtaAction === 'elevenlabs' ? preloadScript : undefined}
-              className="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-sky-600 to-teal-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg shadow-sky-500/25 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-0.5"
+              disabled={isVoiceLoading}
+              className="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-sky-600 to-teal-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg shadow-sky-500/25 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-wait"
             >
-              {t(`solutions.${solutionId}.hero.primaryCta`, data.primaryCta)}
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              {isVoiceLoading ? (
+                <Loader2 className="h-5 w-5 animate-spin" />
+              ) : data.primaryCtaAction === 'elevenlabs' && status === 'connected' ? (
+                <>
+                  <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                  {t(`solutions.${solutionId}.hero.primaryCtaActive`, 'End Call')}
+                </>
+              ) : (
+                <>
+                  {t(`solutions.${solutionId}.hero.primaryCta`, data.primaryCta)}
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </>
+              )}
             </button>
 
             <button
