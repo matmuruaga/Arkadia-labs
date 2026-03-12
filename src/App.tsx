@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import LanguageHandler from "./components/LanguageHandler";
 import Layout from "./components/Layout";
 import LoadingScreen from "./components/LoadingScreen";
+import { ElevenLabsWidgetProvider } from "./components/ElevenLabsWidgetContext";
 
 // Lazy loading de páginas para code splitting y mejor performance
 // MainPage se carga de forma normal porque es la ruta principal
@@ -39,9 +40,8 @@ const PublicLayout = () => (
 ); 
 
 function App() {
-  // Ya no se necesita el ElevenLabsContextProvider.
-  // El hook useConversation funciona de forma independiente.
   return (
+    <ElevenLabsWidgetProvider>
     <BrowserRouter>
       <ScrollToTop />
       <Suspense fallback={<LoadingScreen />}>
@@ -74,6 +74,7 @@ function App() {
         </Routes>
       </Suspense>
     </BrowserRouter>
+    </ElevenLabsWidgetProvider>
   );
 }
 
