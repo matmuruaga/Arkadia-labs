@@ -1,6 +1,7 @@
 // src/components/AgentWorkforceBuilder.tsx
-// Scroll-driven animation that builds an AI agent workforce org chart
-// Desktop only — hidden on mobile via parent Suspense wrapper in MainPage
+// v2 — Cinematic scroll-driven animation: company icon starts huge, shrinks,
+// then departments and agents deploy with macro-zoom effect.
+// Desktop only — hidden on mobile via `hidden md:block`.
 
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
@@ -26,365 +27,210 @@ import { cn } from '@/lib/utils';
 // Types & Data
 // ============================================================================
 
-interface AgentNode {
+interface AgentDef {
   id: string;
   slug: string;
   icon: React.ComponentType<{ className?: string }>;
-  category: string;
   kpiValue: string;
   kpiLabel: string;
 }
 
-interface DepartmentNode {
+interface DeptDef {
   id: string;
   label: string;
-  translationKey: string;
-  color: string;        // Tailwind text color
-  bgColor: string;      // Tailwind bg color
-  accentHex: string;    // Hex for SVG strokes and glows
-  agents: AgentNode[];
+  tKey: string;
+  color: string;
+  bg: string;
+  hex: string;
+  // Final position (% of viewport) for the department badge
+  x: number; // % from left
+  y: number; // % from top
+  agents: (AgentDef & {
+    // Final position for each agent card
+    ax: number;
+    ay: number;
+  })[];
 }
 
-const departments: DepartmentNode[] = [
+// Positions are carefully spread across the full viewport to avoid cramping.
+// The company hub sits at ~(50%, 42%). Departments fan out around it.
+// Agent cards radiate outward from their department.
+const depts: DeptDef[] = [
   {
     id: 'outbound',
     label: 'Sales & Outbound',
-    translationKey: 'agentWorkforce.departments.outbound',
+    tKey: 'agentWorkforce.departments.outbound',
     color: 'text-blue-600',
-    bgColor: 'bg-blue-50',
-    accentHex: '#2563eb',
+    bg: 'bg-blue-50',
+    hex: '#2563eb',
+    x: 16, y: 28,
     agents: [
-      { id: 'lead-validator', slug: 'lead-validator', icon: UserCheck, category: 'outbound', kpiValue: '94%', kpiLabel: 'accuracy' },
-      { id: 'sales-qualifier', slug: 'sales-qualifier', icon: Phone, category: 'outbound', kpiValue: '3x', kpiLabel: 'meetings' },
-      { id: 'sales-agent', slug: 'sales-agent', icon: ShoppingCart, category: 'outbound', kpiValue: '+35%', kpiLabel: 'revenue' },
+      { id: 'lead-validator', slug: 'lead-validator', icon: UserCheck, kpiValue: '94%', kpiLabel: 'accuracy', ax: 3, ay: 14 },
+      { id: 'sales-qualifier', slug: 'sales-qualifier', icon: Phone, kpiValue: '3x', kpiLabel: 'meetings', ax: 5, ay: 46 },
+      { id: 'sales-agent', slug: 'sales-agent', icon: ShoppingCart, kpiValue: '+35%', kpiLabel: 'revenue', ax: 18, ay: 68 },
     ],
   },
   {
     id: 'inbound',
     label: 'Customer Service',
-    translationKey: 'agentWorkforce.departments.inbound',
+    tKey: 'agentWorkforce.departments.inbound',
     color: 'text-green-600',
-    bgColor: 'bg-green-50',
-    accentHex: '#16a34a',
+    bg: 'bg-green-50',
+    hex: '#16a34a',
+    x: 38, y: 18,
     agents: [
-      { id: 'virtual-receptionist', slug: 'virtual-receptionist', icon: PhoneIncoming, category: 'inbound', kpiValue: '99.9%', kpiLabel: 'answered' },
-      { id: 'booking-agent', slug: 'booking-agent', icon: CalendarCheck, category: 'inbound', kpiValue: '+45%', kpiLabel: 'bookings' },
+      { id: 'virtual-receptionist', slug: 'virtual-receptionist', icon: PhoneIncoming, kpiValue: '99.9%', kpiLabel: 'answered', ax: 28, ay: 5 },
+      { id: 'booking-agent', slug: 'booking-agent', icon: CalendarCheck, kpiValue: '+45%', kpiLabel: 'bookings', ax: 42, ay: 68 },
     ],
   },
   {
     id: 'marketing',
     label: 'Marketing & Content',
-    translationKey: 'agentWorkforce.departments.marketing',
+    tKey: 'agentWorkforce.departments.marketing',
     color: 'text-teal-600',
-    bgColor: 'bg-teal-50',
-    accentHex: '#0d9488',
+    bg: 'bg-teal-50',
+    hex: '#0d9488',
+    x: 62, y: 18,
     agents: [
-      { id: 'content-creator', slug: 'content-creator', icon: Image, category: 'marketing', kpiValue: '10x', kpiLabel: 'output' },
-      { id: 'social-manager', slug: 'social-manager', icon: Share2, category: 'marketing', kpiValue: '+73%', kpiLabel: 'engagement' },
+      { id: 'content-creator', slug: 'content-creator', icon: Image, kpiValue: '10x', kpiLabel: 'output', ax: 58, ay: 68 },
+      { id: 'social-manager', slug: 'social-manager', icon: Share2, kpiValue: '+73%', kpiLabel: 'engagement', ax: 72, ay: 5 },
     ],
   },
   {
     id: 'operations',
     label: 'Operations',
-    translationKey: 'agentWorkforce.departments.operations',
+    tKey: 'agentWorkforce.departments.operations',
     color: 'text-orange-600',
-    bgColor: 'bg-orange-50',
-    accentHex: '#ea580c',
+    bg: 'bg-orange-50',
+    hex: '#ea580c',
+    x: 84, y: 28,
     agents: [
-      { id: 'operations-agent', slug: 'operations-agent', icon: Cog, category: 'operations', kpiValue: '-60%', kpiLabel: 'manual work' },
+      { id: 'operations-agent', slug: 'operations-agent', icon: Cog, kpiValue: '-60%', kpiLabel: 'manual work', ax: 82, ay: 62 },
     ],
   },
 ];
-
-const totalAgents = departments.reduce((sum, d) => sum + d.agents.length, 0);
 
 // ============================================================================
 // Sub-components
 // ============================================================================
 
-// Animated counter that subscribes to a MotionValue
-const AnimatedCounter: React.FC<{ value: string; progress: MotionValue<number>; threshold: number }> = ({
-  value,
-  progress,
-  threshold,
-}) => {
-  const [visible, setVisible] = useState(false);
-
+// Animated KPI that appears when threshold is reached
+const KpiCounter: React.FC<{
+  value: string;
+  progress: MotionValue<number>;
+  threshold: number;
+}> = ({ value, progress, threshold }) => {
+  const [show, setShow] = useState(false);
   useEffect(() => {
-    const unsubscribe = progress.on('change', (v) => {
-      setVisible(v >= threshold);
-    });
-    return unsubscribe;
+    const unsub = progress.on('change', (v) => setShow(v >= threshold));
+    return unsub;
   }, [progress, threshold]);
-
-  if (!visible) return <span className="text-slate-300">--</span>;
-  return <span>{value}</span>;
+  return show ? <span>{value}</span> : <span className="text-slate-300">--</span>;
 };
 
-// Central hub node
-const CentralNode: React.FC<{ opacity: MotionValue<number>; scale: MotionValue<number> }> = ({
-  opacity,
-  scale,
-}) => {
-  const { t } = useTranslation();
-
-  return (
-    <motion.div
-      className="relative flex flex-col items-center"
-      style={{ opacity, scale }}
-    >
-      {/* Pulse ring */}
-      <div className="absolute w-28 h-28 rounded-full border-2 border-blue-200 animate-ping opacity-20" />
-      <div className="absolute w-36 h-36 rounded-full border border-blue-100 animate-pulse opacity-10" />
-
-      {/* Main node */}
-      <div className="relative w-24 h-24 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 shadow-2xl flex items-center justify-center z-10">
-        <Building2 className="w-10 h-10 text-white" />
-      </div>
-
-      {/* Label */}
-      <div className="mt-3 text-center">
-        <p className="text-sm font-bold text-slate-900">
-          {t('agentWorkforce.centralNode', 'Your Company')}
-        </p>
-        <div className="inline-flex items-center gap-1.5 mt-1 px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200">
-          <Zap className="w-3 h-3 text-blue-500" />
-          <span className="text-[10px] font-semibold text-slate-600 uppercase tracking-wider">
-            {t('agentWorkforce.centralBadge', 'AI-Powered')}
-          </span>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
-
-// Department node
-const DepartmentNodeComponent: React.FC<{
-  dept: DepartmentNode;
-  opacity: MotionValue<number>;
-  scale: MotionValue<number>;
-  y: MotionValue<number>;
-}> = ({ dept, opacity, scale, y }) => {
-  const { t } = useTranslation();
-  const IconFirst = dept.agents[0]?.icon;
-
-  return (
-    <motion.div
-      className="flex flex-col items-center"
-      style={{ opacity, scale, y }}
-    >
-      <div
-        className={cn(
-          'w-14 h-14 rounded-xl flex items-center justify-center shadow-lg border',
-          dept.bgColor,
-        )}
-        style={{ borderColor: `${dept.accentHex}30` }}
-      >
-        {IconFirst && <IconFirst className={cn('w-6 h-6', dept.color)} />}
-      </div>
-
-      <div className="mt-2 text-center">
-        <span
-          className={cn(
-            'inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider',
-            dept.bgColor,
-            dept.color,
-          )}
-        >
-          {t(dept.translationKey, dept.label)}
-        </span>
-      </div>
-    </motion.div>
-  );
-};
-
-// Agent card
+// Agent card — compact, clickable, with macro-zoom entrance
 const AgentCard: React.FC<{
-  agent: AgentNode;
-  dept: DepartmentNode;
+  agent: AgentDef;
+  dept: DeptDef;
   opacity: MotionValue<number>;
   scale: MotionValue<number>;
-  x: MotionValue<number>;
   progress: MotionValue<number>;
   threshold: number;
   onClick: () => void;
-}> = ({ agent, dept, opacity, scale, x, progress, threshold, onClick }) => {
+}> = ({ agent, dept, opacity, scale, progress, threshold, onClick }) => {
   const { t } = useTranslation();
-  const IconComp = agent.icon;
+  const Icon = agent.icon;
 
   return (
     <motion.div
-      className="relative cursor-pointer group"
-      style={{ opacity, scale, x }}
+      className="cursor-pointer group"
+      style={{ opacity, scale }}
       onClick={onClick}
     >
       <div
-        className="relative rounded-xl border bg-white p-3 shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-0.5"
-        style={{
-          borderColor: `${dept.accentHex}20`,
-        }}
+        className="relative rounded-2xl border bg-white/90 backdrop-blur-sm p-3.5 shadow-md shadow-slate-200/50 transition-all duration-300 group-hover:shadow-xl group-hover:shadow-slate-300/50 group-hover:-translate-y-1 w-[190px]"
+        style={{ borderColor: `${dept.hex}25` }}
       >
-        {/* Top row: icon + name + status */}
-        <div className="flex items-center gap-2.5 mb-2">
-          <div
-            className={cn('w-8 h-8 rounded-lg flex items-center justify-center', dept.bgColor)}
-          >
-            <IconComp className={cn('w-4 h-4', dept.color)} />
+        {/* Glow on hover */}
+        <div
+          className="absolute -inset-1 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl -z-10"
+          style={{ background: `${dept.hex}15` }}
+        />
+
+        {/* Header: icon + name + active */}
+        <div className="flex items-center gap-2.5 mb-2.5">
+          <div className={cn('w-9 h-9 rounded-xl flex items-center justify-center shadow-sm', dept.bg)}>
+            <Icon className={cn('w-[18px] h-[18px]', dept.color)} />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-xs font-bold text-slate-900 truncate">
+            <p className="text-[11px] font-bold text-slate-900 leading-tight truncate">
               {t(`solutions.${agent.id}.hero.badge`, agent.id.replace(/-/g, ' '))}
             </p>
-            <span className="text-[9px] font-semibold text-slate-400 uppercase tracking-wider">
+            <span className="text-[9px] font-semibold text-slate-400 uppercase tracking-widest">
               AI Agent
             </span>
           </div>
-          <div className="flex items-center gap-1">
-            <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-[9px] font-medium text-green-600">Active</span>
+          <div className="flex items-center gap-1 shrink-0">
+            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-[8px] font-bold text-emerald-600 uppercase">Live</span>
           </div>
         </div>
 
         {/* KPI */}
-        <div className="flex items-baseline gap-1">
-          <span className="text-lg font-black text-slate-900">
-            <AnimatedCounter value={agent.kpiValue} progress={progress} threshold={threshold} />
+        <div className="flex items-baseline gap-1.5 pl-0.5">
+          <span className="text-xl font-black text-slate-900 tracking-tight">
+            <KpiCounter value={agent.kpiValue} progress={progress} threshold={threshold} />
           </span>
-          <span className="text-[10px] text-slate-500">
+          <span className="text-[10px] text-slate-500 font-medium">
             {t(`agentWorkforce.kpis.${agent.id}`, agent.kpiLabel)}
           </span>
         </div>
 
         {/* Hover arrow */}
-        <div className="absolute right-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-          <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
-        </div>
+        <ArrowRight className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
       </div>
     </motion.div>
   );
 };
 
-// SVG connection line with animated dash
-const ConnectionLine: React.FC<{
-  x1: number;
-  y1: number;
-  x2: number;
-  y2: number;
+// SVG bezier connector with animated pathLength
+const Connector: React.FC<{
+  x1: number; y1: number; x2: number; y2: number;
   color: string;
   pathLength: MotionValue<number>;
 }> = ({ x1, y1, x2, y2, color, pathLength }) => {
-  // Create a smooth bezier curve
-  const midY = (y1 + y2) / 2;
-  const d = `M ${x1} ${y1} C ${x1} ${midY}, ${x2} ${midY}, ${x2} ${y2}`;
+  const cx1 = x1;
+  const cy1 = y1 + (y2 - y1) * 0.5;
+  const cx2 = x2;
+  const cy2 = y1 + (y2 - y1) * 0.5;
+  const d = `M ${x1} ${y1} C ${cx1} ${cy1}, ${cx2} ${cy2}, ${x2} ${y2}`;
 
   return (
     <g>
-      {/* Background path */}
-      <path
-        d={d}
-        fill="none"
-        stroke={`${color}15`}
-        strokeWidth="2"
-      />
-      {/* Animated path */}
+      <path d={d} fill="none" stroke={`${color}10`} strokeWidth="2" />
       <motion.path
-        d={d}
-        fill="none"
-        stroke={color}
-        strokeWidth="2"
-        strokeLinecap="round"
-        style={{ pathLength }}
-        strokeDasharray="0 1"
+        d={d} fill="none" stroke={color} strokeWidth="2"
+        strokeLinecap="round" style={{ pathLength }} strokeDasharray="0 1"
       />
-      {/* Glow */}
       <motion.path
-        d={d}
-        fill="none"
-        stroke={color}
-        strokeWidth="6"
-        strokeLinecap="round"
-        opacity="0.15"
-        style={{ pathLength }}
-        strokeDasharray="0 1"
+        d={d} fill="none" stroke={color} strokeWidth="8"
+        strokeLinecap="round" opacity="0.08" style={{ pathLength }} strokeDasharray="0 1"
       />
     </g>
   );
 };
 
-// Data pulse traveling along a path
-const DataPulse: React.FC<{
-  x1: number;
-  y1: number;
-  x2: number;
-  y2: number;
-  color: string;
-  pulseProgress: MotionValue<number>;
-}> = ({ x1, y1, x2, y2, color, pulseProgress }) => {
-  const cx = useTransform(pulseProgress, [0, 1], [x1, x2]);
-  const cy = useTransform(pulseProgress, [0, 1], [y1, y2]);
+// Data pulse dot traveling along connections
+const Pulse: React.FC<{
+  x1: number; y1: number; x2: number; y2: number;
+  color: string; progress: MotionValue<number>;
+}> = ({ x1, y1, x2, y2, color, progress }) => {
+  const cx = useTransform(progress, [0, 1], [x1, x2]);
+  const cy = useTransform(progress, [0, 1], [y1, y2]);
+  const r = useTransform(progress, [0, 0.5, 1], [2, 5, 2]);
 
   return (
-    <motion.circle
-      cx={cx}
-      cy={cy}
-      r="4"
-      fill={color}
-      opacity="0.8"
-    >
-      <animate
-        attributeName="r"
-        values="3;5;3"
-        dur="1.5s"
-        repeatCount="indefinite"
-      />
-    </motion.circle>
-  );
-};
-
-// Stats summary panel
-const SummaryPanel: React.FC<{
-  opacity: MotionValue<number>;
-  y: MotionValue<number>;
-}> = ({ opacity, y }) => {
-  const { t } = useTranslation();
-  const navigate = useNavigate();
-  const { lang } = useParams<{ lang: string }>();
-
-  const stats = [
-    { value: '8', label: t('agentWorkforce.summary.agents', 'AI Agents') },
-    { value: '4', label: t('agentWorkforce.summary.departments', 'Departments') },
-    { value: '24/7', label: t('agentWorkforce.summary.availability', 'Availability') },
-  ];
-
-  const handleCta = () => {
-    trackCtaClick('explore_solutions', 'agent_workforce_builder', t('agentWorkforce.cta', 'Explore Solutions'));
-    navigate(`/${lang || 'en'}/solutions`);
-  };
-
-  return (
-    <motion.div
-      className="flex flex-col items-center gap-5"
-      style={{ opacity, y }}
-    >
-      {/* Stats row */}
-      <div className="flex items-center gap-6">
-        {stats.map((stat) => (
-          <div key={stat.label} className="text-center">
-            <p className="text-2xl font-black text-slate-900">{stat.value}</p>
-            <p className="text-xs text-slate-500 font-medium">{stat.label}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* CTA */}
-      <button
-        onClick={handleCta}
-        className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold text-sm shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-0.5"
-      >
-        {t('agentWorkforce.cta', 'Explore All Solutions')}
-        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-      </button>
-    </motion.div>
+    <motion.circle cx={cx} cy={cy} r={r} fill={color} opacity="0.7" />
   );
 };
 
@@ -396,309 +242,359 @@ const AgentWorkforceBuilder: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { lang } = useParams<{ lang: string }>();
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [hasTracked, setHasTracked] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const [tracked, setTracked] = useState(false);
 
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: ref,
     offset: ['start start', 'end end'],
   });
 
-  // Track section view once
+  // Track section view
   useEffect(() => {
-    const unsubscribe = scrollYProgress.on('change', (v) => {
-      if (v > 0.05 && !hasTracked) {
+    const unsub = scrollYProgress.on('change', (v) => {
+      if (v > 0.03 && !tracked) {
         trackSectionView('agent_workforce_builder', 'homepage');
-        setHasTracked(true);
+        setTracked(true);
       }
     });
-    return unsubscribe;
-  }, [scrollYProgress, hasTracked]);
+    return unsub;
+  }, [scrollYProgress, tracked]);
 
-  // ---- Scroll-to-animation mappings ----
+  // =========================================================================
+  // PHASE 1 (0% → 12%): Company icon — starts at scale 4 (massive, centered),
+  // shrinks to scale 1 and moves to final position. Title stays fixed.
+  // =========================================================================
+  const hubScale = useTransform(scrollYProgress, [0, 0.12], [3.5, 1]);
+  const hubOpacity = useTransform(scrollYProgress, [0, 0.03], [0, 1]);
+  // Hub moves from center (50%, 45%) to final (50%, 38%)
+  const hubY = useTransform(scrollYProgress, [0, 0.12], [50, 38]);
+  // Glow ring that pulses after hub settles
+  const hubGlowOpacity = useTransform(scrollYProgress, [0.10, 0.14], [0, 0.3]);
 
-  // Phase 1: Central node appears (0% - 8%)
-  const centralOpacity = useTransform(scrollYProgress, [0, 0.06], [0, 1]);
-  const centralScale = useTransform(scrollYProgress, [0, 0.06], [0.5, 1]);
+  // =========================================================================
+  // PHASE 2 (12% → 30%): Department badges deploy with macro-zoom.
+  // Each starts at scale 3 centered on the hub, then shrinks + moves to its position.
+  // =========================================================================
+  const deptAnimations = depts.map((dept, i) => {
+    const start = 0.13 + i * 0.04;
+    const end = start + 0.10;
+    return {
+      opacity: useTransform(scrollYProgress, [start, start + 0.04], [0, 1]),
+      scale: useTransform(scrollYProgress, [start, end], [2.5, 1]),
+      x: useTransform(scrollYProgress, [start, end], [50, dept.x]),
+      y: useTransform(scrollYProgress, [start, end], [38, dept.y]),
+      lineProgress: useTransform(scrollYProgress, [start + 0.02, end], [0, 1]),
+    };
+  });
 
-  // Phase 2: Department lines draw + nodes appear (8% - 25%)
-  const deptLineProgress = [
-    useTransform(scrollYProgress, [0.08, 0.18], [0, 1]),
-    useTransform(scrollYProgress, [0.10, 0.20], [0, 1]),
-    useTransform(scrollYProgress, [0.12, 0.22], [0, 1]),
-    useTransform(scrollYProgress, [0.14, 0.24], [0, 1]),
-  ];
-
-  const deptOpacity = [
-    useTransform(scrollYProgress, [0.15, 0.20], [0, 1]),
-    useTransform(scrollYProgress, [0.17, 0.22], [0, 1]),
-    useTransform(scrollYProgress, [0.19, 0.24], [0, 1]),
-    useTransform(scrollYProgress, [0.21, 0.26], [0, 1]),
-  ];
-
-  const deptScale = [
-    useTransform(scrollYProgress, [0.15, 0.20], [0.6, 1]),
-    useTransform(scrollYProgress, [0.17, 0.22], [0.6, 1]),
-    useTransform(scrollYProgress, [0.19, 0.24], [0.6, 1]),
-    useTransform(scrollYProgress, [0.21, 0.26], [0.6, 1]),
-  ];
-
-  const deptY = [
-    useTransform(scrollYProgress, [0.15, 0.20], [20, 0]),
-    useTransform(scrollYProgress, [0.17, 0.22], [20, 0]),
-    useTransform(scrollYProgress, [0.19, 0.24], [20, 0]),
-    useTransform(scrollYProgress, [0.21, 0.26], [20, 0]),
-  ];
-
-  // Phase 3: Agent lines + cards appear (25% - 72%)
-  // Flatten agents with their scroll ranges
-  const agentAnimations: {
-    agent: AgentNode;
-    dept: DepartmentNode;
-    deptIndex: number;
-    agentIndex: number;
-    lineStart: number;
-    lineEnd: number;
-    cardStart: number;
-    cardEnd: number;
+  // =========================================================================
+  // PHASE 3 (30% → 75%): Agent cards deploy from their dept's position with
+  // macro-zoom (scale 2.5 → 1). Each has staggered timing.
+  // =========================================================================
+  const flatAgents: {
+    agent: AgentDef & { ax: number; ay: number };
+    dept: DeptDef;
+    deptIdx: number;
   }[] = [];
-
-  let agentCounter = 0;
-  departments.forEach((dept, deptIndex) => {
-    dept.agents.forEach((agent, agentIndex) => {
-      const base = 0.26 + agentCounter * 0.055;
-      agentAnimations.push({
-        agent,
-        dept,
-        deptIndex,
-        agentIndex,
-        lineStart: base,
-        lineEnd: base + 0.06,
-        cardStart: base + 0.03,
-        cardEnd: base + 0.08,
-      });
-      agentCounter++;
+  depts.forEach((dept, di) => {
+    dept.agents.forEach((agent) => {
+      flatAgents.push({ agent, dept, deptIdx: di });
     });
   });
 
-  const agentLineProgress = agentAnimations.map((a) =>
-    useTransform(scrollYProgress, [a.lineStart, a.lineEnd], [0, 1])
-  );
+  const agentAnims = flatAgents.map((fa, i) => {
+    const start = 0.30 + i * 0.055;
+    const end = start + 0.10;
+    return {
+      opacity: useTransform(scrollYProgress, [start, start + 0.04], [0, 1]),
+      scale: useTransform(scrollYProgress, [start, end], [2.2, 1]),
+      x: useTransform(scrollYProgress, [start, end], [fa.dept.x, fa.agent.ax]),
+      y: useTransform(scrollYProgress, [start, end], [fa.dept.y, fa.agent.ay]),
+      lineProgress: useTransform(scrollYProgress, [start, end - 0.02], [0, 1]),
+      cardEnd: end,
+    };
+  });
 
-  const agentOpacity = agentAnimations.map((a) =>
-    useTransform(scrollYProgress, [a.cardStart, a.cardEnd], [0, 1])
-  );
+  // =========================================================================
+  // PHASE 4 (75% → 85%): Data pulses travel through all connections
+  // =========================================================================
+  const pulseProgress = useTransform(scrollYProgress, [0.75, 0.88], [0, 1]);
+  const pulseOpacity = useTransform(scrollYProgress, [0.75, 0.78, 0.85, 0.88], [0, 1, 1, 0]);
 
-  const agentScale = agentAnimations.map((a) =>
-    useTransform(scrollYProgress, [a.cardStart, a.cardEnd], [0.7, 1])
-  );
+  // =========================================================================
+  // PHASE 5 (85% → 95%): Summary stats + CTA fade in at bottom
+  // =========================================================================
+  const summaryOpacity = useTransform(scrollYProgress, [0.85, 0.92], [0, 1]);
+  const summaryY = useTransform(scrollYProgress, [0.85, 0.92], [40, 0]);
 
-  const agentX = agentAnimations.map((a) =>
-    useTransform(scrollYProgress, [a.cardStart, a.cardEnd], [30, 0])
-  );
+  // Scroll hint fades out early
+  const hintOpacity = useTransform(scrollYProgress, [0, 0.06], [1, 0]);
 
-  // Phase 4: Data pulses (72% - 82%)
-  const pulseProgress = useTransform(scrollYProgress, [0.72, 0.82], [0, 1]);
-
-  // Phase 5: Summary panel (82% - 92%)
-  const summaryOpacity = useTransform(scrollYProgress, [0.82, 0.90], [0, 1]);
-  const summaryY = useTransform(scrollYProgress, [0.82, 0.90], [30, 0]);
-
-  // Scroll hint fades out
-  const hintOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
-
-  // ---- Layout positions for SVG connections ----
-  // We use a fixed coordinate system for the SVG overlay
-  // Central: (500, 60), Departments spread horizontally, agents below each dept
-
-  const SVG_W = 1000;
-  const SVG_H = 620;
-  const CENTRAL_X = SVG_W / 2;
-  const CENTRAL_Y = 60;
-
-  const deptPositions = [
-    { x: 130, y: 200 },  // outbound
-    { x: 370, y: 200 },  // inbound
-    { x: 620, y: 200 },  // marketing
-    { x: 870, y: 200 },  // operations
-  ];
-
-  // Agent positions: stacked vertically below each department
-  const getAgentPos = (deptIdx: number, agentIdx: number) => {
-    const deptX = deptPositions[deptIdx].x;
-    const baseY = 310;
-    return { x: deptX, y: baseY + agentIdx * 90 };
-  };
-
-  const handleAgentClick = (slug: string) => {
+  // ---- Navigation ----
+  const goToAgent = (slug: string) => {
     trackCtaClick(`agent_card_${slug}`, 'agent_workforce_builder', slug);
     navigate(`/${lang || 'en'}/solutions/${slug}`);
   };
 
+  const goToSolutions = () => {
+    trackCtaClick('explore_solutions', 'agent_workforce_builder', 'Explore Solutions');
+    navigate(`/${lang || 'en'}/solutions`);
+  };
+
+  // ---- SVG coordinate helpers ----
+  // Convert % positions to SVG viewBox coords
+  const SVG_W = 1000;
+  const SVG_H = 700;
+  const pct = (xp: number, yp: number) => ({ sx: (xp / 100) * SVG_W, sy: (yp / 100) * SVG_H });
+
+  const hubSvg = pct(50, 38);
+
   return (
     <section
-      ref={containerRef}
+      ref={ref}
       className="relative hidden md:block"
-      style={{ height: '350vh' }}
+      style={{ height: '450vh' }}
     >
-      {/* Sticky viewport */}
-      <div className="sticky top-0 h-screen overflow-hidden flex items-center">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50/30" />
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-[10%] w-80 h-80 bg-blue-100/30 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-[10%] w-96 h-96 bg-teal-100/20 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-50/20 rounded-full blur-3xl" />
+      <div className="sticky top-0 h-screen overflow-hidden">
+        {/* Background layers */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/80 to-white" />
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {/* Ambient blobs */}
+          <div className="absolute top-[10%] left-[5%] w-[500px] h-[500px] bg-blue-100/20 rounded-full blur-[100px]" />
+          <div className="absolute bottom-[10%] right-[5%] w-[400px] h-[400px] bg-teal-100/20 rounded-full blur-[100px]" />
+          <div className="absolute top-[30%] right-[20%] w-[300px] h-[300px] bg-orange-50/20 rounded-full blur-[80px]" />
+          {/* Grid pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: 'radial-gradient(circle, #94a3b8 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            {/* Section header */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-6"
-            >
-              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-900 mb-3">
-                {t('agentWorkforce.title', 'Build Your AI Workforce')}
-              </h2>
-              <p className="text-base lg:text-lg text-slate-600 max-w-2xl mx-auto">
-                {t('agentWorkforce.subtitle', 'Scroll to see how 8 specialized AI agents form a complete team across every department')}
-              </p>
-            </motion.div>
+        {/* Fixed title (always visible at top) */}
+        <div className="absolute top-8 left-0 right-0 z-20 text-center px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-900 mb-2">
+              {t('agentWorkforce.title', 'Build Your AI Workforce')}
+            </h2>
+            <p className="text-base lg:text-lg text-slate-500 max-w-xl mx-auto">
+              {t('agentWorkforce.subtitle', 'Scroll to see how 8 specialized AI agents form a complete team across every department')}
+            </p>
+          </motion.div>
+        </div>
 
-            {/* Main animation area */}
-            <div className="relative" style={{ height: '520px' }}>
-              {/* SVG connection lines overlay */}
-              <svg
-                viewBox={`0 0 ${SVG_W} ${SVG_H}`}
-                className="absolute inset-0 w-full h-full pointer-events-none z-0"
-                preserveAspectRatio="xMidYMid meet"
-              >
-                {/* Central → Department lines */}
-                {departments.map((dept, i) => (
-                  <ConnectionLine
-                    key={`line-central-${dept.id}`}
-                    x1={CENTRAL_X}
-                    y1={CENTRAL_Y + 40}
-                    x2={deptPositions[i].x}
-                    y2={deptPositions[i].y - 20}
-                    color={dept.accentHex}
-                    pathLength={deptLineProgress[i]}
-                  />
-                ))}
+        {/* SVG connections layer */}
+        <svg
+          viewBox={`0 0 ${SVG_W} ${SVG_H}`}
+          className="absolute inset-0 w-full h-full pointer-events-none z-[1]"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          {/* Hub → Department connectors */}
+          {depts.map((dept, i) => {
+            const dp = pct(dept.x, dept.y);
+            return (
+              <Connector
+                key={`c-hub-${dept.id}`}
+                x1={hubSvg.sx} y1={hubSvg.sy + 25}
+                x2={dp.sx} y2={dp.sy}
+                color={dept.hex}
+                pathLength={deptAnimations[i].lineProgress}
+              />
+            );
+          })}
 
-                {/* Department → Agent lines */}
-                {agentAnimations.map((a, globalIdx) => {
-                  const agentPos = getAgentPos(a.deptIndex, a.agentIndex);
-                  return (
-                    <ConnectionLine
-                      key={`line-agent-${a.agent.id}`}
-                      x1={deptPositions[a.deptIndex].x}
-                      y1={deptPositions[a.deptIndex].y + 30}
-                      x2={agentPos.x}
-                      y2={agentPos.y - 10}
-                      color={a.dept.accentHex}
-                      pathLength={agentLineProgress[globalIdx]}
-                    />
-                  );
-                })}
+          {/* Department → Agent connectors */}
+          {flatAgents.map((fa, i) => {
+            const dp = pct(fa.dept.x, fa.dept.y);
+            const ap = pct(fa.agent.ax, fa.agent.ay);
+            return (
+              <Connector
+                key={`c-agent-${fa.agent.id}`}
+                x1={dp.sx} y1={dp.sy + 15}
+                x2={ap.sx} y2={ap.sy}
+                color={fa.dept.hex}
+                pathLength={agentAnims[i].lineProgress}
+              />
+            );
+          })}
 
-                {/* Data pulses on central → dept lines */}
-                {departments.map((dept, i) => (
-                  <DataPulse
-                    key={`pulse-${dept.id}`}
-                    x1={CENTRAL_X}
-                    y1={CENTRAL_Y + 40}
-                    x2={deptPositions[i].x}
-                    y2={deptPositions[i].y - 20}
-                    color={dept.accentHex}
-                    pulseProgress={pulseProgress}
-                  />
-                ))}
-              </svg>
+          {/* Phase 4: data pulses */}
+          <motion.g style={{ opacity: pulseOpacity }}>
+            {depts.map((dept, i) => {
+              const dp = pct(dept.x, dept.y);
+              return (
+                <Pulse
+                  key={`p-${dept.id}`}
+                  x1={hubSvg.sx} y1={hubSvg.sy + 25}
+                  x2={dp.sx} y2={dp.sy}
+                  color={dept.hex}
+                  progress={pulseProgress}
+                />
+              );
+            })}
+          </motion.g>
+        </svg>
 
-              {/* HTML overlay for nodes and cards */}
-              <div className="absolute inset-0 z-10">
-                {/* Central node */}
-                <div
-                  className="absolute"
-                  style={{
-                    left: `${(CENTRAL_X / SVG_W) * 100}%`,
-                    top: `${(CENTRAL_Y / SVG_H) * 100}%`,
-                    transform: 'translate(-50%, -20%)',
-                  }}
-                >
-                  <CentralNode opacity={centralOpacity} scale={centralScale} />
-                </div>
+        {/* HTML elements layer */}
+        <div className="absolute inset-0 z-10">
+          {/* ---- COMPANY HUB ---- */}
+          <motion.div
+            className="absolute"
+            style={{
+              left: '50%',
+              top: useTransform(hubY, (v) => `${v}%`),
+              x: '-50%',
+              y: '-50%',
+              opacity: hubOpacity,
+              scale: hubScale,
+            }}
+          >
+            <div className="relative flex flex-col items-center">
+              {/* Glow rings */}
+              <motion.div
+                className="absolute w-32 h-32 rounded-full border-2 border-blue-300/50 -top-4 -left-4"
+                style={{ opacity: hubGlowOpacity, scale: useTransform(scrollYProgress, [0.10, 0.90], [1, 1.3]) }}
+              />
+              <motion.div
+                className="absolute w-40 h-40 rounded-full border border-purple-200/30 -top-8 -left-8"
+                style={{ opacity: hubGlowOpacity, scale: useTransform(scrollYProgress, [0.10, 0.90], [1, 1.5]) }}
+              />
 
-                {/* Department nodes */}
-                {departments.map((dept, i) => (
-                  <div
-                    key={dept.id}
-                    className="absolute"
-                    style={{
-                      left: `${(deptPositions[i].x / SVG_W) * 100}%`,
-                      top: `${(deptPositions[i].y / SVG_H) * 100}%`,
-                      transform: 'translate(-50%, -50%)',
-                    }}
-                  >
-                    <DepartmentNodeComponent
-                      dept={dept}
-                      opacity={deptOpacity[i]}
-                      scale={deptScale[i]}
-                      y={deptY[i]}
-                    />
-                  </div>
-                ))}
-
-                {/* Agent cards */}
-                {agentAnimations.map((a, globalIdx) => {
-                  const agentPos = getAgentPos(a.deptIndex, a.agentIndex);
-                  return (
-                    <div
-                      key={a.agent.id}
-                      className="absolute w-[180px]"
-                      style={{
-                        left: `${(agentPos.x / SVG_W) * 100}%`,
-                        top: `${(agentPos.y / SVG_H) * 100}%`,
-                        transform: 'translate(-50%, -50%)',
-                      }}
-                    >
-                      <AgentCard
-                        agent={a.agent}
-                        dept={a.dept}
-                        opacity={agentOpacity[globalIdx]}
-                        scale={agentScale[globalIdx]}
-                        x={agentX[globalIdx]}
-                        progress={scrollYProgress}
-                        threshold={a.cardEnd}
-                        onClick={() => handleAgentClick(a.agent.slug)}
-                      />
-                    </div>
-                  );
-                })}
+              {/* Main icon */}
+              <div className="relative w-24 h-24 rounded-2xl bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 shadow-2xl shadow-slate-900/30 flex items-center justify-center border border-slate-700/50">
+                <Building2 className="w-10 h-10 text-white" />
+                {/* Corner accent */}
+                <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 border-2 border-white shadow-lg" />
               </div>
 
-              {/* Summary panel at bottom center */}
-              <div
-                className="absolute bottom-0 left-1/2 -translate-x-1/2"
-              >
-                <SummaryPanel opacity={summaryOpacity} y={summaryY} />
+              {/* Label */}
+              <div className="mt-3 text-center whitespace-nowrap">
+                <p className="text-sm font-bold text-slate-900">
+                  {t('agentWorkforce.centralNode', 'Your Company')}
+                </p>
+                <div className="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 rounded-full bg-slate-900/5 border border-slate-200">
+                  <Zap className="w-3 h-3 text-blue-500" />
+                  <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">
+                    {t('agentWorkforce.centralBadge', 'AI-Powered')}
+                  </span>
+                </div>
               </div>
             </div>
+          </motion.div>
 
-            {/* Scroll hint */}
-            <motion.p
-              className="text-center text-slate-400 text-sm mt-4"
-              style={{ opacity: hintOpacity }}
+          {/* ---- DEPARTMENT NODES ---- */}
+          {depts.map((dept, i) => {
+            const anim = deptAnimations[i];
+            const Icon = dept.agents[0]?.icon;
+            return (
+              <motion.div
+                key={dept.id}
+                className="absolute"
+                style={{
+                  left: useTransform(anim.x, (v) => `${v}%`),
+                  top: useTransform(anim.y, (v) => `${v}%`),
+                  x: '-50%',
+                  y: '-50%',
+                  opacity: anim.opacity,
+                  scale: anim.scale,
+                }}
+              >
+                <div className="flex flex-col items-center whitespace-nowrap">
+                  <div
+                    className={cn(
+                      'w-14 h-14 rounded-xl flex items-center justify-center shadow-lg border-2',
+                      dept.bg,
+                    )}
+                    style={{ borderColor: `${dept.hex}30`, boxShadow: `0 8px 30px ${dept.hex}15` }}
+                  >
+                    {Icon && <Icon className={cn('w-6 h-6', dept.color)} />}
+                  </div>
+                  <span
+                    className={cn(
+                      'mt-2 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border',
+                      dept.bg, dept.color,
+                    )}
+                    style={{ borderColor: `${dept.hex}20` }}
+                  >
+                    {t(dept.tKey, dept.label)}
+                  </span>
+                </div>
+              </motion.div>
+            );
+          })}
+
+          {/* ---- AGENT CARDS ---- */}
+          {flatAgents.map((fa, i) => {
+            const anim = agentAnims[i];
+            return (
+              <motion.div
+                key={fa.agent.id}
+                className="absolute"
+                style={{
+                  left: useTransform(anim.x, (v) => `${v}%`),
+                  top: useTransform(anim.y, (v) => `${v}%`),
+                  x: '-50%',
+                  y: '-50%',
+                  opacity: anim.opacity,
+                  scale: anim.scale,
+                }}
+              >
+                <AgentCard
+                  agent={fa.agent}
+                  dept={fa.dept}
+                  opacity={anim.opacity}
+                  scale={anim.scale}
+                  progress={scrollYProgress}
+                  threshold={anim.cardEnd}
+                  onClick={() => goToAgent(fa.agent.slug)}
+                />
+              </motion.div>
+            );
+          })}
+
+          {/* ---- SUMMARY + CTA ---- */}
+          <motion.div
+            className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-4"
+            style={{ opacity: summaryOpacity, y: summaryY }}
+          >
+            <div className="flex items-center gap-8 bg-white/80 backdrop-blur-sm border border-slate-200/60 rounded-2xl px-8 py-4 shadow-lg shadow-slate-200/30">
+              {[
+                { v: '8', l: t('agentWorkforce.summary.agents', 'AI Agents') },
+                { v: '4', l: t('agentWorkforce.summary.departments', 'Departments') },
+                { v: '24/7', l: t('agentWorkforce.summary.availability', 'Availability') },
+              ].map((s) => (
+                <div key={s.l} className="text-center">
+                  <p className="text-2xl font-black text-slate-900">{s.v}</p>
+                  <p className="text-[11px] text-slate-500 font-medium">{s.l}</p>
+                </div>
+              ))}
+            </div>
+
+            <button
+              onClick={goToSolutions}
+              className="group inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold text-sm shadow-xl shadow-blue-600/20 hover:shadow-blue-600/40 transition-all duration-300 hover:-translate-y-0.5"
             >
-              {t('agentWorkforce.scrollHint', '↓ Scroll to build your AI team ↓')}
-            </motion.p>
-          </div>
+              {t('agentWorkforce.cta', 'Explore All Solutions')}
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </button>
+          </motion.div>
         </div>
+
+        {/* Scroll hint — fades out */}
+        <motion.p
+          className="absolute bottom-4 left-0 right-0 text-center text-slate-400/60 text-xs z-20"
+          style={{ opacity: hintOpacity }}
+        >
+          {t('agentWorkforce.scrollHint', '↓ Scroll to build your AI team ↓')}
+        </motion.p>
       </div>
     </section>
   );
