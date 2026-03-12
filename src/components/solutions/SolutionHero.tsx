@@ -53,7 +53,10 @@ const SolutionHero: React.FC<Props> = ({ data, solutionId }) => {
         trackAiWidgetOpen(`solution_hero_${solutionId}`, 'elevenlabs_voice_agent');
         const permissionStream = await navigator.mediaDevices.getUserMedia({ audio: true });
         permissionStream.getTracks().forEach(track => track.stop());
-        await startSession({ agentId: 'agent_01jynm32kjf7rvq5857ggj51ew' });
+        await startSession({
+          agentId: 'agent_01jynm32kjf7rvq5857ggj51ew',
+          connectionType: 'webrtc',
+        });
       } else if (status === 'connected') {
         trackAiWidgetClose(`solution_hero_${solutionId}`, 'elevenlabs_voice_agent');
         await endSession();

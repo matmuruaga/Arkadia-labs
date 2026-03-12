@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
-    "@elevenlabs/react": "^0.1.7",
+    "@elevenlabs/react": "^0.14.2",
     "@hookform/resolvers": "^5.1.1",
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-select": "^2.2.5",
