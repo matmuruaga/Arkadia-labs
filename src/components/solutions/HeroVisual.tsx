@@ -92,18 +92,18 @@ const TrustBadgesRow: React.FC<TrustBadgesRowProps> = ({
   gradientFrom = 'from-sky-500/30',
   gradientTo = 'to-teal-500/30',
 }) => (
-  <div className="px-6 pb-6 grid grid-cols-3 gap-3">
+  <div className="px-4 pb-4 md:px-6 md:pb-6 grid grid-cols-3 gap-2 md:gap-3">
     {trustBadges.slice(0, 3).map((badge, i) => {
       const IconComponent = iconMap[badge.icon] || Phone;
       return (
         <div
           key={i}
-          className="bg-white/5 border border-white/10 rounded-xl p-3 text-center"
+          className="bg-white/5 border border-white/10 rounded-xl p-2 md:p-3 text-center"
         >
           <div className="flex justify-center mb-1">
             <div
               className={cn(
-                'w-6 h-6 rounded-lg bg-gradient-to-br flex items-center justify-center',
+                'w-5 h-5 md:w-6 md:h-6 rounded-lg bg-gradient-to-br flex items-center justify-center',
                 gradientFrom,
                 gradientTo,
               )}
@@ -133,7 +133,7 @@ const CardHeader: React.FC<CardHeaderProps> = ({
   statusLabel,
   pulseSpeed = 1.6,
 }) => (
-  <div className="relative px-6 pt-6 pb-4 border-b border-white/10">
+  <div className="relative px-6 pt-4 pb-3 md:pt-6 md:pb-4 border-b border-white/10">
     <div className="flex items-center justify-between">
       <div className="flex items-center gap-2">
         <motion.span
@@ -197,7 +197,7 @@ const WaveformVisual: React.FC<WaveformVisualProps> = ({ voiceStatus, trustBadge
       >
         <div className="absolute inset-0 bg-gradient-to-br from-sky-500/10 via-transparent to-teal-500/10 pointer-events-none" />
 
-        <div className="relative px-6 pt-6 pb-4 border-b border-white/10">
+        <div className="relative px-6 pt-4 pb-3 md:pt-6 md:pb-4 border-b border-white/10">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <motion.span
@@ -219,7 +219,7 @@ const WaveformVisual: React.FC<WaveformVisualProps> = ({ voiceStatus, trustBadge
           </div>
         </div>
 
-        <div className="relative px-6 py-10 flex flex-col items-center">
+        <div className="relative px-6 py-5 md:py-10 flex flex-col items-center">
           <div
             className={cn(
               'absolute inset-0 pointer-events-none transition-opacity duration-700',
@@ -231,13 +231,13 @@ const WaveformVisual: React.FC<WaveformVisualProps> = ({ voiceStatus, trustBadge
             }}
           />
 
-          <div className="relative flex items-center gap-2 h-28">
+          <div className="relative flex items-center gap-2 h-20 md:h-28">
             {Array.from({ length: WAVEFORM_BARS }).map((_, i) => {
               const { minHeight, maxHeight, duration, delay } = getBarParams(i, isConnected);
               return (
                 <motion.div
                   key={i}
-                  className="w-3 rounded-full"
+                  className="w-2.5 md:w-3 rounded-full"
                   style={{
                     background: 'linear-gradient(to top, #0ea5e9, #14b8a6)',
                     minHeight: `${minHeight}px`,
@@ -249,7 +249,7 @@ const WaveformVisual: React.FC<WaveformVisualProps> = ({ voiceStatus, trustBadge
             })}
           </div>
 
-          <p className="mt-6 text-sm font-medium text-white/50 tracking-wide">
+          <p className="mt-3 md:mt-6 text-sm font-medium text-white/50 tracking-wide">
             {isConnected ? 'Processing your request…' : 'Always on. Always professional.'}
           </p>
         </div>
@@ -489,7 +489,7 @@ const ScoreGaugeVisual: React.FC<ScoreGaugeVisualProps> = ({ trustBadges }) => {
         <CardHeader statusColor="bg-green-400" statusLabel="Lead Scoring" pulseSpeed={1.4} />
 
         {/* Gauge area */}
-        <div className="relative px-6 py-6 flex flex-col items-center">
+        <div className="relative px-6 py-4 md:py-6 flex flex-col items-center">
           <div
             className="absolute inset-0 pointer-events-none opacity-50"
             style={{
@@ -499,8 +499,8 @@ const ScoreGaugeVisual: React.FC<ScoreGaugeVisualProps> = ({ trustBadges }) => {
           />
 
           {/* SVG semicircle gauge */}
-          <div className="relative">
-            <svg width="200" height="110" viewBox="0 0 200 110" aria-hidden="true">
+          <div className="relative w-[160px] md:w-[200px] mx-auto">
+            <svg viewBox="0 0 200 110" aria-hidden="true">
               {/* Track */}
               <path
                 d={`M ${GAUGE_CX - GAUGE_R} ${GAUGE_CY} A ${GAUGE_R} ${GAUGE_R} 0 0 1 ${GAUGE_CX + GAUGE_R} ${GAUGE_CY}`}
@@ -526,7 +526,7 @@ const ScoreGaugeVisual: React.FC<ScoreGaugeVisualProps> = ({ trustBadges }) => {
             {/* Center score text */}
             <div className="absolute inset-0 flex flex-col items-center justify-end pb-1">
               <motion.span
-                className="text-4xl font-extrabold text-white leading-none"
+                className="text-3xl md:text-4xl font-extrabold text-white leading-none"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4, delay: 1.2 }}
@@ -537,7 +537,7 @@ const ScoreGaugeVisual: React.FC<ScoreGaugeVisualProps> = ({ trustBadges }) => {
             </div>
           </div>
 
-          <p className="text-sm font-semibold text-white/60 mt-1 mb-4 uppercase tracking-widest">
+          <p className="text-sm font-semibold text-white/60 mt-1 mb-2 md:mb-4 uppercase tracking-widest">
             Lead Score
           </p>
 
@@ -632,7 +632,7 @@ const ConversationFlowVisual: React.FC<ConversationFlowVisualProps> = ({ trustBa
       <CardHeader statusColor="bg-sky-400" statusLabel="AI Qualifier" pulseSpeed={1.2} />
 
       {/* Chat area */}
-      <div className="relative px-5 py-5 space-y-3 min-h-[180px]">
+      <div className="relative px-5 py-3 md:py-5 space-y-2 md:space-y-3 md:min-h-[180px]">
         {CHAT_MESSAGES.map((msg, i) => (
           <motion.div
             key={i}
@@ -643,7 +643,7 @@ const ConversationFlowVisual: React.FC<ConversationFlowVisualProps> = ({ trustBa
           >
             <div
               className={cn(
-                'rounded-2xl px-4 py-2.5 max-w-[78%]',
+                'rounded-2xl px-3 py-2 md:px-4 md:py-2.5 max-w-[78%]',
                 msg.role === 'ai'
                   ? 'bg-sky-500/20 border border-sky-500/30 rounded-tl-sm'
                   : 'bg-white/10 border border-white/10 rounded-tr-sm',
@@ -743,7 +743,7 @@ const RevenueTickerVisual: React.FC<RevenueTickerVisualProps> = ({ trustBadges }
       <CardHeader statusColor="bg-green-400" statusLabel="Revenue Live" pulseSpeed={0.8} />
 
       {/* Revenue counter area */}
-      <div className="relative px-6 py-5 flex flex-col items-center">
+      <div className="relative px-6 py-4 md:py-5 flex flex-col items-center">
         <div
           className="absolute inset-0 pointer-events-none opacity-40"
           style={{
@@ -754,7 +754,7 @@ const RevenueTickerVisual: React.FC<RevenueTickerVisualProps> = ({ trustBadges }
 
         {/* Revenue number */}
         <motion.p
-          className="text-4xl font-extrabold text-white tracking-tight"
+          className="text-3xl md:text-4xl font-extrabold text-white tracking-tight"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
@@ -767,21 +767,24 @@ const RevenueTickerVisual: React.FC<RevenueTickerVisualProps> = ({ trustBadges }
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.8 }}
-          className="flex items-center gap-1.5 mt-2 mb-5"
+          className="flex items-center gap-1.5 mt-2 mb-3 md:mb-5"
         >
           <TrendingUp className="h-3.5 w-3.5 text-green-400" />
           <span className="text-sm font-semibold text-green-400">+$2,340 this hour</span>
         </motion.div>
 
         {/* Transaction list */}
-        <div className="w-full space-y-2">
-          {TRANSACTIONS.map(({ label, amount, delay }) => (
+        <div className="w-full space-y-1.5 md:space-y-2">
+          {TRANSACTIONS.map(({ label, amount, delay }, idx) => (
             <motion.div
               key={label}
               initial={{ opacity: 0, x: 16 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay }}
-              className="flex items-center justify-between bg-white/5 border border-white/8 rounded-xl px-4 py-2.5"
+              className={cn(
+                'flex items-center justify-between bg-white/5 border border-white/8 rounded-xl px-4 py-2 md:py-2.5',
+                idx === 2 && 'hidden md:flex',
+              )}
             >
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-400 flex-shrink-0" />
@@ -873,7 +876,7 @@ const CalendarGridVisual: React.FC<CalendarGridVisualProps> = ({ trustBadges }) 
       <div className="absolute inset-0 bg-gradient-to-br from-sky-500/10 via-transparent to-teal-500/10 pointer-events-none" />
 
       {/* Header with occupancy */}
-      <div className="relative px-6 pt-6 pb-4 border-b border-white/10">
+      <div className="relative px-4 pt-4 pb-3 md:px-6 md:pt-6 md:pb-4 border-b border-white/10">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <motion.span
@@ -897,7 +900,7 @@ const CalendarGridVisual: React.FC<CalendarGridVisualProps> = ({ trustBadges }) 
       </div>
 
       {/* Calendar grid */}
-      <div className="px-5 py-5">
+      <div className="px-5 py-4 md:py-5">
         {/* Day headers */}
         <div className="grid grid-cols-7 gap-1 mb-1.5">
           {DAYS.map((d, i) => (
@@ -908,7 +911,7 @@ const CalendarGridVisual: React.FC<CalendarGridVisualProps> = ({ trustBadges }) 
         </div>
 
         {/* Slot grid */}
-        <div className="grid grid-cols-7 gap-1">
+        <div className="grid grid-cols-7 gap-0.5 md:gap-1">
           {Array.from({ length: TOTAL_SLOTS }).map((_, i) => {
             const isFilled = FILLED_SLOTS.has(i);
             const isPending = PENDING_SLOTS.has(i);
@@ -918,7 +921,7 @@ const CalendarGridVisual: React.FC<CalendarGridVisualProps> = ({ trustBadges }) 
               <motion.div
                 key={i}
                 className={cn(
-                  'h-5 rounded-sm',
+                  'h-4 md:h-5 rounded-sm',
                   isFilled
                     ? 'bg-gradient-to-br from-sky-500 to-teal-500'
                     : isPending
@@ -934,7 +937,7 @@ const CalendarGridVisual: React.FC<CalendarGridVisualProps> = ({ trustBadges }) 
         </div>
 
         {/* Legend */}
-        <div className="flex items-center gap-4 mt-3">
+        <div className="flex items-center gap-4 mt-2 md:mt-3">
           <div className="flex items-center gap-1.5">
             <div className="w-2.5 h-2.5 rounded-sm bg-gradient-to-br from-sky-500 to-teal-500" />
             <span className="text-[10px] text-white/40">Booked</span>
@@ -954,7 +957,7 @@ const CalendarGridVisual: React.FC<CalendarGridVisualProps> = ({ trustBadges }) 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="text-center text-sm font-semibold text-white/60 mt-3"
+          className="text-center text-sm font-semibold text-white/60 mt-2 md:mt-3"
         >
           12 bookings today
         </motion.p>
@@ -1051,7 +1054,7 @@ const ContentFeedVisual: React.FC<ContentFeedVisualProps> = ({ trustBadges }) =>
       <div className="absolute inset-0 bg-gradient-to-br from-sky-500/10 via-transparent to-purple-500/10 pointer-events-none" />
 
       {/* Header with progress */}
-      <div className="relative px-6 pt-6 pb-4 border-b border-white/10">
+      <div className="relative px-4 pt-4 pb-3 md:px-6 md:pt-6 md:pb-4 border-b border-white/10">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
             <motion.span
@@ -1077,19 +1080,19 @@ const ContentFeedVisual: React.FC<ContentFeedVisualProps> = ({ trustBadges }) =>
       </div>
 
       {/* Content cards */}
-      <div className="px-5 py-4 space-y-2.5">
+      <div className="px-5 py-3 md:py-4 space-y-2 md:space-y-2.5">
         {CONTENT_CARDS.map((card, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: card.delay }}
-            className="flex items-center gap-3 bg-white/5 border border-white/8 rounded-xl px-3 py-2.5"
+            className="flex items-center gap-3 bg-white/5 border border-white/8 rounded-xl px-3 py-2 md:py-2.5"
           >
             {/* Thumbnail */}
             <div
               className={cn(
-                'w-10 h-10 rounded-lg bg-gradient-to-br flex-shrink-0 flex items-center justify-center',
+                'w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br flex-shrink-0 flex items-center justify-center',
                 card.gradientFrom,
                 card.gradientTo,
               )}
@@ -1120,7 +1123,7 @@ const ContentFeedVisual: React.FC<ContentFeedVisualProps> = ({ trustBadges }) =>
           initial={{ opacity: 0 }}
           animate={{ opacity: [0, 1, 0.7, 1] }}
           transition={{ duration: 1.5, delay: 1.8, repeat: Infinity }}
-          className="flex items-center gap-3 bg-white/3 border border-dashed border-white/15 rounded-xl px-3 py-2.5"
+          className="hidden md:flex items-center gap-3 bg-white/3 border border-dashed border-white/15 rounded-xl px-3 py-2.5"
         >
           <div className="w-10 h-10 rounded-lg bg-white/10 flex-shrink-0" />
           <div className="flex-1 space-y-1.5">
@@ -1223,9 +1226,9 @@ const SocialRadarVisual: React.FC<SocialRadarVisualProps> = ({ trustBadges }) =>
       <CardHeader statusColor="bg-teal-400" statusLabel="Social Monitor" pulseSpeed={1.0} />
 
       {/* Radar visualization */}
-      <div className="relative px-5 py-4 flex flex-col items-center">
-        <div className="relative">
-          <svg width="180" height="180" viewBox="0 0 180 180" aria-hidden="true">
+      <div className="relative px-5 py-3 md:py-4 flex flex-col items-center">
+        <div className="relative w-[120px] h-[120px] md:w-[180px] md:h-[180px] mx-auto">
+          <svg viewBox="0 0 180 180" aria-hidden="true" className="w-full h-full">
             {/* Concentric rings */}
             {[22, 44, 66].map((r) => (
               <motion.circle
@@ -1278,20 +1281,23 @@ const SocialRadarVisual: React.FC<SocialRadarVisualProps> = ({ trustBadges }) =>
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.0 }}
-          className="text-sm font-semibold text-white/60 mb-3"
+          className="text-sm font-semibold text-white/60 mb-2 md:mb-3"
         >
           23 mentions today
         </motion.p>
 
         {/* Notification items */}
         <div className="w-full space-y-2">
-          {NOTIFICATIONS.map(({ text, dot, delay }) => (
+          {NOTIFICATIONS.map(({ text, dot, delay }, idx) => (
             <motion.div
               key={text}
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.35, delay }}
-              className="flex items-center gap-2 bg-white/5 border border-white/8 rounded-xl px-3 py-2"
+              className={cn(
+                'flex items-center gap-2 bg-white/5 border border-white/8 rounded-xl px-3 py-1.5 md:py-2',
+                idx === 1 && 'hidden md:flex',
+              )}
             >
               <span className={cn('w-2 h-2 rounded-full flex-shrink-0', dot)} />
               <span className="text-xs text-white/70">{text}</span>
@@ -1388,10 +1394,10 @@ const WorkflowOrchestratorVisual: React.FC<WorkflowOrchestratorVisualProps> = ({
       <CardHeader statusColor="bg-teal-400" statusLabel="Operations Agent" pulseSpeed={1.3} />
 
       {/* Workflow visualization */}
-      <div className="px-5 py-5">
+      <div className="px-5 py-4 md:py-5">
         {/* SVG flow diagram */}
-        <div className="relative bg-white/3 border border-white/8 rounded-xl p-3 mb-4">
-          <svg viewBox="0 0 100 100" className="w-full h-28" aria-hidden="true">
+        <div className="relative bg-white/3 border border-white/8 rounded-xl p-3 mb-3 md:mb-4">
+          <svg viewBox="0 0 100 100" className="w-full h-20 md:h-28" aria-hidden="true">
             {/* Connection paths */}
             {PATHS.map(({ d, delay }, i) => (
               <motion.path
@@ -1541,7 +1547,7 @@ const HeroVisual: React.FC<HeroVisualProps> = ({
   const visualType = resolveVisualType(heroImage, primaryCtaAction, heroVisualType);
 
   return (
-    <div className={cn('relative w-full py-4 sm:py-6 lg:py-8', className)}>
+    <div className={cn('relative w-full py-0 sm:py-4 lg:py-8', className)}>
       {visualType === 'voice-waveform' && (
         <WaveformVisual voiceStatus={voiceStatus} trustBadges={trustBadges} />
       )}
