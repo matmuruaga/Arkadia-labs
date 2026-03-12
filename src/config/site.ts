@@ -12,8 +12,9 @@ export const SITE_CONFIG = {
   contactEmail: 'info@arkadialabs.io',
   defaultLocale: 'en' as const,
   locales: ['en', 'es', 'cs'] as const,
-  // OG Image: Should be 1200x630px minimum. Update this URL when a proper OG image is created.
-  defaultOgImage: 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg',
+  // OG Image: 1200x630px JPG generated from logo via Cloudinary transformations.
+  // TODO: Replace with a proper branded OG image (1200x630px) when available.
+  defaultOgImage: 'https://res.cloudinary.com/dwhidn4z1/image/upload/w_1200,h_630,c_pad,b_white,f_jpg,q_auto/v1759500046/arcadia_labs_COMPLETO_oggaxg.svg',
 } as const;
 
 export type SupportedLocale = (typeof SITE_CONFIG.locales)[number];

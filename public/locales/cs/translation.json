@@ -2559,8 +2559,8 @@
     },
     "sales-qualifier": {
       "seo": {
-        "title": "Sales Qualifier AI Agent | Konverzační Kvalifikace Leadů | Elevaite Labs",
-        "description": "AI hlasový agent, který kvalifikuje leady prostřednictvím přirozené konverzace. 5+ minut kontextového dialogu, obohacení v reálném čase a automatické rezervace schůzek."
+        "title": "AI Kvalifikátor Prodeje | Konverzační Kvalifikace Leadů",
+        "description": "AI hlasový agent kvalifikující leady přirozenou konverzací. 5+ minut kontextového dialogu, obohacování dat v reálném čase a automatické plánování schůzek."
       },
       "hero": {
         "badge": "Prodej a Inbound",
@@ -2814,8 +2814,8 @@
     },
     "sales-agent": {
       "seo": {
-        "title": "AI Prodejní Agent | Autonomní Prodej a Upselling | Elevaite Labs",
-        "description": "AI hlasový agent, který autonomně prodává vaše produkty a služby. Zvládá příchozí i odchozí hovory, uzavírá obchody a zvyšuje prodeje. Generování příjmů 24/7 na autopilota."
+        "title": "AI Prodejní Agent | Autonomní Prodej a Upselling",
+        "description": "AI hlasový agent autonomně prodávající vaše produkty. Zvládá příchozí i odchozí hovory, uzavírá obchody a podporuje upselling. Generace příjmů 24/7."
       },
       "hero": {
         "badge": "Prodej a Příjmy",
@@ -3069,8 +3069,8 @@
     },
     "virtual-receptionist": {
       "seo": {
-        "title": "AI Virtuální Recepční | Obsluha Hovorů 24/7 | Elevaite Labs",
-        "description": "Virtuální recepční poháněná AI, která přijímá hovory, spravuje dotazy a poskytuje výjimečné zážitky hostům 24/7. Nikdy nepromeškejte hovor, nikdy neztratíte zákazníka."
+        "title": "AI Virtuální Recepční | Obsluha Hovorů 24/7",
+        "description": "AI virtuální recepční přijímající hovory, spravující dotazy a poskytující výjimečné zážitky 24/7. Nikdy nezmeškejte hovor ani zákazníka."
       },
       "hero": {
         "badge": "Zákaznický Servis",
@@ -3325,8 +3325,8 @@
     },
     "booking-agent": {
       "seo": {
-        "title": "AI Rezervační Agent | Automatizované Rezervace pro Restaurace a Hotely | Elevaite Labs",
-        "description": "Rezervační agent poháněný AI, který zpracovává rezervace 24/7 pro restaurace, hotely a pohostinské podniky. Maximalizujte obsazenost, snižte no-shows a poskytněte bezproblémové zážitky hostům."
+        "title": "AI Rezervační Agent | Automatizované Rezervace pro Pohostinství",
+        "description": "AI rezervační agent zpracovávající rezervace 24/7 pro restaurace a hotely. Maximalizujte obsazenost, snižte no-show o 67 % a zajistěte bezproblémové zážitky."
       },
       "hero": {
         "badge": "Rezervace a Pohostinství",
@@ -3581,8 +3581,8 @@
     },
     "content-creator": {
       "seo": {
-        "title": "AI Tvůrce Obsahu | Automatizovaný Obsah a Publikování na Sociálních Sítích | Elevaite Labs",
-        "description": "Tvůrce obsahu poháněný AI, který generuje obrázky, videa a příspěvky. Analyzuje konkurenci, nachází optimální časy publikování a automaticky publikuje na všech platformách."
+        "title": "AI Tvůrce Obsahu | Automatizovaný Obsah pro Sociální Sítě",
+        "description": "AI tvůrce obsahu generující obrázky, videa a příspěvky. Analyzuje konkurenci, nachází optimální časy publikování a zveřejňuje automaticky—úspora 20 hodin týdně."
       },
       "hero": {
         "badge": "Marketing a Obsah",
@@ -4093,7 +4093,7 @@
     "operations-agent": {
       "seo": {
         "title": "AI Agent pro Operace | Automatizujte Pracovní Postupy",
-        "description": "AI agent pro operace, který automatizuje interní pracovní postupy, generuje reporty, sleduje úkoly, monitoruje procesy a synchronizuje data napříč nástroji—ušetří týmům 20+ hodin týdně."
+        "description": "AI agent automatizující pracovní postupy, generující reporty, sledující úkoly a synchronizující data. Ušetřete 20+ hodin týdně a eliminujte ruční koordinaci."
       },
       "hero": {
         "badge": "Operace a automatizace",

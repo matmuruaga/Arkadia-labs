@@ -98,6 +98,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://arkadialabs.io/en/solutions/content-creator"/>
   </url>
 
+  <!-- Solution: Social Manager -->
+  <url>
+    <loc>https://arkadialabs.io/cs/solutions/social-manager</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkadialabs.io/en/solutions/social-manager"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkadialabs.io/es/solutions/social-manager"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://arkadialabs.io/cs/solutions/social-manager"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arkadialabs.io/en/solutions/social-manager"/>
+  </url>
+
+  <!-- Solution: Operations Agent -->
+  <url>
+    <loc>https://arkadialabs.io/cs/solutions/operations-agent</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arkadialabs.io/en/solutions/operations-agent"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://arkadialabs.io/es/solutions/operations-agent"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://arkadialabs.io/cs/solutions/operations-agent"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arkadialabs.io/en/solutions/operations-agent"/>
+  </url>
+
   <!-- Integrations Page -->
   <url>
     <loc>https://arkadialabs.io/cs/integrations</loc>

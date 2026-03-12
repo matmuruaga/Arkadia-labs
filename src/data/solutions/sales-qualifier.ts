@@ -25,12 +25,13 @@ export const salesQualifierSolution: Solution = {
   },
 
   hero: {
-    badge: 'Sales & Inbound',
-    title: 'Your AI Sales Rep That Actually Qualifies',
-    subtitle: 'Conversational Lead Intelligence',
-    description: 'An AI voice agent that understands your prospects deeply, maintains natural 5+ minute conversations, qualifies with precision, and books meetings—all while you focus on closing deals.',
+    badge: 'AI Qualification',
+    title: 'Qualify Leads While You Sleep',
+    subtitle: 'Conversations That Close Themselves',
+    description: 'An AI voice agent that holds natural 5+ minute conversations, qualifies with precision, and books meetings automatically.',
     primaryCta: 'See It In Action',
     secondaryCta: 'Talk to Sales',
+    heroVisualType: 'conversation-flow',
     trustBadges: [
       { icon: 'message-circle', label: 'Conversation Length', value: '5+ min' },
       { icon: 'target', label: 'Qualification Accuracy', value: '94%' },
@@ -216,6 +217,7 @@ export const salesQualifierSolution: Solution = {
           '40% higher ACV on qualified deals',
         ],
         icon: 'code',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320588/sq-saas_copia_lehyvw.webp',
       },
       {
         id: 'financial-services',
@@ -228,6 +230,7 @@ export const salesQualifierSolution: Solution = {
           '24/7 prospect engagement',
         ],
         icon: 'dollar-sign',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320588/sq-financial_copia_psy9el.webp',
       },
       {
         id: 'real-estate',
@@ -240,6 +243,7 @@ export const salesQualifierSolution: Solution = {
           'Higher conversion on hot leads',
         ],
         icon: 'home',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320588/sq-realestate_copia_l8hnwi.webp',
       },
     ],
   },

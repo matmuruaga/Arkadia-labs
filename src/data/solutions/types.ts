@@ -42,6 +42,7 @@ export interface UseCase {
   description: string;
   results: string[];
   icon?: string;
+  image?: string;
 }
 
 export interface Testimonial {
@@ -76,6 +77,7 @@ export interface SolutionHero {
   secondaryCta: string;
   heroImage?: string;
   heroVideo?: string;
+  heroVisualType?: 'image' | 'voice-waveform' | 'dashboard' | 'auto' | 'score-gauge' | 'conversation-flow' | 'revenue-ticker' | 'calendar-grid' | 'content-feed' | 'social-radar' | 'workflow-orchestrator';
   trustBadges: TrustBadge[];
 }
 

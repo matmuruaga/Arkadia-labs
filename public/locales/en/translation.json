@@ -763,7 +763,7 @@
     },
     "sales-qualifier": {
       "seo": {
-        "title": "Sales Qualifier AI Agent | Conversational Lead Qualification | Elevaite Labs",
+        "title": "AI Sales Qualifier | Conversational Lead Qualification",
         "description": "AI voice agent that qualifies leads through natural conversation. 5+ minutes of context-aware dialogue, real-time enrichment, and automated meeting booking."
       },
       "hero": {
@@ -1018,8 +1018,8 @@
     },
     "sales-agent": {
       "seo": {
-        "title": "AI Sales Agent | Autonomous Selling & Upselling | Elevaite Labs",
-        "description": "AI voice agent that sells your products and services autonomously. Handles inbound and outbound calls, closes deals, and drives upsells. 24/7 revenue generation on autopilot."
+        "title": "AI Sales Agent | Autonomous Selling & Upselling",
+        "description": "AI voice agent that sells your products autonomously. Handles inbound and outbound calls, closes deals, and drives upsells—24/7 revenue generation on autopilot."
       },
       "hero": {
         "badge": "Sales & Revenue",
@@ -1273,8 +1273,8 @@
     },
     "virtual-receptionist": {
       "seo": {
-        "title": "AI Virtual Receptionist | 24/7 Call Handling & Guest Experience | Elevaite Labs",
-        "description": "AI-powered virtual receptionist that handles calls, manages inquiries, and delivers exceptional guest experiences 24/7. Never miss a call, never lose a customer."
+        "title": "AI Virtual Receptionist | 24/7 Call Handling & Routing",
+        "description": "AI virtual receptionist that handles calls, manages inquiries, and delivers exceptional guest experiences 24/7. Never miss a call, never lose a customer."
       },
       "hero": {
         "badge": "Customer Service",
@@ -1529,8 +1529,8 @@
     },
     "booking-agent": {
       "seo": {
-        "title": "AI Booking Agent | Automated Reservations for Restaurants & Hotels | Elevaite Labs",
-        "description": "AI-powered booking agent that handles reservations 24/7 for restaurants, hotels, and hospitality businesses. Maximize occupancy, reduce no-shows, and deliver seamless guest experiences."
+        "title": "AI Booking Agent | Automated Reservations for Hospitality",
+        "description": "AI booking agent that handles reservations 24/7 for restaurants and hotels. Maximize occupancy, reduce no-shows by 67%, and deliver seamless guest experiences."
       },
       "hero": {
         "badge": "Reservations & Hospitality",
@@ -1785,8 +1785,8 @@
     },
     "content-creator": {
       "seo": {
-        "title": "AI Content Creator | Automated Social Media Content & Publishing | Elevaite Labs",
-        "description": "AI-powered content creator that generates images, videos, and posts. Analyzes competitors, finds optimal posting times, and publishes automatically across all platforms."
+        "title": "AI Content Creator | Automated Social Media Content",
+        "description": "AI content creator that generates images, videos, and posts. Analyzes competitors, finds optimal posting times, and auto-publishes—saving 20 hours weekly."
       },
       "hero": {
         "badge": "Marketing & Content",
@@ -2296,7 +2296,7 @@
     "operations-agent": {
       "seo": {
         "title": "AI Operations Agent | Automate Business Workflows",
-        "description": "AI operations agent that automates internal workflows, aggregates reports, tracks tasks, monitors processes, and syncs data across tools—saving teams 20+ hours weekly."
+        "description": "AI operations agent that automates workflows, generates reports, tracks tasks, and syncs data across all tools. Save 20+ hours weekly."
       },
       "hero": {
         "badge": "Operations & Automation",
