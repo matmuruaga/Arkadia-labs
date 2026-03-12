@@ -150,6 +150,14 @@ export interface PlatformActivityItem {
   status: 'success' | 'pending' | 'processing';
 }
 
+export interface PlatformTableRow {
+  id: string;
+  name: string;
+  detail: string;
+  value: string;
+  status: 'success' | 'warning' | 'info';
+}
+
 export interface SolutionPlatformPreview {
   badge?: string;
   title: string;
@@ -165,6 +173,14 @@ export interface SolutionPlatformPreview {
     description?: string;
   };
   activityFeed?: PlatformActivityItem[];
+  floatingBadge1?: { title: string; subtitle: string };
+  floatingBadge2?: { title: string; subtitle: string };
+  secondaryTable?: {
+    title: string;
+    subtitle?: string;
+    rows: PlatformTableRow[];
+  };
+  secondaryChartTitle?: string;
 }
 
 export interface SolutionScoreAnimation {

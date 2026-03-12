@@ -1860,7 +1860,517 @@
     "subtitle": "No te quedes atrás en la carrera del contenido.",
     "cta": "Empezar Hoy"
   }
+},
+"social-manager": {
+  "seo": {
+    "title": "Gestor de Redes Sociales IA | Monitorea, Interactúa y Crece",
+    "description": "Gestor de redes sociales con IA que responde a comentarios y DMs, monitorea menciones de marca, analiza el rendimiento y gestiona el engagement comunitario 24/7."
+  },
+  "hero": {
+    "badge": "Marketing y Redes Sociales",
+    "title": "Tu Gestor de Redes Sociales con IA Que Nunca Duerme",
+    "subtitle": "Monitorea. Interactúa. Analiza. Crece. Protege.",
+    "description": "Un agente de IA que responde a cada comentario y DM en segundos, monitorea menciones de marca en toda la web, rastrea el rendimiento de competidores, identifica oportunidades de tendencias y te alerta de crisis de reputación—todo antes de que tu equipo empiece su mañana.",
+    "primaryCta": "Verlo en Acción",
+    "secondaryCta": "Hablar con Ventas"
+  },
+  "problem": {
+    "badge": "El Problema",
+    "headline": "Tus Redes Sociales Son un Trabajo a Tiempo Completo Que Tu Equipo No Puede Sostener",
+    "description": "Las redes sociales nunca se detienen. Los comentarios se acumulan, los DMs quedan sin respuesta, las menciones de marca pasan desapercibidas y tu equipo está demasiado ocupado para seguir el ritmo—mientras tu reputación y engagement sufren en silencio.",
+    "painPoints": {
+      "0": {
+        "title": "Conversaciones Sin Respuesta",
+        "description": "El 71% de los consumidores que reciben una respuesta rápida de marca en redes sociales son más propensos a recomendarla. Sin embargo, la mayoría de empresas responden menos del 25% de los comentarios en 24 horas."
+      },
+      "1": {
+        "title": "Menciones de Marca Perdidas",
+        "description": "Los clientes etiquetan, mencionan y reseñan tu marca en docenas de plataformas. Sin monitoreo sistemático, el sentimiento negativo se propaga sin respuesta y los momentos positivos pasan inadvertidos."
+      },
+      "2": {
+        "title": "Sin Visibilidad del Rendimiento",
+        "description": "Las analíticas nativas de cada plataforma están aisladas y son superficiales. No tienes una visión unificada de qué funciona, qué contenido resuena o cómo te comparas con la competencia."
+      },
+      "3": {
+        "title": "Riesgo de Escalada de Crisis",
+        "description": "Una sola queja viral o publicación negativa puede convertirse en una crisis de PR en horas. El monitoreo manual significa que siempre reaccionas demasiado tarde, cuando el daño ya está hecho."
+      }
+    },
+    "statistics": {
+      "0": {
+        "label": "de los consumidores recomiendan marcas que responden rápido en redes sociales"
+      },
+      "1": {
+        "label": "de las quejas en redes sociales quedan sin respuesta en 24 horas"
+      },
+      "2": {
+        "label": "tiempo promedio para detectar una crisis en redes sociales manualmente"
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "Cómo Funciona",
+    "title": "Cómo Funciona el Gestor de Redes Sociales",
+    "subtitle": "Del monitoreo de marca al crecimiento de comunidad—completamente automatizado",
+    "steps": {
+      "0": {
+        "title": "Escucha en Todos los Canales",
+        "description": "Monitorea continuamente menciones, comentarios, DMs, hashtags y reseñas en todas las plataformas sociales y la web en general. Nada sobre tu marca pasa desapercibido."
+      },
+      "1": {
+        "title": "Interactúa con Contexto",
+        "description": "Responde automáticamente a comentarios y DMs usando el tono alineado a tu marca, historial de conversaciones y conocimiento del producto. Escala consultas sensibles a tu equipo humano de inmediato."
+      },
+      "2": {
+        "title": "Analiza y Compara",
+        "description": "Rastrea métricas de rendimiento en todas las plataformas, compara con competidores, identifica patrones de contenido de mejor rendimiento y presenta insights accionables semanalmente."
+      },
+      "3": {
+        "title": "Alerta y Estrategiza",
+        "description": "Envía alertas de crisis en tiempo real, notificaciones de temas tendencia y señales de oportunidades con influencers. Ofrece recomendaciones estratégicas para hacer crecer tu audiencia y proteger tu marca."
+      }
+    }
+  },
+  "features": {
+    "badge": "Características",
+    "title": "Tu Centro de Comando Completo para Redes Sociales",
+    "subtitle": "Todas las herramientas para gestionar, proteger y hacer crecer tu presencia social",
+    "features": {
+      "0": {
+        "title": "Automatización Inteligente de Comentarios y DMs",
+        "description": "Responde a comentarios y DMs en minutos con respuestas contextualizadas. Entiende el sentimiento, el historial de conversaciones y las directrices de marca para responder como un community manager experimentado."
+      },
+      "1": {
+        "title": "Monitoreo de Menciones de Marca",
+        "description": "Rastrea cada mención de tu marca, productos y términos clave en plataformas sociales, sitios de noticias, foros y sitios de reseñas. Categoriza automáticamente por sentimiento y urgencia."
+      },
+      "2": {
+        "title": "Analíticas de Rendimiento Unificadas",
+        "description": "Agrega métricas de todas las plataformas en un único dashboard. Rastrea crecimiento de seguidores, tasas de engagement, alcance, share of voice y tendencias de ROI entre canales."
+      },
+      "3": {
+        "title": "Benchmarking Social de Competidores",
+        "description": "Monitorea la frecuencia de publicación, tasas de engagement, mejores contenidos, estrategias de hashtags y crecimiento de audiencia de tus competidores. Sabe exactamente dónde estás y dónde atacar."
+      },
+      "4": {
+        "title": "Detección de Crisis y Alertas",
+        "description": "Detecta picos inusuales de sentimiento negativo, quejas virales o ataques coordinados en minutos. Envía alertas inmediatas con contexto para que puedas responder antes de que escale."
+      },
+      "5": {
+        "title": "Identificación y Seguimiento de Influencers",
+        "description": "Identifica influencers relevantes que mencionan tu marca o operan en tu nicho. Rastrea calidad de engagement, alineación de audiencia e historial de contacto en un solo lugar."
+      }
+    }
+  },
+  "metrics": {
+    "badge": "Resultados",
+    "title": "Resultados en Redes Sociales Que Marcan la Diferencia",
+    "subtitle": "Resultados medidos de marcas que usan el Gestor de Redes Sociales",
+    "metrics": {
+      "0": {
+        "label": "Tasa de Engagement",
+        "description": "Aumento promedio en cuentas gestionadas"
+      },
+      "1": {
+        "label": "Tiempo de Respuesta",
+        "description": "Tiempo promedio de respuesta a comentarios y DMs"
+      },
+      "2": {
+        "label": "Cobertura de Menciones",
+        "description": "Menciones de marca capturadas y categorizadas"
+      },
+      "3": {
+        "label": "Tiempo Ahorrado Semanalmente",
+        "description": "Por community manager por semana"
+      }
+    },
+    "comparisonTitle": "Antes vs Después del Gestor de Redes Sociales",
+    "before": {
+      "0": "DMs y comentarios sin respuesta durante horas",
+      "1": "Crisis de marca detectadas demasiado tarde",
+      "2": "Sin visión clara del ROI social",
+      "3": "Estrategias de competidores desconocidas",
+      "4": "Gestión de comunidad reactiva"
+    },
+    "after": {
+      "0": "Cada conversación respondida en minutos",
+      "1": "Crisis detectadas antes de que escalen",
+      "2": "Dashboard de rendimiento unificado en tiempo real",
+      "3": "Inteligencia social completa de competidores",
+      "4": "Estrategia proactiva de crecimiento de comunidad"
+    }
+  },
+  "platform": {
+    "badge": "Centro de Comando Social",
+    "title": "Control Total de Tu Presencia Social",
+    "subtitle": "Monitorea conversaciones, rastrea la salud de tu marca y mide el crecimiento desde un único dashboard."
+  },
+  "useCases": {
+    "badge": "Casos de Uso",
+    "title": "Gestión Social Diseñada para Cada Negocio",
+    "subtitle": "Mira cómo diferentes marcas protegen y hacen crecer su presencia social con IA",
+    "resultsTitle": "Resultados Clave",
+    "useCases": {
+      "0": {
+        "industry": "Retail y E-commerce",
+        "title": "Engagement de Comunidad a Escala",
+        "description": "Maneja miles de comentarios diarios, preguntas sobre productos y quejas de pedidos en Instagram, TikTok y Facebook sin aumentar el equipo. Cada cliente se siente escuchado.",
+        "results": {
+          "0": "73% de aumento en el engagement de la comunidad",
+          "1": "4x más rápido en responder consultas de productos",
+          "2": "91% de reducción en comentarios sin respuesta"
+        }
+      },
+      "1": {
+        "industry": "Agencias de Marketing",
+        "title": "Gestión Social Multi-Marca",
+        "description": "Gestiona presencia social y reputación para múltiples clientes simultáneamente. Cada marca recibe monitoreo dedicado, plantillas de respuesta personalizadas e informes de rendimiento individuales.",
+        "results": {
+          "0": "Gestiona 8x más cuentas de clientes",
+          "1": "Reportes unificados en todas las marcas",
+          "2": "60% de reducción en costes de gestión de comunidad"
+        }
+      },
+      "2": {
+        "industry": "Hostelería y Restauración",
+        "title": "Protección de Reputación y Relaciones con Huéspedes",
+        "description": "Responde a reseñas y menciones en Google, TripAdvisor, Instagram y Facebook en tiempo real. Convierte huéspedes insatisfechos en embajadores de marca con respuestas rápidas y empáticas.",
+        "results": {
+          "0": "Crisis contenida en menos de 15 minutos en promedio",
+          "1": "40% de mejora en puntuaciones de sentimiento de reseñas",
+          "2": "2,3x más menciones positivas de boca a boca"
+        }
+      }
+    }
+  },
+  "integrations": {
+    "badge": "Integraciones",
+    "title": "Se Conecta con Todas las Plataformas que Gestionas",
+    "subtitle": "Integraciones nativas con todas las principales plataformas sociales y herramientas de gestión",
+    "viewAll": "Ver todas las integraciones"
+  },
+  "faq": {
+    "badge": "Preguntas Frecuentes",
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre el Gestor de Redes Sociales",
+    "moreQuestions": "¿Todavía tienes preguntas?",
+    "contactUs": "Contacta con nuestro equipo",
+    "faqs": {
+      "0": {
+        "question": "¿Cómo sabe la IA qué decir en las respuestas?",
+        "answer": "Durante la incorporación, entrenamos la IA con tu voz de marca, guías de tono, conocimiento del producto, FAQs y conversaciones pasadas. Genera respuestas contextualmente apropiadas y marca cualquier cosa fuera de su umbral de confianza para revisión humana. Mantienes control total de aprobación."
+      },
+      "1": {
+        "question": "¿Qué plataformas monitorea?",
+        "answer": "Instagram, TikTok, Facebook, X (Twitter), LinkedIn, YouTube, Pinterest, Reddit, Google Reviews y Trustpilot. También monitorea sitios de noticias y foros de la industria para menciones de marca más amplias."
+      },
+      "2": {
+        "question": "¿Qué sucede cuando se detecta una crisis?",
+        "answer": "La IA envía una alerta inmediata a los miembros designados de tu equipo por Slack, correo electrónico o SMS. La alerta incluye el contenido, análisis de sentimiento, alcance actual y opciones de respuesta sugeridas para que puedas actuar en minutos en lugar de horas."
+      },
+      "3": {
+        "question": "¿Puedo revisar y editar las respuestas de IA antes de que se envíen?",
+        "answer": "Sí. Puedes ejecutar en modo totalmente automático, modo revisar-antes-de-enviar, o un híbrido donde ciertos tipos de mensajes (quejas, temas sensibles) siempre requieren aprobación mientras las consultas rutinarias responden automáticamente. El flujo de trabajo es completamente personalizable."
+      },
+      "4": {
+        "question": "¿Cómo funciona el benchmarking de competidores?",
+        "answer": "Especificas hasta 10 competidores. La IA rastrea su frecuencia de publicación, tasas de engagement, crecimiento de seguidores, formatos de contenido de mejor rendimiento, estrategias de hashtags y tasas de respuesta. Los informes de benchmarking semanales muestran exactamente cómo te comparas y dónde capitalizar."
+      },
+      "5": {
+        "question": "¿Gestiona múltiples idiomas?",
+        "answer": "Sí. El Gestor de Redes Sociales soporta comunidades multilingüe. Detecta el idioma de los mensajes entrantes y responde en el mismo idioma. Actualmente soporta inglés, español, portugués, francés, alemán, italiano y más."
+      }
+    }
+  },
+  "cta": {
+    "badge": "Empieza Hoy",
+    "title": "¿Listo para No Perderte Ninguna Conversación?",
+    "subtitle": "Mira cómo el Gestor de Redes Sociales protege la reputación de tu marca y hace crecer tu comunidad—automáticamente, 24/7.",
+    "primaryCta": "Solicitar Demo en Vivo",
+    "secondaryCta": "Hablar con Ventas",
+    "trust1": "Sin tarjeta de crédito",
+    "trust2": "Programa piloto gratis",
+    "trust3": "Setup en 2 semanas"
+  },
+  "inlineCta1": {
+    "title": "Mira el Gestor de Redes Sociales IA en Acción",
+    "subtitle": "Observa cómo responde comentarios, monitorea menciones y protege tu marca en tiempo real.",
+    "cta": "Ver Demo"
+  },
+  "inlineCta2": {
+    "badge": "Cobertura Social 24/7",
+    "title": "Mira el Gestor de Redes Sociales en Acción",
+    "subtitle": "Nunca vuelvas a perder un comentario, mención o crisis.",
+    "primaryCta": "Agendar Demo",
+    "stats": {
+      "0": "Más Engagement",
+      "1": "Tiempo de Respuesta",
+      "2": "Marcas Protegidas",
+      "3": "Soporte"
+    }
+  },
+  "inlineCta3": {
+    "urgency": "El 79% de las quejas en redes sociales quedan sin respuesta en 24 horas",
+    "title": "Tu Comunidad Está Hablando. ¿Estás Escuchando?",
+    "subtitle": "No dejes que las conversaciones sin respuesta erosionen la reputación de tu marca.",
+    "cta": "Empezar Hoy"
+  }
 }
+},
+"operations-agent": {
+  "seo": {
+    "title": "Agente de Operaciones IA | Automatiza Flujos de Trabajo",
+    "description": "Agente de operaciones IA que automatiza flujos internos, genera reportes, rastrea tareas, monitorea procesos y sincroniza datos entre herramientas—ahorrando más de 20 horas semanales."
+  },
+  "hero": {
+    "badge": "Operaciones y Automatización",
+    "title": "Tu Agente de Operaciones IA Que Gestiona el Back Office",
+    "subtitle": "Automatiza. Orquesta. Monitorea. Sincroniza. Escala.",
+    "description": "Un agente de IA que orquesta flujos de trabajo en cada herramienta de tu equipo, genera reportes automáticamente desde múltiples fuentes, rastrea tareas y escala bloqueos, monitorea procesos con alertas inteligentes y mantiene toda tu operación sincronizada—sin coordinación manual.",
+    "primaryCta": "Verlo en Acción",
+    "secondaryCta": "Hablar con Ventas"
+  },
+  "problem": {
+    "badge": "El Problema",
+    "headline": "Tu Equipo de Operaciones Está Sepultado en Trabajo Manual Que la IA Puede Hacer",
+    "description": "Todo negocio en crecimiento choca con la misma pared: flujos críticos dispersos en docenas de herramientas, reportes ensamblados a mano cada semana, tareas que se pierden entre los pasos, y sin visibilidad en tiempo real del estado operacional—hasta que algo falla.",
+    "painPoints": {
+      "0": {
+        "title": "Los Reportes Manuales Roban Horas",
+        "description": "Los equipos de operaciones gastan un promedio de 8 horas semanales extrayendo datos de distintos sistemas para construir reportes que nadie tiene tiempo de leer. Para cuando llegan, la información ya está desactualizada."
+      },
+      "1": {
+        "title": "Los Flujos Se Rompen en los Traspasos",
+        "description": "Cuando las tareas se mueven entre herramientas y personas, las cosas se pierden. No existe un sistema que vigile cada paso, marque elementos estancados o enrute el trabajo a la persona correcta automáticamente."
+      },
+      "2": {
+        "title": "Sin Sistema de Alerta Temprana",
+        "description": "Los líderes de operaciones se enteran de los problemas solo después de que ya causaron daño—un plazo incumplido, una brecha de cumplimiento, una escasez de inventario. A esas alturas, el costo de resolverlo es mucho mayor."
+      },
+      "3": {
+        "title": "Las Herramientas No Se Comunican Entre Sí",
+        "description": "Tu CRM, gestión de proyectos, finanzas y herramientas de comunicación tienen cada una una parte del cuadro. Sin una capa que las conecte, tu equipo pierde tiempo reingresando datos y reconciliando discrepancias."
+      }
+    },
+    "statistics": {
+      "0": {
+        "label": "por semana que los equipos de operaciones gastan en reportes manuales y agregación de datos"
+      },
+      "1": {
+        "label": "de las fallas en procesos de negocio se originan en puntos de traspaso de flujos entre sistemas"
+      },
+      "2": {
+        "label": "perdidos anualmente por empresas estadounidenses debido a comunicación y coordinación interna ineficaz"
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "Cómo Funciona",
+    "title": "Cómo Funciona el Agente de Operaciones",
+    "subtitle": "Desde orquestación de flujos hasta reportes automatizados—completamente conectado",
+    "steps": {
+      "0": {
+        "title": "Conecta Cada Herramienta de Tu Stack",
+        "description": "Se integra con tus herramientas de gestión de proyectos, CRM, comunicación, datos y finanzas. Mapea tus flujos existentes y establece los flujos de datos que alimentan cada automatización."
+      },
+      "1": {
+        "title": "Orquesta Tareas y Flujos de Trabajo",
+        "description": "Monitorea el estado de tareas en todas las herramientas, asigna trabajo automáticamente según reglas, escala elementos estancados a la persona correcta y envía recordatorios de plazos antes de que se pierdan."
+      },
+      "2": {
+        "title": "Agrega Datos y Genera Reportes",
+        "description": "Extrae datos de cada fuente conectada según un horario definido, construye reportes formateados y los entrega a los stakeholders correctos por correo o Slack—sin ensamblado manual."
+      },
+      "3": {
+        "title": "Monitorea, Alerta y Sincroniza",
+        "description": "Vigila continuamente las métricas operacionales clave, dispara alertas inteligentes cuando se superan umbrales y mantiene los datos sincronizados entre plataformas para eliminar discrepancias."
+      }
+    }
+  },
+  "features": {
+    "badge": "Características",
+    "title": "Tu Plataforma Completa de Automatización Operacional",
+    "subtitle": "Cada capacidad necesaria para gestionar una operación más ajustada, rápida y eficiente",
+    "features": {
+      "0": {
+        "title": "Automatización y Orquestación de Flujos",
+        "description": "Automatiza flujos de trabajo de múltiples pasos entre herramientas sin código. Gestiona enrutamiento de tareas, lógica condicional, cadenas de aprobación y traspasos entre sistemas que actualmente requieren coordinación manual."
+      },
+      "1": {
+        "title": "Reportes Automatizados y Agregación de Datos",
+        "description": "Se conecta a todas tus fuentes de datos y genera reportes semanales, diarios o bajo demanda automáticamente. Los entrega formateados y a tiempo para que los stakeholders siempre tengan números actuales."
+      },
+      "2": {
+        "title": "Asignación, Seguimiento y Escalación de Tareas",
+        "description": "Rastrea cada tarea en tus herramientas de gestión de proyectos. Asigna trabajo automáticamente, monitorea el progreso, envía recordatorios y escala a los gerentes cuando los elementos se estancan más allá de los umbrales definidos."
+      },
+      "3": {
+        "title": "Monitoreo de Procesos y Alertas Inteligentes",
+        "description": "Vigila los KPIs operacionales clave en tiempo real. Cuando una métrica se aleja de los límites aceptables—tiempos de respuesta, tasas de error, niveles de inventario—dispara alertas enriquecidas antes de que el problema se convierta en crisis."
+      },
+      "4": {
+        "title": "Procesamiento de Documentos y Extracción de Datos",
+        "description": "Lee documentos entrantes, facturas, contratos y formularios. Extrae datos estructurados, enruta documentos al flujo correcto y actualiza los sistemas conectados sin ingreso manual de datos."
+      },
+      "5": {
+        "title": "Sincronización de Datos Entre Plataformas",
+        "description": "Mantiene registros consistentes en tu CRM, herramientas de proyectos, bases de datos y plataformas de comunicación. Elimina entradas duplicadas, registros desactualizados y el trabajo de reconciliación que consume horas del equipo."
+      }
+    }
+  },
+  "metrics": {
+    "badge": "Resultados",
+    "title": "Resultados Operacionales Que Se Ven en el Balance",
+    "subtitle": "Resultados medidos de equipos que usan el Agente de Operaciones",
+    "metrics": {
+      "0": {
+        "label": "Ahorradas por Semana",
+        "description": "Por miembro del equipo de operaciones, en promedio"
+      },
+      "1": {
+        "label": "Entrega de Reportes más Rápida",
+        "description": "Reportes automatizados vs manuales"
+      },
+      "2": {
+        "label": "Tasa de Completación de Tareas",
+        "description": "Con seguimiento y escalación automatizados"
+      },
+      "3": {
+        "label": "Detección de Problemas más Rápida",
+        "description": "vs monitoreo manual reactivo"
+      }
+    },
+    "comparisonTitle": "Antes vs Después del Agente de Operaciones",
+    "before": {
+      "0": "Reportes ensamblados manualmente cada semana",
+      "1": "Traspasos de flujos pierden tareas constantemente",
+      "2": "Problemas descubiertos después del daño causado",
+      "3": "Datos desincronizados entre múltiples herramientas",
+      "4": "Equipo de ops sepultado en trabajo de coordinación"
+    },
+    "after": {
+      "0": "Reportes generados y entregados automáticamente",
+      "1": "Cada tarea rastreada, enrutada y escalada",
+      "2": "Alertas se disparan antes de que los problemas sean crisis",
+      "3": "Todos los sistemas sincronizados en tiempo real",
+      "4": "Equipo de ops enfocado en estrategia, no en tareas rutinarias"
+    }
+  },
+  "platform": {
+    "badge": "Centro de Comando Operacional",
+    "title": "Visibilidad Total de Tu Operación",
+    "subtitle": "Monitorea flujos, rastrea KPIs y adelántate a los problemas desde un único dashboard conectado."
+  },
+  "useCases": {
+    "badge": "Casos de Uso",
+    "title": "Automatización Operacional Para Equipos en Crecimiento",
+    "subtitle": "Mira cómo distintos negocios eliminan el trabajo manual y operan de manera más ajustada con IA",
+    "resultsTitle": "Resultados Clave",
+    "useCases": {
+      "0": {
+        "industry": "Servicios Profesionales",
+        "title": "Onboarding de Clientes y Coordinación de Proyectos",
+        "description": "Automatiza cada paso del onboarding de clientes en CRM, gestión de proyectos y herramientas de comunicación. Los nuevos contratos desencadenan creación de tareas, solicitudes de documentos, programación de kickoffs y seguimiento de progreso sin intervención del equipo.",
+        "results": {
+          "0": "70% de reducción en tiempo de coordinación de onboarding",
+          "1": "Cero pasos de onboarding omitidos para nuevos clientes",
+          "2": "2 días más rápido hasta el primer entregable"
+        }
+      },
+      "1": {
+        "industry": "E-commerce y Retail",
+        "title": "Monitoreo de Inventario y Disparadores con Proveedores",
+        "description": "Monitorea niveles de inventario en almacenes y canales en tiempo real. Cuando el stock baja de los umbrales, el agente activa flujos de reorden, notifica al contacto del proveedor correcto y actualiza el dashboard automáticamente.",
+        "results": {
+          "0": "98% de reducción en incidentes de falta de stock",
+          "1": "Ciclo de compras reducido en un 40%",
+          "2": "Eliminadas 15 horas/semana de revisión manual de stock"
+        }
+      },
+      "2": {
+        "industry": "Finanzas y Contabilidad",
+        "title": "Reportes Automatizados y Monitoreo de Cumplimiento",
+        "description": "Agrega datos financieros de múltiples fuentes, genera automáticamente reportes semanales y mensuales para la dirección, y monitorea continuamente los puntos de cumplimiento. Las pistas de auditoría se mantienen automáticamente con cada acción registrada.",
+        "results": {
+          "0": "Proceso de cierre mensual reducido de 5 días a 2",
+          "1": "100% de cobertura de auditoría sin registro manual",
+          "2": "Cero reportes regulatorios tardíos en 12 meses"
+        }
+      }
+    }
+  },
+  "integrations": {
+    "badge": "Integraciones",
+    "title": "Se Conecta a Cada Herramienta Que Usa Tu Equipo",
+    "subtitle": "Integraciones profundas con las herramientas que impulsan tu stack operacional",
+    "viewAll": "Ver todas las integraciones"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre el Agente de Operaciones",
+    "moreQuestions": "¿Todavía tienes preguntas?",
+    "contactUs": "Contacta a nuestro equipo",
+    "faqs": {
+      "0": {
+        "question": "¿Con qué herramientas se conecta el Agente de Operaciones?",
+        "answer": "Se integra con más de 200 herramientas incluyendo Slack, Notion, Google Sheets, HubSpot, Monday.com, Gmail, Zapier, ClickUp, Salesforce, Airtable y la mayoría de plataformas de gestión de proyectos, CRM y datos. También podemos conectarnos a sistemas internos personalizados mediante API."
+      },
+      "1": {
+        "question": "¿Cuánto tiempo tarda la configuración inicial?",
+        "answer": "La configuración inicial suele tomar de 1 a 2 semanas. Mapeamos tus flujos existentes, configuramos integraciones, establecemos reglas de escalación y probamos automatizaciones antes de salir en vivo. No necesitas experiencia técnica—nuestro equipo gestiona toda la configuración."
+      },
+      "2": {
+        "question": "¿Puede manejar flujos de trabajo complejos de múltiples pasos con lógica condicional?",
+        "answer": "Sí. El Agente de Operaciones soporta ramas condicionales, cadenas de aprobación, enrutamiento basado en roles, disparadores por tiempo y traspasos entre múltiples sistemas. Si una tarea en una herramienta se marca como completada, puede activar una acción específica en una herramienta completamente diferente según las condiciones que definas."
+      },
+      "3": {
+        "question": "¿Qué ocurre cuando falla una acción automatizada?",
+        "answer": "Las acciones fallidas se registran inmediatamente, se notifica al miembro del equipo responsable y el elemento se coloca en una cola de revisión manual. Nada se pierde silenciosamente. Siempre tienes visibilidad completa de qué se ejecutó, qué falló y por qué."
+      },
+      "4": {
+        "question": "¿Cómo funciona el monitoreo de cumplimiento?",
+        "answer": "Tú defines los puntos de control de cumplimiento y las ventanas aceptables para tu negocio. El agente monitorea continuamente esos parámetros y genera un registro de auditoría inmutable de cada acción. Si se omite un punto de control o se acerca un plazo, las alertas van automáticamente al propietario designado."
+      },
+      "5": {
+        "question": "¿Es posible mantener a las personas en el bucle para decisiones sensibles?",
+        "answer": "Absolutamente. Tú decides qué pasos del flujo requieren aprobación humana antes de continuar. El agente gestiona toda la preparación, el enrutamiento y el seguimiento—pero la decisión en sí se queda con tu equipo. La mayoría de clientes ejecutan acciones de alto valor o sensibles en modo de aprobación y tareas rutinarias en modo totalmente automatizado."
+      }
+    }
+  },
+  "cta": {
+    "badge": "Empieza Hoy",
+    "title": "¿Listo para Gestionar una Operación más Ágil y Rápida?",
+    "subtitle": "Mira cómo el Agente de Operaciones elimina la coordinación manual y mantiene todo tu negocio sincronizado—automáticamente.",
+    "primaryCta": "Solicitar Demo en Vivo",
+    "secondaryCta": "Hablar con Ventas",
+    "trust1": "Sin tarjeta de crédito",
+    "trust2": "Programa piloto gratis",
+    "trust3": "Setup en 2 semanas"
+  },
+  "inlineCta1": {
+    "title": "Mira el Agente de Operaciones IA en Acción",
+    "subtitle": "Observa cómo orquesta flujos, genera reportes y mantiene tus herramientas sincronizadas en tiempo real.",
+    "cta": "Ver Demo"
+  },
+  "inlineCta2": {
+    "badge": "Automatización Operacional",
+    "title": "Mira el Agente de Operaciones en Acción",
+    "subtitle": "Elimina la coordinación manual y gestiona una operación más ajustada.",
+    "primaryCta": "Agendar Demo",
+    "stats": {
+      "0": "Horas Ahorradas por Semana",
+      "1": "Reportes más Rápidos",
+      "2": "Completación de Tareas",
+      "3": "Soporte"
+    }
+  },
+  "inlineCta3": {
+    "urgency": "Los equipos de operaciones gastan más de 8 horas semanales en reportes manuales y agregación de datos",
+    "title": "Tus Operaciones Funcionan con Trabajo Manual. No Tiene Por Qué Seguir Así.",
+    "subtitle": "Automatiza la coordinación, los reportes y el monitoreo que agota a tu equipo cada semana.",
+    "cta": "Empezar Hoy"
+  }
 },
 "footer": {
   "altLogo": "Logo de Arkadia Labs",

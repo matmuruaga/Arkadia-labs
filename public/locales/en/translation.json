@@ -2035,6 +2035,516 @@
         "subtitle": "Don't let content drought kill your engagement.",
         "cta": "Get Started Today"
       }
+    },
+    "social-manager": {
+      "seo": {
+        "title": "AI Social Media Manager | Monitor, Engage & Grow",
+        "description": "AI-powered social media manager that auto-responds to comments and DMs, monitors brand mentions, analyzes performance, and manages community engagement 24/7."
+      },
+      "hero": {
+        "badge": "Marketing & Social",
+        "title": "Your AI Social Media Manager That Never Sleeps",
+        "subtitle": "Monitor. Engage. Analyze. Grow. Protect.",
+        "description": "An AI agent that responds to every comment and DM in seconds, monitors brand mentions across the web, tracks competitor performance, identifies trending opportunities, and alerts you to reputation crises—all before your team starts their morning.",
+        "primaryCta": "See It in Action",
+        "secondaryCta": "Talk to Sales"
+      },
+      "problem": {
+        "badge": "The Problem",
+        "headline": "Your Social Media Is a Full-Time Job Your Team Can't Keep Up With",
+        "description": "Social media never stops. Comments pile up, DMs go unanswered, brand mentions go unnoticed, and your team is too stretched to keep pace—while your reputation and engagement quietly suffer.",
+        "painPoints": {
+          "0": {
+            "title": "Unanswered Conversations",
+            "description": "71% of consumers who get a quick brand response on social media are more likely to recommend that brand. Yet most businesses respond to less than 25% of comments within 24 hours."
+          },
+          "1": {
+            "title": "Brand Mentions Slip Through",
+            "description": "Customers tag, mention, and review your brand across dozens of platforms. Without systematic monitoring, negative sentiment spreads unaddressed and positive moments go unacknowledged."
+          },
+          "2": {
+            "title": "No Performance Visibility",
+            "description": "Platform-native analytics are siloed and superficial. You have no unified view of what's working, which content resonates, or how you stack up against competitors."
+          },
+          "3": {
+            "title": "Crisis Escalation Risk",
+            "description": "A single viral complaint or negative post can snowball into a PR crisis within hours. Manual monitoring means you're always reacting too late, when the damage is already done."
+          }
+        },
+        "statistics": {
+          "0": {
+            "label": "of consumers recommend brands that respond quickly on social media"
+          },
+          "1": {
+            "label": "of social media complaints go unanswered within 24 hours"
+          },
+          "2": {
+            "label": "average time to detect a social media crisis manually"
+          }
+        }
+      },
+      "howItWorks": {
+        "badge": "How It Works",
+        "title": "How the Social Manager Works",
+        "subtitle": "From brand monitoring to community growth—fully automated",
+        "steps": {
+          "0": {
+            "title": "Listen Across All Channels",
+            "description": "Continuously monitors mentions, comments, DMs, hashtags, and reviews across every social platform and the broader web. Nothing about your brand escapes notice."
+          },
+          "1": {
+            "title": "Engage With Context",
+            "description": "Auto-responds to comments and DMs using brand-aligned tone, conversation history, and product knowledge. Escalates sensitive inquiries to your human team instantly."
+          },
+          "2": {
+            "title": "Analyze & Benchmark",
+            "description": "Tracks performance metrics across all platforms, benchmarks against competitors, identifies top-performing content patterns, and surfaces actionable insights weekly."
+          },
+          "3": {
+            "title": "Alert & Strategize",
+            "description": "Sends real-time crisis alerts, trending topic notifications, and influencer opportunity flags. Delivers strategic recommendations to grow your audience and protect your brand."
+          }
+        }
+      },
+      "features": {
+        "badge": "Features",
+        "title": "Your Complete Social Media Command Center",
+        "subtitle": "Every tool needed to manage, protect, and grow your social presence",
+        "features": {
+          "0": {
+            "title": "Smart Comment & DM Automation",
+            "description": "Responds to comments and DMs within minutes using context-aware replies. Understands sentiment, conversation history, and brand guidelines to reply like a seasoned community manager."
+          },
+          "1": {
+            "title": "Brand Mention Monitoring",
+            "description": "Tracks every mention of your brand, products, and key terms across social platforms, news sites, forums, and review sites. Categorizes by sentiment and urgency automatically."
+          },
+          "2": {
+            "title": "Unified Performance Analytics",
+            "description": "Aggregates metrics from all platforms into a single dashboard. Track follower growth, engagement rates, reach, share of voice, and ROI trends across channels."
+          },
+          "3": {
+            "title": "Competitor Social Benchmarking",
+            "description": "Monitors competitor posting frequency, engagement rates, top content, hashtag strategies, and audience growth. Know exactly where you stand and where to attack."
+          },
+          "4": {
+            "title": "Crisis Detection & Alerts",
+            "description": "Detects unusual spikes in negative sentiment, viral complaints, or coordinated attacks within minutes. Sends immediate alerts with context so you can respond before it escalates."
+          },
+          "5": {
+            "title": "Influencer Identification & Tracking",
+            "description": "Identifies relevant influencers who mention your brand or operate in your niche. Tracks engagement quality, audience alignment, and outreach history in one place."
+          }
+        }
+      },
+      "metrics": {
+        "badge": "Results",
+        "title": "Social Media Results That Move the Needle",
+        "subtitle": "Measured outcomes from brands using the Social Manager",
+        "metrics": {
+          "0": {
+            "label": "Engagement Rate",
+            "description": "Average increase across managed accounts"
+          },
+          "1": {
+            "label": "Response Time",
+            "description": "Average comment and DM response time"
+          },
+          "2": {
+            "label": "Mention Coverage",
+            "description": "Brand mentions caught and categorized"
+          },
+          "3": {
+            "label": "Time Saved Weekly",
+            "description": "Per community manager per week"
+          }
+        },
+        "comparisonTitle": "Before vs After Social Manager",
+        "before": {
+          "0": "DMs and comments left unanswered for hours",
+          "1": "Brand crises detected too late",
+          "2": "No clear picture of social ROI",
+          "3": "Competitor strategies unknown",
+          "4": "Reactive community management"
+        },
+        "after": {
+          "0": "Every conversation answered in minutes",
+          "1": "Crises flagged before they escalate",
+          "2": "Real-time unified performance dashboard",
+          "3": "Full competitor social intelligence",
+          "4": "Proactive community growth strategy"
+        }
+      },
+      "platform": {
+        "badge": "Social Command Center",
+        "title": "Total Control of Your Social Presence",
+        "subtitle": "Monitor conversations, track brand health, and measure growth from a single dashboard."
+      },
+      "useCases": {
+        "badge": "Use Cases",
+        "title": "Social Management Built for Every Business",
+        "subtitle": "See how different brands protect and grow their social presence with AI",
+        "resultsTitle": "Key Results",
+        "useCases": {
+          "0": {
+            "industry": "Retail & E-commerce",
+            "title": "Community Engagement at Scale",
+            "description": "Handle thousands of daily comments, product questions, and order complaints across Instagram, TikTok, and Facebook without adding headcount. Every customer feels heard.",
+            "results": {
+              "0": "73% increase in community engagement",
+              "1": "4x faster response to product inquiries",
+              "2": "91% reduction in unanswered comments"
+            }
+          },
+          "1": {
+            "industry": "Marketing Agencies",
+            "title": "Multi-Brand Social Management",
+            "description": "Manage social presence and reputation for multiple clients simultaneously. Each brand gets dedicated monitoring, tailored response templates, and individual performance reports.",
+            "results": {
+              "0": "Manage 8x more client accounts",
+              "1": "Unified reporting across all brands",
+              "2": "60% reduction in community management costs"
+            }
+          },
+          "2": {
+            "industry": "Hospitality & F&B",
+            "title": "Reputation Protection & Guest Relations",
+            "description": "Respond to reviews and mentions across Google, TripAdvisor, Instagram, and Facebook in real time. Convert unhappy guests into brand advocates with fast, empathetic responses.",
+            "results": {
+              "0": "Crisis contained within 15 minutes on average",
+              "1": "40% improvement in review sentiment scores",
+              "2": "2.3x more positive word-of-mouth mentions"
+            }
+          }
+        }
+      },
+      "integrations": {
+        "badge": "Integrations",
+        "title": "Connects to Every Platform You Manage",
+        "subtitle": "Native integrations with all major social platforms and management tools",
+        "viewAll": "View all integrations"
+      },
+      "faq": {
+        "badge": "FAQ",
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about the Social Manager",
+        "moreQuestions": "Still have questions?",
+        "contactUs": "Contact our team",
+        "faqs": {
+          "0": {
+            "question": "How does the AI know what to say in replies?",
+            "answer": "During onboarding, we train the AI on your brand voice, tone guidelines, product knowledge, FAQs, and past conversations. It generates contextually appropriate replies and flags anything outside its confidence threshold for human review. You maintain full approval control."
+          },
+          "1": {
+            "question": "Which platforms does it monitor?",
+            "answer": "Instagram, TikTok, Facebook, X (Twitter), LinkedIn, YouTube, Pinterest, Reddit, Google Reviews, and Trustpilot. It also monitors news sites and industry forums for broader brand mentions."
+          },
+          "2": {
+            "question": "What happens when a crisis is detected?",
+            "answer": "The AI sends an immediate alert to your designated team members via Slack, email, or SMS. The alert includes the content, sentiment analysis, current reach, and suggested response options so you can act within minutes rather than hours."
+          },
+          "3": {
+            "question": "Can I review and edit AI responses before they send?",
+            "answer": "Yes. You can run in full-auto mode, review-before-send mode, or a hybrid where certain message types (complaints, sensitive topics) always require approval while routine inquiries auto-respond. The workflow is completely customizable."
+          },
+          "4": {
+            "question": "How does competitor benchmarking work?",
+            "answer": "You specify up to 10 competitors. The AI tracks their posting frequency, engagement rates, follower growth, top-performing content formats, hashtag strategies, and response rates. Weekly benchmark reports show exactly how you compare and where to capitalize."
+          },
+          "5": {
+            "question": "Does it handle multiple languages?",
+            "answer": "Yes. The Social Manager supports multilingual communities. It detects the language of incoming messages and responds in the same language. Currently supports English, Spanish, Portuguese, French, German, Italian, and more."
+          }
+        }
+      },
+      "cta": {
+        "badge": "Get Started Today",
+        "title": "Ready to Never Miss a Conversation Again?",
+        "subtitle": "See how the Social Manager protects your brand reputation and grows your community—automatically, 24/7.",
+        "primaryCta": "Request Live Demo",
+        "secondaryCta": "Talk to Sales",
+        "trust1": "No credit card required",
+        "trust2": "Free pilot program",
+        "trust3": "Setup in 2 weeks"
+      },
+      "inlineCta1": {
+        "title": "See the AI Social Manager in Action",
+        "subtitle": "Watch it respond to comments, monitor mentions, and protect your brand in real time.",
+        "cta": "Watch Demo"
+      },
+      "inlineCta2": {
+        "badge": "24/7 Social Coverage",
+        "title": "See Social Manager in Action",
+        "subtitle": "Never miss a comment, mention, or crisis again.",
+        "primaryCta": "Schedule Demo",
+        "stats": {
+          "0": "Engagement Increase",
+          "1": "Response Time",
+          "2": "Brands Protected",
+          "3": "Support"
+        }
+      },
+      "inlineCta3": {
+        "urgency": "79% of social media complaints go unanswered within 24 hours",
+        "title": "Your Community Is Talking. Are You Listening?",
+        "subtitle": "Don't let unanswered conversations erode your brand reputation.",
+        "cta": "Get Started Today"
+      }
+    },
+    "operations-agent": {
+      "seo": {
+        "title": "AI Operations Agent | Automate Business Workflows",
+        "description": "AI operations agent that automates internal workflows, aggregates reports, tracks tasks, monitors processes, and syncs data across tools—saving teams 20+ hours weekly."
+      },
+      "hero": {
+        "badge": "Operations & Automation",
+        "title": "Your AI Operations Agent That Runs the Back Office",
+        "subtitle": "Automate. Orchestrate. Monitor. Sync. Escalate.",
+        "description": "An AI agent that orchestrates workflows across every tool your team uses, auto-generates reports from multiple data sources, tracks task completion and escalates blockers, monitors processes with intelligent alerts, and keeps your entire operation synchronized—without manual coordination.",
+        "primaryCta": "See It in Action",
+        "secondaryCta": "Talk to Sales"
+      },
+      "problem": {
+        "badge": "The Problem",
+        "headline": "Your Operations Team Is Buried in Manual Work That AI Can Do",
+        "description": "Every growing business hits the same wall: critical workflows scattered across a dozen tools, reports assembled by hand each week, tasks falling through the cracks, and no real-time visibility into operational health—until something breaks.",
+        "painPoints": {
+          "0": {
+            "title": "Manual Reporting Steals Hours",
+            "description": "Ops teams spend an average of 8 hours per week pulling data from different systems to build reports nobody has time to read. The data is always slightly stale by the time it lands."
+          },
+          "1": {
+            "title": "Workflows Break at Handoffs",
+            "description": "When tasks move between tools and people, things slip. There is no system that watches every step, flags stalled items, or routes work to the right person automatically."
+          },
+          "2": {
+            "title": "No Early Warning System",
+            "description": "Ops leaders only learn about problems after they have already caused damage—a missed deadline, a compliance gap, an inventory shortfall. By then, the cost of fixing it is much higher."
+          },
+          "3": {
+            "title": "Tools Do Not Talk to Each Other",
+            "description": "Your CRM, project management, finance, and communication tools each hold a piece of the picture. Without a layer that connects them, your team wastes time re-entering data and reconciling discrepancies."
+          }
+        },
+        "statistics": {
+          "0": {
+            "label": "per week spent by ops teams on manual reporting and data aggregation"
+          },
+          "1": {
+            "label": "of business process failures originate at workflow handoff points between systems"
+          },
+          "2": {
+            "label": "lost annually by US businesses due to ineffective internal communication and coordination"
+          }
+        }
+      },
+      "howItWorks": {
+        "badge": "How It Works",
+        "title": "How the Operations Agent Works",
+        "subtitle": "From workflow orchestration to automated reporting—fully connected",
+        "steps": {
+          "0": {
+            "title": "Connect Every Tool in Your Stack",
+            "description": "Integrates with your project management, CRM, communication, data, and finance tools. Maps your existing workflows and establishes the data flows that power every automation."
+          },
+          "1": {
+            "title": "Orchestrate Tasks and Workflows",
+            "description": "Monitors task status across all tools, automatically assigns work based on rules, escalates stalled items to the right person, and sends deadline reminders before things slip."
+          },
+          "2": {
+            "title": "Aggregate Data and Generate Reports",
+            "description": "Pulls data from every connected source on a defined schedule, builds formatted reports, and delivers them to the right stakeholders via email or Slack—no manual assembly required."
+          },
+          "3": {
+            "title": "Monitor, Alert, and Sync",
+            "description": "Continuously watches key operational metrics, fires intelligent alerts when thresholds are breached, and keeps data synchronized across platforms to eliminate discrepancies."
+          }
+        }
+      },
+      "features": {
+        "badge": "Features",
+        "title": "Your Complete Operations Automation Platform",
+        "subtitle": "Every capability needed to run a tighter, faster, more efficient operation",
+        "features": {
+          "0": {
+            "title": "Workflow Automation & Orchestration",
+            "description": "Automates multi-step workflows across tools without code. Handles task routing, conditional logic, approval chains, and cross-system handoffs that currently require manual coordination."
+          },
+          "1": {
+            "title": "Automated Reporting & Data Aggregation",
+            "description": "Connects to all your data sources and auto-generates weekly, daily, or on-demand reports. Delivers them formatted and on schedule so stakeholders always have current numbers."
+          },
+          "2": {
+            "title": "Task Assignment, Tracking & Escalation",
+            "description": "Tracks every task across your project management tools. Automatically assigns work, monitors progress, sends reminders, and escalates to managers when items stall beyond defined thresholds."
+          },
+          "3": {
+            "title": "Process Monitoring & Intelligent Alerts",
+            "description": "Watches key operational KPIs in real time. When a metric drifts outside acceptable bounds—response times, error rates, inventory levels—it fires context-rich alerts before the issue becomes a crisis."
+          },
+          "4": {
+            "title": "Document Processing & Data Extraction",
+            "description": "Reads incoming documents, invoices, contracts, and forms. Extracts structured data, routes documents to the right workflow, and updates connected systems without manual data entry."
+          },
+          "5": {
+            "title": "Cross-Platform Data Synchronization",
+            "description": "Keeps records consistent across your CRM, project tools, databases, and communication platforms. Eliminates duplicate entries, outdated records, and the reconciliation work that eats ops team hours."
+          }
+        }
+      },
+      "metrics": {
+        "badge": "Results",
+        "title": "Operations Results That Show Up on the P&L",
+        "subtitle": "Measured outcomes from teams running the Operations Agent",
+        "metrics": {
+          "0": {
+            "label": "Saved Per Week",
+            "description": "Per operations team member, on average"
+          },
+          "1": {
+            "label": "Faster Report Delivery",
+            "description": "Automated vs manual reporting cycles"
+          },
+          "2": {
+            "label": "Task Completion Rate",
+            "description": "With automated tracking and escalation"
+          },
+          "3": {
+            "label": "Faster Issue Detection",
+            "description": "vs reactive manual monitoring"
+          }
+        },
+        "comparisonTitle": "Before vs After Operations Agent",
+        "before": {
+          "0": "Reports assembled manually every week",
+          "1": "Workflow handoffs miss tasks constantly",
+          "2": "Issues discovered after the damage is done",
+          "3": "Data out of sync across multiple tools",
+          "4": "Ops team buried in coordination work"
+        },
+        "after": {
+          "0": "Reports generated and delivered automatically",
+          "1": "Every task tracked, routed, and escalated",
+          "2": "Alerts fire before problems become crises",
+          "3": "All systems synchronized in real time",
+          "4": "Ops team focused on strategy, not busywork"
+        }
+      },
+      "platform": {
+        "badge": "Operations Command Center",
+        "title": "Full Visibility Into Your Operations",
+        "subtitle": "Monitor workflows, track KPIs, and stay ahead of issues from a single connected dashboard."
+      },
+      "useCases": {
+        "badge": "Use Cases",
+        "title": "Operations Automation Built for Growing Teams",
+        "subtitle": "See how different businesses eliminate manual work and run tighter operations with AI",
+        "resultsTitle": "Key Results",
+        "useCases": {
+          "0": {
+            "industry": "Professional Services",
+            "title": "Client Onboarding & Project Coordination",
+            "description": "Automate every step of client onboarding across CRM, project management, and communication tools. New contracts trigger task creation, document requests, kickoff scheduling, and progress tracking without ops team involvement.",
+            "results": {
+              "0": "70% reduction in onboarding coordination time",
+              "1": "Zero missed onboarding steps for new clients",
+              "2": "2-day faster time-to-first-deliverable"
+            }
+          },
+          "1": {
+            "industry": "E-commerce & Retail",
+            "title": "Inventory Monitoring & Supplier Triggers",
+            "description": "Monitor inventory levels across warehouses and channels in real time. When stock dips below thresholds, the agent triggers reorder workflows, notifies the right supplier contact, and updates the ops dashboard automatically.",
+            "results": {
+              "0": "98% reduction in stockout incidents",
+              "1": "Procurement cycle time cut by 40%",
+              "2": "Eliminated 15 hours/week of manual stock checking"
+            }
+          },
+          "2": {
+            "industry": "Finance & Accounting",
+            "title": "Automated Reporting & Compliance Monitoring",
+            "description": "Aggregate financial data from multiple sources, auto-generate weekly and monthly reports for leadership, and monitor compliance checkpoints continuously. Audit trails are maintained automatically with every action logged.",
+            "results": {
+              "0": "Monthly close process reduced from 5 days to 2",
+              "1": "100% audit trail coverage with zero manual logging",
+              "2": "Zero late regulatory reports in 12 months"
+            }
+          }
+        }
+      },
+      "integrations": {
+        "badge": "Integrations",
+        "title": "Connects to Every Tool Your Team Uses",
+        "subtitle": "Deep integrations with the tools that power your operations stack",
+        "viewAll": "View all integrations"
+      },
+      "faq": {
+        "badge": "FAQ",
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about the Operations Agent",
+        "moreQuestions": "Still have questions?",
+        "contactUs": "Contact our team",
+        "faqs": {
+          "0": {
+            "question": "Which tools does the Operations Agent connect to?",
+            "answer": "It integrates with over 200 tools including Slack, Notion, Google Sheets, HubSpot, Monday.com, Gmail, Zapier, ClickUp, Salesforce, Airtable, and most major project management, CRM, and data platforms. We can connect to custom internal systems via API as well."
+          },
+          "1": {
+            "question": "How long does it take to set up?",
+            "answer": "Initial setup typically takes 1 to 2 weeks. We map your existing workflows, configure integrations, set escalation rules, and test automations before going live. You do not need technical expertise—our team handles all configuration."
+          },
+          "2": {
+            "question": "Can it handle complex multi-step workflows with conditional logic?",
+            "answer": "Yes. The Operations Agent supports conditional branches, approval chains, role-based routing, time-based triggers, and multi-system handoffs. If a task in one tool is marked complete, it can trigger a specific action in a completely different tool based on conditions you define."
+          },
+          "3": {
+            "question": "What happens when an automated action fails?",
+            "answer": "Failed actions are logged immediately, the responsible team member is notified, and the item is placed in a manual review queue. Nothing is silently dropped. You always have full visibility into what ran, what failed, and why."
+          },
+          "4": {
+            "question": "How does the compliance monitoring work?",
+            "answer": "You define the compliance checkpoints and acceptable windows for your business. The agent continuously monitors those parameters and generates an immutable audit log of every action. If a checkpoint is missed or a deadline approaches, alerts go to the designated owner automatically."
+          },
+          "5": {
+            "question": "Is it possible to keep humans in the loop for sensitive decisions?",
+            "answer": "Absolutely. You decide which workflow steps require human approval before proceeding. The agent handles all preparation, routing, and follow-up—but the decision itself stays with your team. Most clients run high-value or sensitive actions in approval mode and routine tasks in fully automated mode."
+          }
+        }
+      },
+      "cta": {
+        "badge": "Get Started Today",
+        "title": "Ready to Run a Leaner, Faster Operation?",
+        "subtitle": "See how the Operations Agent eliminates manual coordination and keeps your entire business synchronized—automatically.",
+        "primaryCta": "Request Live Demo",
+        "secondaryCta": "Talk to Sales",
+        "trust1": "No credit card required",
+        "trust2": "Free pilot program",
+        "trust3": "Setup in 2 weeks"
+      },
+      "inlineCta1": {
+        "title": "See the AI Operations Agent in Action",
+        "subtitle": "Watch it orchestrate workflows, generate reports, and keep your tools synchronized in real time.",
+        "cta": "Watch Demo"
+      },
+      "inlineCta2": {
+        "badge": "Operations Automation",
+        "title": "See the Operations Agent in Action",
+        "subtitle": "Eliminate manual coordination and run a tighter operation.",
+        "primaryCta": "Schedule Demo",
+        "stats": {
+          "0": "Hours Saved Weekly",
+          "1": "Faster Reporting",
+          "2": "Task Completion",
+          "3": "Support"
+        }
+      },
+      "inlineCta3": {
+        "urgency": "Ops teams spend 8+ hours per week on manual reporting and data aggregation",
+        "title": "Your Operations Are Running on Manual Work. It Doesn't Have to Stay That Way.",
+        "subtitle": "Automate the coordination, reporting, and monitoring that drains your team every week.",
+        "cta": "Get Started Today"
+      }
     }
   },
   "footer": {

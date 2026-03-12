@@ -55,8 +55,8 @@ const allSolutions = [
   { id: 'virtual-receptionist', category: 'inbound', available: true },
   { id: 'booking-agent', category: 'inbound', available: true },
   { id: 'content-creator', category: 'marketing', available: true },
-  { id: 'social-manager', category: 'marketing', available: false },
-  { id: 'operations-agent', category: 'operations', available: false },
+  { id: 'social-manager', category: 'marketing', available: true },
+  { id: 'operations-agent', category: 'operations', available: true },
 ];
 
 const SolutionsIndexPage: React.FC = () => {
