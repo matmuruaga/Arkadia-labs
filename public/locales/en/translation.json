@@ -482,7 +482,9 @@
     },
     "common": {
       "industrySolution": "Industry Solution",
-      "moreFeatures": "+{{count}} more"
+      "moreFeatures": "+{{count}} more",
+      "before": "Before",
+      "after": "After"
     },
     "lead-validator": {
       "seo": {

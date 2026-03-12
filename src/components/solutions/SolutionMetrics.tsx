@@ -104,7 +104,7 @@ const SolutionMetrics: React.FC<Props> = ({ data, solutionId }) => {
                     <div className="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center">
                       <X className="h-5 w-5 text-red-400" />
                     </div>
-                    <h4 className="text-lg font-semibold text-red-400">Before</h4>
+                    <h4 className="text-lg font-semibold text-red-400">{t('solutions.common.before', 'Before')}</h4>
                   </div>
                   <ul className="space-y-3">
                     {data.before.map((item, index) => (
@@ -129,7 +129,7 @@ const SolutionMetrics: React.FC<Props> = ({ data, solutionId }) => {
                     <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
                       <Check className="h-5 w-5 text-green-400" />
                     </div>
-                    <h4 className="text-lg font-semibold text-green-400">After</h4>
+                    <h4 className="text-lg font-semibold text-green-400">{t('solutions.common.after', 'After')}</h4>
                   </div>
                   <ul className="space-y-3">
                     {data.after.map((item, index) => (

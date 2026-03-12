@@ -381,8 +381,9 @@
   },
   "common": {
     "industrySolution": "Solución Industrial",
-    "moreFeatures": "+{{count}} más"
-
+    "moreFeatures": "+{{count}} más",
+    "before": "Antes",
+    "after": "Después"
   },
   "lead-validator": {
     "seo": {

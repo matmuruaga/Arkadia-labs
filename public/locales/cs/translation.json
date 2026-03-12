@@ -2238,7 +2238,9 @@
     },
     "common": {
       "industrySolution": "Průmyslové řešení",
-      "moreFeatures": "+{{count}} dalších"
+      "moreFeatures": "+{{count}} dalších",
+      "before": "Před",
+      "after": "Po"
     },
     "lead-validator": {
       "seo": {

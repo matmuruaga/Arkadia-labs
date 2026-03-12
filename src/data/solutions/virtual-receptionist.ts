@@ -30,6 +30,7 @@ export const virtualReceptionistSolution: Solution = {
     subtitle: 'Always Available, Always Professional',
     description: 'An AI voice agent that answers calls, handles inquiries, takes messages, and routes conversations—with the warmth and professionalism of your best front desk staff. Available around the clock.',
     primaryCta: 'Hear It Live',
+    primaryCtaAction: 'elevenlabs',
     secondaryCta: 'Talk to Sales',
     trustBadges: [
       { icon: 'phone', label: 'Calls Handled', value: '99.9%' },
@@ -199,6 +200,8 @@ export const virtualReceptionistSolution: Solution = {
       { icon: 'message-circle', text: 'Message taken for maintenance team', time: '8 min ago', status: 'processing' },
       { icon: 'calendar', text: 'Appointment booked: Property viewing tomorrow 3PM', time: '12 min ago', status: 'success' },
     ],
+    floatingBadge1: { title: 'Call Resolved ✓', subtitle: 'Guest inquiry handled' },
+    floatingBadge2: { title: '+12 calls today', subtitle: '100% answered' },
   },
 
   useCases: {

@@ -72,6 +72,7 @@ export interface SolutionHero {
   subtitle: string;
   description: string;
   primaryCta: string;
+  primaryCtaAction?: 'contact' | 'elevenlabs' | 'scroll';
   secondaryCta: string;
   heroImage?: string;
   heroVideo?: string;

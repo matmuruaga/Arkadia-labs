@@ -1,17 +1,20 @@
 // src/components/solutions/SolutionHero.tsx
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, CheckCircle, Clock, TrendingUp, ArrowDown } from 'lucide-react';
+import { ArrowRight, CheckCircle, Clock, TrendingUp, ArrowDown, Phone, Star } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { SolutionHero as SolutionHeroType } from '@/data/solutions/types';
 import { trackCtaClick } from '@/utils/dataLayer';
+import { useElevenLabsWidget } from '@/components/ElevenLabsWidgetContext';
 
 // Map icon strings to Lucide components
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   'check-circle': CheckCircle,
   'clock': Clock,
   'trending-up': TrendingUp,
+  'phone': Phone,
+  'star': Star,
 };
 
 interface Props {
@@ -22,6 +25,7 @@ interface Props {
 const SolutionHero: React.FC<Props> = ({ data, solutionId }) => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const { toggleConversation, preloadScript } = useElevenLabsWidget();
   const targetRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -43,7 +47,11 @@ const SolutionHero: React.FC<Props> = ({ data, solutionId }) => {
 
   const handlePrimaryCta = () => {
     trackCtaClick('solution_primary_cta', `solution_hero_${solutionId}`, data.primaryCta);
-    navigate(`/${i18n.language}/contact`);
+    if (data.primaryCtaAction === 'elevenlabs') {
+      toggleConversation();
+    } else {
+      navigate(`/${i18n.language}/contact`);
+    }
   };
 
   const handleSecondaryCta = () => {
@@ -132,6 +140,7 @@ const SolutionHero: React.FC<Props> = ({ data, solutionId }) => {
           >
             <button
               onClick={handlePrimaryCta}
+              onMouseEnter={data.primaryCtaAction === 'elevenlabs' ? preloadScript : undefined}
               className="group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-sky-600 to-teal-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg shadow-sky-500/25 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-0.5"
             >
               {t(`solutions.${solutionId}.hero.primaryCta`, data.primaryCta)}
