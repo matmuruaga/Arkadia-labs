@@ -463,6 +463,35 @@
     "primaryCta": "Get Your Custom AI Solution",
     "secondaryCta": "Book a Consultation"
   },
+  "agentWorkforce": {
+    "title": "Build Your AI Workforce",
+    "subtitle": "Scroll to see how 8 specialized AI agents form a complete team across every department",
+    "scrollHint": "↓ Scroll to build your AI team ↓",
+    "centralNode": "Your Company",
+    "centralBadge": "AI-Powered",
+    "departments": {
+      "outbound": "Sales & Outbound",
+      "inbound": "Customer Service",
+      "marketing": "Marketing & Content",
+      "operations": "Operations"
+    },
+    "kpis": {
+      "lead-validator": "accuracy",
+      "sales-qualifier": "meetings",
+      "sales-agent": "revenue",
+      "virtual-receptionist": "answered",
+      "booking-agent": "bookings",
+      "content-creator": "output",
+      "social-manager": "engagement",
+      "operations-agent": "manual work"
+    },
+    "summary": {
+      "agents": "AI Agents",
+      "departments": "Departments",
+      "availability": "Availability"
+    },
+    "cta": "Explore All Solutions"
+  },
   "solutions": {
     "index": {
       "seo": {

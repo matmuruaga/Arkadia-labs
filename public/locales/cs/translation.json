@@ -2220,6 +2220,35 @@
     "lastUpdated": "Poslední aktualizace: {{date}}",
     "content": "Informace o právním postavení a provozu Arkadia Labs."
   },
+  "agentWorkforce": {
+    "title": "Sestavte svůj tým AI",
+    "subtitle": "Scrollujte a sledujte, jak 8 specializovaných AI agentů tvoří kompletní tým pro každé oddělení",
+    "scrollHint": "↓ Scrollujte a sestavte svůj AI tým ↓",
+    "centralNode": "Vaše firma",
+    "centralBadge": "S umělou inteligencí",
+    "departments": {
+      "outbound": "Prodej & Outbound",
+      "inbound": "Zákaznický servis",
+      "marketing": "Marketing & Obsah",
+      "operations": "Provoz"
+    },
+    "kpis": {
+      "lead-validator": "přesnost",
+      "sales-qualifier": "schůzky",
+      "sales-agent": "příjmy",
+      "virtual-receptionist": "zodpovězeno",
+      "booking-agent": "rezervace",
+      "content-creator": "výstup",
+      "social-manager": "zapojení",
+      "operations-agent": "manuální práce"
+    },
+    "summary": {
+      "agents": "AI agenti",
+      "departments": "Oddělení",
+      "availability": "Dostupnost"
+    },
+    "cta": "Prozkoumat všechna řešení"
+  },
   "solutions": {
     "platform": {
       "daily": "Denně",

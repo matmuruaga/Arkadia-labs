@@ -458,6 +458,35 @@
     "primaryCta": "Obtén Tu Solución de IA",
     "secondaryCta": "Agenda una Consulta"
   },
+  "agentWorkforce": {
+    "title": "Construye Tu Equipo de IA",
+    "subtitle": "Haz scroll para ver cómo 8 agentes de IA especializados forman un equipo completo en cada departamento",
+    "scrollHint": "↓ Haz scroll para construir tu equipo de IA ↓",
+    "centralNode": "Tu Empresa",
+    "centralBadge": "Con IA",
+    "departments": {
+      "outbound": "Ventas & Outbound",
+      "inbound": "Atención al Cliente",
+      "marketing": "Marketing & Contenido",
+      "operations": "Operaciones"
+    },
+    "kpis": {
+      "lead-validator": "precisión",
+      "sales-qualifier": "reuniones",
+      "sales-agent": "ingresos",
+      "virtual-receptionist": "contestadas",
+      "booking-agent": "reservas",
+      "content-creator": "producción",
+      "social-manager": "engagement",
+      "operations-agent": "trabajo manual"
+    },
+    "summary": {
+      "agents": "Agentes IA",
+      "departments": "Departamentos",
+      "availability": "Disponibilidad"
+    },
+    "cta": "Explorar Todas las Soluciones"
+  },
   "solutions": {
     "platform": {
       "daily": "Diario",
