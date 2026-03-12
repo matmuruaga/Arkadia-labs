@@ -31,7 +31,8 @@ const Hero = () => {
       if (status === 'disconnected') {
         // Track AI widget open
         trackAiWidgetOpen('hero', 'elevenlabs_voice_agent');
-        await navigator.mediaDevices.getUserMedia({ audio: true });
+        const permissionStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        permissionStream.getTracks().forEach(track => track.stop());
         await startSession({ agentId: 'agent_01jynm32kjf7rvq5857ggj51ew' });
       } else if (status === 'connected') {
         // Track AI widget close
