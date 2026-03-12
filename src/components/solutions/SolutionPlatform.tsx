@@ -17,7 +17,7 @@ import {
   RefreshCw,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { SolutionPlatformPreview } from '@/data/solutions/types';
+import { SolutionPlatformPreview, PlatformTableRow } from '@/data/solutions/types';
 
 // Icon mapping
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -157,7 +157,57 @@ const MiniChart: React.FC<{ title: string; delay: number }> = ({ title, delay })
   );
 };
 
-// Lead Scoring Table with contacts
+// Generic table that works for any solution
+const statusColors = {
+  success: 'bg-green-100 text-green-700',
+  warning: 'bg-yellow-100 text-yellow-700',
+  info: 'bg-blue-100 text-blue-700',
+};
+
+const GenericTable: React.FC<{
+  title: string;
+  subtitle?: string;
+  rows: PlatformTableRow[];
+  delay: number;
+}> = ({ title, subtitle, rows, delay }) => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.95 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay }}
+    className="bg-white rounded-xl border border-slate-200/80 p-4 shadow-sm"
+  >
+    <div className="flex items-center justify-between mb-3">
+      <h4 className="text-sm font-semibold text-slate-700">{title}</h4>
+      {subtitle && <span className="text-[10px] text-slate-400">{subtitle}</span>}
+    </div>
+    <div className="space-y-2">
+      {rows.map((row, index) => (
+        <motion.div
+          key={row.id}
+          initial={{ opacity: 0, x: -10 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, delay: delay + 0.1 + index * 0.08 }}
+          className="flex items-center gap-2 py-1.5 border-b border-slate-100 last:border-0"
+        >
+          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center text-[10px] font-medium text-slate-600 flex-shrink-0">
+            {row.name.slice(0, 2).toUpperCase()}
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-xs font-medium text-slate-800 truncate">{row.name}</p>
+            <p className="text-[10px] text-slate-400 truncate">{row.detail}</p>
+          </div>
+          <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${statusColors[row.status]}`}>
+            {row.value}
+          </span>
+        </motion.div>
+      ))}
+    </div>
+  </motion.div>
+);
+
+// Legacy Lead Scoring Table (used when no secondaryTable is provided)
 const LeadScoringTable: React.FC<{ delay: number }> = ({ delay }) => {
   const leads = [
     { name: 'Sarah Mitchell', score: 94, company: 'TechFlow Inc', role: 'VP of Sales' },
@@ -529,7 +579,7 @@ const SolutionPlatform: React.FC<Props> = React.memo(({ data, solutionId }) => {
                         className="bg-white rounded-xl border border-slate-200/80 p-5 shadow-sm flex flex-col items-center justify-center"
                       >
                         <h3 className="font-semibold text-slate-900 mb-4">
-                          {t(`solutions.${solutionId}.platform.scoreCard.title`, 'Lead Quality Score')}
+                          {t(`solutions.${solutionId}.platform.scoreCard.title`, data.scoreCard?.title || 'Score')}
                         </h3>
                         <LeadScoreGauge score={data.scoreCard?.score || 87} delay={0.5} gradientId={gaugeGradientId} />
                         <p className="text-sm text-slate-500 mt-3 text-center">
@@ -592,12 +642,21 @@ const SolutionPlatform: React.FC<Props> = React.memo(({ data, solutionId }) => {
                       </motion.div>
                     )}
 
-                    {/* Lead Scoring Table & Conversion Chart - Hidden on mobile for performance */}
+                    {/* Secondary Table & Trend Chart - Hidden on mobile for performance */}
                     {!isMobile && (
                       <div className="md:col-span-2 grid grid-cols-2 gap-4">
-                        <LeadScoringTable delay={0.6} />
+                        {data.secondaryTable ? (
+                          <GenericTable
+                            title={t(`solutions.${solutionId}.platform.secondaryTable.title`, data.secondaryTable.title)}
+                            subtitle={data.secondaryTable.subtitle}
+                            rows={data.secondaryTable.rows}
+                            delay={0.6}
+                          />
+                        ) : (
+                          <LeadScoringTable delay={0.6} />
+                        )}
                         <MiniChart
-                          title={t(`solutions.${solutionId}.platform.charts.conversion`, 'Conversion Trend')}
+                          title={t(`solutions.${solutionId}.platform.charts.conversion`, data.secondaryChartTitle || 'Trend')}
                           delay={0.7}
                         />
                       </div>
@@ -619,8 +678,12 @@ const SolutionPlatform: React.FC<Props> = React.memo(({ data, solutionId }) => {
                     <CheckCircle2 className="h-4 w-4 text-green-600" />
                   </div>
                   <div>
-                    <p className="text-xs font-medium text-slate-900">Lead Validated</p>
-                    <p className="text-[10px] text-slate-500">Score: 94/100</p>
+                    <p className="text-xs font-medium text-slate-900">
+                      {t(`solutions.${solutionId}.platform.floatingBadge1.title`, data.floatingBadge1?.title || 'Completed')}
+                    </p>
+                    <p className="text-[10px] text-slate-500">
+                      {t(`solutions.${solutionId}.platform.floatingBadge1.subtitle`, data.floatingBadge1?.subtitle || 'Score: 94/100')}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -637,8 +700,12 @@ const SolutionPlatform: React.FC<Props> = React.memo(({ data, solutionId }) => {
                     <TrendingUp className="h-4 w-4 text-blue-600" />
                   </div>
                   <div>
-                    <p className="text-xs font-medium text-slate-900">+23% This Week</p>
-                    <p className="text-[10px] text-slate-500">Qualified leads</p>
+                    <p className="text-xs font-medium text-slate-900">
+                      {t(`solutions.${solutionId}.platform.floatingBadge2.title`, data.floatingBadge2?.title || '+23% This Week')}
+                    </p>
+                    <p className="text-[10px] text-slate-500">
+                      {t(`solutions.${solutionId}.platform.floatingBadge2.subtitle`, data.floatingBadge2?.subtitle || 'Qualified leads')}
+                    </p>
                   </div>
                 </div>
               </motion.div>

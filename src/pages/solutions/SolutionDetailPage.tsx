@@ -58,12 +58,22 @@ const SolutionDetailPage: React.FC = () => {
       '@type': 'Brand',
       name: SITE_CONFIG.name,
     },
-    offers: {
-      '@type': 'Offer',
-      price: solution.pricing.startingPrice || 0,
-      priceCurrency: solution.pricing.currency || 'USD',
-      availability: 'https://schema.org/InStock',
-    },
+    ...(solution.pricing.startingPrice
+      ? {
+          offers: {
+            '@type': 'Offer',
+            price: solution.pricing.startingPrice,
+            priceCurrency: solution.pricing.currency || 'USD',
+            availability: 'https://schema.org/InStock',
+          },
+        }
+      : {
+          offers: {
+            '@type': 'AggregateOffer',
+            availability: 'https://schema.org/InStock',
+            description: 'Custom pricing',
+          },
+        }),
   };
 
   return (
