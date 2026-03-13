@@ -1,5 +1,5 @@
 // src/pages/CloneYourBusinessPage.tsx
-import { useEffect, lazy, Suspense } from 'react';
+import { useEffect, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
@@ -9,23 +9,10 @@ import SEO from '@/components/SEO';
 // Analytics
 import { trackPageView } from '@/utils/dataLayer';
 
-// Placeholder sections — will be replaced with real components
-const HeroPlaceholder = () => {
-  const { t } = useTranslation();
-  return (
-    <section className="py-20 px-4 text-center">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          {t('cloneYourBusiness.hero.title')}
-        </h1>
-        <p className="text-lg md:text-xl text-gray-600 mb-8">
-          {t('cloneYourBusiness.hero.subtitle')}
-        </p>
-      </div>
-    </section>
-  );
-};
+// Hero — above the fold, no lazy load
+import CloneYourBusinessHero from '@/components/CloneYourBusinessHero';
 
+// Placeholder sections — will be replaced with real components
 const ProblemPlaceholder = () => {
   const { t } = useTranslation();
   return (
@@ -91,7 +78,7 @@ const CloneYourBusinessPage = () => {
       />
 
       {/* Hero — above the fold */}
-      <HeroPlaceholder />
+      <CloneYourBusinessHero />
 
       {/* Below-the-fold sections with Suspense boundaries */}
       <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>

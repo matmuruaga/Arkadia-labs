@@ -58,7 +58,34 @@
   "cloneYourBusiness": {
     "hero": {
       "title": "Clona tu Empresa con IA",
-      "subtitle": "Automatiza el 99% de tus procesos con agentes de IA que replican departamentos enteros — ventas, marketing, soporte y operaciones."
+      "badge": "Automatización con IA",
+      "headline": "Clona tu Empresa",
+      "headlineAccent": "con IA.",
+      "subtitle": "Automatiza el 99% de tus procesos con agentes de IA que replican departamentos enteros — ventas, marketing, soporte y operaciones.",
+      "cta": "Agenda tu Demo",
+      "hubOriginal": "Tu Empresa",
+      "hubTransformed": "Potenciada con IA",
+      "transformedLabel": "4 departamentos automatizados en segundos",
+      "nodes": {
+        "sales": "Ventas",
+        "marketing": "Marketing",
+        "support": "Soporte",
+        "operations": "Operaciones"
+      },
+      "trust": {
+        "companies": {
+          "value": "+50",
+          "label": "Empresas"
+        },
+        "automation": {
+          "value": "99%",
+          "label": "Automatización"
+        },
+        "availability": {
+          "value": "24/7",
+          "label": "Disponibilidad"
+        }
+      }
     },
     "problem": {
       "title": "Tu Equipo Se Ahoga en Trabajo Repetitivo",

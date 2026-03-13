@@ -58,7 +58,34 @@
   "cloneYourBusiness": {
     "hero": {
       "title": "Clone Your Business with AI",
-      "subtitle": "Automate 99% of your processes with AI agents that replicate entire departments — sales, marketing, support, and operations."
+      "badge": "AI-Powered Automation",
+      "headline": "Clone Your Business",
+      "headlineAccent": "with AI.",
+      "subtitle": "Automate 99% of your processes with AI agents that replicate entire departments — sales, marketing, support, and operations.",
+      "cta": "Schedule Your Demo",
+      "hubOriginal": "Your Company",
+      "hubTransformed": "AI-Powered",
+      "transformedLabel": "4 departments automated in seconds",
+      "nodes": {
+        "sales": "Sales",
+        "marketing": "Marketing",
+        "support": "Support",
+        "operations": "Operations"
+      },
+      "trust": {
+        "companies": {
+          "value": "+50",
+          "label": "Companies"
+        },
+        "automation": {
+          "value": "99%",
+          "label": "Automation"
+        },
+        "availability": {
+          "value": "24/7",
+          "label": "Availability"
+        }
+      }
     },
     "problem": {
       "title": "Your Team Is Drowning in Repetitive Work",

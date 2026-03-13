@@ -58,7 +58,34 @@
   "cloneYourBusiness": {
     "hero": {
       "title": "Klonujte svou firmu pomocí AI",
-      "subtitle": "Automatizujte 99 % svých procesů s AI agenty, kteří replikují celá oddělení — prodej, marketing, podporu i provoz."
+      "badge": "Automatizace s AI",
+      "headline": "Klonujte svou firmu",
+      "headlineAccent": "pomocí AI.",
+      "subtitle": "Automatizujte 99 % svých procesů s AI agenty, kteří replikují celá oddělení — prodej, marketing, podporu i provoz.",
+      "cta": "Naplánujte demo",
+      "hubOriginal": "Vaše firma",
+      "hubTransformed": "Poháněná AI",
+      "transformedLabel": "4 oddělení automatizovaná za sekundy",
+      "nodes": {
+        "sales": "Prodej",
+        "marketing": "Marketing",
+        "support": "Podpora",
+        "operations": "Provoz"
+      },
+      "trust": {
+        "companies": {
+          "value": "+50",
+          "label": "Firem"
+        },
+        "automation": {
+          "value": "99 %",
+          "label": "Automatizace"
+        },
+        "availability": {
+          "value": "24/7",
+          "label": "Dostupnost"
+        }
+      }
     },
     "problem": {
       "title": "Váš tým se topí v opakující se práci",
