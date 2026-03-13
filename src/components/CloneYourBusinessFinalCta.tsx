@@ -3,7 +3,7 @@
 // Based on FinalCtaSection but with Cal.com scheduler embed for direct demo booking.
 // Dark theme matching the page's visual identity.
 
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -49,11 +49,11 @@ const CloneYourBusinessFinalCta: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-60px' });
 
-  const handleSectionInView = () => {
+  useEffect(() => {
     if (isInView) {
       trackSectionView('final_cta', 'clone_your_business');
     }
-  };
+  }, [isInView]);
 
   const handleTalkToTeam = () => {
     trackCtaClick('talk_to_team', 'clone_your_business_final_cta', t('cloneYourBusiness.cta.secondaryCta'));
@@ -63,7 +63,6 @@ const CloneYourBusinessFinalCta: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      onAnimationStart={handleSectionInView}
       className="relative py-24 md:py-32 px-4 overflow-hidden bg-[#070B14]"
       aria-labelledby="final-cta-heading"
     >

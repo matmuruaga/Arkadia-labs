@@ -8,6 +8,7 @@ interface CalSchedulerProps {
   namespace?: string;
   calLink?: string;
   layout?: string;
+  onClick?: () => void;
 }
 
 export default function CalScheduler({
@@ -15,7 +16,8 @@ export default function CalScheduler({
   buttonClassName = "",
   namespace = "30min",
   calLink = "karel-duchon-arkadialabs/30min",
-  layout = "month_view"
+  layout = "month_view",
+  onClick,
 }: CalSchedulerProps) {
   useEffect(() => {
     (async function () {
@@ -33,6 +35,7 @@ export default function CalScheduler({
       data-cal-link={calLink}
       data-cal-config={`{"layout":"${layout}"}`}
       className={buttonClassName}
+      onClick={onClick}
     >
       <Calendar className="h-6 w-6" />
       {buttonText}

@@ -3,7 +3,7 @@
 // Replaces pricing with a custom-solutions pitch + dual CTAs.
 // Visual: dark gradient background with glassmorphism card.
 
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -49,11 +49,11 @@ const CloneYourBusinessCta: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-80px' });
 
-  const handleSectionView = () => {
+  useEffect(() => {
     if (isInView) {
       trackSectionView('cta_custom_solutions', 'clone_your_business');
     }
-  };
+  }, [isInView]);
 
   const handleTalkToTeam = () => {
     trackCtaClick('talk_to_team', 'clone_your_business_cta', t('cloneYourBusiness.cta.secondaryCta'));
@@ -63,7 +63,6 @@ const CloneYourBusinessCta: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      onAnimationStart={handleSectionView}
       className="relative py-24 md:py-32 px-4 overflow-hidden bg-[#070B14]"
       aria-labelledby="cta-heading"
     >

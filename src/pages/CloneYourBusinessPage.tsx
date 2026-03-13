@@ -35,7 +35,6 @@ const CLONE_KEYWORDS = [
   'intelligent automation',
   'enterprise AI',
   'workflow automation',
-  'Arkadia Labs',
 ];
 
 const buildJsonLd = (lang: string, title: string, description: string) => [
@@ -89,19 +88,19 @@ const CloneYourBusinessPage = () => {
   const { lang } = useParams<{ lang: string }>();
   const currentLang = lang || SITE_CONFIG.defaultLocale;
 
-  useEffect(() => {
-    trackPageView(location.pathname, 'Clone Your Business - Arkadia Labs', i18n.language);
-  }, [location.pathname, i18n.language]);
-
   const pageTitle = `${t('seo.cloneYourBusiness.title')} | ${SITE_CONFIG.name}`;
   const pageDescription = t('seo.cloneYourBusiness.description');
+
+  useEffect(() => {
+    trackPageView(location.pathname, pageTitle, i18n.language);
+  }, [location.pathname, i18n.language, pageTitle]);
 
   return (
     <>
       <SEO
         titleKey="seo.cloneYourBusiness.title"
         descriptionKey="seo.cloneYourBusiness.description"
-        path="/clone-your-business"
+        path={location.pathname.replace(`/${currentLang}`, '')}
         keywords={CLONE_KEYWORDS}
         jsonLd={buildJsonLd(currentLang, pageTitle, pageDescription)}
         breadcrumbs={[

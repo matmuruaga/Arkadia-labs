@@ -340,6 +340,7 @@ const CloneYourBusinessRoiSection: React.FC = () => {
               <CalScheduler
                 buttonText={t('cloneYourBusiness.roiSection.cta')}
                 namespace="30min-roi-section"
+                onClick={handleCtaClick}
                 buttonClassName="
                   inline-flex items-center justify-center gap-2
                   px-8 py-4
