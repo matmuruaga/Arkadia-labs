@@ -49,6 +49,28 @@
     "legalNotice": {
       "title": "Legal Notice and Imprint",
       "description": "Official legal notice and company information for Arkadia Labs, including registered business details, contact information, and legal disclosures."
+    },
+    "cloneYourBusiness": {
+      "title": "Clone Your Business with AI Agents",
+      "description": "Automate 99% of your business processes with AI agents that clone entire departments. Deploy intelligent automation without changing your workflow."
+    }
+  },
+  "cloneYourBusiness": {
+    "hero": {
+      "title": "Clone Your Business with AI",
+      "subtitle": "Automate 99% of your processes with AI agents that replicate entire departments — sales, marketing, support, and operations."
+    },
+    "problem": {
+      "title": "Your Team Is Drowning in Repetitive Work",
+      "subtitle": "Manual processes, slow response times, and bottlenecks are holding your business back from scaling."
+    },
+    "solution": {
+      "title": "AI Agents That Run Your Business 24/7",
+      "subtitle": "Deploy intelligent AI agents that handle the work of entire departments — without hiring, training, or managing more people."
+    },
+    "cta": {
+      "title": "Ready to Clone Your Business?",
+      "subtitle": "Schedule a demo and discover how AI agents can automate your operations starting today."
     }
   },
   "header": {

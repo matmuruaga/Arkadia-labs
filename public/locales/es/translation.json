@@ -49,6 +49,28 @@
     "legalNotice": {
       "title": "Aviso Legal e Información de la Empresa",
       "description": "Aviso legal oficial e información corporativa de Arkadia Labs, incluyendo datos de registro empresarial, información de contacto y declaraciones legales."
+    },
+    "cloneYourBusiness": {
+      "title": "Clona tu Empresa con Agentes de IA",
+      "description": "Automatiza el 99% de tus procesos de negocio con agentes de IA que clonan departamentos enteros. Despliega automatización inteligente sin cambiar tu flujo de trabajo."
+    }
+  },
+  "cloneYourBusiness": {
+    "hero": {
+      "title": "Clona tu Empresa con IA",
+      "subtitle": "Automatiza el 99% de tus procesos con agentes de IA que replican departamentos enteros — ventas, marketing, soporte y operaciones."
+    },
+    "problem": {
+      "title": "Tu Equipo Se Ahoga en Trabajo Repetitivo",
+      "subtitle": "Los procesos manuales, tiempos de respuesta lentos y cuellos de botella frenan el crecimiento de tu negocio."
+    },
+    "solution": {
+      "title": "Agentes de IA que Operan tu Negocio 24/7",
+      "subtitle": "Despliega agentes de IA inteligentes que hacen el trabajo de departamentos enteros — sin contratar, formar ni gestionar más personas."
+    },
+    "cta": {
+      "title": "¿Listo para Clonar tu Empresa?",
+      "subtitle": "Agenda una demo y descubre cómo los agentes de IA pueden automatizar tus operaciones desde hoy."
     }
   },
   "header": {
