@@ -281,6 +281,50 @@
       "title": "Se Conecta con tus Herramientas",
       "subtitle": "Tus agentes de IA se integran perfectamente con las plataformas que tu equipo ya utiliza — sin migración, sin interrupciones.",
       "cta": "Ver Todas las Integraciones"
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Comunes sobre la Clonación Empresarial",
+      "subtitle": "Todo lo que necesitas saber antes de comenzar tu transformación con IA.",
+      "questions": {
+        "q1": {
+          "question": "¿Cuánto tiempo toma implementar?",
+          "answer": "La mayoría de las empresas están completamente operativas con su equipo de agentes IA en 2-4 semanas. El cronograma depende de la complejidad de tus flujos de trabajo y el número de departamentos. Comenzamos con un piloto en un departamento para que veas resultados rápidamente, luego escalamos desde ahí."
+        },
+        "q2": {
+          "question": "¿Qué departamentos pueden automatizarse?",
+          "answer": "Cualquier departamento con tareas repetitivas y basadas en reglas es un buen candidato: Ventas (calificación de leads, seguimientos), Marketing (creación de contenido, programación), Soporte al Cliente (consultas, reservas) y Operaciones (entrada de datos, reportes, coordinación). Analizamos tus flujos de trabajo específicos para identificar primero las oportunidades de automatización con mayor ROI."
+        },
+        "q3": {
+          "question": "¿Es seguro para datos sensibles?",
+          "answer": "Sí. La seguridad está integrada en nuestra arquitectura desde el primer día. Utilizamos encriptación de nivel empresarial, controles de acceso basados en roles y opciones de residencia de datos. Nuestros agentes IA operan dentro de tu perímetro de seguridad existente y cumplen con GDPR, HIPAA y requisitos SOC 2. Tus datos nunca se usan para entrenar modelos de terceros."
+        },
+        "q4": {
+          "question": "¿Cómo se integra con nuestras herramientas actuales?",
+          "answer": "Nuestros agentes IA se conectan nativamente con más de 100 herramientas empresariales, incluyendo Salesforce, HubSpot, Slack, Microsoft 365, Google Workspace, Zapier y muchas más. Si usas un sistema interno personalizado, construimos una integración dedicada. Sin migración, sin interrupciones — tu equipo sigue trabajando de la misma manera."
+        },
+        "q5": {
+          "question": "¿Necesitamos equipo técnico?",
+          "answer": "No. Nosotros nos encargamos de toda la implementación, configuración y mantenimiento de tu equipo de agentes IA. Tu equipo no necesita ningún conocimiento técnico. Proporcionamos capacitación para los usuarios finales y soporte continuo. Nuestro objetivo es que tu gente se enfoque en la estrategia y la creatividad, no en gestionar software."
+        },
+        "q6": {
+          "question": "¿Qué pasa con los empleados actuales?",
+          "answer": "Los agentes IA se encargan de las tareas repetitivas y de bajo valor, liberando a tu equipo para enfocarse en trabajo de alto impacto, creativo y estratégico. Nuestros clientes reportan consistentemente una mayor satisfacción laboral porque las personas dejan de hacer trabajo tedioso. Nadie es reemplazado — todos son potenciados."
+        }
+      }
+    },
+    "finalCta": {
+      "badge": "Empieza Hoy",
+      "headline": "¿Listo para Clonar tu",
+      "headlineAccent": "Empresa?",
+      "subtitle": "Reserva una llamada estratégica gratuita de 30 minutos. Mapearemos tus oportunidades de automatización y te mostraremos exactamente cómo podría ser tu empresa impulsada por IA.",
+      "schedulerLabel": "Agendar Llamada Estratégica Gratuita",
+      "trustItems": {
+        "t1": "Llamada estratégica gratuita de 30 min",
+        "t2": "Sin compromiso requerido",
+        "t3": "Demo en vivo de tu caso de uso"
+      },
+      "orLabel": "o"
     }
   },
   "header": {

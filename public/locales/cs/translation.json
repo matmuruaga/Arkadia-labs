@@ -281,6 +281,50 @@
       "title": "Propojí se s vašimi nástroji",
       "subtitle": "Vaši AI agenti se bezproblémově integrují s platformami, které váš tým již používá — žádná migrace, žádné přerušení.",
       "cta": "Zobrazit všechny integrace"
+    },
+    "faq": {
+      "badge": "Časté dotazy",
+      "title": "Časté dotazy o klonování firmy",
+      "subtitle": "Vše, co potřebujete vědět před zahájením vaší AI transformace.",
+      "questions": {
+        "q1": {
+          "question": "Jak dlouho trvá implementace?",
+          "answer": "Většina firem je plně funkční se svým týmem AI agentů do 2–4 týdnů. Časový plán závisí na složitosti vašich pracovních postupů a počtu oddělení. Začínáme pilotem v jednom oddělení, abyste výsledky viděli rychle, a poté škálujeme."
+        },
+        "q2": {
+          "question": "Která oddělení lze automatizovat?",
+          "answer": "Jakékoli oddělení s opakujícími se, pravidly řízenými úkoly je vhodným kandidátem: Prodej (kvalifikace leadů, follow-upy), Marketing (tvorba obsahu, plánování), Zákaznická podpora (dotazy, rezervace) a Provoz (zadávání dat, reporty, koordinace). Analyzujeme vaše konkrétní pracovní postupy, abychom nejdříve identifikovali příležitosti automatizace s nejvyšší návratností."
+        },
+        "q3": {
+          "question": "Je to bezpečné pro citlivá data?",
+          "answer": "Ano. Bezpečnost je zabudována do naší architektury od samého začátku. Používáme šifrování podnikové úrovně, řízení přístupu na základě rolí a možnosti rezidence dat. Naši AI agenti fungují v rámci vašeho stávajícího bezpečnostního perimetru a splňují požadavky GDPR, HIPAA a SOC 2. Vaše data nejsou nikdy použita k trénování modelů třetích stran."
+        },
+        "q4": {
+          "question": "Jak se integruje s našimi stávajícími nástroji?",
+          "answer": "Naši AI agenti se nativně propojují s více než 100 podnikovými nástroji včetně Salesforce, HubSpot, Slack, Microsoft 365, Google Workspace, Zapier a dalšími. Pokud používáte vlastní interní systém, vytvoříme dedikovanou integraci. Žádná migrace, žádné přerušení — váš tým pracuje stejně jako dosud."
+        },
+        "q5": {
+          "question": "Potřebujeme technický tým?",
+          "answer": "Ne. Staráme se o celou implementaci, konfiguraci a údržbu vašeho týmu AI agentů. Váš tým nepotřebuje žádné technické znalosti. Poskytujeme školení pro koncové uživatele a průběžnou podporu. Naším cílem je, aby se vaši lidé soustředili na strategii a kreativitu, nikoli na správu softwaru."
+        },
+        "q6": {
+          "question": "Co se stane se stávajícími zaměstnanci?",
+          "answer": "AI agenti zvládají opakující se a nízkohodnotné úkoly, čímž uvolňují váš tým, aby se soustředil na vysoce dopadovou, kreativní a strategickou práci. Naši klienti konzistentně hlásí vyšší spokojenost zaměstnanců, protože lidé přestanou dělat nudnou práci. Nikdo není nahrazen — všichni jsou povýšeni."
+        }
+      }
+    },
+    "finalCta": {
+      "badge": "Začněte Dnes",
+      "headline": "Připraveni Klonovat vaši",
+      "headlineAccent": "Firmu?",
+      "subtitle": "Rezervujte si bezplatný 30minutový strategický hovor. Zmapujeme vaše příležitosti pro automatizaci a ukážeme vám přesně, jak by mohla vypadat vaše firma poháněná AI.",
+      "schedulerLabel": "Naplánovat Bezplatný Strategický Hovor",
+      "trustItems": {
+        "t1": "Bezplatný 30min strategický hovor",
+        "t2": "Bez závazků",
+        "t3": "Live demo vašeho případu použití"
+      },
+      "orLabel": "nebo"
     }
   },
   "header": {

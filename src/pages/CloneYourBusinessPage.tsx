@@ -20,6 +20,8 @@ const CloneYourBusinessDepartments = lazy(() => import('@/components/CloneYourBu
 const CloneYourBusinessBeforeAfter = lazy(() => import('@/components/CloneYourBusinessBeforeAfter'));
 const CloneYourBusinessIntegrations = lazy(() => import('@/components/CloneYourBusinessIntegrations'));
 const CloneYourBusinessCta = lazy(() => import('@/components/CloneYourBusinessCta'));
+const CloneYourBusinessFaq = lazy(() => import('@/components/CloneYourBusinessFaq'));
+const CloneYourBusinessFinalCta = lazy(() => import('@/components/CloneYourBusinessFinalCta'));
 
 const CLONE_KEYWORDS = [
   'AI agents',
@@ -131,6 +133,14 @@ const CloneYourBusinessPage = () => {
 
       <Suspense fallback={<div className="h-48 flex items-center justify-center bg-[#070B14]"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
         <CloneYourBusinessCta />
+      </Suspense>
+
+      <Suspense fallback={<div className="h-32 flex items-center justify-center bg-[#F8F9FA]"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
+        <CloneYourBusinessFaq />
+      </Suspense>
+
+      <Suspense fallback={<div className="h-48 flex items-center justify-center bg-[#070B14]"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
+        <CloneYourBusinessFinalCta />
       </Suspense>
     </>
   );

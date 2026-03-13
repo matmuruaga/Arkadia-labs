@@ -281,6 +281,50 @@
       "title": "Connects with Your Existing Tools",
       "subtitle": "Your AI agents integrate seamlessly with the platforms your team already uses — no migration, no disruption.",
       "cta": "View All Integrations"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Common Questions About Business Cloning",
+      "subtitle": "Everything you need to know before starting your AI transformation.",
+      "questions": {
+        "q1": {
+          "question": "How long does implementation take?",
+          "answer": "Most businesses are fully operational with their AI agent workforce within 2-4 weeks. The timeline depends on the complexity of your workflows and the number of departments. We start with a pilot in one department so you see results quickly, then scale from there."
+        },
+        "q2": {
+          "question": "Which departments can be automated?",
+          "answer": "Any department with repetitive, rule-based tasks is a strong candidate: Sales (lead qualification, follow-ups), Marketing (content creation, scheduling), Customer Support (inquiries, booking), and Operations (data entry, reporting, coordination). We analyze your specific workflows to identify the highest-ROI automation opportunities first."
+        },
+        "q3": {
+          "question": "Is it safe for sensitive data?",
+          "answer": "Yes. Security is built into our architecture from day one. We use enterprise-grade encryption, role-based access controls, and data residency options. Our AI agents operate within your existing security perimeter and comply with GDPR, HIPAA, and SOC 2 requirements. Your data is never used to train third-party models."
+        },
+        "q4": {
+          "question": "How does it integrate with our current tools?",
+          "answer": "Our AI agents connect natively with 100+ business tools including Salesforce, HubSpot, Slack, Microsoft 365, Google Workspace, Zapier, and more. If you use a custom internal system, we build a dedicated integration. No migration, no disruption — your team keeps working the same way."
+        },
+        "q5": {
+          "question": "Do we need a technical team?",
+          "answer": "No. We handle the entire implementation, configuration, and maintenance of your AI agent workforce. Your team does not need any technical knowledge. We provide training for end-users and ongoing support. Our goal is that your people focus on strategy and creativity, not on managing software."
+        },
+        "q6": {
+          "question": "What happens to current employees?",
+          "answer": "AI agents handle the repetitive and low-value tasks, freeing your team to focus on high-impact, creative, and strategic work. Our clients consistently report improved employee satisfaction because people stop doing tedious work. No one gets replaced — everyone gets upgraded."
+        }
+      }
+    },
+    "finalCta": {
+      "badge": "Start Today",
+      "headline": "Ready to Clone Your",
+      "headlineAccent": "Business?",
+      "subtitle": "Book a free 30-minute strategy call. We’ll map your automation opportunities and show you exactly what your AI-powered business could look like.",
+      "schedulerLabel": "Schedule a Free Strategy Call",
+      "trustItems": {
+        "t1": "Free 30-minute strategy call",
+        "t2": "No commitment required",
+        "t3": "Live demo of your use case"
+      },
+      "orLabel": "or"
     }
   },
   "header": {
