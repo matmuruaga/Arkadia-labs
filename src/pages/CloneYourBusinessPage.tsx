@@ -17,6 +17,7 @@ const CloneYourBusinessProblem = lazy(() => import('@/components/CloneYourBusine
 const CloneYourBusinessHowItWorks = lazy(() => import('@/components/CloneYourBusinessHowItWorks'));
 const CloneYourBusinessDepartments = lazy(() => import('@/components/CloneYourBusinessDepartments'));
 const CloneYourBusinessBeforeAfter = lazy(() => import('@/components/CloneYourBusinessBeforeAfter'));
+const CloneYourBusinessIntegrations = lazy(() => import('@/components/CloneYourBusinessIntegrations'));
 
 const CtaPlaceholder = () => {
   const { t } = useTranslation();
@@ -68,6 +69,10 @@ const CloneYourBusinessPage = () => {
 
       <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
         <CloneYourBusinessBeforeAfter />
+      </Suspense>
+
+      <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
+        <CloneYourBusinessIntegrations />
       </Suspense>
 
       <Suspense fallback={<div className="h-24 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>

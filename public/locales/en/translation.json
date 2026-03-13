@@ -265,6 +265,12 @@
           "improvementLabel": "faster scaling"
         }
       }
+    },
+    "integrations": {
+      "badge": "Integrations",
+      "title": "Connects with Your Existing Tools",
+      "subtitle": "Your AI agents integrate seamlessly with the platforms your team already uses — no migration, no disruption.",
+      "cta": "View All Integrations"
     }
   },
   "header": {

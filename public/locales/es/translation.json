@@ -265,6 +265,12 @@
           "improvementLabel": "escalado más rápido"
         }
       }
+    },
+    "integrations": {
+      "badge": "Integraciones",
+      "title": "Se Conecta con tus Herramientas",
+      "subtitle": "Tus agentes de IA se integran perfectamente con las plataformas que tu equipo ya utiliza — sin migración, sin interrupciones.",
+      "cta": "Ver Todas las Integraciones"
     }
   },
   "header": {

@@ -265,6 +265,12 @@
           "improvementLabel": "rychlejší škálování"
         }
       }
+    },
+    "integrations": {
+      "badge": "Integrace",
+      "title": "Propojí se s vašimi nástroji",
+      "subtitle": "Vaši AI agenti se bezproblémově integrují s platformami, které váš tým již používá — žádná migrace, žádné přerušení.",
+      "cta": "Zobrazit všechny integrace"
     }
   },
   "header": {
