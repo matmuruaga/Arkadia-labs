@@ -220,6 +220,51 @@
           "operationsAgent": "Operations Agent"
         }
       }
+    },
+    "beforeAfter": {
+      "badge": "Proven Results",
+      "title": "The Transformation in Numbers",
+      "subtitle": "See the measurable impact of cloning your business operations with AI agents — real metrics from real deployments.",
+      "before": "Before",
+      "after": "After",
+      "metrics": {
+        "operatingCosts": {
+          "title": "Operating Costs",
+          "beforeValue": "100%",
+          "afterValue": "30%",
+          "improvementLabel": "cost reduction"
+        },
+        "responseTime": {
+          "title": "Response Time",
+          "beforeValue": "24h",
+          "afterValue": "3s",
+          "improvementLabel": "faster"
+        },
+        "availability": {
+          "title": "Availability",
+          "beforeValue": "8h/day",
+          "afterValue": "24/7",
+          "improvementLabel": "uptime increase"
+        },
+        "errorRate": {
+          "title": "Error Rate",
+          "beforeValue": "12%",
+          "afterValue": "0.5%",
+          "improvementLabel": "error reduction"
+        },
+        "capacity": {
+          "title": "Service Capacity",
+          "beforeValue": "1x",
+          "afterValue": "10x",
+          "improvementLabel": "more capacity"
+        },
+        "scalingSpeed": {
+          "title": "Scaling Speed",
+          "beforeValue": "12 weeks",
+          "afterValue": "2 days",
+          "improvementLabel": "faster scaling"
+        }
+      }
     }
   },
   "header": {

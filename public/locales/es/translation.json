@@ -220,6 +220,51 @@
           "operationsAgent": "Agente de Operaciones"
         }
       }
+    },
+    "beforeAfter": {
+      "badge": "Resultados Comprobados",
+      "title": "La Transformación en Números",
+      "subtitle": "Mira el impacto medible de clonar las operaciones de tu negocio con agentes de IA — métricas reales de implementaciones reales.",
+      "before": "Antes",
+      "after": "Después",
+      "metrics": {
+        "operatingCosts": {
+          "title": "Costos Operativos",
+          "beforeValue": "100%",
+          "afterValue": "30%",
+          "improvementLabel": "reducción de costos"
+        },
+        "responseTime": {
+          "title": "Tiempo de Respuesta",
+          "beforeValue": "24h",
+          "afterValue": "3s",
+          "improvementLabel": "más rápido"
+        },
+        "availability": {
+          "title": "Disponibilidad",
+          "beforeValue": "8h/día",
+          "afterValue": "24/7",
+          "improvementLabel": "aumento de disponibilidad"
+        },
+        "errorRate": {
+          "title": "Tasa de Error",
+          "beforeValue": "12%",
+          "afterValue": "0.5%",
+          "improvementLabel": "reducción de errores"
+        },
+        "capacity": {
+          "title": "Capacidad de Atención",
+          "beforeValue": "1x",
+          "afterValue": "10x",
+          "improvementLabel": "más capacidad"
+        },
+        "scalingSpeed": {
+          "title": "Velocidad de Escalado",
+          "beforeValue": "12 semanas",
+          "afterValue": "2 días",
+          "improvementLabel": "escalado más rápido"
+        }
+      }
     }
   },
   "header": {

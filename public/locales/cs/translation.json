@@ -220,6 +220,51 @@
           "operationsAgent": "Provozní agent"
         }
       }
+    },
+    "beforeAfter": {
+      "badge": "Prokázané výsledky",
+      "title": "Transformace v číslech",
+      "subtitle": "Podívejte se na měřitelný dopad klonování vašich obchodních operací pomocí AI agentů — reálné metriky z reálných nasazení.",
+      "before": "Před",
+      "after": "Po",
+      "metrics": {
+        "operatingCosts": {
+          "title": "Provozní náklady",
+          "beforeValue": "100 %",
+          "afterValue": "30 %",
+          "improvementLabel": "snížení nákladů"
+        },
+        "responseTime": {
+          "title": "Doba odezvy",
+          "beforeValue": "24 h",
+          "afterValue": "3 s",
+          "improvementLabel": "rychlejší"
+        },
+        "availability": {
+          "title": "Dostupnost",
+          "beforeValue": "8 h/den",
+          "afterValue": "24/7",
+          "improvementLabel": "zvýšení dostupnosti"
+        },
+        "errorRate": {
+          "title": "Chybovost",
+          "beforeValue": "12 %",
+          "afterValue": "0,5 %",
+          "improvementLabel": "snížení chyb"
+        },
+        "capacity": {
+          "title": "Kapacita služeb",
+          "beforeValue": "1×",
+          "afterValue": "10×",
+          "improvementLabel": "větší kapacita"
+        },
+        "scalingSpeed": {
+          "title": "Rychlost škálování",
+          "beforeValue": "12 týdnů",
+          "afterValue": "2 dny",
+          "improvementLabel": "rychlejší škálování"
+        }
+      }
     }
   },
   "header": {
