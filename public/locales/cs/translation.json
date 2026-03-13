@@ -89,7 +89,47 @@
     },
     "problem": {
       "title": "Váš tým se topí v opakující se práci",
-      "subtitle": "Manuální procesy, pomalé odezvy a úzká hrdla brání vašemu podnikání ve škálování."
+      "subtitle": "Manuální procesy, pomalé odezvy a úzká hrdla brání vašemu podnikání ve škálování.",
+      "badge": "Problém",
+      "painPoints": {
+        "highCosts": {
+          "title": "Raketově Rostoucí Náklady na Personál",
+          "description": "Nábor, školení, benefity, fluktuace — škálování týmu je drahé a pomalé. Každý nový zaměstnanec potřebuje měsíce na zapracování."
+        },
+        "humanErrors": {
+          "title": "Opakující se Lidské Chyby",
+          "description": "Ruční zadávání dat, chyby při kopírování a nekonzistentní procesy vedou k nákladným chybám, které se časem násobí."
+        },
+        "no247": {
+          "title": "Nemožné Škálovat 24/7",
+          "description": "Vaši zákazníci očekávají okamžité odpovědi nepřetržitě, ale obsadit tři směny není praktické ani finančně únosné."
+        },
+        "disconnected": {
+          "title": "Odpojená Oddělení",
+          "description": "Obchod nekomunikuje s podporou, marketing se nesynchronizuje s provozem — izolované týmy vytvářejí mezery, které ztrácejí zákazníky."
+        },
+        "manualTasks": {
+          "title": "Hodiny Ztracené Manuální Prací",
+          "description": "Váš talentovaný tým tráví většinu dne opakující se administrativou místo činností s vysokým dopadem, které rozvíjejí podnikání."
+        }
+      },
+      "stats": {
+        "repetitive": {
+          "value": "60 %",
+          "label": "pracovního času na opakujících se úkolech",
+          "source": "McKinsey Global Institute"
+        },
+        "manualErrors": {
+          "value": "3,1 bil. $",
+          "label": "ztraceno ročně kvůli špatné kvalitě dat",
+          "source": "IBM & Harvard Business Review"
+        },
+        "lostRevenue": {
+          "value": "35 %",
+          "label": "příjmů ztraceno kvůli provozní neefektivitě",
+          "source": "IDC Research"
+        }
+      }
     },
     "solution": {
       "title": "AI agenti, kteří řídí vaši firmu 24/7",

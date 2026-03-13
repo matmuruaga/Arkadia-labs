@@ -1,5 +1,5 @@
 // src/pages/CloneYourBusinessPage.tsx
-import { useEffect, Suspense } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
@@ -12,22 +12,8 @@ import { trackPageView } from '@/utils/dataLayer';
 // Hero — above the fold, no lazy load
 import CloneYourBusinessHero from '@/components/CloneYourBusinessHero';
 
-// Placeholder sections — will be replaced with real components
-const ProblemPlaceholder = () => {
-  const { t } = useTranslation();
-  return (
-    <section className="py-16 px-4 bg-gray-50">
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          {t('cloneYourBusiness.problem.title')}
-        </h2>
-        <p className="text-gray-600">
-          {t('cloneYourBusiness.problem.subtitle')}
-        </p>
-      </div>
-    </section>
-  );
-};
+// Below-the-fold sections — lazy loaded
+const CloneYourBusinessProblem = lazy(() => import('@/components/CloneYourBusinessProblem'));
 
 const SolutionPlaceholder = () => {
   const { t } = useTranslation();
@@ -82,7 +68,7 @@ const CloneYourBusinessPage = () => {
 
       {/* Below-the-fold sections with Suspense boundaries */}
       <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
-        <ProblemPlaceholder />
+        <CloneYourBusinessProblem />
       </Suspense>
 
       <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>

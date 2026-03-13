@@ -89,7 +89,47 @@
     },
     "problem": {
       "title": "Your Team Is Drowning in Repetitive Work",
-      "subtitle": "Manual processes, slow response times, and bottlenecks are holding your business back from scaling."
+      "subtitle": "Manual processes, slow response times, and bottlenecks are holding your business back from scaling.",
+      "badge": "The Problem",
+      "painPoints": {
+        "highCosts": {
+          "title": "Skyrocketing Personnel Costs",
+          "description": "Hiring, training, benefits, turnover — scaling your team is expensive and slow. Every new hire takes months to become productive."
+        },
+        "humanErrors": {
+          "title": "Repetitive Human Errors",
+          "description": "Manual data entry, copy-paste mistakes, and inconsistent processes lead to costly errors that compound over time."
+        },
+        "no247": {
+          "title": "Impossible to Scale 24/7",
+          "description": "Your customers expect instant responses around the clock, but staffing three shifts is neither practical nor affordable."
+        },
+        "disconnected": {
+          "title": "Disconnected Departments",
+          "description": "Sales doesn't talk to support, marketing doesn't sync with operations — siloed teams create gaps that lose customers."
+        },
+        "manualTasks": {
+          "title": "Hours Lost to Manual Tasks",
+          "description": "Your talented team spends most of their day on repetitive admin work instead of high-impact activities that grow the business."
+        }
+      },
+      "stats": {
+        "repetitive": {
+          "value": "60%",
+          "label": "of work time spent on repetitive tasks",
+          "source": "McKinsey Global Institute"
+        },
+        "manualErrors": {
+          "value": "$3.1T",
+          "label": "lost annually to poor data quality",
+          "source": "IBM & Harvard Business Review"
+        },
+        "lostRevenue": {
+          "value": "35%",
+          "label": "of revenue lost to operational inefficiency",
+          "source": "IDC Research"
+        }
+      }
     },
     "solution": {
       "title": "AI Agents That Run Your Business 24/7",

@@ -89,7 +89,47 @@
     },
     "problem": {
       "title": "Tu Equipo Se Ahoga en Trabajo Repetitivo",
-      "subtitle": "Los procesos manuales, tiempos de respuesta lentos y cuellos de botella frenan el crecimiento de tu negocio."
+      "subtitle": "Los procesos manuales, tiempos de respuesta lentos y cuellos de botella frenan el crecimiento de tu negocio.",
+      "badge": "El Problema",
+      "painPoints": {
+        "highCosts": {
+          "title": "Costos de Personal por las Nubes",
+          "description": "Contratar, capacitar, beneficios, rotación — escalar tu equipo es caro y lento. Cada nueva contratación tarda meses en ser productiva."
+        },
+        "humanErrors": {
+          "title": "Errores Humanos Repetitivos",
+          "description": "Ingreso manual de datos, errores de copiar y pegar, y procesos inconsistentes generan errores costosos que se acumulan con el tiempo."
+        },
+        "no247": {
+          "title": "Imposible Escalar 24/7",
+          "description": "Tus clientes esperan respuestas instantáneas las 24 horas, pero cubrir tres turnos no es práctico ni económico."
+        },
+        "disconnected": {
+          "title": "Departamentos Desconectados",
+          "description": "Ventas no habla con soporte, marketing no se sincroniza con operaciones — equipos aislados crean brechas que pierden clientes."
+        },
+        "manualTasks": {
+          "title": "Horas Perdidas en Tareas Manuales",
+          "description": "Tu equipo talentoso pasa la mayor parte del día en trabajo administrativo repetitivo en lugar de actividades de alto impacto que hacen crecer el negocio."
+        }
+      },
+      "stats": {
+        "repetitive": {
+          "value": "60%",
+          "label": "del tiempo laboral en tareas repetitivas",
+          "source": "McKinsey Global Institute"
+        },
+        "manualErrors": {
+          "value": "$3.1T",
+          "label": "perdidos anualmente por mala calidad de datos",
+          "source": "IBM & Harvard Business Review"
+        },
+        "lostRevenue": {
+          "value": "35%",
+          "label": "de ingresos perdidos por ineficiencia operativa",
+          "source": "IDC Research"
+        }
+      }
     },
     "solution": {
       "title": "Agentes de IA que Operan tu Negocio 24/7",
