@@ -30,6 +30,8 @@ interface SEOProps {
   noindex?: boolean;
   /** Breadcrumb trail for BreadcrumbList schema (excluding Home, which is auto-added) */
   breadcrumbs?: BreadcrumbItem[];
+  /** Meta keywords (comma-separated or array) */
+  keywords?: string | string[];
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -43,6 +45,7 @@ const SEO: React.FC<SEOProps> = ({
   jsonLd,
   noindex = false,
   breadcrumbs,
+  keywords,
 }) => {
   const { t } = useTranslation();
   const { lang } = useParams<{ lang: string }>();
@@ -64,6 +67,9 @@ const SEO: React.FC<SEOProps> = ({
 
   // OG image
   const ogImage = ogImageUrl || SITE_CONFIG.defaultOgImage;
+
+  // Keywords
+  const resolvedKeywords = Array.isArray(keywords) ? keywords.join(', ') : keywords;
 
   // Build BreadcrumbList JSON-LD if breadcrumbs provided
   const breadcrumbJsonLd = breadcrumbs
@@ -98,6 +104,7 @@ const SEO: React.FC<SEOProps> = ({
       {/* Core */}
       <title>{fullTitle}</title>
       <meta name="description" content={resolvedDescription} />
+      {resolvedKeywords && <meta name="keywords" content={resolvedKeywords} />}
       {noindex && <meta name="robots" content="noindex, nofollow" />}
 
       {/* Open Graph */}
