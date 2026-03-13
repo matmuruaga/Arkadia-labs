@@ -157,6 +157,69 @@
     "cta": {
       "title": "¿Listo para Clonar tu Empresa?",
       "subtitle": "Agenda una demo y descubre cómo los agentes de IA pueden automatizar tus operaciones desde hoy."
+    },
+    "departments": {
+      "badge": "Departamentos Clonables",
+      "title": "Departamentos que Puedes Clonar Hoy",
+      "subtitle": "Cada departamento viene pre-construido con agentes de IA especializados para su rol específico — listos para desplegar en días, no meses.",
+      "agentsLabel": "Agentes IA",
+      "exploreCta": "Explorar Soluciones",
+      "sales": {
+        "title": "Ventas",
+        "tagline": "Cierra negocios 24/7 en piloto automático",
+        "functions": {
+          "f1": "Calificación y scoring automatizado de leads",
+          "f2": "Secuencias de seguimiento personalizadas",
+          "f3": "Actualización de CRM y gestión de pipeline"
+        },
+        "expandedDescription": "Nuestros agentes de IA de Ventas manejan todo el pipeline — desde el primer contacto hasta el cierre. Califican leads, agendan reuniones, envían seguimientos y actualizan tu CRM en tiempo real.",
+        "agents": {
+          "salesAgent": "Agente de Ventas",
+          "salesQualifier": "Calificador de Ventas",
+          "leadValidator": "Validador de Leads"
+        }
+      },
+      "marketing": {
+        "title": "Marketing",
+        "tagline": "Crea y distribuye contenido a escala",
+        "functions": {
+          "f1": "Creación de contenido multicanal",
+          "f2": "Programación y engagement en redes sociales",
+          "f3": "Analítica y optimización de campañas"
+        },
+        "expandedDescription": "Los agentes de IA de Marketing producen publicaciones de blog, contenido para redes sociales, campañas de email y copys de anuncios — todo alineado con la voz de tu marca y optimizado para engagement.",
+        "agents": {
+          "contentCreator": "Creador de Contenido",
+          "socialManager": "Social Manager"
+        }
+      },
+      "support": {
+        "title": "Atención al Cliente",
+        "tagline": "Atención instantánea y multilingüe",
+        "functions": {
+          "f1": "Respuesta instantánea 24/7 a consultas",
+          "f2": "Agendamiento de citas y reservas",
+          "f3": "Enrutamiento y escalación de tickets"
+        },
+        "expandedDescription": "Los agentes de IA de Soporte responden consultas al instante, agendan citas, manejan quejas y escalan problemas complejos — en cualquier idioma, las 24 horas.",
+        "agents": {
+          "virtualReceptionist": "Recepcionista Virtual",
+          "bookingAgent": "Agente de Reservas"
+        }
+      },
+      "operations": {
+        "title": "Operaciones",
+        "tagline": "Optimiza los flujos internos",
+        "functions": {
+          "f1": "Automatización y monitoreo de procesos",
+          "f2": "Ingreso de datos y reportes",
+          "f3": "Coordinación entre departamentos"
+        },
+        "expandedDescription": "Los agentes de IA de Operaciones automatizan flujos internos, generan reportes, monitorean KPIs y mantienen todos los departamentos sincronizados — eliminando cuellos de botella y trabajo manual.",
+        "agents": {
+          "operationsAgent": "Agente de Operaciones"
+        }
+      }
     }
   },
   "header": {

@@ -157,6 +157,69 @@
     "cta": {
       "title": "Připraveni klonovat svou firmu?",
       "subtitle": "Naplánujte si demo a zjistěte, jak AI agenti mohou automatizovat vaše operace již dnes."
+    },
+    "departments": {
+      "badge": "Klonovatelná oddělení",
+      "title": "Oddělení, která můžete klonovat ještě dnes",
+      "subtitle": "Každé oddělení je předpřipraveno se specializovanými AI agenty vyškolenými pro svou konkrétní roli — připraveno k nasazení za dny, ne měsíce.",
+      "agentsLabel": "AI Agenti",
+      "exploreCta": "Prozkoumat řešení",
+      "sales": {
+        "title": "Prodej",
+        "tagline": "Uzavírejte obchody 24/7 na autopilotu",
+        "functions": {
+          "f1": "Automatická kvalifikace a hodnocení leadů",
+          "f2": "Personalizované follow-up sekvence",
+          "f3": "Aktualizace CRM a správa pipeline"
+        },
+        "expandedDescription": "Naši prodejní AI agenti zvládají celý pipeline — od prvního kontaktu po uzavření obchodu. Kvalifikují leady, plánují schůzky, posílají follow-upy a aktualizují váš CRM v reálném čase.",
+        "agents": {
+          "salesAgent": "Prodejní agent",
+          "salesQualifier": "Kvalifikátor prodeje",
+          "leadValidator": "Validátor leadů"
+        }
+      },
+      "marketing": {
+        "title": "Marketing",
+        "tagline": "Tvořte a distribuujte obsah ve velkém",
+        "functions": {
+          "f1": "Tvorba vícekanálového obsahu",
+          "f2": "Plánování a engagement na sociálních sítích",
+          "f3": "Analytika a optimalizace kampaní"
+        },
+        "expandedDescription": "Marketingoví AI agenti vytvářejí blogové příspěvky, obsah pro sociální sítě, e-mailové kampaně a reklamní texty — vše v souladu s hlasem vaší značky a optimalizované pro engagement.",
+        "agents": {
+          "contentCreator": "Tvůrce obsahu",
+          "socialManager": "Správce sociálních sítí"
+        }
+      },
+      "support": {
+        "title": "Zákaznická podpora",
+        "tagline": "Okamžitá vícejazyčná péče o zákazníky",
+        "functions": {
+          "f1": "Okamžitá odpověď na dotazy 24/7",
+          "f2": "Plánování schůzek a rezervace",
+          "f3": "Směrování a eskalace tiketů"
+        },
+        "expandedDescription": "AI agenti podpory okamžitě odpovídají na dotazy zákazníků, rezervují schůzky, řeší stížnosti a eskalují složité problémy — v jakémkoli jazyce, nepřetržitě.",
+        "agents": {
+          "virtualReceptionist": "Virtuální recepční",
+          "bookingAgent": "Rezervační agent"
+        }
+      },
+      "operations": {
+        "title": "Provoz",
+        "tagline": "Zefektivněte interní procesy",
+        "functions": {
+          "f1": "Automatizace a monitoring procesů",
+          "f2": "Zadávání dat a reporting",
+          "f3": "Koordinace mezi odděleními"
+        },
+        "expandedDescription": "Provozní AI agenti automatizují interní workflow, generují reporty, monitorují KPI a udržují všechna oddělení synchronizovaná — eliminují úzká místa a manuální práci.",
+        "agents": {
+          "operationsAgent": "Provozní agent"
+        }
+      }
     }
   },
   "header": {

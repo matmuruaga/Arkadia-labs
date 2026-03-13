@@ -15,22 +15,7 @@ import CloneYourBusinessHero from '@/components/CloneYourBusinessHero';
 // Below-the-fold sections — lazy loaded
 const CloneYourBusinessProblem = lazy(() => import('@/components/CloneYourBusinessProblem'));
 const CloneYourBusinessHowItWorks = lazy(() => import('@/components/CloneYourBusinessHowItWorks'));
-
-const SolutionPlaceholder = () => {
-  const { t } = useTranslation();
-  return (
-    <section className="py-16 px-4">
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          {t('cloneYourBusiness.solution.title')}
-        </h2>
-        <p className="text-gray-600">
-          {t('cloneYourBusiness.solution.subtitle')}
-        </p>
-      </div>
-    </section>
-  );
-};
+const CloneYourBusinessDepartments = lazy(() => import('@/components/CloneYourBusinessDepartments'));
 
 const CtaPlaceholder = () => {
   const { t } = useTranslation();
@@ -77,7 +62,7 @@ const CloneYourBusinessPage = () => {
       </Suspense>
 
       <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
-        <SolutionPlaceholder />
+        <CloneYourBusinessDepartments />
       </Suspense>
 
       <Suspense fallback={<div className="h-24 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>

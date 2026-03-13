@@ -157,6 +157,69 @@
     "cta": {
       "title": "Ready to Clone Your Business?",
       "subtitle": "Schedule a demo and discover how AI agents can automate your operations starting today."
+    },
+    "departments": {
+      "badge": "Clonable Departments",
+      "title": "Departments You Can Clone Today",
+      "subtitle": "Each department comes pre-built with specialized AI agents trained for their specific role — ready to deploy in days, not months.",
+      "agentsLabel": "AI Agents",
+      "exploreCta": "Explore Solutions",
+      "sales": {
+        "title": "Sales",
+        "tagline": "Close deals 24/7 on autopilot",
+        "functions": {
+          "f1": "Automated lead qualification and scoring",
+          "f2": "Personalized follow-up sequences",
+          "f3": "CRM updates and pipeline management"
+        },
+        "expandedDescription": "Our Sales AI agents handle the full pipeline — from first contact to closed deal. They qualify leads, schedule meetings, send follow-ups, and update your CRM in real time.",
+        "agents": {
+          "salesAgent": "Sales Agent",
+          "salesQualifier": "Sales Qualifier",
+          "leadValidator": "Lead Validator"
+        }
+      },
+      "marketing": {
+        "title": "Marketing",
+        "tagline": "Create and distribute content at scale",
+        "functions": {
+          "f1": "Multi-channel content creation",
+          "f2": "Social media scheduling & engagement",
+          "f3": "Campaign analytics and optimization"
+        },
+        "expandedDescription": "Marketing AI agents produce blog posts, social media content, email campaigns, and ad copy — all aligned with your brand voice and optimized for engagement.",
+        "agents": {
+          "contentCreator": "Content Creator",
+          "socialManager": "Social Manager"
+        }
+      },
+      "support": {
+        "title": "Customer Support",
+        "tagline": "Instant, multilingual customer care",
+        "functions": {
+          "f1": "24/7 instant response to inquiries",
+          "f2": "Appointment scheduling & booking",
+          "f3": "Ticket routing and escalation"
+        },
+        "expandedDescription": "Support AI agents answer customer questions instantly, book appointments, handle complaints, and escalate complex issues — in any language, around the clock.",
+        "agents": {
+          "virtualReceptionist": "Virtual Receptionist",
+          "bookingAgent": "Booking Agent"
+        }
+      },
+      "operations": {
+        "title": "Operations",
+        "tagline": "Streamline internal workflows",
+        "functions": {
+          "f1": "Process automation and monitoring",
+          "f2": "Data entry and reporting",
+          "f3": "Cross-department coordination"
+        },
+        "expandedDescription": "Operations AI agents automate internal workflows, generate reports, monitor KPIs, and keep all departments synchronized — eliminating bottlenecks and manual overhead.",
+        "agents": {
+          "operationsAgent": "Operations Agent"
+        }
+      }
     }
   },
   "header": {
