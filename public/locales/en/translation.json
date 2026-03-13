@@ -131,6 +131,25 @@
         }
       }
     },
+    "howItWorks": {
+      "badge": "How It Works",
+      "title": "From Analysis to Deployment in 3 Steps",
+      "subtitle": "We follow a proven methodology to clone your business operations with AI — fast, reliable, and tailored to your workflow.",
+      "steps": {
+        "analysis": {
+          "title": "Analysis",
+          "description": "We map your entire company, identify automatable processes, and design the optimal AI agent architecture for each department."
+        },
+        "cloning": {
+          "title": "Cloning",
+          "description": "We create specialized AI agents for each role and department — trained on your data, your tone, and your business rules."
+        },
+        "deployment": {
+          "title": "Deployment",
+          "description": "We integrate with your existing tools, run validation tests, train your team, and launch your AI workforce into production."
+        }
+      }
+    },
     "solution": {
       "title": "AI Agents That Run Your Business 24/7",
       "subtitle": "Deploy intelligent AI agents that handle the work of entire departments — without hiring, training, or managing more people."

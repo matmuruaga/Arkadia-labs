@@ -131,6 +131,25 @@
         }
       }
     },
+    "howItWorks": {
+      "badge": "Cómo Funciona",
+      "title": "Del Análisis al Despliegue en 3 Pasos",
+      "subtitle": "Seguimos una metodología probada para clonar las operaciones de tu empresa con IA — rápido, confiable y adaptado a tu flujo de trabajo.",
+      "steps": {
+        "analysis": {
+          "title": "Análisis",
+          "description": "Mapeamos toda tu empresa, identificamos los procesos automatizables y diseñamos la arquitectura óptima de agentes IA para cada departamento."
+        },
+        "cloning": {
+          "title": "Clonación",
+          "description": "Creamos agentes de IA especializados para cada rol y departamento — entrenados con tus datos, tu tono y tus reglas de negocio."
+        },
+        "deployment": {
+          "title": "Despliegue",
+          "description": "Integramos con tus herramientas existentes, ejecutamos pruebas de validación, entrenamos a tu equipo y lanzamos tu fuerza laboral IA a producción."
+        }
+      }
+    },
     "solution": {
       "title": "Agentes de IA que Operan tu Negocio 24/7",
       "subtitle": "Despliega agentes de IA inteligentes que hacen el trabajo de departamentos enteros — sin contratar, formar ni gestionar más personas."

@@ -14,6 +14,7 @@ import CloneYourBusinessHero from '@/components/CloneYourBusinessHero';
 
 // Below-the-fold sections — lazy loaded
 const CloneYourBusinessProblem = lazy(() => import('@/components/CloneYourBusinessProblem'));
+const CloneYourBusinessHowItWorks = lazy(() => import('@/components/CloneYourBusinessHowItWorks'));
 
 const SolutionPlaceholder = () => {
   const { t } = useTranslation();
@@ -69,6 +70,10 @@ const CloneYourBusinessPage = () => {
       {/* Below-the-fold sections with Suspense boundaries */}
       <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
         <CloneYourBusinessProblem />
+      </Suspense>
+
+      <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
+        <CloneYourBusinessHowItWorks />
       </Suspense>
 
       <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>

@@ -131,6 +131,25 @@
         }
       }
     },
+    "howItWorks": {
+      "badge": "Jak to funguje",
+      "title": "Od analýzy k nasazení ve 3 krocích",
+      "subtitle": "Řídíme se ověřenou metodologií pro klonování vašich firemních operací pomocí AI — rychle, spolehlivě a na míru vašemu workflow.",
+      "steps": {
+        "analysis": {
+          "title": "Analýza",
+          "description": "Zmapujeme celou vaši firmu, identifikujeme automatizovatelné procesy a navrhneme optimální architekturu AI agentů pro každé oddělení."
+        },
+        "cloning": {
+          "title": "Klonování",
+          "description": "Vytvoříme specializované AI agenty pro každou roli a oddělení — vytrénované na vašich datech, vašem tónu a vašich obchodních pravidlech."
+        },
+        "deployment": {
+          "title": "Nasazení",
+          "description": "Integrujeme s vašimi stávajícími nástroji, provedeme validační testy, vyškolíme váš tým a spustíme vaši AI pracovní sílu do produkce."
+        }
+      }
+    },
     "solution": {
       "title": "AI agenti, kteří řídí vaši firmu 24/7",
       "subtitle": "Nasaďte inteligentní AI agenty, kteří zvládnou práci celých oddělení — bez najímání, školení či řízení dalších lidí."
