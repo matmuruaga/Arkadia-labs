@@ -19,22 +19,7 @@ const CloneYourBusinessHowItWorks = lazy(() => import('@/components/CloneYourBus
 const CloneYourBusinessDepartments = lazy(() => import('@/components/CloneYourBusinessDepartments'));
 const CloneYourBusinessBeforeAfter = lazy(() => import('@/components/CloneYourBusinessBeforeAfter'));
 const CloneYourBusinessIntegrations = lazy(() => import('@/components/CloneYourBusinessIntegrations'));
-
-const CtaPlaceholder = () => {
-  const { t } = useTranslation();
-  return (
-    <section className="py-20 px-4 text-center">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          {t('cloneYourBusiness.cta.title')}
-        </h2>
-        <p className="text-gray-600 mb-8">
-          {t('cloneYourBusiness.cta.subtitle')}
-        </p>
-      </div>
-    </section>
-  );
-};
+const CloneYourBusinessCta = lazy(() => import('@/components/CloneYourBusinessCta'));
 
 const CLONE_KEYWORDS = [
   'AI agents',
@@ -144,8 +129,8 @@ const CloneYourBusinessPage = () => {
         <CloneYourBusinessIntegrations />
       </Suspense>
 
-      <Suspense fallback={<div className="h-24 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
-        <CtaPlaceholder />
+      <Suspense fallback={<div className="h-48 flex items-center justify-center bg-[#070B14]"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
+        <CloneYourBusinessCta />
       </Suspense>
     </>
   );

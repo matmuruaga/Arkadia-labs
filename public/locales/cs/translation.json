@@ -155,8 +155,18 @@
       "subtitle": "Nasaďte inteligentní AI agenty, kteří zvládnou práci celých oddělení — bez najímání, školení či řízení dalších lidí."
     },
     "cta": {
-      "title": "Připraveni klonovat svou firmu?",
-      "subtitle": "Naplánujte si demo a zjistěte, jak AI agenti mohou automatizovat vaše operace již dnes."
+      "badge": "Řešení na míru",
+      "headline": "Každá firma je",
+      "headlineAccent": "jedinečná.",
+      "subtitle": "Navrhujeme AI agentní řešení přizpůsobená vašim specifickým procesům, struktuře týmu a obchodním cílům — žádné šablonové balíčky.",
+      "primaryCta": "Požádat o bezplatné demo",
+      "secondaryCta": "Promluvte s naším týmem",
+      "noPricingNote": "Žádné smlouvy. Žádné ceníky. Jen rozhovor o vašem podnikání.",
+      "trustPoints": {
+        "dedicated": "Dedikovaný onboarding",
+        "noLongContracts": "Bez dlouhodobých závazků",
+        "measurableRoi": "Garantovaná měřitelná návratnost"
+      }
     },
     "departments": {
       "badge": "Klonovatelná oddělení",

@@ -155,8 +155,18 @@
       "subtitle": "Despliega agentes de IA inteligentes que hacen el trabajo de departamentos enteros — sin contratar, formar ni gestionar más personas."
     },
     "cta": {
-      "title": "¿Listo para Clonar tu Empresa?",
-      "subtitle": "Agenda una demo y descubre cómo los agentes de IA pueden automatizar tus operaciones desde hoy."
+      "badge": "Soluciones a Medida",
+      "headline": "Cada Empresa es",
+      "headlineAccent": "Única.",
+      "subtitle": "Diseñamos soluciones de agentes IA personalizadas para tus flujos de trabajo, estructura de equipo y objetivos de negocio — sin paquetes predefinidos.",
+      "primaryCta": "Solicita tu Demo Gratuita",
+      "secondaryCta": "Habla con Nuestro Equipo",
+      "noPricingNote": "Sin contratos. Sin tablas de precios. Solo una conversación sobre tu negocio.",
+      "trustPoints": {
+        "dedicated": "Onboarding dedicado",
+        "noLongContracts": "Sin compromisos a largo plazo",
+        "measurableRoi": "ROI medible garantizado"
+      }
     },
     "departments": {
       "badge": "Departamentos Clonables",

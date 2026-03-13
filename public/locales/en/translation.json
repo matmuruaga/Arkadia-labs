@@ -155,8 +155,18 @@
       "subtitle": "Deploy intelligent AI agents that handle the work of entire departments — without hiring, training, or managing more people."
     },
     "cta": {
-      "title": "Ready to Clone Your Business?",
-      "subtitle": "Schedule a demo and discover how AI agents can automate your operations starting today."
+      "badge": "Custom Solutions",
+      "headline": "Every Business is",
+      "headlineAccent": "Unique.",
+      "subtitle": "We design tailored AI agent solutions for your specific workflows, team structure, and business goals — no off-the-shelf packages.",
+      "primaryCta": "Request Your Free Demo",
+      "secondaryCta": "Talk to Our Team",
+      "noPricingNote": "No contracts. No pricing tables. Just a conversation about your business.",
+      "trustPoints": {
+        "dedicated": "Dedicated onboarding",
+        "noLongContracts": "No long-term lock-in",
+        "measurableRoi": "Measurable ROI guarantee"
+      }
     },
     "departments": {
       "badge": "Clonable Departments",
