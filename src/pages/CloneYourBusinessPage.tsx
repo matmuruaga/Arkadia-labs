@@ -19,6 +19,8 @@ const CloneYourBusinessHowItWorks = lazy(() => import('@/components/CloneYourBus
 const CloneYourBusinessDepartments = lazy(() => import('@/components/CloneYourBusinessDepartments'));
 const CloneYourBusinessBeforeAfter = lazy(() => import('@/components/CloneYourBusinessBeforeAfter'));
 const CloneYourBusinessIntegrations = lazy(() => import('@/components/CloneYourBusinessIntegrations'));
+const CloneYourBusinessCaseStudyHighlight = lazy(() => import('@/components/CloneYourBusinessCaseStudyHighlight'));
+const CloneYourBusinessRoiSection = lazy(() => import('@/components/CloneYourBusinessRoiSection'));
 const CloneYourBusinessCta = lazy(() => import('@/components/CloneYourBusinessCta'));
 const CloneYourBusinessFaq = lazy(() => import('@/components/CloneYourBusinessFaq'));
 const CloneYourBusinessFinalCta = lazy(() => import('@/components/CloneYourBusinessFinalCta'));
@@ -129,6 +131,14 @@ const CloneYourBusinessPage = () => {
 
       <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
         <CloneYourBusinessIntegrations />
+      </Suspense>
+
+      <Suspense fallback={<div className="h-32 flex items-center justify-center bg-white"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
+        <CloneYourBusinessCaseStudyHighlight />
+      </Suspense>
+
+      <Suspense fallback={<div className="h-48 flex items-center justify-center bg-[#070B14]"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
+        <CloneYourBusinessRoiSection />
       </Suspense>
 
       <Suspense fallback={<div className="h-48 flex items-center justify-center bg-[#070B14]"><div className="animate-pulse text-gray-400">Loading...</div></div>}>

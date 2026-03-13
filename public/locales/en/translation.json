@@ -325,6 +325,35 @@
         "t3": "Live demo of your use case"
       },
       "orLabel": "or"
+    },
+    "caseStudyHighlight": {
+      "badge": "Real Client Results",
+      "title": "See It",
+      "titleAccent": "In Action",
+      "subtitle": "Companies are already saving time and cutting costs with AI-powered business automation. Here's one example.",
+      "cta": "Read Full Case Study",
+      "viewAll": "View all case studies"
+    },
+    "roiSection": {
+      "badge": "ROI Calculator",
+      "title": "Discover How Much",
+      "titleAccent": "You Can Save",
+      "subtitle": "Enter your team details and see your estimated monthly savings from AI automation.",
+      "inputsHeading": "Your Business Details",
+      "resultsHeading": "Your Estimated Savings",
+      "inputs": {
+        "employees": "Number of Employees",
+        "monthlyCost": "Avg. Monthly Cost per Employee",
+        "repetitiveTasks": "% of Time on Repetitive Tasks"
+      },
+      "results": {
+        "monthlySavings": "MONTHLY SAVINGS",
+        "hoursSaved": "HOURS SAVED / MONTH",
+        "annualSavings": "ANNUAL SAVINGS"
+      },
+      "cta": "Discover How Much You Can Save",
+      "ctaSubtext": "Want a precise calculation for your business? Schedule a free 30-minute audit.",
+      "disclaimer": "* Estimates assume 62% automation efficiency on identified repetitive tasks. Individual results vary based on process complexity."
     }
   },
   "header": {

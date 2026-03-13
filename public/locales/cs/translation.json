@@ -325,6 +325,35 @@
         "t3": "Live demo vašeho případu použití"
       },
       "orLabel": "nebo"
+    },
+    "caseStudyHighlight": {
+      "badge": "Skutečné výsledky klientů",
+      "title": "Podívejte se",
+      "titleAccent": "V praxi",
+      "subtitle": "Firmy již šetří čas a snižují náklady díky AI automatizaci podnikových procesů. Zde je jeden příklad.",
+      "cta": "Číst celou případovou studii",
+      "viewAll": "Zobrazit všechny případové studie"
+    },
+    "roiSection": {
+      "badge": "Kalkulačka ROI",
+      "title": "Zjistěte, kolik",
+      "titleAccent": "Můžete ušetřit",
+      "subtitle": "Zadejte údaje o svém týmu a uvidíte odhadované měsíční úspory díky AI automatizaci.",
+      "inputsHeading": "Údaje o vašem podnikání",
+      "resultsHeading": "Vaše odhadované úspory",
+      "inputs": {
+        "employees": "Počet zaměstnanců",
+        "monthlyCost": "Průměrné měsíční náklady na zaměstnance",
+        "repetitiveTasks": "% času na opakující se úkoly"
+      },
+      "results": {
+        "monthlySavings": "MĚSÍČNÍ ÚSPORY",
+        "hoursSaved": "UŠETŘENÉ HODINY / MĚSÍC",
+        "annualSavings": "ROČNÍ ÚSPORY"
+      },
+      "cta": "Zjistěte, kolik můžete ušetřit",
+      "ctaSubtext": "Chcete přesný výpočet pro vaše podnikání? Naplánujte si bezplatný 30minutový audit.",
+      "disclaimer": "* Odhady předpokládají 62% efektivitu automatizace identifikovaných opakujících se úkolů. Individuální výsledky se liší v závislosti na složitosti procesů."
     }
   },
   "header": {

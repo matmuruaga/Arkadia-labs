@@ -325,6 +325,35 @@
         "t3": "Demo en vivo de tu caso de uso"
       },
       "orLabel": "o"
+    },
+    "caseStudyHighlight": {
+      "badge": "Resultados Reales",
+      "title": "Vélo",
+      "titleAccent": "En Acción",
+      "subtitle": "Empresas ya están ahorrando tiempo y reduciendo costos con automatización de IA. Aquí un ejemplo.",
+      "cta": "Leer Caso Completo",
+      "viewAll": "Ver todos los casos de éxito"
+    },
+    "roiSection": {
+      "badge": "Calculadora de ROI",
+      "title": "Descubre Cuánto",
+      "titleAccent": "Puedes Ahorrar",
+      "subtitle": "Ingresa los datos de tu equipo y ve el ahorro mensual estimado con automatización de IA.",
+      "inputsHeading": "Datos de tu Negocio",
+      "resultsHeading": "Tu Ahorro Estimado",
+      "inputs": {
+        "employees": "Número de Empleados",
+        "monthlyCost": "Costo Mensual Promedio por Empleado",
+        "repetitiveTasks": "% del Tiempo en Tareas Repetitivas"
+      },
+      "results": {
+        "monthlySavings": "AHORRO MENSUAL",
+        "hoursSaved": "HORAS AHORRADAS / MES",
+        "annualSavings": "AHORRO ANUAL"
+      },
+      "cta": "Descubre Cuánto Puedes Ahorrar",
+      "ctaSubtext": "¿Quieres un cálculo preciso para tu negocio? Agenda una auditoría gratuita de 30 minutos.",
+      "disclaimer": "* Estimaciones asumen 62% de eficiencia de automatización en tareas repetitivas identificadas. Los resultados individuales varían según la complejidad del proceso."
     }
   },
   "header": {
