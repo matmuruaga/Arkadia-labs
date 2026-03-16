@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import SEO from '@/components/SEO';
 
 const PrivacyPolicyPage = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('legal');
 
   const tableClass = "w-full border-collapse my-4 text-sm";
   const thClass = "text-left p-3 border border-gray-200 bg-gray-50 font-semibold";

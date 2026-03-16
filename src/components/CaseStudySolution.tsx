@@ -13,7 +13,7 @@ interface Props {
 }
 
 const CaseStudySolution: React.FC<Props> = ({ data, studyKey }) => {
-  const { t } = useTranslation(); // <-- 3. Inicializar
+  const { t } = useTranslation('case-studies'); // <-- 3. Inicializar
   const backgroundImageUrl = 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1751365219/liquid_gradient_component_IA_1_shkjpf.jpg';
 
   return (

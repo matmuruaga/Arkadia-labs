@@ -44,7 +44,7 @@ interface Props {
 }
 
 const CaseStudyImpact: React.FC<Props> = ({ data, studyKey }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('case-studies');
 
   if (!data) return null;
 

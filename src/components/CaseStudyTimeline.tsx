@@ -10,7 +10,7 @@ interface Props {
 }
 
 const CaseStudyTimeline: React.FC<Props> = ({ data, studyKey }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('case-studies');
 
   return (
     <section className="bg-gray-50 py-12 md:py-20 overflow-x-hidden"> {/* Añadido overflow-x-hidden por seguridad */}

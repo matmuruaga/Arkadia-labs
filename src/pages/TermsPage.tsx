@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import SEO from '@/components/SEO';
 
 const TermsPage = () => {
-  const { t } = useTranslation(); // 2. Inicializar
+  const { t } = useTranslation('legal'); // 2. Inicializar
 
   // 3. Definir el contenido DENTRO del componente
   const termsContent = [

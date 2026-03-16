@@ -30,7 +30,7 @@ interface Props {
 }
 
 const CaseStudyCard: React.FC<Props> = ({ study, slug }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('case-studies');
   const location = useLocation();
   const currentLang = location.pathname.split('/')[1] || 'es';
   const kpiPills = study.impact.kpis.slice(0, 2);

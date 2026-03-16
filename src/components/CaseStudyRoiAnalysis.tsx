@@ -44,7 +44,7 @@ interface Props {
 }
 
 const CaseStudyRoiAnalysis: React.FC<Props> = ({ data, studyKey }) => {
-  const { t } = useTranslation(); // <-- 3. Inicializar
+  const { t } = useTranslation('case-studies'); // <-- 3. Inicializar
   if (!data) return null;
 
   return (

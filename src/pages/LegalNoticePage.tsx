@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import SEO from '@/components/SEO';
 
 const LegalNoticePage = () => {
-  const { t } = useTranslation(); // 2. Inicializar
+  const { t } = useTranslation('legal'); // 2. Inicializar
 
   const legalPageStyles = "prose max-w-none text-[#0D1B2A]/80";
   const heading1Styles = "text-3xl md:text-4xl font-bold text-[#0D1B2A] mb-6";
