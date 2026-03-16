@@ -4290,5 +4290,148 @@
         "description": "Tailored AI agents designed specifically for your business requirements."
       }
     ]
+  },
+  "blog": {
+    "index": {
+      "eyebrow": "Arkadia Labs Blog",
+      "title": "no fluff. just numbers.",
+      "subtitle": "practical thinking on AI automation, GTM strategy, and sales efficiency for B2B teams that want results, not case studies about results.",
+      "allCategories": "all",
+      "readTime": "{{count}} min read",
+      "readMore": "read it"
+    },
+    "categories": {
+      "roiStrategy": "ROI & Strategy",
+      "gtmStrategy": "GTM Strategy",
+      "salesEfficiency": "Sales Efficiency"
+    },
+    "cta": {
+      "title": "see what this looks like for your team",
+      "subtitle": "30-minute call. no pitch deck. just an honest look at where AI automation fits your motion.",
+      "button": "book a demo"
+    },
+    "post": {
+      "backToBlog": "back to blog",
+      "ctaTitle": "want the numbers for your pipeline?",
+      "ctaSubtitle": "we'll show you exactly where the leverage is. no generic ROI calculator.",
+      "ctaButton": "talk to us"
+    },
+    "notFound": {
+      "title": "post not found",
+      "back": "back to blog"
+    },
+    "posts": {
+      "aiAutomationRoi": {
+        "title": "what AI automation ROI actually looks like (and why most companies measure it wrong)",
+        "excerpt": "most companies trying AI automation are measuring the wrong thing. they track hours saved. they should be tracking pipeline created.",
+        "body": [
+          "## the measurement problem",
+          "a CFO asks for the ROI on AI automation. the ops team pulls a report showing 400 hours saved per month. the CFO nods, approves the budget, and everyone moves on.",
+          "six months later, revenue hasn't moved. the hours saved never translated to anything. the CFO pulls the plug.",
+          "this happens constantly. not because AI automation doesn't work — it does — but because companies measure the wrong output.",
+          "**the right question isn't 'how many hours did we save?' it's 'what did those hours buy us?'**",
+          "## what the numbers actually look like",
+          "here's what we see across our client base:",
+          "Goodnite, a hospitality tech company, automated their entire inbound qualification layer. they didn't just save hours — they increased qualified pipeline by 6x. their team works the same headcount. they close more.",
+          "ELSA, an e-commerce brand, replaced manual lead nurturing with AI agents. their ROI was 600% in the first year. that's not hours saved. that's revenue created.",
+          "Domus Labs saw 160% ROI from automating their SDR follow-up sequence. the same reps, better conversion.",
+          "the pattern: in every case, the ROI metric that matters is revenue impact, not labor savings.",
+          "## how to frame it correctly",
+          "three numbers that actually matter:",
+          "1. pipeline created per SDR per month (before and after)",
+          "2. time-to-first-response on inbound leads (before and after)",
+          "3. conversion rate from MQL to meeting (before and after)",
+          "our average client sees a 67% reply rate on AI-assisted outbound. industry average is around 8%. that's an 8x improvement on one metric. if one meeting is worth $5k in pipeline, you do the math.",
+          "## why companies get this wrong",
+          "the labor-cost framing comes from old-school automation playbooks. replace a $15/hr task with a $2/hr tool. fine for manufacturing. useless for B2B sales.",
+          "in B2B sales, the bottleneck isn't cost — it's attention. your reps can only focus on so many prospects at once. AI expands that capacity without diluting quality. that's not a cost story. that's a leverage story.",
+          "**30% of the leads contacted by our AI agents convert to meetings. the national average for SDR cold outreach is 2-5%.**",
+          "## what to do with this",
+          "before you deploy any AI automation, define your north-star metric. for most B2B companies, it's one of:",
+          "— meetings booked per week",
+          "— qualified pipeline created per month",
+          "— time from lead to first conversation",
+          "if you can't measure it before, you can't prove it after. set the baseline now.",
+          "if you want to see what those numbers look like for your specific motion — team size, deal cycle, ICP — we'll walk through it with you. no pitch deck. just data."
+        ]
+      },
+      "aiGtmStrategy": {
+        "title": "your GTM strategy has a data problem. here's how AI fixes it.",
+        "excerpt": "your CRM is three months behind reality. your GTM strategy is built on it. that's the problem.",
+        "body": [
+          "## the data lag problem",
+          "every GTM leader I talk to has the same issue. they have a strategy. it's written down, it's been presented to the board, it makes sense on paper.",
+          "but execution breaks down because the data driving it is stale.",
+          "your CRM reflects deals from last quarter. your ICP assumptions come from win/loss reviews done six months ago. your messaging was written based on interviews from a year back.",
+          "you're making real-time decisions with historical data.",
+          "**by the time your GTM data is clean enough to act on, the market has already moved.**",
+          "## what this looks like in practice",
+          "a B2B SaaS company with 200 employees. solid product, clear ICP, experienced GTM team. but their outbound conversion rate is 2%. they're burning through lists.",
+          "the diagnosis: they're targeting companies based on firmographic data that's 6 months old. companies that fit the ICP on paper but have shifted priorities. the messaging hits the right title with the wrong timing.",
+          "when we layered in AI-driven intent signals and automated the follow-up timing to match engagement windows, reply rate went from 2% to 67%.",
+          "same list. same messaging framework. better timing and signal.",
+          "## what AI actually does in your GTM motion",
+          "AI doesn't replace your GTM strategy. it removes the lag between strategy and execution.",
+          "specifically:",
+          "— it monitors your target accounts continuously, not quarterly",
+          "— it triggers outreach based on behavioral signals, not arbitrary cadence schedules",
+          "— it handles follow-up without your reps having to remember",
+          "— it surfaces which accounts are in-market before your competitors' reps notice",
+          "the result isn't a different strategy. it's the same strategy executing without friction.",
+          "## the compounding effect",
+          "here's the thing about GTM data lag that most people underestimate: it compounds.",
+          "a 3-month data delay means your best performers are working on opportunities that have already cooled. your worst performers are getting the warm ones by accident. you can't see the pattern because you're always looking backward.",
+          "**when your GTM motion runs on real-time signals, your best reps stop wasting time and your pipeline gets predictable.**",
+          "## where to start",
+          "you don't need to overhaul your entire GTM to fix this. start with one motion.",
+          "pick your highest-intent inbound channel — demo requests, trial signups, whatever has your best conversion rate. run an AI layer on top of it for 30 days. measure the change in speed-to-first-response and conversion rate.",
+          "that one motion, done right, will show you exactly what the rest of your GTM can look like.",
+          "we've done this with companies from 50 to 500 employees across lead gen agencies, SaaS, e-commerce, and healthcare tech. the pattern holds."
+        ]
+      },
+      "salesEfficiencyAi": {
+        "title": "your reps aren't slow. your process is.",
+        "excerpt": "the average B2B sales rep spends 65% of their time on non-selling activities. hiring more reps doesn't fix that.",
+        "body": [
+          "## the real bottleneck",
+          "ask a VP of Sales why they're missing quota. nine times out of ten, the answer is headcount. need more SDRs. need more AEs. need more capacity.",
+          "but headcount is expensive and slow. it takes 6 months to hire and ramp a rep. and if your process is broken, a new rep just does the broken process faster.",
+          "the real number: B2B sales reps spend an average of 65% of their time on non-selling activities. research. data entry. scheduling. writing follow-up emails. updating CRM.",
+          "**if your reps are selling 35% of their time, you don't have a headcount problem. you have a process problem.**",
+          "## what that 65% looks like",
+          "a typical SDR day:",
+          "— 45 minutes researching a list of 20 companies before outreach",
+          "— 30 minutes writing personalized first-touch emails",
+          "— 20 minutes logging calls and updating CRM fields",
+          "— 15 minutes scheduling a meeting that takes 3 back-and-forth emails",
+          "— 20 minutes writing a follow-up after a call",
+          "that's 2.5 hours of admin for maybe 1.5 hours of actual selling. every day.",
+          "multiply that across a team of 10 SDRs and you're paying for 25 hours of selling and absorbing 37.5 hours of admin. every single day.",
+          "## what AI changes",
+          "AI doesn't replace your reps. it handles the 65% so your reps can focus on the 35%.",
+          "concretely:",
+          "— AI research agents pull company context, recent news, hiring signals before each outreach",
+          "— AI writing assistants generate first drafts of outreach, your reps edit and send",
+          "— AI follow-up agents trigger sequences based on engagement, not calendar reminders",
+          "— AI scheduling handles the back-and-forth, reps show up to the meeting",
+          "**our clients average 30% conversion from AI-qualified leads to booked meetings. their reps don't do discovery calls with unqualified prospects.**",
+          "## the math on this",
+          "10 SDRs. currently generating 40 meetings per month. quota is 80.",
+          "scenario A: hire 10 more SDRs. 6 months to ramp. cost: $600k/year in salary plus ramp time.",
+          "scenario B: deploy AI automation to handle the 65%. effective selling time doubles. 40 meetings becomes 70-80 meetings. cost: fraction of one SDR salary.",
+          "the math isn't close. but most companies default to scenario A because it's familiar.",
+          "## the hiring trap",
+          "there's a reason sales leaders default to headcount: it's the one lever they know works. more people equals more activity equals more pipeline.",
+          "in theory.",
+          "in practice, you're scaling a broken process. every new rep inherits the same 65% admin burden. your cost-per-meeting goes up. your best reps get frustrated doing admin and leave. you hire replacements.",
+          "**fix the denominator before you increase the numerator.**",
+          "## how to audit your own process",
+          "spend one week tracking how your reps actually spend their time. not how they should — how they do. you'll find the 65%.",
+          "then ask: which of these tasks require human judgment? which are pure execution?",
+          "everything in the pure execution bucket is a candidate for automation. start there.",
+          "if you want a faster version of this audit — we've done it across dozens of sales teams and know exactly where to look."
+        ]
+      }
+    }
   }
 }

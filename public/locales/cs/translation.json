@@ -4345,5 +4345,148 @@
         "cta": "Začít dnes"
       }
     }
+  },
+  "blog": {
+    "index": {
+      "eyebrow": "Blog Arkadia Labs",
+      "title": "žádné plevelení. jen čísla.",
+      "subtitle": "praktické myšlení o AI automatizaci, GTM strategii a efektivitě prodeje pro B2B týmy, které chtějí výsledky, ne případové studie o výsledcích.",
+      "allCategories": "vše",
+      "readTime": "{{count}} min čtení",
+      "readMore": "přečíst"
+    },
+    "categories": {
+      "roiStrategy": "ROI a Strategie",
+      "gtmStrategy": "GTM Strategie",
+      "salesEfficiency": "Efektivita Prodeje"
+    },
+    "cta": {
+      "title": "podívejte se, jak to funguje pro váš tým",
+      "subtitle": "30minutový hovor. žádné prezentace. jen upřímný pohled na to, kde AI automatizace zapadá do vašeho procesu.",
+      "button": "rezervovat demo"
+    },
+    "post": {
+      "backToBlog": "zpět na blog",
+      "ctaTitle": "chcete čísla pro váš pipeline?",
+      "ctaSubtitle": "ukážeme vám přesně, kde je páka. žádné generické ROI kalkulačky.",
+      "ctaButton": "promluvme si"
+    },
+    "notFound": {
+      "title": "článek nenalezen",
+      "back": "zpět na blog"
+    },
+    "posts": {
+      "aiAutomationRoi": {
+        "title": "jak skutečně vypadá ROI AI automatizace (a proč ho většina firem měří špatně)",
+        "excerpt": "většina firem zkoušejících AI automatizaci měří špatnou věc. sledují ušetřené hodiny. měly by sledovat vytvořený pipeline.",
+        "body": [
+          "## problém měření",
+          "CFO žádá ROI z AI automatizace. operační tým předloží zprávu ukazující 400 ušetřených hodin měsíčně. CFO přikývne, schválí rozpočet a všichni jdou dál.",
+          "o šest měsíců později se příjmy nepohnuly. ušetřené hodiny se nikdy nepřevedly v nic. CFO vypne kohout.",
+          "to se děje neustále. ne proto, že AI automatizace nefunguje — funguje — ale proto, že firmy měří špatný výstup.",
+          "**správná otázka není 'kolik hodin jsme ušetřili?' ale 'co nám ty hodiny přinesly?'**",
+          "## jak čísla skutečně vypadají",
+          "toto vidíme v naší klientské základně:",
+          "Goodnite, firma v oblasti hospitality tech, automatizovala celou vrstvu kvalifikace příchozích kontaktů. neušetřili jen hodiny — zvýšili kvalifikovaný pipeline 6x. tým pracuje se stejným počtem lidí. uzavírá více.",
+          "ELSA, e-commerce značka, nahradila ruční nurturing leadů AI agenty. jejich ROI bylo 600 % v prvním roce. nejsou to ušetřené hodiny. jsou to vytvořené příjmy.",
+          "Domus Labs dosáhli 160% ROI automatizací follow-up sekvence svých SDRů. stejní obchodníci, lepší konverze.",
+          "vzorec: ve všech případech je metrika, na které záleží, dopad na příjmy, ne úspory mzdových nákladů.",
+          "## jak to správně uchopit",
+          "tři čísla, která skutečně záleží:",
+          "1. pipeline vytvořený na SDR za měsíc (před a po)",
+          "2. čas první odpovědi na příchozí leady (před a po)",
+          "3. míra konverze z MQL na schůzku (před a po)",
+          "průměrný klient vidí 67% míru odpovědí na outbound asistovaný AI. průměr odvětví je kolem 8 %. to je 8x zlepšení na jedné metrice. pokud má jedna schůzka hodnotu 5 000 $ v pipeline, udělejte si výpočet.",
+          "## proč se firmy mýlí",
+          "rámcování nákladů práce pochází ze starých příruček automatizace. nahradit úkol za 15 $/hod nástrojem za 2 $/hod. dobré pro výrobu. zbytečné pro B2B prodej.",
+          "v B2B prodeji není problémem náklad — je to pozornost. vaši obchodníci se mohou soustředit jen na určitý počet prospektů najednou. AI rozšiřuje tuto kapacitu bez snížení kvality. to není příběh o nákladech. je to příběh o páce.",
+          "**30 % leadů kontaktovaných našimi AI agenty konvertuje na schůzky. národní průměr pro studený outreach SDR je 2–5 %.**",
+          "## co s tím dělat",
+          "před nasazením jakékoli AI automatizace definujte svou klíčovou metriku. pro většinu B2B firem je to jedna z:",
+          "— rezervované schůzky za týden",
+          "— kvalifikovaný pipeline vytvořený za měsíc",
+          "— čas od leadu k první konverzaci",
+          "pokud to nemůžete měřit předtím, nemůžete to prokázat potom. nastavte základní hodnotu teď.",
+          "pokud chcete vidět, jak tato čísla vypadají pro váš konkrétní proces — velikost týmu, prodejní cyklus, ICP — projdeme to s vámi. žádné prezentace. jen data."
+        ]
+      },
+      "aiGtmStrategy": {
+        "title": "vaše GTM strategie má problém s daty. takto ho AI řeší.",
+        "excerpt": "váš CRM je tři měsíce za realitou. vaše GTM strategie je na něm postavena. to je problém.",
+        "body": [
+          "## problém zpoždění dat",
+          "každý GTM lídr, se kterým mluvím, má stejný problém. mají strategii. je zapsána, byla prezentována boardu, dává na papíře smysl.",
+          "ale exekuce se rozpadá, protože data, která ji pohánějí, jsou zastaralá.",
+          "váš CRM odráží dealy z minulého čtvrtletí. vaše předpoklady o ICP pocházejí z win/loss analýz provedených před šesti měsíci. vaše messaging bylo napsáno na základě rozhovorů před rokem.",
+          "v reálném čase se rozhodujete na základě historických dat.",
+          "**v době, kdy jsou vaše GTM data dostatečně čistá, aby se podle nich jednalo, trh se už pohnul.**",
+          "## jak to vypadá v praxi",
+          "B2B SaaS firma s 200 zaměstnanci. solidní produkt, jasný ICP, zkušený GTM tým. ale jejich míra konverze na outbound je 2 %. spalují seznamy.",
+          "diagnóza: cílí na firmy na základě firmografických dat starých 6 měsíců. firmy, které na papíře odpovídají ICP, ale změnily priority. messaging zasáhne správný titul ve špatný čas.",
+          "když jsme přidali AI-řízené signály záměru a automatizovali načasování follow-upu tak, aby odpovídalo oknům angažovanosti, míra odpovědí vzrostla z 2 % na 67 %.",
+          "stejný seznam. stejný framework messagingu. lepší načasování a signál.",
+          "## co AI skutečně dělá ve vašem GTM procesu",
+          "AI nenahrazuje vaši GTM strategii. odstraňuje prodlevu mezi strategií a exekucí.",
+          "konkrétně:",
+          "— průběžně sleduje vaše cílové účty, ne čtvrtletně",
+          "— spouští outreach na základě behaviorálních signálů, ne libovolných plánů sekvencí",
+          "— zpracovává follow-up, aniž by si vaši obchodníci museli pamatovat",
+          "— identifikuje, které účty jsou na trhu, dříve než to zpozorují obchodníci vašich konkurentů",
+          "výsledkem není jiná strategie. je to stejná strategie fungující bez tření.",
+          "## složený efekt",
+          "toto je to, co většina lidí o zpoždění GTM dat podceňuje: složí se.",
+          "tříměsíční zpoždění dat znamená, že vaši nejlepší výkonní pracují na příležitostech, které se již ochladily. vaši nejhorší výkonní dostávají ty teplé náhodou. vzorec nevidíte, protože se vždy díváte dozadu.",
+          "**když váš GTM proces funguje na signálech v reálném čase, vaši nejlepší obchodníci přestanou ztrácet čas a váš pipeline se stane předvídatelným.**",
+          "## kde začít",
+          "nemusíte přebudovat celý GTM, abyste to napravili. začněte jedním procesem.",
+          "vyberte svůj vstupní kanál s nejvyšším záměrem — demo požadavky, zkušební registrace, cokoli s vaší nejlepší mírou konverze. na 30 dní nad tím nasaďte vrstvu AI. měřte změnu v rychlosti první odpovědi a míře konverze.",
+          "tento jeden proces, provedený správně, vám přesně ukáže, jak může vypadat zbytek vašeho GTM.",
+          "dělali jsme to s firmami od 50 do 500 zaměstnanců v agenturách pro generování leadů, SaaS, e-commerce a zdravotnických technologiích. vzorec platí."
+        ]
+      },
+      "salesEfficiencyAi": {
+        "title": "vaši obchodníci nejsou pomalí. váš proces je.",
+        "excerpt": "průměrný B2B obchodní zástupce tráví 65 % svého času na aktivitách, které nejsou prodej. přijímání více obchodníků to nevyřeší.",
+        "body": [
+          "## skutečný problémový bod",
+          "zeptejte se VP prodeje, proč nesplňují kvótu. devětkrát z deseti je odpověď počet lidí. potřebujeme více SDRů. více AE. více kapacity.",
+          "ale headcount je drahý a pomalý. trvá 6 měsíců přijmout a zaškolit obchodníka. a pokud je váš proces nefunkční, nový obchodník jen provede nefunkční proces rychleji.",
+          "skutečné číslo: B2B obchodní zástupci tráví v průměru 65 % svého času na aktivitách, které nejsou prodej. výzkum. zadávání dat. plánování. psaní follow-up e-mailů. aktualizace CRM.",
+          "**pokud vaši obchodníci prodávají 35 % svého času, nemáte problém s počtem lidí. máte problém s procesem.**",
+          "## jak vypadá těch 65 %",
+          "typický den SDR:",
+          "— 45 minut výzkumu seznamu 20 firem před outreachem",
+          "— 30 minut psaní personalizovaných e-mailů prvního kontaktu",
+          "— 20 minut zapisování hovorů a aktualizace polí CRM",
+          "— 15 minut plánování schůzky, která trvá 3 výměny e-mailů",
+          "— 20 minut psaní follow-upu po hovoru",
+          "to jsou 2,5 hodiny administrativy za možná 1,5 hodiny skutečného prodeje. každý den.",
+          "vynásobte to týmem 10 SDRů a platíte za 25 hodin prodeje a absorbujete 37,5 hodin administrativy. každý den.",
+          "## co AI mění",
+          "AI nenahrazuje vaše obchodníky. stará se o 65 %, aby se vaši obchodníci mohli soustředit na 35 %.",
+          "konkrétně:",
+          "— AI výzkumní agenti získávají kontext firmy, nedávné zprávy, signály náboru před každým outreachem",
+          "— AI asistenti psaní generují první návrhy outreachu, vaši obchodníci upravují a odesílají",
+          "— AI follow-up agenti spouštějí sekvence na základě angažovanosti, ne připomínek v kalendáři",
+          "— AI plánování zpracovává výměny, obchodníci se dostaví na schůzku",
+          "**naši klienti průměrují 30% konverzi z leadů kvalifikovaných AI na rezervované schůzky. jejich obchodníci nevedou discovery hovory s nekvalifikovanými prospekty.**",
+          "## matematika",
+          "10 SDRů. aktuálně generují 40 schůzek měsíčně. kvóta je 80.",
+          "scénář A: přijmout 10 dalších SDRů. 6 měsíců na zaškolení. náklady: 600 000 $/rok na platy plus čas zaškolení.",
+          "scénář B: nasadit AI automatizaci pro zpracování 65 %. efektivní čas prodeje se zdvojnásobí. 40 schůzek se stane 70–80. náklady: zlomek platu jednoho SDR.",
+          "matematika není srovnatelná. ale většina firem volí scénář A, protože je známý.",
+          "## past náboru",
+          "existuje důvod, proč lídři prodeje sahají po headcountech: je to jediná páka, o které vědí, že funguje. více lidí rovná se více aktivity rovná se více pipeline.",
+          "teoreticky.",
+          "v praxi škálujete nefunkční proces. každý nový obchodník zdědí stejnou administrativní zátěž 65 %. vaše náklady na schůzku rostou. vaši nejlepší obchodníci se frustrují z administrativy a odcházejí. najímáte náhrady.",
+          "**opravte jmenovatele, než zvýšíte čitatele.**",
+          "## jak auditovat vlastní proces",
+          "strávte jeden týden sledováním, jak vaši obchodníci skutečně tráví svůj čas. ne jak by měli — jak to dělají. 65 % najdete.",
+          "pak se zeptejte: které z těchto úkolů vyžadují lidský úsudek? které jsou čistá exekuce?",
+          "vše v kategorii čisté exekuce je kandidátem na automatizaci. začněte tam.",
+          "pokud chcete rychlejší verzi tohoto auditu — dělali jsme ho v desítkách prodejních týmů a přesně víme, kde hledat."
+        ]
+      }
+    }
   }
 }

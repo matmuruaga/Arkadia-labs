@@ -4343,5 +4343,148 @@
         "description": "Agentes de IA personalizados y diseñados específicamente para los requisitos de tu negocio."
       }
     ]
+  },
+  "blog": {
+    "index": {
+      "eyebrow": "Blog de Arkadia Labs",
+      "title": "sin relleno. solo números.",
+      "subtitle": "reflexiones prácticas sobre automatización con IA, estrategia GTM y eficiencia en ventas para equipos B2B que quieren resultados, no casos de estudio sobre resultados.",
+      "allCategories": "todos",
+      "readTime": "{{count}} min de lectura",
+      "readMore": "leerlo"
+    },
+    "categories": {
+      "roiStrategy": "ROI y Estrategia",
+      "gtmStrategy": "Estrategia GTM",
+      "salesEfficiency": "Eficiencia en Ventas"
+    },
+    "cta": {
+      "title": "mira cómo funciona para tu equipo",
+      "subtitle": "llamada de 30 minutos. sin presentaciones. solo una mirada honesta a dónde encaja la automatización con IA en tu proceso.",
+      "button": "reserva una demo"
+    },
+    "post": {
+      "backToBlog": "volver al blog",
+      "ctaTitle": "¿quieres los números para tu pipeline?",
+      "ctaSubtitle": "te mostramos exactamente dónde está el apalancamiento. sin calculadoras genéricas de ROI.",
+      "ctaButton": "háblanos"
+    },
+    "notFound": {
+      "title": "artículo no encontrado",
+      "back": "volver al blog"
+    },
+    "posts": {
+      "aiAutomationRoi": {
+        "title": "cómo se ve realmente el ROI de la automatización con IA (y por qué la mayoría lo mide mal)",
+        "excerpt": "la mayoría de las empresas que prueban la automatización con IA están midiendo lo que no toca. rastrean horas ahorradas. deberían rastrear pipeline generado.",
+        "body": [
+          "## el problema de medición",
+          "un CFO pide el ROI de la automatización con IA. el equipo de operaciones presenta un informe que muestra 400 horas ahorradas al mes. el CFO asiente, aprueba el presupuesto y todos siguen adelante.",
+          "seis meses después, los ingresos no se han movido. las horas ahorradas nunca se convirtieron en nada. el CFO cierra el grifo.",
+          "esto ocurre constantemente. no porque la automatización con IA no funcione — funciona — sino porque las empresas miden el output equivocado.",
+          "**la pregunta correcta no es '¿cuántas horas ahorramos?' sino '¿en qué se convirtieron esas horas?'**",
+          "## cómo se ven los números realmente",
+          "esto es lo que vemos en nuestra base de clientes:",
+          "Goodnite, una empresa de tecnología hotelera, automatizó toda su capa de cualificación de inbound. no solo ahorraron horas — multiplicaron por 6 su pipeline cualificado. el equipo trabaja con el mismo headcount. cierra más.",
+          "ELSA, una marca de e-commerce, reemplazó el nurturing manual de leads con agentes de IA. su ROI fue del 600% en el primer año. no son horas ahorradas. es ingresos creados.",
+          "Domus Labs obtuvo un ROI del 160% automatizando la secuencia de seguimiento de sus SDRs. los mismos representantes, mejor conversión.",
+          "el patrón: en todos los casos, la métrica que importa es el impacto en ingresos, no el ahorro de costes laborales.",
+          "## cómo enmarcar esto correctamente",
+          "tres números que realmente importan:",
+          "1. pipeline creado por SDR por mes (antes y después)",
+          "2. tiempo de primera respuesta a leads inbound (antes y después)",
+          "3. tasa de conversión de MQL a reunión (antes y después)",
+          "nuestro cliente promedio ve una tasa de respuesta del 67% en outbound asistido por IA. la media del sector es aproximadamente el 8%. eso es una mejora de 8x en una sola métrica. si una reunión vale $5k en pipeline, haz los cálculos.",
+          "## por qué las empresas se equivocan",
+          "el enfoque de costes laborales viene de los libros de jugadas de automatización de la vieja escuela. reemplazar una tarea de $15/hora con una herramienta de $2/hora. bien para fabricación. inútil para ventas B2B.",
+          "en ventas B2B, el cuello de botella no es el coste — es la atención. tus representantes solo pueden enfocarse en tantos prospectos a la vez. la IA amplía esa capacidad sin diluir la calidad. eso no es una historia de costes. es una historia de apalancamiento.",
+          "**el 30% de los leads contactados por nuestros agentes de IA convierten a reuniones. la media nacional en cold outreach de SDR es del 2-5%.**",
+          "## qué hacer con esto",
+          "antes de desplegar cualquier automatización con IA, define tu métrica estrella. para la mayoría de las empresas B2B, es una de:",
+          "— reuniones reservadas por semana",
+          "— pipeline cualificado creado por mes",
+          "— tiempo desde lead hasta primera conversación",
+          "si no puedes medirlo antes, no puedes probarlo después. establece la línea base ahora.",
+          "si quieres ver cómo se ven esos números para tu motion específico — tamaño de equipo, ciclo de ventas, ICP — lo revisamos contigo. sin presentaciones. solo datos."
+        ]
+      },
+      "aiGtmStrategy": {
+        "title": "tu estrategia GTM tiene un problema de datos. así es como la IA lo soluciona.",
+        "excerpt": "tu CRM está tres meses por detrás de la realidad. tu estrategia GTM está construida sobre él. ese es el problema.",
+        "body": [
+          "## el problema del retraso de datos",
+          "todos los líderes GTM con los que hablo tienen el mismo problema. tienen una estrategia. está escrita, presentada al consejo, tiene sentido sobre el papel.",
+          "pero la ejecución se rompe porque los datos que la impulsan están obsoletos.",
+          "tu CRM refleja los deals del trimestre pasado. tus suposiciones sobre el ICP vienen de revisiones de win/loss hechas hace seis meses. tu messaging fue escrito basándose en entrevistas de hace un año.",
+          "estás tomando decisiones en tiempo real con datos históricos.",
+          "**para cuando tus datos GTM son lo suficientemente limpios para actuar, el mercado ya se ha movido.**",
+          "## cómo se ve esto en la práctica",
+          "una empresa B2B SaaS con 200 empleados. producto sólido, ICP claro, equipo GTM experimentado. pero su tasa de conversión en outbound es del 2%. están quemando listas.",
+          "el diagnóstico: están apuntando a empresas basándose en datos firmográficos de hace 6 meses. empresas que encajan en el ICP sobre el papel pero han cambiado sus prioridades. el messaging llega al título correcto con el timing equivocado.",
+          "cuando añadimos señales de intent impulsadas por IA y automatizamos el timing de seguimiento para coincidir con las ventanas de engagement, la tasa de respuesta pasó del 2% al 67%.",
+          "misma lista. mismo framework de messaging. mejor timing y señal.",
+          "## qué hace realmente la IA en tu motion GTM",
+          "la IA no reemplaza tu estrategia GTM. elimina el retraso entre estrategia y ejecución.",
+          "concretamente:",
+          "— monitoriza tus cuentas objetivo de forma continua, no trimestral",
+          "— dispara outreach basado en señales de comportamiento, no en calendarios arbitrarios",
+          "— gestiona el seguimiento sin que tus reps tengan que recordarlo",
+          "— identifica qué cuentas están en-mercado antes de que los reps de tu competencia lo noten",
+          "el resultado no es una estrategia diferente. es la misma estrategia ejecutándose sin fricción.",
+          "## el efecto compuesto",
+          "esto es lo que la mayoría subestima sobre el retraso de datos GTM: se compone.",
+          "un retraso de datos de 3 meses significa que tus mejores performers están trabajando en oportunidades que ya se han enfriado. tus peores performers están obteniendo las calientes por accidente. no puedes ver el patrón porque siempre estás mirando hacia atrás.",
+          "**cuando tu motion GTM funciona con señales en tiempo real, tus mejores reps dejan de perder tiempo y tu pipeline se vuelve predecible.**",
+          "## por dónde empezar",
+          "no necesitas reformar todo tu GTM para solucionar esto. empieza con un motion.",
+          "elige tu canal inbound de mayor intención — solicitudes de demo, registros de prueba, lo que tenga tu mejor tasa de conversión. pon una capa de IA encima durante 30 días. mide el cambio en velocidad de primera respuesta y tasa de conversión.",
+          "ese único motion, bien hecho, te mostrará exactamente cómo puede ser el resto de tu GTM.",
+          "lo hemos hecho con empresas de 50 a 500 empleados en agencias de lead gen, SaaS, e-commerce y healthtech. el patrón se mantiene."
+        ]
+      },
+      "salesEfficiencyAi": {
+        "title": "tus reps no son lentos. tu proceso sí.",
+        "excerpt": "el representante de ventas B2B promedio dedica el 65% de su tiempo a actividades que no son ventas. contratar más reps no soluciona eso.",
+        "body": [
+          "## el cuello de botella real",
+          "pregunta a un VP de Ventas por qué está perdiendo la cuota. nueve de cada diez veces, la respuesta es headcount. necesitamos más SDRs. más AEs. más capacidad.",
+          "pero el headcount es caro y lento. tardan 6 meses en contratar y formar a un rep. y si tu proceso está roto, un nuevo rep solo hace el proceso roto más rápido.",
+          "el número real: los representantes de ventas B2B dedican una media del 65% de su tiempo a actividades que no son ventas. investigación. entrada de datos. programación. escribir emails de seguimiento. actualizar el CRM.",
+          "**si tus reps venden el 35% de su tiempo, no tienes un problema de headcount. tienes un problema de proceso.**",
+          "## cómo se ve ese 65%",
+          "un día típico de un SDR:",
+          "— 45 minutos investigando una lista de 20 empresas antes del outreach",
+          "— 30 minutos escribiendo emails de primer contacto personalizados",
+          "— 20 minutos registrando llamadas y actualizando campos del CRM",
+          "— 15 minutos programando una reunión que tarda 3 correos de ida y vuelta",
+          "— 20 minutos escribiendo un seguimiento después de una llamada",
+          "eso son 2,5 horas de administración por quizás 1,5 horas de venta real. cada día.",
+          "multiplícalo por un equipo de 10 SDRs y estás pagando por 25 horas de venta y absorbiendo 37,5 horas de administración. cada día.",
+          "## qué cambia la IA",
+          "la IA no reemplaza a tus reps. se encarga del 65% para que tus reps puedan enfocarse en el 35%.",
+          "concretamente:",
+          "— los agentes de investigación de IA extraen contexto de empresa, noticias recientes, señales de contratación antes de cada outreach",
+          "— los asistentes de escritura de IA generan primeros borradores de outreach, tus reps editan y envían",
+          "— los agentes de seguimiento de IA disparan secuencias basadas en engagement, no en recordatorios de calendario",
+          "— la programación de IA gestiona el ir y venir, los reps aparecen a la reunión",
+          "**nuestros clientes promedian un 30% de conversión desde leads cualificados por IA hasta reuniones reservadas. sus reps no hacen llamadas de discovery con prospectos no cualificados.**",
+          "## los números",
+          "10 SDRs. actualmente generando 40 reuniones al mes. la cuota es 80.",
+          "escenario A: contratar 10 SDRs más. 6 meses para formar. coste: $600k/año en salarios más tiempo de rampa.",
+          "escenario B: desplegar automatización de IA para gestionar el 65%. el tiempo efectivo de venta se duplica. 40 reuniones se convierten en 70-80. coste: fracción de un salario de SDR.",
+          "los números no son comparables. pero la mayoría de las empresas eligen el escenario A porque es familiar.",
+          "## la trampa de contratar",
+          "hay una razón por la que los líderes de ventas recurren al headcount: es la palanca que saben que funciona. más personas equivale a más actividad equivale a más pipeline.",
+          "en teoría.",
+          "en la práctica, estás escalando un proceso roto. cada nuevo rep hereda la misma carga administrativa del 65%. tu coste por reunión sube. tus mejores reps se frustran haciendo administración y se van. contratas reemplazos.",
+          "**arregla el denominador antes de aumentar el numerador.**",
+          "## cómo auditar tu propio proceso",
+          "dedica una semana a rastrear cómo gastan realmente el tiempo tus reps. no cómo deberían — cómo lo hacen. encontrarás el 65%.",
+          "luego pregunta: ¿qué tareas requieren juicio humano? ¿cuáles son pura ejecución?",
+          "todo lo que esté en el cubo de ejecución pura es candidato a automatización. empieza ahí.",
+          "si quieres una versión más rápida de esta auditoría — la hemos hecho en docenas de equipos de ventas y sabemos exactamente dónde mirar."
+        ]
+      }
+    }
   }
 }

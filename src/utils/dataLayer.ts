@@ -570,6 +570,45 @@ export const trackTestimonialInteraction = (action: 'next' | 'previous' | 'click
 };
 
 // ============================================================================
+// BLOG EVENTS
+// ============================================================================
+
+/**
+ * Track blog post view
+ */
+export const trackBlogPostView = (slug: string, title: string, category: string, language: string) => {
+  pushToDataLayer({
+    event: 'blog_post_view',
+    blog_slug: slug,
+    blog_title: title,
+    blog_category: category,
+    language,
+  });
+};
+
+/**
+ * Track blog CTA click (demo request from within a post)
+ */
+export const trackBlogCtaClick = (slug: string, ctaText: string, location: string) => {
+  pushToDataLayer({
+    event: 'blog_cta_click',
+    blog_slug: slug,
+    cta_text: ctaText,
+    location,
+  });
+};
+
+/**
+ * Track blog index filter/category change
+ */
+export const trackBlogCategoryFilter = (category: string) => {
+  pushToDataLayer({
+    event: 'blog_category_filter',
+    category,
+  });
+};
+
+// ============================================================================
 // EXPORT ALL TRACKING FUNCTIONS
 // ============================================================================
 
@@ -648,4 +687,9 @@ export default {
   trackTimeOnPage,
   trackFeatureComparisonView,
   trackTestimonialInteraction,
+
+  // Blog
+  trackBlogPostView,
+  trackBlogCtaClick,
+  trackBlogCategoryFilter,
 };
