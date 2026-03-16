@@ -167,6 +167,8 @@ const KpiDisplay: React.FC<KpiDisplayProps> = ({
   const [showLabel, setShowLabel] = useState(false);
   const [flash, setFlash] = useState(false);
   const startedRef = useRef(false);
+  // Stores cleanup for in-flight animation + timers so unmount cancels them
+  const animCleanupRef = useRef<(() => void) | null>(null);
 
   useEffect(() => {
     const unsub = progress.on('change', (v) => {
@@ -183,6 +185,7 @@ const KpiDisplay: React.FC<KpiDisplayProps> = ({
 
         // Label appears 400ms after count starts
         const labelTimer = window.setTimeout(() => setShowLabel(true), 400);
+        let flashTimer = 0;
 
         const controls = animate(0, num, {
           duration: 1.2,
@@ -196,17 +199,21 @@ const KpiDisplay: React.FC<KpiDisplayProps> = ({
           onComplete: () => {
             setDisplay(value);
             setFlash(true);
-            window.setTimeout(() => setFlash(false), 600);
+            flashTimer = window.setTimeout(() => setFlash(false), 600);
           },
         });
 
-        return () => {
+        animCleanupRef.current = () => {
           controls.stop();
           window.clearTimeout(labelTimer);
+          window.clearTimeout(flashTimer);
         };
       }
     });
-    return unsub;
+    return () => {
+      unsub();
+      animCleanupRef.current?.();
+    };
   }, [progress, threshold, value, reducedMotion]);
 
   return (
@@ -250,6 +257,7 @@ const SummaryStatCard: React.FC<SummaryStatCardProps> = ({
   const [display, setDisplay] = useState(`${prefix}0${suffix}`);
   const [iconBounced, setIconBounced] = useState(false);
   const startedRef = useRef(false);
+  const animCleanupRef = useRef<(() => void) | null>(null);
 
   useEffect(() => {
     const unsub = triggerOpacity.on('change', (v) => {
@@ -261,7 +269,7 @@ const SummaryStatCard: React.FC<SummaryStatCardProps> = ({
           return;
         }
         const { prefix: p, num, suffix: s } = parseKpi(value);
-        animate(0, num, {
+        const controls = animate(0, num, {
           duration: 1.4,
           ease: [0.16, 1, 0.3, 1],
           onUpdate: (current) => setDisplay(`${p}${Math.round(current)}${s}`),
@@ -270,9 +278,13 @@ const SummaryStatCard: React.FC<SummaryStatCardProps> = ({
             setIconBounced(true);
           },
         });
+        animCleanupRef.current = () => controls.stop();
       }
     });
-    return unsub;
+    return () => {
+      unsub();
+      animCleanupRef.current?.();
+    };
   }, [triggerOpacity, value, reducedMotion]);
 
   return (
@@ -406,13 +418,18 @@ interface DeptBadgeProps {
 const DeptBadge: React.FC<DeptBadgeProps> = ({ dept, anim, reducedMotion, tLabel }) => {
   const DeptIcon = dept.agents[0]?.icon;
   const [iconEntered, setIconEntered] = useState(false);
+  // Ref prevents re-subscribing every time iconEntered flips to true
+  const iconEnteredRef = useRef(false);
 
   useEffect(() => {
     const unsub = anim.opacity.on('change', (v) => {
-      if (v >= 0.65 && !iconEntered) setIconEntered(true);
+      if (v >= 0.65 && !iconEnteredRef.current) {
+        iconEnteredRef.current = true;
+        setIconEntered(true);
+      }
     });
     return unsub;
-  }, [anim.opacity, iconEntered]);
+  }, [anim.opacity]); // iconEntered intentionally excluded — tracked via ref
 
   return (
     <motion.div
@@ -424,6 +441,7 @@ const DeptBadge: React.FC<DeptBadgeProps> = ({ dept, anim, reducedMotion, tLabel
         rotateX: anim.rotateX,
         filter: anim.filter,
         transformPerspective: 800,
+        willChange: 'transform, opacity',
       }}
     >
       {/* Icon block with drawing border */}
@@ -599,7 +617,7 @@ const HubCenter: React.FC<HubCenterProps> = ({
 }) => (
   <motion.div
     className="flex flex-col items-center"
-    style={{ opacity: hubOpacity, y: hubY, scale: hubScale, filter: hubFilter }}
+    style={{ opacity: hubOpacity, y: hubY, scale: hubScale, filter: hubFilter, willChange: 'transform, opacity' }}
   >
     <div className="relative flex flex-col items-center">
 
@@ -705,7 +723,7 @@ const AgentWorkforceBuilder: React.FC = () => {
   const navigate = useNavigate();
   const { lang } = useParams<{ lang: string }>();
   const ref = useRef<HTMLDivElement>(null);
-  const [tracked, setTracked] = useState(false);
+  const trackedRef = useRef(false);
   const reducedMotion = useReducedMotion() ?? false;
 
   const { scrollYProgress } = useScroll({
@@ -713,16 +731,16 @@ const AgentWorkforceBuilder: React.FC = () => {
     offset: ['start start', 'end end'],
   });
 
-  // Track section view on first scroll into the section
+  // Track section view on first scroll into the section (ref avoids re-subscription)
   useEffect(() => {
     const unsub = scrollYProgress.on('change', (v) => {
-      if (v > 0.03 && !tracked) {
+      if (v > 0.03 && !trackedRef.current) {
+        trackedRef.current = true;
         trackSectionView('agent_workforce_builder', 'homepage');
-        setTracked(true);
       }
     });
     return unsub;
-  }, [scrollYProgress, tracked]);
+  }, [scrollYProgress]);
 
   // ── Animation timeline (v4 — multi-layer parallax) ─────────────────────
 
@@ -842,15 +860,15 @@ const AgentWorkforceBuilder: React.FC = () => {
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <motion.div
             className="absolute top-[10%] left-[8%] w-[480px] h-[480px] bg-blue-100/25 rounded-full blur-[110px]"
-            style={{ y: orbBlueY }}
+            style={{ y: orbBlueY, willChange: 'transform' }}
           />
           <motion.div
             className="absolute bottom-[8%] right-[8%] w-[380px] h-[380px] bg-teal-100/25 rounded-full blur-[100px]"
-            style={{ y: orbTealY }}
+            style={{ y: orbTealY, willChange: 'transform' }}
           />
           <motion.div
             className="absolute top-[40%] right-[25%] w-[280px] h-[280px] bg-orange-50/20 rounded-full blur-[80px]"
-            style={{ y: orbOrangeY }}
+            style={{ y: orbOrangeY, willChange: 'transform' }}
           />
           {/* Dot grid */}
           <div
@@ -868,8 +886,8 @@ const AgentWorkforceBuilder: React.FC = () => {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.55 }}
-            style={{ y: headingY }}
+            transition={{ duration: 0.55, ease: 'easeOut' }}
+            style={{ y: headingY, willChange: 'transform, opacity' }}
           >
             <h2 className="text-3xl lg:text-4xl xl:text-[2.6rem] font-bold text-slate-900 mb-1.5 leading-tight">
               {t('agentWorkforce.title', 'Build Your AI Workforce')}
@@ -983,6 +1001,7 @@ const AgentWorkforceBuilder: React.FC = () => {
                             // v5: 3D entry — card tips forward as it arrives
                             rotateX: reducedMotion ? undefined : anim.rotateX,
                             transformPerspective: reducedMotion ? undefined : 900,
+                            willChange: 'transform, opacity',
                           }}
                         >
                           <AgentCard
