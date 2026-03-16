@@ -36,6 +36,8 @@ import {
   useTransform,
   useMotionTemplate,
   useReducedMotion,
+  useMotionValue,
+  useSpring,
   animate,
   MotionValue,
 } from 'framer-motion';
@@ -53,6 +55,9 @@ import {
   Building2,
   Zap,
   ArrowRight,
+  Bot,
+  LayoutGrid,
+  Clock,
 } from 'lucide-react';
 import { trackCtaClick, trackSectionView } from '@/utils/dataLayer';
 import { cn } from '@/lib/utils';
@@ -221,6 +226,161 @@ const KpiDisplay: React.FC<KpiDisplayProps> = ({
         {label}
       </motion.span>
     </div>
+  );
+};
+
+// ============================================================================
+// Summary Stat Card — staggered entrance + countUp + icon bounce + gradient border
+// ============================================================================
+
+interface SummaryStatCardProps {
+  value: string;
+  label: string;
+  icon: React.ComponentType<{ className?: string }>;
+  color: string;
+  triggerOpacity: MotionValue<number>;
+  y: MotionValue<number>;
+  reducedMotion: boolean;
+}
+
+const SummaryStatCard: React.FC<SummaryStatCardProps> = ({
+  value, label, icon: Icon, color, triggerOpacity, y, reducedMotion,
+}) => {
+  const { prefix, suffix } = parseKpi(value);
+  const [display, setDisplay] = useState(`${prefix}0${suffix}`);
+  const [iconBounced, setIconBounced] = useState(false);
+  const startedRef = useRef(false);
+
+  useEffect(() => {
+    const unsub = triggerOpacity.on('change', (v) => {
+      if (v >= 0.65 && !startedRef.current) {
+        startedRef.current = true;
+        if (reducedMotion) {
+          setDisplay(value);
+          setIconBounced(true);
+          return;
+        }
+        const { prefix: p, num, suffix: s } = parseKpi(value);
+        animate(0, num, {
+          duration: 1.4,
+          ease: [0.16, 1, 0.3, 1],
+          onUpdate: (current) => setDisplay(`${p}${Math.round(current)}${s}`),
+          onComplete: () => {
+            setDisplay(value);
+            setIconBounced(true);
+          },
+        });
+      }
+    });
+    return unsub;
+  }, [triggerOpacity, value, reducedMotion]);
+
+  return (
+    <motion.div
+      className="relative flex flex-col items-center text-center px-5 py-2 overflow-hidden"
+      style={{ y }}
+    >
+      {/* Icon with spring bounce on count complete */}
+      <motion.div
+        className="mb-1.5"
+        animate={iconBounced ? { scale: [1, 1.3, 0.85, 1.1, 1], rotate: [0, -8, 6, -3, 0] } : {}}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+      >
+        <Icon className="w-4 h-4" style={{ color }} />
+      </motion.div>
+      <p className="text-xl font-black text-slate-900 leading-none">{display}</p>
+      <p className="text-[10px] text-slate-500 font-medium mt-0.5">{label}</p>
+      {/* Animated gradient sweep at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2px]" style={{ background: `${color}1a` }}>
+        {!reducedMotion && (
+          <motion.div
+            className="absolute inset-y-0 left-0 w-1/2"
+            style={{ background: `linear-gradient(90deg, transparent, ${color}, transparent)` }}
+            animate={{ x: ['-100%', '300%'] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: 'linear', repeatDelay: 1 }}
+          />
+        )}
+      </div>
+    </motion.div>
+  );
+};
+
+// ============================================================================
+// Magnetic CTA Button — cursor tracking + shimmer + glow
+// ============================================================================
+
+interface MagneticCTAButtonProps {
+  onClick: () => void;
+  label: string;
+  reducedMotion: boolean;
+}
+
+const MagneticCTAButton: React.FC<MagneticCTAButtonProps> = ({ onClick, label, reducedMotion }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const mx = useMotionValue(0);
+  const my = useMotionValue(0);
+  const springX = useSpring(mx, { stiffness: 180, damping: 12 });
+  const springY = useSpring(my, { stiffness: 180, damping: 12 });
+  const [hovered, setHovered] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (reducedMotion || !containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    mx.set((e.clientX - (rect.left + rect.width / 2)) * 0.28);
+    my.set((e.clientY - (rect.top + rect.height / 2)) * 0.28);
+  };
+
+  const handleMouseLeave = () => {
+    mx.set(0);
+    my.set(0);
+    setHovered(false);
+  };
+
+  return (
+    <motion.div
+      ref={containerRef}
+      style={reducedMotion ? {} : { x: springX, y: springY }}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={handleMouseLeave}
+      className="relative"
+    >
+      {/* Outer glow halo */}
+      <motion.div
+        className="absolute -inset-3 rounded-full blur-xl pointer-events-none"
+        animate={{ opacity: hovered ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+        style={{ background: 'rgba(37, 99, 235, 0.35)' }}
+        aria-hidden="true"
+      />
+      <motion.button
+        onClick={onClick}
+        className="relative overflow-hidden inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-white font-semibold text-sm shadow-xl shadow-blue-600/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+        style={{ background: 'linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #1e40af 100%)' }}
+        animate={reducedMotion ? {} : { scale: hovered ? 1.04 : 1 }}
+        transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+        aria-label={label}
+      >
+        {/* Shimmer overlay */}
+        {!reducedMotion && (
+          <motion.span
+            className="absolute inset-0 w-[200%]"
+            style={{ background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%)' }}
+            animate={{ x: ['-100%', '100%'] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: 'linear', repeatDelay: 1.5 }}
+            aria-hidden="true"
+          />
+        )}
+        <span className="relative z-10">{label}</span>
+        <motion.span
+          className="relative z-10"
+          animate={reducedMotion ? {} : { x: hovered ? 5 : 0 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+        >
+          <ArrowRight className="w-4 h-4" />
+        </motion.span>
+      </motion.button>
+    </motion.div>
   );
 };
 
@@ -633,10 +793,15 @@ const AgentWorkforceBuilder: React.FC = () => {
     };
   });
 
-  // ── Summary / CTA (Layer 7) ────────────────────────────────────────────
-  const summaryOpacity = useTransform(scrollYProgress, [0.80, 0.92], [0, 1]);
-  const summaryY       = useTransform(scrollYProgress, [0.80, 0.92], [24, 0]);
-  const summaryScale   = useTransform(scrollYProgress, [0.80, 0.92], [0.96, 1]);
+  // ── Summary / CTA (Layer 7) — entrance + exit per element ──────────────
+  const summaryOpacity = useTransform(scrollYProgress, [0.78, 0.88, 0.95, 1.0], [0, 1, 1, 0]);
+  const summaryScale   = useTransform(scrollYProgress, [0.78, 0.88, 0.96, 1.0], [0.94, 1, 1, 0.97]);
+  const stat0Y         = useTransform(scrollYProgress, [0.78, 0.87], [24, 0]);
+  const stat1Y         = useTransform(scrollYProgress, [0.81, 0.90], [24, 0]);
+  const stat2Y         = useTransform(scrollYProgress, [0.84, 0.93], [24, 0]);
+  const ctaOpacity     = useTransform(scrollYProgress, [0.86, 0.94, 0.97, 1.0], [0, 1, 1, 0]);
+  const ctaY           = useTransform(scrollYProgress, [0.86, 0.94], [16, 0]);
+  const ctaScale       = useTransform(scrollYProgress, [0.86, 0.94], [0.92, 1]);
 
   // ── Scroll hint ────────────────────────────────────────────────────────
   const hintOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
@@ -838,32 +1003,52 @@ const AgentWorkforceBuilder: React.FC = () => {
           </div>
 
           {/* ── Summary stats + CTA ──────────────────────────── */}
-          <motion.div
-            className="mt-auto mb-6 flex flex-col items-center gap-3"
-            style={{ opacity: summaryOpacity, y: summaryY, scale: summaryScale }}
-          >
-            <div className="flex items-center gap-6 bg-white/85 backdrop-blur-sm border border-slate-200/60 rounded-2xl px-7 py-3.5 shadow-lg shadow-slate-200/30">
-              {[
-                { v: '8', l: t('agentWorkforce.summary.agents', 'AI Agents') },
-                { v: '4', l: t('agentWorkforce.summary.departments', 'Departments') },
-                { v: '24/7', l: t('agentWorkforce.summary.availability', 'Availability') },
-              ].map((s) => (
-                <div key={s.l} className="text-center">
-                  <p className="text-xl font-black text-slate-900">{s.v}</p>
-                  <p className="text-[10px] text-slate-500 font-medium">{s.l}</p>
-                </div>
-              ))}
-            </div>
-
-            <button
-              onClick={goToSolutions}
-              className="group inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold text-sm shadow-xl shadow-blue-600/20 hover:shadow-blue-600/40 transition-all duration-300 hover:-translate-y-0.5"
-              aria-label={t('agentWorkforce.cta', 'Explore All Solutions')}
+          <div className="mt-auto mb-6 flex flex-col items-center gap-3">
+            {/* Stats glass card — container fades in/out; individual stats stagger */}
+            <motion.div
+              className="flex items-center bg-white/85 backdrop-blur-sm border border-slate-200/60 rounded-2xl px-2 py-1 shadow-lg shadow-slate-200/30"
+              style={{ opacity: summaryOpacity, scale: summaryScale }}
             >
-              {t('agentWorkforce.cta', 'Explore All Solutions')}
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </button>
-          </motion.div>
+              <SummaryStatCard
+                value="8"
+                label={t('agentWorkforce.summary.agents', 'AI Agents')}
+                icon={Bot}
+                color="#3b82f6"
+                triggerOpacity={summaryOpacity}
+                y={stat0Y}
+                reducedMotion={reducedMotion}
+              />
+              <div className="w-px h-10 bg-slate-200/70 mx-1" />
+              <SummaryStatCard
+                value="4"
+                label={t('agentWorkforce.summary.departments', 'Departments')}
+                icon={LayoutGrid}
+                color="#8b5cf6"
+                triggerOpacity={summaryOpacity}
+                y={stat1Y}
+                reducedMotion={reducedMotion}
+              />
+              <div className="w-px h-10 bg-slate-200/70 mx-1" />
+              <SummaryStatCard
+                value="24/7"
+                label={t('agentWorkforce.summary.availability', 'Availability')}
+                icon={Clock}
+                color="#10b981"
+                triggerOpacity={summaryOpacity}
+                y={stat2Y}
+                reducedMotion={reducedMotion}
+              />
+            </motion.div>
+
+            {/* CTA — last to appear, last to disappear */}
+            <motion.div style={{ opacity: ctaOpacity, y: ctaY, scale: ctaScale }}>
+              <MagneticCTAButton
+                onClick={goToSolutions}
+                label={t('agentWorkforce.cta', 'Explore All Solutions')}
+                reducedMotion={reducedMotion}
+              />
+            </motion.div>
+          </div>
         </div>
 
         {/* ── Scroll hint ──────────────────────────────────────── */}
