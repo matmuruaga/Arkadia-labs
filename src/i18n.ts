@@ -15,8 +15,13 @@ i18n
       order: ['path', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
       caches: ['cookie'],
     },
+    // Only 'common' is loaded eagerly; all other namespaces load on-demand
+    // when a component calls useTranslation('solutions') etc.
+    ns: ['common'],
+    defaultNS: 'common',
+    fallbackNS: 'common',
     backend: {
-      loadPath: '/locales/{{lng}}/translation.json',
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
     react: {
       useSuspense: true,
