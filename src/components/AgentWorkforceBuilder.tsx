@@ -811,15 +811,16 @@ const AgentWorkforceBuilder: React.FC = () => {
     };
   });
 
-  // ── Summary / CTA (Layer 7) — entrance + exit per element ──────────────
-  const summaryOpacity = useTransform(scrollYProgress, [0.78, 0.88, 0.95, 1.0], [0, 1, 1, 0]);
-  const summaryScale   = useTransform(scrollYProgress, [0.78, 0.88, 0.96, 1.0], [0.94, 1, 1, 0.97]);
-  const stat0Y         = useTransform(scrollYProgress, [0.78, 0.87], [24, 0]);
-  const stat1Y         = useTransform(scrollYProgress, [0.81, 0.90], [24, 0]);
-  const stat2Y         = useTransform(scrollYProgress, [0.84, 0.93], [24, 0]);
-  const ctaOpacity     = useTransform(scrollYProgress, [0.86, 0.94, 0.97, 1.0], [0, 1, 1, 0]);
-  const ctaY           = useTransform(scrollYProgress, [0.86, 0.94], [16, 0]);
-  const ctaScale       = useTransform(scrollYProgress, [0.86, 0.94], [0.92, 1]);
+  // ── Summary / CTA (Layer 7) — entrance only, stays visible once revealed ──
+  // Timings scaled proportionally for 300vh section (factor 300/350 ≈ 0.857)
+  const summaryOpacity = useTransform(scrollYProgress, [0.67, 0.75], [0, 1]);
+  const summaryScale   = useTransform(scrollYProgress, [0.67, 0.75], [0.94, 1]);
+  const stat0Y         = useTransform(scrollYProgress, [0.67, 0.75], [24, 0]);
+  const stat1Y         = useTransform(scrollYProgress, [0.69, 0.77], [24, 0]);
+  const stat2Y         = useTransform(scrollYProgress, [0.72, 0.80], [24, 0]);
+  const ctaOpacity     = useTransform(scrollYProgress, [0.74, 0.81], [0, 1]);
+  const ctaY           = useTransform(scrollYProgress, [0.74, 0.81], [16, 0]);
+  const ctaScale       = useTransform(scrollYProgress, [0.74, 0.81], [0.92, 1]);
 
   // ── Scroll hint ────────────────────────────────────────────────────────
   const hintOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
@@ -850,7 +851,7 @@ const AgentWorkforceBuilder: React.FC = () => {
     <section
       ref={ref}
       className="relative hidden md:block"
-      style={{ height: '350vh' }}
+      style={{ height: '300vh' }}
       aria-label={t('agentWorkforce.title', 'Build Your AI Workforce')}
     >
       <div className="sticky top-0 h-screen overflow-hidden">
