@@ -131,7 +131,7 @@ AfterCard.displayName = 'AfterCard';
 
 
 const BeforeAfterSection = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('home');
   const navigate = useNavigate();
   const [activeSegment, setActiveSegment] = useState('sales');
   const { width } = useWindowSize();

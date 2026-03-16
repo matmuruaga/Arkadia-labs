@@ -59,7 +59,7 @@ const mainClientLogoKeys = [
 ];
 
 const TestimonialsSection = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('home');
 
   return (
     <section id="testimonials" className="py-16 md:py-24 bg-[#F1F3F5] overflow-hidden">

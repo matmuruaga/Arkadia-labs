@@ -1,0 +1,384 @@
+{
+  "hero": {
+    "title_part1": "Adaptive AI Systems:",
+    "title_part2": "that save time and generate revenue.",
+    "subtitle": "Automate business operations to achieve superior efficiency with tailored AI solutions.",
+    "definition": "Arkadia Labs is a technology company that builds custom AI agents for businesses. Our solutions automate sales outreach, lead qualification, customer service, appointment booking, and content creation — helping companies reduce operational costs and scale faster.",
+    "phrases": {
+      "p1": "Marketing Agent driving growth...",
+      "p2": "Automation Agent streamlining tasks...",
+      "p3": "Receptionist Agent managing inquiries...",
+      "p4": "Sales AI Assistant boosting deals...",
+      "p5": "Support Agent AI enhancing CX...",
+      "p6": "Data Analyst Agent uncovering insights..."
+    },
+    "badge": "AI-Powered Automation",
+    "voice": {
+      "ariaLabel": "Toggle AI Agent",
+      "altMascot": "AI agent mascot",
+      "caption": "Let's talk",
+      "clickToStart": "Click to start"
+    },
+    "disclaimer": "To use the voice agent, a microphone on your computer and granting access are required. Calls are recorded for quality purposes and deleted within 30 days. By using this demo, you agree to our <terms>Terms of Use</terms> and our <privacy>Privacy Policy</privacy>. We recommend using Chrome for the best audio quality."
+  },
+  "beforeAfter": {
+    "title": "The Arkadia Transformation: Before & After",
+    "subtitle": "Select a department to see how our custom AI agents outperform traditional tools and boost your operational efficiency.",
+    "challengeTitle": "The Manual Challenge",
+    "solutionTitle": "The Arkadia Solution",
+    "cta": "Start Automating Now",
+    "tabs": {
+      "sales": "Sales",
+      "marketing": "Marketing",
+      "operations": "Operations",
+      "support": "Support",
+      "hr": "HR & Recruitment"
+    },
+    "content": {
+      "sales": {
+        "s1": {
+          "beforeTitle": "Prospect Research Black Hole",
+          "beforeDescription": "Reps spend 3+ hours googling basic info, missing 90% of decision triggers and critical buying signals.",
+          "afterTitle": "AI-Powered Prospect Intelligence",
+          "afterDescription": "Our AI performs deep-dive research in minutes, finding executive moves, funding rounds, and 'why now' moments."
+        },
+        "s2": {
+          "beforeTitle": "Cold Lead Graveyard",
+          "beforeDescription": "80% of leads go cold after just 3 touches due to forgotten context and inconsistent messaging.",
+          "afterTitle": "AI-Powered Lead Resurrection",
+          "afterDescription": "Automated 15-touch sequences with perfect recall nurture deals for 6+ months without human intervention."
+        },
+        "s3": {
+          "beforeTitle": "Flying Blind in Sales Calls",
+          "beforeDescription": "Reps often miss key objections and competitive intel during live calls, putting important deals at risk.",
+          "afterTitle": "AI Real-Time Sales Coaching",
+          "afterDescription": "Get live battle cards and proven objection responses whispered in your ear during every single sales call."
+        },
+        "s4": {
+          "beforeTitle": "Deals Stuck in CRM Purgatory",
+          "beforeDescription": "Manual pipeline management leads to stalled deals and quarterly reviews when it is already too late to act.",
+          "afterTitle": "AI Deal Acceleration Engine",
+          "afterDescription": "Receive instant alerts when prospects visit pricing pages, with automated next-action suggestions."
+        },
+        "s5": {
+          "beforeTitle": "Time Spent on Lead Research",
+          "beforeDescription": "Your reps spend more time researching prospects on multiple platforms than actually talking to them.",
+          "afterTitle": "Instant Lead Enrichment",
+          "afterDescription": "The agent instantly enriches all your leads with company data, social profiles, and other key insights."
+        }
+      },
+      "marketing": {
+        "m1": {
+          "beforeTitle": "Prospect Research Black Hole",
+          "beforeDescription": "Marketers research audiences for hours, missing 90% of micro-segments and high-intent buyer signals.",
+          "afterTitle": "AI-Driven Micro-Segmentation",
+          "afterDescription": "AI identifies and targets hyper-specific segments with the most relevant messaging for higher conversion potential."
+        },
+        "m2": {
+          "beforeTitle": "Generic Campaign Targeting",
+          "beforeDescription": "Campaigns targeting wide segments result in very low conversion rates and significantly wasted ad spend.",
+          "afterTitle": "Real-Time Campaign Optimization",
+          "afterDescription": "Our AI continuously optimizes your campaigns across all channels, maximizing ROI while minimizing ad spend."
+        },
+        "m3": {
+          "beforeTitle": "Content Creation Bottleneck",
+          "beforeDescription": "Content teams struggle with deadlines, producing generic copy for ads, emails, and social media posts.",
+          "afterTitle": "AI-Assisted Content Generation",
+          "afterDescription": "Generate high-quality first drafts for copy, email campaigns, and social media posts in seconds with brand consistency."
+        },
+        "m4": {
+          "beforeTitle": "Campaign Attribution Guesswork",
+          "beforeDescription": "It's nearly impossible to know which marketing activities are actually driving revenue and generating ROI.",
+          "afterTitle": "Clear Real-Time ROI Analysis",
+          "afterDescription": "Track every touchpoint with AI-powered attribution models that provide a clear, real-time view of marketing ROI."
+        },
+        "m5": {
+          "beforeTitle": "Static Email Campaigns",
+          "beforeDescription": "All users receive the same email drip campaign, regardless of their specific behavior or engagement level.",
+          "afterTitle": "Dynamic & Adaptive Email Journeys",
+          "afterDescription": "AI triggers unique email journeys that adapt in real-time based on individual user actions and engagement."
+        }
+      },
+      "operations": {
+        "o1": {
+          "beforeTitle": "Process Bottlenecks & Manual Workflows",
+          "beforeDescription": "Teams waste hours on repetitive tasks, manual data entry, and disconnected workflows that slow business velocity.",
+          "afterTitle": "Intelligent Process Automation",
+          "afterDescription": "AI orchestrates complex workflows across multiple systems, eliminating manual handoffs and accelerating business velocity."
+        },
+        "o2": {
+          "beforeTitle": "AData Silos & Integration Chaos",
+          "beforeDescription": "Critical business data trapped in disconnected systems makes real-time decision-making nearly impossible.",
+          "afterTitle": "Real-Time Operational Intelligence",
+          "afterDescription": "AI provides instant insights into performance bottlenecks and opportunities with unified data visibility across all systems."
+        },
+        "o3": {
+          "beforeTitle": "Resource Planning Blindspots",
+          "beforeDescription": "Poor visibility into capacity, utilization, and performance metrics leads to inefficient resource allocation.",
+          "afterTitle": "Predictive Resource Optimization",
+          "afterDescription": "AI forecasts demand patterns and optimizes resource allocation to maximize efficiency and minimize waste."
+        },
+        "o4": {
+          "beforeTitle": "Compliance & Quality Control Gaps",
+          "beforeDescription": "Manual auditing and quality checks result in errors, delays, and potential regulatory compliance risks.",
+          "afterTitle": "Automated Compliance Monitoring",
+          "afterDescription": "AI ensures continuous quality control and regulatory adherence with automated auditing and real-time alerts."
+        },
+        "o5": {
+          "beforeTitle": "Inefficient Resource Allocation",
+          "beforeDescription": "Assigning tasks and resources manually often leads to unbalanced workloads and critical project delays.",
+          "afterTitle": "AI-Powered Resource Scheduling",
+          "afterDescription": "Intelligently assign all your resources based on availability, skill, and priority for maximum efficiency."
+        }
+      },
+      "support": {
+        "su1": {
+          "beforeTitle": "Long Ticket Queues & Wait Times",
+          "beforeDescription": "Customers are left waiting for hours or even days to get answers to their simple and common questions.",
+          "afterTitle": "Instant L1 Support with 24/7 AI Agents",
+          "afterDescription": "Provide immediate and accurate answers to common questions around the clock, drastically reducing wait times."
+        },
+        "su2": {
+          "beforeTitle": "Agent Burnout from Repetitive Tasks",
+          "beforeDescription": "Your support agents spend most of their day answering the same questions and inquiries over and over again.",
+          "afterTitle": "Automated FAQ & KB Responses",
+          "afterDescription": "The AI frees up human agents by instantly handling routine inquiries, letting them focus on complex cases."
+        },
+        "su3": {
+          "beforeTitle": "Lack of Personalization in Service",
+          "beforeDescription": "Every customer gets a generic, scripted response that completely fails to acknowledge their past history.",
+          "afterTitle": "Context-Aware, Personalized Support",
+          "afterDescription": "Our AI agent has full context of a customer's history to provide a truly personal and effective response."
+        },
+        "su4": {
+          "beforeTitle": "No Proactive Support",
+          "beforeDescription": "Your team only helps customers after they complain, missing great opportunities to build loyalty and prevent churn.",
+          "afterTitle": "Proactive Issue Detection & Outreach",
+          "afterDescription": "Our AI can detect signs of customer frustration or other potential issues and proactively offer effective help."
+        },
+        "su5": {
+          "beforeTitle": "Limited Support Coverage (9-5)",
+          "beforeDescription": "Your global customers are unable to get the help they need outside of your local business operating hours.",
+          "afterTitle": "24/7 AI-Powered Global Availability",
+          "afterDescription": "Offer consistent, high-quality support to all of your customers, no matter their current location or time zone."
+        }
+      },
+      "hr": {
+        "h1": {
+          "beforeTitle": "Manual CV Screening Overload",
+          "beforeDescription": "HR managers spend countless hours of their time reading through hundreds of mostly irrelevant resumes.",
+          "afterTitle": "AI-Powered Candidate Matching",
+          "afterDescription": "Your AI agent will automatically screen, score, and shortlist the most qualified candidates for any open role."
+        },
+        "h2": {
+          "beforeTitle": "Chaotic Interview Scheduling",
+          "beforeDescription": "The back-and-forth emails just to schedule a single interview with a candidate can take multiple days.",
+          "afterTitle": "Automated Calendar Coordination",
+          "afterDescription": "The AI agent coordinates with candidates and interviewers to find the perfect time and books it automatically."
+        },
+        "h3": {
+          "beforeTitle": "Generic Employee Onboarding",
+          "beforeDescription": "New hires receive a standard information package that doesn't cater to their specific role or needs.",
+          "afterTitle": "Personalized Onboarding Journeys",
+          "afterDescription": "Create unique onboarding experiences for every new hire with an AI agent that guides them through their tasks."
+        },
+        "h4": {
+          "beforeTitle": "Time-Consuming FAQ Answering",
+          "beforeDescription": "HR staff are constantly interrupted with the same questions about policies, payroll, and company benefits.",
+          "afterTitle": "Instant HR & Policy AI Assistant",
+          "afterDescription": "An internal AI assistant provides instant, accurate answers to all common employee questions 24/7."
+        },
+        "h5": {
+          "beforeTitle": "Low Employee Engagement Insights",
+          "beforeDescription": "Annual surveys provide stale data that is very difficult to act upon in a timely and effective manner.",
+          "afterTitle": "AI-Powered Engagement Analysis",
+          "afterDescription": "AI analyzes employee feedback from multiple channels in real-time to provide a constant pulse on team morale."
+        }
+      }
+    }
+  },
+  "kpi": {
+    "title": "The Arkadia Impact: Measurable Results",
+    "subtitle": "Discover how our crafted AI solutions translate into tangible benefits and significant growth for businesses like yours.",
+    "cards": {
+      "kpi1": {
+        "capsule": "Sales Teams",
+        "description": "Swiss AI startup scales from $2M to $6M ARR in 18 months using our AI ecosystem.",
+        "label": "More Deals Closed",
+        "impactTitle": "Revenue Impact:",
+        "impactDescription": "Transform Your Close Rate Into Consistent Revenue Growth"
+      },
+      "kpi2": {
+        "capsule": "Marketing Teams",
+        "description": "B2B SaaS company reduces customer acquisition cost with our AI ecosystem.",
+        "label": "Cost Reduction",
+        "impactTitle": "Cost impact:",
+        "impactDescription": "Turn Marketing Spend Into Profit Centers"
+      },
+      "kpi3": {
+        "capsule": "Operations Teams",
+        "description": "E-commerce leader automates routine processes, freeing ops team to focus on strategic growth initiatives.",
+        "label": "90% Process Automation",
+        "impactTitle": "Scalability Impact:",
+        "impactDescription": "Build Systems That Scale Without Linear Costs"
+      },
+      "kpi4": {
+        "capsule": "Customer Support Teams",
+        "description": "Enterprise software company reduces churn and increases customer lifetime value.",
+        "label": "Churn Reduction",
+        "impactTitle": "Retention Impact: ",
+        "impactDescription": "Protect Existing Revenue While Reducing Support Costs"
+      }
+    }
+  },
+  "whyElevaite": {
+    "title": "The Arkadia Launchpad: Your Journey to Automation",
+    "subtitle": "Our Crafted Approach",
+    "steps": {
+      "s1": {
+        "title": "Understanding Your Needs",
+        "subtitle": "Discovery & Strategic Alignment",
+        "description": "We start with a deep dive into your unique business processes, challenges, and strategic goals. This collaborative discovery phase is crucial for ensuring your AI solution is perfectly aligned with your vision and delivers maximum impact."
+      },
+      "s2": {
+        "title": "Crafting Your Custom AI",
+        "subtitle": "Tailored Development & Design",
+        "description": "Our experts design and build your AI agents from the ground up, integrating sophisticated logic and custom workflows. We don't use off-the-shelf templates; this is about tailor-made intelligence specifically for your operational demands."
+      },
+      "s3": {
+        "title": "Onboarding & Training",
+        "subtitle": "Empowering Your Team for Success",
+        "description": "We don't just hand over the technology. We provide comprehensive onboarding for your team to ensure everyone knows how to leverage the new AI agents effectively and track their performance from day one."
+      },
+      "s4": {
+        "title": "Boosting Your Performance",
+        "subtitle": "Integration & Impact",
+        "description": "The final step is seamlessly integrating the AI into your environment and measuring its impact. We ensure a smooth launch and provide ongoing support to maximize your ROI and drive continuous improvement."
+      },
+      "s5": {
+        "title": "Optimization & Scaling",
+        "subtitle": "A Partnership for Continuous Growth",
+        "description": "Our partnership extends beyond launch. We continuously monitor your AI agents' performance, providing optimizations and strategic recommendations to ensure your solutions scale seamlessly as your business grows."
+      }
+    }
+  },
+  "integrationsComponent": {
+    "title": "Seamless Integrations: Connect Your Entire Ecosystem",
+    "description": "Arkadia's AI agents are designed to operate at the heart of your existing tools. We natively integrate with your CRMs, communication platforms, calendars, and more, amplifying your workflows without disruption and boosting overall productivity.",
+    "examples": {
+      "e1": "Market-leading CRMs (Salesforce, HubSpot, etc.)",
+      "e2": "Communication Platforms (Slack, Email, Microsoft Teams)",
+      "e3": "Smart Calendar & Scheduling Tools",
+      "e4": "Custom APIs & Internal Systems Integration",
+      "e5": "Databases & Data Analysis Tools"
+    },
+    "ctaButton": "How it works?"
+  },
+  "testimonials": {
+    "title": "Trusted by Innovative Businesses",
+    "subtitle": "Hear how our crafted AI solutions are making a real difference.",
+    "mainLogos": {
+      "logo1": "Domus Lab",
+      "logo2": "Goodnite",
+      "logo3": "Dacrafters",
+      "logo4": "LaserClick",
+      "logo5": ""
+    },
+    "cards": {
+      "t1": {
+        "quote": "With Arkadia Labs, we automated key tasks and enhanced our guest experience. Their swift integration with our systems let us focus on what matters—delivering seamless, premium service. Within weeks, our processes ran smoother and guest reviews improved.",
+        "author": "Tomáš Ustohal",
+        "title": "Key Account Manager",
+        "company": "Goodnite - CoolPeople Technology"
+      },
+      "t2": {
+        "quote": "Working with Arkadia Labs streamlined our project management and gave us more time to focus on what matters—designing spaces that connect with people. Their practical approach and ability to adapt to our international workflow made a difference from day one.",
+        "author": "Cosma Musacchio",
+        "title": "Creative Director",
+        "company": "Domus Labs"
+      },
+      "XXXt3_HIDDEN": {
+        "quote": "Working with Arkadia Labs made it easier to implement new automations in our data analysis processes for the travel industry. They adapted to the demands of our sector and delivered solutions that helped us optimize both time and resources.",
+        "author": "Karel Duchon",
+        "title": "Global Sales Director & Revenue Lead ",
+        "company": "Zytltn"
+      }
+    },
+    "caseStudyButton": "Read Full Story",
+    "altText": {
+      "portrait": "Portrait of {{author}}",
+      "logo": "{{company}} logo"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find quick answers to common questions about our AI solutions.",
+    "questions": {
+      "q1": {
+        "question": "What kind of AI agents can you build?",
+        "answer": "We craft a wide range of AI agents tailored to specific business needs, including marketing agents, automation agents for operational tasks, intelligent receptionist agents, sales AI assistants to boost your pipeline, AI-powered support agents for enhanced customer experience, and data analyst agents for insightful reporting."
+      },
+      "q2": {
+        "question": "How long does it take to implement a custom AI agent?",
+        "answer": "The timeline for implementing a custom AI agent can vary depending on the complexity and the integration requirements. Typically, a project can take anywhere from a few weeks to a couple of months. We begin with a discovery phase to fully understand your specific needs and then provide you with a more accurate project estimate."
+      },
+      "q3": {
+        "question": "Do your AI agents integrate with existing business tools?",
+        "answer": "Absolutely. Seamless integration is a core part of our offering. Our AI agents are designed to connect with your existing CRMs (like Salesforce, HubSpot), communication platforms (Slack, email, Teams), calendar tools, databases, and even custom APIs to ensure a smooth workflow."
+      },
+      "q4": {
+        "question": "How do you ensure the AI solutions are truly 'crafted' for my business?",
+        "answer": "Our process begins with a deep dive into your specific operational challenges, workflows, and strategic goals. We don't use one-size-fits-all templates. Each AI agent's logic, tasks, and integrations are custom-designed and developed to provide a truly personalized solution that addresses your unique requirements."
+      },
+      "q5": {
+        "question": "What kind of ROI can I expect from an AI agent?",
+        "answer": "Clients typically see significant ROI through increased efficiency, reduced manual labor costs, improved lead conversion rates, faster response times, and enhanced customer satisfaction. We work with you to define key performance indicators (KPIs) to measure the specific impact on your business."
+      }
+    }
+  },
+  "finalCta": {
+    "heading": {
+      "part1": "Supercharge Your",
+      "part2": "with Crafted AI Agents"
+    },
+    "cyclingWords": {
+      "w1": "Sales",
+      "w2": "Marketing",
+      "w3": "Operations",
+      "w4": "Support",
+      "w5": "Growth"
+    },
+    "description": "Ready to unlock unprecedented efficiency and scale with AI agents built for your unique business needs? Let's build your future, together.",
+    "primaryCta": "Get Your Custom AI Solution",
+    "secondaryCta": "Book a Consultation"
+  },
+  "agentWorkforce": {
+    "title": "Build Your AI Workforce",
+    "subtitle": "Scroll to see how 8 specialized AI agents form a complete team across every department",
+    "scrollHint": "↓ Scroll to build your AI team ↓",
+    "centralNode": "Your Company",
+    "centralBadge": "AI-Powered",
+    "departments": {
+      "outbound": "Sales & Outbound",
+      "inbound": "Customer Service",
+      "marketing": "Marketing & Content",
+      "operations": "Operations"
+    },
+    "kpis": {
+      "lead-validator": "accuracy",
+      "sales-qualifier": "meetings",
+      "sales-agent": "revenue",
+      "virtual-receptionist": "answered",
+      "booking-agent": "bookings",
+      "content-creator": "output",
+      "social-manager": "engagement",
+      "operations-agent": "manual work"
+    },
+    "summary": {
+      "agents": "AI Agents",
+      "departments": "Departments",
+      "availability": "Availability"
+    },
+    "cta": "Explore All Solutions"
+  }
+}

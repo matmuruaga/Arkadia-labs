@@ -16,7 +16,7 @@ const cyclingWordsData = [
 
 const FinalCtaSection = () => {
   // 2. Obtener i18n para el idioma y inicializar navigate
-  const { t, i18n } = useTranslation(); 
+  const { t, i18n } = useTranslation('home'); 
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
 

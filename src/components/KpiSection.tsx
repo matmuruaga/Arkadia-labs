@@ -64,7 +64,7 @@ const CardContent = ({ kpi, t }: { kpi: typeof kpiData[0], t: any }) => (
 
 
 const KpiSection = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
   const { width } = useWindowSize();
   const isMobile = width < 768;
 

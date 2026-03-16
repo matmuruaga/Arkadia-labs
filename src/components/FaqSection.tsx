@@ -16,7 +16,7 @@ const faqData = [
 ];
 
 const FaqSection = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   // FAQPage JSON-LD for rich results and AEO

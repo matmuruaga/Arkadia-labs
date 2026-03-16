@@ -13,7 +13,7 @@ const journeyStepsData = [
 ];
 
 const WhyArkadia = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
   const [activeStep, setActiveStep] = useState(journeyStepsData[0].id);
   const activeStepData = journeyStepsData.find(step => step.id === activeStep);
 

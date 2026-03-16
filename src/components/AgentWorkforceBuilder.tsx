@@ -126,7 +126,7 @@ const AgentCard: React.FC<{
   revealThreshold: number;
   onClick: () => void;
 }> = ({ agent, dept, progress, revealThreshold, onClick }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
   const Icon = agent.icon;
 
   return (
@@ -189,7 +189,7 @@ const AgentCard: React.FC<{
 // ============================================================================
 
 const AgentWorkforceBuilder: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
   const navigate = useNavigate();
   const { lang } = useParams<{ lang: string }>();
   const ref = useRef<HTMLDivElement>(null);

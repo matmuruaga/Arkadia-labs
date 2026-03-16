@@ -12,7 +12,7 @@ import OptimizedImage from './OptimizedImage';
 const BACKGROUND_IMAGE_URL = 'https://res.cloudinary.com/dntco2fcz/image/upload/v1766404546/fondo_principal-arkadia_q1soo6.webp';
 
 const HeroFramed = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('home');
   const { startSession, endSession, status } = useConversation();
   const [isLoading, setIsLoading] = useState(false);
 
