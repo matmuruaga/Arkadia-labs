@@ -16,7 +16,7 @@ const integrationExampleKeys = [
 ];
 
 const IntegrationsSection = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('home');
   const navigate = useNavigate(); // 2. Inicializamos el hook
   const lottieIntegrationsRef = useRef<LottieRefCurrentProps>(null);
 

@@ -23,7 +23,7 @@ const FinalCtaSection = lazy(() => import("@/components/FinalCtaSection"));
 import { trackPageView } from '@/utils/dataLayer';
 
 const MainPage = () => {
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslation('common');
   const location = useLocation();
 
   useEffect(() => {

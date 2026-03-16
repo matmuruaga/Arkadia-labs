@@ -85,7 +85,7 @@ const ResultCard: React.FC<ResultCardProps> = ({ icon, label, value, accentClass
 // ============================================================================
 
 const CloneYourBusinessRoiSection: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('clone-your-business');
   const { lang } = useParams<{ lang: string }>();
   const navigate = useNavigate();
   const sectionRef = useRef<HTMLElement>(null);

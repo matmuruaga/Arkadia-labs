@@ -47,7 +47,7 @@ const Header = () => {
   const solutionsDropdownRef = useRef<HTMLDivElement>(null);
   const solutionsNsLoaded = useRef(false);
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('common');
 
   // Lazy-load 'solutions' namespace the first time the dropdown opens
   useEffect(() => {

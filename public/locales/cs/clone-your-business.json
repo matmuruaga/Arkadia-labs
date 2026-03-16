@@ -1,0 +1,303 @@
+{
+  "cloneYourBusiness": {
+    "hero": {
+      "title": "Klonujte svou firmu pomocí AI",
+      "badge": "Automatizace s AI",
+      "headline": "Klonujte svou firmu",
+      "headlineAccent": "pomocí AI.",
+      "subtitle": "Automatizujte 99 % svých procesů s AI agenty, kteří replikují celá oddělení — prodej, marketing, podporu i provoz.",
+      "cta": "Naplánujte demo",
+      "hubOriginal": "Vaše firma",
+      "hubTransformed": "Poháněná AI",
+      "transformedLabel": "4 oddělení automatizovaná za sekundy",
+      "nodes": {
+        "sales": "Prodej",
+        "marketing": "Marketing",
+        "support": "Podpora",
+        "operations": "Provoz"
+      },
+      "trust": {
+        "companies": {
+          "value": "+50",
+          "label": "Firem"
+        },
+        "automation": {
+          "value": "99 %",
+          "label": "Automatizace"
+        },
+        "availability": {
+          "value": "24/7",
+          "label": "Dostupnost"
+        }
+      }
+    },
+    "problem": {
+      "title": "Váš tým se topí v opakující se práci",
+      "subtitle": "Manuální procesy, pomalé odezvy a úzká hrdla brání vašemu podnikání ve škálování.",
+      "badge": "Problém",
+      "painPoints": {
+        "highCosts": {
+          "title": "Raketově Rostoucí Náklady na Personál",
+          "description": "Nábor, školení, benefity, fluktuace — škálování týmu je drahé a pomalé. Každý nový zaměstnanec potřebuje měsíce na zapracování."
+        },
+        "humanErrors": {
+          "title": "Opakující se Lidské Chyby",
+          "description": "Ruční zadávání dat, chyby při kopírování a nekonzistentní procesy vedou k nákladným chybám, které se časem násobí."
+        },
+        "no247": {
+          "title": "Nemožné Škálovat 24/7",
+          "description": "Vaši zákazníci očekávají okamžité odpovědi nepřetržitě, ale obsadit tři směny není praktické ani finančně únosné."
+        },
+        "disconnected": {
+          "title": "Odpojená Oddělení",
+          "description": "Obchod nekomunikuje s podporou, marketing se nesynchronizuje s provozem — izolované týmy vytvářejí mezery, které ztrácejí zákazníky."
+        },
+        "manualTasks": {
+          "title": "Hodiny Ztracené Manuální Prací",
+          "description": "Váš talentovaný tým tráví většinu dne opakující se administrativou místo činností s vysokým dopadem, které rozvíjejí podnikání."
+        }
+      },
+      "stats": {
+        "repetitive": {
+          "value": "60 %",
+          "label": "pracovního času na opakujících se úkolech",
+          "source": "McKinsey Global Institute"
+        },
+        "manualErrors": {
+          "value": "3,1 bil. $",
+          "label": "ztraceno ročně kvůli špatné kvalitě dat",
+          "source": "IBM & Harvard Business Review"
+        },
+        "lostRevenue": {
+          "value": "35 %",
+          "label": "příjmů ztraceno kvůli provozní neefektivitě",
+          "source": "IDC Research"
+        }
+      }
+    },
+    "howItWorks": {
+      "badge": "Jak to funguje",
+      "title": "Od analýzy k nasazení ve 3 krocích",
+      "subtitle": "Řídíme se ověřenou metodologií pro klonování vašich firemních operací pomocí AI — rychle, spolehlivě a na míru vašemu workflow.",
+      "steps": {
+        "analysis": {
+          "title": "Analýza",
+          "description": "Zmapujeme celou vaši firmu, identifikujeme automatizovatelné procesy a navrhneme optimální architekturu AI agentů pro každé oddělení."
+        },
+        "cloning": {
+          "title": "Klonování",
+          "description": "Vytvoříme specializované AI agenty pro každou roli a oddělení — vytrénované na vašich datech, vašem tónu a vašich obchodních pravidlech."
+        },
+        "deployment": {
+          "title": "Nasazení",
+          "description": "Integrujeme s vašimi stávajícími nástroji, provedeme validační testy, vyškolíme váš tým a spustíme vaši AI pracovní sílu do produkce."
+        }
+      }
+    },
+    "solution": {
+      "title": "AI agenti, kteří řídí vaši firmu 24/7",
+      "subtitle": "Nasaďte inteligentní AI agenty, kteří zvládnou práci celých oddělení — bez najímání, školení či řízení dalších lidí."
+    },
+    "cta": {
+      "badge": "Řešení na míru",
+      "headline": "Každá firma je",
+      "headlineAccent": "jedinečná.",
+      "subtitle": "Navrhujeme AI agentní řešení přizpůsobená vašim specifickým procesům, struktuře týmu a obchodním cílům — žádné šablonové balíčky.",
+      "primaryCta": "Požádat o bezplatné demo",
+      "secondaryCta": "Promluvte s naším týmem",
+      "noPricingNote": "Žádné smlouvy. Žádné ceníky. Jen rozhovor o vašem podnikání.",
+      "trustPoints": {
+        "dedicated": "Dedikovaný onboarding",
+        "noLongContracts": "Bez dlouhodobých závazků",
+        "measurableRoi": "Garantovaná měřitelná návratnost"
+      }
+    },
+    "departments": {
+      "badge": "Klonovatelná oddělení",
+      "title": "Oddělení, která můžete klonovat ještě dnes",
+      "subtitle": "Každé oddělení je předpřipraveno se specializovanými AI agenty vyškolenými pro svou konkrétní roli — připraveno k nasazení za dny, ne měsíce.",
+      "agentsLabel": "AI Agenti",
+      "exploreCta": "Prozkoumat řešení",
+      "sales": {
+        "title": "Prodej",
+        "tagline": "Uzavírejte obchody 24/7 na autopilotu",
+        "functions": {
+          "f1": "Automatická kvalifikace a hodnocení leadů",
+          "f2": "Personalizované follow-up sekvence",
+          "f3": "Aktualizace CRM a správa pipeline"
+        },
+        "expandedDescription": "Naši prodejní AI agenti zvládají celý pipeline — od prvního kontaktu po uzavření obchodu. Kvalifikují leady, plánují schůzky, posílají follow-upy a aktualizují váš CRM v reálném čase.",
+        "agents": {
+          "salesAgent": "Prodejní agent",
+          "salesQualifier": "Kvalifikátor prodeje",
+          "leadValidator": "Validátor leadů"
+        }
+      },
+      "marketing": {
+        "title": "Marketing",
+        "tagline": "Tvořte a distribuujte obsah ve velkém",
+        "functions": {
+          "f1": "Tvorba vícekanálového obsahu",
+          "f2": "Plánování a engagement na sociálních sítích",
+          "f3": "Analytika a optimalizace kampaní"
+        },
+        "expandedDescription": "Marketingoví AI agenti vytvářejí blogové příspěvky, obsah pro sociální sítě, e-mailové kampaně a reklamní texty — vše v souladu s hlasem vaší značky a optimalizované pro engagement.",
+        "agents": {
+          "contentCreator": "Tvůrce obsahu",
+          "socialManager": "Správce sociálních sítí"
+        }
+      },
+      "support": {
+        "title": "Zákaznická podpora",
+        "tagline": "Okamžitá vícejazyčná péče o zákazníky",
+        "functions": {
+          "f1": "Okamžitá odpověď na dotazy 24/7",
+          "f2": "Plánování schůzek a rezervace",
+          "f3": "Směrování a eskalace tiketů"
+        },
+        "expandedDescription": "AI agenti podpory okamžitě odpovídají na dotazy zákazníků, rezervují schůzky, řeší stížnosti a eskalují složité problémy — v jakémkoli jazyce, nepřetržitě.",
+        "agents": {
+          "virtualReceptionist": "Virtuální recepční",
+          "bookingAgent": "Rezervační agent"
+        }
+      },
+      "operations": {
+        "title": "Provoz",
+        "tagline": "Zefektivněte interní procesy",
+        "functions": {
+          "f1": "Automatizace a monitoring procesů",
+          "f2": "Zadávání dat a reporting",
+          "f3": "Koordinace mezi odděleními"
+        },
+        "expandedDescription": "Provozní AI agenti automatizují interní workflow, generují reporty, monitorují KPI a udržují všechna oddělení synchronizovaná — eliminují úzká místa a manuální práci.",
+        "agents": {
+          "operationsAgent": "Provozní agent"
+        }
+      }
+    },
+    "beforeAfter": {
+      "badge": "Prokázané výsledky",
+      "title": "Transformace v číslech",
+      "subtitle": "Podívejte se na měřitelný dopad klonování vašich obchodních operací pomocí AI agentů — reálné metriky z reálných nasazení.",
+      "before": "Před",
+      "after": "Po",
+      "metrics": {
+        "operatingCosts": {
+          "title": "Provozní náklady",
+          "beforeValue": "100 %",
+          "afterValue": "30 %",
+          "improvementLabel": "snížení nákladů"
+        },
+        "responseTime": {
+          "title": "Doba odezvy",
+          "beforeValue": "24 h",
+          "afterValue": "3 s",
+          "improvementLabel": "rychlejší"
+        },
+        "availability": {
+          "title": "Dostupnost",
+          "beforeValue": "8 h/den",
+          "afterValue": "24/7",
+          "improvementLabel": "zvýšení dostupnosti"
+        },
+        "errorRate": {
+          "title": "Chybovost",
+          "beforeValue": "12 %",
+          "afterValue": "0,5 %",
+          "improvementLabel": "snížení chyb"
+        },
+        "capacity": {
+          "title": "Kapacita služeb",
+          "beforeValue": "1×",
+          "afterValue": "10×",
+          "improvementLabel": "větší kapacita"
+        },
+        "scalingSpeed": {
+          "title": "Rychlost škálování",
+          "beforeValue": "12 týdnů",
+          "afterValue": "2 dny",
+          "improvementLabel": "rychlejší škálování"
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integrace",
+      "title": "Propojí se s vašimi nástroji",
+      "subtitle": "Vaši AI agenti se bezproblémově integrují s platformami, které váš tým již používá — žádná migrace, žádné přerušení.",
+      "cta": "Zobrazit všechny integrace"
+    },
+    "faq": {
+      "badge": "Časté dotazy",
+      "title": "Časté dotazy o klonování firmy",
+      "subtitle": "Vše, co potřebujete vědět před zahájením vaší AI transformace.",
+      "questions": {
+        "q1": {
+          "question": "Jak dlouho trvá implementace?",
+          "answer": "Většina firem je plně funkční se svým týmem AI agentů do 2–4 týdnů. Časový plán závisí na složitosti vašich pracovních postupů a počtu oddělení. Začínáme pilotem v jednom oddělení, abyste výsledky viděli rychle, a poté škálujeme."
+        },
+        "q2": {
+          "question": "Která oddělení lze automatizovat?",
+          "answer": "Jakékoli oddělení s opakujícími se, pravidly řízenými úkoly je vhodným kandidátem: Prodej (kvalifikace leadů, follow-upy), Marketing (tvorba obsahu, plánování), Zákaznická podpora (dotazy, rezervace) a Provoz (zadávání dat, reporty, koordinace). Analyzujeme vaše konkrétní pracovní postupy, abychom nejdříve identifikovali příležitosti automatizace s nejvyšší návratností."
+        },
+        "q3": {
+          "question": "Je to bezpečné pro citlivá data?",
+          "answer": "Ano. Bezpečnost je zabudována do naší architektury od samého začátku. Používáme šifrování podnikové úrovně, řízení přístupu na základě rolí a možnosti rezidence dat. Naši AI agenti fungují v rámci vašeho stávajícího bezpečnostního perimetru a splňují požadavky GDPR, HIPAA a SOC 2. Vaše data nejsou nikdy použita k trénování modelů třetích stran."
+        },
+        "q4": {
+          "question": "Jak se integruje s našimi stávajícími nástroji?",
+          "answer": "Naši AI agenti se nativně propojují s více než 100 podnikovými nástroji včetně Salesforce, HubSpot, Slack, Microsoft 365, Google Workspace, Zapier a dalšími. Pokud používáte vlastní interní systém, vytvoříme dedikovanou integraci. Žádná migrace, žádné přerušení — váš tým pracuje stejně jako dosud."
+        },
+        "q5": {
+          "question": "Potřebujeme technický tým?",
+          "answer": "Ne. Staráme se o celou implementaci, konfiguraci a údržbu vašeho týmu AI agentů. Váš tým nepotřebuje žádné technické znalosti. Poskytujeme školení pro koncové uživatele a průběžnou podporu. Naším cílem je, aby se vaši lidé soustředili na strategii a kreativitu, nikoli na správu softwaru."
+        },
+        "q6": {
+          "question": "Co se stane se stávajícími zaměstnanci?",
+          "answer": "AI agenti zvládají opakující se a nízkohodnotné úkoly, čímž uvolňují váš tým, aby se soustředil na vysoce dopadovou, kreativní a strategickou práci. Naši klienti konzistentně hlásí vyšší spokojenost zaměstnanců, protože lidé přestanou dělat nudnou práci. Nikdo není nahrazen — všichni jsou povýšeni."
+        }
+      }
+    },
+    "finalCta": {
+      "badge": "Začněte Dnes",
+      "headline": "Připraveni Klonovat vaši",
+      "headlineAccent": "Firmu?",
+      "subtitle": "Rezervujte si bezplatný 30minutový strategický hovor. Zmapujeme vaše příležitosti pro automatizaci a ukážeme vám přesně, jak by mohla vypadat vaše firma poháněná AI.",
+      "schedulerLabel": "Naplánovat Bezplatný Strategický Hovor",
+      "trustItems": {
+        "t1": "Bezplatný 30min strategický hovor",
+        "t2": "Bez závazků",
+        "t3": "Live demo vašeho případu použití"
+      },
+      "orLabel": "nebo"
+    },
+    "caseStudyHighlight": {
+      "badge": "Skutečné výsledky klientů",
+      "title": "Podívejte se",
+      "titleAccent": "V praxi",
+      "subtitle": "Firmy již šetří čas a snižují náklady díky AI automatizaci podnikových procesů. Zde je jeden příklad.",
+      "cta": "Číst celou případovou studii",
+      "viewAll": "Zobrazit všechny případové studie"
+    },
+    "roiSection": {
+      "badge": "Kalkulačka ROI",
+      "title": "Zjistěte, kolik",
+      "titleAccent": "Můžete ušetřit",
+      "subtitle": "Zadejte údaje o svém týmu a uvidíte odhadované měsíční úspory díky AI automatizaci.",
+      "inputsHeading": "Údaje o vašem podnikání",
+      "resultsHeading": "Vaše odhadované úspory",
+      "inputs": {
+        "employees": "Počet zaměstnanců",
+        "monthlyCost": "Průměrné měsíční náklady na zaměstnance",
+        "repetitiveTasks": "% času na opakující se úkoly"
+      },
+      "results": {
+        "monthlySavings": "MĚSÍČNÍ ÚSPORY",
+        "hoursSaved": "UŠETŘENÉ HODINY / MĚSÍC",
+        "annualSavings": "ROČNÍ ÚSPORY"
+      },
+      "cta": "Zjistěte, kolik můžete ušetřit",
+      "ctaSubtext": "Chcete přesný výpočet pro vaše podnikání? Naplánujte si bezplatný 30minutový audit.",
+      "disclaimer": "* Odhady předpokládají 62% efektivitu automatizace identifikovaných opakujících se úkolů. Individuální výsledky se liší v závislosti na složitosti procesů."
+    }
+  }
+}

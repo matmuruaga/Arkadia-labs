@@ -43,7 +43,7 @@ const TRUST_KEYS = [
 // ============================================================================
 
 const CloneYourBusinessFinalCta: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('clone-your-business');
   const navigate = useNavigate();
   const { lang } = useParams<{ lang: string }>();
   const sectionRef = useRef<HTMLElement>(null);

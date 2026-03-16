@@ -83,7 +83,7 @@ const buildJsonLd = (lang: string, title: string, description: string) => [
 ];
 
 const CloneYourBusinessPage = () => {
-  const { i18n, t } = useTranslation();
+  const { i18n, t } = useTranslation('seo');
   const location = useLocation();
   const { lang } = useParams<{ lang: string }>();
   const currentLang = lang || SITE_CONFIG.defaultLocale;
@@ -140,7 +140,7 @@ const CloneYourBusinessPage = () => {
         <CloneYourBusinessRoiSection />
       </Suspense>
 
-      <Suspense fallback={<div className="h-48 flex items-center justify-center bg-[#070B14]"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
+      <Suspense fallback={<div className="h-48 flex items-center justify-center bg-slate-50"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
         <CloneYourBusinessCta />
       </Suspense>
 

@@ -28,7 +28,7 @@ const FAQ_KEYS = [
 // ============================================================================
 
 const CloneYourBusinessFaq: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('clone-your-business');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   // FAQPage JSON-LD for rich results and AEO

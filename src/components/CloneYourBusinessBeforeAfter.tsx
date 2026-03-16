@@ -121,7 +121,7 @@ const MetricCard: React.FC<{ metric: Metric; index: number }> = ({
   metric,
   index,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('clone-your-business');
   const Icon = metric.icon;
 
   return (
@@ -204,7 +204,7 @@ const MetricCard: React.FC<{ metric: Metric; index: number }> = ({
 // ============================================================================
 
 const CloneYourBusinessBeforeAfter: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('clone-your-business');
   const sectionRef = useRef<HTMLElement>(null);
   const [tracked, setTracked] = useState(false);
 

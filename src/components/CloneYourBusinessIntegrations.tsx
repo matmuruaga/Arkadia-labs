@@ -122,7 +122,7 @@ const MarqueeRow: React.FC<MarqueeRowProps> = ({
 // ============================================================================
 
 const CloneYourBusinessIntegrations: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('clone-your-business');
   const navigate = useNavigate();
   const sectionRef = useRef<HTMLElement>(null);
   const [tracked, setTracked] = useState(false);

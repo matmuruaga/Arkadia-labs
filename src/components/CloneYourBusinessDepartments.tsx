@@ -119,7 +119,7 @@ const itemVariants = {
 // ============================================================================
 
 const DepartmentCard: React.FC<{ dept: Department }> = ({ dept }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('clone-your-business');
   const navigate = useNavigate();
   const { lang } = useParams<{ lang: string }>();
   const Icon = dept.icon;
@@ -225,7 +225,7 @@ const DepartmentCard: React.FC<{ dept: Department }> = ({ dept }) => {
 // ============================================================================
 
 const CloneYourBusinessDepartments: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('clone-your-business');
   const sectionRef = useRef<HTMLElement>(null);
   const [tracked, setTracked] = useState(false);
 

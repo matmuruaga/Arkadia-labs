@@ -100,7 +100,7 @@ const itemVariants = {
 // ============================================================================
 
 const CloneYourBusinessProblem: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('clone-your-business');
   const sectionRef = useRef<HTMLElement>(null);
   const [tracked, setTracked] = useState(false);
 

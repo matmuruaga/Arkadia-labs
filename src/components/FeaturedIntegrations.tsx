@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 export const FeaturedIntegrations = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   return (
     <section className="bg-slate-50 py-20 md:py-24">

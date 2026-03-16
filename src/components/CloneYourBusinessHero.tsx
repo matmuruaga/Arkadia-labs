@@ -8,7 +8,6 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 import {
   Building2,
-  Users,
   Phone,
   Megaphone,
   Headphones,
@@ -83,9 +82,10 @@ const orgNodes: OrgNode[] = [
 /** Single org chart node that flips from human → AI */
 const OrgChartNode: React.FC<{
   node: OrgNode;
+  isScanning: boolean;
   isTransformed: boolean;
-}> = ({ node, isTransformed }) => {
-  const { t } = useTranslation();
+}> = ({ node, isScanning, isTransformed }) => {
+  const { t } = useTranslation('clone-your-business');
   const HumanIcon = node.humanIcon;
   const AiIcon = node.aiIcon;
 
@@ -105,42 +105,74 @@ const OrgChartNode: React.FC<{
           'relative w-[130px] sm:w-[140px] rounded-2xl border bg-white/95 backdrop-blur-sm p-3 shadow-md transition-all duration-700',
           isTransformed
             ? 'shadow-lg border-emerald-200 ring-1 ring-emerald-100'
+            : isScanning
+            ? 'border-cyan-300 shadow-cyan-100'
             : 'border-slate-200'
         )}
       >
         {/* Icon + Label */}
         <div className="flex flex-col items-center gap-2">
-          <div
-            className={cn(
-              'w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-700',
-              isTransformed
-                ? 'bg-gradient-to-br from-emerald-50 to-teal-50'
-                : node.bg
-            )}
-          >
-            <AnimatePresence mode="wait">
-              {isTransformed ? (
+          {/* Icon container — scanning ring is a separate absolutely-positioned element */}
+          <div className="relative">
+            {/* Scanning pulse ring (opacity-only, no blur — better mobile perf) */}
+            <AnimatePresence>
+              {isScanning && !isTransformed && (
                 <motion.div
-                  key="ai"
-                  initial={{ rotateY: 90, opacity: 0 }}
-                  animate={{ rotateY: 0, opacity: 1 }}
-                  exit={{ rotateY: -90, opacity: 0 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <AiIcon className="w-5 h-5 text-emerald-600" />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="human"
-                  initial={{ rotateY: -90, opacity: 0 }}
-                  animate={{ rotateY: 0, opacity: 1 }}
-                  exit={{ rotateY: 90, opacity: 0 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <HumanIcon className={cn('w-5 h-5', node.color)} />
-                </motion.div>
+                  key="scan-ring"
+                  className="absolute -inset-1.5 rounded-xl border-2 border-cyan-400"
+                  initial={{ opacity: 0, scale: 0.85 }}
+                  animate={{ opacity: [0, 0.8, 0.2, 0.8, 0], scale: [0.85, 1.1, 1, 1.1, 1.05] }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.6, times: [0, 0.25, 0.5, 0.75, 1] }}
+                />
               )}
             </AnimatePresence>
+
+            <motion.div
+              className={cn(
+                'w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-700',
+                isTransformed
+                  ? 'bg-gradient-to-br from-emerald-50 to-teal-50'
+                  : isScanning
+                  ? 'bg-cyan-50'
+                  : node.bg
+              )}
+              // Subtle scale pulse during scanning phase
+              animate={
+                isScanning && !isTransformed
+                  ? { scale: [1, 0.85, 1] }
+                  : { scale: 1 }
+              }
+              transition={
+                isScanning && !isTransformed
+                  ? { duration: 0.4, ease: 'easeInOut' }
+                  : { duration: 0.2 }
+              }
+            >
+              <AnimatePresence mode="wait">
+                {isTransformed ? (
+                  <motion.div
+                    key="ai"
+                    initial={{ rotateY: 90, opacity: 0 }}
+                    animate={{ rotateY: 0, opacity: 1 }}
+                    exit={{ rotateY: -90, opacity: 0 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <AiIcon className="w-5 h-5 text-emerald-600" />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="human"
+                    initial={{ rotateY: -90, opacity: 0 }}
+                    animate={{ rotateY: 0, opacity: 1 }}
+                    exit={{ rotateY: 90, opacity: 0 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <HumanIcon className={cn('w-5 h-5', node.color)} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           </div>
 
           <p className="text-xs font-semibold text-slate-800 text-center leading-tight">
@@ -165,10 +197,19 @@ const OrgChartNode: React.FC<{
           </AnimatePresence>
         </div>
 
-        {/* Pulsing glow when transformed */}
-        {isTransformed && (
-          <div className="absolute -inset-1 rounded-2xl bg-emerald-400/10 blur-md -z-10 animate-pulse" />
-        )}
+        {/* Opacity-only pulse glow when transformed (no blur — better mobile perf) */}
+        <AnimatePresence>
+          {isTransformed && (
+            <motion.div
+              key="glow"
+              className="absolute -inset-1 rounded-2xl bg-emerald-400/15 -z-10"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0.15, 0.4, 0.15] }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            />
+          )}
+        </AnimatePresence>
       </div>
     </motion.div>
   );
@@ -200,20 +241,60 @@ const TrustBadge: React.FC<{
 // ============================================================================
 
 const CloneYourBusinessHero: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('clone-your-business');
   const navigate = useNavigate();
   const { lang } = useParams<{ lang: string }>();
   const sectionRef = useRef<HTMLElement>(null);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
-  const [isTransformed, setIsTransformed] = useState(false);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+  const [hubTransformed, setHubTransformed] = useState(false);
+  const [scanningNodes, setScanningNodes] = useState<Set<string>>(new Set());
+  const [transformedNodes, setTransformedNodes] = useState<Set<string>>(new Set());
   const [tracked, setTracked] = useState(false);
 
-  // Trigger transformation after the section is in view
+  // Trigger progressive transformation after the section is in view.
+  // Timeline (ms from section visible):
+  //   1800 → hub transforms
+  //   2300 → node[0] scans  |  2700 → node[0] done, node[1] scans
+  //   3100 → node[1] done,  node[2] scans
+  //   3500 → node[2] done,  node[3] scans
+  //   3900 → node[3] done
   useEffect(() => {
-    if (isInView) {
-      const timer = setTimeout(() => setIsTransformed(true), 1800);
-      return () => clearTimeout(timer);
+    if (!isInView) return;
+
+    // Respect OS-level reduced-motion preference: skip to final state immediately.
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      setHubTransformed(true);
+      setScanningNodes(new Set(orgNodes.map((n) => n.id)));
+      setTransformedNodes(new Set(orgNodes.map((n) => n.id)));
+      return;
     }
+
+    const timers: ReturnType<typeof setTimeout>[] = [];
+
+    // Hub transforms first
+    timers.push(setTimeout(() => setHubTransformed(true), 1800));
+
+    // Each node: scan starts 400ms before its transform completes
+    orgNodes.forEach((node, index) => {
+      const scanAt = 2300 + index * 400;
+      const transformAt = scanAt + 400;
+
+      timers.push(
+        setTimeout(
+          () => setScanningNodes((prev) => new Set(prev).add(node.id)),
+          scanAt
+        )
+      );
+      timers.push(
+        setTimeout(
+          () => setTransformedNodes((prev) => new Set(prev).add(node.id)),
+          transformAt
+        )
+      );
+    });
+
+    return () => timers.forEach(clearTimeout);
   }, [isInView]);
 
   // Track section view
@@ -293,42 +374,129 @@ const CloneYourBusinessHero: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="relative">
-              {/* Pulsing rings */}
-              {isTransformed && (
-                <>
-                  <div
-                    className="absolute w-20 h-20 rounded-2xl border border-emerald-200/40 -top-1.5 -left-1.5 animate-ping"
-                    style={{ animationDuration: '3s' }}
+              {/* Pulsing ring — opacity-only, no blur */}
+              <AnimatePresence>
+                {hubTransformed && (
+                  <motion.div
+                    key="hub-ring"
+                    className="absolute w-20 h-20 rounded-2xl border border-emerald-300/50 -top-1.5 -left-1.5"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: [0, 0.6, 0], scale: [0.8, 1.15, 1.3] }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1.8, repeat: Infinity, ease: 'easeOut' }}
                   />
-                </>
-              )}
-              <div
+                )}
+              </AnimatePresence>
+
+              {/* Hub icon container — scale-pulse on transform */}
+              <motion.div
                 className={cn(
                   'w-16 h-16 rounded-2xl flex items-center justify-center shadow-xl transition-all duration-700 border',
-                  isTransformed
+                  hubTransformed
                     ? 'bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 border-emerald-500/30 shadow-emerald-600/20'
                     : 'bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 border-slate-700/50 shadow-slate-900/20'
                 )}
+                animate={hubTransformed ? { scale: [1, 0.85, 1.1, 1] } : { scale: 1 }}
+                transition={hubTransformed ? { duration: 0.5, ease: 'easeInOut' } : {}}
               >
-                {isTransformed ? (
-                  <Zap className="w-7 h-7 text-white" />
-                ) : (
-                  <Building2 className="w-7 h-7 text-white" />
-                )}
-              </div>
+                <AnimatePresence mode="wait">
+                  {hubTransformed ? (
+                    <motion.div
+                      key="hub-ai"
+                      initial={{ rotateY: 90, opacity: 0 }}
+                      animate={{ rotateY: 0, opacity: 1 }}
+                      exit={{ rotateY: -90, opacity: 0 }}
+                      transition={{ duration: 0.35 }}
+                    >
+                      <Zap className="w-7 h-7 text-white" />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="hub-human"
+                      initial={{ rotateY: -90, opacity: 0 }}
+                      animate={{ rotateY: 0, opacity: 1 }}
+                      exit={{ rotateY: 90, opacity: 0 }}
+                      transition={{ duration: 0.35 }}
+                    >
+                      <Building2 className="w-7 h-7 text-white" />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
             </div>
-            <p className="mt-2 text-xs font-bold text-slate-700">
-              {isTransformed
-                ? t('cloneYourBusiness.hero.hubTransformed')
-                : t('cloneYourBusiness.hero.hubOriginal')}
-            </p>
+
+            {/* Hub label crossfade */}
+            <div className="mt-2 h-4 relative flex items-center justify-center">
+              <AnimatePresence mode="wait">
+                {hubTransformed ? (
+                  <motion.p
+                    key="hub-label-ai"
+                    className="text-xs font-bold text-emerald-600 absolute"
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -4 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {t('cloneYourBusiness.hero.hubTransformed')}
+                  </motion.p>
+                ) : (
+                  <motion.p
+                    key="hub-label-human"
+                    className="text-xs font-bold text-slate-700 absolute"
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -4 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {t('cloneYourBusiness.hero.hubOriginal')}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </div>
           </motion.div>
 
           {/* Connector line hub → departments */}
           <div className="hidden md:flex items-center justify-center w-full max-w-lg">
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-slate-300 to-slate-300" />
-            <div className="w-2 h-2 rounded-full bg-slate-300 mx-1" />
-            <div className="flex-1 h-px bg-gradient-to-l from-transparent via-slate-300 to-slate-300" />
+            {/* Left arm */}
+            <div className="relative flex-1 h-px">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-300 to-slate-300" />
+              <AnimatePresence>
+                {hubTransformed && (
+                  <motion.div
+                    key="connector-left"
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-400 to-emerald-400 origin-right"
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                    style={{ transformOrigin: 'right' }}
+                  />
+                )}
+              </AnimatePresence>
+            </div>
+            <div
+              className={cn(
+                'w-2 h-2 rounded-full mx-1 transition-colors duration-500',
+                hubTransformed ? 'bg-emerald-400' : 'bg-slate-300'
+              )}
+            />
+            {/* Right arm */}
+            <div className="relative flex-1 h-px">
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-slate-300 to-slate-300" />
+              <AnimatePresence>
+                {hubTransformed && (
+                  <motion.div
+                    key="connector-right"
+                    className="absolute inset-0 bg-gradient-to-l from-transparent via-emerald-400 to-emerald-400"
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                    style={{ transformOrigin: 'left' }}
+                  />
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
           {/* Department nodes grid */}
@@ -337,14 +505,15 @@ const CloneYourBusinessHero: React.FC = () => {
               <OrgChartNode
                 key={node.id}
                 node={node}
-                isTransformed={isTransformed}
+                isScanning={scanningNodes.has(node.id)}
+                isTransformed={transformedNodes.has(node.id)}
               />
             ))}
           </div>
 
-          {/* Transformation status label */}
+          {/* Transformation status label — only after all nodes are done */}
           <AnimatePresence>
-            {isTransformed && (
+            {transformedNodes.size === orgNodes.length && (
               <motion.div
                 className="mt-5 flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200"
                 initial={{ opacity: 0, y: 10 }}

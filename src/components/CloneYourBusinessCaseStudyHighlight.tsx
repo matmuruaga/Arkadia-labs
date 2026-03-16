@@ -48,7 +48,7 @@ const itemVariants = {
 // ============================================================================
 
 const CloneYourBusinessCaseStudyHighlight: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('clone-your-business');
   const location = useLocation();
   const currentLang = location.pathname.split('/')[1] || 'en';
   const sectionRef = useRef<HTMLElement>(null);

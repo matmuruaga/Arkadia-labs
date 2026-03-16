@@ -1,7 +1,7 @@
 // src/components/CloneYourBusinessCta.tsx
 // CTA section for /clone-your-business page.
 // Replaces pricing with a custom-solutions pitch + dual CTAs.
-// Visual: dark gradient background with glassmorphism card.
+// Visual: light background with sky/teal accents matching Solutions palette.
 
 import { useRef, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
@@ -43,7 +43,7 @@ const TRUST_KEYS = [
 // ============================================================================
 
 const CloneYourBusinessCta: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('clone-your-business');
   const navigate = useNavigate();
   const { lang } = useParams<{ lang: string }>();
   const sectionRef = useRef<HTMLElement>(null);
@@ -63,27 +63,20 @@ const CloneYourBusinessCta: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 md:py-32 px-4 overflow-hidden bg-[#070B14]"
+      className="relative py-24 md:py-32 px-4 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50"
       aria-labelledby="cta-heading"
     >
-      {/* ── Background gradients ── */}
+      {/* ── Background decoration ── */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 overflow-hidden"
       >
-        {/* Radial glow — top-left */}
-        <div className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full bg-blue-600/20 blur-[120px]" />
-        {/* Radial glow — bottom-right */}
-        <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-purple-600/15 blur-[100px]" />
-        {/* Subtle grid overlay */}
-        <div
-          className="absolute inset-0 opacity-[0.035]"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
-            backgroundSize: '48px 48px',
-          }}
-        />
+        {/* Radial glow — top-left (sky) */}
+        <div className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full bg-sky-200/40 blur-[120px]" />
+        {/* Radial glow — bottom-right (teal) */}
+        <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-teal-200/30 blur-[100px]" />
+        {/* Accent line at top */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-300/50 to-transparent" />
       </div>
 
       {/* ── Content ── */}
@@ -96,7 +89,7 @@ const CloneYourBusinessCta: React.FC = () => {
         >
           {/* Badge */}
           <motion.div variants={itemVariants}>
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase border border-blue-500/30 bg-blue-500/10 text-blue-400 mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase border border-sky-200 bg-sky-50 text-sky-600 mb-6">
               <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
               {t('cloneYourBusiness.cta.badge')}
             </span>
@@ -106,10 +99,10 @@ const CloneYourBusinessCta: React.FC = () => {
           <motion.h2
             id="cta-heading"
             variants={itemVariants}
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-white mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-slate-900 mb-4"
           >
             {t('cloneYourBusiness.cta.headline')}{' '}
-            <span className="crafted-gradient-text">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-teal-500">
               {t('cloneYourBusiness.cta.headlineAccent')}
             </span>
           </motion.h2>
@@ -117,21 +110,21 @@ const CloneYourBusinessCta: React.FC = () => {
           {/* Subtitle */}
           <motion.p
             variants={itemVariants}
-            className="text-gray-400 text-lg md:text-xl max-w-2xl mb-10"
+            className="text-slate-500 text-lg md:text-xl max-w-2xl mb-10"
           >
             {t('cloneYourBusiness.cta.subtitle')}
           </motion.p>
 
-          {/* ── Glass card ── */}
+          {/* ── Card ── */}
           <motion.div
             variants={itemVariants}
-            className="w-full max-w-3xl rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-12 shadow-2xl"
+            className="w-full max-w-3xl rounded-2xl border border-slate-200/60 bg-white/80 backdrop-blur-sm p-8 md:p-12 shadow-xl shadow-sky-500/5"
           >
             {/* Trust points */}
             <ul className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 mb-10">
               {TRUST_KEYS.map((key) => (
-                <li key={key} className="flex items-center gap-2 text-sm text-gray-300">
-                  <CheckCircle2 className="w-4 h-4 text-green-400 shrink-0" aria-hidden="true" />
+                <li key={key} className="flex items-center gap-2 text-sm text-slate-600">
+                  <CheckCircle2 className="w-4 h-4 text-teal-500 shrink-0" aria-hidden="true" />
                   {t(key)}
                 </li>
               ))}
@@ -148,11 +141,12 @@ const CloneYourBusinessCta: React.FC = () => {
                   px-7 py-3.5
                   text-base font-semibold text-white
                   rounded-xl
-                  bg-gradient-to-r from-blue-600 to-indigo-600
-                  hover:from-blue-500 hover:to-indigo-500
-                  shadow-lg shadow-blue-700/30
+                  bg-gradient-to-r from-sky-500 to-teal-500
+                  hover:from-sky-400 hover:to-teal-400
+                  shadow-lg shadow-sky-500/20
+                  hover:shadow-xl hover:-translate-y-0.5
                   transition-all duration-200
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400
                 "
               />
 
@@ -163,23 +157,24 @@ const CloneYourBusinessCta: React.FC = () => {
                 className="
                   inline-flex items-center justify-center gap-2
                   px-7 py-3.5
-                  text-base font-semibold text-white
+                  text-base font-semibold text-slate-700
                   rounded-xl
-                  border border-white/20 bg-white/5
-                  hover:bg-white/10 hover:border-white/30
+                  border border-slate-200 bg-white
+                  hover:bg-slate-50 hover:border-slate-300
+                  shadow-sm
                   transition-all duration-200
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400
                 "
                 aria-label={t('cloneYourBusiness.cta.secondaryCta')}
               >
-                <MessageCircle className="w-5 h-5" aria-hidden="true" />
+                <MessageCircle className="w-5 h-5 text-sky-500" aria-hidden="true" />
                 {t('cloneYourBusiness.cta.secondaryCta')}
-                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                <ArrowRight className="w-4 h-4 text-slate-400" aria-hidden="true" />
               </button>
             </div>
 
             {/* No-pricing note */}
-            <p className="mt-6 text-xs text-gray-500 text-center">
+            <p className="mt-6 text-xs text-slate-400 text-center">
               {t('cloneYourBusiness.cta.noPricingNote')}
             </p>
           </motion.div>

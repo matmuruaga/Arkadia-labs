@@ -79,7 +79,7 @@ const itemVariants = {
 // ============================================================================
 
 const StepCard: React.FC<{ step: Step; isLast: boolean }> = ({ step, isLast }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('clone-your-business');
   const Icon = step.icon;
 
   return (
@@ -142,7 +142,7 @@ const StepCard: React.FC<{ step: Step; isLast: boolean }> = ({ step, isLast }) =
 // ============================================================================
 
 const CloneYourBusinessHowItWorks: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('clone-your-business');
   const sectionRef = useRef<HTMLElement>(null);
   const [tracked, setTracked] = useState(false);
 
