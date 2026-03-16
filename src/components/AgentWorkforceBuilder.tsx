@@ -1,11 +1,186 @@
 // src/components/AgentWorkforceBuilder.tsx
-// v3 — Clean grid-based scroll animation.
+// v4 — Multi-layer parallax scroll experience (PLAN — see below).
 // Layout: hub (top-center) → 4 department columns → agent cards below each dept.
-// No macro-zoom, no percentage-based absolute positioning.
 // Desktop only — hidden on mobile via `hidden md:block`.
+//
+// ============================================================================
+// PARALLAX ANIMATION DESIGN PLAN
+// ============================================================================
+//
+// GOAL: Transform the current linear scroll-reveal (opacity + translateY) into
+// an immersive multi-layer parallax where each visual layer moves at a different
+// speed, creating cinematic depth. Elements don't just appear — they arrive with
+// weight, scale, and blur that signals their distance from the viewer.
+//
+// ARCHITECTURE: 7 parallax layers, each assigned a speed multiplier relative
+// to the scroll container's 350vh height. All driven by a single
+// `scrollYProgress` MotionValue (0 → 1) via `useTransform`.
+//
+// ── LAYER 1 — BACKGROUND ORBS (multiplier ≈ 0.2×, slowest) ──────────────────
+//   The three blurred color orbs drift upward at ~20% of scroll speed.
+//   They appear "far away" — this is the deepest visual plane.
+//
+//   blue orb  (top-left)  : y  0 → -70px  over 100% scroll
+//   teal orb  (bot-right) : y  0 → -45px  over 100% scroll
+//   orange orb (mid-right): y  0 → -90px  over 100% scroll
+//
+//   API: style={{ y: useTransform(scrollYProgress, [0, 1], [0, -70]) }}
+//
+// ── LAYER 2 — SECTION HEADING (multiplier ≈ 0.3×) ───────────────────────────
+//   Heading and subtitle use whileInView (existing) for initial entry but also
+//   get a gentle upward drift via scrollYProgress: y 0 → -30px over 100%.
+//   Keeps it readable throughout the scroll journey.
+//
+// ── LAYER 3 — HUB / CENTRAL NODE (multiplier ≈ 0.5×) ───────────────────────
+//   ENTRANCE (0% → 8%):
+//     opacity:  0 → 1
+//     scale:    0.72 → 1         (zooms in from "far away")
+//     filter:   blur(8px) → 0   (comes into focus as it approaches)
+//     y:        -40px → 0       (descends from above)
+//
+//   POST-ENTRANCE drift (8% → 60%):
+//     y: 0 → -20px  at 0.5× scroll speed (hub "floats up" slower than cards)
+//     scale: 1 → 0.96            (very subtle shrink as we scroll past)
+//
+//   This creates the sensation that the hub is on a mid-depth plane.
+//
+//   API: useTransform for opacity/scale/y; useMotionTemplate for filter blur
+//     const hubBlur = useTransform(scrollYProgress, [0, 0.08], [8, 0])
+//     const hubFilter = useMotionTemplate`blur(${hubBlur}px)`
+//     style={{ opacity: hubOpacity, scale: hubScale, y: hubY, filter: hubFilter }}
+//
+// ── LAYER 4 — SVG CONNECTOR LINES (draw-on, scroll-synchronized) ────────────
+//   Hub → dept bezier lines:
+//     pathLength: 0 → 1  between [8%, 22%]  (staggered +1% per dept)
+//     strokeOpacity: 0 → 1 in first 30% of draw, stays 1
+//     Color: each dept's hex color
+//
+//   Dept → agent straight lines:
+//     pathLength: 0 → 1  between [38%, 55%]  (one line per agent card)
+//     Stagger matches agent card appearance
+//
+//   Post-draw glow effect:
+//     After a line finishes drawing, its stroke gets a pulsing opacity CSS
+//     animation (0.8 → 1 → 0.8, 2s infinite ease-in-out) to simulate
+//     live data flowing through the connection.
+//
+//   API: style={{ pathLength: hubLineLengths[di], strokeDasharray: '0 1' }}
+//
+// ── LAYER 5 — DEPARTMENT BADGES (multiplier ≈ 0.75×) ───────────────────────
+//   Each dept badge uses a CINEMATIC 3-axis entrance:
+//     opacity:  0 → 1
+//     scale:    0.60 → 1         (strong zoom-in)
+//     rotateX:  25deg → 0        (tips forward like a card falling face-on)
+//     y:        +22px → 0
+//     filter:   blur(4px) → 0
+//
+//   Stagger: dept[0] starts at 18%, each subsequent dept +5% later
+//     dept 0 (Sales):      [18%, 28%]
+//     dept 1 (Service):    [23%, 33%]
+//     dept 2 (Marketing):  [28%, 38%]
+//     dept 3 (Operations): [33%, 43%]
+//
+//   Post-entrance subtle Y drift: each dept drifts up at 0.75× scroll speed
+//   Outer columns (0 & 3) receive +4px extra Y offset (more "depth" at edges)
+//
+//   API: useTransform for opacity/scale/y; style={{ transformPerspective: 800 }}
+//        on the grid container to enable rotateX
+//
+// ── LAYER 6 — AGENT CARDS (multiplier ≈ 1×, foreground) ────────────────────
+//   Agent cards are on the nearest visual plane — they move at full speed.
+//   Each card entrance:
+//     opacity:  0 → 1
+//     scale:    0.90 → 1         (gentler scale than depts)
+//     y:        +28px → 0
+//     x:        ±12px → 0        (outer cols lean in: leftmost col +x, rightmost -x)
+//
+//   Stagger formula: start = 0.38 + deptIdx * 0.07 + agentIdx * 0.045
+//     Cards in the same dept cascade top-to-bottom
+//     Cards across depts cascade left-to-right within their depth tier
+//
+//   KPI reveal: unchanged — swaps '--' for real value when revealThreshold passed
+//
+//   No post-entrance parallax (they're in the foreground, they stay put)
+//
+// ── LAYER 7 — SUMMARY STATS + CTA (multiplier ≈ 0.8×) ──────────────────────
+//   ENTRANCE (80% → 92%):
+//     opacity: 0 → 1
+//     scale:   0.96 → 1
+//     y:       +24px → 0
+//
+//   Stats counter: each stat value gets a fast blur 2px → 0 on entry
+//
+// ── SCROLL TIMELINE SUMMARY ──────────────────────────────────────────────────
+//
+//  Progress  Duration  Event
+//  ────────  ────────  ──────────────────────────────────────────────────────
+//  0% – 5%     5%      Scroll hint fades out
+//  0% – 8%     8%      Hub entrance: scale + blur + opacity + Y
+//                      Background orbs begin slow drift (throughout)
+//  3%+          -      Section analytics tracking fires (existing)
+//  8% – 22%   14%      SVG hub→dept lines draw (staggered +1% per dept)
+//  18% – 43%  25%      Dept badges cascade: rotateX + scale + blur + Y
+//  38% – 72%  34%      Agent cards cascade: scale + X + Y + opacity
+//  48% – 70%  22%      SVG dept→agent lines draw (matches card stagger)
+//  80% – 92%  12%      Summary stats + CTA entrance
+//  0% – 100%   -       Orbs, hub, heading continuous parallax drift
+//
+// ── FRAMER MOTION APIS USED ──────────────────────────────────────────────────
+//
+//  useScroll({ target: ref, offset: ['start start', 'end end'] })
+//    → scrollYProgress: MotionValue<number> [0, 1]
+//
+//  useTransform(scrollYProgress, inputRange[], outputRange[])
+//    → Maps progress to opacity, scale, y, x, rotateX, blur values
+//
+//  useMotionTemplate`blur(${motionVal}px)`
+//    → Constructs a CSS filter string from a MotionValue
+//    → Import: import { useMotionTemplate } from 'framer-motion'
+//
+//  style={{ pathLength: mv, strokeDasharray: '0 1' }}
+//    → SVG draw-on via pathLength MotionValue (already implemented)
+//
+//  style={{ transformPerspective: 800 }}
+//    → Enables rotateX on dept badges for the "tipping forward" effect
+//    → Apply to the 4-column grid container
+//
+// ── IMPLEMENTATION NOTES ─────────────────────────────────────────────────────
+//
+//  1. Hub blur: replace hubY/hubOpacity with hubOpacity + hubScale + hubY +
+//     hubFilter (useMotionTemplate). The `filter` style prop accepts a
+//     MotionValue string directly in Framer Motion.
+//
+//  2. rotateX on depts: add `hubScale`-like transforms. Each dept gets
+//     rotateX and scale MotionValues. The parent grid needs
+//     `style={{ perspective: '800px' }}` as a plain style (not MotionValue)
+//     OR wrap each dept column in a `<motion.div style={{ perspective: 800 }}>`
+//
+//  3. X convergence on agent cards: leftmost dept (di=0) gets
+//     x: useTransform([start, start+0.07], [+14, 0])
+//     rightmost dept (di=3) gets x: useTransform([...], [-14, 0])
+//     middle depts (di=1,2) get no X offset (they're already centered)
+//
+//  4. Background orb parallax: the orbs are currently static CSS divs inside
+//     a pointer-events-none overlay. Wrap each in a <motion.div> and apply
+//     the corresponding y MotionValue.
+//
+//  5. Post-draw SVG glow: add a `<animate>` SVG element inside each drawn
+//     `<motion.path>` OR add a CSS `@keyframes glow-pulse` class that triggers
+//     once pathLength reaches 1 (via onUpdate callback setting a state flag).
+//
+//  6. Performance: all transforms use GPU-accelerated properties (opacity,
+//     transform, filter). No width/height/top/left animations.
+//     On reduced-motion: skip blur and rotateX, keep simple opacity fade.
+//
+// ── NEXT STEP ────────────────────────────────────────────────────────────────
+//
+//  This comment is the DESIGN PLAN. Implementation in the next task (v4 build).
+//  The component below remains v3 (functional baseline) until v4 is applied.
+//
+// ============================================================================
 
 import React, { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
+import { motion, useScroll, useTransform, useMotionTemplate, MotionValue } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 import {
@@ -211,19 +386,24 @@ const AgentWorkforceBuilder: React.FC = () => {
     return unsub;
   }, [scrollYProgress, tracked]);
 
-  // ── Animation timeline ────────────────────────────────────────────────────
-  //
-  // 0%  –  8%  : Hub fades + slides in from above
-  // 8%  – 20%  : Hub→Dept connector lines draw down
-  // 18% – 40%  : Department badges appear (staggered)
-  // 38% – 75%  : Agent cards appear below their dept (staggered)
-  // 80% – 92%  : Summary stats + CTA fade in
-  // 0%  –  5%  : Scroll hint fades out
-  // ─────────────────────────────────────────────────────────────────────────
+  // ── Animation timeline (v4 — multi-layer parallax) ───────────────────────
 
-  // Hub
+  // ── Background orb parallax ───────────────────────────────────────────────
+  const orbBlueY   = useTransform(scrollYProgress, [0, 1], [0, -70]);
+  const orbTealY   = useTransform(scrollYProgress, [0, 1], [0, -45]);
+  const orbOrangeY = useTransform(scrollYProgress, [0, 1], [0, -90]);
+
+  // ── Section heading drift ─────────────────────────────────────────────────
+  const headingY = useTransform(scrollYProgress, [0, 1], [0, -30]);
+
+  // ── Hub (Layer 3) ─────────────────────────────────────────────────────────
+  // Entrance 0%→8%: opacity + scale + blur + Y
+  // Post-entrance 8%→60%: gentle Y drift + subtle shrink
   const hubOpacity = useTransform(scrollYProgress, [0, 0.08], [0, 1]);
-  const hubY = useTransform(scrollYProgress, [0, 0.08], [-30, 0]);
+  const hubScale   = useTransform(scrollYProgress, [0, 0.08, 0.60], [0.72, 1, 0.96]);
+  const hubY       = useTransform(scrollYProgress, [0, 0.08, 0.60], [-40, 0, -20]);
+  const hubBlur    = useTransform(scrollYProgress, [0, 0.08], [8, 0]);
+  const hubFilter  = useMotionTemplate`blur(${hubBlur}px)`;
 
   // Hub → dept lines (one per dept, staggered slightly)
   const hubLineLengths = depts.map((_, i) =>
@@ -231,21 +411,35 @@ const AgentWorkforceBuilder: React.FC = () => {
     useTransform(scrollYProgress, [0.08 + i * 0.01, 0.22 + i * 0.01], [0, 1])
   );
 
-  // Department badge animations (staggered)
+  // ── Department badges (Layer 5) ───────────────────────────────────────────
+  // Cinematic 3-axis entrance: rotateX + scale + blur + Y
+  // Stagger: dept 0 @ [18%,28%], dept 1 @ [23%,33%], etc.
   const deptAnims = depts.map((_, i) => {
     const start = 0.18 + i * 0.05;
-    return {
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      opacity: useTransform(scrollYProgress, [start, start + 0.07], [0, 1]),
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      y: useTransform(scrollYProgress, [start, start + 0.07], [18, 0]),
-      // Dept → agent connector line length
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      lineLength: useTransform(scrollYProgress, [start + 0.06, start + 0.16], [0, 1]),
-    };
+    const end   = start + 0.10;
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
+    // Post-entrance drift at 0.75× speed; outer cols get +4px extra
+    const driftMag = i === 0 || i === 3 ? -49 : -45;
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const y       = useTransform(scrollYProgress, [start, end, 1.0], [22, 0, driftMag]);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const scale   = useTransform(scrollYProgress, [start, end], [0.60, 1]);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const rotateX = useTransform(scrollYProgress, [start, end], [25, 0]);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const blurVal = useTransform(scrollYProgress, [start, end], [4, 0]);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const filter  = useMotionTemplate`blur(${blurVal}px)`;
+    // Dept → agent line
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const lineLength = useTransform(scrollYProgress, [start + 0.06, start + 0.16], [0, 1]);
+    return { opacity, y, scale, rotateX, filter, lineLength };
   });
 
-  // Agent card animations — flat list ordered by dept index
+  // ── Agent cards (Layer 6) — foreground, full speed ───────────────────────
+  // Stagger: start = 0.38 + deptIdx*0.07 + agentIdx*0.045
+  // Outer columns lean in via X offset
   const flatAgents: { agent: AgentDef; dept: DeptDef; deptIdx: number; agentIdx: number }[] = [];
   depts.forEach((dept, di) => {
     dept.agents.forEach((agent, ai) => {
@@ -254,22 +448,25 @@ const AgentWorkforceBuilder: React.FC = () => {
   });
 
   const agentAnims = flatAgents.map(({ deptIdx, agentIdx }) => {
-    // Stagger: first by dept, then by agent position within dept
-    const start = 0.38 + deptIdx * 0.06 + agentIdx * 0.04;
+    const start   = 0.38 + deptIdx * 0.07 + agentIdx * 0.045;
+    const xStart  = deptIdx === 0 ? 14 : deptIdx === 3 ? -14 : 0;
     return {
       // eslint-disable-next-line react-hooks/rules-of-hooks
       opacity: useTransform(scrollYProgress, [start, start + 0.07], [0, 1]),
       // eslint-disable-next-line react-hooks/rules-of-hooks
-      y: useTransform(scrollYProgress, [start, start + 0.07], [20, 0]),
+      y: useTransform(scrollYProgress, [start, start + 0.07], [28, 0]),
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      x: useTransform(scrollYProgress, [start, start + 0.07], [xStart, 0]),
       revealThreshold: start + 0.07,
     };
   });
 
-  // Summary / CTA
-  const summaryOpacity = useTransform(scrollYProgress, [0.80, 0.90], [0, 1]);
-  const summaryY = useTransform(scrollYProgress, [0.80, 0.90], [24, 0]);
+  // ── Summary / CTA (Layer 7) ───────────────────────────────────────────────
+  const summaryOpacity = useTransform(scrollYProgress, [0.80, 0.92], [0, 1]);
+  const summaryY       = useTransform(scrollYProgress, [0.80, 0.92], [24, 0]);
+  const summaryScale   = useTransform(scrollYProgress, [0.80, 0.92], [0.96, 1]);
 
-  // Scroll hint
+  // ── Scroll hint ───────────────────────────────────────────────────────────
   const hintOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
   // Navigation helpers
@@ -320,9 +517,18 @@ const AgentWorkforceBuilder: React.FC = () => {
         {/* ── Background ─────────────────────────────────────────────── */}
         <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/60 to-white" />
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-[10%] left-[8%] w-[480px] h-[480px] bg-blue-100/25 rounded-full blur-[110px]" />
-          <div className="absolute bottom-[8%] right-[8%] w-[380px] h-[380px] bg-teal-100/25 rounded-full blur-[100px]" />
-          <div className="absolute top-[40%] right-[25%] w-[280px] h-[280px] bg-orange-50/20 rounded-full blur-[80px]" />
+          <motion.div
+            className="absolute top-[10%] left-[8%] w-[480px] h-[480px] bg-blue-100/25 rounded-full blur-[110px]"
+            style={{ y: orbBlueY }}
+          />
+          <motion.div
+            className="absolute bottom-[8%] right-[8%] w-[380px] h-[380px] bg-teal-100/25 rounded-full blur-[100px]"
+            style={{ y: orbTealY }}
+          />
+          <motion.div
+            className="absolute top-[40%] right-[25%] w-[280px] h-[280px] bg-orange-50/20 rounded-full blur-[80px]"
+            style={{ y: orbOrangeY }}
+          />
           {/* Dot grid */}
           <div
             className="absolute inset-0 opacity-[0.03]"
@@ -340,6 +546,7 @@ const AgentWorkforceBuilder: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
+            style={{ y: headingY }}
           >
             <h2 className="text-3xl lg:text-4xl xl:text-[2.6rem] font-bold text-slate-900 mb-1.5 leading-tight">
               {t('agentWorkforce.title', 'Build Your AI Workforce')}
@@ -418,7 +625,7 @@ const AgentWorkforceBuilder: React.FC = () => {
           {/* ── Hub ───────────────────────────────────────────────────── */}
           <motion.div
             className="flex flex-col items-center"
-            style={{ opacity: hubOpacity, y: hubY }}
+            style={{ opacity: hubOpacity, y: hubY, scale: hubScale, filter: hubFilter }}
           >
             <div className="relative flex flex-col items-center">
               {/* Subtle pulsing rings */}
@@ -461,7 +668,14 @@ const AgentWorkforceBuilder: React.FC = () => {
                   {/* Department badge */}
                   <motion.div
                     className="flex flex-col items-center"
-                    style={{ opacity: deptAnim.opacity, y: deptAnim.y }}
+                    style={{
+                      opacity: deptAnim.opacity,
+                      y: deptAnim.y,
+                      scale: deptAnim.scale,
+                      rotateX: deptAnim.rotateX,
+                      filter: deptAnim.filter,
+                      transformPerspective: 800,
+                    }}
                   >
                     <div
                       className={cn('w-12 h-12 rounded-xl flex items-center justify-center shadow-md border-2', dept.bg)}
@@ -491,7 +705,7 @@ const AgentWorkforceBuilder: React.FC = () => {
                       return (
                         <motion.div
                           key={agent.id}
-                          style={{ opacity: anim.opacity, y: anim.y }}
+                          style={{ opacity: anim.opacity, y: anim.y, x: anim.x }}
                         >
                           <AgentCard
                             agent={agent}
@@ -512,7 +726,7 @@ const AgentWorkforceBuilder: React.FC = () => {
           {/* ── Summary stats + CTA ──────────────────────────────────── */}
           <motion.div
             className="mt-auto mb-6 flex flex-col items-center gap-3"
-            style={{ opacity: summaryOpacity, y: summaryY }}
+            style={{ opacity: summaryOpacity, y: summaryY, scale: summaryScale }}
           >
             <div className="flex items-center gap-6 bg-white/85 backdrop-blur-sm border border-slate-200/60 rounded-2xl px-7 py-3.5 shadow-lg shadow-slate-200/30">
               {[
