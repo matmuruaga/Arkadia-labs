@@ -136,7 +136,7 @@ const MobileFeaturePill: React.FC<{
 };
 
 const SolutionFeatures: React.FC<Props> = ({ data, solutionId }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
 
   // Take only first 6 features to keep it clean
   const displayFeatures = data.features.slice(0, 6);

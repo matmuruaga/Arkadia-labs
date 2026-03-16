@@ -13,7 +13,7 @@ interface Props {
 }
 
 const SolutionFAQ: React.FC<Props> = ({ data, solutionId }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   // FAQPage JSON-LD for rich results and AEO

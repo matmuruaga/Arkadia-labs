@@ -60,7 +60,7 @@ const allSolutions = [
 ];
 
 const SolutionsIndexPage: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('solutions');
   const availableSolutions = getAllSolutions();
 
   useEffect(() => {

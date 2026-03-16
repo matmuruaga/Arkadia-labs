@@ -32,7 +32,7 @@ interface Props {
 // Component
 // ---------------------------------------------------------------------------
 const SolutionHero: React.FC<Props> = ({ data, solutionId }) => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('solutions');
   const navigate = useNavigate();
   const { startSession, endSession, status } = useConversation();
   const [isVoiceLoading, setIsVoiceLoading] = useState(false);
