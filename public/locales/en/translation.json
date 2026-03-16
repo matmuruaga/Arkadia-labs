@@ -1,5 +1,4 @@
 {
-  "languageCode": "en",
   "seo": {
     "organizationDescription": "Arkadia Labs builds intelligent AI agents that automate business operations across sales, marketing, customer service, and operations. Founded to help companies eliminate repetitive work and scale faster, Arkadia Labs delivers AI solutions that run 24/7, integrate with existing tools, and produce measurable results without requiring technical expertise.",
     "home": {
@@ -356,56 +355,6 @@
       "disclaimer": "* Estimates assume 62% automation efficiency on identified repetitive tasks. Individual results vary based on process complexity."
     }
   },
-  "header": {
-    "features": "Use Cases",
-    "plans": "Plans",
-    "integrations": "Integrations",
-    "solutions": "Solutions",
-    "studyCase": "Case Studies",
-    "getStarted": "Get Started",
-    "login": "Login",
-    "viewAllSolutions": "View All Solutions",
-    "solutionsCategories": {
-      "outbound": "Sales & Outbound",
-      "inbound": "Customer Service",
-      "marketing": "Marketing & Content",
-      "operations": "Operations"
-    },
-    "solutionsItems": {
-      "leadValidator": {
-        "name": "Lead Validator",
-        "description": "Verify and enrich leads automatically"
-      },
-      "salesQualifier": {
-        "name": "Sales Qualifier",
-        "description": "Qualify prospects with conversational AI"
-      },
-      "salesAgent": {
-        "name": "Sales Agent",
-        "description": "Close sales 24/7 with AI intelligence"
-      },
-      "virtualReceptionist": {
-        "name": "Virtual Receptionist",
-        "description": "Handle calls and manage inquiries"
-      },
-      "bookingAgent": {
-        "name": "Booking Agent",
-        "description": "Manage reservations and appointments"
-      },
-      "contentCreator": {
-        "name": "Content Creator",
-        "description": "Generate visual content with AI"
-      },
-      "socialManager": {
-        "name": "Social Manager",
-        "description": "Automate and optimize social media"
-      },
-      "operationsAgent": {
-        "name": "Operations Agent",
-        "description": "Automate internal business workflows"
-      }
-    }
-  },
   "hero": {
     "title_part1": "Adaptive AI Systems:",
     "title_part2": "that save time and generate revenue.",
@@ -603,15 +552,6 @@
         }
       }
     }
-  },
-  "logoCloud": {
-    "title": "Over 500 Connections at Your Disposal",
-    "subtitle": "From CRMs and marketing tools to your project management software."
-  },
-  "featuredIntegrations": {
-    "badge": "Integrations",
-    "title": "Integrate Your Existing Tools",
-    "subtitle": "At Arkadia Labs we connect with the applications your team already uses every day."
   },
   "kpi": {
     "title": "The Arkadia Impact: Measurable Results",
@@ -2883,35 +2823,6 @@
       }
     }
   },
-  "footer": {
-    "altLogo": "Arkadia Labs Logo",
-    "companyName": "Arkadia Labs",
-    "description": "Transforming businesses with intelligent AI automation solutions.",
-    "social": {
-      "linkedin": "LinkedIn",
-      "twitter": "Twitter",
-      "youtube": "YouTube",
-      "instagram": "Instagram"
-    },
-    "headings": {
-      "quickLinks": "Quick Links",
-      "legal": "Legal",
-      "stayUpdated": "Stay Updated"
-    },
-    "links": {
-      "features": "Use Cases",
-      "caseStudies": "Case Studies",
-      "privacy": "Privacy Policy",
-      "terms": "Terms & Conditions",
-      "cookies": "Cookie Policy"
-    },
-    "newsletter": {
-      "placeholder": "Enter your email",
-      "subscribe": "Subscribe",
-      "description": "🚀 Stay ahead with AI automation – Subscribe to our newsletter!"
-    },
-    "copyright": "All rights reserved."
-  },
   "pricing": {
     "mostPopular": "Most Popular",
     "perMonth": "/mo",
@@ -3043,9 +2954,6 @@
         "plan3": "false"
       }
     }
-  },
-  "modal": {
-    "close": "Close modal"
   },
   "roiCalculator": {
     "title": "Calculate Your ROI",
@@ -3604,11 +3512,6 @@
     "p1": "Forget the technical complexity. We design and configure the intelligent workflows your AI agents need to operate.",
     "p2": "Thanks to our native integrations with market-leading tools, our agents handle everything: from updating your CRM to managing support tasks, all autonomously and efficiently. You just connect them and watch them work.",
     "altImage": "Automated integrations workflow"
-  },
-  "ctaSection": {
-    "title": "Is There Anything You Can't Automate with AI?",
-    "subtitle": "Say goodbye to manual tasks. Start building today.",
-    "button": "Start Automating"
   },
   "integrations": {
     "title": "Your Tools, Without Limits.",
