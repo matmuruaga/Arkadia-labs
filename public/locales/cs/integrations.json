@@ -1,0 +1,344 @@
+{
+  "integrationsHero": {
+    "title": "Připojte se k nástrojům, které milujete",
+    "subtitle": "Arkadia Labs se integruje s více než 500 aplikacemi pro posílení vašich existujících workflow."
+  },
+  "integrationCard": {
+    "cta": "Začít"
+  },
+  "integrationsPage": {
+    "categories": {
+      "marketing": "Marketingová automatizace",
+      "crm": "CRM",
+      "communication": "Komunikace",
+      "support": "Podpora",
+      "productivity": "Produktivita"
+    },
+    "list": {
+      "salesforce": {
+        "name": "Salesforce",
+        "description": "Synchronizujte potenciální klienty a prodejní aktivity přímo s vedoucím CRM na trhu."
+      },
+      "hubspot": {
+        "name": "HubSpot",
+        "description": "Automatizujte vytváření kontaktů a zaznamenávejte interakce ve vašem HubSpot CRM."
+      },
+      "zoom": {
+        "name": "Zoom",
+        "description": "Přepis a analýza vašich Zoom schůzek v reálném čase."
+      },
+      "google_meet": {
+        "name": "Google Meet",
+        "description": "Integrujte našeho AI agenta do vašich Google Meets pro automatizaci poznámek."
+      },
+      "ms_teams": {
+        "name": "Microsoft Teams",
+        "description": "Vylepšete spolupráci s inteligentními odpověďmi ve vašich kanálech a hovorech."
+      },
+      "slack": {
+        "name": "Slack",
+        "description": "Přijímejte notifikace a provádějte akce od vašich AI agentů přímo ve Slacku."
+      },
+      "amazon_chime": {
+        "name": "Amazon Chime"
+      },
+      "cisco_webex": {
+        "name": "Cisco WebEx"
+      },
+      "intercom": {
+        "name": "Intercom"
+      },
+      "jira": {
+        "name": "Jira"
+      },
+      "notion": {
+        "name": "Notion"
+      },
+      "trello": {
+        "name": "Trello"
+      },
+      "asana": {
+        "name": "Asana"
+      },
+      "gmail": {
+        "name": "Gmail"
+      },
+      "google_drive": {
+        "name": "Google Drive"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Vaše nástroje, naše inteligence. Bezproblémová automatizace.",
+    "p1": "Zapomeňte na technickou složitost. Navrhujeme a konfigurujeme inteligentní workflow, které vaši AI agenti potřebují k provozu.",
+    "p2": "Díky našim nativním integracím s vedoucími nástroji na trhu, naši agenti zvládnou vše: od aktualizace vašeho CRM po správu podporních úkolů, vše autonomně a efektivně. Stačí je připojit a sledovat, jak pracují.",
+    "altImage": "Automatizované integrace workflow"
+  },
+  "integrations": {
+    "title": "Vaše nástroje, bez limitů.",
+    "subtitle": "Naši agenti mluví jazykem všech vašich aplikací. Připojte své oblíbené nástroje a automatizujte své workflow.",
+    "searchPlaceholder": "Vyhledávání podle názvu integrace...",
+    "count_one": "{{count}} integrace",
+    "count_other": "{{count}} integrací",
+    "showMore": "Zobrazit více",
+    "categoriesTitle": "Kategorie",
+    "allApplications": "Všechny aplikace",
+    "openai": {
+      "name": "OpenAI",
+      "description": "Přístup k nejsilnějším AI modelům jako GPT-4."
+    },
+    "google_ai_studio": {
+      "name": "Google AI Studio (Gemini)",
+      "description": "Vytvářejte s nejmodernějšími modely rodiny Gemini."
+    },
+    "hugging_face": {
+      "name": "Hugging Face",
+      "description": "Spouštějte tisíce modelů z komunity Hugging Face."
+    },
+    "aws_bedrock": {
+      "name": "AWS Bedrock"
+    },
+    "claude": {
+      "name": "Claude",
+      "description": "Sada AI modelů pro různé aplikace."
+    },
+    "cohere": {
+      "name": "Cohere"
+    },
+    "groq": {
+      "name": "Groq"
+    },
+    "google_vertex_ai": {
+      "name": "Google Vertex AI",
+      "description": "Jednotná platforma pro strojové učení od Google."
+    },
+    "anthropic": {
+      "name": "Anthropic"
+    },
+    "ollama": {
+      "name": "Ollama"
+    },
+    "mistral_ai": {
+      "name": "Mistral AI"
+    },
+    "embeddings_openai": {
+      "name": "Embeddings OpenAI"
+    },
+    "embeddings_ollama": {
+      "name": "Embeddings Ollama"
+    },
+    "azure_openai_chat": {
+      "name": "Azure OpenAI Chat"
+    },
+    "mongodb_chat_memory": {
+      "name": "MongoDB Chat Memory"
+    },
+    "deepl": {
+      "name": "DeepL",
+      "description": "Překládejte texty s vysokou přesností a nuancí."
+    },
+    "google_analytics": {
+      "name": "Google Analytics"
+    },
+    "mixpanel": {
+      "name": "Mixpanel"
+    },
+    "posthog": {
+      "name": "PostHog"
+    },
+    "segment": {
+      "name": "Segment"
+    },
+    "chartmogul": {
+      "name": "ChartMogul"
+    },
+    "slack": {
+      "name": "Slack",
+      "description": "Automatizujte zprávy a notifikace ve vašich kanálech."
+    },
+    "discord": {
+      "name": "Discord"
+    },
+    "gmail": {
+      "name": "Gmail",
+      "description": "Posílejte e-maily, vyhledávejte zprávy a spravujte koncepty."
+    },
+    "microsoft_outlook": {
+      "name": "Microsoft Outlook"
+    },
+    "telegram": {
+      "name": "Telegram",
+      "description": "Jedna z nejrychlejších a nejbezpečnějších messaging služeb."
+    },
+    "twilio": {
+      "name": "Twilio"
+    },
+    "whatsapp": {
+      "name": "WhatsApp Business"
+    },
+    "mattermost": {
+      "name": "Mattermost"
+    },
+    "hubspot": {
+      "name": "HubSpot",
+      "description": "Synchronizujte kontakty, obchody a marketingové aktivity."
+    },
+    "salesforce": {
+      "name": "Salesforce"
+    },
+    "pipedrive": {
+      "name": "Pipedrive"
+    },
+    "zoho_crm": {
+      "name": "Zoho CRM"
+    },
+    "activecampaign": {
+      "name": "ActiveCampaign"
+    },
+    "mysql": {
+      "name": "MySQL",
+      "description": "Připojte se a spouštějte dotazy na vaší relační databázi."
+    },
+    "mongodb": {
+      "name": "MongoDB"
+    },
+    "postgres": {
+      "name": "PostgreSQL"
+    },
+    "redis": {
+      "name": "Redis"
+    },
+    "aws_s3": {
+      "name": "AWS S3"
+    },
+    "milvus": {
+      "name": "Milvus Vector Store"
+    },
+    "github": {
+      "name": "GitHub",
+      "description": "Automaticky spravujte repozitáře, issues a akce."
+    },
+    "jira": {
+      "name": "Jira Software"
+    },
+    "grafana": {
+      "name": "Grafana"
+    },
+    "stripe": {
+      "name": "Stripe",
+      "description": "Automatizujte platby, faktury a správu zákazníků."
+    },
+    "shopify": {
+      "name": "Shopify"
+    },
+    "woocommerce": {
+      "name": "WooCommerce"
+    },
+    "profitwell": {
+      "name": "ProfitWell"
+    },
+    "mailchimp": {
+      "name": "Mailchimp"
+    },
+    "sendgrid": {
+      "name": "SendGrid"
+    },
+    "lemlist": {
+      "name": "lemlist"
+    },
+    "convertkit": {
+      "name": "ConvertKit"
+    },
+    "linkedin": {
+      "name": "LinkedIn"
+    },
+    "google_ads": {
+      "name": "Google Ads"
+    },
+    "orbit": {
+      "name": "Orbit"
+    },
+    "notion": {
+      "name": "Notion",
+      "description": "Vytvářejte a aktualizujte stránky, databáze a další."
+    },
+    "google_sheets": {
+      "name": "Google Sheets",
+      "description": "Automaticky čtěte, pište a aktualizujte tabulky."
+    },
+    "google_calendar": {
+      "name": "Google Calendar"
+    },
+    "calendly": {
+      "name": "Calendly"
+    },
+    "zoom": {
+      "name": "Zoom"
+    },
+    "monday": {
+      "name": "monday.com"
+    },
+    "microsoft_excel": {
+      "name": "Microsoft Excel"
+    },
+    "trello": {
+      "name": "Trello"
+    },
+    "clickup": {
+      "name": "ClickUp"
+    },
+    "todoist": {
+      "name": "Todoist"
+    },
+    "wordpress": {
+      "name": "WordPress"
+    },
+    "webflow": {
+      "name": "Webflow"
+    },
+    "securityscorecard": {
+      "name": "SecurityScorecard"
+    },
+    "virustotal": {
+      "name": "VirusTotal"
+    },
+    "cortex": {
+      "name": "Cortex"
+    },
+    "bitly": {
+      "name": "Bitly"
+    },
+    "spotify": {
+      "name": "Spotify"
+    },
+    "youtube": {
+      "name": "YouTube"
+    },
+    "categories": {
+      "ai": "Umělá inteligence",
+      "analytics": "Analytika",
+      "communication": "Komunikace",
+      "crm": "CRM",
+      "data_storage": "Data a úložiště",
+      "developer_tools": "Vývojářské nástroje",
+      "finance": "Finance",
+      "marketing": "Marketing",
+      "productivity": "Produktivita",
+      "cybersecurity": "Kybernetická bezpečnost",
+      "utility": "Utility"
+    }
+  },
+  "categories": {
+    "ai": "Umělá inteligence",
+    "analytics": "Analytika",
+    "communication": "Komunikace",
+    "crm": "CRM",
+    "data_storage": "Data a úložiště",
+    "developer_tools": "Vývojářské nástroje",
+    "finance": "Finance",
+    "marketing": "Marketing",
+    "productivity": "Produktivita",
+    "cybersecurity": "Kybernetická bezpečnost",
+    "utility": "Utility"
+  }
+}

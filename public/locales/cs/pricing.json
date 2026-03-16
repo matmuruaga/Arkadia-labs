@@ -1,0 +1,170 @@
+{
+  "pricing": {
+    "title": "Ceník",
+    "subtitle": "Vyberte plán, který nejlépe vyhovuje vašim potřebám",
+    "perAgent": "/agent/měsíc",
+    "annually": "Ročně",
+    "monthly": "Měsíčně",
+    "save20": "Ušetřete 20%",
+    "starterAgentName": "Starter",
+    "starterAgentDescription": "Pro malé týmy začínající s AI automatizací",
+    "starterAgentFeatures": [
+      "1 AI agent (jakýkoli use case)",
+      "Až 1 000 konverzací měsíčně",
+      "Základní analytika a reporty",
+      "Standardní podpora",
+      "Komunita přístup"
+    ],
+    "getStartedButton": "Začít",
+    "professionalAgentName": "Professional",
+    "professionalAgentDescription": "Pro rostoucí týmy potřebující více AI agentů",
+    "professionalAgentFeatures": [
+      "Až 3 AI agenti (různé use cases)",
+      "Až 5 000 konverzací měsíčně",
+      "Pokročilá analytika a reporty",
+      "Prioritní podpora",
+      "Přizpůsobitelná integrace"
+    ],
+    "contactSalesButton": "Kontaktovat prodej",
+    "enterpriseAgentName": "Enterprise",
+    "enterpriseAgentDescription": "Pro velké organizace s vlastními požadavky",
+    "enterpriseAgentFeatures": [
+      "Neomezené AI agenti",
+      "Neomezené konverzace",
+      "Vlastní analytika a dashboardy",
+      "Dedikovaný account manager",
+      "SLA garance",
+      "Vlastní integrace a workflow"
+    ],
+    "tryForFreeButton": "Vyzkoušet zdarma 14 dní",
+    "faqTitle": "Často kladené otázky",
+    "faqQuestions": [
+      {
+        "question": "Co je AI agent a jak funguje?",
+        "answer": "AI agent je inteligentní softwarový systém, který dokáže provádět úkoly autonomně. Naši AI agenti používají pokročilé LLM (Large Language Models) k porozumění, rozhodování a realizaci akcí bez lidského zásahu, přizpůsobují se datům vaší společnosti a procesům."
+      },
+      {
+        "question": "Jak dlouho trvá implementace AI agenta?",
+        "answer": "Typická implementace trvá 4-6 týdnů od podpisu smlouvy k plné produkci. Časový plán zahrnuje: (1) Týden 1-2: Konfigurace a integrace, (2) Týden 3-4: Testování a optimalizace, (3) Týden 5+: Plná produkce s neustálým zlepšováním."
+      },
+      {
+        "question": "Můžu přizpůsobit AI agenty pro specifické potřeby mého podnikání?",
+        "answer": "Ano! Všichni naši AI agenti jsou vysoce přizpůsobitelní. Můžete přizpůsobit jejich chování, tón hlasu, integrační body a workflow tak, aby perfektně vyhovovaly vašim obchodním procesům a požadavkům značky."
+      },
+      {
+        "question": "Jaké integrace AI agenti podporují?",
+        "answer": "Naši AI agenti se integrují s běžnými obchodními platformami včetně: CRM (Salesforce, HubSpot), komunikačními kanály (e-mail, SMS, WhatsApp), helpdeskovými systémy (Zendesk, Intercom), marketingovými nástroji (Mailchimp, Google Ads) a mnoha dalšími. Vlastní integrace jsou k dispozici v plánech Professional a Enterprise."
+      },
+      {
+        "question": "Je moje data v bezpečí u AI agentů?",
+        "answer": "Absolutně. Bereme bezpečnost dat velmi vážně. Všechna data jsou šifrovaná jak při přenosu, tak při uložení. Dodržujeme GDPR a další příslušné data privacy předpisy. AI agenti zpracovávají data pouze v rámci vašeho tenanta a nikdy netrénují na vašich proprietárních datech."
+      },
+      {
+        "question": "Co se stane, když překročím limit konverzací?",
+        "answer": "Budeme vás informovat, jakmile se blížíte k limitu. Můžete buď upgradovat na vyšší plán nebo zakoupit dodatečné konverzace. Starter: €0.50/konverzace nad limit, Professional: €0.30/konverzace nad limit."
+      },
+      {
+        "question": "Nabízíte bezplatnou zkušební dobu?",
+        "answer": "Ano! Nabízíme 14denní bezplatnou zkušební dobu na Starter a Professional plánech. Nevyžadujeme kreditní kartu na registraci a máte přístup ke všem funkcím během zkušební doby."
+      },
+      {
+        "question": "Můžu kdykoli zrušit?",
+        "answer": "Ano, můžete zrušit vaše předplatné kdykoli. Měsíční plány nemají žádnou minimální dobu trvání. Roční plány nabízejí 20% slevu, ale vyžadují dodržení 12měsíční doby trvání."
+      }
+    ]
+  },
+  "featureComparison": {
+    "title": "Porovnejte plány vedle sebe",
+    "subtitle": "Najděte přesné funkce, které potřebujete k růstu.",
+    "roiButton": "Vypočítat vaše potenciální ROI",
+    "tableHeader": {
+      "features": "Funkce",
+      "plan1": "AI Zaměstnanec",
+      "plan2": "AI Prodejní tým",
+      "plan3": "AI Růstový partner"
+    },
+    "features": {
+      "f1": {
+        "name": "AI prodejní systémy postavené a vyškolené",
+        "plan1": "1",
+        "plan2": "3",
+        "plan3": "10"
+      },
+      "f2": {
+        "name": "Měsíční strategické hovory",
+        "plan1": "1/měsíc",
+        "plan2": "2/měsíc",
+        "plan3": "4/měsíc"
+      },
+      "f3": {
+        "name": "Dedikovaný account manager",
+        "plan1": "Ne",
+        "plan2": "Ano",
+        "plan3": "Ano"
+      },
+      "f4": {
+        "name": "Vlastní integrace",
+        "plan1": "Základní",
+        "plan2": "Pokročilé",
+        "plan3": "Neomezené"
+      },
+      "f5": {
+        "name": "Prioritní podpora",
+        "plan1": "Ne",
+        "plan2": "Ano",
+        "plan3": "24/7"
+      },
+      "f6": {
+        "name": "Měsíční reporty výkonu",
+        "plan1": "Základní",
+        "plan2": "Detailní",
+        "plan3": "Pokročilá analytika"
+      },
+      "f7": {
+        "name": "AI školení a optimalizace",
+        "plan1": "Čtvrtletně",
+        "plan2": "Měsíčně",
+        "plan3": "Týdně"
+      },
+      "f8": {
+        "name": "Vlastní AI workflow",
+        "plan1": "Ne",
+        "plan2": "Ano",
+        "plan3": "Neomezené"
+      },
+      "f9": {
+        "name": "Multi-jazyčná podpora",
+        "plan1": "Ne",
+        "plan2": "Ano",
+        "plan3": "Ano"
+      },
+      "f10": {
+        "name": "SLA garance",
+        "plan1": "Ne",
+        "plan2": "99% uptime",
+        "plan3": "99.9% uptime"
+      }
+    }
+  },
+  "roiCalculator": {
+    "title": "Vypočítat vaše ROI",
+    "subtitle": "Upravte posuvníky pro zobrazení vašich potenciálních úspor a růstu příjmů.",
+    "plans": {
+      "employee": "AI Zaměstnanec",
+      "team": "AI Prodejní tým",
+      "partner": "AI Růstový partner"
+    },
+    "inputs": {
+      "reps": "Počet prodejních zástupců",
+      "dealSize": "Průměrná velikost obchodu",
+      "leads": "Aktuální měsíční potenciální klienti"
+    },
+    "results": {
+      "gain": "POTENCIÁLNÍ MĚSÍČNÍ ZISK*",
+      "hoursSaved": "UŠETŘENÉ HODINY*",
+      "roi": "ODHADOVANÉ ROI*",
+      "perMonthSuffix": "/měsíc"
+    },
+    "disclaimer": "*Odhady založené na typických datech klientů. Skutečné výsledky se mohou lišit."
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "contactPage": {
+    "title": "Pojďme si promluvit o vašem projektu",
+    "subtitle": "Vyplňte tento formulář pro naplánování schůzky s naším týmem.",
+    "whyInfoTitle": "Poslední krok před spojením",
+    "whyInfoBody": "Vyplnění tohoto formuláře je prvním krokem k úspěšné spolupráci. Znalost vašeho projektu a výzev nám umožňuje připravit se na konverzaci a přijít s nápady, které skutečně přidávají hodnotu. Těšíme se na rozhovor s vámi!",
+    "labels": {
+      "fullName": "Celé jméno",
+      "workEmail": "Pracovní e-mail",
+      "companyName": "Název společnosti",
+      "role": "Role (Volitelné)",
+      "companySize": "Velikost společnosti",
+      "challenge": "Jaká je vaše hlavní výzva nebo potřeba?"
+    },
+    "placeholders": {
+      "companySize": "Vyberte rozsah"
+    },
+    "options": {
+      "size1": "1-10 zaměstnanců",
+      "size2": "11-50 zaměstnanců",
+      "size3": "51-200 zaměstnanců",
+      "size4": "201+ zaměstnanců"
+    },
+    "button": {
+      "submit": "Naplánovat schůzku"
+    },
+    "validation": {
+      "fullName": "Jméno musí mít alespoň 3 znaky.",
+      "email": "Zadejte prosím platný e-mail.",
+      "companyName": "Název společnosti je povinný.",
+      "companySize": "Vyberte prosím velikost společnosti.",
+      "challenge": "Váš popis musí mít alespoň 10 znaků."
+    },
+    "errors": {
+      "server": "Při odesílání vaší žádosti došlo k problému. Zkuste to prosím znovu."
+    }
+  },
+  "thankYouPage": {
+    "header": {
+      "title": "Děkujeme za váš zájem!",
+      "subtitle": "Obdrželi jsme vaši žádost a náš tým vás brzy kontaktuje."
+    },
+    "cta": {
+      "altImage": "Ilustrace AI agenta",
+      "title": "Udělejte další krok",
+      "description": "Pro větší flexibilitu a zajištění času, který vám vyhovuje, můžete si přímo rezervovat 15minutový hovor v našem kalendáři.",
+      "button": "Naplánovat schůzku"
+    },
+    "footer": {
+      "backToHome": "Zpět na hlavní stránku"
+    }
+  }
+}

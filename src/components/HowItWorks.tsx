@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'; // 1. Importar
 const imageUrl = 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1750856143/u5837542839_A_visually_striking_3D_digital_illustration_of_in_056caa21-e46c-4e64-9a6e-7c4905c17c9a_3_ivp7px.png';
 
 const HowItWorks: React.FC = () => {
-  const { t } = useTranslation(); // 2. Inicializar hook
+  const { t } = useTranslation('integrations'); // 2. Inicializar hook
 
   return (
     <section className="how-it-works-section">

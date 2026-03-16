@@ -17,7 +17,7 @@ interface IntegrationsHeroProps {
 }
 
 export const IntegrationsHero = ({ searchQuery, onSearchChange }: IntegrationsHeroProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('integrations');
 
   return (
     <section

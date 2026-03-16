@@ -12,7 +12,7 @@ const plans = [
 ];
 
 const RoiCalculator = () => {
-  const { t, i18n } = useTranslation(); // 3. Inicializar hook
+  const { t, i18n } = useTranslation('pricing'); // 3. Inicializar hook
   const [selectedPlanId, setSelectedPlanId] = useState('team');
   const [numReps, setNumReps] = useState(5);
   const [avgDealSize, setAvgDealSize] = useState(5000);

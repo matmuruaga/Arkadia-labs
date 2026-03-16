@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next'; // 1. Importar
 
 const PricingHeader = () => {
-  const { t } = useTranslation(); // 2. Inicializar
+  const { t } = useTranslation('pricing'); // 2. Inicializar
 
   return (
     // La sección completa del encabezado ahora vive en este componente

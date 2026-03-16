@@ -8,7 +8,7 @@ import CalScheduler from '@/components/CalScheduler';
 import SEO from '@/components/SEO';
 
 export const ThankYouPage = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('contact');
   const { lang } = useParams<{ lang: string }>();
   const homeUrl = `/${lang || 'es'}`;
 

@@ -47,7 +47,7 @@ const SEO: React.FC<SEOProps> = ({
   breadcrumbs,
   keywords,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('seo');
   const { lang } = useParams<{ lang: string }>();
   const currentLang = lang || SITE_CONFIG.defaultLocale;
 
