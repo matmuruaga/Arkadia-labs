@@ -11,7 +11,7 @@ interface IntegrationCardProps {
 export const IntegrationCard = ({ integration }: IntegrationCardProps) => {
   const navigate = useNavigate();
   // Ahora también necesitamos la función t()
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('integrations');
   
   // Extraemos las claves del objeto de integración
   const { Icon, nameKey, descriptionKey } = integration;

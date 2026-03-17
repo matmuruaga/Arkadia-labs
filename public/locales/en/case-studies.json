@@ -1,0 +1,773 @@
+{
+  "caseStudies": {
+    "XXXzytlyn_HIDDEN": {
+      "client": {
+        "tagline": "AI Predictive Intelligence",
+        "description": "Leading travel AI company providing predictive intelligence solutions for airlines, airports, tourism boards, OTAs, and meta-search platforms.",
+        "details": [
+          {
+            "label": "Industry",
+            "value": "Travel & Tourism AI"
+          },
+          {
+            "label": "Deal Size",
+            "value": "~$15k/month ARR"
+          },
+          {
+            "label": "Sales Team",
+            "value": "1 Salesperson + CEO"
+          },
+          {
+            "label": "Target Market",
+            "value": "Enterprise B2B"
+          }
+        ]
+      },
+      "hero": {
+        "title": "How We *Tripled Demo Appointments* With AI BDR Agents",
+        "subtitle": "Strategic case study: Zytlyn achieved 400% ROI in 6 months, cut sales cycles by 55%, and scaled their pipeline without expensive human hiring.",
+        "kpis": [
+          {
+            "label": "Demo Appointments"
+          },
+          {
+            "label": "Cycle Reduction"
+          },
+          {
+            "label": "ROI in 6 Months"
+          }
+        ]
+      },
+      "challengeSection": {
+        "title": "The Challenge",
+        "subtitle": "Zytlyn faced critical scaling challenges that limited their growth potential in the competitive travel AI market.",
+        "challenges": [
+          {
+            "title": "Extended Sales Cycles",
+            "description": "Average sales cycles of 8-10 months, with some extending to 18 months, creating unpredictable revenue flow.",
+            "impact": "Slow revenue growth"
+          },
+          {
+            "title": "Capacity Limitations",
+            "description": "Only one salesperson managing entire pipeline, limiting number of qualified demos and follow-ups.",
+            "impact": "Missed opportunities"
+          },
+          {
+            "title": "Manual Qualification",
+            "description": "Time-intensive manual lead qualification process preventing focus on high-value activities.",
+            "impact": "Inefficient resource allocation"
+          }
+        ],
+        "coreProblem": {
+          "title": "The Core Problem",
+          "quote": "We needed AI employees to substitute jobs that would typically be done by expensive human BDRs, allowing our team to focus on what matters most - nurturing and closing qualified prospects.",
+          "author": "Head of Sales, Zytlyn"
+        }
+      },
+      "challenge": {
+        "beforeTitle": "Before Arkadia Labs",
+        "points": [
+          "Time-consuming lead follow-up",
+          "High volume of unfiltered leads",
+          "Inconsistent qualification process"
+        ]
+      },
+      "solution": {
+        "title": "The Arkadia Labs Solution",
+        "subtitle": "Custom AI BDR agents designed with Swiss precision to automate qualification, scheduling, and lead nurturing.",
+        "implementation": {
+          "title": "Strategic AI Implementation",
+          "description": "Leveraging 12 years of sales expertise and proven methodologies from scaling 3 startups from pre-seed to Series A, we developed a tailored AI BDR system.",
+          "features": [
+            {
+              "title": "Intelligent Lead Qualification",
+              "description": "AI-powered qualification system that identifies high-value prospects from hundreds of thousands of leads."
+            },
+            {
+              "title": "Automated Demo Scheduling",
+              "description": "Seamless appointment booking system that integrates with existing calendars and CRM workflows."
+            },
+            {
+              "title": "24/7 Prospect Engagement",
+              "description": "Round-the-clock availability for prospect inquiries and follow-up management."
+            }
+          ]
+        },
+        "coreFunctions": {
+          "title": "AI BDR Core Functions",
+          "functions": [
+            "Lead Qualification",
+            "Demo Scheduling",
+            "Follow-up Management",
+            "CRM Integration"
+          ]
+        }
+      },
+      "timeline": {
+        "title": "Implementation Timeline",
+        "subtitle": "Swift deployment with continuous optimization",
+        "phases": [
+          {
+            "title": "Months 1-2: Development",
+            "description": "Custom AI agent development, integration setup, and personalization for Zytlyn’s specific use cases."
+          },
+          {
+            "title": "Months 3-4: Fine-tuning",
+            "description": "System optimization, performance monitoring, and adjustment based on initial results and feedback."
+          },
+          {
+            "title": "Month 4+: Results Delivery",
+            "description": "Full system performance achieved with measurable impact on demo appointments and sales cycles."
+          }
+        ]
+      },
+      "impact": {
+        "title": "Measurable Impact",
+        "subtitle": "Transformational results delivered within 4 months",
+        "kpis": [
+          {
+            "label": "Demo Appointments",
+            "subLabel": "Per Month"
+          },
+          {
+            "label": "Cycle Reduction",
+            "subLabel": "8-10 -> 4.5 months"
+          },
+          {
+            "label": "ROI Achieved",
+            "subLabel": "Within 6 months"
+          },
+          {
+            "label": "Cost vs Human BDR",
+            "subLabel": "For 3x results"
+          }
+        ]
+      },
+      "beforeAfter": {
+        "title": "Before vs After Performance",
+        "beforeLabel": "Leads Before",
+        "afterLabel": "Demo Appointments Increase"
+      },
+      "roiAnalysis": {
+        "title": "ROI Analysis",
+        "subtitle": "Comprehensive financial impact assessment",
+        "calculator": {
+          "title": "Investment vs Human BDR Cost",
+          "items": [
+            {
+              "label": "Traditional Human BDR Cost",
+              "value": "CHF 150k+/year"
+            },
+            {
+              "label": "AI Investment Cost",
+              "value": "25% of human cost"
+            },
+            {
+              "label": "Output Multiplier",
+              "value": "3x performance"
+            }
+          ],
+          "finalRoi": {
+            "label": "Achieved within 6 months"
+          }
+        },
+        "benefits": [
+          {
+            "title": "Cost Efficiency",
+            "description": "AI investment represents only 25% of traditional human BDR hiring costs, while delivering 3x the performance in demo scheduling and qualification."
+          },
+          {
+            "title": "Revenue Acceleration",
+            "description": "55% reduction in sales cycles combined with 3x demo capacity directly translates to faster revenue recognition and improved cash flow."
+          },
+          {
+            "title": "Scalability Factor",
+            "description": "AI agents scale infinitely without additional hiring costs, providing sustainable competitive advantage as Zytlyn grows."
+          }
+        ]
+      },
+      "testimonial": {
+        "quote": "The AI agent from Arkadia Labs is more than a tool; it's a core part of our sales team now. It has completely cleared our pipeline's bottleneck, allowing our human team to focus on what they do best: closing deals. The 400% ROI speaks for itself.",
+        "author": "Jane Doe",
+        "role": "Head of Growth",
+        "company": "Zytlyn"
+      }
+    },
+    "goodnite": {
+      "hero": {
+        "title": "How We Transformed Goodnite's *Guest Experience* with a Complete AI Ecosystem",
+        "subtitle": "Strategic case study: Goodnite achieved 6x ROI in 12 months, increased guest satisfaction by 11%, and transformed their operations with a 24/7 AI guest experience ecosystem.",
+        "kpis": [
+          {
+            "label": "ROI in 12 Months"
+          },
+          {
+            "label": "Guest Satisfaction Increase"
+          },
+          {
+            "label": "More Reviews Generated"
+          }
+        ]
+      },
+      "client": {
+        "name": "Goodnite",
+        "tagline": "Boutique Vacation Rentals",
+        "description": "Premium vacation rental company in Brno, Czech Republic, offering 68 original rooms and suites across 12 buildings with contactless reception and maximum comfort focus.",
+        "details": [
+          {
+            "label": "Industry",
+            "value": "Vacation Rentals & Hospitality"
+          },
+          {
+            "label": "Team Size",
+            "value": "Small Operations Team"
+          },
+          {
+            "label": "Properties",
+            "value": "68 Rooms & Suites"
+          },
+          {
+            "label": "Target Market",
+            "value": "Business & Leisure Travelers"
+          }
+        ]
+      },
+      "challenge": {
+        "beforeTitle": "Before Arkadia Labs",
+        "points": [
+          "Limited after-hours guest support",
+          "Inconsistent guest communication",
+          "Low review generation rate"
+        ]
+      },
+      "challengeSection": {
+        "title": "The Challenge",
+        "subtitle": "Goodnite faced critical operational challenges that limited their guest experience and growth potential in the competitive vacation rental market.",
+        "challenges": [
+          {
+            "title": "Limited Guest Support Hours",
+            "description": "No availability for guest inquiries and support from 10 PM to 10 AM, leaving guests stranded during critical hours.",
+            "impact": "Poor guest experience"
+          },
+          {
+            "title": "Inconsistent Communication",
+            "description": "No standardized pre-arrival or post-stay communication process, leading to confusion and missed opportunities.",
+            "impact": "Guest confusion and lost bookings"
+          },
+          {
+            "title": "Low Review Generation",
+            "description": "Only 40% of guests were leaving reviews, significantly impacting online visibility and booking conversions.",
+            "impact": "Reduced online presence"
+          }
+        ],
+        "coreProblem": {
+          "title": "The Core Problem",
+          "quote": "We needed a complete AI guest experience ecosystem that could provide 24/7 support, guide guests through their journey, and actively collect feedback to improve our ratings and bookings.",
+          "author": "Tomáš Ustohal, Team Manager at Goodnite"
+        }
+      },
+      "solution": {
+        "title": "The Arkadia Labs Solution",
+        "subtitle": "Complete AI Guest Experience Ecosystem designed with Swiss precision to transform hospitality operations.",
+        "implementation": {
+          "title": "Strategic AI Implementation",
+          "description": "Leveraging 12 years of sales expertise and proven methodologies from scaling 3 startups from pre-seed to Series A, we developed a comprehensive AI ecosystem covering the complete guest journey.",
+          "features": [
+            {
+              "title": "24/7 Night Shift Receptionist",
+              "description": "AI-powered receptionist handling all guest inquiries from 10 PM to 10 AM with immediate response capability."
+            },
+            {
+              "title": "Pre-Arrival & Arrival Support",
+              "description": "Automated calling system that explains everything before arrival and provides arrival day support."
+            },
+            {
+              "title": "Post-Stay Feedback Collection",
+              "description": "AI agent that calls 2-3 days after stay to collect feedback and encourage positive reviews."
+            }
+          ]
+        },
+        "coreFunctions": {
+          "title": "AI Ecosystem Core Functions",
+          "functions": [
+            "Night Shift Support",
+            "Pre-Arrival Guidance",
+            "Arrival Day Support",
+            "Feedback Collection",
+            "Review Generation"
+          ]
+        }
+      },
+      "timeline": {
+        "title": "Implementation Timeline",
+        "subtitle": "Swift deployment with continuous optimization",
+        "phases": [
+          {
+            "title": "Month 1: Development",
+            "description": "Custom AI ecosystem development, integration setup, and personalization for Goodnite’s specific hospitality requirements."
+          },
+          {
+            "title": "Month 2: Integration & Testing",
+            "description": "System integration with existing booking systems, comprehensive testing, and staff training on the new AI ecosystem."
+          },
+          {
+            "title": "Month 3: Go-Live & Results",
+            "description": "Full system launch with immediate impact on guest satisfaction, review generation, and operational efficiency."
+          }
+        ]
+      },
+      "impact": {
+        "title": "Measurable Impact",
+        "subtitle": "Transformational results delivered within 3 months",
+        "kpis": [
+          {
+            "label": "Guest Satisfaction",
+            "subLabel": "Up from 8.4 (11% increase)"
+          },
+          {
+            "label": "More Reviews",
+            "subLabel": "40% → 71% review generation"
+          },
+          {
+            "label": "ROI Achieved",
+            "subLabel": "Within 12 months"
+          },
+          {
+            "label": "Immediate Response",
+            "subLabel": "Replaces 2-3 employees"
+          }
+        ]
+      },
+      "roiAnalysis": {
+        "title": "ROI Analysis",
+        "subtitle": "Comprehensive financial impact assessment",
+        "calculator": {
+          "title": "Investment vs Human Staff Cost",
+          "items": [
+            {
+              "label": "Traditional Staff Cost (2-3 employees)",
+              "value": "€120k+/year"
+            },
+            {
+              "label": "AI Ecosystem Investment",
+              "value": "15% of staff cost"
+            },
+            {
+              "label": "Performance Multiplier",
+              "value": "3x efficiency"
+            }
+          ],
+          "finalRoi": {
+            "label": "Achieved within 12 months"
+          }
+        },
+        "benefits": [
+          {
+            "title": "Cost Efficiency",
+            "description": "AI investment represents only 15% of traditional staffing costs, while delivering 3x the performance in guest satisfaction and review generation."
+          },
+          {
+            "title": "Revenue Acceleration",
+            "description": "78% increase in review generation combined with 11% guest satisfaction improvement directly translates to higher booking rates and revenue growth."
+          },
+          {
+            "title": "Scalability Factor",
+            "description": "AI ecosystem scales infinitely without additional hiring costs, providing sustainable competitive advantage as Goodnite expands."
+          }
+        ]
+      }
+    },
+    "domus-labs": {
+      "hero": {
+        "title": "How We *Accelerated Project Delivery* With an AI Intelligence System",
+        "subtitle": "Strategic case study: Domus Labs achieved 160% ROI in 3 months, increased project completion by 77%, and saved 8 hours weekly executive time with automated project intelligence.",
+        "kpis": [
+          {
+            "label": "Meeting Efficiency"
+          },
+          {
+            "label": "Project Completion"
+          },
+          {
+            "label": "ROI in 3 Months"
+          }
+        ]
+      },
+      "client": {
+        "client_overview_title": "CLIENT OVERVIEW",
+        "name": "Domus Labs",
+        "tagline": "Boutique Architecture Studio",
+        "description": "Innovative architecture and interior design studio creating meaningful spaces with a humanist perspective, expanding internationally across Barcelona, Germany, and France.",
+        "details": [
+          {
+            "label": "Industry",
+            "value": "Architecture & Interior Design"
+          },
+          {
+            "label": "Project Size",
+            "value": "€500k-2M per project"
+          },
+          {
+            "label": "Team Size",
+            "value": "17 Employees"
+          },
+          {
+            "label": "Target Market",
+            "value": "International B2B"
+          }
+        ]
+      },
+      "challenge": {
+        "beforeTitle": "Before Arkadia Labs",
+        "points": [
+          "Manual meeting documentation consuming 2+ hours weekly",
+          "Poor project visibility across multiple initiatives",
+          "Inconsistent task tracking and accountability"
+        ]
+      },
+      "challengeSection": {
+        "title": "The Challenge",
+        "subtitle": "Domus Labs faced critical project management challenges limiting their international expansion potential.",
+        "challenges": [
+          {
+            "title": "Manual Meeting Processing",
+            "description": "Executives spending 2+ hours weekly manually documenting meetings, updating project status, and tracking tasks.",
+            "impactLabel": "Impact",
+            "impact": "Executive time waste"
+          },
+          {
+            "title": "Project Visibility Gaps",
+            "description": "Multiple projects running simultaneously with poor visibility into status, risks, and accountability across teams.",
+            "impact": "Missed deadlines"
+          },
+          {
+            "title": "Accountability Challenges",
+            "description": "Inconsistent task tracking and follow-up system preventing efficient project delivery and team coordination.",
+            "impact": "Project delays"
+          }
+        ],
+        "coreProblem": {
+          "title": "The Core Problem",
+          "quote": "We needed an AI system that could automatically capture meeting insights, update project status, and maintain accountability as we expand internationally. Manual processes were limiting our growth potential.",
+          "author": "Cosma Musacchio, General Manager & Creative Director, Domus Labs"
+        }
+      },
+      "solution": {
+        "title": "The Arkadia Labs Solution",
+        "subtitle": "Custom AI Project Intelligence System designed with Swiss precision to automate project management, meeting processing, and accountability tracking.",
+        "implementation": {
+          "title": "Strategic AI Implementation",
+          "description": "Leveraging 12 years of sales expertise and proven methodologies from scaling 3 startups from pre-seed to Series A, we developed a tailored AI Project Intelligence system.",
+          "features": [
+            {
+              "title": "Automated Meeting Analysis",
+              "description": "AI-powered system that processes meetings, generates summaries, and automatically updates project status in Notion."
+            },
+            {
+              "title": "Intelligent Project Tracking",
+              "description": "Real-time project visibility with automated task assignment and progress monitoring across all initiatives."
+            },
+            {
+              "title": "24/7 Project Intelligence",
+              "description": "Telegram-based AI assistant providing instant answers about project status, meeting summaries, and task updates."
+            },
+            {
+              "title": "Automated Accountability",
+              "description": "Weekly automated reports for team members and executives with project status, risks, and required actions."
+            }
+          ]
+        },
+        "coreFunctions": {
+          "title": "AI Project Intelligence Core Functions",
+          "functions": [
+            "Meeting Analysis & Summary",
+            "Automated Task Assignment",
+            "Project Status Updates",
+            "Telegram AI Assistant"
+          ]
+        }
+      },
+      "timeline": {
+        "title": "Implementation Timeline",
+        "subtitle": "Swift deployment with continuous optimization",
+        "phases": [
+          {
+            "title": "Month 1: Development",
+            "description": "Custom AI system development, Notion integration setup, and Telegram bot creation tailored for Domus Labs’ architecture workflows."
+          },
+          {
+            "title": "Month 2: Fine-tuning",
+            "description": "System optimization, meeting processing refinement, and project management workflow customization based on initial feedback."
+          },
+          {
+            "title": "Month 3+: Results Delivery",
+            "description": "Full system performance achieved with measurable impact on project completion rates, executive time savings, and team accountability."
+          }
+        ]
+      },
+      "impact": {
+        "title": "Measurable Impact",
+        "subtitle": "Transformational results delivered within 3 months",
+        "kpis": [
+          {
+            "label": "Meeting Efficiency",
+            "subLabel": "2 hours → 10 minutes"
+          },
+          {
+            "label": "Project Completion",
+            "subLabel": "47% → 83% success rate"
+          },
+          {
+            "label": "ROI Achieved",
+            "subLabel": "Within 3 months"
+          },
+          {
+            "label": "Weekly Time Saved",
+            "subLabel": "Per executive"
+          }
+        ]
+      },
+      "roiAnalysis": {
+        "title": "ROI Analysis",
+        "subtitle": "Comprehensive financial impact assessment",
+        "calculator": {
+          "title": "Investment vs Executive Time Cost",
+          "items": [
+            {
+              "label": "Traditional Executive Time Cost",
+              "value": "€2,000+/month"
+            },
+            {
+              "label": "AI Investment Cost",
+              "value": "€990/month"
+            },
+            {
+              "label": "Efficiency Multiplier",
+              "value": "10x faster processing"
+            }
+          ],
+          "finalRoi": {
+            "label": "Achieved within 3 months"
+          }
+        },
+        "benefits": [
+          {
+            "title": "Cost Efficiency",
+            "description": "AI investment represents 50% of traditional executive time costs, while delivering 10x the processing efficiency."
+          },
+          {
+            "title": "Project Acceleration",
+            "description": "77% improvement in project completion rates directly translates to faster delivery and improved client satisfaction."
+          },
+          {
+            "title": "Scalability Factor",
+            "description": "AI system scales infinitely across international locations without additional management overhead."
+          }
+        ]
+      }
+    },
+    "elsa-consulting": {
+      "hero": {
+        "title": "How We Transformed *Sales Operations* at ELSA Consulting with a Complete AI Intelligence Platform",
+        "subtitle": "Strategic case study: ELSA Consulting achieved 3.5x higher response rates in 2 months, increased efficiency by 80%, and saved over €3,461 with ContactIQ's complete AI-powered sales intelligence system - from contact validation to CRM sync.",
+        "kpis": [
+          {
+            "label": "ROI in 2 Months"
+          },
+          {
+            "label": "Response Rate Increase"
+          },
+          {
+            "label": "Time Saved"
+          }
+        ]
+      },
+      "client": {
+        "client_overview_title": "CLIENT OVERVIEW",
+        "name": "ELSA Consulting",
+        "tagline": "Sales Agency",
+        "description": "Barcelona-based sales consulting agency specializing in outbound lead generation and B2B sales optimization for mid-market companies across Spain and LATAM markets."
+      },
+      "challenge": {
+        "beforeTitle": "Before ContactIQ Implementation",
+        "points": [
+          "Only 7% response rate on cold calls (industry average)",
+          "BDRs wasting 93 out of 100 calls on invalid/unresponsive numbers",
+          "Team cost of €57.69/hour burning on unqualified lead lists with zero conversation intelligence"
+        ]
+      },
+      "challengeSection": {
+        "title": "The Challenge",
+        "subtitle": "ELSA Consulting faced critical operational challenges that limited their sales efficiency and growth potential in the competitive B2B market.",
+        "challenges": [
+          {
+            "title": "Massive Time Waste",
+            "description": "BDR team spent 75-80% of their day calling invalid numbers, voicemails, and disconnected contacts with no way to pre-qualify lists.",
+            "impact": "Low team productivity"
+          },
+          {
+            "title": "Unpredictable Contact Quality",
+            "description": "No standardized system to validate which contacts would actually respond, causing inconsistent pipeline generation and forecasting problems.",
+            "impact": "Unreliable sales pipeline"
+          },
+          {
+            "title": "Zero Conversation Intelligence",
+            "description": "Zero visibility into call quality, sentiment, or what was actually working. Manual note-taking wasted time, and no CRM sync meant missed follow-ups and lost context.",
+            "impact": "Missed revenue opportunities"
+          }
+        ],
+        "coreProblem": {
+          "title": "The Core Problem",
+          "quote": "We needed a complete AI-powered sales intelligence ecosystem that could validate contacts before calling them, analyze conversation quality in real-time, generate winning scripts automatically, and sync everything to our CRM without manual work. Manual prospecting and note-taking was killing our efficiency and team morale.",
+          "author": "Calixto Carbone, Founder & CEO of ELSA Consulting"
+        }
+      },
+      "solution": {
+        "title": "The ContactIQ Solution",
+        "subtitle": "Complete AI-Powered Lead Intelligence Platform - Comprehensive AI-driven system that validates contacts before the call, analyzes conversations during the call, generates winning scripts automatically, and syncs everything to your CRM - zero manual work.",
+        "implementation": {
+          "title": "Strategic AI Implementation",
+          "description": "Leveraging 12 years of sales expertise and proven methodologies from scaling 3 startups from pre-seed to Series A, we developed a complete AI-powered sales intelligence system covering the entire journey from prospecting to closing.",
+          "features": [
+            {
+              "title": "Pre-Call Validation & Intelligence",
+              "description": "AI system automatically calls entire contact lists (1000+ leads), validates numbers, detects voicemails, analyzes sentiment, and scores each contact from 0-9 based on engagement quality - all before your BDRs make a single call."
+            },
+            {
+              "title": "AI Script Generation & Transcription",
+              "description": "Automatically generates ideal scripts based on sentiment analysis from validation calls, then transcribes and summarizes each BDR call with emotion detection (happy, frustrated, interested) and key points extraction."
+            },
+            {
+              "title": "Zero-Touch CRM Sync",
+              "description": "Every call, transcription, sentiment score, and follow-up task automatically syncs to Salesforce/HubSpot. Zero manual logging, zero missed notes, complete conversation history instantly accessible to the entire team."
+            }
+          ]
+        },
+        "coreFunctions": {
+          "title": "ContactIQ Core Functions",
+          "functions": [
+            "Contact Validation & Scoring (0-9)",
+            "Sentiment & Emotion Analysis",
+            "AI-Generated Conversation Scripts",
+            "Call Transcription & Summaries",
+            "Automatic CRM Sync"
+          ]
+        }
+      },
+      "timeline": {
+        "title": "Implementation Timeline",
+        "subtitle": "Rapid deployment with continuous optimization",
+        "phases": [
+          {
+            "title": "Month 1: Platform Development",
+            "description": "Complete AI sales intelligence platform built: contact validation engine, sentiment analysis system, script generator, call transcription pipeline, and CRM connectors integrated with ELSA's Salesforce instance."
+          },
+          {
+            "title": "Month 2: Testing & Optimization",
+            "description": "Pilot program with 5,000 contact test batch, refined scoring algorithms and script templates based on actual response patterns and sentiment data, BDR team trained on new AI-assisted workflow with automatic CRM logging."
+          },
+          {
+            "title": "Month 3: Full Deployment & Results",
+            "description": "Full platform rollout across all outbound campaigns with immediate 3.5x response rate improvement, zero manual note-taking, 80% time savings on prospecting, and measurable ROI within the first 60 days."
+          }
+        ]
+      },
+      "impact": {
+        "title": "Measurable Impact",
+        "subtitle": "Transformational results delivered in 2 months",
+        "kpis": [
+          {
+            "label": "Response Rate",
+            "subLabel": "From 7% industry average"
+          },
+          {
+            "label": "Valid Contacts",
+            "subLabel": "Working numbers identified"
+          },
+          {
+            "label": "ROI Multiple",
+            "subLabel": "In 60 days"
+          },
+          {
+            "label": "Time Saved",
+            "subLabel": "On prospecting activities"
+          }
+        ]
+      },
+      "roiAnalysis": {
+        "title": "ROI Analysis",
+        "subtitle": "Comprehensive financial impact assessment",
+        "calculator": {
+          "title": "Investment vs Cost Savings",
+          "items": [
+            {
+              "label": "3-Person BDR Team Cost"
+            },
+            {
+              "label": "ContactIQ Platform Investment"
+            },
+            {
+              "label": "Cost Savings (2 months)"
+            }
+          ],
+          "finalRoi": {
+            "label": "Achieved in 2 months"
+          }
+        },
+        "benefits": [
+          {
+            "title": "Cost Efficiency",
+            "description": "AI platform investment represents only 15% of staffing costs, while delivering 3.5x performance improvement and eliminating all manual note-taking and CRM data entry."
+          },
+          {
+            "title": "Revenue Acceleration",
+            "description": "3.5x higher response rate + AI-optimized scripts + automatic CRM enrichment = faster pipeline generation, higher booking rates, and better follow-up execution."
+          },
+          {
+            "title": "Institutional Knowledge Capture",
+            "description": "Every call transcribed and analyzed builds a library of what works. New BDRs ramp 3x faster using AI-generated best practice scripts from top performers."
+          }
+        ]
+      },
+      "testimonial": {
+        "quote": "ContactIQ transformed how our BDR team operates. Instead of burning through hundreds of dead-end calls every day, they're now having real conversations with qualified prospects using AI-generated scripts that actually work. The automatic transcription and CRM sync eliminated all manual note-taking - our team went from spending 20 minutes per call on admin work to zero. When you know your next call will reach a human AND you have the perfect script ready, everything changes.",
+        "author": "Calixto Carbone",
+        "role": "Founder & CEO",
+        "company": "ELSA Consulting"
+      }
+    },
+    "common": {
+      "clientSuccessStory": "Client Success Story",
+      "roiSuffix": "% ROI"
+    }
+  },
+  "case_studies_index": {
+    "title": "Case Studies",
+    "subtitle": "Discover how we have helped companies transform their sales processes with AI.",
+    "cta": "Read the Case Study"
+  },
+  "whyElevaiteStudyCase": {
+    "title": "Why Arkadia Labs",
+    "subtitle": "Swiss-made precision meets proven sales expertise",
+    "features": [
+      {
+        "title": "Swiss-Made Quality",
+        "description": "Precision engineering and reliability standards applied to AI development."
+      },
+      {
+        "title": "Proven Track Record",
+        "description": "12 years sales experience scaling 3 startups from pre-seed to Series A."
+      },
+      {
+        "title": "Custom Solutions",
+        "description": "Tailored AI agents designed specifically for your business requirements."
+      }
+    ]
+  },
+  "case_study": {
+    "industry": "Industry",
+    "deal_size": "Deal Size",
+    "sales_team": "Sales Team",
+    "target_market": "Target Market"
+  }
+}

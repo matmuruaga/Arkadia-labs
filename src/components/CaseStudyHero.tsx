@@ -30,7 +30,7 @@ interface Props {
 }
 
 const CaseStudyHero: React.FC<Props> = ({ data, studyKey }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('case-studies');
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,

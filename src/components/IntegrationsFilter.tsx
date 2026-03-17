@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { allIntegrations, type Integration } from '../data/integrations.data';
 
 const IntegrationCard: React.FC<{ integration: Integration }> = ({ integration }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('integrations');
 
   return (
     <div className="group flex flex-col p-6 bg-white border border-gray-200 rounded-xl hover:border-[#1C7ED6] hover:shadow-lg transition-all duration-300 min-h-[170px]">
@@ -23,7 +23,7 @@ const CategoryFilter: React.FC<{
   selectedCategory: string;
   onSelectCategory: (category: string) => void;
 }> = ({ categories, selectedCategory, onSelectCategory }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('integrations');
 
   return (
     <aside className="w-full md:w-60 lg:w-64 flex-shrink-0">
@@ -59,7 +59,7 @@ interface IntegrationsFilterProps {
 }
 
 const IntegrationsFilter: React.FC<IntegrationsFilterProps> = ({ searchQuery }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('integrations');
   const [selectedCategory, setSelectedCategory] = useState('Todas');
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
 

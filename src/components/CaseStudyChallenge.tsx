@@ -13,7 +13,7 @@ interface Props {
 }
 
 const CaseStudyChallenge: React.FC<Props> = ({ data, studyKey }) => {
-  const { t } = useTranslation(); // <-- 3. Inicializar
+  const { t } = useTranslation('case-studies'); // <-- 3. Inicializar
 
   return (
     <section className="bg-gray-50 py-12 md:py-20">

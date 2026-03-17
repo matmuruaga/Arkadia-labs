@@ -23,7 +23,7 @@ import SolutionInlineCTA from '@/components/solutions/SolutionInlineCTA';
 
 const SolutionDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('solutions');
 
   // Get solution data
   const solution = slug ? getSolutionBySlug(slug) : undefined;

@@ -28,7 +28,7 @@ interface Props {
 }
 
 const SolutionProblem: React.FC<Props> = ({ data, solutionId }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
 
   const containerVariants = {
     hidden: { opacity: 0 },

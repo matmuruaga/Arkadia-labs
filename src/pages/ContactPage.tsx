@@ -21,7 +21,7 @@ type ContactFormValues = z.infer<z.ZodObject<any>>;
 const backgroundImageUrl = 'https://res.cloudinary.com/dntco2fcz/image/upload/v1764670375/u5837542839_A_surreal_mountain_landscape_graphic_where_the_pe_d8921530-eaa2-40b0-98dc-982620ea5e11_2_1_dimax7.png';
 
 export const ContactPage = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('contact');
   const location = useLocation();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);

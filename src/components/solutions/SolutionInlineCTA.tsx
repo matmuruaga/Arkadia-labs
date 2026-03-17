@@ -17,7 +17,7 @@ const SolutionInlineCTA: React.FC<Props> = ({
   variant = 'compact',
   translationKey = 'inlineCta1'
 }) => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('solutions');
   const navigate = useNavigate();
 
   const handleCtaClick = () => {

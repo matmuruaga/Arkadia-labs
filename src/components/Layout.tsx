@@ -6,7 +6,7 @@ import Footer from './Footer';
 import { SITE_CONFIG } from '@/config/site';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('seo');
 
   const organizationSchema = {
     '@context': 'https://schema.org',

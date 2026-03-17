@@ -8,7 +8,7 @@ const supportedLngs = ['en', 'es', 'cs'];
 
 const LanguageHandler = () => {
   const { lang } = useParams<{ lang: string }>(); 
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslation('common');
   const navigate = useNavigate();
 
   useEffect(() => {

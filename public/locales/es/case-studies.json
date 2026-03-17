@@ -1,0 +1,774 @@
+{
+  "caseStudies": {
+    "XXXzytlyn_HIDDEN": {
+      "client_overview_title": "RESUMEN DEL CLIENTE",
+      "client": {
+        "tagline": "Inteligencia Predictiva con IA",
+        "description": "Empresa líder en IA para viajes que proporciona soluciones de inteligencia predictiva a aerolíneas, aeropuertos, oficinas de turismo, OTAs y plataformas de metabúsqueda.",
+        "details": [
+          {
+            "label": "Industria",
+            "value": "IA para Viajes y Turismo"
+          },
+          {
+            "label": "Tamaño del Acuerdo",
+            "value": "~$15k/mes ARR"
+          },
+          {
+            "label": "Equipo de Ventas",
+            "value": "1 Vendedor + CEO"
+          },
+          {
+            "label": "Mercado Objetivo",
+            "value": "Enterprise B2B"
+          }
+        ]
+      },
+      "hero": {
+        "title": "Cómo *Triplicamos* las Citas para Demos con Agentes BDR de IA",
+        "subtitle": "Caso de estudio estratégico: Zytlyn logró un ROI del 400% en 6 meses, redujo los ciclos de venta en un 55% y escaló su pipeline sin costosas contrataciones humanas.",
+        "kpis": [
+          {
+            "label": "Solicitudes de Demo"
+          },
+          {
+            "label": "Reducción de Ciclo"
+          },
+          {
+            "label": "ROI en 6 Meses"
+          }
+        ]
+      },
+      "challengeSection": {
+        "title": "El Desafío",
+        "subtitle": "Zytlyn enfrentaba desafíos críticos de escalabilidad que limitaban su potencial de crecimiento en el competitivo mercado de la IA para viajes.",
+        "challenges": [
+          {
+            "title": "Ciclos de Venta Extendidos",
+            "description": "Ciclos de venta promedio de 8-10 meses, algunos extendiéndose a 18 meses, creando un flujo de ingresos impredecible.",
+            "impact": "Lento crecimiento de ingresos"
+          },
+          {
+            "title": "Limitaciones de Capacidad",
+            "description": "Solo un vendedor gestionando todo el pipeline, limitando el número de demos cualificadas y seguimientos.",
+            "impact": "Oportunidades perdidas"
+          },
+          {
+            "title": "Cualificación Manual",
+            "description": "Proceso manual de cualificación de leads que consumía mucho tiempo e impedía centrarse en actividades de alto valor.",
+            "impact": "Asignación ineficiente de recursos"
+          }
+        ],
+        "coreProblem": {
+          "title": "El Problema Central",
+          "quote": "Necesitábamos empleados de IA para sustituir trabajos que normalmente harían costosos BDRs humanos, permitiendo a nuestro equipo centrarse en lo más importante: nutrir y cerrar prospectos cualificados.",
+          "author": "Director de Ventas, Zytlyn"
+        }
+      },
+      "challenge": {
+        "beforeTitle": "Antes de Arkadia Labs",
+        "points": [
+          "Seguimiento de leads que consumía mucho tiempo",
+          "Alto volumen de leads sin filtrar",
+          "Proceso de cualificación inconsistente"
+        ]
+      },
+      "solution": {
+        "title": "La Solución de ElevaitLabs",
+        "subtitle": "Agentes BDR de IA personalizados y diseñados con precisión suiza para automatizar la cualificación, agendamiento y nutrición de leads.",
+        "implementation": {
+          "title": "Implementación Estratégica de IA",
+          "description": "Aprovechando 12 años de experiencia en ventas y metodologías probadas escalando 3 startups desde pre-seed hasta Serie A, desarrollamos un sistema de BDR con IA a medida.",
+          "features": [
+            {
+              "title": "Cualificación Inteligente de Leads",
+              "description": "Sistema de cualificación impulsado por IA que identifica prospectos de alto valor entre cientos de miles de leads."
+            },
+            {
+              "title": "Agendamiento Automatizado de Demos",
+              "description": "Sistema de reserva de citas fluido que se integra con calendarios existentes y flujos de trabajo de CRM."
+            },
+            {
+              "title": "Interacción 24/7 con Prospectos",
+              "description": "Disponibilidad continua para consultas de prospectos y gestión de seguimientos."
+            }
+          ]
+        },
+        "coreFunctions": {
+          "title": "Funciones Clave del BDR de IA",
+          "functions": [
+            "Cualificación de Leads",
+            "Agendamiento de Demos",
+            "Gestión de Seguimientos",
+            "Integración con CRM"
+          ]
+        }
+      },
+      "timeline": {
+        "title": "Cronograma de Implementación",
+        "subtitle": "Despliegue rápido con optimización continua",
+        "phases": [
+          {
+            "title": "Meses 1-2: Desarrollo",
+            "description": "Desarrollo de agentes de IA a medida, configuración de integraciones y personalización para los casos de uso específicos de Zytlyn."
+          },
+          {
+            "title": "Meses 3-4: Puesta a punto",
+            "description": "Optimización del sistema, monitorización del rendimiento y ajustes basados en los resultados iniciales y el feedback."
+          },
+          {
+            "title": "Mes 4+: Entrega de Resultados",
+            "description": "Rendimiento completo del sistema logrado con un impacto medible en las citas para demos y los ciclos de venta."
+          }
+        ]
+      },
+      "impact": {
+        "title": "Impacto Medible",
+        "subtitle": "Resultados transformadores entregados en 4 meses",
+        "kpis": [
+          {
+            "label": "Citas para Demo",
+            "subLabel": "Por Mes"
+          },
+          {
+            "label": "Reducción de Ciclo",
+            "subLabel": "8-10 -> 4.5 meses"
+          },
+          {
+            "label": "ROI Alcanzado",
+            "subLabel": "En 6 meses"
+          },
+          {
+            "label": "Coste vs BDR Humano",
+            "subLabel": "Para 3x resultados"
+          }
+        ]
+      },
+      "beforeAfter": {
+        "title": "Rendimiento Antes vs Después",
+        "beforeLabel": "Leads Antes",
+        "afterLabel": "Aumento en Citas para Demo"
+      },
+      "roiAnalysis": {
+        "title": "Análisis del ROI",
+        "subtitle": "Evaluación exhaustiva del impacto financiero",
+        "calculator": {
+          "title": "Inversión vs Coste de BDR Humano",
+          "items": [
+            {
+              "label": "Coste de BDR Humano Tradicional",
+              "value": "CHF 150k+/año"
+            },
+            {
+              "label": "Coste de Inversión en IA",
+              "value": "25% del coste humano"
+            },
+            {
+              "label": "Multiplicador de Rendimiento",
+              "value": "3x rendimiento"
+            }
+          ],
+          "finalRoi": {
+            "label": "Alcanzado en 6 meses"
+          }
+        },
+        "benefits": [
+          {
+            "title": "Eficiencia de Costes",
+            "description": "La inversión en IA representa solo el 25% de los costes de contratación de un BDR tradicional, mientras entrega 3 veces el rendimiento en agendamiento y cualificación."
+          },
+          {
+            "title": "Aceleración de Ingresos",
+            "description": "La reducción del 55% en los ciclos de venta, combinada con una capacidad 3x para demos, se traduce directamente en un reconocimiento de ingresos más rápido y un mejor flujo de caja."
+          },
+          {
+            "title": "Factor de Escalabilidad",
+            "description": "Los agentes de IA escalan infinitamente sin costes de contratación adicionales, proporcionando una ventaja competitiva sostenible a medida que Zytlyn crece."
+          }
+        ]
+      },
+      "testimonial": {
+        "quote": "El agente de IA de ElevaitLabs es más que una herramienta; ahora es una parte fundamental de nuestro equipo de ventas. Ha despejado por completo el cuello de botella de nuestro pipeline, permitiendo a nuestro equipo humano centrarse en lo que mejor saben hacer: cerrar tratos. El 400% de ROI habla por sí mismo.",
+        "author": "Jane Doe",
+        "role": "Directora de Crecimiento",
+        "company": "Zytlyn"
+      }
+    },
+    "goodnite": {
+      "client": {
+        "client_overview_title": "RESUMEN DEL CLIENTE",
+        "name": "Goodnite",
+        "tagline": "Alquileres Vacacionales Boutique",
+        "description": "Empresa de alquileres vacacionales premium en Brno, República Checa, que ofrece 68 habitaciones y suites originales en 12 edificios con recepción sin contacto y enfoque en el máximo confort.",
+        "details": [
+          {
+            "label": "Industria",
+            "value": "Alquileres Vacacionales y Hotelería"
+          },
+          {
+            "label": "Tamaño del Equipo",
+            "value": "Equipo de Operaciones Pequeño"
+          },
+          {
+            "label": "Propiedades",
+            "value": "68 Habitaciones y Suites"
+          },
+          {
+            "label": "Mercado Objetivo",
+            "value": "Viajeros de Negocios y Ocio"
+          }
+        ]
+      },
+      "hero": {
+        "title": "Cómo Transformamos la *Experiencia del Cliente* de Goodnite con un Ecosistema de IA Completo",
+        "subtitle": "Caso de estudio estratégico: Goodnite logró un ROI de 6x en 12 meses, aumentó la satisfacción del cliente en un 11% y transformó sus operaciones con un ecosistema de experiencia del cliente de IA 24/7.",
+        "kpis": [
+          {
+            "label": "ROI en 12 Meses"
+          },
+          {
+            "label": "Aumento de Satisfacción"
+          },
+          {
+            "label": "Más Reseñas Generadas"
+          }
+        ]
+      },
+      "challenge": {
+        "beforeTitle": "Antes de Arkadia Labs",
+        "points": [
+          "Soporte al cliente limitado fuera de horario",
+          "Comunicación inconsistente con los huéspedes",
+          "Baja tasa de generación de reseñas"
+        ]
+      },
+      "challengeSection": {
+        "title": "El Desafío",
+        "subtitle": "Goodnite enfrentaba desafíos operativos críticos que limitaban la experiencia de sus huéspedes y su potencial de crecimiento en el competitivo mercado de alquileres vacacionales.",
+        "challenges": [
+          {
+            "title": "Horario de Soporte Limitado",
+            "description": "Sin disponibilidad para consultas y soporte a huéspedes de 10 PM a 10 AM, dejando a los huéspedes desatendidos en horas críticas.",
+            "impact": "Mala experiencia del huésped"
+          },
+          {
+            "title": "Comunicación Inconsistente",
+            "description": "Sin un proceso estandarizado de comunicación antes de la llegada o después de la estancia, lo que generaba confusión y oportunidades perdidas.",
+            "impact": "Confusión de huéspedes y reservas perdidas"
+          },
+          {
+            "title": "Baja Generación de Reseñas",
+            "description": "Solo el 40% de los huéspedes dejaban reseñas, lo que afectaba significativamente la visibilidad online y las conversiones de reservas.",
+            "impact": "Presencia online reducida"
+          }
+        ],
+        "coreProblem": {
+          "title": "El Problema Central",
+          "quote": "Necesitábamos un ecosistema completo de experiencia del cliente con IA que pudiera brindar soporte 24/7, guiar a los huéspedes durante su viaje y recopilar activamente feedback para mejorar nuestras calificaciones y reservas.",
+          "author": "Tomáš Ustohal, Gerente de Equipo en Goodnite"
+        }
+      },
+      "solution": {
+        "title": "La Solución de Arkadia Labs",
+        "subtitle": "Un completo Ecosistema de Experiencia del Cliente con IA diseñado con precisión suiza para transformar las operaciones hoteleras.",
+        "implementation": {
+          "title": "Implementación Estratégica de IA",
+          "description": "Aprovechando 12 años de experiencia en ventas y metodologías probadas escalando 3 startups, desarrollamos un ecosistema de IA integral que cubre todo el viaje del huésped.",
+          "features": [
+            {
+              "title": "Recepcionista Nocturno 24/7",
+              "description": "Recepcionista impulsado por IA que gestiona todas las consultas de los huéspedes de 10 PM a 10 AM con capacidad de respuesta inmediata."
+            },
+            {
+              "title": "Soporte Pre-Llegada y Llegada",
+              "description": "Sistema de llamadas automatizado que explica todo antes de la llegada y brinda soporte el día de la llegada."
+            },
+            {
+              "title": "Recopilación de Feedback Post-Estancia",
+              "description": "Agente de IA que llama 2-3 días después de la estancia para recopilar feedback y fomentar reseñas positivas."
+            }
+          ]
+        },
+        "coreFunctions": {
+          "title": "Funciones Clave del Ecosistema de IA",
+          "functions": [
+            "Soporte Nocturno",
+            "Guía Pre-Llegada",
+            "Soporte el Día de Llegada",
+            "Recopilación de Feedback",
+            "Generación de Reseñas"
+          ]
+        }
+      },
+      "timeline": {
+        "title": "Cronograma de Implementación",
+        "subtitle": "Despliegue rápido con optimización continua",
+        "phases": [
+          {
+            "title": "Mes 1: Desarrollo",
+            "description": "Desarrollo del ecosistema de IA a medida, configuración de integraciones y personalización para los requisitos específicos de Goodnite."
+          },
+          {
+            "title": "Mes 2: Integración y Pruebas",
+            "description": "Integración del sistema con los sistemas de reserva existentes, pruebas exhaustivas y formación del personal sobre el nuevo ecosistema de IA."
+          },
+          {
+            "title": "Mes 3: Puesta en Marcha y Resultados",
+            "description": "Lanzamiento completo del sistema con un impacto inmediato en la satisfacción del cliente, la generación de reseñas y la eficiencia operativa."
+          }
+        ]
+      },
+      "impact": {
+        "title": "Impacto Medible",
+        "subtitle": "Resultados transformadores entregados en 3 meses",
+        "kpis": [
+          {
+            "label": "Satisfacción del Cliente",
+            "subLabel": "Sube de 8.4 (aumento del 11%)"
+          },
+          {
+            "label": "Más Reseñas",
+            "subLabel": "Generación de reseñas del 40% → 71%"
+          },
+          {
+            "label": "ROI Alcanzado",
+            "subLabel": "En 12 meses"
+          },
+          {
+            "label": "Respuesta Inmediata",
+            "subLabel": "Reemplaza a 2-3 empleados"
+          }
+        ]
+      },
+      "roiAnalysis": {
+        "title": "Análisis del ROI",
+        "subtitle": "Evaluación exhaustiva del impacto financiero",
+        "calculator": {
+          "title": "Inversión vs Coste de Personal",
+          "items": [
+            {
+              "label": "Coste de Personal Tradicional (2-3 empleados)",
+              "value": "€120k+/año"
+            },
+            {
+              "label": "Inversión en Ecosistema de IA",
+              "value": "15% del coste de personal"
+            },
+            {
+              "label": "Multiplicador de Rendimiento",
+              "value": "3x eficiencia"
+            }
+          ],
+          "finalRoi": {
+            "label": "Alcanzado en 12 meses"
+          }
+        },
+        "benefits": [
+          {
+            "title": "Eficiencia de Costes",
+            "description": "La inversión en IA representa solo el 15% de los costes de personal tradicional, mientras entrega 3 veces el rendimiento en satisfacción del cliente y generación de reseñas."
+          },
+          {
+            "title": "Aceleración de Ingresos",
+            "description": "Un aumento del 78% en la generación de reseñas, combinado con una mejora del 11% en la satisfacción del cliente, se traduce directamente en mayores tasas de reserva y crecimiento de ingresos."
+          },
+          {
+            "title": "Factor de Escalabilidad",
+            "description": "El ecosistema de IA escala infinitamente sin costes de contratación adicionales, proporcionando una ventaja competitiva sostenible a medida que Goodnite se expande."
+          }
+        ]
+      }
+    },
+    "domus-labs": {
+      "hero": {
+        "title": "Cómo *Aceleramos* la Entrega de Proyectos con un Sistema de Inteligencia de IA",
+        "subtitle": "Caso de estudio estratégico: Domus Labs logró un ROI del 160% en 3 meses, aumentó la finalización de proyectos en un 77% y ahorró 8 horas semanales de tiempo ejecutivo con inteligencia de proyectos automatizada.",
+        "kpis": [
+          {
+            "label": "Eficiencia en Reuniones"
+          },
+          {
+            "label": "Finalización de Proyectos"
+          },
+          {
+            "label": "ROI en 3 Meses"
+          }
+        ]
+      },
+      "client": {
+        "client_overview_title": "RESUMEN DEL CLIENTE",
+        "name": "Domus Labs",
+        "tagline": "Estudio de Arquitectura Boutique",
+        "description": "Innovador estudio de arquitectura y diseño de interiores que crea espacios significativos con una perspectiva humanista, expandiéndose internacionalmente por Barcelona, Alemania y Francia.",
+        "details": [
+          {
+            "label": "Industria",
+            "value": "Arquitectura y Diseño de Interiores"
+          },
+          {
+            "label": "Tamaño del Proyecto",
+            "value": "€500k-2M por proyecto"
+          },
+          {
+            "label": "Tamaño del Equipo",
+            "value": "17 Empleados"
+          },
+          {
+            "label": "Mercado Objetivo",
+            "value": "B2B Internacional"
+          }
+        ]
+      },
+      "challenge": {
+        "beforeTitle": "Antes de Arkadia Labs",
+        "points": [
+          "Documentación manual de reuniones que consumía más de 2 horas semanales",
+          "Baja visibilidad de proyectos entre múltiples iniciativas",
+          "Seguimiento de tareas y rendición de cuentas inconsistentes"
+        ]
+      },
+      "challengeSection": {
+        "title": "El Desafío",
+        "subtitle": "Domus Labs enfrentaba desafíos críticos en la gestión de proyectos que limitaban su potencial de expansión internacional.",
+        "challenges": [
+          {
+            "title": "Procesamiento Manual de Reuniones",
+            "description": "Los ejecutivos pasaban más de 2 horas semanales documentando reuniones manualmente, actualizando el estado de los proyectos y rastreando tareas.",
+            "impact": "Pérdida de tiempo ejecutivo"
+          },
+          {
+            "title": "Falta de Visibilidad de Proyectos",
+            "description": "Múltiples proyectos en marcha simultáneamente con poca visibilidad sobre el estado, los riesgos y la responsabilidad entre los equipos.",
+            "impact": "Incumplimiento de plazos"
+          },
+          {
+            "title": "Desafíos de Responsabilidad",
+            "description": "Sistema inconsistente de seguimiento de tareas que impedía una entrega eficiente de proyectos y la coordinación del equipo.",
+            "impact": "Retrasos en proyectos"
+          }
+        ],
+        "coreProblem": {
+          "title": "El Problema Central",
+          "quote": "Necesitábamos un sistema de IA que pudiera capturar automáticamente las ideas de las reuniones, actualizar el estado de los proyectos y mantener la responsabilidad a medida que nos expandimos internacionalmente. Los procesos manuales estaban limitando nuestro potencial de crecimiento.",
+          "author": "Cosma Musacchio, Director General y Creativo, Domus Labs"
+        }
+      },
+      "solution": {
+        "title": "La Solución de Arkadia Labs",
+        "subtitle": "Sistema de Inteligencia de Proyectos de IA a medida, diseñado con precisión suiza para automatizar la gestión de proyectos, el procesamiento de reuniones y el seguimiento de responsabilidades.",
+        "implementation": {
+          "title": "Implementación Estratégica de IA",
+          "description": "Aprovechando 12 años de experiencia en ventas y metodologías probadas, desarrollamos un sistema de Inteligencia de Proyectos de IA a medida.",
+          "features": [
+            {
+              "title": "Análisis Automatizado de Reuniones",
+              "description": "Sistema impulsado por IA que procesa reuniones, genera resúmenes y actualiza automáticamente el estado del proyecto en Notion."
+            },
+            {
+              "title": "Seguimiento Inteligente de Proyectos",
+              "description": "Visibilidad de proyectos en tiempo real con asignación automatizada de tareas y seguimiento del progreso en todas las iniciativas."
+            },
+            {
+              "title": "Inteligencia de Proyectos 24/7",
+              "description": "Asistente de IA basado en Telegram que proporciona respuestas instantáneas sobre el estado de los proyectos, resúmenes de reuniones y actualizaciones de tareas."
+            },
+            {
+              "title": "Rendición de Cuentas Automatizada",
+              "description": "Informes semanales automatizados para miembros del equipo y ejecutivos con el estado del proyecto, riesgos y acciones requeridas."
+            }
+          ]
+        },
+        "coreFunctions": {
+          "title": "Funciones Clave de la Inteligencia de Proyectos",
+          "functions": [
+            "Análisis y Resumen de Reuniones",
+            "Asignación Automatizada de Tareas",
+            "Actualizaciones de Estado de Proyectos",
+            "Asistente de IA en Telegram"
+          ]
+        }
+      },
+      "timeline": {
+        "title": "Cronograma de Implementación",
+        "subtitle": "Despliegue rápido con optimización continua",
+        "phases": [
+          {
+            "title": "Mes 1: Desarrollo",
+            "description": "Desarrollo del sistema de IA a medida, configuración de la integración con Notion y creación del bot de Telegram adaptado a los flujos de trabajo de Domus Labs."
+          },
+          {
+            "title": "Mes 2: Puesta a punto",
+            "description": "Optimización del sistema, perfeccionamiento del procesamiento de reuniones y personalización del flujo de trabajo de gestión de proyectos según el feedback inicial."
+          },
+          {
+            "title": "Mes 3+: Entrega de Resultados",
+            "description": "Rendimiento completo del sistema logrado con un impacto medible en las tasas de finalización de proyectos, el ahorro de tiempo ejecutivo y la responsabilidad del equipo."
+          }
+        ]
+      },
+      "impact": {
+        "title": "Impacto Medible",
+        "subtitle": "Resultados transformadores entregados en 3 meses",
+        "kpis": [
+          {
+            "label": "Eficiencia en Reuniones",
+            "subLabel": "2 horas → 10 minutos"
+          },
+          {
+            "label": "Finalización de Proyectos",
+            "subLabel": "Tasa de éxito del 47% → 83%"
+          },
+          {
+            "label": "ROI Alcanzado",
+            "subLabel": "En 3 meses"
+          },
+          {
+            "label": "Tiempo Semanal Ahorrado",
+            "subLabel": "Por ejecutivo"
+          }
+        ]
+      },
+      "roiAnalysis": {
+        "title": "Análisis del ROI",
+        "subtitle": "Evaluación exhaustiva del impacto financiero",
+        "calculator": {
+          "title": "Inversión vs Coste de Tiempo Ejecutivo",
+          "items": [
+            {
+              "label": "Coste de Tiempo Ejecutivo Tradicional",
+              "value": "€2,000+/mes"
+            },
+            {
+              "label": "Coste de Inversión en IA",
+              "value": "€990/mes"
+            },
+            {
+              "label": "Multiplicador de Eficiencia",
+              "value": "10x procesamiento más rápido"
+            }
+          ],
+          "finalRoi": {
+            "label": "Alcanzado en 3 meses"
+          }
+        },
+        "benefits": [
+          {
+            "title": "Eficiencia de Costes",
+            "description": "La inversión en IA representa el 50% de los costes de tiempo ejecutivo tradicional, mientras entrega 10 veces la eficiencia de procesamiento."
+          },
+          {
+            "title": "Aceleración de Proyectos",
+            "description": "Una mejora del 77% en las tasas de finalización de proyectos se traduce directamente en una entrega más rápida y una mayor satisfacción del cliente."
+          },
+          {
+            "title": "Factor de Escalabilidad",
+            "description": "El sistema de IA escala infinitamente en ubicaciones internacionales sin gastos generales de gestión adicionales."
+          }
+        ]
+      }
+    },
+    "elsa-consulting": {
+      "hero": {
+        "title": "Cómo Transformamos las *Operaciones de Ventas* de ELSA Consulting con una Plataforma de Inteligencia de IA Completa",
+        "subtitle": "Caso de estudio estratégico: ELSA Consulting logró tasas de respuesta 3.5x más altas en 2 meses, aumentó la eficiencia en un 80% y ahorró más de €3,461 con el sistema completo de inteligencia de ventas con IA de ContactIQ - desde la validación de contactos hasta la sincronización con el CRM.",
+        "kpis": [
+          {
+            "label": "ROI en 2 Meses"
+          },
+          {
+            "label": "Aumento de Tasa de Respuesta"
+          },
+          {
+            "label": "Tiempo Ahorrado"
+          }
+        ]
+      },
+      "client": {
+        "client_overview_title": "RESUMEN DEL CLIENTE",
+        "name": "ELSA Consulting",
+        "tagline": "Agencia de Ventas",
+        "description": "Agencia de consultoría de ventas con sede en Barcelona especializada en generación de leads outbound y optimización de ventas B2B para empresas de mercado medio en España y mercados LATAM."
+      },
+      "challenge": {
+        "beforeTitle": "Antes de la Implementación de ContactIQ",
+        "points": [
+          "Solo 7% de tasa de respuesta en llamadas en frío (promedio de la industria)",
+          "BDRs desperdiciando 93 de 100 llamadas en números inválidos/sin respuesta",
+          "Costo de equipo de €57.69/hora quemándose en listas de leads no calificados sin inteligencia de conversación"
+        ]
+      },
+      "challengeSection": {
+        "title": "El Desafío",
+        "subtitle": "ELSA Consulting enfrentaba desafíos operativos críticos que limitaban su eficiencia de ventas y potencial de crecimiento en el competitivo mercado B2B.",
+        "challenges": [
+          {
+            "title": "Pérdida Masiva de Tiempo",
+            "description": "El equipo BDR pasaba 75-80% de su día llamando a números inválidos, buzones de voz y contactos desconectados sin forma de precalificar listas.",
+            "impact": "Baja productividad del equipo"
+          },
+          {
+            "title": "Calidad de Contacto Impredecible",
+            "description": "Sin sistema estandarizado para validar qué contactos realmente responderían, generando problemas de generación de pipeline inconsistente y pronósticos.",
+            "impact": "Pipeline de ventas no confiable"
+          },
+          {
+            "title": "Sin Inteligencia de Conversación",
+            "description": "Cero visibilidad sobre calidad de llamadas, sentimiento o qué realmente funcionaba. Toma de notas manual desperdiciaba tiempo, y sin sincronización CRM significaba seguimientos perdidos y contexto perdido.",
+            "impact": "Oportunidades de ingresos perdidas"
+          }
+        ],
+        "coreProblem": {
+          "title": "El Problema Principal",
+          "quote": "Necesitábamos un ecosistema completo de inteligencia de ventas con IA que pudiera validar contactos antes de llamarlos, analizar la calidad de conversación en tiempo real, generar scripts ganadores automáticamente y sincronizar todo con nuestro CRM sin trabajo manual. La prospección manual y toma de notas estaba matando nuestra eficiencia y moral del equipo.",
+          "author": "Calixto Carbone, Fundador y CEO de ELSA Consulting"
+        }
+      },
+      "solution": {
+        "title": "La Solución ContactIQ",
+        "subtitle": "Plataforma Completa de Inteligencia de Leads con IA - Sistema integral impulsado por IA que valida contactos antes de la llamada, analiza conversaciones durante la llamada, genera scripts ganadores automáticamente y sincroniza todo con tu CRM - sin trabajo manual.",
+        "implementation": {
+          "title": "Implementación Estratégica de IA",
+          "description": "Aprovechando 12 años de experiencia en ventas y metodologías probadas al escalar 3 startups desde pre-seed hasta Serie A, desarrollamos un sistema completo de inteligencia de ventas con IA cubriendo el viaje completo de prospección a cierre.",
+          "features": [
+            {
+              "title": "Validación e Inteligencia Pre-Llamada",
+              "description": "El sistema de IA llama automáticamente a listas completas de contactos (1000+ leads), valida números, detecta buzones de voz, analiza sentimiento y puntúa cada contacto del 0-9 según calidad de engagement - todo antes de que tus BDRs hagan una sola llamada."
+            },
+            {
+              "title": "Generación de Scripts y Transcripción con IA",
+              "description": "Genera automáticamente guiones ideales basados en análisis de sentimiento de llamadas de validación, luego transcribe y resume cada llamada BDR con detección de emociones (feliz, frustrado, interesado) y extracción de puntos clave."
+            },
+            {
+              "title": "Sincronización CRM Sin Intervención",
+              "description": "Cada llamada, transcripción, puntaje de sentimiento y tarea de seguimiento se sincroniza automáticamente a Salesforce/HubSpot. Sin registro manual, sin notas perdidas, historial completo de conversación accesible instantáneamente para todo el equipo."
+            }
+          ]
+        },
+        "coreFunctions": {
+          "title": "Funciones Principales de ContactIQ",
+          "functions": [
+            "Validación y Puntuación de Contactos (0-9)",
+            "Análisis de Sentimiento y Emoción",
+            "Guiones de Conversación Generados por IA",
+            "Transcripción y Resúmenes de Llamadas",
+            "Sincronización Automática con CRM"
+          ]
+        }
+      },
+      "timeline": {
+        "title": "Cronograma de Implementación",
+        "subtitle": "Despliegue rápido con optimización continua",
+        "phases": [
+          {
+            "title": "Mes 1: Desarrollo de Plataforma",
+            "description": "Plataforma completa de inteligencia de ventas con IA construida: motor de validación de contactos, sistema de análisis de sentimiento, generador de scripts, pipeline de transcripción de llamadas y conectores CRM integrados con la instancia de Salesforce de ELSA."
+          },
+          {
+            "title": "Mes 2: Pruebas y Optimización",
+            "description": "Programa piloto con lote de prueba de 5,000 contactos, algoritmos de puntuación refinados y plantillas de scripts basadas en patrones reales de respuesta y datos de sentimiento, equipo BDR entrenado en nuevo flujo asistido por IA con registro automático en CRM."
+          },
+          {
+            "title": "Mes 3: Despliegue Completo y Resultados",
+            "description": "Lanzamiento completo de plataforma en todas las campañas outbound con mejora inmediata de 3.5x en tasa de respuesta, cero toma de notas manual, 80% de ahorro de tiempo en prospección y ROI medible en los primeros 60 días."
+          }
+        ]
+      },
+      "impact": {
+        "title": "Impacto Medible",
+        "subtitle": "Resultados transformacionales entregados en 2 meses",
+        "kpis": [
+          {
+            "label": "Tasa de Respuesta",
+            "subLabel": "Desde el 7% promedio de la industria"
+          },
+          {
+            "label": "Contactos Válidos",
+            "subLabel": "Números funcionales identificados"
+          },
+          {
+            "label": "Múltiplo de ROI",
+            "subLabel": "En 60 días"
+          },
+          {
+            "label": "Tiempo Ahorrado",
+            "subLabel": "En actividades de prospección"
+          }
+        ]
+      },
+      "roiAnalysis": {
+        "title": "Análisis de ROI",
+        "subtitle": "Evaluación completa del impacto financiero",
+        "calculator": {
+          "title": "Inversión vs Ahorro de Costos",
+          "items": [
+            {
+              "label": "Costo de Equipo BDR de 3 Personas"
+            },
+            {
+              "label": "Inversión en Plataforma ContactIQ"
+            },
+            {
+              "label": "Ahorro de Costos (2 meses)"
+            }
+          ],
+          "finalRoi": {
+            "label": "Logrado en 2 meses"
+          }
+        },
+        "benefits": [
+          {
+            "title": "Eficiencia de Costos",
+            "description": "La inversión en plataforma de IA representa solo el 15% de los costos de personal, mientras entrega una mejora de rendimiento de 3.5x y elimina toda la toma de notas manual y entrada de datos en CRM."
+          },
+          {
+            "title": "Aceleración de Ingresos",
+            "description": "Tasa de respuesta 3.5x más alta + scripts optimizados por IA + enriquecimiento automático de CRM = generación de pipeline más rápida, tasas de reserva más altas y mejor ejecución de seguimientos."
+          },
+          {
+            "title": "Captura de Conocimiento Institucional",
+            "description": "Cada llamada transcrita y analizada construye una biblioteca de lo que funciona. Los nuevos BDRs se adaptan 3x más rápido usando scripts de mejores prácticas generados por IA de los mejores representantes."
+          }
+        ]
+      },
+      "testimonial": {
+        "quote": "ContactIQ transformó cómo opera nuestro equipo BDR. En lugar de quemar cientos de llamadas sin salida cada día, ahora están teniendo conversaciones reales con prospectos calificados usando scripts generados por IA que realmente funcionan. La transcripción automática y sincronización CRM eliminó toda la toma de notas manual - nuestro equipo pasó de gastar 20 minutos por llamada en trabajo administrativo a cero. Cuando sabes que la próxima llamada llegará a un humano Y tienes el script perfecto listo, todo cambia.",
+        "author": "Calixto Carbone",
+        "role": "Fundador y CEO",
+        "company": "ELSA Consulting"
+      }
+    },
+    "common": {
+      "clientSuccessStory": "Historia de Éxito del Cliente",
+      "roiSuffix": "% ROI"
+    }
+  },
+  "case_studies_index": {
+    "title": "Casos de Estudio",
+    "subtitle": "Descubre cómo hemos ayudado a empresas a transformar sus procesos de ventas con IA.",
+    "cta": "Leer Caso de Estudio"
+  },
+  "whyElevaiteStudyCase": {
+    "title": "Por qué Arkadia Labs",
+    "subtitle": "Precisión suiza unida a una probada experiencia en ventas",
+    "features": [
+      {
+        "title": "Calidad 'Hecho en Suiza'",
+        "description": "Ingeniería de precisión y estándares de fiabilidad aplicados al desarrollo de IA."
+      },
+      {
+        "title": "Trayectoria Comprobada",
+        "description": "12 años de experiencia en ventas escalando 3 startups desde pre-seed hasta Serie A."
+      },
+      {
+        "title": "Soluciones a Medida",
+        "description": "Agentes de IA personalizados y diseñados específicamente para los requisitos de tu negocio."
+      }
+    ]
+  },
+  "case_study": {
+    "industry": "Industria",
+    "deal_size": "Tamaño del Trato",
+    "sales_team": "Equipo de Ventas",
+    "target_market": "Mercado Objetivo"
+  }
+}

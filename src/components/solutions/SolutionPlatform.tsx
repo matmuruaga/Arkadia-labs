@@ -352,7 +352,7 @@ const LeadScoreGauge: React.FC<{ score: number; delay: number; gradientId: strin
 };
 
 const SolutionPlatform: React.FC<Props> = React.memo(({ data, solutionId }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
   const gaugeGradientId = useId();
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(true); // Default to mobile to avoid flash

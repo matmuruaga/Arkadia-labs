@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 const backgroundImageUrl = 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1750854126/45_y1pvj6.jpg';
 
 export const CtaSection = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('common');
   const navigate = useNavigate();
   const containerRef = useRef<HTMLDivElement>(null);
 

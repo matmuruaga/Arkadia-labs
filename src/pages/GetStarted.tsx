@@ -20,7 +20,7 @@ type GetStartedFormValues = z.infer<z.ZodObject<any>>;
 const backgroundImageUrl = 'https://res.cloudinary.com/dwhidn4z1/image/upload/v1750796289/Gradient__42_klhn8c.jpg';
 
 const GetStarted = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('contact');
   const location = useLocation();
   const [loading, setLoading] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);

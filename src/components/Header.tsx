@@ -45,8 +45,17 @@ const Header = () => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false);
   const solutionsDropdownRef = useRef<HTMLDivElement>(null);
+  const solutionsNsLoaded = useRef(false);
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('common');
+
+  // Lazy-load 'solutions' namespace the first time the dropdown opens
+  useEffect(() => {
+    if ((isSolutionsOpen || isMobileSolutionsOpen) && !solutionsNsLoaded.current) {
+      solutionsNsLoaded.current = true;
+      i18n.loadNamespaces('solutions').catch(() => {/* ignore */});
+    }
+  }, [isSolutionsOpen, isMobileSolutionsOpen, i18n]);
 
   // Ref for requestAnimationFrame throttling
   const rafRef = useRef<number | null>(null);

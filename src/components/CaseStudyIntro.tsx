@@ -31,7 +31,7 @@ interface Props {
 }
 
 const CaseStudyIntro: React.FC<Props> = ({ client, challenge, studyKey }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('case-studies');
 
   if (!client || !challenge) return null;
 

@@ -1,0 +1,303 @@
+{
+  "cloneYourBusiness": {
+    "hero": {
+      "title": "Clona tu Empresa con IA",
+      "badge": "Automatización con IA",
+      "headline": "Clona tu Empresa",
+      "headlineAccent": "con IA.",
+      "subtitle": "Automatiza el 99% de tus procesos con agentes de IA que replican departamentos enteros — ventas, marketing, soporte y operaciones.",
+      "cta": "Agenda tu Demo",
+      "hubOriginal": "Tu Empresa",
+      "hubTransformed": "Potenciada con IA",
+      "transformedLabel": "4 departamentos automatizados en segundos",
+      "nodes": {
+        "sales": "Ventas",
+        "marketing": "Marketing",
+        "support": "Soporte",
+        "operations": "Operaciones"
+      },
+      "trust": {
+        "companies": {
+          "value": "+50",
+          "label": "Empresas"
+        },
+        "automation": {
+          "value": "99%",
+          "label": "Automatización"
+        },
+        "availability": {
+          "value": "24/7",
+          "label": "Disponibilidad"
+        }
+      }
+    },
+    "problem": {
+      "title": "Tu Equipo Se Ahoga en Trabajo Repetitivo",
+      "subtitle": "Los procesos manuales, tiempos de respuesta lentos y cuellos de botella frenan el crecimiento de tu negocio.",
+      "badge": "El Problema",
+      "painPoints": {
+        "highCosts": {
+          "title": "Costos de Personal por las Nubes",
+          "description": "Contratar, capacitar, beneficios, rotación — escalar tu equipo es caro y lento. Cada nueva contratación tarda meses en ser productiva."
+        },
+        "humanErrors": {
+          "title": "Errores Humanos Repetitivos",
+          "description": "Ingreso manual de datos, errores de copiar y pegar, y procesos inconsistentes generan errores costosos que se acumulan con el tiempo."
+        },
+        "no247": {
+          "title": "Imposible Escalar 24/7",
+          "description": "Tus clientes esperan respuestas instantáneas las 24 horas, pero cubrir tres turnos no es práctico ni económico."
+        },
+        "disconnected": {
+          "title": "Departamentos Desconectados",
+          "description": "Ventas no habla con soporte, marketing no se sincroniza con operaciones — equipos aislados crean brechas que pierden clientes."
+        },
+        "manualTasks": {
+          "title": "Horas Perdidas en Tareas Manuales",
+          "description": "Tu equipo talentoso pasa la mayor parte del día en trabajo administrativo repetitivo en lugar de actividades de alto impacto que hacen crecer el negocio."
+        }
+      },
+      "stats": {
+        "repetitive": {
+          "value": "60%",
+          "label": "del tiempo laboral en tareas repetitivas",
+          "source": "McKinsey Global Institute"
+        },
+        "manualErrors": {
+          "value": "$3.1T",
+          "label": "perdidos anualmente por mala calidad de datos",
+          "source": "IBM & Harvard Business Review"
+        },
+        "lostRevenue": {
+          "value": "35%",
+          "label": "de ingresos perdidos por ineficiencia operativa",
+          "source": "IDC Research"
+        }
+      }
+    },
+    "howItWorks": {
+      "badge": "Cómo Funciona",
+      "title": "Del Análisis al Despliegue en 3 Pasos",
+      "subtitle": "Seguimos una metodología probada para clonar las operaciones de tu empresa con IA — rápido, confiable y adaptado a tu flujo de trabajo.",
+      "steps": {
+        "analysis": {
+          "title": "Análisis",
+          "description": "Mapeamos toda tu empresa, identificamos los procesos automatizables y diseñamos la arquitectura óptima de agentes IA para cada departamento."
+        },
+        "cloning": {
+          "title": "Clonación",
+          "description": "Creamos agentes de IA especializados para cada rol y departamento — entrenados con tus datos, tu tono y tus reglas de negocio."
+        },
+        "deployment": {
+          "title": "Despliegue",
+          "description": "Integramos con tus herramientas existentes, ejecutamos pruebas de validación, entrenamos a tu equipo y lanzamos tu fuerza laboral IA a producción."
+        }
+      }
+    },
+    "solution": {
+      "title": "Agentes de IA que Operan tu Negocio 24/7",
+      "subtitle": "Despliega agentes de IA inteligentes que hacen el trabajo de departamentos enteros — sin contratar, formar ni gestionar más personas."
+    },
+    "cta": {
+      "badge": "Soluciones a Medida",
+      "headline": "Cada Empresa es",
+      "headlineAccent": "Única.",
+      "subtitle": "Diseñamos soluciones de agentes IA personalizadas para tus flujos de trabajo, estructura de equipo y objetivos de negocio — sin paquetes predefinidos.",
+      "primaryCta": "Solicita tu Demo Gratuita",
+      "secondaryCta": "Habla con Nuestro Equipo",
+      "noPricingNote": "Sin contratos. Sin tablas de precios. Solo una conversación sobre tu negocio.",
+      "trustPoints": {
+        "dedicated": "Onboarding dedicado",
+        "noLongContracts": "Sin compromisos a largo plazo",
+        "measurableRoi": "ROI medible garantizado"
+      }
+    },
+    "departments": {
+      "badge": "Departamentos Clonables",
+      "title": "Departamentos que Puedes Clonar Hoy",
+      "subtitle": "Cada departamento viene pre-construido con agentes de IA especializados para su rol específico — listos para desplegar en días, no meses.",
+      "agentsLabel": "Agentes IA",
+      "exploreCta": "Explorar Soluciones",
+      "sales": {
+        "title": "Ventas",
+        "tagline": "Cierra negocios 24/7 en piloto automático",
+        "functions": {
+          "f1": "Calificación y scoring automatizado de leads",
+          "f2": "Secuencias de seguimiento personalizadas",
+          "f3": "Actualización de CRM y gestión de pipeline"
+        },
+        "expandedDescription": "Nuestros agentes de IA de Ventas manejan todo el pipeline — desde el primer contacto hasta el cierre. Califican leads, agendan reuniones, envían seguimientos y actualizan tu CRM en tiempo real.",
+        "agents": {
+          "salesAgent": "Agente de Ventas",
+          "salesQualifier": "Calificador de Ventas",
+          "leadValidator": "Validador de Leads"
+        }
+      },
+      "marketing": {
+        "title": "Marketing",
+        "tagline": "Crea y distribuye contenido a escala",
+        "functions": {
+          "f1": "Creación de contenido multicanal",
+          "f2": "Programación y engagement en redes sociales",
+          "f3": "Analítica y optimización de campañas"
+        },
+        "expandedDescription": "Los agentes de IA de Marketing producen publicaciones de blog, contenido para redes sociales, campañas de email y copys de anuncios — todo alineado con la voz de tu marca y optimizado para engagement.",
+        "agents": {
+          "contentCreator": "Creador de Contenido",
+          "socialManager": "Social Manager"
+        }
+      },
+      "support": {
+        "title": "Atención al Cliente",
+        "tagline": "Atención instantánea y multilingüe",
+        "functions": {
+          "f1": "Respuesta instantánea 24/7 a consultas",
+          "f2": "Agendamiento de citas y reservas",
+          "f3": "Enrutamiento y escalación de tickets"
+        },
+        "expandedDescription": "Los agentes de IA de Soporte responden consultas al instante, agendan citas, manejan quejas y escalan problemas complejos — en cualquier idioma, las 24 horas.",
+        "agents": {
+          "virtualReceptionist": "Recepcionista Virtual",
+          "bookingAgent": "Agente de Reservas"
+        }
+      },
+      "operations": {
+        "title": "Operaciones",
+        "tagline": "Optimiza los flujos internos",
+        "functions": {
+          "f1": "Automatización y monitoreo de procesos",
+          "f2": "Ingreso de datos y reportes",
+          "f3": "Coordinación entre departamentos"
+        },
+        "expandedDescription": "Los agentes de IA de Operaciones automatizan flujos internos, generan reportes, monitorean KPIs y mantienen todos los departamentos sincronizados — eliminando cuellos de botella y trabajo manual.",
+        "agents": {
+          "operationsAgent": "Agente de Operaciones"
+        }
+      }
+    },
+    "beforeAfter": {
+      "badge": "Resultados Comprobados",
+      "title": "La Transformación en Números",
+      "subtitle": "Mira el impacto medible de clonar las operaciones de tu negocio con agentes de IA — métricas reales de implementaciones reales.",
+      "before": "Antes",
+      "after": "Después",
+      "metrics": {
+        "operatingCosts": {
+          "title": "Costos Operativos",
+          "beforeValue": "100%",
+          "afterValue": "30%",
+          "improvementLabel": "reducción de costos"
+        },
+        "responseTime": {
+          "title": "Tiempo de Respuesta",
+          "beforeValue": "24h",
+          "afterValue": "3s",
+          "improvementLabel": "más rápido"
+        },
+        "availability": {
+          "title": "Disponibilidad",
+          "beforeValue": "8h/día",
+          "afterValue": "24/7",
+          "improvementLabel": "aumento de disponibilidad"
+        },
+        "errorRate": {
+          "title": "Tasa de Error",
+          "beforeValue": "12%",
+          "afterValue": "0.5%",
+          "improvementLabel": "reducción de errores"
+        },
+        "capacity": {
+          "title": "Capacidad de Atención",
+          "beforeValue": "1x",
+          "afterValue": "10x",
+          "improvementLabel": "más capacidad"
+        },
+        "scalingSpeed": {
+          "title": "Velocidad de Escalado",
+          "beforeValue": "12 semanas",
+          "afterValue": "2 días",
+          "improvementLabel": "escalado más rápido"
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integraciones",
+      "title": "Se Conecta con tus Herramientas",
+      "subtitle": "Tus agentes de IA se integran perfectamente con las plataformas que tu equipo ya utiliza — sin migración, sin interrupciones.",
+      "cta": "Ver Todas las Integraciones"
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Comunes sobre la Clonación Empresarial",
+      "subtitle": "Todo lo que necesitas saber antes de comenzar tu transformación con IA.",
+      "questions": {
+        "q1": {
+          "question": "¿Cuánto tiempo toma implementar?",
+          "answer": "La mayoría de las empresas están completamente operativas con su equipo de agentes IA en 2-4 semanas. El cronograma depende de la complejidad de tus flujos de trabajo y el número de departamentos. Comenzamos con un piloto en un departamento para que veas resultados rápidamente, luego escalamos desde ahí."
+        },
+        "q2": {
+          "question": "¿Qué departamentos pueden automatizarse?",
+          "answer": "Cualquier departamento con tareas repetitivas y basadas en reglas es un buen candidato: Ventas (calificación de leads, seguimientos), Marketing (creación de contenido, programación), Soporte al Cliente (consultas, reservas) y Operaciones (entrada de datos, reportes, coordinación). Analizamos tus flujos de trabajo específicos para identificar primero las oportunidades de automatización con mayor ROI."
+        },
+        "q3": {
+          "question": "¿Es seguro para datos sensibles?",
+          "answer": "Sí. La seguridad está integrada en nuestra arquitectura desde el primer día. Utilizamos encriptación de nivel empresarial, controles de acceso basados en roles y opciones de residencia de datos. Nuestros agentes IA operan dentro de tu perímetro de seguridad existente y cumplen con GDPR, HIPAA y requisitos SOC 2. Tus datos nunca se usan para entrenar modelos de terceros."
+        },
+        "q4": {
+          "question": "¿Cómo se integra con nuestras herramientas actuales?",
+          "answer": "Nuestros agentes IA se conectan nativamente con más de 100 herramientas empresariales, incluyendo Salesforce, HubSpot, Slack, Microsoft 365, Google Workspace, Zapier y muchas más. Si usas un sistema interno personalizado, construimos una integración dedicada. Sin migración, sin interrupciones — tu equipo sigue trabajando de la misma manera."
+        },
+        "q5": {
+          "question": "¿Necesitamos equipo técnico?",
+          "answer": "No. Nosotros nos encargamos de toda la implementación, configuración y mantenimiento de tu equipo de agentes IA. Tu equipo no necesita ningún conocimiento técnico. Proporcionamos capacitación para los usuarios finales y soporte continuo. Nuestro objetivo es que tu gente se enfoque en la estrategia y la creatividad, no en gestionar software."
+        },
+        "q6": {
+          "question": "¿Qué pasa con los empleados actuales?",
+          "answer": "Los agentes IA se encargan de las tareas repetitivas y de bajo valor, liberando a tu equipo para enfocarse en trabajo de alto impacto, creativo y estratégico. Nuestros clientes reportan consistentemente una mayor satisfacción laboral porque las personas dejan de hacer trabajo tedioso. Nadie es reemplazado — todos son potenciados."
+        }
+      }
+    },
+    "finalCta": {
+      "badge": "Empieza Hoy",
+      "headline": "¿Listo para Clonar tu",
+      "headlineAccent": "Empresa?",
+      "subtitle": "Reserva una llamada estratégica gratuita de 30 minutos. Mapearemos tus oportunidades de automatización y te mostraremos exactamente cómo podría ser tu empresa impulsada por IA.",
+      "schedulerLabel": "Agendar Llamada Estratégica Gratuita",
+      "trustItems": {
+        "t1": "Llamada estratégica gratuita de 30 min",
+        "t2": "Sin compromiso requerido",
+        "t3": "Demo en vivo de tu caso de uso"
+      },
+      "orLabel": "o"
+    },
+    "caseStudyHighlight": {
+      "badge": "Resultados Reales",
+      "title": "Vélo",
+      "titleAccent": "En Acción",
+      "subtitle": "Empresas ya están ahorrando tiempo y reduciendo costos con automatización de IA. Aquí un ejemplo.",
+      "cta": "Leer Caso Completo",
+      "viewAll": "Ver todos los casos de éxito"
+    },
+    "roiSection": {
+      "badge": "Calculadora de ROI",
+      "title": "Descubre Cuánto",
+      "titleAccent": "Puedes Ahorrar",
+      "subtitle": "Ingresa los datos de tu equipo y ve el ahorro mensual estimado con automatización de IA.",
+      "inputsHeading": "Datos de tu Negocio",
+      "resultsHeading": "Tu Ahorro Estimado",
+      "inputs": {
+        "employees": "Número de Empleados",
+        "monthlyCost": "Costo Mensual Promedio por Empleado",
+        "repetitiveTasks": "% del Tiempo en Tareas Repetitivas"
+      },
+      "results": {
+        "monthlySavings": "AHORRO MENSUAL",
+        "hoursSaved": "HORAS AHORRADAS / MES",
+        "annualSavings": "AHORRO ANUAL"
+      },
+      "cta": "Descubre Cuánto Puedes Ahorrar",
+      "ctaSubtext": "¿Quieres un cálculo preciso para tu negocio? Agenda una auditoría gratuita de 30 minutos.",
+      "disclaimer": "* Estimaciones asumen 62% de eficiencia de automatización en tareas repetitivas identificadas. Los resultados individuales varían según la complejidad del proceso."
+    }
+  }
+}

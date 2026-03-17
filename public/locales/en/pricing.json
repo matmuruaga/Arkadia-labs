@@ -1,0 +1,155 @@
+{
+  "pricing": {
+    "mostPopular": "Most Popular",
+    "perMonth": "/mo",
+    "plans": {
+      "p1": {
+        "name": "AI Employee",
+        "setupFee": "$1,500 one-time setup fee",
+        "description": "For small businesses automating lead qualification & follow-ups.",
+        "cta": "Choose Plan",
+        "features": {
+          "f1": "1 AI Sales System built & trained",
+          "f2": "2× Monthly Strategy Calls (30 min)",
+          "f3": "Standard Email & Chat Support",
+          "f4": "CRM Integration",
+          "f5": "Monthly Optimizing Session",
+          "f6": "Standard Response (24–48h)"
+        },
+        "excluded": {
+          "e1": "External Tools (Twilio, APIs, CRMs)",
+          "e2": "Dedicated Slack Channel"
+        }
+      },
+      "p2": {
+        "name": "AI Sales Team",
+        "setupFee": "$2,500 one-time setup fee",
+        "description": "Designed for scaling teams automating multiple sales functions.",
+        "cta": "Get Started Now",
+        "features": {
+          "f1": "3 AI Sales Systems built & trained",
+          "f2": "4× Monthly Strategy Calls (30 min)",
+          "f3": "Priority Email & Chat Support",
+          "f4": "Dedicated Slack Channel",
+          "f5": "CRM Integration",
+          "f6": "Bi-Weekly Optimization Session",
+          "f7": "Priority Response (12–24h)"
+        },
+        "excluded": {
+          "e1": "External Tools (Twilio, APIs, CRMs)"
+        }
+      },
+      "p3": {
+        "name": "AI Growth Partner",
+        "setupFee": "$5,000 one-time setup fee",
+        "description": "For enterprises automating their entire sales funnel.",
+        "cta": "Contact Sales",
+        "features": {
+          "f1": "10 AI Sales System built & trained",
+          "f2": "Weekly Strategy Calls (60 min)",
+          "f3": "Exclusive Email & Chat Support",
+          "f4": "Dedicated Slack Channel",
+          "f5": "CRM Integrations",
+          "f6": "Weekly Optimization Sessions",
+          "f7": "4-Hour Response Time"
+        },
+        "excluded": {
+          "e1": "External Tools (Twilio, APIs, CRMs)"
+        }
+      }
+    },
+    "footer": {
+      "annualDiscount": "💰 Save up to 20% with annual billing!",
+      "paymentOptions": "Payment options: Invoice, Bank Transfer, Stripe (Credit Card)",
+      "addOnsTitle": "✳️ Add-ons Available:",
+      "addOn1": "Additional Strategy Call – $250",
+      "addOn2": "Sales Training for Human Team – $750"
+    },
+    "header": {
+      "title": "Find the Perfect AI Partner for Your Business",
+      "subtitle": "Simple, transparent pricing to help you scale. Choose the plan that fits your growth ambitions."
+    }
+  },
+  "featureComparison": {
+    "title": "Compare Plans Side-by-Side",
+    "subtitle": "Find the exact features you need to drive growth.",
+    "roiButton": "Calculate Your Potential ROI",
+    "tableHeader": {
+      "features": "Features",
+      "plan1": "AI Employee",
+      "plan2": "AI Sales Team",
+      "plan3": "AI Growth Partner"
+    },
+    "features": {
+      "f1": {
+        "name": "AI Sales Systems built & trained",
+        "plan1": "1",
+        "plan2": "3",
+        "plan3": "10"
+      },
+      "f2": {
+        "name": "Monthly Strategy Calls",
+        "plan1": "2× (30 min)",
+        "plan2": "4× (30 min)",
+        "plan3": "Weekly (60 min)"
+      },
+      "f3": {
+        "name": "Email & Chat Support",
+        "plan1": "Standard",
+        "plan2": "Priority",
+        "plan3": "Exclusive"
+      },
+      "f4": {
+        "name": "Dedicated Slack Channel",
+        "plan1": "false",
+        "plan2": "true",
+        "plan3": "true"
+      },
+      "f5": {
+        "name": "CRM Integration(s)",
+        "plan1": "true",
+        "plan2": "true",
+        "plan3": "true"
+      },
+      "f6": {
+        "name": "Optimization Sessions",
+        "plan1": "Monthly",
+        "plan2": "Bi-Weekly",
+        "plan3": "Weekly"
+      },
+      "f7": {
+        "name": "Support Response Time",
+        "plan1": "24–48h",
+        "plan2": "12–24h",
+        "plan3": "4-Hour"
+      },
+      "f8": {
+        "name": "External Tools (Twilio, APIs, CRMs)",
+        "plan1": "false",
+        "plan2": "false",
+        "plan3": "false"
+      }
+    }
+  },
+  "roiCalculator": {
+    "title": "Calculate Your ROI",
+    "subtitle": "Adjust the sliders to see your potential savings and revenue growth.",
+    "plans": {
+      "employee": "AI Employee",
+      "team": "AI Sales Team",
+      "partner": "AI Growth Partner"
+    },
+    "inputs": {
+      "reps": "Number of Sales Reps",
+      "dealSize": "Average Deal Size",
+      "leads": "Current Monthly Leads"
+    },
+    "results": {
+      "gain": "POTENTIAL MONTHLY GAIN*",
+      "hoursSaved": "HOURS SAVED*",
+      "roi": "EST. ROI*",
+      "perMonthSuffix": "/mo"
+    },
+    "disclaimer": "*All results shown are estimates based on the data you provide and our general customer models. A personalized deep-dive analysis is required for a more precise forecast."
+  }
+}

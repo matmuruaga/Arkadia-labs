@@ -131,7 +131,7 @@ AfterCard.displayName = 'AfterCard';
 
 
 const BeforeAfterSection = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('home');
   const navigate = useNavigate();
   const [activeSegment, setActiveSegment] = useState('sales');
   const { width } = useWindowSize();
@@ -142,12 +142,34 @@ const BeforeAfterSection = () => {
   };
 
   return (
-    <section 
-      id="before-after" 
-      className="py-16 md:py-24 bg-cover bg-center"
-      style={{ backgroundImage: `url('https://res.cloudinary.com/dwhidn4z1/image/upload/v1749465078/background_gradient_egn6ba.png')` }}
+    <section
+      id="before-after"
+      className="relative overflow-hidden py-16 md:py-24 bg-gradient-to-br from-sky-50 via-cyan-50 to-teal-50"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      {/* ── Decorative background layer ─────────────────────────────────── */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        {/* Ambient orb — top-left sky */}
+        <div className="absolute -top-24 -left-24 w-[480px] h-[480px] bg-sky-400/20 rounded-full blur-3xl" />
+
+        {/* Ambient orb — bottom-right teal */}
+        <div className="absolute -bottom-24 -right-24 w-[520px] h-[520px] bg-teal-400/20 rounded-full blur-3xl" />
+
+        {/* Centre radial glow — draws the eye to the cards */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-r from-sky-200/25 to-cyan-200/25 rounded-full blur-3xl" />
+
+        {/* Secondary accent orb — upper-right */}
+        <div className="absolute top-8 right-1/4 w-64 h-64 bg-cyan-300/15 rounded-full blur-2xl" />
+
+        {/* Subtle dot-grid overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.035]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         {/* Título y Filtros */}
         <motion.div
           className="text-center mb-12 md:mb-16"

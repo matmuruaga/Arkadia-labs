@@ -1,0 +1,53 @@
+{
+  "contactPage": {
+    "title": "Hablemos de tu Proyecto",
+    "subtitle": "Completa este formulario para agendar una reunión con nuestro equipo.",
+    "whyInfoTitle": "Un último paso antes de conectar",
+    "whyInfoBody": "Completar este formulario es el primer paso para una colaboración exitosa. Conocer un poco sobre tu empresa y tus desafíos nos permite preparar nuestra conversación y llegar con ideas que realmente aporten valor. ¡Estamos deseando hablar contigo!",
+    "labels": {
+      "fullName": "Nombre Completo",
+      "workEmail": "Email de Trabajo",
+      "companyName": "Nombre de la Empresa",
+      "role": "Cargo (Opcional)",
+      "companySize": "Tamaño de la Empresa",
+      "challenge": "¿Cuál es tu principal desafío o necesidad?"
+    },
+    "placeholders": {
+      "companySize": "Selecciona un rango"
+    },
+    "options": {
+      "size1": "1-10 empleados",
+      "size2": "11-50 empleados",
+      "size3": "51-200 empleados",
+      "size4": "+201 empleados"
+    },
+    "button": {
+      "submit": "Agendar Reunión"
+    },
+    "validation": {
+      "fullName": "El nombre debe tener al menos 3 caracteres.",
+      "email": "Por favor, introduce un email válido.",
+      "companyName": "El nombre de la empresa es requerido.",
+      "companySize": "Por favor, selecciona un tamaño de empresa.",
+      "challenge": "Tu descripción debe tener al menos 10 caracteres."
+    },
+    "errors": {
+      "server": "Hubo un problema al enviar tu solicitud. Por favor, inténtalo de nuevo."
+    }
+  },
+  "thankYouPage": {
+    "header": {
+      "title": "¡Gracias por tu interés!",
+      "subtitle": "Hemos recibido tu solicitud y nuestro equipo se pondrá en contacto contigo en breve."
+    },
+    "cta": {
+      "altImage": "Ilustración de Agente de IA",
+      "title": "Da el siguiente paso",
+      "description": "Para mayor agilidad y para asegurar un espacio que te convenga, puedes reservar una llamada de 15 minutos directamente en nuestro calendario.",
+      "button": "Agendar tu reunión"
+    },
+    "footer": {
+      "backToHome": "Volver a la página principal"
+    }
+  }
+}

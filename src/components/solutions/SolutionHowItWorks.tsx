@@ -44,7 +44,7 @@ interface Props {
 }
 
 const SolutionHowItWorks: React.FC<Props> = ({ data, solutionId }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
 
   return (
     <section id="how-it-works" className="py-20 md:py-28 bg-gradient-to-b from-slate-50 to-white overflow-hidden">

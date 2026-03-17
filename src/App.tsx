@@ -26,6 +26,7 @@ const CaseStudyPage = lazy(() => import('./pages/CaseStudyPage'));
 const CaseStudiesIndexPage = lazy(() => import('./pages/CaseStudiesIndexPage'));
 const SolutionDetailPage = lazy(() => import('./pages/solutions/SolutionDetailPage'));
 const SolutionsIndexPage = lazy(() => import('./pages/solutions/SolutionsIndexPage'));
+const CloneYourBusinessPage = lazy(() => import('./pages/CloneYourBusinessPage'));
 
 
 /**
@@ -63,6 +64,9 @@ function App() {
                 <Route path="case-studies/:slug" element={<CaseStudyPage />} />
                 <Route path="solutions" element={<SolutionsIndexPage />} />
                 <Route path="solutions/:slug" element={<SolutionDetailPage />} />
+                <Route path="clone-your-business" element={<CloneYourBusinessPage />} />
+                <Route path="clona-tu-empresa" element={<CloneYourBusinessPage />} />
+                <Route path="klonujte-firmu" element={<CloneYourBusinessPage />} />
             </Route>
 
           </Route>

@@ -1,0 +1,100 @@
+{
+  "header": {
+    "features": "Casos de Uso",
+    "plans": "Planes",
+    "integrations": "Integraciones",
+    "solutions": "Soluciones",
+    "studyCase": "Casos de Estudio",
+    "getStarted": "Empezar",
+    "login": "Iniciar Sesión",
+    "viewAllSolutions": "Ver Todas las Soluciones",
+    "solutionsCategories": {
+      "outbound": "Ventas Outbound",
+      "inbound": "Atención al Cliente",
+      "marketing": "Marketing y Contenido",
+      "operations": "Operaciones"
+    },
+    "back": "Volver",
+    "solutionsItems": {
+      "leadValidator": {
+        "name": "Validador de Leads",
+        "description": "Verifica y enriquece leads automáticamente"
+      },
+      "salesQualifier": {
+        "name": "Calificador de Ventas",
+        "description": "Califica prospectos con IA conversacional"
+      },
+      "salesAgent": {
+        "name": "Agente de Ventas",
+        "description": "Cierra ventas 24/7 con inteligencia artificial"
+      },
+      "virtualReceptionist": {
+        "name": "Recepcionista Virtual",
+        "description": "Atiende llamadas y gestiona consultas"
+      },
+      "bookingAgent": {
+        "name": "Agente de Reservas",
+        "description": "Gestiona reservas y citas sin fricciones"
+      },
+      "contentCreator": {
+        "name": "Creador de Contenido",
+        "description": "Genera contenido visual con IA"
+      },
+      "socialManager": {
+        "name": "Gestor de Redes Sociales",
+        "description": "Automatiza y optimiza redes sociales"
+      },
+      "operationsAgent": {
+        "name": "Agente de Operaciones",
+        "description": "Automatiza flujos de trabajo internos"
+      }
+    }
+  },
+  "footer": {
+    "altLogo": "Logo de Arkadia Labs",
+    "companyName": "Arkadia Labs",
+    "description": "Transformando negocios con soluciones inteligentes de automatización con IA.",
+    "social": {
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "youtube": "YouTube",
+      "instagram": "Instagram"
+    },
+    "headings": {
+      "quickLinks": "Enlaces Rápidos",
+      "legal": "Legal",
+      "stayUpdated": "Mantente Actualizado"
+    },
+    "links": {
+      "features": "Casos de Uso",
+      "caseStudies": "Casos de Éxito",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos y Condiciones",
+      "cookies": "Política de Cookies"
+    },
+    "newsletter": {
+      "placeholder": "Introduce tu email",
+      "subscribe": "Suscribirse",
+      "description": "🚀 ¡Mantente a la vanguardia con la automatización IA - Suscríbete a nuestro boletín!"
+    },
+    "copyright": "Todos los derechos reservados."
+  },
+  "logoCloud": {
+    "title": "Más de 500 Conexiones a tu Disposición",
+    "subtitle": "Desde CRMs y herramientas de marketing hasta tu software de gestión de proyectos."
+  },
+  "featuredIntegrations": {
+    "badge": "Integraciones",
+    "title": "Integra tus Herramientas Existentes",
+    "subtitle": "En Arkadia Labs conectamos con las aplicaciones que tu equipo ya utiliza todos los días."
+  },
+  "modal": {
+    "close": "Cerrar modal"
+  },
+  "ctaSection": {
+    "title": "¿Hay algo que no puedas automatizar con IA?",
+    "subtitle": "Dile adiós a las tareas manuales. Empieza a construir hoy.",
+    "button": "Comienza a Automatizar"
+  },
+  "languageCode": "es"
+}

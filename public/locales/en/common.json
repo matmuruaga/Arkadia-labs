@@ -1,0 +1,99 @@
+{
+  "header": {
+    "features": "Use Cases",
+    "plans": "Plans",
+    "integrations": "Integrations",
+    "solutions": "Solutions",
+    "studyCase": "Case Studies",
+    "getStarted": "Get Started",
+    "login": "Login",
+    "viewAllSolutions": "View All Solutions",
+    "solutionsCategories": {
+      "outbound": "Sales & Outbound",
+      "inbound": "Customer Service",
+      "marketing": "Marketing & Content",
+      "operations": "Operations"
+    },
+    "solutionsItems": {
+      "leadValidator": {
+        "name": "Lead Validator",
+        "description": "Verify and enrich leads automatically"
+      },
+      "salesQualifier": {
+        "name": "Sales Qualifier",
+        "description": "Qualify prospects with conversational AI"
+      },
+      "salesAgent": {
+        "name": "Sales Agent",
+        "description": "Close sales 24/7 with AI intelligence"
+      },
+      "virtualReceptionist": {
+        "name": "Virtual Receptionist",
+        "description": "Handle calls and manage inquiries"
+      },
+      "bookingAgent": {
+        "name": "Booking Agent",
+        "description": "Manage reservations and appointments"
+      },
+      "contentCreator": {
+        "name": "Content Creator",
+        "description": "Generate visual content with AI"
+      },
+      "socialManager": {
+        "name": "Social Manager",
+        "description": "Automate and optimize social media"
+      },
+      "operationsAgent": {
+        "name": "Operations Agent",
+        "description": "Automate internal business workflows"
+      }
+    }
+  },
+  "footer": {
+    "altLogo": "Arkadia Labs Logo",
+    "companyName": "Arkadia Labs",
+    "description": "Transforming businesses with intelligent AI automation solutions.",
+    "social": {
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "youtube": "YouTube",
+      "instagram": "Instagram"
+    },
+    "headings": {
+      "quickLinks": "Quick Links",
+      "legal": "Legal",
+      "stayUpdated": "Stay Updated"
+    },
+    "links": {
+      "features": "Use Cases",
+      "caseStudies": "Case Studies",
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions",
+      "cookies": "Cookie Policy"
+    },
+    "newsletter": {
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "description": "🚀 Stay ahead with AI automation – Subscribe to our newsletter!"
+    },
+    "copyright": "All rights reserved."
+  },
+  "logoCloud": {
+    "title": "Over 500 Connections at Your Disposal",
+    "subtitle": "From CRMs and marketing tools to your project management software."
+  },
+  "featuredIntegrations": {
+    "badge": "Integrations",
+    "title": "Integrate Your Existing Tools",
+    "subtitle": "At Arkadia Labs we connect with the applications your team already uses every day."
+  },
+  "modal": {
+    "close": "Close modal"
+  },
+  "ctaSection": {
+    "title": "Is There Anything You Can't Automate with AI?",
+    "subtitle": "Say goodbye to manual tasks. Start building today.",
+    "button": "Start Automating"
+  },
+  "languageCode": "en"
+}

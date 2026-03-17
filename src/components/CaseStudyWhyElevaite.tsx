@@ -37,7 +37,7 @@ const featuresData = [
 ];
 
 const CaseStudyWhyElevaite = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('case-studies');
 
   return (
     <section className="bg-gray-900 py-24">

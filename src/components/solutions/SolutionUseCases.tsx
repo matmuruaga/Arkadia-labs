@@ -27,7 +27,7 @@ interface Props {
 }
 
 const SolutionUseCases: React.FC<Props> = ({ data, solutionId }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabChange = (index: number) => {

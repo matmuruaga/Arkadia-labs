@@ -9,7 +9,7 @@ import { trackAiWidgetOpen, trackAiWidgetClose } from '@/utils/dataLayer';
 import OptimizedImage from './OptimizedImage';
 
 const Hero = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('home');
 
   const { startSession, endSession, status } = useConversation();
   const [isLoading, setIsLoading] = useState(false);

@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { trackLanguageSwitch } from '@/utils/dataLayer';
 
 const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslation('common');
   const location = useLocation();
 
   const currentPath = location.pathname.substring(3) || '/';

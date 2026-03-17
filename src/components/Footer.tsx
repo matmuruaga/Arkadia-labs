@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { trackSocialClick, trackNavigationClick, trackFormStart, trackFormSubmit, trackFormSuccess } from '@/utils/dataLayer';
 
 const Footer = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('common');
   const currentLang = i18n.language;
   const socialLinkClasses = "text-gray-500 hover:text-[#1C7ED6] transition-colors";
   const navLinkClasses = "text-gray-600 hover:text-[#1C7ED6] transition-colors";
