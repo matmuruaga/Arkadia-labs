@@ -18,8 +18,37 @@ const WhyArkadia = () => {
   const activeStepData = journeyStepsData.find(step => step.id === activeStep);
 
   return (
-    <section id="why-arkadia" className="py-16 md:py-24 pb-24 md:pb-32 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section id="why-arkadia" className="relative overflow-hidden py-16 md:py-24 pb-24 md:pb-32 bg-gradient-to-br from-slate-50 via-white to-sky-50/30">
+      {/* Decorative background layer */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        {/* Organic contour lines */}
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40 C 20 20, 40 60, 60 40 S 100 20, 120 40' stroke='%230ea5e9' stroke-width='1' fill='none'/%3E%3Cpath d='M0 60 C 30 40, 50 80, 80 60 S 110 40, 120 60' stroke='%2314b8a6' stroke-width='1' fill='none'/%3E%3Cpath d='M0 80 C 25 60, 45 100, 70 80 S 105 60, 120 80' stroke='%230ea5e9' stroke-width='1' fill='none'/%3E%3Ccircle cx='95' cy='25' r='8' stroke='%2314b8a6' stroke-width='0.5' fill='none'/%3E%3Ccircle cx='95' cy='25' r='14' stroke='%230ea5e9' stroke-width='0.5' fill='none'/%3E%3C/svg%3E")`,
+            backgroundSize: '240px 240px',
+          }}
+        />
+        {/* Floating blobs */}
+        <div
+          className="absolute top-0 left-0 w-[500px] h-[500px] opacity-40 blur-3xl"
+          style={{ background: 'radial-gradient(ellipse at 30% 20%, rgba(14, 165, 233, 0.2) 0%, transparent 55%)' }}
+        />
+        <div
+          className="absolute bottom-0 right-0 w-[500px] h-[500px] opacity-35 blur-3xl"
+          style={{ background: 'radial-gradient(ellipse at 70% 80%, rgba(20, 184, 166, 0.18) 0%, transparent 55%)' }}
+        />
+        {/* Scattered organic shapes */}
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='30' cy='150' rx='25' ry='15' stroke='%230ea5e9' stroke-width='0.8' fill='none' transform='rotate(-15 30 150)'/%3E%3Cellipse cx='170' cy='40' rx='20' ry='12' stroke='%2314b8a6' stroke-width='0.8' fill='none' transform='rotate(20 170 40)'/%3E%3Cpath d='M80 100 Q 100 70, 120 100 T 160 100' stroke='%230ea5e9' stroke-width='0.6' fill='none'/%3E%3C/svg%3E")`,
+            backgroundSize: '400px 400px',
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div
           className="text-center mb-12 md:mb-16"
           initial={{ opacity: 0, y: 20 }}

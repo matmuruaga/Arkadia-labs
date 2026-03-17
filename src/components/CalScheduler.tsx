@@ -33,7 +33,7 @@ export default function CalScheduler({
     <button
       data-cal-namespace={namespace}
       data-cal-link={calLink}
-      data-cal-config={`{"layout":"${layout}"}`}
+      data-cal-config={JSON.stringify({ layout })}
       className={buttonClassName}
       onClick={onClick}
     >

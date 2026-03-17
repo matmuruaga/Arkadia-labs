@@ -134,20 +134,23 @@ const CloneYourBusinessRoiSection: React.FC = () => {
 
   const handleEmployeesChange = (value: number) => {
     handleInteraction();
-    trackRoiInputChange('employees', value);
-    setEmployees(value);
+    const clamped = Math.min(500, Math.max(1, Math.round(value)));
+    trackRoiInputChange('employees', clamped);
+    setEmployees(clamped);
   };
 
   const handleCostChange = (value: number) => {
     handleInteraction();
-    trackRoiInputChange('monthly_cost_per_employee', value);
-    setMonthlyCostPerEmployee(value);
+    const clamped = Math.min(20000, Math.max(500, Math.round(value)));
+    trackRoiInputChange('monthly_cost_per_employee', clamped);
+    setMonthlyCostPerEmployee(clamped);
   };
 
   const handleRepetitiveChange = (value: number) => {
     handleInteraction();
-    trackRoiInputChange('repetitive_tasks_pct', value);
-    setRepetitiveTasksPct(value);
+    const clamped = Math.min(90, Math.max(10, Math.round(value)));
+    trackRoiInputChange('repetitive_tasks_pct', clamped);
+    setRepetitiveTasksPct(clamped);
   };
 
   const handleCtaClick = () => {
