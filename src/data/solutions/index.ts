@@ -8,6 +8,7 @@ import { bookingAgentSolution } from './booking-agent';
 import { contentCreatorSolution } from './content-creator';
 import { socialManagerSolution } from './social-manager';
 import { operationsAgentSolution } from './operations-agent';
+import { cloneYourBusinessSolution } from './clone-your-business';
 
 // Export all solutions
 export const solutions: SolutionsMap = {
@@ -19,6 +20,7 @@ export const solutions: SolutionsMap = {
   'content-creator': contentCreatorSolution,
   'social-manager': socialManagerSolution,
   'operations-agent': operationsAgentSolution,
+  'clone-your-business': cloneYourBusinessSolution,
 };
 
 // Helper to get solution by slug

@@ -4344,6 +4344,263 @@
         "subtitle": "Automatizujte koordinaci, reportování a monitorování, které každý týden vyčerpává váš tým.",
         "cta": "Začít dnes"
       }
+    },
+    "clone-your-business": {
+      "seo": {
+        "title": "Naklonuj Svůj Byznys s AI | Škáluj Bez Náboru | Arkadia Labs",
+        "description": "Nasaď AI-powered operační dvojník svého byznysu. Tvoje přesné playbooks, skripty a procesy — běžící 24/7 bez rozšiřování týmu."
+      },
+      "hero": {
+        "badge": "Klonování Byznysu",
+        "title": "Tvůj Byznys Funguje 24/7",
+        "subtitle": "Bez Přidání Jediného Zaměstnance",
+        "description": "Vezmeme tvoje přesné playbooks, skripty a procesy — a nasadíme AI, která je provozuje ve velkém měřítku. Stejný hlas. Stejná metodologie. 10x výstup.",
+        "primaryCta": "Vidět Svůj Klon v Akci",
+        "secondaryCta": "Rezervovat Demo"
+      },
+      "problem": {
+        "badge": "Problém",
+        "headline": "Tvůj Byznys Se Zastaví, Když Se Zastaví Tvůj Tým",
+        "description": "Vybudoval jsi skvělé procesy. Vytrénoval jsi skvělé lidi. A teď je tvůj růst omezen tím, kolik hodin ti lidé mohou pracovat. Každý zmeškaný hovor, pomalé follow-up, jsou peníze ponechané na stole.",
+        "painPoints": {
+          "0": {
+            "title": "Jsi Úzkým Hrdlem",
+            "description": "Tvoje nejlepší procesy žijí v tvé hlavě nebo v tvých nejlepších pracovnících. Když nejsou, věci se zpomalí."
+          },
+          "1": {
+            "title": "Škálování Znamená Nábor",
+            "description": "2x leads znamená 2x SDRů. 2x klientů znamená 2x ops tým. Každý milník růstu stojí dalšího zaměstnance."
+          },
+          "2": {
+            "title": "Večery a Víkendy Jsou Mrtvé Zóny",
+            "description": "40 % B2B nákupních rozhodnutí se děje mimo pracovní dobu. Konkurenti odpovídají. Ty ne. Ty obchody jdou jinam."
+          },
+          "3": {
+            "title": "Nekonzistence Zabíjí Konverzi",
+            "description": "V pondělí ráno tvůj top rep zavírá na 40 %. V pátek odpoledne na 12 %. Unavené týmy a fluktuace dělají čísla nepředvídatelnými."
+          }
+        },
+        "statistics": {
+          "0": {
+            "label": "B2B obchodů je rozhodováno mimo pracovní dobu"
+          },
+          "1": {
+            "label": "nákladů náboru vs. trénink AI na existujících procesech"
+          },
+          "2": {
+            "label": "prodejů jde prvnímu prodejci, který odpoví"
+          }
+        }
+      },
+      "howItWorks": {
+        "badge": "Jak To Funguje",
+        "title": "Jak Klonujeme Tvůj Byznys",
+        "subtitle": "Čtyři týdny od kickoffu po plně funkční AI dvojník",
+        "steps": {
+          "0": {
+            "title": "Audit Procesů",
+            "description": "Zmapujeme každý workflow kritický pro revenue: prodejní skripty, follow-up sekvence, kvalifikační kritéria, operations SOPs."
+          },
+          "1": {
+            "title": "Trénink AI",
+            "description": "Trénujeme AI agenty na tvém přesném hlasu, metodologii a znalostní bázi. Není to generická AI — je to tvoje AI. Testováno před nasazením."
+          },
+          "2": {
+            "title": "Integrace a Nasazení",
+            "description": "Tvůj AI klon se připojuje k tvému existujícímu stacku: CRM, kalendář, inbox, dialery. Nasazuje se do tvých workflows — ne vedle nich."
+          },
+          "3": {
+            "title": "Provoz a Optimalizace",
+            "description": "Jde živě. Zpracovává hovory, follow-upy, kvalifikaci a operační úkoly 24/7. Dashboard v reálném čase ukazuje co běží a co potřebuje ladění."
+          }
+        }
+      },
+      "features": {
+        "badge": "Funkce",
+        "title": "Každá Vrstva Tvého Byznysu, Automatizovaná",
+        "subtitle": "Ne jeden agent. Celý operační systém trénovaný na tvém byznysu.",
+        "features": {
+          "0": {
+            "title": "Motor Klonování Procesů",
+            "description": "Extrahujeme tvoje nejlepší playbooks — prodej, onboarding, podpora, ops — a kódujeme je do AI agentů, kteří je provádějí konzistentně."
+          },
+          "1": {
+            "title": "Multi-Agent Pracovní Síla",
+            "description": "Jeden AI pro kvalifikaci leadů. Další pro follow-upy. Další pro koordinaci operací. Každý trénovaný pro svou roli, pracující jako tým."
+          },
+          "2": {
+            "title": "Tvůj Hlas, Tvoje Značka",
+            "description": "AI zní a jedná jako tvůj tým — ne jako robot. Vlastní persona, tón a jazyk trénované specificky pro tvůj trh."
+          },
+          "3": {
+            "title": "Automatická Synchronizace CRM",
+            "description": "Každá interakce je zaznamenána, označena a synchronizována. Žádné ruční zadávání dat. CRM je aktuální bez lidského úsilí."
+          },
+          "4": {
+            "title": "Dashboard Operací v Reálném Čase",
+            "description": "Vidíš každý hovor, follow-up a úkol, který tvůj AI klon provádí — živě. Kdykoli zasáhni nebo proveď úpravy."
+          },
+          "5": {
+            "title": "Smyčka Kontinuálního Učení",
+            "description": "AI se zlepšuje z každé interakce. Co funguje, se posiluje. Co nefunguje, se označí k tvé revizi."
+          }
+        }
+      },
+      "metrics": {
+        "badge": "Výsledky",
+        "title": "Co Se Stane, Když Naklonuješ Svůj Byznys",
+        "subtitle": "Reálná čísla od klientů, kteří udělali přechod",
+        "metrics": {
+          "0": {
+            "label": "Výstup Bez Nových Zaměstnanců",
+            "description": "Škáluj operace bez škálování počtu pracovníků"
+          },
+          "1": {
+            "label": "Průměrné ROI Klientů",
+            "description": "Měřeno v nasazeních Arkadia Labs"
+          },
+          "2": {
+            "label": "Čas do Prvního Nasazení",
+            "description": "Od kickoff hovoru po živý AI klon"
+          },
+          "3": {
+            "label": "Snížení Nákladů vs. Nábor",
+            "description": "Ve srovnání s ekvivalentním lidským headcountem"
+          }
+        },
+        "comparisonTitle": "Před vs Po Klonování Byznysu",
+        "before": {
+          "0": "Růst omezený počtem pracovníků",
+          "1": "Leads chladnoucí mimo pracovní dobu",
+          "2": "Nekonzistentní výkon týmu",
+          "3": "Ruční zadávání dat do CRM",
+          "4": "SOPs žijící v hlavách lidí",
+          "5": "Každé úzké hrdlo = nový nábor"
+        },
+        "after": {
+          "0": "10x výstup se stejnou velikostí týmu",
+          "1": "24/7 engagement leadů a follow-upy",
+          "2": "Konzistentní provádění ve velkém měřítku",
+          "3": "Automatická synchronizace CRM na každém touchpointu",
+          "4": "SOPs zakódované a běžící autonomně",
+          "5": "Růst bez škálování headcountem"
+        }
+      },
+      "platform": {
+        "badge": "Řídící Centrum",
+        "title": "Tvůj Byznys Klon, Živě a Viditelně",
+        "subtitle": "Monitoruj každého agenta, každou konverzaci, každý výsledek v reálném čase."
+      },
+      "useCases": {
+        "badge": "Případy Použití",
+        "title": "Kdo S Námi Klonuje Svůj Byznys",
+        "subtitle": "Tři typy týmů, které odemykají škálování bez headcountem",
+        "resultsTitle": "Klíčové Výsledky",
+        "useCases": {
+          "0": {
+            "title": "Dodávej Více Výsledků Klientům Bez Více Personálu",
+            "description": "Tvoje agentura funguje na playbooks. Klonujeme je do AI agentů, kteří provádějí v 10x měřítku — takže můžeš přijímat více klientů, aniž bys vyčerpal tým.",
+            "results": {
+              "0": "10x kapacita zpracování leadů",
+              "1": "Konzistentní doručování napříč všemi klientskými účty",
+              "2": "Onboarding nových klientů ve dnech, ne týdnech"
+            }
+          },
+          "1": {
+            "title": "Škáluj Prodejní Motion Bez Škálování SDR Týmu",
+            "description": "Tvůj ICP je definován. Tvůj pitch je ostrý. Problémem je pokrytí. AI SDRové provádějí tvůj outbound 24/7 — takže se tvůj tým zaměří na zavírání, ne na honění.",
+            "results": {
+              "0": "30% nárůst rezervovaných schůzek",
+              "1": "Žádné ztracené leady mimo pracovní dobu",
+              "2": "Onboarding na 4x současné kapacitě"
+            }
+          },
+          "2": {
+            "title": "Playbook Tvého Nejlepšího Člověka, Fungující Nepřetržitě",
+            "description": "Nemůžeš naklonovat svého top performera — až dosud. Kódujeme jejich skripty a instinkty do AI agenta, který běží 24/7 bez nemocenské, špatných dnů ani výpovědí.",
+            "results": {
+              "0": "Metodologie nejlepšího performera ve velkém měřítku",
+              "1": "24/7 klientské touchpointy udržovány",
+              "2": "60% snížení operačního overheadu"
+            }
+          }
+        }
+      },
+      "integrations": {
+        "badge": "Integrace",
+        "title": "Zapojí Se do Tvého Existujícího Stacku",
+        "subtitle": "Bez výměny. Tvůj AI klon funguje s nástroji, které už používáš."
+      },
+      "faq": {
+        "badge": "FAQ",
+        "title": "Přímé Odpovědi",
+        "subtitle": "Bez žargonu. Bez hype.",
+        "faqs": {
+          "0": {
+            "question": "Jak se to liší od pouhého nákupu ChatGPT nebo generického AI nástroje?",
+            "answer": "Generické AI nástroje jsou trénovány na všem a specializovány na nic. Tvůj klon je trénován výhradně na tvém byznysu — tvých skriptech, tvém ICP, tvých handlerech námitek. Výstup zní a jedná jako ty, ne jako robot."
+          },
+          "1": {
+            "question": "Jak vypadá proces a jak dlouho trvá?",
+            "answer": "Začínáme 2hodinovým auditem procesů. Trénink trvá 1-2 týdny. Plné nasazení je typicky do 14 dnů od kickoffu. Jsi živě před koncem měsíce."
+          },
+          "2": {
+            "question": "Musím měnit CRM nebo existující nástroje?",
+            "answer": "Ne. Budujeme AI klon pro integraci s tím, co již používáš. HubSpot, Salesforce, Slack, tvůj dialer — připojíme se. Zachováš svůj stack. Uděláme ho chytřejším."
+          },
+          "3": {
+            "question": "Co když se můj proces změní?",
+            "answer": "Informuješ nás, přetrénujeme agenty. Naše měsíční optimalizační revize jsou specificky pro toto. Procesy se vyvíjejí — tvůj AI klon se vyvíjí s nimi."
+          },
+          "4": {
+            "question": "Jak zajišťujete kvalitu?",
+            "answer": "Každý agent běží v definovaných guardrailech. Před spuštěním testuješ AI v 50+ reálných scénářích a schvaluješ. Ty kontroluješ, co může a nemůže říct."
+          },
+          "5": {
+            "question": "Je to vhodné pro velikost mého byznysu?",
+            "answer": "Ideální jsou firmy 10-500 zaměstnanců s definovanými procesy, které potřebují škálovat. Pokud nemáš zdokumentované playbooks, pomůžeme ti je nejdříve sestavit."
+          }
+        }
+      },
+      "cta": {
+        "title": "Tvůj Byznys Nemusí Spát",
+        "subtitle": "Uvidíš, jak by vypadal tvůj AI klon — živé demo, tvoje odvětví, tvůj případ použití.",
+        "primaryCta": "Rezervovat 30-Min Demo",
+        "secondaryCta": "Zobrazit Ceny"
+      },
+      "inlineCta1": {
+        "title": "Připraven Vidět Svůj Klon?",
+        "subtitle": "30 minut. Odcházíš s živým demem navrženým pro tvůj byznys.",
+        "primaryCta": "Rezervovat Demo",
+        "stat1Label": "Průměrné ROI",
+        "stat1Value": "6x",
+        "stat2Label": "Čas Nastavení",
+        "stat2Value": "14 dní",
+        "stat3Label": "Nárůst Výstupu",
+        "stat3Value": "10x"
+      },
+      "inlineCta2": {
+        "title": "Tvoji Konkurenti To Už Dělají",
+        "subtitle": "Agentury a SaaS týmy, které nyní nasadí AI klony, budou za 12 měsíců nemožné překonat.",
+        "primaryCta": "Nečekej — Rezervuj Demo",
+        "stat1Label": "Průměrné ROI",
+        "stat1Value": "6x",
+        "stat2Label": "Čas Nasazení",
+        "stat2Value": "2 týdny",
+        "stat3Label": "Potřebný Headcount",
+        "stat3Value": "0"
+      },
+      "inlineCta3": {
+        "title": "14 Dní k Byznysu Poháněnému AI",
+        "subtitle": "Začni dnes. Budeš živě před koncem měsíce.",
+        "primaryCta": "Začít Teď",
+        "stat1Label": "ROI",
+        "stat1Value": "6x prům.",
+        "stat2Label": "Pokrytí",
+        "stat2Value": "24/7",
+        "stat3Label": "Ušetřených Lidských Hodin",
+        "stat3Value": "+1 000/měs"
+      }
     }
   },
   "blog": {

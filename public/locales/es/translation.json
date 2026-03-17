@@ -2587,6 +2587,263 @@
         "subtitle": "Automatiza la coordinación, los reportes y el monitoreo que agota a tu equipo cada semana.",
         "cta": "Empezar Hoy"
       }
+    },
+    "clone-your-business": {
+      "seo": {
+        "title": "Clona Tu Negocio con IA | Escala Sin Contratar | Arkadia Labs",
+        "description": "Despliega un clon operativo de tu negocio impulsado por IA. Tus procesos exactos, corriendo 24/7 sin aumentar el equipo."
+      },
+      "hero": {
+        "badge": "Clonación de Negocios",
+        "title": "Tu Negocio, Funcionando 24/7",
+        "subtitle": "Sin Contratar a Nadie Más",
+        "description": "Tomamos tus playbooks, scripts y procesos exactos — y desplegamos IA que los ejecuta a escala. Misma voz. Misma metodología. 10x el output.",
+        "primaryCta": "Ver Mi Clon en Acción",
+        "secondaryCta": "Reservar Demo"
+      },
+      "problem": {
+        "badge": "El Problema",
+        "headline": "Tu Negocio Para Cuando Tu Equipo Para",
+        "description": "Construiste procesos sólidos. Entrenaste a personas talentosas. Y ahora tu crecimiento está limitado por cuántas horas puede trabajar tu equipo. Cada llamada perdida, cada seguimiento lento, es dinero que dejas sobre la mesa.",
+        "painPoints": {
+          "0": {
+            "title": "Tú Eres el Cuello de Botella",
+            "description": "Tus mejores procesos viven en tu cabeza o en tus mejores empleados. Cuando no están, todo se ralentiza."
+          },
+          "1": {
+            "title": "Escalar Significa Contratar",
+            "description": "2x los leads significa 2x los SDRs. 2x los clientes significa 2x el equipo de operaciones. Cada hito de crecimiento cuesta otra contratación."
+          },
+          "2": {
+            "title": "Noches y Fines de Semana Son Zonas Muertas",
+            "description": "El 40% de las decisiones de compra B2B ocurren fuera del horario laboral. Tus competidores responden. Tú no. Esos deals van a otro lado."
+          },
+          "3": {
+            "title": "La Inconsistencia Mata la Conversión",
+            "description": "El lunes por la mañana tu top rep cierra al 40%. El viernes por la tarde al 12%. Equipos cansados y rotación hacen tus números impredecibles."
+          }
+        },
+        "statistics": {
+          "0": {
+            "label": "de los deals B2B se deciden fuera del horario laboral"
+          },
+          "1": {
+            "label": "costo de contratar vs. entrenar IA en procesos existentes"
+          },
+          "2": {
+            "label": "de las ventas van al primer vendedor en responder"
+          }
+        }
+      },
+      "howItWorks": {
+        "badge": "Cómo Funciona",
+        "title": "Cómo Clonamos Tu Negocio",
+        "subtitle": "Cuatro semanas desde el inicio hasta un clon operativo completamente funcional",
+        "steps": {
+          "0": {
+            "title": "Auditoría de Procesos",
+            "description": "Mapeamos cada flujo de trabajo crítico para el revenue: scripts de ventas, secuencias de seguimiento, criterios de calificación, SOPs de operaciones."
+          },
+          "1": {
+            "title": "Entrenamiento de IA",
+            "description": "Entrenamos agentes de IA con tu voz exacta, metodología y base de conocimientos. No es IA genérica — es tu IA. Probada antes del despliegue."
+          },
+          "2": {
+            "title": "Integración y Despliegue",
+            "description": "Tu clon de IA se conecta a tu stack existente: CRM, calendario, bandeja de entrada, dialers. Se despliega en tus flujos de trabajo — no al margen de ellos."
+          },
+          "3": {
+            "title": "Ejecutar y Optimizar",
+            "description": "Sale en vivo. Gestiona llamadas, seguimientos, calificaciones y tareas operativas 24/7. Dashboard en tiempo real muestra qué está corriendo y qué necesita ajuste."
+          }
+        }
+      },
+      "features": {
+        "badge": "Funcionalidades",
+        "title": "Cada Capa de Tu Negocio, Automatizada",
+        "subtitle": "No un agente. Un sistema operativo completo entrenado en tu negocio.",
+        "features": {
+          "0": {
+            "title": "Motor de Clonación de Procesos",
+            "description": "Extraemos tus playbooks de mayor rendimiento — ventas, onboarding, soporte, ops — y los codificamos en agentes de IA que ejecutan con consistencia."
+          },
+          "1": {
+            "title": "Fuerza Laboral Multi-Agente",
+            "description": "Un AI para calificar leads. Otro para seguimientos. Otro para coordinación de operaciones. Cada uno entrenado para su rol, trabajando como equipo."
+          },
+          "2": {
+            "title": "Tu Voz, Tu Marca",
+            "description": "La IA suena y actúa como tu equipo — no como un bot. Persona, tono e idioma personalizados para tu mercado y compradores."
+          },
+          "3": {
+            "title": "Sincronización Automática con CRM",
+            "description": "Cada interacción se registra, etiqueta y sincroniza. Sin entrada manual de datos. Tu CRM se mantiene actualizado con cero esfuerzo humano."
+          },
+          "4": {
+            "title": "Dashboard de Operaciones en Tiempo Real",
+            "description": "Ve cada llamada, seguimiento y tarea que tu clon de IA está ejecutando — en vivo. Interviene o ajusta en cualquier momento."
+          },
+          "5": {
+            "title": "Bucle de Aprendizaje Continuo",
+            "description": "La IA mejora con cada interacción. Lo que funciona se refuerza. Lo que no se marca para tu revisión."
+          }
+        }
+      },
+      "metrics": {
+        "badge": "Resultados",
+        "title": "Lo Que Pasa Cuando Clonas Tu Negocio",
+        "subtitle": "Números reales de clientes que hicieron el cambio",
+        "metrics": {
+          "0": {
+            "label": "Output Sin Nuevas Contrataciones",
+            "description": "Escala operaciones sin escalar el equipo"
+          },
+          "1": {
+            "label": "ROI Promedio de Clientes",
+            "description": "Medido en despliegues de Arkadia Labs"
+          },
+          "2": {
+            "label": "Tiempo al Primer Despliegue",
+            "description": "Desde la llamada de inicio hasta el clon de IA en vivo"
+          },
+          "3": {
+            "label": "Reducción de Costos vs. Contratación",
+            "description": "Comparado con headcount humano equivalente"
+          }
+        },
+        "comparisonTitle": "Antes vs Después de Clonar Tu Negocio",
+        "before": {
+          "0": "Crecimiento limitado por headcount",
+          "1": "Leads enfriándose fuera de horario",
+          "2": "Rendimiento inconsistente del equipo",
+          "3": "Entrada manual de datos en CRM",
+          "4": "SOPs viviendo en las cabezas del equipo",
+          "5": "Cada cuello de botella = nueva contratación"
+        },
+        "after": {
+          "0": "10x output con el mismo equipo",
+          "1": "Engagement de leads 24/7",
+          "2": "Ejecución consistente a escala",
+          "3": "Sincronización automática de CRM en cada touchpoint",
+          "4": "SOPs codificados y ejecutándose autónomamente",
+          "5": "Crecimiento sin escalar el headcount"
+        }
+      },
+      "platform": {
+        "badge": "Centro de Mando",
+        "title": "Tu Clon de Negocio, Visible en Tiempo Real",
+        "subtitle": "Monitorea cada agente, cada conversación, cada resultado en tiempo real."
+      },
+      "useCases": {
+        "badge": "Casos de Uso",
+        "title": "Quién Clona Su Negocio Con Nosotros",
+        "subtitle": "Tres tipos de equipos que desbloquean escala sin headcount",
+        "resultsTitle": "Resultados Clave",
+        "useCases": {
+          "0": {
+            "title": "Entrega Más Resultados a Clientes Sin Más Personal",
+            "description": "Tu agencia funciona con playbooks. Los clonamos en agentes de IA que ejecutan a 10x escala — para que puedas incorporar más clientes sin quemar a tu equipo.",
+            "results": {
+              "0": "Capacidad de procesamiento de leads 10x",
+              "1": "Entrega consistente en todas las cuentas de clientes",
+              "2": "Onboarding de nuevos clientes en días, no semanas"
+            }
+          },
+          "1": {
+            "title": "Escala Tu Movimiento de Ventas Sin Escalar Tu Equipo de SDRs",
+            "description": "Tu ICP está definido. Tu pitch es preciso. El problema es la cobertura. Los SDRs de IA ejecutan tu outbound 24/7 — para que tu equipo se enfoque en cerrar, no en perseguir.",
+            "results": {
+              "0": "30% más reuniones agendadas",
+              "1": "Cero leads perdidos fuera de horario",
+              "2": "Onboarding a 4x la capacidad actual"
+            }
+          },
+          "2": {
+            "title": "El Playbook de Tu Mejor Persona, Funcionando Todo el Día",
+            "description": "No puedes clonar a tu top performer — hasta ahora. Codificamos sus scripts e instintos en un agente de IA que corre 24/7 sin días de enfermedad ni renuncias.",
+            "results": {
+              "0": "Metodología del mejor performer a escala",
+              "1": "Touchpoints de clientes 24/7 mantenidos",
+              "2": "60% de reducción en overhead operativo"
+            }
+          }
+        }
+      },
+      "integrations": {
+        "badge": "Integraciones",
+        "title": "Se Conecta a Tu Stack Existente",
+        "subtitle": "Sin reemplazar nada. Tu clon de IA funciona con las herramientas que ya usas."
+      },
+      "faq": {
+        "badge": "FAQ",
+        "title": "Respuestas Directas",
+        "subtitle": "Sin jerga. Sin hype.",
+        "faqs": {
+          "0": {
+            "question": "¿En qué se diferencia esto de simplemente comprar ChatGPT o una herramienta de IA genérica?",
+            "answer": "Las herramientas de IA genéricas están entrenadas en todo y especializadas en nada. Tu clon está entrenado exclusivamente en tu negocio — tus scripts, tu ICP, tus manejadores de objeciones. El output suena y actúa como tú, no como un robot."
+          },
+          "1": {
+            "question": "¿Cómo es el proceso y cuánto tarda?",
+            "answer": "Empezamos con una llamada de auditoría de procesos de 2 horas. El entrenamiento toma 1-2 semanas. El despliegue completo es típicamente dentro de los 14 días del inicio. Estás en vivo antes de que termine el mes."
+          },
+          "2": {
+            "question": "¿Necesito cambiar mi CRM o herramientas existentes?",
+            "answer": "No. Construimos el clon de IA para integrarse con lo que ya usas. HubSpot, Salesforce, Slack, tu dialer — nos conectamos. Mantienes tu stack. Lo hacemos más inteligente."
+          },
+          "3": {
+            "question": "¿Qué pasa si mi proceso cambia?",
+            "answer": "Nos actualizas, reentrenamos los agentes. Nuestras revisiones mensuales de optimización son específicamente para esto. Los procesos evolucionan — tu clon de IA evoluciona con ellos."
+          },
+          "4": {
+            "question": "¿Cómo garantizan la calidad?",
+            "answer": "Cada agente corre dentro de parámetros definidos. Antes de salir en vivo, pruebas la IA en 50+ escenarios reales y das tu aprobación. Tú controlas qué puede y no puede decir."
+          },
+          "5": {
+            "question": "¿Es esto adecuado para el tamaño de mi negocio?",
+            "answer": "El punto ideal es 10-500 empleados con procesos definidos que necesitan escalar. Si es demasiado temprano para tener playbooks documentados, te ayudamos a construirlos primero."
+          }
+        }
+      },
+      "cta": {
+        "title": "Tu Negocio No Tiene Que Dormir",
+        "subtitle": "Ve cómo sería tu clon de IA — demo en vivo, tu industria, tu caso de uso.",
+        "primaryCta": "Reservar Demo de 30 Min",
+        "secondaryCta": "Ver Precios"
+      },
+      "inlineCta1": {
+        "title": "¿Listo para Ver Tu Clon?",
+        "subtitle": "30 minutos. Sales con un demo en vivo diseñado para tu negocio.",
+        "primaryCta": "Reservar Demo",
+        "stat1Label": "ROI Promedio",
+        "stat1Value": "6x",
+        "stat2Label": "Tiempo de Setup",
+        "stat2Value": "14 días",
+        "stat3Label": "Aumento de Output",
+        "stat3Value": "10x"
+      },
+      "inlineCta2": {
+        "title": "Tus Competidores Ya Están Haciendo Esto",
+        "subtitle": "Las agencias y equipos SaaS que despliegan clones de IA ahora serán imposibles de competir en 12 meses.",
+        "primaryCta": "No Esperes — Reserva un Demo",
+        "stat1Label": "ROI Promedio",
+        "stat1Value": "6x",
+        "stat2Label": "Tiempo de Despliegue",
+        "stat2Value": "2 semanas",
+        "stat3Label": "Headcount Necesario",
+        "stat3Value": "0"
+      },
+      "inlineCta3": {
+        "title": "14 Días para un Negocio Impulsado por IA",
+        "subtitle": "Empieza el proceso hoy. Estás en vivo antes de fin de mes.",
+        "primaryCta": "Empezar Ahora",
+        "stat1Label": "ROI",
+        "stat1Value": "6x prom.",
+        "stat2Label": "Cobertura",
+        "stat2Value": "24/7",
+        "stat3Label": "Horas Humanas Ahorradas",
+        "stat3Value": "+1.000/mes"
+      }
     }
   },
   "footer": {

@@ -2547,6 +2547,263 @@
         "subtitle": "Automate the coordination, reporting, and monitoring that drains your team every week.",
         "cta": "Get Started Today"
       }
+    },
+    "clone-your-business": {
+      "seo": {
+        "title": "Clone Your Business with AI | Scale Without Hiring | Arkadia Labs",
+        "description": "Deploy an AI-powered operational twin of your business. Your exact playbooks, scripts, and processes — running 24/7 without adding headcount."
+      },
+      "hero": {
+        "badge": "Business Cloning",
+        "title": "Your Business, Running 24/7",
+        "subtitle": "Without Adding a Single Headcount",
+        "description": "We take your exact playbooks, scripts, and processes — and deploy AI that runs them at scale. Same voice. Same methodology. 10x the output.",
+        "primaryCta": "See My Clone in Action",
+        "secondaryCta": "Book a Live Demo"
+      },
+      "problem": {
+        "badge": "The Problem",
+        "headline": "Your Business Stops When Your Team Does",
+        "description": "You built great processes. You trained great people. And now your growth is capped by how many hours those people can work. Every missed call, slow follow-up, and dropped task is revenue left on the table.",
+        "painPoints": {
+          "0": {
+            "title": "You're the Bottleneck",
+            "description": "Your best processes live in your head or in your top performers. When they're out, things slow down. When demand spikes, you scramble to hire."
+          },
+          "1": {
+            "title": "Scaling Means Hiring",
+            "description": "2x the leads means 2x the SDRs. 2x the clients means 2x the ops team. Every growth milestone costs you another hire."
+          },
+          "2": {
+            "title": "Nights and Weekends Are Dead Zones",
+            "description": "40% of B2B buying decisions happen outside business hours. Your competitors respond. You don't. Those deals go somewhere else."
+          },
+          "3": {
+            "title": "Inconsistency Kills Conversion",
+            "description": "Monday morning your top rep closes at 40%. Friday afternoon it's 12%. Tired teams and turnover make your numbers unpredictable."
+          }
+        },
+        "statistics": {
+          "0": {
+            "label": "of B2B deals are decided outside business hours"
+          },
+          "1": {
+            "label": "cost of a new hire vs. training AI on existing processes"
+          },
+          "2": {
+            "label": "of sales go to the first vendor to respond"
+          }
+        }
+      },
+      "howItWorks": {
+        "badge": "How It Works",
+        "title": "How We Clone Your Business",
+        "subtitle": "Four weeks from kickoff to a fully operational AI twin",
+        "steps": {
+          "0": {
+            "title": "Process Audit",
+            "description": "We map every revenue-critical workflow: your sales scripts, follow-up sequences, qualification criteria, ops SOPs. What makes your business work."
+          },
+          "1": {
+            "title": "AI Training",
+            "description": "We train AI agents on your exact voice, methodology, and knowledge base. Not generic AI — your AI. Tested against real scenarios before deployment."
+          },
+          "2": {
+            "title": "Integration & Deployment",
+            "description": "Your AI clone connects to your existing stack: CRM, calendar, inbox, dialers. Deploys into your workflows — not alongside them."
+          },
+          "3": {
+            "title": "Run & Optimize",
+            "description": "Goes live. Handles calls, follow-ups, qualification, and ops tasks 24/7. Real-time dashboard shows what's running, closing, and what needs tuning."
+          }
+        }
+      },
+      "features": {
+        "badge": "Features",
+        "title": "Every Layer of Your Business, Automated",
+        "subtitle": "Not one agent. A full operational system trained on your business.",
+        "features": {
+          "0": {
+            "title": "Process Cloning Engine",
+            "description": "We extract your top-performing playbooks — sales, onboarding, support, ops — and encode them into AI agents that execute with consistency."
+          },
+          "1": {
+            "title": "Multi-Agent Workforce",
+            "description": "One AI for qualifying leads. Another for follow-ups. Another for ops coordination. Each trained for its role, working as a unit."
+          },
+          "2": {
+            "title": "Your Voice, Your Brand",
+            "description": "The AI sounds and acts like your team — not like a bot. Custom persona, tone, and language trained specifically for your market."
+          },
+          "3": {
+            "title": "Automatic CRM Sync",
+            "description": "Every interaction is logged, tagged, and synced. No manual data entry. Your CRM stays current with zero human effort."
+          },
+          "4": {
+            "title": "Real-Time Operations Dashboard",
+            "description": "See every call, follow-up, and task your AI clone is executing — live. Intervene or adjust at any point."
+          },
+          "5": {
+            "title": "Continuous Learning Loop",
+            "description": "The AI improves from every interaction. What's working gets reinforced. What's not gets flagged for your review."
+          }
+        }
+      },
+      "metrics": {
+        "badge": "Results",
+        "title": "What Happens When You Clone Your Business",
+        "subtitle": "Real numbers from clients who made the switch",
+        "metrics": {
+          "0": {
+            "label": "Output Without New Hires",
+            "description": "Scale operations without scaling headcount"
+          },
+          "1": {
+            "label": "Average Client ROI",
+            "description": "Measured across Arkadia Labs deployments"
+          },
+          "2": {
+            "label": "Time to First Deployment",
+            "description": "From kickoff call to live AI clone"
+          },
+          "3": {
+            "label": "Cost Reduction vs. Hiring",
+            "description": "Compared to equivalent human headcount"
+          }
+        },
+        "comparisonTitle": "Before vs After Cloning Your Business",
+        "before": {
+          "0": "Growth gated by headcount",
+          "1": "Leads going cold after hours",
+          "2": "Inconsistent team performance",
+          "3": "Manual CRM data entry",
+          "4": "SOPs living in people's heads",
+          "5": "Every bottleneck = new hire"
+        },
+        "after": {
+          "0": "10x output with current team size",
+          "1": "24/7 lead engagement and follow-up",
+          "2": "Consistent execution at scale",
+          "3": "Automatic CRM sync on every touchpoint",
+          "4": "SOPs encoded and running autonomously",
+          "5": "Growth without headcount scaling"
+        }
+      },
+      "platform": {
+        "badge": "Ops Command Center",
+        "title": "Your Business Clone, Live and Visible",
+        "subtitle": "Monitor every agent, every conversation, every outcome in real time."
+      },
+      "useCases": {
+        "badge": "Use Cases",
+        "title": "Who Clones Their Business With Us",
+        "subtitle": "Three types of teams that unlock scale without headcount",
+        "resultsTitle": "Key Results",
+        "useCases": {
+          "0": {
+            "title": "Deliver More Client Results Without More Staff",
+            "description": "Your agency runs on playbooks. We clone them into AI agents that execute at 10x scale — so you can onboard more clients without burning out your team.",
+            "results": {
+              "0": "10x lead processing capacity",
+              "1": "Consistent delivery across all client accounts",
+              "2": "New client onboarding in days, not weeks"
+            }
+          },
+          "1": {
+            "title": "Scale Your Sales Motion Without Scaling Your SDR Team",
+            "description": "Your ICP is defined. Your pitch is sharp. The problem is coverage. AI SDRs run your outbound and follow-up 24/7 — so your team focuses on closing, not chasing.",
+            "results": {
+              "0": "30% lift in meetings booked",
+              "1": "Zero leads dropped after hours",
+              "2": "Onboarding at 4x current capacity"
+            }
+          },
+          "2": {
+            "title": "Your Best People's Playbook, Running Around the Clock",
+            "description": "You can't clone your top performer — until now. We encode their scripts and instincts into an AI agent that runs 24/7 with no sick days, no bad days, no resignation.",
+            "results": {
+              "0": "Best performer methodology at scale",
+              "1": "24/7 client touchpoints maintained",
+              "2": "60% reduction in ops overhead"
+            }
+          }
+        }
+      },
+      "integrations": {
+        "badge": "Integrations",
+        "title": "Plugs Into Your Existing Stack",
+        "subtitle": "No rip-and-replace. Your AI clone works with the tools you already use."
+      },
+      "faq": {
+        "badge": "FAQ",
+        "title": "Straight Answers",
+        "subtitle": "No jargon. No hype.",
+        "faqs": {
+          "0": {
+            "question": "How is this different from just buying ChatGPT or a generic AI tool?",
+            "answer": "Generic AI tools are trained on everything and specialized on nothing. Your clone is trained exclusively on your business — your scripts, your ICP, your objection handlers. The output sounds and acts like you, not like a robot."
+          },
+          "1": {
+            "question": "What does the process look like and how long does it take?",
+            "answer": "We start with a 2-hour process audit call. From there, training takes 1–2 weeks. Full deployment is typically within 14 days of kickoff. You're live before the month is out."
+          },
+          "2": {
+            "question": "Do I need to change my CRM or any existing tools?",
+            "answer": "No. We build the AI clone to integrate with what you already use. HubSpot, Salesforce, Slack, your dialer — we connect to it. You keep your stack. We make it smarter."
+          },
+          "3": {
+            "question": "What if my process changes?",
+            "answer": "You update us, we retrain the agents. Our monthly optimization reviews are specifically for this. Processes evolve — your AI clone evolves with them."
+          },
+          "4": {
+            "question": "How do you ensure quality?",
+            "answer": "Every agent runs within defined guardrails. Before go-live, you test the AI across 50+ real scenarios and sign off. You control what it can and can't say. Full dashboard visibility at all times."
+          },
+          "5": {
+            "question": "Is this right for my business size?",
+            "answer": "Sweet spot is 10–500 employees with defined processes that need to scale. If you're too early to have documented playbooks, we help you build them first."
+          }
+        }
+      },
+      "cta": {
+        "title": "Your Business Doesn't Have to Sleep",
+        "subtitle": "See what your AI clone would look like — live demo, your industry, your use case.",
+        "primaryCta": "Book a 30-Min Demo",
+        "secondaryCta": "See Pricing"
+      },
+      "inlineCta1": {
+        "title": "Ready to See Your Clone?",
+        "subtitle": "Takes 30 minutes. You leave with a live demo scoped to your business.",
+        "primaryCta": "Book a Demo",
+        "stat1Label": "Avg Client ROI",
+        "stat1Value": "6x",
+        "stat2Label": "Setup Time",
+        "stat2Value": "14 days",
+        "stat3Label": "Output Increase",
+        "stat3Value": "10x"
+      },
+      "inlineCta2": {
+        "title": "Your Competitors Are Already Doing This",
+        "subtitle": "The agencies and SaaS teams that deploy AI clones now will be impossible to compete with in 12 months.",
+        "primaryCta": "Don't Wait — Book a Demo",
+        "stat1Label": "Avg ROI",
+        "stat1Value": "6x",
+        "stat2Label": "Time to Deploy",
+        "stat2Value": "2 weeks",
+        "stat3Label": "Headcount Needed",
+        "stat3Value": "0"
+      },
+      "inlineCta3": {
+        "title": "14 Days to an AI-Powered Business",
+        "subtitle": "Start the process today. Be live before the end of the month.",
+        "primaryCta": "Get Started Now",
+        "stat1Label": "ROI",
+        "stat1Value": "6x avg",
+        "stat2Label": "Coverage",
+        "stat2Value": "24/7",
+        "stat3Label": "Human Hours Saved",
+        "stat3Value": "1,000+/mo"
+      }
     }
   },
   "footer": {
