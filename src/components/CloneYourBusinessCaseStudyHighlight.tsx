@@ -48,7 +48,7 @@ const itemVariants = {
 // ============================================================================
 
 const CloneYourBusinessCaseStudyHighlight: React.FC = () => {
-  const { t } = useTranslation('clone-your-business');
+  const { t } = useTranslation(['clone-your-business', 'case-studies']);
   const location = useLocation();
   const currentLang = location.pathname.split('/')[1] || 'en';
   const sectionRef = useRef<HTMLElement>(null);
@@ -143,7 +143,7 @@ const CloneYourBusinessCaseStudyHighlight: React.FC = () => {
                     aria-hidden="true"
                   />
                   <blockquote className="pl-6 text-slate-700 text-base md:text-lg leading-relaxed italic">
-                    {t('caseStudies.elsa-consulting.testimonial.quote')}
+                    {t('caseStudies.elsa-consulting.testimonial.quote', { ns: 'case-studies' })}
                   </blockquote>
                 </div>
 
@@ -154,12 +154,12 @@ const CloneYourBusinessCaseStudyHighlight: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900 text-sm">
-                      {t('caseStudies.elsa-consulting.testimonial.author')}
+                      {t('caseStudies.elsa-consulting.testimonial.author', { ns: 'case-studies' })}
                     </p>
                     <p className="text-xs text-slate-500">
-                      {t('caseStudies.elsa-consulting.testimonial.role')}
+                      {t('caseStudies.elsa-consulting.testimonial.role', { ns: 'case-studies' })}
                       {' · '}
-                      {t('caseStudies.elsa-consulting.testimonial.company')}
+                      {t('caseStudies.elsa-consulting.testimonial.company', { ns: 'case-studies' })}
                     </p>
                   </div>
                 </div>
@@ -184,7 +184,7 @@ const CloneYourBusinessCaseStudyHighlight: React.FC = () => {
                       {value}
                     </span>
                     <span className="text-sm font-medium text-slate-600 lg:mt-1 text-right lg:text-center max-w-[120px] lg:max-w-none leading-tight">
-                      {t(labelKey)}
+                      {t(labelKey, { ns: 'case-studies' })}
                     </span>
                   </div>
                 ))}
