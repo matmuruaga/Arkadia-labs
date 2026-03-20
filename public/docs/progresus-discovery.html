@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Progresus AI — Discovery & Architektura řešení V1</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1e293b;
+    --surface-2: #312e81;
+    --border: #334155;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --text-heading: #fff;
+    --orch: #4338ca; --orch-bg: #312e81; --orch-text: #a5b4fc;
+    --agent: #2563eb; --agent-bg: #1e3a5f; --agent-text: #93c5fd;
+    --wf: #16a34a; --wf-bg: #14532d; --wf-text: #86efac;
+    --skill: #ca8a04; --skill-bg: #713f12; --skill-text: #fde047;
+    --tool: #dc2626; --tool-bg: #4a1d1d; --tool-text: #fca5a5;
+    --green: #22c55e;
+    --orange: #f59e0b;
+    --red: #ef4444;
+    --phase1: #6366f1;
+    --phase2: #8b5cf6;
+    --phase3: #a855f7;
+    --discovery: #0891b2;
+    --discovery-bg: #0c4a6e;
+    --discovery-text: #67e8f9;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { max-width: 100%; overflow-x: hidden; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg); color: var(--text);
+    padding: 14px; line-height: 1.6; width: 100%;
+  }
+  @media (min-width: 768px) { body { padding: 24px; } }
+  @media (min-width: 900px) { body { max-width: 1100px; margin: 0 auto; } }
+  a { color: var(--orch-text); }
+  h1 { font-size: clamp(22px, 5vw, 30px); color: var(--text-heading); margin-bottom: 4px; }
+  h2 { font-size: clamp(17px, 4.3vw, 22px); color: var(--text-heading); margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  h3 { font-size: clamp(14px, 3.8vw, 16px); color: var(--text-heading); margin-bottom: 10px; }
+  h4 { font-size: 13px; margin-bottom: 6px; color: var(--text-heading); }
+  p { margin-bottom: 12px; }
+  p, li, td, th { overflow-wrap: anywhere; }
+  .subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 24px; }
+
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+  .card-highlight { background: linear-gradient(135deg, #1e1b4b 0%, #2d1b69 100%); border: 2px solid var(--orch); }
+  .card-discovery { background: var(--discovery-bg); border: 2px solid var(--discovery); }
+  .card-green { background: rgba(22,163,74,0.08); border: 2px solid var(--green); }
+  .card-warn { background: rgba(245,158,11,0.08); border: 2px solid var(--orange); }
+
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; padding: 12px; background: var(--surface); border-radius: 8px; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); }
+  .legend-dot { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+
+  .layer-stack { display: flex; flex-direction: column; gap: 3px; margin-bottom: 24px; }
+  .layer { padding: 14px 20px; border-radius: 6px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .layer-name { font-weight: 600; font-size: 14px; }
+  .layer-desc { font-size: 13px; opacity: 0.9; }
+  .layer-examples { font-size: 12px; opacity: 0.7; font-style: italic; }
+  .l-orch { background: var(--orch-bg); border: 1px solid var(--orch); }
+  .l-agent { background: var(--agent-bg); border: 1px solid var(--agent); }
+  .l-wf { background: var(--wf-bg); border: 1px solid var(--wf); }
+  .l-skill { background: var(--skill-bg); border: 1px solid var(--skill); }
+  .l-tool { background: var(--tool-bg); border: 1px solid var(--tool); }
+
+  .agents-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 32px; }
+  @media (min-width: 760px) { .agents-grid { grid-template-columns: 1fr 1fr; } }
+  .agent-card { background: var(--surface); border-radius: 10px; padding: 16px; border: 1px solid var(--border); }
+  .agent-card h3 { margin-bottom: 4px; }
+  .badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; display: inline-block; margin-bottom: 12px; font-weight: 600; }
+  .badge-div { background: var(--wf-bg); color: var(--green); }
+  .badge-phase { font-size: 11px; padding: 2px 8px; border-radius: 10px; display: inline-block; margin-left: 6px; font-weight: 600; }
+  .badge-ws { background: rgba(8,145,178,0.2); color: var(--discovery-text); }
+  .badge-p1 { background: rgba(99,102,241,0.2); color: var(--phase1); }
+  .badge-p2 { background: rgba(139,92,246,0.2); color: var(--phase2); }
+  .badge-candidate { background: rgba(148,163,184,0.15); color: var(--text-muted); }
+
+  .breakdown-row { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px; font-size: 13px; }
+  .bl { min-width: 95px; font-weight: 600; padding: 3px 6px; border-radius: 4px; font-size: 11px; text-align: center; flex-shrink: 0; }
+  .bl-orch { background: var(--orch-bg); color: var(--orch-text); }
+  .bl-agent { background: var(--agent-bg); color: var(--agent-text); }
+  .bl-wf { background: var(--wf-bg); color: var(--wf-text); }
+  .bl-skill { background: var(--skill-bg); color: var(--skill-text); }
+  .bl-tool { background: var(--tool-bg); color: var(--tool-text); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 20px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  th { background: var(--surface); color: var(--text-muted); text-align: left; padding: 10px 12px; font-weight: 600; white-space: nowrap; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text); }
+  tr:hover td { background: rgba(30,41,59,0.3); }
+  .tag-green { color: var(--green); font-weight: 600; }
+  .tag-orange { color: var(--orange); font-weight: 600; }
+  .tag-red { color: var(--red); font-weight: 600; }
+  .tag-cyan { color: var(--discovery-text); font-weight: 600; }
+
+  .two-col { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  @media (min-width: 760px) { .two-col { grid-template-columns: 1fr 1fr; } }
+  .three-col { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  @media (min-width: 980px) { .three-col { grid-template-columns: 1fr 1fr 1fr; } }
+
+  .timeline { display: flex; align-items: center; gap: 0; margin: 24px 0; padding: 16px; background: var(--surface); border-radius: 10px; overflow-x: auto; flex-wrap: nowrap; }
+  .phase-dot { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #fff; flex-shrink: 0; }
+  .phase-line { flex: 1; height: 3px; min-width: 30px; }
+  .phase-block { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; gap: 4px; }
+  .phase-label { font-size: 11px; text-align: center; max-width: 90px; color: var(--text-muted); }
+
+  .metric-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0; }
+  @media (min-width: 560px) { .metric-strip { grid-template-columns: repeat(4, 1fr); } }
+  .metric-box { background: rgba(30,41,59,0.6); border: 1px solid var(--border); border-radius: 8px; padding: 12px; text-align: center; }
+  .metric-box .metric-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .metric-box .metric-value { font-size: 22px; font-weight: 700; color: var(--text-heading); }
+
+  .security-layer { padding: 14px; border-radius: 8px; margin-bottom: 8px; }
+  .sec-public { background: rgba(22,163,74,0.1); border: 1px solid var(--wf); }
+  .sec-internal { background: rgba(245,158,11,0.1); border: 1px solid var(--orange); }
+  .sec-confidential { background: rgba(220,38,38,0.1); border: 1px solid var(--red); }
+
+  .roi-placeholder { background: rgba(99,102,241,0.08); border: 1px dashed var(--phase1); border-radius: 6px; padding: 10px 14px; margin-top: 10px; font-size: 12px; color: var(--text-muted); }
+
+  .step-list { list-style: none; padding: 0; counter-reset: step; }
+  .step-list li { counter-increment: step; display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(51,65,85,0.4); font-size: 13px; }
+  .step-list li::before { content: counter(step); background: var(--orch); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; }
+
+  .entity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin: 16px 0; }
+  @media (min-width: 640px) { .entity-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 900px) { .entity-grid { grid-template-columns: repeat(5, 1fr); } }
+  .entity-card { border-radius: 8px; padding: 12px 10px; text-align: center; border: 1px solid; }
+  .entity-card .e-name { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+  .entity-card .e-desc { font-size: 10px; color: var(--text-muted); line-height: 1.4; }
+
+  .score-bar { display: flex; gap: 3px; margin-top: 4px; }
+  .score-pip { width: 14px; height: 8px; border-radius: 2px; }
+  .pip-filled { background: var(--green); }
+  .pip-empty { background: rgba(51,65,85,0.5); }
+
+  footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); color: #475569; font-size: 12px; }
+
+  @media print {
+    body { background: #fff; color: #1a1a1a; padding: 20px; }
+    .card, .agent-card, table, .layer, .security-layer, .metric-box { border-color: #ddd; }
+    h1, h2, h3, h4, .metric-value { color: #1a1a1a; }
+    .tag-green { color: #16a34a; } .tag-orange { color: #d97706; } .tag-red { color: #dc2626; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Progresus AI — Discovery & Architektura řešení</h1>
+  <p class="subtitle">Able.cz + Arkadia Labs &nbsp;|&nbsp; Březen 2026 &nbsp;|&nbsp; Verze 1.0</p>
+
+  <div class="card card-highlight">
+    <h3 style="color:var(--orch-text); margin-bottom:10px;">Důležité rámování tohoto dokumentu</h3>
+    <p style="font-size:13px;"><strong>Identifikovali jsme 10 konkrétních AI agentů</strong> jako kandidáty pro první vlny nasazení. Z nich doporučujeme <strong>6 prioritních</strong> (1 pro Discovery workshop + 5 pro Fázi 1) a další 4 jako alternativy. Celková vize počítá s 28+ agenty napříč holdingem — přesný rozsah a prioritizace budou validovány v Discovery fázi.</p>
+    <p style="font-size:13px; margin-bottom:0;"><strong>Klíčová hodnota není v samotném AI, ale ve sjednocení dat a procesů napříč holdingem.</strong> Z IT auditu a diskusí s vaším týmem víme, že datová kvalita v ERP QI je priorita č. 1 — bez ní nelze automatizovat reporting ani propojit entity. Proto začínáme právě tam.</p>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- 1. CO JE DISCOVERY -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2>1. Co je Discovery Workshop</h2>
+  <div class="card">
+    <p>Discovery Workshop je intenzivní <strong>3týdenní fáze</strong> (15 pracovních dnů), během které společně:</p>
+    <ol style="font-size:13px; padding-left:20px; margin-bottom:12px;">
+      <li style="padding:4px 0;">Identifikujeme a zvalidujeme <strong>3–5 nejhodnotnějších AI use-casů</strong> napříč holdingem</li>
+      <li style="padding:4px 0;">Ověříme technickou proveditelnost (přístup k datům, integrační možnosti, bezpečnost)</li>
+      <li style="padding:4px 0;">Připravíme <strong>funkční demonstraci jednoho agenta</strong> na vzorku vašich reálných dat</li>
+      <li style="padding:4px 0;">Připravíme roadmapu a rámec pro Fázi 1 (5 agentů)</li>
+    </ol>
+    <p style="font-size:13px; margin-bottom:0;"><strong>Výstup Discovery je rozhodovací brána (Go/No-Go)</strong> — dostanete konkrétní data pro kvalifikované rozhodnutí, zda a jak pokračovat. Součástí je funkční PoC, ne jen PowerPoint.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- 2. INVESTICE -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2>2. Investice</h2>
+  <div class="metric-strip">
+    <div class="metric-box">
+      <div class="metric-label">Discovery Workshop</div>
+      <div class="metric-value">280 000 Kč</div>
+    </div>
+    <div class="metric-box">
+      <div class="metric-label">Doba trvání</div>
+      <div class="metric-value">3 týdny</div>
+    </div>
+    <div class="metric-box">
+      <div class="metric-label">PoC agentů</div>
+      <div class="metric-value">1</div>
+    </div>
+    <div class="metric-box">
+      <div class="metric-label">Vaše součinnost</div>
+      <div class="metric-value">8–10 dnů</div>
+    </div>
+  </div>
+  <div class="card">
+    <p style="font-size:13px;">V ceně je zahrnuto: workshopy se stakeholdery, kompletní analýza a dokumentace, architektonický návrh, funkční demonstrace jednoho agenta na vzorku vašich dat, prezentace pro vedení. Cestovní náklady včetně cest do ČR.</p>
+    <p style="font-size:13px; margin-bottom:0;">Konkrétní cenění Fáze 1 bude součástí výstupů Discovery.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- 3. ARCHITEKTONICKÉ VRSTVY -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2>3. Jak je každý agent technicky stavěný</h2>
+  <p style="font-size:13px; margin-bottom:16px;">Každý AI agent se skládá z vrstev — od nejvyšší (řízení) po nejnižší (napojení na vaše systémy). Tato architektura zajišťuje, že agenti jsou modulární, testovatelní a bezpeční.</p>
+
+  <nav class="legend">
+    <span class="legend-item"><span class="legend-dot" style="background:var(--orch)"></span>Orchestrátor</span>
+    <span class="legend-item"><span class="legend-dot" style="background:var(--agent)"></span>Agent</span>
+    <span class="legend-item"><span class="legend-dot" style="background:var(--wf)"></span>Workflow</span>
+    <span class="legend-item"><span class="legend-dot" style="background:var(--skill)"></span>Skill</span>
+    <span class="legend-item"><span class="legend-dot" style="background:var(--tool)"></span>Tool / Connector</span>
+  </nav>
+
+  <div class="layer-stack">
+    <div class="layer l-orch">
+      <div><div class="layer-name">Orchestrátor / Koordinátor</div><div class="layer-desc">Řídí multi-agent flow, routuje úkoly, drží stav konverzace</div></div>
+      <div class="layer-examples">LangGraph, CrewAI, custom state machine</div>
+    </div>
+    <div class="layer l-agent">
+      <div><div class="layer-name">Agent</div><div class="layer-desc">Autonomní jednotka s LLM mozkem — rozhoduje, plánuje, volá tools</div></div>
+      <div class="layer-examples">Claude, GPT-4, Mistral + tool-use</div>
+    </div>
+    <div class="layer l-wf">
+      <div><div class="layer-name">Workflow</div><div class="layer-desc">Deterministická sekvence kroků — bez AI rozhodování, jen logika</div></div>
+      <div class="layer-examples">n8n, Temporal, custom pipelines</div>
+    </div>
+    <div class="layer l-skill">
+      <div><div class="layer-name">Skill</div><div class="layer-desc">Znovupoužitelná schopnost — analýza dokumentů, psaní emailů, extrakce dat</div></div>
+      <div class="layer-examples">Prompt templates, chains, reusable modules</div>
+    </div>
+    <div class="layer l-tool">
+      <div><div class="layer-name">Tool / Connector / MCP</div><div class="layer-desc">Integrace s externím systémem — API call, DB query, file access</div></div>
+      <div class="layer-examples">REST API, MCP server, database connector, webhook</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- 4. NAVRŽENÍ AI AGENTI — TOP 10 -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2>4. Navržení AI agenti — Top 10</h2>
+  <p style="font-size:13px; margin-bottom:16px;">Identifikovali jsme 10 kandidátů na AI agenty. Z nich doporučujeme 6 jako prioritních (1 pro workshop + 5 pro Fázi 1). Dalších 4 jsou kandidáti, které můžete zařadit místo některých z doporučených.</p>
+
+  <!-- Priority table -->
+  <h3 style="margin-top:20px;">Doporučení — 6 prioritních agentů</h3>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Agent</th><th>Entita</th><th>Snadnost</th><th>Dopad</th><th>Typ</th><th>Priorita</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tag-cyan">WS-1</td>
+        <td><strong>Data Quality Agent</strong></td>
+        <td>RD Rýmařov</td>
+        <td>4/5</td>
+        <td class="tag-green">5/5</td>
+        <td class="tag-cyan">WORKSHOP</td>
+        <td class="tag-green">NEJVYŠŠÍ</td>
+      </tr>
+      <tr>
+        <td>F1-1</td>
+        <td><strong>Reporting Automation Agent</strong></td>
+        <td>RD Rýmařov</td>
+        <td>3/5</td>
+        <td class="tag-green">5/5</td>
+        <td>FÁZE 1</td>
+        <td class="tag-green">VYSOKÁ</td>
+      </tr>
+      <tr>
+        <td>F1-2</td>
+        <td><strong>Regulatory & Certification Monitor</strong></td>
+        <td>RD Rýmařov</td>
+        <td>4/5</td>
+        <td>4/5</td>
+        <td>FÁZE 1</td>
+        <td class="tag-green">VYSOKÁ</td>
+      </tr>
+      <tr>
+        <td>F1-3</td>
+        <td><strong>Document Intelligence Agent</strong></td>
+        <td>RD Rýmařov + Holding</td>
+        <td>3/5</td>
+        <td>4/5</td>
+        <td>FÁZE 1</td>
+        <td class="tag-green">VYSOKÁ</td>
+      </tr>
+      <tr>
+        <td>F1-4</td>
+        <td><strong>Sales Lead Agent</strong></td>
+        <td>Nový Zeleneč</td>
+        <td>4/5</td>
+        <td>4/5</td>
+        <td>FÁZE 1</td>
+        <td class="tag-green">VYSOKÁ</td>
+      </tr>
+      <tr>
+        <td>F1-5</td>
+        <td><strong>Client Request Agent</strong></td>
+        <td>RD Rýmařov</td>
+        <td>4/5</td>
+        <td>3/5</td>
+        <td>FÁZE 1</td>
+        <td class="tag-green">VYSOKÁ</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:20px;">Další kandidáti — můžete zařadit místo některých z doporučených</h3>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Agent</th><th>Entita</th><th>Snadnost</th><th>Dopad</th><th>Typ</th><th>Poznámka</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>K-1</td>
+        <td><strong>Knowledge Management Agent</strong></td>
+        <td>RD Rýmařov</td>
+        <td>3/5</td>
+        <td>3/5</td>
+        <td>KANDIDÁT</td>
+        <td style="font-size:12px;">Jan Ševčík popsal vizi „systém, který vede procesem, ne wiki"</td>
+      </tr>
+      <tr>
+        <td>K-2</td>
+        <td><strong>CRM Process Advisor</strong></td>
+        <td>Progresus Invest</td>
+        <td>3/5</td>
+        <td>3/5</td>
+        <td>KANDIDÁT</td>
+        <td style="font-size:12px;">CRM Investu je záměrně uzavřené (žádné API). Agent operuje v okolních systémech.</td>
+      </tr>
+      <tr>
+        <td>K-3</td>
+        <td><strong>Holding Data Consolidation Agent</strong></td>
+        <td>Holding Progresus</td>
+        <td class="tag-orange">2/5</td>
+        <td class="tag-green">5/5</td>
+        <td>KANDIDÁT (F2)</td>
+        <td style="font-size:12px;">Strategicky nejdůležitější pro holding. Závisí na čistých datech z entit.</td>
+      </tr>
+      <tr>
+        <td>K-4</td>
+        <td><strong>Employee Assistant / HR Bot</strong></td>
+        <td>RD Rýmařov + Holding</td>
+        <td>4/5</td>
+        <td>2/5</td>
+        <td>KANDIDÁT</td>
+        <td style="font-size:12px;">Standardní RAG chatbot — rychlé nasazení, nižší strategická priorita.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- 5. DETAILNÍ KARTY AGENTŮ -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2>5. Příklady rozpadu agentů — technický pohled</h2>
+  <p style="font-size:13px; margin-bottom:16px;">Níže uvedené rozklady jsou <strong>referenční architektonické patterny</strong>, ne finální implementační specifikace. Přesné sub-agenty, workflows a konektory potvrdíme v Discovery podle reálných systémů a dat.</p>
+
+  <div class="agents-grid">
+
+    <!-- WS-1: Data Quality Agent -->
+    <article class="agent-card" style="border-color: var(--discovery);">
+      <h3>WS-1: Data Quality Agent</h3>
+      <span class="badge badge-div">RD Rýmařov</span><span class="badge-phase badge-ws">WORKSHOP — DEMONSTRACE</span>
+      <p style="font-size:12px; margin-bottom:10px;">AI agent pro automatizovanou analýzu, deduplikaci a normalizaci nomenklatur v ERP QI. Identifikuje duplikáty, navrhne kanonický název, člověk jedním klikem potvrdí nebo upraví.</p>
+      <p style="font-size:12px; color:var(--discovery-text); margin-bottom:10px;"><strong>Proč právě tento:</strong> Největší pain point (zmíněn 3× v dotazníku, potvrzen na callu). Jan Ševčík: <em>„datům se nedá věřit."</em> Odblokuje reporting, analytiku i holdingovou konsolidaci.</p>
+      <div class="breakdown-row"><span class="bl bl-orch">Orchestrátor</span><span>Data Quality Coordinator — řídí pipeline: scan → analýza → návrh → validace</span></div>
+      <div class="breakdown-row"><span class="bl bl-agent">Agenti (2)</span><span>Duplicate Detector, Normalization Agent</span></div>
+      <div class="breakdown-row"><span class="bl bl-wf">Workflow</span><span>Scan nomenklatur → Clustering podobných → AI návrh kanonického názvu → Human review → Zápis</span></div>
+      <div class="breakdown-row"><span class="bl bl-skill">Skills</span><span>Fuzzy matching, embedding similarity, české jazykové modely, pravidla QI taxonomie</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>ERP QI (SQL read-only nebo E-Connect), testovací DB prostředí</span></div>
+      <p style="font-size:12px; margin-top:10px;"><strong>Koho potřebujeme na workshopu:</strong> Jan Ševčík (IT), Melzer account manager (API/DB přístup), klíčoví uživatelé nomenklatur (sklady, nákup)</p>
+      <p style="font-size:12px;"><strong>Závislosti:</strong> Přístup k testovací DB QI (SQL read-only nebo E-Connect)</p>
+      <div class="roi-placeholder">
+        <strong>ROI metriky — prosíme o doplnění vašich čísel:</strong><br>
+        Počet záznamů v nomenklatuře &nbsp;|&nbsp; Hodiny/týden na ruční čištění dat &nbsp;|&nbsp; Počet identifikovaných duplicit &nbsp;|&nbsp; Čas na manuální korekci po návrhu AI
+      </div>
+    </article>
+
+    <!-- F1-1: Reporting Automation -->
+    <article class="agent-card">
+      <h3>F1-1: Reporting Automation Agent</h3>
+      <span class="badge badge-div">RD Rýmařov</span><span class="badge-phase badge-p1">FÁZE 1</span>
+      <p style="font-size:12px; margin-bottom:10px;">Automatizovaný pipeline z ERP QI do Power BI. Eliminuje ruční přípravu dat pro manažery.</p>
+      <p style="font-size:12px; color:var(--phase1); margin-bottom:10px;"><strong>Proč právě tento:</strong> Power BI existuje, data se generují ručně. Přímo závisí na Data Quality Agentovi. Přímé čtení z QI nebylo realizováno kvůli nekonzistencím — jakmile Data Quality Agent vyčistí data, tento agent je automaticky propojí.</p>
+      <div class="breakdown-row"><span class="bl bl-orch">Orchestrátor</span><span>Report Pipeline Coordinator — schedule → extract → transform → publish</span></div>
+      <div class="breakdown-row"><span class="bl bl-agent">Agenti (2)</span><span>Data Extractor, Report Builder</span></div>
+      <div class="breakdown-row"><span class="bl bl-wf">Workflow</span><span>Scheduled trigger → Pull z QI → Transformace → Validace → Push do Power BI → Notifikace</span></div>
+      <div class="breakdown-row"><span class="bl bl-skill">Skills</span><span>SQL query generation, data normalization, Power BI refresh API, anomaly detection</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>ERP QI DB, Power BI REST API, email notifikace</span></div>
+      <p style="font-size:12px; margin-top:10px;"><strong>Koho potřebujeme:</strong> Jan Ševčík (datové zdroje QI), Management RDR (požadavky na reporty), Michael Dvořák (holdingový reporting)</p>
+      <p style="font-size:12px;"><strong>Závislosti:</strong> Data Quality Agent musí být funkční</p>
+      <div class="roi-placeholder">
+        <strong>ROI metriky:</strong><br>
+        Člověkohodiny/měsíc na přípravu reportingu &nbsp;|&nbsp; Počet reportů měsíčně &nbsp;|&nbsp; Latence: dny do hotového reportu &nbsp;|&nbsp; Počet chyb v reportech
+      </div>
+    </article>
+
+    <!-- F1-2: Regulatory & Certification Monitor -->
+    <article class="agent-card">
+      <h3>F1-2: Regulatory & Certification Monitor</h3>
+      <span class="badge badge-div">RD Rýmařov</span><span class="badge-phase badge-p1">FÁZE 1</span>
+      <p style="font-size:12px; margin-bottom:10px;">Tři moduly: (1) Sledování legislativy (stavební zákon, EIA). (2) Platnost certifikátů materiálových skladeb. (3) Ověření, že certifikované skladby se skutečně používají v projektech.</p>
+      <p style="font-size:12px; color:var(--phase1); margin-bottom:10px;"><strong>Proč právě tento:</strong> Explicitně požadováno klientem. Unikátní pro dřevostavby. Nezávislý na QI — může běžet paralelně s Data Quality Agentem.</p>
+      <div class="breakdown-row"><span class="bl bl-orch">Orchestrátor</span><span>Compliance Coordinator — tři nezávislé moduly, sdílená notifikační vrstva</span></div>
+      <div class="breakdown-row"><span class="bl bl-agent">Agenti (3)</span><span>Legislative Monitor, Certification Tracker, Compliance Checker</span></div>
+      <div class="breakdown-row"><span class="bl bl-wf">Workflow</span><span>Scheduled scan registrů → AI analýza dopadu → Cross-check s projekty → Alert / report</span></div>
+      <div class="breakdown-row"><span class="bl bl-skill">Skills</span><span>Legislativní NLP, certifikační databáze parsing, ArchiCAD/SEMA výstup matching</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>Veřejné registry, Sbírka zákonů API, CAD export parsers, notifikační systém</span></div>
+      <p style="font-size:12px; margin-top:10px;"><strong>Koho potřebujeme:</strong> Jan Ševčík (certifikační databáze), oddělení kvality/technologie, projekce (ArchiCAD/SEMA výstupy)</p>
+      <p style="font-size:12px;"><strong>Závislosti:</strong> Přístup k veřejným registrům + CAD výstupům</p>
+      <div class="roi-placeholder">
+        <strong>ROI metriky:</strong><br>
+        Počet zachycených legisl. změn/měsíc &nbsp;|&nbsp; Počet certifikátů s blížící se expirací &nbsp;|&nbsp; Počet nesouladů v projektech &nbsp;|&nbsp; Čas úspory oproti manuální kontrole
+      </div>
+    </article>
+
+    <!-- F1-3: Document Intelligence -->
+    <article class="agent-card">
+      <h3>F1-3: Document Intelligence Agent</h3>
+      <span class="badge badge-div">RD Rýmařov + Holding</span><span class="badge-phase badge-p1">FÁZE 1</span>
+      <p style="font-size:12px; margin-bottom:10px;">Extrakce a klasifikace dokumentů — faktury, dodací listy, objednávky, smlouvy. Inteligentní OCR + validace.</p>
+      <p style="font-size:12px; color:var(--phase1); margin-bottom:10px;"><strong>Proč právě tento:</strong> Klient 9 měsíců implementuje Digitoo s minimálním výsledkem. Naše řešení může být rychlejší a přesněji šité na míru vašim procesům.</p>
+      <div class="breakdown-row"><span class="bl bl-orch">Orchestrátor</span><span>Finance Doc Coordinator — routuje fakturu vs. objednávku vs. dobropis</span></div>
+      <div class="breakdown-row"><span class="bl bl-agent">Agenti (2)</span><span>Document Parser, Validation Agent</span></div>
+      <div class="breakdown-row"><span class="bl bl-wf">Workflow</span><span>Upload → OCR → Extrakce → Validace → Approval routing → ERP zápis</span></div>
+      <div class="breakdown-row"><span class="bl bl-skill">Skills</span><span>OCR/table extraction, field mapping, anomaly detection, CZ účetní pravidla</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>ERP QI API, document storage, email inbox connector</span></div>
+      <p style="font-size:12px; margin-top:10px;"><strong>Koho potřebujeme:</strong> Jan Ševčík (QI integrace), účetní oddělení, dodavatel QI (Melzer)</p>
+      <p style="font-size:12px;"><strong>Závislosti:</strong> Přístup k vzorkovým dokumentům + QI DB</p>
+      <div class="roi-placeholder">
+        <strong>ROI metriky:</strong><br>
+        Počet faktur měsíčně &nbsp;|&nbsp; Čas na zpracování 1 faktury &nbsp;|&nbsp; Chybovost extrakce &nbsp;|&nbsp; Úspory oproti současnému workflow
+      </div>
+    </article>
+
+    <!-- F1-4: Sales Lead Agent -->
+    <article class="agent-card">
+      <h3>F1-4: Sales Lead Agent</h3>
+      <span class="badge badge-div">Nový Zeleneč</span><span class="badge-phase badge-p1">FÁZE 1</span>
+      <p style="font-size:12px; margin-bottom:10px;">Kvalifikace a nurture příchozích leadů pro projekt Nový Zeleneč. Scoring, automatický follow-up, personalizované sekvence, handoff na obchodní tým.</p>
+      <p style="font-size:12px; color:var(--phase1); margin-bottom:10px;"><strong>Proč právě tento:</strong> Prodej začíná léto 2026 — časová urgence. Při ceně bytů od 3 mil. CZK, i <strong class="tag-green">1% zlepšení konverze = desítky milionů v tržbách.</strong> Inbound pipeline — lead přijde z webu/reklam, AI ho kvalifikuje a vede.</p>
+      <div class="breakdown-row"><span class="bl bl-orch">Orchestrátor</span><span>Lead Pipeline Coordinator — řídí flow od raw lead → qualified → outreach</span></div>
+      <div class="breakdown-row"><span class="bl bl-agent">Agenti (3)</span><span>Lead Scorer, Lead Enricher, Outreach Composer</span></div>
+      <div class="breakdown-row"><span class="bl bl-wf">Workflow</span><span>Intake → Scoring → Enrichment → Kvalifikace → Outreach trigger → Handoff</span></div>
+      <div class="breakdown-row"><span class="bl bl-skill">Skills</span><span>Company research, ICP matching, email personalizace, CZ/EN šablony</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>CRM API, enrichment služby, email sender, web scraper</span></div>
+      <p style="font-size:12px; margin-top:10px;"><strong>Koho potřebujeme:</strong> Obchodní tým Nový Zeleneč, marketing, Michael Dvořák</p>
+      <p style="font-size:12px;"><strong>Závislosti:</strong> CRM / prodejní systém Zelence</p>
+      <div class="roi-placeholder">
+        <strong>ROI metriky:</strong><br>
+        Počet leadů měsíčně &nbsp;|&nbsp; Konverzní poměr lead → prodej &nbsp;|&nbsp; Průměrný čas kvalifikace &nbsp;|&nbsp; Náklady na akvizici zákazníka
+      </div>
+    </article>
+
+    <!-- F1-5: Client Request Agent -->
+    <article class="agent-card">
+      <h3>F1-5: Client Request Agent</h3>
+      <span class="badge badge-div">RD Rýmařov</span><span class="badge-phase badge-p1">FÁZE 1</span>
+      <p style="font-size:12px; margin-bottom:10px;">Příjem a třídění zákaznických dotazů (reklamace, poptávky, servis). Automatický routing, odpovědi, eskalace.</p>
+      <p style="font-size:12px; color:var(--phase1); margin-bottom:10px;"><strong>Proč právě tento:</strong> Kritické pro RD Rýmařov — zákaznický servis napříč 15 zeměmi.</p>
+      <div class="breakdown-row"><span class="bl bl-orch">Orchestrátor</span><span>Comms Router — intent detection → správný sub-agent / eskalace na člověka</span></div>
+      <div class="breakdown-row"><span class="bl bl-agent">Agenti (3)</span><span>Intent Classifier, Response Generator, Escalation Agent</span></div>
+      <div class="breakdown-row"><span class="bl bl-wf">Workflow</span><span>Inbound msg → Klasifikace → Routing → Generování odpovědi → Human review → Odeslání</span></div>
+      <div class="breakdown-row"><span class="bl bl-skill">Skills</span><span>RAG nad FAQ, sentiment analysis, CZ/EN/DE jazykový model, response šablony</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>Email gateway, CRM, knowledge base API</span></div>
+      <p style="font-size:12px; margin-top:10px;"><strong>Koho potřebujeme:</strong> Zákaznický servis RDR, obchodní oddělení, Jan Ševčík (integrace)</p>
+      <p style="font-size:12px;"><strong>Závislosti:</strong> Přístup k zákaznickým kanálům (email, web)</p>
+      <div class="roi-placeholder">
+        <strong>ROI metriky:</strong><br>
+        Počet dotazů/reklamací měsíčně &nbsp;|&nbsp; Průměrný čas odpovědi &nbsp;|&nbsp; % automaticky vyřešených &nbsp;|&nbsp; Spokojenost zákazníků
+      </div>
+    </article>
+
+  </div>
+
+  <!-- Kandidáti - stručněji -->
+  <h3 style="margin-top:8px;">Kandidáti — detailní karty</h3>
+  <div class="agents-grid">
+
+    <article class="agent-card" style="border-color: var(--text-muted); opacity:0.85;">
+      <h3>K-1: Knowledge Management Agent</h3>
+      <span class="badge badge-div">RD Rýmařov</span><span class="badge-phase badge-candidate">KANDIDÁT</span>
+      <p style="font-size:12px; margin-bottom:10px;">Centrální knowledge base s AI vyhledáváním. RAG nad dokumenty, manuály, postupy. Guided workflow místo klasické wiki.</p>
+      <div class="breakdown-row"><span class="bl bl-agent">Agent (1)</span><span>Knowledge Agent — query understanding + retrieval + answer synthesis</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>Vector DB, document parser, SharePoint/GDrive connector</span></div>
+      <div class="roi-placeholder">
+        <strong>ROI metriky:</strong> Čas na nalezení informace &nbsp;|&nbsp; Počet dotazů/měsíc &nbsp;|&nbsp; Doba zaškolení nového zaměstnance
+      </div>
+    </article>
+
+    <article class="agent-card" style="border-color: var(--text-muted); opacity:0.85;">
+      <h3>K-2: CRM Process Advisor</h3>
+      <span class="badge badge-div">Progresus Invest</span><span class="badge-phase badge-candidate">KANDIDÁT</span>
+      <p style="font-size:12px; margin-bottom:10px;">AI asistent operující MIMO uzavřené CRM. Pracuje v Google Workspace, Helios, HR portálu.</p>
+      <div class="breakdown-row"><span class="bl bl-agent">Agenti (2)</span><span>Data Aggregator, Action Recommender</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>Google Workspace API, Helios connector, HR portál</span></div>
+      <div class="roi-placeholder">
+        <strong>ROI metriky:</strong> Počet automatizovaných úkolů &nbsp;|&nbsp; Čas ušetřený na podkladech &nbsp;|&nbsp; Manuální přesuny dat/týden
+      </div>
+    </article>
+
+    <article class="agent-card" style="border-color: var(--text-muted); opacity:0.85;">
+      <h3>K-3: Holding Data Consolidation Agent</h3>
+      <span class="badge badge-div">Holding Progresus</span><span class="badge-phase badge-candidate">KANDIDÁT (F2)</span>
+      <p style="font-size:12px; margin-bottom:10px;">Univerzální datový překladač — čte data z různých ERP, normalizuje, plní holdingovou reportingovou aplikaci.</p>
+      <div class="breakdown-row"><span class="bl bl-agent">Agenti (2)</span><span>Data Translator, Consolidation Engine</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>Multi-ERP connectors, holdingová reportingová aplikace</span></div>
+      <p style="font-size:12px; color:var(--orange); margin-top:8px;"><strong>Poznámka:</strong> Strategicky nejdůležitější pro holding, ale závisí na čistých datech z entit. Doporučujeme pro Fázi 2.</p>
+      <div class="roi-placeholder">
+        <strong>ROI metriky:</strong> Počet konsolidovaných entit &nbsp;|&nbsp; Čas na měsíční konsolidaci &nbsp;|&nbsp; Počet sjednocených metrik
+      </div>
+    </article>
+
+    <article class="agent-card" style="border-color: var(--text-muted); opacity:0.85;">
+      <h3>K-4: Employee Assistant / HR Bot</h3>
+      <span class="badge badge-div">RD Rýmařov + Holding</span><span class="badge-phase badge-candidate">KANDIDÁT</span>
+      <p style="font-size:12px; margin-bottom:10px;">Interní chatbot pro zaměstnance — HR dotazy, onboarding, dovolené, benefits.</p>
+      <div class="breakdown-row"><span class="bl bl-agent">Agent (1)</span><span>HR Assistant — RAG nad HR dokumentací + guided workflows</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>HR portál, M365 connector, knowledge base</span></div>
+      <div class="roi-placeholder">
+        <strong>ROI metriky:</strong> Počet HR dotazů měsíčně &nbsp;|&nbsp; % automaticky zodpovězených &nbsp;|&nbsp; Čas úspory HR &nbsp;|&nbsp; Spokojenost zaměstnanců
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- 6. BEZPEČNOSTNÍ ARCHITEKTURA -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2>6. Bezpečnostní architektura — třívrstvý model</h2>
+  <p style="font-size:13px; margin-bottom:16px;">Na základě vašich odpovědí z IT dotazníku a diskuse s Janem Ševčíkem navrhujeme třívrstvý bezpečnostní model. Citlivá výrobní data nikdy neopustí vaši infrastrukturu.</p>
+
+  <div class="security-layer sec-confidential">
+    <h4 style="color:var(--red);">Vrstva 3 — Důvěrná (on-premise RD Rýmařov)</h4>
+    <p style="font-size:13px; margin-bottom:4px;"><strong>Data:</strong> Výrobní know-how, technologické postupy, konstrukční data, ceníky materiálů</p>
+    <p style="font-size:13px; margin-bottom:0;"><strong>Zpracování:</strong> Lokální LLM model (Qwen, Llama) — váš Mac Studio jako základ. Data nikdy neopustí vaši síť.</p>
+  </div>
+  <div class="security-layer sec-internal">
+    <h4 style="color:var(--orange);">Vrstva 2 — Interní (EU cloud tenant s DPA)</h4>
+    <p style="font-size:13px; margin-bottom:4px;"><strong>Data:</strong> Obchodní data, reporting, CRM, dashboardy</p>
+    <p style="font-size:13px; margin-bottom:0;"><strong>Zpracování:</strong> Azure/AWS EU tenant s podepsanou Data Processing Agreement</p>
+  </div>
+  <div class="security-layer sec-public">
+    <h4 style="color:var(--green);">Vrstva 1 — Veřejná (cloud LLM)</h4>
+    <p style="font-size:13px; margin-bottom:4px;"><strong>Data:</strong> Legislativa, veřejné registry, normy, monitoring certifikací</p>
+    <p style="font-size:13px; margin-bottom:0;"><strong>Zpracování:</strong> Cloud LLM (Claude, GPT-4) — nejlepší výkon pro netechnické úlohy</p>
+  </div>
+
+  <div class="card" style="margin-top:16px;">
+    <p style="font-size:13px; margin-bottom:0;"><strong>Klíčové zjištění z IT auditu:</strong> Infrastruktura je lokální, cloud pouze po detailní specifikaci bezpečnosti. Třívrstvý model toto respektuje. AI agenti mohou běžet hybridně — orchestrace v EU cloudu, citlivé operace nad výrobními daty lokálně. Přesnou klasifikaci dat odsouhlasíme na workshopu.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- 7. KLÍČOVÁ TECHNICKÁ ZJIŠTĚNÍ -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2>7. Klíčová technická zjištění z IT auditu</h2>
+  <p style="font-size:13px; margin-bottom:16px;">Na základě IT dotazníku a technické diskuse s vaším týmem jsme identifikovali tyto faktory ovlivňující architekturu řešení:</p>
+
+  <div class="two-col">
+    <div class="card card-green">
+      <h4 style="color:var(--green);">Příležitosti & připravenost</h4>
+      <ul style="font-size:13px; padding-left:18px; margin:0;">
+        <li style="padding:4px 0;">Testovací prostředí ERP QI k dispozici — můžeme bezpečně testovat bez rizika pro produkci</li>
+        <li style="padding:4px 0;">Git + CI/CD pipeline existuje — AI agenty nasadíme do stejného vývojového workflow</li>
+        <li style="padding:4px 0;">Monitoring k dispozici — napojíme na něj monitoring AI agentů</li>
+        <li style="padding:4px 0;">M365 stack (Teams, Exchange) — integrace přes Microsoft Graph API</li>
+        <li style="padding:4px 0;">Holdingová reportingová aplikace připravena — čeká na čistá data</li>
+        <li style="padding:4px 0;">Nový kalkulační systém ve vývoji — příležitost pro AI komponenty</li>
+      </ul>
+    </div>
+    <div class="card card-warn">
+      <h4 style="color:var(--orange);">Rizika & omezení k řešení v Discovery</h4>
+      <ul style="font-size:13px; padding-left:18px; margin:0;">
+        <li style="padding:4px 0;"><strong>ERP QI — integrační výzva č. 1.</strong> Legacy systém, API možnosti je třeba ověřit přímo s Melzerem</li>
+        <li style="padding:4px 0;">Nekonzistentní data v QI blokují reporting i konsolidaci</li>
+        <li style="padding:4px 0;">Tři oddělené identity systémy (M365, QI, nový systém) — žádné centrální SSO</li>
+        <li style="padding:4px 0;">IT kapacita podmíněna schválením — řešení musí být co nejvíce self-contained</li>
+        <li style="padding:4px 0;">Přechod CAD nástrojů (AutoCAD→ArchiCAD, Cadwork→SEMA) probíhá souběžně</li>
+        <li style="padding:4px 0;">Nejturbuletnější období inovací za 50 let historie — změny musí být koordinované</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px;">
+    <h4>Sekvenční závislosti — proč začínáme daty</h4>
+    <div class="timeline">
+      <div class="phase-block">
+        <div class="phase-dot" style="background:var(--discovery);">1</div>
+        <div class="phase-label">AI čištění dat v QI</div>
+      </div>
+      <div class="phase-line" style="background: linear-gradient(90deg, var(--discovery), var(--phase1));"></div>
+      <div class="phase-block">
+        <div class="phase-dot" style="background:var(--phase1);">2</div>
+        <div class="phase-label">Automatizované čtení z QI do Power BI</div>
+      </div>
+      <div class="phase-line" style="background: linear-gradient(90deg, var(--phase1), var(--phase2));"></div>
+      <div class="phase-block">
+        <div class="phase-dot" style="background:var(--phase2);">3</div>
+        <div class="phase-label">Propojení s holdingovou vrstvou</div>
+      </div>
+      <div class="phase-line" style="background: linear-gradient(90deg, var(--phase2), var(--phase3));"></div>
+      <div class="phase-block">
+        <div class="phase-dot" style="background:var(--phase3);">4</div>
+        <div class="phase-label">28+ agentů napříč holdingem</div>
+      </div>
+    </div>
+    <p style="font-size:12px; color:var(--text-muted); margin-bottom:0;">Bez konzistentních dat v QI nelze automatizovat reporting, propojit entity holdingu, ani nasadit AI agenty nad výrobními daty. Proto je Data Quality Agent vstupní branou celé transformace.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- 8. HARMONOGRAM DISCOVERY -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2>8. Harmonogram Discovery (3 týdny)</h2>
+  <table>
+    <thead>
+      <tr><th>Týden</th><th>Aktivity</th><th>Výstupy</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong style="color:var(--discovery-text);">1</strong></td>
+        <td>Kick-off workshop. Sběr podkladů. Mapování procesů RDR, Investu, holdingu. Zahájení tech auditu.</td>
+        <td>Procesní mapa (draft), pain pointy, přístupy k systémům</td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--discovery-text);">2</strong></td>
+        <td>Hloubkový tech audit — datová kvalita, integrace. Bezpečnostní analýza. Katalog use-casů. Zahájení PoC.</td>
+        <td>Tech audit, katalog use-casů (draft), demonstrace v1</td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--discovery-text);">3</strong></td>
+        <td>Prioritizace use-casů. Finalizace architektury. Doladění demonstrace na vašich datech. Prezentace pro vedení.</td>
+        <td>Všechny deliverables, Go/No-Go prezentace</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- 9. KOHO POTŘEBUJEME -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2>9. Koho potřebujeme na workshopu</h2>
+  <table>
+    <thead>
+      <tr><th>Osoba / Role</th><th>Entita</th><th>Proč</th><th>Alokace</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Jan Ševčík (IT)</strong></td>
+        <td>RD Rýmařov</td>
+        <td>Klíčový: ERP QI, API/DB, datová kvalita, infrastruktura</td>
+        <td class="tag-orange">3–4 dny</td>
+      </tr>
+      <tr>
+        <td><strong>Michael Dvořák</strong></td>
+        <td>Progresus Invest</td>
+        <td>Byznys procesy Investu, CRM, holdingový reporting</td>
+        <td>2–3 dny</td>
+      </tr>
+      <tr>
+        <td><strong>JUDr. Lukáš Zrůst</strong></td>
+        <td>Holding</td>
+        <td>Strategické směřování, Go/No-Go, bezpečnostní politika</td>
+        <td>1 den</td>
+      </tr>
+      <tr>
+        <td><strong>Klíčoví uživatelé</strong></td>
+        <td>RD Rýmařov</td>
+        <td>Projekce, výroba, logistika — validace pain pointů</td>
+        <td>1–2 dny</td>
+      </tr>
+      <tr>
+        <td><strong>Obchodní tým</strong></td>
+        <td>Nový Zeleneč</td>
+        <td>Sales proces, lead flow — pro Sales Lead Agenta</td>
+        <td>0,5 dne</td>
+      </tr>
+      <tr>
+        <td><strong>Dodavatel kalk. systému</strong></td>
+        <td>RD Rýmařov</td>
+        <td>Architektura, API, hranice AI vs. nový systém</td>
+        <td>0,5 dne</td>
+      </tr>
+      <tr>
+        <td><strong>Melzer (account mgr)</strong></td>
+        <td>—</td>
+        <td>API/DB přístupové možnosti ERP QI</td>
+        <td>1 call</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px; margin-top:8px;">Celková součinnost na vaší straně: cca <strong>8–10 pracovních dnů</strong> rozložených do 3 týdnů.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- 10. CO NÁSLEDUJE — FÁZE 1 -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2>10. Co následuje po Discovery — Fáze 1</h2>
+  <p style="font-size:13px; margin-bottom:16px;">Na základě výstupů Discovery společně vybereme 5 agentů pro Fázi 1. Níže je předběžný výběr — bude validován během Discovery.</p>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Agent</th><th>Entita</th><th>Závislost</th><th>Odhad</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td><strong>Reporting Automation Agent</strong></td><td>RD Rýmařov</td><td>Data Quality Agent musí být funkční</td><td>Bude upřesněno</td></tr>
+      <tr><td>2</td><td><strong>Regulatory & Certification Monitor</strong></td><td>RD Rýmařov</td><td>Přístup k veřejným registrům + CAD výstupům</td><td>Bude upřesněno</td></tr>
+      <tr><td>3</td><td><strong>Document Intelligence Agent</strong></td><td>RD Rýmařov + Holding</td><td>Přístup k vzorkovým dokumentům + QI DB</td><td>Bude upřesněno</td></tr>
+      <tr><td>4</td><td><strong>Sales Lead Agent</strong></td><td>Nový Zeleneč</td><td>CRM / prodejní systém Zelence</td><td>Bude upřesněno</td></tr>
+      <tr><td>5</td><td><strong>Client Request Agent</strong></td><td>RD Rýmařov</td><td>Přístup k zákaznickým kanálům (email, web)</td><td>Bude upřesněno</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px;">Cenění Fáze 1 bude součástí výstupů Discovery.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- 11. DLOUHODOBÁ VIZE — 28+ AGENTŮ -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2>11. Dlouhodobá vize — 28+ agentů napříč holdingem</h2>
+  <div class="card">
+    <p style="font-size:13px;">10 agentů popsaných v tomto dokumentu pokrývá první dvě vlny nasazení. Celková vize počítá s <strong>28+ agenty</strong> pokrývajícími všechny klíčové procesy holdingu — od výroby přes logistiku, HR, finance, marketing až po správu nemovitostí.</p>
+    <p style="font-size:13px; margin-bottom:0;">Přesný počet a prioritizace zbývajících agentů budou definovány na základě dat z Discovery fáze. Každý agent odpovídá na konkrétní business problém — technická architektura je prostředek, ne cíl. Cílem je měřitelná úspora času, peněz a eliminace chyb.</p>
+  </div>
+
+  <div class="entity-grid">
+    <div class="entity-card" style="background:var(--wf-bg); border-color:var(--wf); color:var(--wf-text);">
+      <div class="e-name">RD Rýmařov</div>
+      <div class="e-desc">Výroba, QI, data, logistika</div>
+    </div>
+    <div class="entity-card" style="background:var(--orch-bg); border-color:var(--orch); color:var(--orch-text);">
+      <div class="e-name">Progresus Invest</div>
+      <div class="e-desc">CRM, prodej, investoři</div>
+    </div>
+    <div class="entity-card" style="background:var(--agent-bg); border-color:var(--agent); color:var(--agent-text);">
+      <div class="e-name">Nový Zeleneč</div>
+      <div class="e-desc">Developerský projekt</div>
+    </div>
+    <div class="entity-card" style="background:var(--skill-bg); border-color:var(--skill); color:var(--skill-text);">
+      <div class="e-name">Holding Progresus</div>
+      <div class="e-desc">Konsolidace, reporting</div>
+    </div>
+    <div class="entity-card" style="background:var(--discovery-bg); border-color:var(--discovery); color:var(--discovery-text);">
+      <div class="e-name">Fáze 2 & 3</div>
+      <div class="e-desc">18+ dalších agentů</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Progresus AI — Discovery & Architektura řešení V1 &nbsp;|&nbsp; Able.cz + Arkadia Labs &nbsp;|&nbsp; Březen 2026</p>
+  <p>Tento dokument je důvěrný a určen výhradně pro interní potřeby Skupiny Progresus a jejích poradců.</p>
+</footer>
+
+</body>
+</html>
