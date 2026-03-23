@@ -8,7 +8,7 @@ const IntegrationCard: React.FC<{ integration: Integration }> = ({ integration }
   return (
     <div className="group flex flex-col p-6 bg-white border border-gray-200 rounded-xl hover:border-[#1C7ED6] hover:shadow-lg transition-all duration-300 min-h-[170px]">
       <div className="flex-shrink-0">
-        <img src={integration.logoUrl} alt={t(integration.nameKey)} className="h-14 w-14 object-contain" />
+        <img src={integration.logoUrl} alt={t(integration.nameKey)} className="h-14 w-14 object-contain" loading="lazy" />
       </div>
       <div className="mt-4 flex-grow">
         <h3 className="text-lg font-bold text-[#0D1B2A]">{t(integration.nameKey)}</h3>

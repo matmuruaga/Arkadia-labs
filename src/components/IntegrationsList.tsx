@@ -34,7 +34,7 @@ export const IntegrationsList = () => {
                   .filter((integration) => integration.category === category)
                   .map((integration) => (
                     <div key={integration.id} className="border border-slate-200 bg-slate-50 rounded-xl p-4 flex flex-col items-center justify-center text-center gap-3 aspect-square hover:bg-white hover:shadow-md transition-all">
-                      <img src={integration.logoUrl} alt={`${integration.name} logo`} className="h-10 w-10 object-contain" />
+                      <img src={integration.logoUrl} alt={`${integration.name} logo`} className="h-10 w-10 object-contain" loading="lazy" />
                       <p className="text-sm font-semibold text-gray-700">{integration.name}</p>
                     </div>
                   ))}

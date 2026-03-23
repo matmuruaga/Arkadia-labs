@@ -1,10 +1,9 @@
 // src/components/IntegrationsSection.tsx
 import { motion } from 'framer-motion';
 import Lottie, { LottieRefCurrentProps } from 'lottie-react';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom'; // 1. Importamos useNavigate
-import integrationsAnimationData from '../assets/integrations-lottie.json';
+import { useNavigate } from 'react-router-dom';
 import { Check, ArrowRight } from 'lucide-react';
 
 const integrationExampleKeys = [
@@ -17,8 +16,14 @@ const integrationExampleKeys = [
 
 const IntegrationsSection = () => {
   const { t, i18n } = useTranslation('home');
-  const navigate = useNavigate(); // 2. Inicializamos el hook
+  const navigate = useNavigate();
   const lottieIntegrationsRef = useRef<LottieRefCurrentProps>(null);
+  const [animationData, setAnimationData] = useState<object | null>(null);
+
+  // Dynamic import del Lottie JSON para evitar bundlear 112KB en el chunk JS
+  useEffect(() => {
+    import('@/assets/integrations-lottie.json').then(m => setAnimationData(m.default));
+  }, []);
 
   // 3. Modificamos la función para que redirija a la página de integraciones
   const handleBrowseIntegrationsClick = () => {
@@ -67,13 +72,15 @@ const IntegrationsSection = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <Lottie
-              lottieRef={lottieIntegrationsRef}
-              animationData={integrationsAnimationData}
-              loop={true} 
-              autoplay={true} 
-              style={{ width: '100%', height: 'auto' }} 
-            />
+            {animationData && (
+              <Lottie
+                lottieRef={lottieIntegrationsRef}
+                animationData={animationData}
+                loop={true}
+                autoplay={true}
+                style={{ width: '100%', height: 'auto' }}
+              />
+            )}
           </motion.div>
 
           <motion.div

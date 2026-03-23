@@ -1,8 +1,7 @@
 // src/components/LanguageHandler.tsx
-import { useEffect, Suspense } from 'react'; // <-- 1. Importa Suspense
+import { useEffect } from 'react';
 import { useParams, Outlet, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import Layout from './Layout'; 
 
 const supportedLngs = ['en', 'es', 'cs'];
 

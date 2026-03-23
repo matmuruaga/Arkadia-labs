@@ -155,20 +155,22 @@ const TestimonialsSection = () => {
                     
                     {/* --- INICIO DE LA CORRECCIÓN --- */}
                     <div className="w-full md:w-2/5 lg:w-1/3 bg-slate-100 aspect-square md:aspect-auto">
-                      <img 
-                        src={testimonial.imageUrl} 
-                        alt={t('testimonials.altText.portrait', { author })} 
-                        className="w-full h-full object-cover" 
+                      <img
+                        src={testimonial.imageUrl}
+                        alt={t('testimonials.altText.portrait', { author })}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
                     {/* --- FIN DE LA CORRECCIÓN --- */}
 
                     <div className="w-full md:w-3/5 lg:w-2/3 p-6 py-8 md:p-8 lg:p-10 flex flex-col justify-center">
                       {testimonial.clientLogoUrl ? (
-                        <img 
-                          src={testimonial.clientLogoUrl} 
-                          alt={t('testimonials.altText.logo', { company })} 
+                        <img
+                          src={testimonial.clientLogoUrl}
+                          alt={t('testimonials.altText.logo', { company })}
                           className="h-8 md:h-9 mb-5 object-contain self-start"
+                          loading="lazy"
                         />
                       ) : (
                         <div className="mb-5 text-xl font-bold text-[#0D1B2A]/70 self-start">

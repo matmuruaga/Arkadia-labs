@@ -6,8 +6,8 @@
 import { useState, useMemo, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { useNavigate, useParams } from 'react-router-dom';
-import { Calculator, Users, DollarSign, TrendingUp, ArrowRight, Sparkles } from 'lucide-react';
+import { useParams } from 'react-router-dom';
+import { Calculator, Users, DollarSign, TrendingUp, Sparkles } from 'lucide-react';
 import {
   trackRoiCalculatorStart,
   trackRoiInputChange,
@@ -87,7 +87,6 @@ const ResultCard: React.FC<ResultCardProps> = ({ icon, label, value, accentClass
 const CloneYourBusinessRoiSection: React.FC = () => {
   const { t, i18n } = useTranslation('clone-your-business');
   const { lang } = useParams<{ lang: string }>();
-  const navigate = useNavigate();
   const sectionRef = useRef<HTMLElement>(null);
 
   const [employees, setEmployees] = useState(10);

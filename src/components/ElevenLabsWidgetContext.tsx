@@ -1,5 +1,5 @@
 // src/components/ElevenLabsWidgetContext.tsx
-import React, { createContext, useContext, ReactNode, useState, useEffect } from 'react';
+import React, { createContext, useContext, ReactNode, useState } from 'react';
 
 declare global {
   interface Window {

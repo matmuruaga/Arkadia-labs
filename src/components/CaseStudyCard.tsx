@@ -57,10 +57,11 @@ const CaseStudyCard: React.FC<Props> = ({ study, slug }) => {
           
           <div className="flex justify-center items-center mb-6 h-12 w-full">
             {study.client.logoUrl && (
-              <img 
-                src={study.client.logoUrl} 
-                alt={`${study.client.name} logo`} 
-                className="max-h-full max-w-[160px] object-contain" 
+              <img
+                src={study.client.logoUrl}
+                alt={`${study.client.name} logo`}
+                className="max-h-full max-w-[160px] object-contain"
+                loading="lazy"
               />
             )}
           </div>

@@ -9,8 +9,7 @@ import Layout from "./components/Layout";
 import LoadingScreen from "./components/LoadingScreen";
 
 // Lazy loading de páginas para code splitting y mejor performance
-// MainPage se carga de forma normal porque es la ruta principal
-import MainPage from "./pages/MainPage";
+const MainPage = lazy(() => import("./pages/MainPage"));
 
 // Todas las demás páginas se cargan bajo demanda (lazy)
 const PricingPage = lazy(() => import("./pages/PricingPage"));
