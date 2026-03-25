@@ -47,7 +47,7 @@ const plansData = [
 ];
 
 const PricingTiers = () => {
-  const { t } = useTranslation(); // 3. Inicializar hook
+  const { t } = useTranslation('pricing'); // 3. Inicializar hook
 
   return (
     <>

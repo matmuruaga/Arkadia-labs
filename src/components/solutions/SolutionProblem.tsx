@@ -1,7 +1,7 @@
 // src/components/solutions/SolutionProblem.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PhoneOff, HelpCircle, Shuffle, Clock, AlertTriangle } from 'lucide-react';
+import { PhoneOff, HelpCircle, Shuffle, Clock, AlertTriangle, UserX, Moon, Users, DollarSign, RefreshCw, BatteryLow, EyeOff } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { SolutionProblem as SolutionProblemType } from '@/data/solutions/types';
 
@@ -12,6 +12,14 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   'shuffle': Shuffle,
   'clock': Clock,
   'alert-triangle': AlertTriangle,
+  'user-x': UserX,
+  'phone-missed': PhoneOff,
+  'moon': Moon,
+  'users': Users,
+  'dollar-sign': DollarSign,
+  'refresh-cw': RefreshCw,
+  'battery-low': BatteryLow,
+  'eye-off': EyeOff,
 };
 
 interface Props {

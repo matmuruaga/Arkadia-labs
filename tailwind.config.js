@@ -25,6 +25,18 @@ export default {
   		},
 		animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'marquee-left': 'marquee-left var(--marquee-speed, 30s) linear infinite',
+        'marquee-right': 'marquee-right var(--marquee-speed, 30s) linear infinite',
+      },
+      keyframes: {
+        'marquee-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'marquee-right': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
       },
   		borderRadius: {
   			lg: 'var(--radius)',

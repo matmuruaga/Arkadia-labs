@@ -1,14 +1,17 @@
 // src/pages/LegalNoticePage.tsx
-import { useTranslation } from 'react-i18next'; // 1. Importar
+import { useTranslation } from 'react-i18next';
+import SEO from '@/components/SEO';
 
 const LegalNoticePage = () => {
-  const { t } = useTranslation(); // 2. Inicializar
+  const { t } = useTranslation('legal'); // 2. Inicializar
 
   const legalPageStyles = "prose max-w-none text-[#0D1B2A]/80";
   const heading1Styles = "text-3xl md:text-4xl font-bold text-[#0D1B2A] mb-6";
   const heading2Styles = "text-xl md:text-2xl font-semibold text-[#0D1B2A] mt-8 mb-4";
 
   return (
+    <>
+    <SEO titleKey="seo.legalNotice.title" descriptionKey="seo.legalNotice.description" path="/legal-notice" />
     <main className="bg-white py-20 md:py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* 3. Usar t() para traducir todos los textos */}
@@ -41,6 +44,7 @@ const LegalNoticePage = () => {
         </div>
       </div>
     </main>
+    </>
   );
 };
 

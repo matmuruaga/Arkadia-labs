@@ -6,12 +6,14 @@ import { LogoCloud } from '../components/LogoCloud';
 import  HowItWorks  from '../components/HowItWorks';
 import { CtaSection } from '../components/CtaSection' ;
 import IntegrationsFilter from '../components/IntegrationsFilter';
+import SEO from '@/components/SEO';
 
 export const IntegrationsPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   return (
     <div className="bg-slate-50">
+      <SEO titleKey="seo.integrations.title" descriptionKey="seo.integrations.description" path="/integrations" />
       {/* Spacer to account for fixed header */}
       <div className="h-24" aria-hidden="true" />
       <IntegrationsHero searchQuery={searchQuery} onSearchChange={setSearchQuery} />

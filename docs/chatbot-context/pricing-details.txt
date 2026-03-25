@@ -1,0 +1,232 @@
+# ARKADIA LABS - PRICING INFORMATION
+# For Chatbot Training - Pricing Module
+
+================================================================================
+PRICING OVERVIEW
+================================================================================
+
+Arkadia Labs uses a ONE-TIME SETUP FEE model (not monthly subscription).
+After the setup fee, ongoing work is included in the plan.
+
+================================================================================
+PLAN 1: AI EMPLOYEE
+================================================================================
+
+PRICE: $1,500 (one-time setup fee)
+
+TARGET AUDIENCE:
+- Small businesses
+- Solopreneurs
+- Companies just starting with AI automation
+- Those wanting to automate lead qualification & follow-ups
+
+WHAT'S INCLUDED:
+- 1 AI Sales System built & trained specifically for your business
+- 2 Monthly Strategy Calls (30 minutes each)
+- Standard Email & Chat Support
+- CRM Integration (Salesforce, HubSpot, Pipedrive, etc.)
+- Monthly Optimization Session to improve performance
+- Standard Support Response Time: 24-48 hours
+
+WHAT'S NOT INCLUDED:
+- External tool costs (Twilio, third-party APIs, CRM subscriptions)
+  * You pay these directly to the providers
+- Dedicated Slack Channel
+
+BEST FOR:
+- Testing AI automation before scaling
+- Single department automation
+- Limited budget, maximum impact
+
+================================================================================
+PLAN 2: AI SALES TEAM (MOST POPULAR)
+================================================================================
+
+PRICE: $2,500 (one-time setup fee)
+
+TARGET AUDIENCE:
+- Growing teams
+- Companies scaling their sales operations
+- Businesses automating multiple sales functions
+
+WHAT'S INCLUDED:
+- 3 AI Sales Systems built & trained
+- 4 Monthly Strategy Calls (30 minutes each)
+- Priority Email & Chat Support
+- Dedicated Slack Channel for direct communication
+- CRM Integration
+- Bi-Weekly Optimization Sessions (2x per month)
+- Priority Support Response Time: 12-24 hours
+
+WHAT'S NOT INCLUDED:
+- External tool costs (Twilio, third-party APIs, CRM subscriptions)
+
+BEST FOR:
+- Teams with multiple sales reps
+- Companies with established sales processes
+- Businesses ready to scale automation
+
+WHY IT'S MOST POPULAR:
+- Best value for growing companies
+- Covers multiple use cases (3 systems)
+- Dedicated Slack = faster communication
+- More frequent optimization = better results
+
+================================================================================
+PLAN 3: AI GROWTH PARTNER
+================================================================================
+
+PRICE: $5,000 (one-time setup fee)
+
+TARGET AUDIENCE:
+- Enterprise companies
+- Businesses automating entire sales funnel
+- Companies with complex, multi-department needs
+
+WHAT'S INCLUDED:
+- 10 AI Sales Systems built & trained
+- Weekly Strategy Calls (60 minutes each)
+- Exclusive Email & Chat Support (top priority)
+- Dedicated Slack Channel
+- Multiple CRM Integrations
+- Weekly Optimization Sessions
+- 4-Hour Support Response Time
+
+WHAT'S NOT INCLUDED:
+- External tool costs (Twilio, third-party APIs, CRM subscriptions)
+
+BEST FOR:
+- Enterprise-level automation
+- Full funnel automation (marketing + sales + support)
+- Companies with urgent implementation needs
+- Multi-department rollouts
+
+================================================================================
+ADD-ONS (Available for all plans)
+================================================================================
+
+ADDITIONAL STRATEGY CALL
+Price: $250 per call
+Description: Extra 30-minute strategy session beyond your plan allocation
+
+SALES TRAINING FOR HUMAN TEAM
+Price: $750
+Description: Training session to help your human sales team work effectively
+alongside AI agents
+
+================================================================================
+PAYMENT OPTIONS
+================================================================================
+
+We accept:
+1. Invoice (NET 30)
+2. Bank Transfer
+3. Stripe (Credit Card)
+
+ANNUAL DISCOUNT:
+Save up to 20% when paying annually!
+(Contact sales for annual pricing)
+
+================================================================================
+COMPARISON TABLE
+================================================================================
+
+Feature               | AI Employee  | AI Sales Team | AI Growth Partner
+---------------------|--------------|---------------|------------------
+Price                | $1,500       | $2,500        | $5,000
+AI Systems           | 1            | 3             | 10
+Strategy Calls       | 2x/month     | 4x/month      | Weekly (60 min)
+Support Level        | Standard     | Priority      | Exclusive
+Slack Channel        | No           | Yes           | Yes
+Optimization         | Monthly      | Bi-Weekly     | Weekly
+Response Time        | 24-48h       | 12-24h        | 4 hours
+CRM Integration      | Yes          | Yes           | Multiple
+
+================================================================================
+FREQUENTLY ASKED PRICING QUESTIONS
+================================================================================
+
+Q: Is this a monthly subscription?
+A: No. The price shown is a one-time setup fee. After setup, ongoing strategy
+calls, support, and optimizations are included in your plan.
+
+Q: What external tools might I need to pay for?
+A: Depending on your use case:
+- Twilio (for voice/SMS): Pay as you go
+- CRM subscription (if you don't have one)
+- Third-party APIs specific to your integrations
+We'll tell you exactly what you need during discovery.
+
+Q: Can I upgrade my plan later?
+A: Yes! Many clients start with AI Employee to validate results, then upgrade
+to AI Sales Team or AI Growth Partner. You only pay the difference.
+
+Q: Do you offer custom pricing for specific needs?
+A: Yes. For unique requirements or enterprise deals, contact our sales team
+for a custom quote.
+
+Q: What's included in the setup fee?
+A: Discovery, design, development, integration, testing, training, and launch
+of your AI system(s). Plus ongoing support and optimization.
+
+Q: How does the 20% annual discount work?
+A: Contact sales for annual pricing. This typically applies to companies
+wanting extended partnership terms.
+
+Q: Are there any hidden fees?
+A: No. The only additional costs are external tools you choose to use
+(and those are paid directly to the tool providers, not to us).
+
+Q: What if I need more than 10 AI systems?
+A: Contact our sales team for enterprise pricing. We've handled larger
+deployments and can create a custom package.
+
+================================================================================
+HOW TO CHOOSE YOUR PLAN
+================================================================================
+
+CHOOSE AI EMPLOYEE ($1,500) IF:
+- You're new to AI automation
+- You want to test with minimal investment
+- You have one specific process to automate
+- You're a small team (1-10 people)
+
+CHOOSE AI SALES TEAM ($2,500) IF:
+- You have multiple processes to automate
+- You want faster support and more strategy calls
+- You value direct Slack communication
+- You're a growing team (11-50 people)
+
+CHOOSE AI GROWTH PARTNER ($5,000) IF:
+- You need enterprise-level support
+- You want to automate multiple departments
+- Speed of implementation is critical
+- You're a larger organization (51+ people)
+
+NOT SURE? Book a free 15-minute consultation and we'll recommend the right
+plan based on your specific needs and goals.
+
+================================================================================
+ROI EXPECTATIONS BY PLAN
+================================================================================
+
+AI EMPLOYEE:
+- Typical ROI: 2-4x within 6 months
+- Best metric: Time saved on repetitive tasks
+
+AI SALES TEAM:
+- Typical ROI: 3-5x within 4-6 months
+- Best metric: Pipeline velocity improvement
+
+AI GROWTH PARTNER:
+- Typical ROI: 4-6x within 3-6 months
+- Best metric: Full funnel conversion improvement
+
+Based on case studies:
+- Goodnite (AI Receptionist): 6x ROI in 12 months
+- Domus Labs (Operations): 160% ROI in 3 months
+- ELSA Consulting (Sales): 600% ROI in 2 months
+
+================================================================================
+END OF PRICING DOCUMENT
+================================================================================

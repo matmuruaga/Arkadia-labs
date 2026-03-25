@@ -9,7 +9,7 @@ import { trackAiWidgetOpen, trackAiWidgetClose } from '@/utils/dataLayer';
 import OptimizedImage from './OptimizedImage';
 
 const Hero = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('home');
 
   const { startSession, endSession, status } = useConversation();
   const [isLoading, setIsLoading] = useState(false);
@@ -31,8 +31,12 @@ const Hero = () => {
       if (status === 'disconnected') {
         // Track AI widget open
         trackAiWidgetOpen('hero', 'elevenlabs_voice_agent');
-        await navigator.mediaDevices.getUserMedia({ audio: true });
-        await startSession({ agentId: 'agent_01jynm32kjf7rvq5857ggj51ew' });
+        const permissionStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        permissionStream.getTracks().forEach(track => track.stop());
+        await startSession({
+          agentId: 'agent_01jynm32kjf7rvq5857ggj51ew',
+          connectionType: 'webrtc',
+        });
       } else if (status === 'connected') {
         // Track AI widget close
         trackAiWidgetClose('hero', 'elevenlabs_voice_agent');

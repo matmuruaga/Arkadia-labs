@@ -1,12 +1,12 @@
 // src/components/Footer.tsx
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { Linkedin, Twitter, Youtube, Instagram, Send, Loader2 } from 'lucide-react';
+import { Linkedin, Send, Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { trackSocialClick, trackNavigationClick, trackFormStart, trackFormSubmit, trackFormSuccess } from '@/utils/dataLayer';
 
 const Footer = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('common');
   const currentLang = i18n.language;
   const socialLinkClasses = "text-gray-500 hover:text-[#1C7ED6] transition-colors";
   const navLinkClasses = "text-gray-600 hover:text-[#1C7ED6] transition-colors";
@@ -82,47 +82,14 @@ const Footer = () => {
             <p className="text-gray-600 mb-6 text-sm">{t('footer.description')}</p>
             <div className="flex space-x-4">
               <a
-                href="https://www.linkedin.com/company/elevaite-labs-io/"
+                href="https://www.linkedin.com/company/arkadia-labs/"
                 className={socialLinkClasses}
                 aria-label={t('footer.social.linkedin')}
-                onClick={() => handleSocialClick('linkedin', 'https://www.linkedin.com/company/elevaite-labs-io/')}
+                onClick={() => handleSocialClick('linkedin', 'https://www.linkedin.com/company/arkadia-labs/')}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Linkedin size={20} />
-              </a>
-              <a
-                href="#"
-                className={socialLinkClasses}
-                aria-label={t('footer.social.twitter')}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleSocialClick('twitter', '#');
-                }}
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="#"
-                className={socialLinkClasses}
-                aria-label={t('footer.social.youtube')}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleSocialClick('youtube', '#');
-                }}
-              >
-                <Youtube size={20} />
-              </a>
-              <a
-                href="#"
-                className={socialLinkClasses}
-                aria-label={t('footer.social.instagram')}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleSocialClick('instagram', '#');
-                }}
-              >
-                <Instagram size={20} />
               </a>
             </div>
           </div>
@@ -141,9 +108,9 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to={`/${currentLang}/#testimonials`}
+                  to={`/${currentLang}/case-studies`}
                   className={navLinkClasses}
-                  onClick={() => handleNavigationClick(t('footer.links.caseStudies'), `/${currentLang}/#testimonials`)}
+                  onClick={() => handleNavigationClick(t('footer.links.caseStudies'), `/${currentLang}/case-studies`)}
                 >
                   {t('footer.links.caseStudies')}
                 </Link>
@@ -188,7 +155,11 @@ const Footer = () => {
             <h3 className="text-[#0D1B2A] font-semibold mb-4">{t('footer.headings.stayUpdated')}</h3>
             <form onSubmit={handleNewsletterSubmit}>
               <div className="relative mb-2">
+                <label htmlFor="footer-newsletter-email" className="sr-only">
+                  {t('footer.newsletter.placeholder')}
+                </label>
                 <input
+                  id="footer-newsletter-email"
                   type="email"
                   placeholder={t('footer.newsletter.placeholder')}
                   className="w-full bg-white text-[#0D1B2A] rounded-full py-2.5 pl-4 pr-12 border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#1C7ED6] focus:border-[#1C7ED6]"

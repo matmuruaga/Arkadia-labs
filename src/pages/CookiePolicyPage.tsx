@@ -1,9 +1,10 @@
 // src/pages/CookiePolicyPage.tsx
 import LegalPageLayout from '../components/LegalPageLayout';
-import { useTranslation } from 'react-i18next'; // 1. Importar
+import { useTranslation } from 'react-i18next';
+import SEO from '@/components/SEO';
 
 const CookiePolicyPage = () => {
-  const { t } = useTranslation(); // 2. Inicializar
+  const { t } = useTranslation('legal'); // 2. Inicializar
 
   // 3. Definir el contenido dentro del componente
   const cookiePolicyContent = [
@@ -76,11 +77,14 @@ const CookiePolicyPage = () => {
   ];
 
   return (
+    <>
+    <SEO titleKey="seo.cookiePolicy.title" descriptionKey="seo.cookiePolicy.description" path="/cookie-policy" />
     <LegalPageLayout
       title={t('cookiePolicy.title')}
       lastUpdated={t('cookiePolicy.lastUpdated')}
       content={cookiePolicyContent}
     />
+    </>
   );
 };
 

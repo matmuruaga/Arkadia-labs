@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Progresus AI — Technický rozpad agentů</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     DESIGN TOKENS — Arkadia Labs Design System
+     ============================================================ */
+  :root {
+    --bg:              #F4F6F8;
+    --bg-surface:      #FFFFFF;
+    --bg-surface-2:    #F0F2F5;
+    --bg-hero:         #0D1B2A;
+    --border:          #E2E6EB;
+    --border-strong:   #CBD2DA;
+
+    --text:            #1A2332;
+    --text-secondary:  #4A5568;
+    --text-muted:      #7A8599;
+    --text-heading:    #0D1B2A;
+
+    /* Primary accent */
+    --accent-blue:     #1C7ED6;
+    --accent-blue-dark:#1565AE;
+    --accent-purple:   #7C5CBF;
+    --accent-purple-lt:#A78BFA;
+
+    /* Gradient */
+    --gradient-brand: linear-gradient(135deg, #1C7ED6, #7C5CBF);
+    --gradient-brand-text: linear-gradient(90deg, #C4B5FD, #A78BFA, #7DD3FC);
+    --gradient-subtle: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+
+    /* Layer tokens — refined, subtle palette */
+    --orch:            #7C5CBF;
+    --orch-bg:         #F5F0FF;
+    --orch-border:     #D4C4F0;
+    --orch-text:       #5B3D9E;
+    --orch-icon:       #9F7AEA;
+
+    --agent:           #1C7ED6;
+    --agent-bg:        #EFF6FF;
+    --agent-border:    #BDD7F5;
+    --agent-text:      #1A5FA0;
+    --agent-icon:      #4DA3E8;
+
+    --wf:              #0E8A8A;
+    --wf-bg:           #EFFAFA;
+    --wf-border:       #B2E4E4;
+    --wf-text:         #0A6B6B;
+    --wf-icon:         #38C7C7;
+
+    --skill:           #5C82C4;
+    --skill-bg:        #F0F4FB;
+    --skill-border:    #C4D5EE;
+    --skill-text:      #3A5EA0;
+    --skill-icon:      #7DA0D8;
+
+    --tool:            #64748B;
+    --tool-bg:         #F3F5F7;
+    --tool-border:     #CBD5E1;
+    --tool-text:       #475569;
+    --tool-icon:       #94A3B8;
+
+    /* Semantic status */
+    --status-ok:       #16A34A;
+    --status-ok-bg:    #F0FDF4;
+    --status-ok-border:#BBF7D0;
+    --status-warn:     #D97706;
+    --status-warn-bg:  #FFFBEB;
+    --status-warn-border:#FDE68A;
+    --status-risk:     #DC2626;
+    --status-risk-bg:  #FEF2F2;
+    --status-risk-border:#FECACA;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  }
+
+  /* ============================================================
+     RESET & BASE
+     ============================================================ */
+  *, *::before, *::after {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Noto Sans', ui-sans-serif, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  a:hover { color: var(--accent-blue-dark); }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* ============================================================
+     SKIP LINK
+     ============================================================ */
+  .skip-link {
+    position: absolute; top: -48px; left: 0;
+    background: var(--accent-blue); color: #fff;
+    padding: 10px 18px; z-index: 100;
+    font-weight: 600; font-size: 14px;
+    border-radius: 0 0 8px 0;
+    transition: top 0.2s;
+  }
+  .skip-link:focus { top: 0; color: #fff; }
+
+  /* ============================================================
+     HERO HEADER
+     ============================================================ */
+  header {
+    background: var(--bg-hero);
+    padding: 48px 24px 44px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 600px 400px at 20% 50%, rgba(124,92,191,0.15), transparent),
+      radial-gradient(ellipse 600px 400px at 80% 50%, rgba(28,126,214,0.12), transparent);
+    pointer-events: none;
+  }
+  header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+    position: relative;
+    margin-bottom: 8px;
+  }
+  header .subtitle {
+    color: rgba(255,255,255,0.55);
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 0;
+  }
+  header .brand-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+    margin-bottom: 20px;
+    backdrop-filter: blur(8px);
+    position: relative;
+  }
+  header .brand-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent-purple-lt);
+  }
+
+  /* ============================================================
+     CONTENT WRAPPER
+     ============================================================ */
+  .content-wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+  }
+
+  /* ============================================================
+     TYPOGRAPHY
+     ============================================================ */
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin: 48px 0 20px;
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2::before {
+    content: '';
+    width: 4px;
+    height: 24px;
+    border-radius: 2px;
+    background: var(--gradient-brand);
+    flex-shrink: 0;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 12px;
+  }
+  h4 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--text-heading);
+  }
+  p { margin-bottom: 12px; font-size: 14px; color: var(--text-secondary); }
+  p:last-child { margin-bottom: 0; }
+
+  code {
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border);
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+    color: var(--accent-purple);
+    font-weight: 500;
+  }
+
+  /* ============================================================
+     LEGEND
+     ============================================================ */
+  .legend {
+    display: flex;
+    gap: 6px 8px;
+    flex-wrap: wrap;
+    margin: -12px 0 32px;
+    padding: 16px 20px;
+    background: var(--bg-surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+    position: relative;
+    top: -24px;
+    z-index: 2;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  .legend-item:hover {
+    background: var(--bg-surface-2);
+  }
+  .legend-dot {
+    width: 12px; height: 12px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    border: 2px solid;
+  }
+
+  /* ============================================================
+     LAYER STACK — Architecture Visualization
+     ============================================================ */
+  .layer-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+  /* Connecting line */
+  .layer-stack::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--orch), var(--agent), var(--wf), var(--skill), var(--tool));
+    border-radius: 2px;
+    opacity: 0.25;
+  }
+  .layer {
+    padding: 14px 18px 14px 52px;
+    border-radius: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .layer:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow-md);
+  }
+  /* Layer number indicator */
+  .layer::before {
+    content: attr(data-level);
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px; height: 26px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+    background: currentColor;
+    color: #fff;
+  }
+  .l-orch::before { background: var(--orch); }
+  .l-agent::before { background: var(--agent); }
+  .l-wf::before { background: var(--wf); }
+  .l-skill::before { background: var(--skill); }
+  .l-tool::before { background: var(--tool); }
+
+  .layer-name {
+    font-weight: 700;
+    font-size: 13px;
+    color: inherit;
+  }
+  .layer-desc {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-top: 2px;
+  }
+  .layer-examples {
+    font-size: 12px;
+    font-style: italic;
+    opacity: 0.6;
+    white-space: nowrap;
+    background: rgba(0,0,0,0.04);
+    padding: 3px 10px;
+    border-radius: 6px;
+  }
+
+  /* Layer color skins */
+  .l-orch  { background: var(--orch-bg);  border-color: var(--orch-border);  color: var(--orch-text); }
+  .l-agent { background: var(--agent-bg); border-color: var(--agent-border); color: var(--agent-text); }
+  .l-wf    { background: var(--wf-bg);    border-color: var(--wf-border);    color: var(--wf-text); }
+  .l-skill { background: var(--skill-bg); border-color: var(--skill-border); color: var(--skill-text); }
+  .l-tool  { background: var(--tool-bg);  border-color: var(--tool-border);  color: var(--tool-text); }
+
+  /* ============================================================
+     AGENT CARDS GRID
+     ============================================================ */
+  .agents-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  @media (max-width: 900px) {
+    .agents-grid { grid-template-columns: 1fr; }
+  }
+
+  .agent-card {
+    background: var(--bg-surface);
+    border-radius: 14px;
+    padding: 22px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.2s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .agent-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+  /* Top gradient accent bar */
+  .agent-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gradient-brand);
+    border-radius: 14px 14px 0 0;
+  }
+  .agent-card h3 {
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  /* Badge */
+  .badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 16px;
+    background: var(--bg-surface-2);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+  }
+  .badge-tier {
+    color: var(--text-muted);
+    font-size: 11px;
+    margin-left: 8px;
+    font-weight: 500;
+    padding: 3px 10px;
+    background: var(--bg-surface-2);
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+
+  /* Breakdown rows */
+  .breakdown-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .breakdown-row:last-child { margin-bottom: 0; }
+  .bl {
+    min-width: 90px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    text-align: center;
+    flex-shrink: 0;
+    border: 1px solid transparent;
+    letter-spacing: 0.2px;
+  }
+  .bl-orch  { background: var(--orch-bg);  color: var(--orch-text);  border-color: var(--orch-border); }
+  .bl-agent { background: var(--agent-bg); color: var(--agent-text); border-color: var(--agent-border); }
+  .bl-wf    { background: var(--wf-bg);    color: var(--wf-text);    border-color: var(--wf-border); }
+  .bl-skill { background: var(--skill-bg); color: var(--skill-text); border-color: var(--skill-border); }
+  .bl-tool  { background: var(--tool-bg);  color: var(--tool-text);  border-color: var(--tool-border); }
+
+  /* ============================================================
+     TABLES
+     ============================================================ */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 13px;
+    margin-bottom: 20px;
+    background: var(--bg-surface);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+  }
+  th {
+    background: var(--bg-surface-2);
+    color: var(--text-muted);
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr {
+    transition: background 0.15s;
+  }
+  tbody tr:hover td { background: rgba(28,126,214,0.03); }
+  caption {
+    font-size: 15px;
+    color: var(--text-heading);
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+  .count {
+    font-weight: 800;
+    font-size: 18px;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* ============================================================
+     CARDS
+     ============================================================ */
+  .card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.3s;
+  }
+  .card:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Colored card variants */
+  .card-orch  {
+    background: var(--orch-bg);
+    border-color: var(--orch-border);
+  }
+  .card-wf    {
+    background: var(--wf-bg);
+    border-color: var(--wf-border);
+  }
+  .card-skill {
+    background: var(--skill-bg);
+    border-color: var(--skill-border);
+  }
+  .card-tool  {
+    background: var(--tool-bg);
+    border-color: var(--tool-border);
+  }
+  .card-impact {
+    background: linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 50%, #F0FDFA 100%);
+    border: 2px solid var(--status-ok-border);
+    position: relative;
+  }
+  .card-impact::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--status-ok), #0EA5E9);
+    border-radius: 14px 14px 0 0;
+  }
+
+  /* ============================================================
+     KEY MESSAGING — Special callout card
+     ============================================================ */
+  .messaging-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 0;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+  }
+  .messaging-card h2 {
+    margin: 0;
+    padding: 18px 22px;
+    background: var(--bg-surface-2);
+    border-bottom: 1px solid var(--border);
+    font-size: 16px;
+  }
+  .messaging-card h2::before { display: none; }
+  .messaging-items {
+    padding: 6px;
+  }
+  .msg-item {
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    transition: background 0.15s;
+  }
+  .msg-item:hover {
+    background: var(--bg-surface-2);
+  }
+  .msg-item:last-child { margin-bottom: 0; }
+  .msg-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+  .msg-dot-green { background: var(--status-ok); }
+  .msg-dot-orange { background: var(--status-warn); }
+  .msg-dot-red { background: var(--status-risk); }
+
+  /* ============================================================
+     TWO-COLUMN LAYOUT
+     ============================================================ */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 700px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+
+  /* ============================================================
+     TIER GRID (strategy boxes)
+     ============================================================ */
+  .tier-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 700px) {
+    .tier-grid { grid-template-columns: 1fr; }
+  }
+  .tier-box {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .tier-box:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  .tier-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+  }
+  .tier-box:nth-child(1)::before { background: var(--wf); }
+  .tier-box:nth-child(2)::before { background: var(--skill); }
+  .tier-box:nth-child(3)::before { background: var(--status-warn); }
+  .tier-box:nth-child(4)::before { background: var(--tool); }
+
+  /* ============================================================
+     ARCH DIAGRAM
+     ============================================================ */
+  .arch-diagram {
+    text-align: center;
+    padding: 28px 16px;
+    line-height: 1;
+    color: var(--text-muted);
+    position: relative;
+  }
+  .arch-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .arch-arrow {
+    color: var(--border-strong);
+    font-size: 20px;
+    line-height: 1;
+    padding: 6px 0;
+  }
+  .arch-arrows-triple {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    color: var(--border-strong);
+    font-size: 20px;
+    padding: 6px 0;
+  }
+  .arch-node {
+    padding: 8px 18px;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .arch-node:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+  }
+  .arch-orch  { background: var(--orch-bg);  color: var(--orch-text);  border-color: var(--orch-border); }
+  .arch-agent { background: var(--agent-bg); color: var(--agent-text); border-color: var(--agent-border); }
+  .arch-wf    { background: var(--wf-bg);    color: var(--wf-text);    border-color: var(--wf-border); }
+  .arch-skill { background: var(--skill-bg); color: var(--skill-text); border-color: var(--skill-border); }
+  .arch-tool  { background: var(--tool-bg);  color: var(--tool-text);  border-color: var(--tool-border); }
+  .arch-legacy {
+    background: var(--bg-surface-2);
+    color: var(--text-muted);
+    border-color: var(--border-strong);
+  }
+  .arch-labels {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 8px;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  /* ============================================================
+     STATUS / SEMANTIC TAGS
+     ============================================================ */
+  .tag-green {
+    color: var(--status-ok);
+    font-weight: 600;
+  }
+  .tag-orange {
+    color: var(--status-warn);
+    font-weight: 600;
+  }
+  .tag-red {
+    color: var(--status-risk);
+    font-weight: 600;
+  }
+
+  /* Inline status pill */
+  .pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid transparent;
+  }
+  .pill-green  { background: var(--status-ok-bg);   color: var(--status-ok);   border-color: var(--status-ok-border); }
+  .pill-orange { background: var(--status-warn-bg);  color: var(--status-warn); border-color: var(--status-warn-border); }
+  .pill-red    { background: var(--status-risk-bg);  color: var(--status-risk); border-color: var(--status-risk-border); }
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  footer {
+    margin-top: 48px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* ============================================================
+     RESPONSIVE
+     ============================================================ */
+  @media (max-width: 600px) {
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 24px; }
+    .content-wrap { padding: 0 16px 32px; }
+    .legend { top: -16px; padding: 12px 14px; }
+    h2 { font-size: 17px; margin-top: 36px; }
+    .layer { flex-direction: column; align-items: flex-start; padding-left: 48px; }
+    .layer-examples { white-space: normal; }
+    table { font-size: 12px; }
+    th, td { padding: 10px 12px; }
+    .agent-card { padding: 18px; }
+    .arch-arrows-triple { gap: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Přeskočit na obsah</a>
+
+<header>
+  <span class="brand-tag"><span class="brand-dot"></span>Arkadia Labs × Progresus</span>
+  <h1>Technický rozpad agentů</h1>
+  <p class="subtitle">Architektonický pohled na AI agent stack — Březen 2026</p>
+</header>
+
+<div class="content-wrap">
+
+<nav aria-label="Legenda vrstev" class="legend">
+  <span class="legend-item"><span class="legend-dot" style="background:var(--orch-bg); border-color:var(--orch);" aria-hidden="true"></span>Orchestrátor</span>
+  <span class="legend-item"><span class="legend-dot" style="background:var(--agent-bg); border-color:var(--agent);" aria-hidden="true"></span>Agent</span>
+  <span class="legend-item"><span class="legend-dot" style="background:var(--wf-bg); border-color:var(--wf);" aria-hidden="true"></span>Workflow</span>
+  <span class="legend-item"><span class="legend-dot" style="background:var(--skill-bg); border-color:var(--skill);" aria-hidden="true"></span>Skill</span>
+  <span class="legend-item"><span class="legend-dot" style="background:var(--tool-bg); border-color:var(--tool);" aria-hidden="true"></span>Tool / Connector</span>
+</nav>
+
+<main id="main">
+
+<!-- ARCHITECTURE LAYERS -->
+<section aria-labelledby="layers-heading">
+  <h2 id="layers-heading">Architektonické vrstvy</h2>
+  <div class="layer-stack" role="list" aria-label="Architektonické vrstvy od nejvyšší po nejnižší">
+    <div class="layer l-orch" role="listitem" data-level="1">
+      <div><div class="layer-name">Orchestrátor / Coordinator</div><div class="layer-desc">Řídí multi-agent flow, routuje úkoly, drží stav konverzace</div></div>
+      <div class="layer-examples">LangGraph, CrewAI, custom state machine</div>
+    </div>
+    <div class="layer l-agent" role="listitem" data-level="2">
+      <div><div class="layer-name">Agent</div><div class="layer-desc">Autonomní jednotka s LLM mozkem — rozhoduje, plánuje, volá tools</div></div>
+      <div class="layer-examples">Claude, GPT-4, Mistral + tool-use</div>
+    </div>
+    <div class="layer l-wf" role="listitem" data-level="3">
+      <div><div class="layer-name">Workflow</div><div class="layer-desc">Deterministická sekvence kroků — bez AI rozhodování, jen logika</div></div>
+      <div class="layer-examples">n8n, Temporal, custom pipelines</div>
+    </div>
+    <div class="layer l-skill" role="listitem" data-level="4">
+      <div><div class="layer-name">Skill</div><div class="layer-desc">Znovupoužitelná schopnost — RAG retrieval, email compose, data extraction</div></div>
+      <div class="layer-examples">Prompt templates, chains, reusable modules</div>
+    </div>
+    <div class="layer l-tool" role="listitem" data-level="5">
+      <div><div class="layer-name">Tool / Connector / MCP</div><div class="layer-desc">Integrace s externím systémem — API call, DB query, file access</div></div>
+      <div class="layer-examples">REST API, MCP server, database connector, webhook</div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENT BREAKDOWNS -->
+<section aria-labelledby="agents-heading">
+  <h2 id="agents-heading">Příklady rozpadu — Sekce 3.1 agenty (Připraveni dodat)</h2>
+  <div class="agents-grid">
+
+    <article class="agent-card">
+      <h3>Sales Lead Agent</h3>
+      <span class="badge">Nový Zeleneč</span><span class="badge-tier">Sekce 3.1</span>
+      <div class="breakdown-row"><span class="bl bl-orch">Orchestrátor</span><span>Lead Pipeline Coordinator — řídí flow od raw lead → qualified → outreach</span></div>
+      <div class="breakdown-row"><span class="bl bl-agent">Agenti (3)</span><span>Lead Scorer, Lead Enricher, Outreach Composer</span></div>
+      <div class="breakdown-row"><span class="bl bl-wf">Workflow</span><span>Intake → Scoring → Enrichment → Qualification → Outreach trigger</span></div>
+      <div class="breakdown-row"><span class="bl bl-skill">Skills</span><span>Company research, ICP matching, email personalization, CZ/EN templates</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>CRM API, Apollo/enrichment, email sender, web scraper</span></div>
+    </article>
+
+    <article class="agent-card">
+      <h3>Invoice Processing Agent</h3>
+      <span class="badge">RD Rýmařov</span><span class="badge-tier">Sekce 3.1</span>
+      <div class="breakdown-row"><span class="bl bl-orch">Orchestrátor</span><span>Finance Doc Coordinator — routes faktura vs. objednávka vs. dobropis</span></div>
+      <div class="breakdown-row"><span class="bl bl-agent">Agenti (2)</span><span>Document Parser, Validation Agent</span></div>
+      <div class="breakdown-row"><span class="bl bl-wf">Workflow</span><span>Upload → OCR → Extraction → Validation → Approval routing → ERP zápis</span></div>
+      <div class="breakdown-row"><span class="bl bl-skill">Skills</span><span>OCR/table extraction, field mapping, anomaly detection, CZ accounting rules</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>ERP API (Helios?), document storage, email inbox connector</span></div>
+    </article>
+
+    <article class="agent-card">
+      <h3>Client Communication Hub</h3>
+      <span class="badge">Nový Zeleneč</span><span class="badge-tier">Sekce 3.1</span>
+      <div class="breakdown-row"><span class="bl bl-orch">Orchestrátor</span><span>Comms Router — intent detection → správný sub-agent / eskalace na člověka</span></div>
+      <div class="breakdown-row"><span class="bl bl-agent">Agenti (3)</span><span>Intent Classifier, Response Generator, Escalation Agent</span></div>
+      <div class="breakdown-row"><span class="bl bl-wf">Workflow</span><span>Inbound msg → Classify → Route → Generate response → Human review → Send</span></div>
+      <div class="breakdown-row"><span class="bl bl-skill">Skills</span><span>RAG nad FAQ, sentiment analysis, CZ/EN/DE jazykový model, response templates</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>Email gateway, chat widget, CRM, knowledge base API</span></div>
+    </article>
+
+    <article class="agent-card">
+      <h3>Interní Knowledge Base</h3>
+      <span class="badge">Celý holding</span><span class="badge-tier">Sekce 3.1</span>
+      <div class="breakdown-row"><span class="bl bl-orch">Orchestrátor</span><span>Není potřeba — single agent pattern</span></div>
+      <div class="breakdown-row"><span class="bl bl-agent">Agent (1)</span><span>Knowledge Agent — query understanding + retrieval + answer synthesis</span></div>
+      <div class="breakdown-row"><span class="bl bl-wf">Workflow</span><span>Document ingestion pipeline: Upload → Chunk → Embed → Index (async, scheduled)</span></div>
+      <div class="breakdown-row"><span class="bl bl-skill">Skills</span><span>RAG retrieval, chunking strategies, hybrid search (vector + keyword), citation</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>Vector DB (Pinecone/Qdrant), document parser, SharePoint/GDrive connector</span></div>
+    </article>
+
+    <article class="agent-card">
+      <h3>Investor Reporting Agent</h3>
+      <span class="badge">Progresus Invest</span><span class="badge-tier">Sekce 3.2</span>
+      <div class="breakdown-row"><span class="bl bl-orch">Orchestrátor</span><span>Report Pipeline Coordinator — data collection → assembly → review → distribute</span></div>
+      <div class="breakdown-row"><span class="bl bl-agent">Agenti (2)</span><span>Data Aggregator, Report Writer</span></div>
+      <div class="breakdown-row"><span class="bl bl-wf">Workflow</span><span>Schedule trigger → Pull data → Aggregate → Generate draft → Human review → Distribute</span></div>
+      <div class="breakdown-row"><span class="bl bl-skill">Skills</span><span>Financial data formatting, chart generation, CZ regulatory templates, PDF assembly</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span>Accounting API, Excel/PDF generator, email distributor, data warehouse</span></div>
+    </article>
+
+    <article class="agent-card">
+      <h3>Production Planning Agent</h3>
+      <span class="badge">RD Rýmařov</span><span class="badge-tier">Sekce 3.3</span>
+      <div class="breakdown-row"><span class="bl bl-orch">Orchestrátor</span><span>Production Coordinator — multi-agent: scheduling + capacity + material</span></div>
+      <div class="breakdown-row"><span class="bl bl-agent">Agenti (3)</span><span>Demand Forecaster, Capacity Planner, Schedule Optimizer</span></div>
+      <div class="breakdown-row"><span class="bl bl-wf">Workflow</span><span>Order intake → Demand forecast → Capacity check → Schedule → Material req → Approve</span></div>
+      <div class="breakdown-row"><span class="bl bl-skill">Skills</span><span>Time series forecasting, constraint optimization, BOM parsing</span></div>
+      <div class="breakdown-row"><span class="bl bl-tool">Tools</span><span class="tag-orange">ERP (Helios?), TPV systém, WMS — integrace mimo naši expertízu</span></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- SUMMARY TABLE -->
+<section aria-labelledby="summary-heading">
+  <h2 id="summary-heading">Hrubý odhad technických komponent z 28 business agentů</h2>
+  <table>
+    <thead><tr><th scope="col">Vrstva</th><th scope="col">Odhadovaný počet</th><th scope="col">Poznámka</th></tr></thead>
+    <tbody>
+      <tr><td>Orchestrátory</td><td class="count">~12-15</td><td>Ne každý agent potřebuje orchestrátor. Jednoduché agenty jsou single-agent pattern.</td></tr>
+      <tr><td>Agenti (sub-agents)</td><td class="count">~50-70</td><td>Většina business agentů = 2-3 technické sub-agenty. Některé sdílí agenty.</td></tr>
+      <tr><td>Workflows</td><td class="count">~30-40</td><td>Deterministické pipelines. Hodně z toho je ingestion, ETL, scheduled jobs — ne AI.</td></tr>
+      <tr><td>Skills (reusable)</td><td class="count">~15-20</td><td>RAG retrieval, email compose, data extraction, translation — sdílené napříč agenty.</td></tr>
+      <tr><td>Tools / Connectors</td><td class="count">~20-30</td><td>API integrace, DB connectors, MCP servery. <span class="tag-orange">ERP/TPV jsou kritická závislost.</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- KEY MESSAGING -->
+<section aria-labelledby="messaging-heading">
+  <div class="messaging-card">
+    <h2 id="messaging-heading">Klíčový messaging</h2>
+    <div class="messaging-items">
+      <div class="msg-item">
+        <span class="msg-dot msg-dot-green"></span>
+        <p><strong class="tag-green">Pro klienta:</strong> 28 agentů = 28 business výsledků. Nezajímá je architektura.</p>
+      </div>
+      <div class="msg-item">
+        <span class="msg-dot msg-dot-orange"></span>
+        <p><strong class="tag-orange">Pro nás interně:</strong> 28 business agentů = ~50-70 technických sub-agentů + ~30 workflows + ~20 shared skills. Tohle je scope, který musíme realisticky naplánovat.</p>
+      </div>
+      <div class="msg-item">
+        <span class="msg-dot msg-dot-red"></span>
+        <p><strong class="tag-red">Riziko:</strong> Pokud klientovi ukážeme technický rozpad, scope vypadá 3× větší a cena se bude zdát nízká — nebo naopak je vyděsíme komplexitou.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLI vs MCP -->
+<section aria-labelledby="cli-heading">
+  <h2 id="cli-heading">CLI vs MCP — Tool Integration Layer</h2>
+  <p>Google Workspace CLI (<code>gws</code>) — released March 2026. One CLI for Drive, Gmail, Calendar, Sheets, Docs, Chat, Tasks, Slides, Meet, Forms, Keep, Admin.</p>
+
+  <table>
+    <caption>Srovnání přístupů k tool integraci</caption>
+    <thead>
+      <tr><th scope="col"></th><th scope="col">MCP Server</th><th scope="col">gws CLI</th><th scope="col">gws MCP mode</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row" style="font-weight:600; background:var(--bg-surface);">Token cost per call</th><td><span class="pill pill-red">~44K tokens</span></td><td><span class="pill pill-green">~1.4K tokens</span></td><td>Variable</td></tr>
+      <tr><th scope="row" style="font-weight:600; background:var(--bg-surface);">Reliability</th><td><span class="pill pill-red">~72%</span></td><td><span class="pill pill-green">~100%</span></td><td>TBD</td></tr>
+      <tr><th scope="row" style="font-weight:600; background:var(--bg-surface);">Setup complexity</th><td><span class="pill pill-red">Per-service config</span></td><td><span class="pill pill-green">1x OAuth</span></td><td>Same as CLI + flag</td></tr>
+      <tr><th scope="row" style="font-weight:600; background:var(--bg-surface);">API coverage</th><td><span class="pill pill-red">Fixed at build</span></td><td><span class="pill pill-green">Dynamic</span></td><td>Same as CLI</td></tr>
+      <tr><th scope="row" style="font-weight:600; background:var(--bg-surface);">Cross-service workflows</th><td><span class="pill pill-red">Manual chaining</span></td><td><span class="pill pill-green">Built-in</span></td><td>Inherits CLI</td></tr>
+      <tr><th scope="row" style="font-weight:600; background:var(--bg-surface);">Maturity</th><td><span class="pill pill-orange">Established (2024+)</span></td><td><span class="pill pill-orange">Pre-v1.0</span></td><td><span class="pill pill-orange">Experimental</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="two-col">
+    <div class="card card-wf">
+      <h3 style="color:var(--wf-text);">GWS Helper Commands (tested)</h3>
+      <p style="font-size:12px; line-height:2.2; color:var(--text);">
+        <code>gmail +triage</code> inbox summary<br>
+        <code>gmail +send / +reply / +forward</code><br>
+        <code>calendar +agenda / +insert</code><br>
+        <code>drive +upload</code><br>
+        <code>sheets +read / +append</code><br>
+        <code>docs +write</code><br>
+        <code>chat +send</code><br>
+        <code>workflow +standup-report</code><br>
+        <code>workflow +meeting-prep</code><br>
+        <code>workflow +weekly-digest</code>
+      </p>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--status-warn);">Schema Size Reality Check</h3>
+      <p style="font-size:12px; line-height:2.2; color:var(--text);">
+        <code>drive.files.list</code> → 7.7 KB<br>
+        <code>drive.files.get</code> → 18.4 KB<br>
+        <code>drive.files.create</code> → 35.7 KB<br>
+        <code>calendar.events.insert</code> → 30.3 KB<br>
+        <code>gmail.users.messages.send</code> → 6.5 KB<br>
+        <strong class="tag-orange">10 common endpoints = ~130 KB</strong><br>
+        <span style="color:var(--text-muted);">MCP dumps ALL schemas upfront. CLI loads only what you call.</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="card card-orch">
+    <h3 style="color:var(--orch-text);">Co to znamená pro Progresus agenty</h3>
+    <p style="color:var(--text);"><strong style="color:var(--orch-text);">Tool layer (nejspodnější vrstva)</strong> se mění. Místo 1 MCP server per service můžeme mít 1 CLI pro celý Google Workspace. Orchestrátor zavolá <code>gws gmail +send</code> místo MCP tool call — výsledek je JSON, agent ho zpracuje stejně.</p>
+    <p style="color:var(--text);"><strong class="tag-green">Výhoda pro Progresus:</strong> Snížení token cost o 10-30x na Google integracích. Jeden auth flow místo 5 separátních MCP serverů.</p>
+    <p style="color:var(--text);"><strong class="tag-orange">Pozor:</strong> gws je pre-v1.0, ne oficiálně supportovaný Google produkt. Pro produkční deploy zvážit hybrid — CLI pro interní tooling, MCP pro stabilní integrace.</p>
+    <p style="color:var(--text);"><strong class="tag-red">Nenahrazuje:</strong> Custom MCP servery pro ERP/TPV/SAP. Ty jsou stále potřeba.</p>
+  </div>
+
+  <div class="card">
+    <h3>Kde CLI sedí v architektuře</h3>
+    <div class="arch-diagram" role="img" aria-label="Architektura: Orchestrátor volá Sub-Agent, který volá Workflow/Skill, ten volá gws CLI pro Google, MCP Server pro ERP/TPV, nebo Direct API pro legacy.">
+      <div class="arch-row"><span class="arch-node arch-orch">Orchestrátor</span></div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-row"><span class="arch-node arch-agent">Sub-Agent</span></div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-row"><span class="arch-node arch-wf">Workflow / Skill</span></div>
+      <div class="arch-arrows-triple"><span>↓</span><span>↓</span><span>↓</span></div>
+      <div class="arch-row">
+        <span class="arch-node arch-skill">gws CLI</span>
+        <span class="arch-node arch-tool">MCP Server</span>
+        <span class="arch-node arch-legacy">Direct API</span>
+      </div>
+      <div class="arch-labels">
+        <span>(Google Workspace)</span>
+        <span>(ERP/TPV/Custom)</span>
+        <span>(Legacy)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLI LANDSCAPE -->
+<section aria-labelledby="landscape-heading">
+  <h2 id="landscape-heading">CLI Landscape — Co existuje a co si postavit</h2>
+  <p>Mapování dostupných CLI nástrojů na Progresus agent stack. <span class="tag-green">Zelená</span> = ready to use, <span class="tag-orange">oranžová</span> = existuje ale potřebuje práci, <span class="tag-red">červená</span> = musíme postavit.</p>
+
+  <!-- Ready to use -->
+  <div class="card card-wf">
+    <h3 style="color:var(--wf-text);">Existující CLI — ready to use</h3>
+    <table>
+      <thead><tr><th scope="col">CLI</th><th scope="col">Pokrytí</th><th scope="col">Relevance pro Progresus agenty</th></tr></thead>
+      <tbody>
+        <tr><td><code>gws</code></td><td>Gmail, Drive, Calendar, Sheets, Docs, Chat, Meet, Tasks, Slides</td><td>Client Communication Hub, Internal Knowledge Base, Investor Reporting</td></tr>
+        <tr><td><code>stripe</code></td><td>Payments, Invoicing, Subscriptions + Agent Toolkit</td><td>Invoice Processing, Payment automation</td></tr>
+        <tr><td><code>gh</code></td><td>Repos, Issues, PRs, Actions, Releases, Projects</td><td>Internal dev workflow, CI/CD triggers</td></tr>
+        <tr><td><code>slack</code> (MCP)</td><td>Channels, Messages, Search, Threads, Canvas</td><td>Client Communication Hub, notifications, escalation</td></tr>
+        <tr><td><code>notion</code> (MCP)</td><td>Pages, Databases, Search, Comments</td><td>Internal Knowledge Base, project docs</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Auto-generatable -->
+  <div class="card card-skill">
+    <h3 style="color:var(--skill-text);">Auto-generovatelné CLI — z OpenAPI spec</h3>
+    <p style="color:var(--text);"><code>Restish</code> — point at any OpenAPI spec, get a working CLI. No code. <code>OpenAPI Generator</code> — typed SDKs + CLI wrappers for 30+ languages.</p>
+    <table>
+      <thead><tr><th scope="col">Target System</th><th scope="col">OpenAPI spec?</th><th scope="col">Effort</th><th scope="col">Progresus Use</th></tr></thead>
+      <tbody>
+        <tr><td>HubSpot CRM</td><td><span class="pill pill-green">Yes (full)</span></td><td><span class="pill pill-green">~2h</span></td><td>Sales Lead Qualification, contact management</td></tr>
+        <tr><td>Salesforce</td><td><span class="pill pill-green">Yes (REST API)</span></td><td><span class="pill pill-orange">~4h (auth)</span></td><td>Sales Lead Qualification, pipeline management</td></tr>
+        <tr><td>Twilio</td><td><span class="pill pill-green">Yes (full)</span></td><td><span class="pill pill-green">~2h</span></td><td>Client Communication (SMS/Voice), notifications</td></tr>
+        <tr><td>SendGrid / Mailgun</td><td><span class="pill pill-green">Yes</span></td><td><span class="pill pill-green">~1h</span></td><td>Email campaigns, transactional emails</td></tr>
+        <tr><td>Jira / Linear</td><td><span class="pill pill-green">Yes</span></td><td><span class="pill pill-green">~2h</span></td><td>Project management agents, task tracking</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Custom build -->
+  <div class="card card-tool">
+    <h3 style="color:var(--tool-text);">Custom build — no existing CLI</h3>
+    <table>
+      <thead><tr><th scope="col">System</th><th scope="col">Approach</th><th scope="col">Effort</th><th scope="col">Progresus Use</th></tr></thead>
+      <tbody>
+        <tr><td>ERP (SAP / custom)</td><td><span class="tag-red">Custom MCP server or CLI wrapper around SAP RFC/BAPI</span></td><td><span class="pill pill-red">~2-4 weeks</span></td><td>Production Planning, Invoice Processing, inventory</td></tr>
+        <tr><td>TPV (custom)</td><td><span class="tag-red">Custom CLI wrapping internal APIs / DB queries</span></td><td><span class="pill pill-red">~2-3 weeks</span></td><td>Production Planning, BOM management, scheduling</td></tr>
+        <tr><td>Real Estate portals</td><td><span class="tag-red">Web scraping CLI or custom API wrappers</span></td><td><span class="pill pill-red">~1-2 weeks</span></td><td>Market analysis, listing management</td></tr>
+        <tr><td>Internal legacy systems</td><td><span class="tag-red">DB-to-CLI bridge (SQL → structured JSON)</span></td><td><span class="pill pill-red">~1 week/sys</span></td><td>Cross-company data, reporting, compliance</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Strategy -->
+  <div class="card card-orch">
+    <h3 style="color:var(--orch-text);">Strategy: Jak to stavět</h3>
+    <div class="tier-grid">
+      <div class="tier-box">
+        <h4 style="color:var(--wf-text);">Tier 1: Use existing (0 effort)</h4>
+        <p style="font-size:12px; line-height:1.9; color:var(--text);"><code>gws</code> for Google Workspace, <code>stripe</code> for payments, <code>gh</code> for GitHub, Slack + Notion MCP (already connected)</p>
+      </div>
+      <div class="tier-box">
+        <h4 style="color:var(--skill-text);">Tier 2: Auto-generate (~2h each)</h4>
+        <p style="font-size:12px; line-height:1.9; color:var(--text);"><code>restish</code> + OpenAPI spec. Point at HubSpot, Twilio, Jira, Linear. Get working CLI instantly. JSON output, agent-ready.</p>
+      </div>
+      <div class="tier-box">
+        <h4 style="color:var(--status-warn);">Tier 3: Lightweight custom (~1w)</h4>
+        <p style="font-size:12px; line-height:1.9; color:var(--text);">Node/Python CLI wrapping REST API. Template: <code>commander.js</code> + <code>axios</code>. Real estate portals, internal tools.</p>
+      </div>
+      <div class="tier-box">
+        <h4 style="color:var(--tool-text);">Tier 4: Heavy custom (~2-4w)</h4>
+        <p style="font-size:12px; line-height:1.9; color:var(--text);">ERP/SAP integration (RFC/BAPI), TPV system bridge, Legacy DB adapters. <span class="tag-red">This is where Able's industry expertise matters.</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom line -->
+  <div class="card card-impact">
+    <h3 style="color:var(--status-ok);">Bottom Line: Dopad na Progresus projekt</h3>
+    <p style="color:var(--text);"><strong class="tag-green">Tier 1+2 CLIs pokryjí ~60% tool layer</strong> — Google Workspace, payments, CRM, communication, project management. Zero to minimal development effort.</p>
+    <p style="color:var(--text);"><strong class="tag-orange">Zbylých ~40% je ERP/TPV/legacy</strong> — custom build, ale to je stejné ať použijeme MCP nebo CLI. Rozdíl: CLI je levnější na tokeny a jednodušší na debug.</p>
+    <p style="color:var(--text);"><strong style="color:var(--orch-text);">Doporučení:</strong> V Discovery fázi zmapovat OpenAPI specs u všech klientových systémů. Každý systém s OpenAPI = instant CLI za 2 hodiny místo 2 týdnů MCP serveru.</p>
+    <p style="color:var(--text);"><strong class="tag-red">Riziko:</strong> gws je pre-v1.0. Pro produkční deploy doporučujeme hybrid — CLI pro dev/staging, fallback na direct API pro production.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Arkadia Labs — Interní dokument — Březen 2026</p>
+</footer>
+
+</div>
+</body>
+</html>

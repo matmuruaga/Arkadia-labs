@@ -45,8 +45,17 @@ const Header = () => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false);
   const solutionsDropdownRef = useRef<HTMLDivElement>(null);
+  const solutionsNsLoaded = useRef(false);
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('common');
+
+  // Lazy-load 'solutions' namespace the first time the dropdown opens
+  useEffect(() => {
+    if ((isSolutionsOpen || isMobileSolutionsOpen) && !solutionsNsLoaded.current) {
+      solutionsNsLoaded.current = true;
+      i18n.loadNamespaces('solutions').catch(() => {/* ignore */});
+    }
+  }, [isSolutionsOpen, isMobileSolutionsOpen, i18n]);
 
   // Ref for requestAnimationFrame throttling
   const rafRef = useRef<number | null>(null);
@@ -139,7 +148,7 @@ const Header = () => {
   const secondaryButtonClasses = "border border-[#1C7ED6] text-[#1C7ED6] px-4 py-2 rounded-full font-semibold text-sm hover:bg-[#1C7ED6]/10 transition-all duration-300 whitespace-nowrap";
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 w-full z-50 transition-[background,box-shadow,border] duration-300 ${
       hasDarkHero || scrolling ? "" : "bg-transparent"
     }`}>
       {/* SVG Filter for liquid glass distortion effect */}
@@ -222,7 +231,7 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[480px] z-50"
+                    className="absolute top-full left-0 mt-3 w-[480px] z-50"
                   >
                     {/* Glassmorphism container */}
                     <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_16px_48px_-12px_rgba(0,0,0,0.15)] border border-slate-200/60 overflow-hidden">

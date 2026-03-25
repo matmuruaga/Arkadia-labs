@@ -1,9 +1,10 @@
 // src/pages/TermsPage.tsx
 import LegalPageLayout from '../components/LegalPageLayout';
-import { useTranslation } from 'react-i18next'; // 1. Importar
+import { useTranslation } from 'react-i18next';
+import SEO from '@/components/SEO';
 
 const TermsPage = () => {
-  const { t } = useTranslation(); // 2. Inicializar
+  const { t } = useTranslation('legal'); // 2. Inicializar
 
   // 3. Definir el contenido DENTRO del componente
   const termsContent = [
@@ -81,11 +82,14 @@ const TermsPage = () => {
   ];
 
   return (
+    <>
+    <SEO titleKey="seo.termsAndConditions.title" descriptionKey="seo.termsAndConditions.description" path="/terms-and-conditions" />
     <LegalPageLayout
       title={t('termsAndConditions.title')}
       lastUpdated={t('termsAndConditions.lastUpdated')}
       content={termsContent}
     />
+    </>
   );
 };
 

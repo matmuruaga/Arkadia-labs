@@ -19,7 +19,7 @@ interface FeatureTableProps {
 }
 
 const FeatureComparisonTable: React.FC<FeatureTableProps> = ({ onOpenCalculator }) => {
-  const { t } = useTranslation(); // 3. Inicializar hook
+  const { t } = useTranslation('pricing'); // 3. Inicializar hook
   const checkIcon = <Check className="text-green-500" size={24} />;
   const xIcon = <X className="text-red-400" size={24} />;
 

@@ -3,23 +3,27 @@ import React, { useEffect, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
+// SEO
+import SEO from '@/components/SEO';
+
 // Critical components - Load immediately (above the fold)
-import Hero from "../components/Hero";
-import BeforeAfterSection from "../components/BeforeAfterSection";
-import KpiSection from "../components/KpiSection";
+import HeroFramed from "@/components/HeroFramed";
+import BeforeAfterSection from "@/components/BeforeAfterSection";
+import KpiSection from "@/components/KpiSection";
 
 // Below-the-fold components - Lazy load for better initial performance
-const WhyArkadia = lazy(() => import("../components/WhyArkadia"));
-const IntegrationsSection = lazy(() => import("../components/IntegrationsSection"));
-const AnimatedSeparator = lazy(() => import("../components/AnimatedSeparator"));
-const TestimonialsSection = lazy(() => import("../components/TestimonialsSection"));
-const FaqSection = lazy(() => import("../components/FaqSection"));
-const FinalCtaSection = lazy(() => import("../components/FinalCtaSection"));
+const WhyArkadia = lazy(() => import("@/components/WhyArkadia"));
+const AgentWorkforceBuilder = lazy(() => import("@/components/AgentWorkforceBuilder"));
+const IntegrationsSection = lazy(() => import("@/components/IntegrationsSection"));
+const AnimatedSeparator = lazy(() => import("@/components/AnimatedSeparator"));
+const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
+const FaqSection = lazy(() => import("@/components/FaqSection"));
+const FinalCtaSection = lazy(() => import("@/components/FinalCtaSection"));
 
 import { trackPageView } from '@/utils/dataLayer';
 
 const MainPage = () => {
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslation('common');
   const location = useLocation();
 
   useEffect(() => {
@@ -28,8 +32,9 @@ const MainPage = () => {
 
   return (
     <>
+      <SEO titleKey="seo.home.title" descriptionKey="seo.home.description" path="" />
       {/* Critical above-the-fold content - loaded immediately */}
-      <Hero />
+      <HeroFramed />
       <BeforeAfterSection />
       <KpiSection />
 
@@ -40,6 +45,11 @@ const MainPage = () => {
       */}
       <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
         <WhyArkadia />
+      </Suspense>
+
+      {/* Agent Workforce Builder — scroll-driven org chart (desktop only, hidden on mobile via component) */}
+      <Suspense fallback={<div className="hidden md:block h-16" />}>
+        <AgentWorkforceBuilder />
       </Suspense>
 
       <Suspense fallback={<div className="h-40 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading integrations...</div></div>}>

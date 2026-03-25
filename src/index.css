@@ -417,9 +417,17 @@ header {
   backdrop-filter: blur(30px) saturate(180%);
   -webkit-backdrop-filter: blur(30px) saturate(180%);
 
-  /* SVG filter for liquid distortion effect - only on background */
+  /* SVG filter for liquid distortion effect - only on desktop */
   filter: url(#liquid-glass-distortion);
   -webkit-filter: url(#liquid-glass-distortion);
+}
+
+/* Disable expensive SVG filter on mobile for scroll performance */
+@media (max-width: 1023px) {
+  .glass-nav-pill::before {
+    filter: none;
+    -webkit-filter: none;
+  }
 }
 
 /* Enhanced glass effect on scroll for more depth */
@@ -435,4 +443,12 @@ header {
 .glass-nav-pill.scrolled::before {
   backdrop-filter: blur(35px) saturate(200%);
   -webkit-backdrop-filter: blur(35px) saturate(200%);
+}
+
+/* WCAG 2.1 AA 2.2.2 — Pause, Stop, Hide: disable auto-playing marquee for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation: none !important;
+  }
 }

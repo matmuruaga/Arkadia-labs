@@ -11,7 +11,7 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
-  const { t } = useTranslation(); // 2. Inicializar
+  const { t } = useTranslation('common'); // 2. Inicializar
 
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {

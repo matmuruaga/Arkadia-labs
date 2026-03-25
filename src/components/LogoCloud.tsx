@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 export const LogoCloud = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   return (
     <div className="bg-slate-50 py-16 md:py-20">

@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import {
   Upload, Cpu, BarChart, RefreshCw, Zap, Search, MessageCircle,
   CheckCircle, Calendar, Database, Brain, Shield, ClipboardCheck,
-  Mic, Users, Target, Headphones
+  Mic, Users, Target, Headphones, Phone, GitBranch, TrendingUp,
+  ShoppingCart, DollarSign, Bell, Sparkles
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { SolutionHowItWorks as SolutionHowItWorksType } from '@/data/solutions/types';
@@ -28,6 +29,13 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   'users': Users,
   'target': Target,
   'headphones': Headphones,
+  'phone': Phone,
+  'git-branch': GitBranch,
+  'trending-up': TrendingUp,
+  'shopping-cart': ShoppingCart,
+  'dollar-sign': DollarSign,
+  'bell': Bell,
+  'sparkles': Sparkles,
 };
 
 interface Props {

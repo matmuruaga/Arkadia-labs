@@ -14,13 +14,14 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Loader2, MessageSquare } from 'lucide-react';
+import SEO from '@/components/SEO';
 
 type ContactFormValues = z.infer<z.ZodObject<any>>;
 
 const backgroundImageUrl = 'https://res.cloudinary.com/dntco2fcz/image/upload/v1764670375/u5837542839_A_surreal_mountain_landscape_graphic_where_the_pe_d8921530-eaa2-40b0-98dc-982620ea5e11_2_1_dimax7.png';
 
 export const ContactPage = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('contact');
   const location = useLocation();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -65,13 +66,14 @@ export const ContactPage = () => {
     });
 
     try {
-      const webhookUrl = 'https://n8n-elevaitelabs-u48215.vm.elestio.app/webhook/b8866b0b-beb2-4f71-b268-94a9663bfbc8';
-      const response = await fetch(webhookUrl, {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...data,
-          formulario: 'contact'
+          formulario: 'contact',
+          language: i18n.language,
+          source: window.location.href,
         }),
       });
 
@@ -93,6 +95,8 @@ export const ContactPage = () => {
   };
 
   return (
+    <>
+    <SEO titleKey="seo.contact.title" descriptionKey="seo.contact.description" path="/contact" />
     <section className="min-h-screen relative flex items-center pt-32 pb-12 md:py-28 overflow-hidden">
       {/* Base gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-sky-50/30" />
@@ -362,6 +366,7 @@ export const ContactPage = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

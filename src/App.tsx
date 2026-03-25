@@ -9,8 +9,7 @@ import Layout from "./components/Layout";
 import LoadingScreen from "./components/LoadingScreen";
 
 // Lazy loading de páginas para code splitting y mejor performance
-// MainPage se carga de forma normal porque es la ruta principal
-import MainPage from "./pages/MainPage";
+const MainPage = lazy(() => import("./pages/MainPage"));
 
 // Todas las demás páginas se cargan bajo demanda (lazy)
 const PricingPage = lazy(() => import("./pages/PricingPage"));
@@ -26,6 +25,7 @@ const CaseStudyPage = lazy(() => import('./pages/CaseStudyPage'));
 const CaseStudiesIndexPage = lazy(() => import('./pages/CaseStudiesIndexPage'));
 const SolutionDetailPage = lazy(() => import('./pages/solutions/SolutionDetailPage'));
 const SolutionsIndexPage = lazy(() => import('./pages/solutions/SolutionsIndexPage'));
+const CloneYourBusinessPage = lazy(() => import('./pages/CloneYourBusinessPage'));
 
 
 /**
@@ -39,8 +39,6 @@ const PublicLayout = () => (
 ); 
 
 function App() {
-  // Ya no se necesita el ElevenLabsContextProvider.
-  // El hook useConversation funciona de forma independiente.
   return (
     <BrowserRouter>
       <ScrollToTop />
@@ -65,6 +63,9 @@ function App() {
                 <Route path="case-studies/:slug" element={<CaseStudyPage />} />
                 <Route path="solutions" element={<SolutionsIndexPage />} />
                 <Route path="solutions/:slug" element={<SolutionDetailPage />} />
+                <Route path="clone-your-business" element={<CloneYourBusinessPage />} />
+                <Route path="clona-tu-empresa" element={<CloneYourBusinessPage />} />
+                <Route path="klonujte-firmu" element={<CloneYourBusinessPage />} />
             </Route>
 
           </Route>

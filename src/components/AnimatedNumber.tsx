@@ -1,6 +1,6 @@
 // src/components/AnimatedNumber.tsx
-import React, { useEffect, useRef } from 'react'; // Asegúrate de importar React
-import { motion, useMotionValue, animate, useInView } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
+import { useMotionValue, animate, useInView } from 'framer-motion';
 
 interface AnimatedNumberProps {
   targetValue: number;
@@ -17,10 +17,10 @@ const DisplayValue: React.FC<{ motionValue: ReturnType<typeof useMotionValue>; p
   useEffect(() => {
     // Establece el valor inicial en caso de que la animación no comience desde 0 visiblemente
     setCurrentValue(Math.round(motionValue.get())); 
-    const unsubscribe = motionValue.onChange((latest) => {
+    const unsubscribe = motionValue.on('change', (latest) => {
       setCurrentValue(Math.round(latest));
     });
-    return () => unsubscribe();
+    return unsubscribe;
   }, [motionValue]);
 
   return <>{prefix}{currentValue}{suffix}</>;

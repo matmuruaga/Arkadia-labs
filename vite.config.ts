@@ -28,9 +28,7 @@ export default defineConfig({
     },
   },
 
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
+  optimizeDeps: {},
 
   build: {
     // Optimizaciones de build
@@ -57,7 +55,7 @@ export default defineConfig({
           'ui-vendor': ['lucide-react'],
 
           // Forms (solo en páginas con formularios)
-          'forms-vendor': ['react-hook-form', 'zod'],
+          'forms-vendor': ['react-hook-form', 'zod', '@hookform/resolvers'],
 
           // i18n (necesario para todas las páginas pero puede ser async)
           'i18n-vendor': ['react-i18next', 'i18next'],

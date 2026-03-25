@@ -13,12 +13,31 @@ Allow: /cs/
 Allow: /assets/
 Allow: /locales/
 
+# AI Search Engines - Explicitly allowed for AEO/GEO visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 # Disallow admin or private paths (if any)
 # Disallow: /admin/
 # Disallow: /api/
-
-# Crawl delay (optional - adjust if needed)
-# Crawl-delay: 1
 
 # Sitemaps
 Sitemap: https://arkadialabs.io/sitemap.xml
