@@ -14,12 +14,13 @@ export const leadValidatorSolution: Solution = {
   },
 
   hero: {
-    badge: 'Sales & Outbound',
-    title: 'Stop Wasting Time on Dead Leads',
-    subtitle: 'AI-Powered Lead Validation',
-    description: 'Automatically verify contact information, enrich data, and score every lead before your team picks up the phone. Know exactly who to call and why.',
+    badge: 'Lead Intelligence',
+    title: 'Stop Calling Dead Leads',
+    subtitle: 'AI That Scores Before You Dial',
+    description: 'Verify, enrich, and score every lead automatically—so your team only calls prospects that convert.',
     primaryCta: 'Start Validating Leads',
     secondaryCta: 'See Demo',
+    heroVisualType: 'score-gauge',
     trustBadges: [
       { icon: 'check-circle', label: 'Accuracy', value: '95%+' },
       { icon: 'clock', label: 'Time Saved', value: '80%' },
@@ -205,11 +206,13 @@ export const leadValidatorSolution: Solution = {
           '25% higher close rates',
         ],
         icon: 'code',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320585/lead-validator-saas_copia_tusylc.webp',
       },
       {
         id: 'agencies',
         industry: 'Agencies',
         title: 'Marketing & Sales Agencies',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320585/lead-validator-agencies_copia_fq1kdr.webp',
         description: 'Clean client lead lists before outreach campaigns. Validate contacts and maximize campaign ROI.',
         results: [
           '90% reduction in wasted outreach',
@@ -222,6 +225,7 @@ export const leadValidatorSolution: Solution = {
         id: 'real-estate',
         industry: 'Real Estate',
         title: 'Real Estate Professionals',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320585/lead-validator-realestate_copia_erhmx5.webp',
         description: 'Verify property owner information, identify motivated sellers, and focus on leads ready to transact.',
         results: [
           '60% fewer dead-end calls',

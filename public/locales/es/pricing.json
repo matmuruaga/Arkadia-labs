@@ -1,0 +1,155 @@
+{
+  "pricing": {
+    "mostPopular": "El más popular",
+    "perMonth": "/mes",
+    "plans": {
+      "p1": {
+        "name": "Empleado de IA",
+        "setupFee": "$1,500 tarifa única de configuración",
+        "description": "Para pequeñas empresas que automatizan la cualificación y el seguimiento de leads.",
+        "cta": "Elegir Plan",
+        "features": {
+          "f1": "1 Sistema de Ventas con IA construido y entrenado",
+          "f2": "2× Llamadas de Estrategia Mensuales (30 min)",
+          "f3": "Soporte Estándar por Email y Chat",
+          "f4": "Integración con CRM",
+          "f5": "Sesión de Optimización Mensual",
+          "f6": "Respuesta Estándar (24–48h)"
+        },
+        "excluded": {
+          "e1": "Herramientas Externas (Twilio, APIs, CRMs)",
+          "e2": "Canal de Slack Dedicado"
+        }
+      },
+      "p2": {
+        "name": "Equipo de Ventas de IA",
+        "setupFee": "$2,500 tarifa única de configuración",
+        "description": "Diseñado para equipos en crecimiento que automatizan múltiples funciones de ventas.",
+        "cta": "Empezar Ahora",
+        "features": {
+          "f1": "3 Sistemas de Ventas con IA construidos y entrenados",
+          "f2": "4× Llamadas de Estrategia Mensuales (30 min)",
+          "f3": "Soporte Prioritario por Email y Chat",
+          "f4": "Canal de Slack Dedicado",
+          "f5": "Integración con CRM",
+          "f6": "Sesión de Optimización Quincenal",
+          "f7": "Respuesta Prioritaria (12–24h)"
+        },
+        "excluded": {
+          "e1": "Herramientas Externas (Twilio, APIs, CRMs)"
+        }
+      },
+      "p3": {
+        "name": "Socio de Crecimiento de IA",
+        "setupFee": "$5,000 tarifa única de configuración",
+        "description": "Para empresas que buscan automatizar todo su embudo de ventas.",
+        "cta": "Contactar con Ventas",
+        "features": {
+          "f1": "10 Sistemas de Ventas con IA construidos y entrenados",
+          "f2": "Llamadas de Estrategia Semanales (60 min)",
+          "f3": "Soporte Exclusivo por Email y Chat",
+          "f4": "Canal de Slack Dedicado",
+          "f5": "Integraciones con CRM",
+          "f6": "Sesiones de Optimización Semanales",
+          "f7": "Tiempo de Respuesta de 4 Horas"
+        },
+        "excluded": {
+          "e1": "Herramientas Externas (Twilio, APIs, CRMs)"
+        }
+      }
+    },
+    "footer": {
+      "annualDiscount": "💰 ¡Ahorra hasta un 20% con la facturación anual!",
+      "paymentOptions": "Opciones de pago: Factura, Transferencia Bancaria, Stripe (Tarjeta de crédito)",
+      "addOnsTitle": "✳️ Complementos Disponibles:",
+      "addOn1": "Llamada de Estrategia Adicional – $250",
+      "addOn2": "Formación de Ventas para el Equipo Humano – $750"
+    },
+    "header": {
+      "title": "Encuentra el Socio de IA Perfecto para Tu Negocio",
+      "subtitle": "Precios simples y transparentes para ayudarte a escalar. Elige el plan que se ajuste a tus ambiciones de crecimiento."
+    }
+  },
+  "featureComparison": {
+    "title": "Compara los Planes Cara a Cara",
+    "subtitle": "Encuentra las características exactas que necesitas para impulsar tu crecimiento.",
+    "roiButton": "Calcula tu ROI Potencial",
+    "tableHeader": {
+      "features": "Características",
+      "plan1": "Empleado de IA",
+      "plan2": "Equipo de Ventas de IA",
+      "plan3": "Socio de Crecimiento de IA"
+    },
+    "features": {
+      "f1": {
+        "name": "Sistemas de Ventas con IA construidos y entrenados",
+        "plan1": "1",
+        "plan2": "3",
+        "plan3": "10"
+      },
+      "f2": {
+        "name": "Llamadas de Estrategia Mensuales",
+        "plan1": "2× (30 min)",
+        "plan2": "4× (30 min)",
+        "plan3": "Semanal (60 min)"
+      },
+      "f3": {
+        "name": "Soporte por Email y Chat",
+        "plan1": "Estándar",
+        "plan2": "Prioritario",
+        "plan3": "Exclusivo"
+      },
+      "f4": {
+        "name": "Canal de Slack Dedicado",
+        "plan1": "false",
+        "plan2": "true",
+        "plan3": "true"
+      },
+      "f5": {
+        "name": "Integración(es) con CRM",
+        "plan1": "true",
+        "plan2": "true",
+        "plan3": "true"
+      },
+      "f6": {
+        "name": "Sesiones de Optimización",
+        "plan1": "Mensual",
+        "plan2": "Quincenal",
+        "plan3": "Semanal"
+      },
+      "f7": {
+        "name": "Tiempo de Respuesta de Soporte",
+        "plan1": "24–48h",
+        "plan2": "12–24h",
+        "plan3": "4 Horas"
+      },
+      "f8": {
+        "name": "Herramientas Externas (Twilio, APIs, CRMs)",
+        "plan1": "false",
+        "plan2": "false",
+        "plan3": "false"
+      }
+    }
+  },
+  "roiCalculator": {
+    "title": "Calcula tu ROI",
+    "subtitle": "Ajusta los deslizadores para ver tus ahorros y crecimiento de ingresos potenciales.",
+    "plans": {
+      "employee": "Empleado de IA",
+      "team": "Equipo de Ventas de IA",
+      "partner": "Socio de Crecimiento de IA"
+    },
+    "inputs": {
+      "reps": "Número de Vendedores",
+      "dealSize": "Tamaño de Trato Promedio",
+      "leads": "Leads Mensuales Actuales"
+    },
+    "results": {
+      "gain": "GANANCIA MENSUAL POTENCIAL*",
+      "hoursSaved": "HORAS AHORRADAS*",
+      "roi": "ROI ESTIMADO*",
+      "perMonthSuffix": "/mes"
+    },
+    "disclaimer": "*Todos los resultados son estimaciones basadas en los datos que proporcionas y nuestros modelos generales de clientes. Se requiere un análisis personalizado y profundo para una previsión más precisa."
+  }
+}

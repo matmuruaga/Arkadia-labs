@@ -1,0 +1,60 @@
+{
+  "header": {
+    "features": "Případy použití",
+    "plans": "Ceník",
+    "integrations": "Integrace",
+    "studyCase": "Případové studie",
+    "getStarted": "Začít",
+    "login": "Přihlásit se",
+    "back": "Zpět"
+  },
+  "footer": {
+    "altLogo": "Logo Arkadia Labs",
+    "companyName": "Arkadia Labs",
+    "description": "Transformace podniků s inteligentními AI automatizačními řešeními.",
+    "social": {
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "youtube": "YouTube",
+      "instagram": "Instagram"
+    },
+    "headings": {
+      "quickLinks": "Rychlé odkazy",
+      "legal": "Právní informace",
+      "stayUpdated": "Zůstaňte informováni"
+    },
+    "links": {
+      "features": "Případy použití",
+      "caseStudies": "Případové studie",
+      "privacy": "Zásady ochrany osobních údajů",
+      "terms": "Podmínky použití",
+      "cookies": "Zásady cookies",
+      "legal": "Právní upozornění"
+    },
+    "newsletter": {
+      "placeholder": "Váš e-mail",
+      "button": "Odebírat",
+      "success": "Děkujeme za přihlášení k odběru!",
+      "error": "Něco se pokazilo. Zkuste to prosím znovu."
+    },
+    "copyright": "© {{year}} Arkadia Labs. Všechna práva vyhrazena."
+  },
+  "logoCloud": {
+    "title": "Více než 500 připojení k vašemu rozhodnutí",
+    "subtitle": "Od CRM a marketingových nástrojů až po váš software pro řízení projektů."
+  },
+  "featuredIntegrations": {
+    "badge": "Integrace",
+    "title": "Integrujte své stávající nástroje",
+    "subtitle": "V Arkadia Labs se propojujeme s aplikacemi, které váš tým již každý den používá."
+  },
+  "modal": {
+    "close": "Zavřít modal"
+  },
+  "ctaSection": {
+    "title": "Je něco, co nemůžete automatizovat s AI?",
+    "subtitle": "Rozlučte se s manuálními úkoly. Začněte budovat ještě dnes.",
+    "button": "Začít automatizovat"
+  },
+  "languageCode": "cs"
+}

@@ -1,0 +1,303 @@
+{
+  "cloneYourBusiness": {
+    "hero": {
+      "title": "Clone Your Business with AI",
+      "badge": "AI-Powered Automation",
+      "headline": "Clone Your Business",
+      "headlineAccent": "with AI.",
+      "subtitle": "Automate 99% of your processes with AI agents that replicate entire departments — sales, marketing, support, and operations.",
+      "cta": "Schedule Your Demo",
+      "hubOriginal": "Your Company",
+      "hubTransformed": "AI-Powered",
+      "transformedLabel": "4 departments automated in seconds",
+      "nodes": {
+        "sales": "Sales",
+        "marketing": "Marketing",
+        "support": "Support",
+        "operations": "Operations"
+      },
+      "trust": {
+        "companies": {
+          "value": "+50",
+          "label": "Companies"
+        },
+        "automation": {
+          "value": "99%",
+          "label": "Automation"
+        },
+        "availability": {
+          "value": "24/7",
+          "label": "Availability"
+        }
+      }
+    },
+    "problem": {
+      "title": "Your Team Is Drowning in Repetitive Work",
+      "subtitle": "Manual processes, slow response times, and bottlenecks are holding your business back from scaling.",
+      "badge": "The Problem",
+      "painPoints": {
+        "highCosts": {
+          "title": "Skyrocketing Personnel Costs",
+          "description": "Hiring, training, benefits, turnover — scaling your team is expensive and slow. Every new hire takes months to become productive."
+        },
+        "humanErrors": {
+          "title": "Repetitive Human Errors",
+          "description": "Manual data entry, copy-paste mistakes, and inconsistent processes lead to costly errors that compound over time."
+        },
+        "no247": {
+          "title": "Impossible to Scale 24/7",
+          "description": "Your customers expect instant responses around the clock, but staffing three shifts is neither practical nor affordable."
+        },
+        "disconnected": {
+          "title": "Disconnected Departments",
+          "description": "Sales doesn't talk to support, marketing doesn't sync with operations — siloed teams create gaps that lose customers."
+        },
+        "manualTasks": {
+          "title": "Hours Lost to Manual Tasks",
+          "description": "Your talented team spends most of their day on repetitive admin work instead of high-impact activities that grow the business."
+        }
+      },
+      "stats": {
+        "repetitive": {
+          "value": "60%",
+          "label": "of work time spent on repetitive tasks",
+          "source": "McKinsey Global Institute"
+        },
+        "manualErrors": {
+          "value": "$3.1T",
+          "label": "lost annually to poor data quality",
+          "source": "IBM & Harvard Business Review"
+        },
+        "lostRevenue": {
+          "value": "35%",
+          "label": "of revenue lost to operational inefficiency",
+          "source": "IDC Research"
+        }
+      }
+    },
+    "howItWorks": {
+      "badge": "How It Works",
+      "title": "From Analysis to Deployment in 3 Steps",
+      "subtitle": "We follow a proven methodology to clone your business operations with AI — fast, reliable, and tailored to your workflow.",
+      "steps": {
+        "analysis": {
+          "title": "Analysis",
+          "description": "We map your entire company, identify automatable processes, and design the optimal AI agent architecture for each department."
+        },
+        "cloning": {
+          "title": "Cloning",
+          "description": "We create specialized AI agents for each role and department — trained on your data, your tone, and your business rules."
+        },
+        "deployment": {
+          "title": "Deployment",
+          "description": "We integrate with your existing tools, run validation tests, train your team, and launch your AI workforce into production."
+        }
+      }
+    },
+    "solution": {
+      "title": "AI Agents That Run Your Business 24/7",
+      "subtitle": "Deploy intelligent AI agents that handle the work of entire departments — without hiring, training, or managing more people."
+    },
+    "cta": {
+      "badge": "Custom Solutions",
+      "headline": "Every Business is",
+      "headlineAccent": "Unique.",
+      "subtitle": "We design tailored AI agent solutions for your specific workflows, team structure, and business goals — no off-the-shelf packages.",
+      "primaryCta": "Request Your Free Demo",
+      "secondaryCta": "Talk to Our Team",
+      "noPricingNote": "No contracts. No pricing tables. Just a conversation about your business.",
+      "trustPoints": {
+        "dedicated": "Dedicated onboarding",
+        "noLongContracts": "No long-term lock-in",
+        "measurableRoi": "Measurable ROI guarantee"
+      }
+    },
+    "departments": {
+      "badge": "Clonable Departments",
+      "title": "Departments You Can Clone Today",
+      "subtitle": "Each department comes pre-built with specialized AI agents trained for their specific role — ready to deploy in days, not months.",
+      "agentsLabel": "AI Agents",
+      "exploreCta": "Explore Solutions",
+      "sales": {
+        "title": "Sales",
+        "tagline": "Close deals 24/7 on autopilot",
+        "functions": {
+          "f1": "Automated lead qualification and scoring",
+          "f2": "Personalized follow-up sequences",
+          "f3": "CRM updates and pipeline management"
+        },
+        "expandedDescription": "Our Sales AI agents handle the full pipeline — from first contact to closed deal. They qualify leads, schedule meetings, send follow-ups, and update your CRM in real time.",
+        "agents": {
+          "salesAgent": "Sales Agent",
+          "salesQualifier": "Sales Qualifier",
+          "leadValidator": "Lead Validator"
+        }
+      },
+      "marketing": {
+        "title": "Marketing",
+        "tagline": "Create and distribute content at scale",
+        "functions": {
+          "f1": "Multi-channel content creation",
+          "f2": "Social media scheduling & engagement",
+          "f3": "Campaign analytics and optimization"
+        },
+        "expandedDescription": "Marketing AI agents produce blog posts, social media content, email campaigns, and ad copy — all aligned with your brand voice and optimized for engagement.",
+        "agents": {
+          "contentCreator": "Content Creator",
+          "socialManager": "Social Manager"
+        }
+      },
+      "support": {
+        "title": "Customer Support",
+        "tagline": "Instant, multilingual customer care",
+        "functions": {
+          "f1": "24/7 instant response to inquiries",
+          "f2": "Appointment scheduling & booking",
+          "f3": "Ticket routing and escalation"
+        },
+        "expandedDescription": "Support AI agents answer customer questions instantly, book appointments, handle complaints, and escalate complex issues — in any language, around the clock.",
+        "agents": {
+          "virtualReceptionist": "Virtual Receptionist",
+          "bookingAgent": "Booking Agent"
+        }
+      },
+      "operations": {
+        "title": "Operations",
+        "tagline": "Streamline internal workflows",
+        "functions": {
+          "f1": "Process automation and monitoring",
+          "f2": "Data entry and reporting",
+          "f3": "Cross-department coordination"
+        },
+        "expandedDescription": "Operations AI agents automate internal workflows, generate reports, monitor KPIs, and keep all departments synchronized — eliminating bottlenecks and manual overhead.",
+        "agents": {
+          "operationsAgent": "Operations Agent"
+        }
+      }
+    },
+    "beforeAfter": {
+      "badge": "Proven Results",
+      "title": "The Transformation in Numbers",
+      "subtitle": "See the measurable impact of cloning your business operations with AI agents — real metrics from real deployments.",
+      "before": "Before",
+      "after": "After",
+      "metrics": {
+        "operatingCosts": {
+          "title": "Operating Costs",
+          "beforeValue": "100%",
+          "afterValue": "30%",
+          "improvementLabel": "cost reduction"
+        },
+        "responseTime": {
+          "title": "Response Time",
+          "beforeValue": "24h",
+          "afterValue": "3s",
+          "improvementLabel": "faster"
+        },
+        "availability": {
+          "title": "Availability",
+          "beforeValue": "8h/day",
+          "afterValue": "24/7",
+          "improvementLabel": "uptime increase"
+        },
+        "errorRate": {
+          "title": "Error Rate",
+          "beforeValue": "12%",
+          "afterValue": "0.5%",
+          "improvementLabel": "error reduction"
+        },
+        "capacity": {
+          "title": "Service Capacity",
+          "beforeValue": "1x",
+          "afterValue": "10x",
+          "improvementLabel": "more capacity"
+        },
+        "scalingSpeed": {
+          "title": "Scaling Speed",
+          "beforeValue": "12 weeks",
+          "afterValue": "2 days",
+          "improvementLabel": "faster scaling"
+        }
+      }
+    },
+    "integrations": {
+      "badge": "Integrations",
+      "title": "Connects with Your Existing Tools",
+      "subtitle": "Your AI agents integrate seamlessly with the platforms your team already uses — no migration, no disruption.",
+      "cta": "View All Integrations"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Common Questions About Business Cloning",
+      "subtitle": "Everything you need to know before starting your AI transformation.",
+      "questions": {
+        "q1": {
+          "question": "How long does implementation take?",
+          "answer": "Most businesses are fully operational with their AI agent workforce within 2-4 weeks. The timeline depends on the complexity of your workflows and the number of departments. We start with a pilot in one department so you see results quickly, then scale from there."
+        },
+        "q2": {
+          "question": "Which departments can be automated?",
+          "answer": "Any department with repetitive, rule-based tasks is a strong candidate: Sales (lead qualification, follow-ups), Marketing (content creation, scheduling), Customer Support (inquiries, booking), and Operations (data entry, reporting, coordination). We analyze your specific workflows to identify the highest-ROI automation opportunities first."
+        },
+        "q3": {
+          "question": "Is it safe for sensitive data?",
+          "answer": "Yes. Security is built into our architecture from day one. We use enterprise-grade encryption, role-based access controls, and data residency options. Our AI agents operate within your existing security perimeter and comply with GDPR, HIPAA, and SOC 2 requirements. Your data is never used to train third-party models."
+        },
+        "q4": {
+          "question": "How does it integrate with our current tools?",
+          "answer": "Our AI agents connect natively with 100+ business tools including Salesforce, HubSpot, Slack, Microsoft 365, Google Workspace, Zapier, and more. If you use a custom internal system, we build a dedicated integration. No migration, no disruption — your team keeps working the same way."
+        },
+        "q5": {
+          "question": "Do we need a technical team?",
+          "answer": "No. We handle the entire implementation, configuration, and maintenance of your AI agent workforce. Your team does not need any technical knowledge. We provide training for end-users and ongoing support. Our goal is that your people focus on strategy and creativity, not on managing software."
+        },
+        "q6": {
+          "question": "What happens to current employees?",
+          "answer": "AI agents handle the repetitive and low-value tasks, freeing your team to focus on high-impact, creative, and strategic work. Our clients consistently report improved employee satisfaction because people stop doing tedious work. No one gets replaced — everyone gets upgraded."
+        }
+      }
+    },
+    "finalCta": {
+      "badge": "Start Today",
+      "headline": "Ready to Clone Your",
+      "headlineAccent": "Business?",
+      "subtitle": "Book a free 30-minute strategy call. We’ll map your automation opportunities and show you exactly what your AI-powered business could look like.",
+      "schedulerLabel": "Schedule a Free Strategy Call",
+      "trustItems": {
+        "t1": "Free 30-minute strategy call",
+        "t2": "No commitment required",
+        "t3": "Live demo of your use case"
+      },
+      "orLabel": "or"
+    },
+    "caseStudyHighlight": {
+      "badge": "Real Client Results",
+      "title": "See It",
+      "titleAccent": "In Action",
+      "subtitle": "Companies are already saving time and cutting costs with AI-powered business automation. Here's one example.",
+      "cta": "Read Full Case Study",
+      "viewAll": "View all case studies"
+    },
+    "roiSection": {
+      "badge": "ROI Calculator",
+      "title": "Discover How Much",
+      "titleAccent": "You Can Save",
+      "subtitle": "Enter your team details and see your estimated monthly savings from AI automation.",
+      "inputsHeading": "Your Business Details",
+      "resultsHeading": "Your Estimated Savings",
+      "inputs": {
+        "employees": "Number of Employees",
+        "monthlyCost": "Avg. Monthly Cost per Employee",
+        "repetitiveTasks": "% of Time on Repetitive Tasks"
+      },
+      "results": {
+        "monthlySavings": "MONTHLY SAVINGS",
+        "hoursSaved": "HOURS SAVED / MONTH",
+        "annualSavings": "ANNUAL SAVINGS"
+      },
+      "cta": "Discover How Much You Can Save",
+      "ctaSubtext": "Want a precise calculation for your business? Schedule a free 30-minute audit.",
+      "disclaimer": "* Estimates assume 62% automation efficiency on identified repetitive tasks. Individual results vary based on process complexity."
+    }
+  }
+}

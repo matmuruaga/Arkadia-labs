@@ -1,7 +1,6 @@
 // src/pages/solutions/SolutionsIndexPage.tsx
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import {
@@ -9,6 +8,7 @@ import {
   Image, Share2, Cog, ArrowRight, Sparkles
 } from 'lucide-react';
 import { trackPageView, trackCtaClick } from '@/utils/dataLayer';
+import SEO from '@/components/SEO';
 import { getAllSolutions } from '@/data/solutions';
 
 // Icon mapping
@@ -50,17 +50,17 @@ const categoryConfig: Record<string, { label: string; color: string; bgColor: st
 // All available solutions (even those not yet fully implemented)
 const allSolutions = [
   { id: 'lead-validator', category: 'outbound', available: true },
-  { id: 'sales-qualifier', category: 'outbound', available: false },
-  { id: 'sales-agent', category: 'outbound', available: false },
-  { id: 'virtual-receptionist', category: 'inbound', available: false },
-  { id: 'booking-agent', category: 'inbound', available: false },
-  { id: 'content-creator', category: 'marketing', available: false },
-  { id: 'social-manager', category: 'marketing', available: false },
-  { id: 'operations-agent', category: 'operations', available: false },
+  { id: 'sales-qualifier', category: 'outbound', available: true },
+  { id: 'sales-agent', category: 'outbound', available: true },
+  { id: 'virtual-receptionist', category: 'inbound', available: true },
+  { id: 'booking-agent', category: 'inbound', available: true },
+  { id: 'content-creator', category: 'marketing', available: true },
+  { id: 'social-manager', category: 'marketing', available: true },
+  { id: 'operations-agent', category: 'operations', available: true },
 ];
 
 const SolutionsIndexPage: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('solutions');
   const availableSolutions = getAllSolutions();
 
   useEffect(() => {
@@ -73,14 +73,7 @@ const SolutionsIndexPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{t('solutions.index.seo.title', 'AI Agents & Solutions | Arkadia Labs')}</title>
-        <meta
-          name="description"
-          content={t('solutions.index.seo.description', 'Discover our suite of AI agents designed to automate sales, customer service, marketing, and operations. Transform your business with intelligent automation.')}
-        />
-        <link rel="canonical" href={`https://arkadialabs.io/${i18n.language}/solutions`} />
-      </Helmet>
+      <SEO titleKey="seo.solutionsIndex.title" descriptionKey="seo.solutionsIndex.description" path="/solutions" />
 
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 bg-gradient-to-br from-slate-50 via-sky-50/30 to-cyan-50/40 overflow-hidden">

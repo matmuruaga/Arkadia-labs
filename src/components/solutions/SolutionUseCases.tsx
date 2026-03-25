@@ -27,7 +27,7 @@ interface Props {
 }
 
 const SolutionUseCases: React.FC<Props> = ({ data, solutionId }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabChange = (index: number) => {
@@ -155,30 +155,41 @@ const SolutionUseCases: React.FC<Props> = ({ data, solutionId }) => {
                 </div>
 
                 {/* Visual */}
-                <div className="relative bg-gradient-to-br from-sky-50 to-cyan-50 p-8 md:p-12 flex items-center justify-center">
-                  {/* Decorative elements */}
-                  <div className="absolute inset-0 overflow-hidden">
-                    <div className="absolute top-10 right-10 w-32 h-32 bg-sky-200/50 rounded-full blur-2xl" />
-                    <div className="absolute bottom-10 left-10 w-32 h-32 bg-teal-200/50 rounded-full blur-2xl" />
-                  </div>
+                <div className="relative bg-gradient-to-br from-sky-50 to-cyan-50 flex items-center justify-center overflow-hidden">
+                  {data.useCases[activeTab].image ? (
+                    <img
+                      src={data.useCases[activeTab].image}
+                      alt={t(`solutions.${solutionId}.useCases.useCases.${activeTab}.title`, data.useCases[activeTab].title)}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="p-8 md:p-12 w-full flex items-center justify-center">
+                      {/* Decorative elements */}
+                      <div className="absolute inset-0 overflow-hidden">
+                        <div className="absolute top-10 right-10 w-32 h-32 bg-sky-200/50 rounded-full blur-2xl" />
+                        <div className="absolute bottom-10 left-10 w-32 h-32 bg-teal-200/50 rounded-full blur-2xl" />
+                      </div>
 
-                  <div className="relative z-10 text-center">
-                    {(() => {
-                      const useCase = data.useCases[activeTab];
-                      const IconComponent = iconMap[useCase.icon || 'briefcase'] || Briefcase;
-                      return (
-                        <div className="w-32 h-32 mx-auto mb-6 bg-white rounded-3xl shadow-xl flex items-center justify-center">
-                          <IconComponent className="h-16 w-16 text-blue-600" />
-                        </div>
-                      );
-                    })()}
-                    <p className="text-xl font-bold text-slate-900">
-                      {data.useCases[activeTab].industry}
-                    </p>
-                    <p className="text-slate-500">
-                      Industry Solution
-                    </p>
-                  </div>
+                      <div className="relative z-10 text-center">
+                        {(() => {
+                          const useCase = data.useCases[activeTab];
+                          const IconComponent = iconMap[useCase.icon || 'briefcase'] || Briefcase;
+                          return (
+                            <div className="w-32 h-32 mx-auto mb-6 bg-white rounded-3xl shadow-xl flex items-center justify-center">
+                              <IconComponent className="h-16 w-16 text-blue-600" />
+                            </div>
+                          );
+                        })()}
+                        <p className="text-xl font-bold text-slate-900">
+                          {data.useCases[activeTab].industry}
+                        </p>
+                        <p className="text-slate-500">
+                          {t('solutions.common.industrySolution')}
+                        </p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>

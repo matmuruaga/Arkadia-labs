@@ -118,7 +118,7 @@ const LeadCard: React.FC<{
   solutionId: string;
   circleRadius?: number;
 }> = ({ score, solutionId, circleRadius = 58 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
   const circumference = 2 * Math.PI * circleRadius;
   const strokeDashoffset = circumference - (score / 100) * circumference;
   const color = getScoreColor(score);
@@ -216,7 +216,7 @@ const MobileValidationStep: React.FC<{
   onClick: () => void;
   solutionId: string;
 }> = ({ step, index, currentScore, onClick, solutionId }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
   const isActive = currentScore >= step.threshold;
 
   return (
@@ -244,7 +244,7 @@ const MobileValidationStep: React.FC<{
 };
 
 const MobileLeadScoreAnimation: React.FC<{ solutionId: string }> = ({ solutionId }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
   const [activeStepIndex, setActiveStepIndex] = useState(-1);
   const [displayScore, setDisplayScore] = useState(0);
 
@@ -348,7 +348,7 @@ const DesktopValidationStepItem: React.FC<{
   solutionId: string;
   isLast: boolean;
 }> = ({ step, index, score, solutionId, isLast }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
   const IconComponent = step.icon;
   const prevThreshold = index > 0 ? validationSteps[index - 1].threshold : 0;
   const pointsEarned = step.threshold - prevThreshold;
@@ -426,7 +426,7 @@ const DesktopScoreDisplay: React.FC<{ score: MotionValue<number> }> = ({ score }
 
 // Desktop Status Text - Subscribes to MotionValue changes
 const DesktopStatusText: React.FC<{ score: MotionValue<number>; solutionId: string }> = ({ score, solutionId }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
   const [status, setStatus] = useState('Cold Lead');
 
   useEffect(() => {
@@ -468,7 +468,7 @@ const DesktopLeadCard: React.FC<{
   score: MotionValue<number>;
   solutionId: string;
 }> = ({ score, solutionId }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
   const circleRadius = 58;
   const circumference = 2 * Math.PI * circleRadius;
 
@@ -571,7 +571,7 @@ const DesktopLeadCard: React.FC<{
 };
 
 const DesktopLeadScoreAnimation: React.FC<{ solutionId: string }> = ({ solutionId }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
   const containerRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({

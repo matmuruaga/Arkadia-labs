@@ -42,6 +42,7 @@ export interface UseCase {
   description: string;
   results: string[];
   icon?: string;
+  image?: string;
 }
 
 export interface Testimonial {
@@ -72,9 +73,11 @@ export interface SolutionHero {
   subtitle: string;
   description: string;
   primaryCta: string;
+  primaryCtaAction?: 'contact' | 'elevenlabs' | 'scroll';
   secondaryCta: string;
   heroImage?: string;
   heroVideo?: string;
+  heroVisualType?: 'image' | 'voice-waveform' | 'dashboard' | 'auto' | 'score-gauge' | 'conversation-flow' | 'revenue-ticker' | 'calendar-grid' | 'content-feed' | 'social-radar' | 'workflow-orchestrator';
   trustBadges: TrustBadge[];
 }
 
@@ -150,6 +153,14 @@ export interface PlatformActivityItem {
   status: 'success' | 'pending' | 'processing';
 }
 
+export interface PlatformTableRow {
+  id: string;
+  name: string;
+  detail: string;
+  value: string;
+  status: 'success' | 'warning' | 'info';
+}
+
 export interface SolutionPlatformPreview {
   badge?: string;
   title: string;
@@ -165,6 +176,14 @@ export interface SolutionPlatformPreview {
     description?: string;
   };
   activityFeed?: PlatformActivityItem[];
+  floatingBadge1?: { title: string; subtitle: string };
+  floatingBadge2?: { title: string; subtitle: string };
+  secondaryTable?: {
+    title: string;
+    subtitle?: string;
+    rows: PlatformTableRow[];
+  };
+  secondaryChartTitle?: string;
 }
 
 export interface SolutionScoreAnimation {

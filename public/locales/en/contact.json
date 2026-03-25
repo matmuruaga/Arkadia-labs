@@ -1,0 +1,53 @@
+{
+  "contactPage": {
+    "title": "Let's Talk About Your Project",
+    "subtitle": "Complete this form to schedule a meeting with our team.",
+    "whyInfoTitle": "One last step before we connect",
+    "whyInfoBody": "Completing this form is the first step towards a successful collaboration. Knowing a bit about your company and your challenges allows us to prepare for our conversation and arrive with ideas that truly add value. We look forward to speaking with you!",
+    "labels": {
+      "fullName": "Full Name",
+      "workEmail": "Work Email",
+      "companyName": "Company Name",
+      "role": "Role (Optional)",
+      "companySize": "Company Size",
+      "challenge": "What is your main challenge or need?"
+    },
+    "placeholders": {
+      "companySize": "Select a range"
+    },
+    "options": {
+      "size1": "1-10 employees",
+      "size2": "11-50 employees",
+      "size3": "51-200 employees",
+      "size4": "201+ employees"
+    },
+    "button": {
+      "submit": "Schedule Meeting"
+    },
+    "validation": {
+      "fullName": "Name must be at least 3 characters.",
+      "email": "Please enter a valid email.",
+      "companyName": "Company name is required.",
+      "companySize": "Please select a company size.",
+      "challenge": "Your description must be at least 10 characters."
+    },
+    "errors": {
+      "server": "There was a problem submitting your request. Please try again."
+    }
+  },
+  "thankYouPage": {
+    "header": {
+      "title": "Thank you for your interest!",
+      "subtitle": "We have received your request and our team will be in touch with you shortly."
+    },
+    "cta": {
+      "altImage": "AI Agent Illustration",
+      "title": "Take the next step",
+      "description": "For greater agility and to secure a time that suits you, you can book a 15-minute call directly on our calendar.",
+      "button": "Schedule your meeting"
+    },
+    "footer": {
+      "backToHome": "Back to the main page"
+    }
+  }
+}

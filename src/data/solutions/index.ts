@@ -6,6 +6,8 @@ import { salesAgentSolution } from './sales-agent';
 import { virtualReceptionistSolution } from './virtual-receptionist';
 import { bookingAgentSolution } from './booking-agent';
 import { contentCreatorSolution } from './content-creator';
+import { socialManagerSolution } from './social-manager';
+import { operationsAgentSolution } from './operations-agent';
 
 // Export all solutions
 export const solutions: SolutionsMap = {
@@ -15,9 +17,8 @@ export const solutions: SolutionsMap = {
   'virtual-receptionist': virtualReceptionistSolution,
   'booking-agent': bookingAgentSolution,
   'content-creator': contentCreatorSolution,
-  // Add more solutions here as they are created:
-  // 'social-manager': socialManagerSolution,
-  // 'operations-agent': operationsAgentSolution,
+  'social-manager': socialManagerSolution,
+  'operations-agent': operationsAgentSolution,
 };
 
 // Helper to get solution by slug

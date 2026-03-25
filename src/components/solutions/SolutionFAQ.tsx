@@ -1,5 +1,6 @@
 // src/components/solutions/SolutionFAQ.tsx
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelpCircle, ChevronDown, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -12,8 +13,22 @@ interface Props {
 }
 
 const SolutionFAQ: React.FC<Props> = ({ data, solutionId }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  // FAQPage JSON-LD for rich results and AEO
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: data.faqs.map((faq, index) => ({
+      '@type': 'Question',
+      name: t(`solutions.${solutionId}.faq.faqs.${index}.question`, faq.question),
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: t(`solutions.${solutionId}.faq.faqs.${index}.answer`, faq.answer),
+      },
+    })),
+  };
 
   const handleToggle = (index: number) => {
     const isOpening = openIndex !== index;
@@ -22,6 +37,10 @@ const SolutionFAQ: React.FC<Props> = ({ data, solutionId }) => {
   };
 
   return (
+    <>
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+    </Helmet>
     <section className="py-12 md:py-28 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
@@ -142,6 +161,7 @@ const SolutionFAQ: React.FC<Props> = ({ data, solutionId }) => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

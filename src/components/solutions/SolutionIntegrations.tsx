@@ -51,7 +51,7 @@ interface Props {
 }
 
 const SolutionIntegrations: React.FC<Props> = ({ data, solutionId }) => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('solutions');
 
   const handleViewAllClick = () => {
     trackCtaClick('view_all_integrations', `solution_integrations_${solutionId}`, 'View All Integrations');

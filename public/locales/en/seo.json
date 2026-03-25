@@ -1,0 +1,57 @@
+{
+  "seo": {
+    "organizationDescription": "Arkadia Labs builds intelligent AI agents that automate business operations across sales, marketing, customer service, and operations. Founded to help companies eliminate repetitive work and scale faster, Arkadia Labs delivers AI solutions that run 24/7, integrate with existing tools, and produce measurable results without requiring technical expertise.",
+    "home": {
+      "title": "AI Agents That Automate Your Business Operations",
+      "description": "Deploy intelligent AI agents for sales, marketing, customer service, and operations. Arkadia Labs automates repetitive work so your team focuses on growth."
+    },
+    "pricing": {
+      "title": "Simple, Transparent Pricing for AI Automation",
+      "description": "Choose the right AI automation plan for your business. Flexible pricing with no hidden fees — start automating sales, support, and operations today."
+    },
+    "contact": {
+      "title": "Talk to Our AI Automation Specialists",
+      "description": "Have questions about AI agents for your business? Reach out to the Arkadia Labs team. We'll help you identify the right automation solution."
+    },
+    "integrations": {
+      "title": "Connect AI Agents to Your Existing Tools",
+      "description": "Arkadia Labs integrates with CRMs, helpdesks, marketing platforms, and 100+ business tools. Deploy AI agents without changing your current workflow."
+    },
+    "caseStudiesIndex": {
+      "title": "Real Results from AI Automation — Customer Stories",
+      "description": "See how businesses use Arkadia Labs AI agents to close more deals, resolve support tickets faster, and automate operations at scale."
+    },
+    "solutionsIndex": {
+      "title": "AI Agent Solutions for Every Business Function",
+      "description": "Explore Arkadia Labs AI solutions for sales qualification, lead validation, customer support, marketing, and operations automation."
+    },
+    "getStarted": {
+      "title": "Get Started with AI Business Automation",
+      "description": "Start automating your sales, marketing, and operations with Arkadia Labs AI agents. Set up in minutes — no technical expertise required."
+    },
+    "thankYou": {
+      "title": "You're In — Next Steps for Your AI Automation",
+      "description": "Thanks for reaching out to Arkadia Labs. A member of our team will contact you shortly to discuss your AI automation needs."
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy — How We Handle Your Data",
+      "description": "Read Arkadia Labs' privacy policy to understand how we collect, use, and protect your personal data in compliance with GDPR and applicable regulations."
+    },
+    "termsAndConditions": {
+      "title": "Terms and Conditions of Service",
+      "description": "Review the terms and conditions governing your use of Arkadia Labs AI automation services, software, and related platforms."
+    },
+    "cookiePolicy": {
+      "title": "Cookie Policy — Tracking and Preferences",
+      "description": "Learn how Arkadia Labs uses cookies to improve site performance, personalize your experience, and measure analytics. Manage your preferences."
+    },
+    "legalNotice": {
+      "title": "Legal Notice and Imprint",
+      "description": "Official legal notice and company information for Arkadia Labs, including registered business details, contact information, and legal disclosures."
+    },
+    "cloneYourBusiness": {
+      "title": "Clone Your Business with AI — Automate Entire Departments",
+      "description": "Deploy AI agents that clone entire business departments — sales, support, marketing, and operations. Automate 99% of your processes without changing your workflow. No technical expertise required."
+    }
+  }
+}

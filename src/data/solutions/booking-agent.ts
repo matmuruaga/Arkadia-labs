@@ -25,12 +25,13 @@ export const bookingAgentSolution: Solution = {
   },
 
   hero: {
-    badge: 'Reservations & Hospitality',
-    title: 'Your AI Booking Agent That Never Sleeps',
-    subtitle: 'Every Table Filled, Every Room Booked',
-    description: 'An AI voice agent that handles reservations, manages availability, confirms bookings, and reduces no-shows—for restaurants, hotels, spas, and any business where every seat matters. 24/7, multilingual, fully integrated.',
+    badge: 'AI Reservations',
+    title: 'Every Seat Filled. Automatically.',
+    subtitle: 'AI That Books While You Serve',
+    description: 'Handles reservations, manages availability, and reduces no-shows for restaurants, hotels, and any business where every booking counts.',
     primaryCta: 'Hear It in Action',
     secondaryCta: 'Talk to Sales',
+    heroVisualType: 'calendar-grid',
     trustBadges: [
       { icon: 'calendar', label: 'Booking Rate', value: '+32%' },
       { icon: 'user-check', label: 'No-Show Reduction', value: '-67%' },
@@ -216,6 +217,7 @@ export const bookingAgentSolution: Solution = {
           '94% table utilization achieved',
         ],
         icon: 'utensils',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320584/ba-restaurants_copia_xcperv.webp',
       },
       {
         id: 'hotels',
@@ -228,6 +230,7 @@ export const bookingAgentSolution: Solution = {
           '24/7 reservation coverage',
         ],
         icon: 'building',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320584/ba-hotels_copia_ahhwzb.webp',
         caseStudySlug: 'goodnite',
       },
       {
@@ -241,6 +244,7 @@ export const bookingAgentSolution: Solution = {
           'Seamless package upselling',
         ],
         icon: 'heart',
+        image: 'https://res.cloudinary.com/dntco2fcz/image/upload/v1773320584/ba-spa_copia_fgln9m.webp',
       },
     ],
   },

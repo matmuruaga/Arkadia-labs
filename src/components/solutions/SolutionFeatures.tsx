@@ -136,7 +136,7 @@ const MobileFeaturePill: React.FC<{
 };
 
 const SolutionFeatures: React.FC<Props> = ({ data, solutionId }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
 
   // Take only first 6 features to keep it clean
   const displayFeatures = data.features.slice(0, 6);
@@ -225,18 +225,20 @@ const SolutionFeatures: React.FC<Props> = ({ data, solutionId }) => {
             </div>
 
             {/* Bottom accent - floating element (outside overflow-hidden container) */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="absolute -bottom-3 md:-bottom-4 right-4 md:right-16 z-10"
-            >
-              <div className="flex items-center gap-1.5 md:gap-2 bg-gradient-to-r from-sky-500 to-teal-500 text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full shadow-lg shadow-sky-500/25 text-xs md:text-sm font-medium">
-                <CheckCircle className="h-3.5 w-3.5 md:h-4 md:w-4" />
-                <span>+{data.features.length > 6 ? data.features.length - 6 : 0} more</span>
-              </div>
-            </motion.div>
+            {data.features.length > 6 && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="absolute -bottom-3 md:-bottom-4 right-4 md:right-16 z-10"
+              >
+                <div className="flex items-center gap-1.5 md:gap-2 bg-gradient-to-r from-sky-500 to-teal-500 text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full shadow-lg shadow-sky-500/25 text-xs md:text-sm font-medium">
+                  <CheckCircle className="h-3.5 w-3.5 md:h-4 md:w-4" />
+                  <span>{t('solutions.common.moreFeatures', { count: data.features.length - 6 })}</span>
+                </div>
+              </motion.div>
+            )}
 
             {/* Decorative corner elements - hidden on mobile */}
             <div className="hidden md:block absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-sky-300/50 rounded-tl-xl" />
