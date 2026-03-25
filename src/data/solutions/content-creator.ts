@@ -258,7 +258,7 @@ export const contentCreatorSolution: Solution = {
     quote: "The Content Creator has completely transformed our social media operation. We went from struggling to post 3 times a week to publishing daily across 5 platforms—all with better quality and engagement. Our team now focuses on strategy while AI handles the heavy lifting. 156% engagement increase in the first quarter.",
     author: 'Calixto Carbone',
     role: 'Founder & CEO',
-    company: 'ELSA Consulting',
+    company: 'Verified Client',
   },
 
   pricing: {

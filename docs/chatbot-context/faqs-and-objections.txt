@@ -34,7 +34,7 @@ Q: What industries do you work with?
 A: We've delivered results across multiple industries:
 - Hospitality & Vacation Rentals (Goodnite case study - 6x ROI)
 - Architecture & Design (Domus Labs case study - 160% ROI)
-- Sales & BDR Services (ELSA Consulting case study - 600% ROI)
+- Sales & BDR Services
 - E-commerce
 - SaaS & Technology
 - Professional Services
@@ -174,7 +174,6 @@ Q: What ROI can I expect?
 A: Based on our case studies:
 - Goodnite (Hospitality): 6x ROI in 12 months
 - Domus Labs (Architecture): 160% ROI in 3 months
-- ELSA Consulting (Sales): 600% ROI in 2 months
 Most clients see positive ROI within 3-6 months. We'll discuss realistic
 expectations for your specific situation during discovery.
 

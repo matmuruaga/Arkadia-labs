@@ -183,100 +183,6 @@ has become essential for our team - we can't imagine working without it now."
 - Custom dashboard
 
 ================================================================================
-CASE STUDY 3: ELSA CONSULTING
-================================================================================
-
-COMPANY: ELSA Consulting
-INDUSTRY: Sales Consulting & BDR (Business Development Representative) Services
-LOCATION: Barcelona, Spain
-SIZE: 3 BDR Team Members
-TARGET MARKET: B2B Sales & Service Companies in Spain and LATAM
-
---- THE CHALLENGE ---
-
-ELSA Consulting's cold calling operation was highly inefficient:
-
-1. TERRIBLE PICKUP RATES
-   - Industry average: 7% pickup rate
-   - 93 out of every 100 calls wasted
-   - Massive time spent on invalid numbers
-   - Team morale suffering
-
-2. WASTED RESOURCES
-   - EUR 57.69/hour team cost
-   - Burning through unqualified lists
-   - No way to validate contacts before calling
-   - High cost per actual conversation
-
-3. MANUAL PROCESSES
-   - No pre-call research automation
-   - Manual CRM entry after each call
-   - Script variations inconsistent
-   - No call analysis or coaching
-
---- THE SOLUTION ---
-
-Arkadia Labs implemented a comprehensive sales intelligence system:
-
-1. PRE-CALL VALIDATION & INTELLIGENCE
-   - Validated 1,000+ leads before calling
-   - Phone number verification
-   - Company information enrichment
-   - Best time to call analysis
-   - Lead scoring for prioritization
-
-2. AI SCRIPT GENERATION & TRANSCRIPTION
-   - Dynamic scripts based on prospect data
-   - Real-time call transcription
-   - Key information extraction
-   - Objection handling suggestions
-
-3. ZERO-TOUCH CRM SYNC
-   - Automatic Salesforce updates
-   - Call outcomes logged instantly
-   - Next steps scheduled automatically
-   - Full conversation history preserved
-
---- THE RESULTS (2 months) ---
-
-PICKUP RATE:
-- Before: 7% (industry average)
-- After: 25%
-- Improvement: 3.5x increase
-
-VALID CONTACTS:
-- 54% of contacts validated as working numbers
-- 46% invalid contacts eliminated before calling
-- Zero time wasted on wrong numbers
-
-ROI:
-- Return on Investment: 600%
-- Payback period: Under 30 days
-- Multiple on investment: 3.5x
-
-TIME SAVINGS:
-- 80% reduction in prospecting time
-- Focus shifted to actual conversations
-- Team productivity skyrocketed
-
-COST SAVINGS:
-- EUR 3,461+ saved in first 2 months
-- Team cost: EUR 90,000/year
-- AI cost: 15% of team cost
-
-KEY INSIGHT:
-"The difference is night and day. We went from dreading cold calls to actually
-enjoying them because we know the people we're calling are real and reachable."
-- ELSA Consulting Team
-
---- TECHNOLOGIES USED ---
-- Salesforce CRM Integration
-- Phone validation APIs
-- Call transcription AI
-- Lead enrichment tools
-- Automated scheduling
-
-================================================================================
 SUMMARY: ROI COMPARISON ACROSS CASE STUDIES
 ================================================================================
 
@@ -284,7 +190,6 @@ Company         | Industry      | Timeline | ROI    | Key Metric
 ----------------|---------------|----------|--------|---------------------------
 Goodnite        | Hospitality   | 12 months| 6x     | +78% review generation
 Domus Labs      | Architecture  | 3 months | 160%   | +92% meeting efficiency
-ELSA Consulting | Sales/BDR     | 2 months | 600%   | 3.5x pickup rate
 
 COMMON SUCCESS FACTORS:
 1. Clear problem definition during discovery

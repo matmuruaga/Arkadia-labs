@@ -247,7 +247,7 @@ export const leadValidatorSolution: Solution = {
     quote: 'Lead Validator transformed how our BDR team operates. Instead of burning through hundreds of dead-end calls every day, they\'re now having real conversations with qualified prospects. The 3.5x response rate improvement speaks for itself.',
     author: 'Calixto Carbone',
     role: 'Founder & CEO',
-    company: 'ELSA Consulting',
+    company: 'Verified Client',
   },
 
   pricing: {

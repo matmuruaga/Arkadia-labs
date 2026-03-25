@@ -10,21 +10,19 @@ import { Quote, ArrowRight, TrendingUp } from 'lucide-react';
 import { trackCaseStudyClick, trackSectionView } from '@/utils/dataLayer';
 
 // ============================================================================
-// Featured study data (ELSA Consulting — strongest metrics + testimonial)
-// We reference existing caseStudies i18n keys for the case study content
-// and add new cloneYourBusiness.caseStudyHighlight keys for section copy.
+// Featured study data (Goodnite — strong metrics + hospitality success story)
 // ============================================================================
 
-const FEATURED_SLUG = 'elsa-consulting';
+const FEATURED_SLUG = 'goodnite';
 
 const FEATURED_KPI_KEYS = [
-  { value: '600%', labelKey: 'caseStudies.elsa-consulting.hero.kpis.0.label' },
-  { value: '3.5x', labelKey: 'caseStudies.elsa-consulting.hero.kpis.1.label' },
-  { value: '80%', labelKey: 'caseStudies.elsa-consulting.hero.kpis.2.label' },
+  { value: '6x', labelKey: 'caseStudies.goodnite.hero.kpis.0.label' },
+  { value: '11%', labelKey: 'caseStudies.goodnite.hero.kpis.1.label' },
+  { value: '78%', labelKey: 'caseStudies.goodnite.hero.kpis.2.label' },
 ] as const;
 
 const LOGO_URL =
-  'https://res.cloudinary.com/dwhidn4z1/image/upload/v1762353602/274eba1b-f596-40b9-8e4e-2e05d51d1048_yadkpm.png';
+  'https://res.cloudinary.com/dwhidn4z1/image/upload/v1752340332/Captura_de_pantalla_2025-07-12_a_la_s_19.11.55_m3fdrp.png';
 
 // ============================================================================
 // Animation variants
@@ -69,7 +67,7 @@ const CloneYourBusinessCaseStudyHighlight: React.FC = () => {
   }, [tracked]);
 
   const handleCaseStudyClick = () => {
-    trackCaseStudyClick('ELSA Consulting', 'Sales Consulting', 'clone_your_business_highlight');
+    trackCaseStudyClick('Goodnite', 'Hospitality', 'clone_your_business_highlight');
   };
 
   return (
@@ -124,13 +122,13 @@ const CloneYourBusinessCaseStudyHighlight: React.FC = () => {
           >
             <div className="p-8 md:p-12 lg:grid lg:grid-cols-[1fr_auto] lg:gap-12 lg:items-center">
 
-              {/* ── Left: Quote + Author ── */}
+              {/* ── Left: Client Info + Description ── */}
               <div className="mb-8 lg:mb-0">
                 {/* Logo */}
                 <div className="flex items-center gap-3 mb-6">
                   <img
                     src={LOGO_URL}
-                    alt="ELSA Consulting logo"
+                    alt="Goodnite logo"
                     className="h-10 w-auto object-contain"
                     loading="lazy"
                   />
@@ -143,23 +141,21 @@ const CloneYourBusinessCaseStudyHighlight: React.FC = () => {
                     aria-hidden="true"
                   />
                   <blockquote className="pl-6 text-slate-700 text-base md:text-lg leading-relaxed italic">
-                    {t('caseStudies.elsa-consulting.testimonial.quote', { ns: 'case-studies' })}
+                    {t('caseStudies.goodnite.hero.subtitle', { ns: 'case-studies' })}
                   </blockquote>
                 </div>
 
-                {/* Author */}
+                {/* Client badge */}
                 <div className="flex items-center gap-3 mt-5 pl-6">
                   <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-sm shrink-0">
-                    CC
+                    GN
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900 text-sm">
-                      {t('caseStudies.elsa-consulting.testimonial.author', { ns: 'case-studies' })}
+                      Goodnite
                     </p>
                     <p className="text-xs text-slate-500">
-                      {t('caseStudies.elsa-consulting.testimonial.role', { ns: 'case-studies' })}
-                      {' · '}
-                      {t('caseStudies.elsa-consulting.testimonial.company', { ns: 'case-studies' })}
+                      {t('caseStudies.goodnite.client.tagline', { ns: 'case-studies' })}
                     </p>
                   </div>
                 </div>

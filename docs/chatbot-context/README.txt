@@ -27,10 +27,9 @@ FILES IN THIS FOLDER
    - Length: ~1,200 words
 
 3. case-studies-summary.txt
-   - Three detailed case studies with results
+   - Two detailed case studies with results
    - Goodnite (Hospitality) - 6x ROI
    - Domus Labs (Architecture) - 160% ROI
-   - ELSA Consulting (Sales) - 600% ROI
    - Length: ~1,800 words
 
 4. faqs-and-objections.txt

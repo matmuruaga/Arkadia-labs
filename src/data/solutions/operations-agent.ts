@@ -274,7 +274,7 @@ export const operationsAgentSolution: Solution = {
     quote: "The Operations Agent completely changed how our team works. We used to spend every Monday morning pulling data from five different tools to build the weekly ops report—now it just arrives in everyone's inbox at 8 AM. Task escalations that used to fall through the cracks now happen automatically. We have recovered at least 20 hours per week across the team, and our operational visibility has never been better.",
     author: 'Calixto Carbone',
     role: 'Founder & CEO',
-    company: 'ELSA Consulting',
+    company: 'Verified Client',
   },
 
   pricing: {

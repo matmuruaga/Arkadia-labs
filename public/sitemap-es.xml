@@ -194,18 +194,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://arkadialabs.io/en/case-studies/domus-labs"/>
   </url>
 
-  <!-- Case Study: ELSA Consulting -->
-  <url>
-    <loc>https://arkadialabs.io/es/case-studies/elsa-consulting</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://arkadialabs.io/en/case-studies/elsa-consulting"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://arkadialabs.io/es/case-studies/elsa-consulting"/>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://arkadialabs.io/cs/case-studies/elsa-consulting"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://arkadialabs.io/en/case-studies/elsa-consulting"/>
-  </url>
-
   <!-- Get Started -->
   <url>
     <loc>https://arkadialabs.io/es/get-started</loc>

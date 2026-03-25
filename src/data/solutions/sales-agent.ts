@@ -258,7 +258,7 @@ export const salesAgentSolution: Solution = {
     quote: "The Sales Agent transformed our after-hours revenue. We went from zero sales outside business hours to 40% of our monthly revenue coming in nights and weekends. The upsell engine alone paid for the entire implementation in the first month.",
     author: 'Calixto Carbone',
     role: 'Founder & CEO',
-    company: 'ELSA Consulting',
+    company: 'Verified Client',
   },
 
   pricing: {

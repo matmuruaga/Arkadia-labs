@@ -274,7 +274,7 @@ export const socialManagerSolution: Solution = {
     quote: "The Social Manager transformed how we handle our community. We used to respond to maybe 30% of comments—now every single message gets a thoughtful reply within two minutes. Our engagement rate went up 73% in the first three months, and we caught a potential PR issue before it became a crisis. It pays for itself every week.",
     author: 'Calixto Carbone',
     role: 'Founder & CEO',
-    company: 'ELSA Consulting',
+    company: 'Verified Client',
   },
 
   pricing: {

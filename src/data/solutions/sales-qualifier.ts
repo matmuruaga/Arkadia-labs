@@ -258,7 +258,7 @@ export const salesQualifierSolution: Solution = {
     quote: "The Sales Qualifier has become our secret weapon. It handles our inbound leads with the same care our best SDR would—but it never sleeps, never has a bad day, and qualifies with perfect consistency. Our demo show rate went from 60% to 89% because prospects are already engaged before the call.",
     author: 'Calixto Carbone',
     role: 'Founder & CEO',
-    company: 'ELSA Consulting',
+    company: 'Verified Client',
   },
 
   pricing: {

@@ -552,6 +552,7 @@ export const caseStudies: { [key: string]: CaseStudy } = {
       ]
     }
   },
+  /* HIDDEN - ELSA Consulting case study
   'elsa-consulting': {
     // --- HERO SECTION ---
     hero: {
@@ -757,5 +758,6 @@ export const caseStudies: { [key: string]: CaseStudy } = {
       company: "ELSA Consulting"
     }
   },
+  END HIDDEN - ELSA Consulting */
   // Futuros casos de estudio se añadirán aquí. ej: anotherClient: { ... }
 };

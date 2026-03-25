@@ -261,7 +261,7 @@ export const virtualReceptionistSolution: Solution = {
     quote: "The AI receptionist from Elevaite Labs has completely transformed our guest experience. We went from missing after-hours calls to providing 24/7 concierge-level service. Our guest satisfaction increased 11% and we're generating 78% more positive reviews. The 6x ROI in the first year made this an easy decision.",
     author: 'Calixto Carbone',
     role: 'Founder & CEO',
-    company: 'ELSA Consulting',
+    company: 'Verified Client',
   },
 
   pricing: {

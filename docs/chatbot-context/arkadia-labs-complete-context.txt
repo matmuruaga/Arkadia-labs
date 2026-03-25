@@ -428,31 +428,6 @@ Results (3 months):
 - Weekly Time Saved: 8 hours per executive
 - Cost: 50% reduction, 10x faster
 
---- CASE STUDY 3: ELSA CONSULTING (Sales) ---
-
-Client: ELSA Consulting
-Location: Barcelona
-Industry: Sales Consulting & BDR Services
-Team: 3 BDR Members
-Market: B2B Sales & Service Companies (Spain & LATAM)
-
-Challenges:
-- Only 7% pickup rate on cold calls (industry average)
-- 93 out of 100 calls wasted on invalid numbers
-- EUR 57.69/hour team cost on unqualified lists
-
-Solution Implemented:
-- Pre-Call Validation & Intelligence (1000+ leads)
-- AI Script Generation & Transcription
-- Zero-Touch CRM Sync (Salesforce)
-
-Results (2 months):
-- Pickup Rate: 7% to 25% (+3.5x improvement)
-- Valid Contacts: 54% working numbers identified
-- ROI: 600% in 60 days
-- Time Saved: 80% on prospecting activities
-- Cost Savings: EUR 3,461+ in 2 months
-
 ================================================================================
 SECTION 8: FREQUENTLY ASKED QUESTIONS (FAQs)
 ================================================================================
@@ -489,7 +464,6 @@ Q: What ROI can I expect?
 A: Based on our case studies:
 - Goodnite achieved 6x ROI in 12 months
 - Domus Labs achieved 160% ROI in 3 months
-- ELSA Consulting achieved 600% ROI in 2 months
 Typical clients see positive ROI within 3-6 months.
 
 Q: Can I start small and scale later?
@@ -652,8 +626,6 @@ CLIENT RESULTS:
 - Up to 6x ROI documented
 - 78% increase in review generation (Goodnite)
 - 92% improvement in meeting efficiency (Domus Labs)
-- 3.5x improvement in call pickup rates (ELSA)
-- 80% time savings on prospecting
 - Typical ROI positive within 3-6 months
 
 EFFICIENCY GAINS:

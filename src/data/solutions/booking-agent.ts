@@ -259,7 +259,7 @@ export const bookingAgentSolution: Solution = {
     quote: "The Booking Agent transformed our reservation process. We went from missing 35% of calls during dinner rush to capturing every single booking request. Our no-show rate dropped from 18% to under 5%, and we're seeing 32% more covers per month. The ROI was immediate.",
     author: 'Calixto Carbone',
     role: 'Founder & CEO',
-    company: 'ELSA Consulting',
+    company: 'Verified Client',
   },
 
   pricing: {
