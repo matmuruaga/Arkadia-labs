@@ -26,6 +26,7 @@ const CaseStudiesIndexPage = lazy(() => import('./pages/CaseStudiesIndexPage'));
 const SolutionDetailPage = lazy(() => import('./pages/solutions/SolutionDetailPage'));
 const SolutionsIndexPage = lazy(() => import('./pages/solutions/SolutionsIndexPage'));
 const CloneYourBusinessPage = lazy(() => import('./pages/CloneYourBusinessPage'));
+const RoatanReportPage = lazy(() => import('./pages/reports/RoatanReportPage'));
 
 
 /**
@@ -67,6 +68,9 @@ function App() {
                 <Route path="clona-tu-empresa" element={<CloneYourBusinessPage />} />
                 <Route path="klonujte-firmu" element={<CloneYourBusinessPage />} />
             </Route>
+
+            {/* Report pages — outside PublicLayout (no site Header/Footer) */}
+            <Route path="reports/roatan-seo-audit" element={<RoatanReportPage />} />
 
           </Route>
 

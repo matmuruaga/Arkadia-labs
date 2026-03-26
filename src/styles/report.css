@@ -1,0 +1,217 @@
+/* =====================================================
+   report.css — Design tokens and utility classes for
+   the client report page. Warm paper/ink aesthetic,
+   intentionally distinct from the main site theme.
+   Scoped under the .report class to prevent leakage.
+   ===================================================== */
+
+/* ---------------------------------------------------
+   Design Tokens (CSS Custom Properties)
+   --------------------------------------------------- */
+.report {
+  --rpt-ink:    #0a0a0a;
+  --rpt-paper:  #f5f2eb;
+  --rpt-accent: #d4451a;
+  --rpt-accent2: #1a6ed4;
+  --rpt-gold:   #c9a227;
+  --rpt-muted:  #6b6459;
+  --rpt-border: #d8d2c6;
+  --rpt-good:   #1e7c47;
+  --rpt-warn:   #c07a00;
+  --rpt-bad:    #c42626;
+  --rpt-card:   #ffffff;
+}
+
+/* ---------------------------------------------------
+   Base styles
+   --------------------------------------------------- */
+.report {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--rpt-paper);
+  color: var(--rpt-ink);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* ---------------------------------------------------
+   Typography
+   --------------------------------------------------- */
+.report-heading {
+  font-family: 'Syne', sans-serif;
+}
+
+/* ---------------------------------------------------
+   Score indicators
+   --------------------------------------------------- */
+.score-high {
+  color: var(--rpt-good);
+}
+
+.score-mid {
+  color: var(--rpt-warn);
+}
+
+.score-low {
+  color: var(--rpt-bad);
+}
+
+/* ---------------------------------------------------
+   Badges
+   --------------------------------------------------- */
+.rpt-badge {
+  display: inline-block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 3px;
+  padding: 3px 8px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: 600;
+}
+
+.rpt-badge-green {
+  background-color: #e6f4ec;
+  color: var(--rpt-good);
+  border-color: #b3ddc4;
+}
+
+.rpt-badge-yellow {
+  background-color: #fdf6e3;
+  color: var(--rpt-warn);
+  border-color: #f0d88a;
+}
+
+.rpt-badge-red {
+  background-color: #fdecea;
+  color: var(--rpt-bad);
+  border-color: #f0b0ac;
+}
+
+.rpt-badge-blue {
+  background-color: #e8f0fb;
+  color: var(--rpt-accent2);
+  border-color: #aac4ef;
+}
+
+/* ---------------------------------------------------
+   Priority pills
+   --------------------------------------------------- */
+.rpt-priority {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 3px 10px;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.rpt-priority-critical {
+  background-color: var(--rpt-bad);
+}
+
+.rpt-priority-high {
+  background-color: var(--rpt-accent2);
+}
+
+.rpt-priority-medium {
+  background-color: var(--rpt-warn);
+}
+
+/* ---------------------------------------------------
+   Status dots
+   --------------------------------------------------- */
+.rpt-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.rpt-dot-red {
+  background-color: var(--rpt-bad);
+}
+
+.rpt-dot-yellow {
+  background-color: var(--rpt-warn);
+}
+
+.rpt-dot-green {
+  background-color: var(--rpt-good);
+}
+
+.rpt-dot-blue {
+  background-color: var(--rpt-accent2);
+}
+
+/* ---------------------------------------------------
+   Volume bar
+   --------------------------------------------------- */
+.rpt-vol-bar {
+  height: 6px;
+  background-color: var(--rpt-accent);
+  border-radius: 3px;
+}
+
+/* ---------------------------------------------------
+   Stars rating
+   --------------------------------------------------- */
+.rpt-stars {
+  color: var(--rpt-gold);
+  font-size: 12px;
+  letter-spacing: -1px;
+}
+
+/* ---------------------------------------------------
+   Data table
+   --------------------------------------------------- */
+.rpt-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.rpt-table thead tr {
+  background-color: var(--rpt-ink);
+  color: var(--rpt-paper);
+}
+
+.rpt-table thead th {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  padding: 13px 14px;
+  text-align: left;
+}
+
+.rpt-table tbody td {
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--rpt-border);
+}
+
+/* Zebra striping */
+.rpt-table tbody tr:nth-child(even) td {
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+/* ---------------------------------------------------
+   Print styles
+   --------------------------------------------------- */
+/* Highlight box strong color */
+.report [style*="border-left"] strong {
+  color: var(--rpt-ink);
+}
+
+@media print {
+  .report-nav {
+    display: none !important;
+  }
+
+  .report section {
+    break-inside: avoid;
+  }
+}
