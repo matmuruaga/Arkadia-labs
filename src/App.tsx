@@ -27,6 +27,8 @@ const SolutionDetailPage = lazy(() => import('./pages/solutions/SolutionDetailPa
 const SolutionsIndexPage = lazy(() => import('./pages/solutions/SolutionsIndexPage'));
 const CloneYourBusinessPage = lazy(() => import('./pages/CloneYourBusinessPage'));
 const RoatanReportPage = lazy(() => import('./pages/reports/RoatanReportPage'));
+const DDDataroomPage = lazy(() => import('./pages/reports/DDDataroomPage'));
+const DDScopingPage = lazy(() => import('./pages/reports/DDScopingPage'));
 
 
 /**
@@ -71,6 +73,8 @@ function App() {
 
             {/* Report pages — outside PublicLayout (no site Header/Footer) */}
             <Route path="reports/roatan-seo-audit" element={<RoatanReportPage />} />
+            <Route path="reports/dd-dataroom-analyza" element={<DDDataroomPage />} />
+            <Route path="reports/dd-agent-scoping" element={<DDScopingPage />} />
 
           </Route>
 

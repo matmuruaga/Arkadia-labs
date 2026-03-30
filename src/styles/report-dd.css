@@ -1,0 +1,110 @@
+/* DD Dataroom Report — Arkadia Labs Corporate Design System (Blue/Purple) */
+
+.report-dd {
+  --dd-bg: #F4F6F8;
+  --dd-surface: #FFFFFF;
+  --dd-hero: #0D1B2A;
+  --dd-border: #E2E6EB;
+  --dd-text: #1A2332;
+  --dd-text-secondary: #4A5568;
+  --dd-text-muted: #7A8599;
+  --dd-accent-blue: #2563eb;
+  --dd-accent-green: #22c55e;
+  --dd-accent-red: #ef4444;
+  --dd-accent-yellow: #f59e0b;
+  --dd-accent-gray: #9ca3af;
+
+  /* ReportNav compat — maps --rpt-* tokens used by the shared nav component */
+  --rpt-card:   var(--dd-surface);
+  --rpt-border: var(--dd-border);
+  --rpt-ink:    var(--dd-text);
+  --rpt-muted:  var(--dd-text-muted);
+  --rpt-accent: var(--dd-accent-blue);
+
+  font-family: 'Noto Sans', sans-serif;
+  background: var(--dd-bg);
+  color: var(--dd-text);
+  line-height: 1.6;
+}
+
+.report-dd strong { color: var(--dd-text); font-weight: 600; }
+
+/* Cards */
+.dd-card {
+  background: var(--dd-surface);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  margin: 16px 0;
+}
+.dd-card-red    { border-left: 4px solid var(--dd-accent-red); }
+.dd-card-green  { border-left: 4px solid var(--dd-accent-green); }
+.dd-card-blue   { border-left: 4px solid var(--dd-accent-blue); }
+.dd-card-yellow { border-left: 4px solid var(--dd-accent-yellow); }
+.dd-card-gray   { border-left: 4px solid var(--dd-accent-gray); }
+
+/* Badges */
+.dd-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 6px;
+}
+.dd-badge-red    { background: #fef2f2; color: #dc2626; }
+.dd-badge-green  { background: #f0fdf4; color: #16a34a; }
+.dd-badge-blue   { background: #eff6ff; color: var(--dd-accent-blue); }
+.dd-badge-yellow { background: #fffbeb; color: #d97706; }
+.dd-badge-gray   { background: #f3f4f6; color: #6b7280; }
+
+/* Tables */
+.dd-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 16px 0; }
+.dd-table thead th {
+  background: #1e293b; color: #fff;
+  padding: 12px 16px; text-align: left; font-weight: 600;
+}
+.dd-table tbody td {
+  padding: 10px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+.dd-table tbody tr:hover td { background: #f9fafb; }
+.dd-table .dd-winner td { background: #f0fdf4 !important; }
+.dd-table .dd-loser td  { background: #fef2f2 !important; }
+
+/* Metrics */
+.dd-metric { font-size: 32px; font-weight: 700; color: var(--dd-accent-blue); }
+.dd-metric-label { font-size: 13px; color: var(--dd-text-muted); }
+
+/* Recommendation box */
+.dd-rec {
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  color: white; border-radius: 12px;
+  padding: 24px; margin: 24px 0;
+}
+.dd-rec h3 { color: white; margin-top: 0; }
+
+/* Callouts */
+.dd-callout {
+  background: #fef3c7; border: 1px solid var(--dd-accent-yellow);
+  border-radius: 12px; padding: 20px; margin: 16px 0;
+}
+.dd-callout-red { background: #fef2f2; border-color: var(--dd-accent-red); }
+
+/* Typography */
+.dd-section-intro { font-size: 15px; color: var(--dd-text-secondary); margin-bottom: 16px; }
+.dd-note { font-size: 13px; color: var(--dd-text-muted); margin-top: 8px; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dd-card { padding: 16px; }
+  .dd-rec { padding: 20px; }
+  .dd-callout { padding: 16px; }
+}
+
+/* Print */
+@media print {
+  .report-dd nav { display: none !important; }
+  .report-dd .dd-card, .report-dd section { break-inside: avoid; }
+}
