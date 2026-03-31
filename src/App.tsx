@@ -71,10 +71,10 @@ function App() {
                 <Route path="klonujte-firmu" element={<CloneYourBusinessPage />} />
             </Route>
 
-            {/* Report pages — outside PublicLayout (no site Header/Footer) */}
-            <Route path="reports/roatan-seo-audit" element={<RoatanReportPage />} />
-            <Route path="reports/dd-dataroom-analyza" element={<DDDataroomPage />} />
-            <Route path="reports/dd-agent-scoping" element={<DDScopingPage />} />
+            {/* Report pages — temporarily disabled per client request */}
+            {/* <Route path="reports/roatan-seo-audit" element={<RoatanReportPage />} /> */}
+            {/* <Route path="reports/dd-dataroom-analyza" element={<DDDataroomPage />} /> */}
+            {/* <Route path="reports/dd-agent-scoping" element={<DDScopingPage />} /> */}
 
           </Route>
 
