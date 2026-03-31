@@ -83,7 +83,9 @@
   color: white; border-radius: 12px;
   padding: 24px; margin: 24px 0;
 }
-.dd-rec h3 { color: white; margin-top: 0; }
+.dd-rec h3 { color: white; margin-top: 0; font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+.dd-rec strong { color: white; font-weight: 700; }
+.dd-rec p { color: rgba(255,255,255,0.92); margin: 12px 0; line-height: 1.6; }
 
 /* Callouts */
 .dd-callout {

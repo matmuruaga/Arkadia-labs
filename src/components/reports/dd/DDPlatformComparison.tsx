@@ -21,7 +21,7 @@ const DDPlatformComparison: React.FC = () => {
                 <tr>
                   <th>Kritérium</th>
                   {platformHeaders.map((header, idx) => (
-                    <th key={header} style={{ color: PLATFORM_COLORS[idx] }}>
+                    <th key={header} style={{ background: PLATFORM_COLORS[idx], color: '#fff' }}>
                       {header}
                     </th>
                   ))}
