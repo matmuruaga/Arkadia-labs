@@ -71,8 +71,9 @@ function App() {
                 <Route path="klonujte-firmu" element={<CloneYourBusinessPage />} />
             </Route>
 
-            {/* Report pages — temporarily disabled per client request */}
-            {/* <Route path="reports/roatan-seo-audit" element={<RoatanReportPage />} /> */}
+            {/* Report pages — outside PublicLayout (no site Header/Footer) */}
+            <Route path="reports/roatan-seo-audit" element={<RoatanReportPage />} />
+            {/* Temporarily disabled per client request */}
             {/* <Route path="reports/dd-dataroom-analyza" element={<DDDataroomPage />} /> */}
             {/* <Route path="reports/dd-agent-scoping" element={<DDScopingPage />} /> */}
 
