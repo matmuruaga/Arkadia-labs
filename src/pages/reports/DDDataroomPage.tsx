@@ -17,7 +17,7 @@ import DDPlatformComparison from '@/components/reports/dd/DDPlatformComparison';
 import DDScoring from '@/components/reports/dd/DDScoring';
 import DDRecommendation from '@/components/reports/dd/DDRecommendation';
 import DDImplementationPlan from '@/components/reports/dd/DDImplementationPlan';
-import DDCosts from '@/components/reports/dd/DDCosts';
+
 import DDRoi from '@/components/reports/dd/DDRoi';
 import DDBlockers from '@/components/reports/dd/DDBlockers';
 import DDFooter from '@/components/reports/dd/DDFooter';
@@ -49,7 +49,7 @@ const DDDataroomPage: React.FC = () => {
         <DDScoring />
         <DDRecommendation />
         <DDImplementationPlan />
-        <DDCosts />
+
         <DDRoi />
         <DDBlockers />
         <DDFooter />

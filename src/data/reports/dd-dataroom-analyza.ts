@@ -149,7 +149,6 @@ export const navSections: NavSection[] = [
   { id: 'scoring', label: '7. Scoring matice' },
   { id: 'doporuceni', label: '8. Doporučení' },
   { id: 'plan', label: '9. Implementační plán' },
-  { id: 'naklady', label: '10. Odhad nákladů' },
   { id: 'roi', label: '11. ROI' },
   { id: 'blokery', label: '12. Akční body a blokery' },
 ];
