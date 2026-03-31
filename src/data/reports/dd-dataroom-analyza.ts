@@ -131,7 +131,7 @@ export interface BlockerRow {
 
 export const reportMeta: ReportMeta = {
   title: 'DD Dataroom AI Agent — Analýza platforem',
-  subtitle: 'Arkadia Labs | 30. 3. 2026 v2 (revidováno) | DD Nový Zeleneč pro Skupinu Progresus',
+  subtitle: 'Arkadia Labs & Able | 30. 3. 2026 v2 (revidováno) | DD Nový Zeleneč pro Skupinu Progresus',
   label: 'DD Dataroom AI Agent — Analýza platforem a porovnání v2',
 };
 
@@ -839,4 +839,4 @@ export const blockerRows: BlockerRow[] = [
 // ---------------------------------------------------------------------------
 
 export const footerText: string =
-  'Arkadia Labs | Připravil Karel Duchoň | 30. 3. 2026 v2 | DŮVĚRNÉ — Pro interní použití Able + Arkadia';
+  'Arkadia Labs & Able | Připravil Karel Duchoň | 30. 3. 2026 v2 | DŮVĚRNÉ — Pro interní použití Able + Arkadia';
