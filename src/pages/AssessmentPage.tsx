@@ -1,6 +1,6 @@
 // src/pages/AssessmentPage.tsx
 import { useReducer, useEffect } from 'react';
-import { useParams, useLocation, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { trackPageView, trackAssessmentStart, trackAssessmentStep, trackAssessmentAnswer, trackAssessmentResult } from '@/utils/dataLayer';
 import {
@@ -93,17 +93,30 @@ function assessmentReducer(state: AssessmentState, action: AssessmentAction): As
   }
 }
 
+function getStepParam(step: Step, questionIndex: number): string {
+  if (step === 'intro') return 'intro';
+  if (step === 'question') return `q${questionIndex + 1}`;
+  return step; // 'form' | 'result'
+}
+
 const AssessmentPage = () => {
   const { i18n } = useTranslation('assessment');
-  const location = useLocation();
   const navigate = useNavigate();
   const { lang } = useParams<{ lang: string }>();
   const [state, dispatch] = useReducer(assessmentReducer, initialState);
   const level = getMaturityLevel(state.score);
 
+  // Sync URL query param with current step (replaceState to avoid history pollution)
   useEffect(() => {
-    trackPageView(location.pathname, 'BPO Assessment', i18n.language);
-  }, [location.pathname, i18n.language]);
+    const stepParam = getStepParam(state.currentStep, state.questionIndex);
+    const basePath = `/${lang}/bpo-assessment`;
+    const newUrl = stepParam === 'intro' ? basePath : `${basePath}?step=${stepParam}`;
+    window.history.replaceState(null, '', newUrl);
+
+    // Fire virtual pageview for each step so GA4 captures the funnel
+    const virtualPath = stepParam === 'intro' ? `/${lang}/bpo-assessment` : `/${lang}/bpo-assessment?step=${stepParam}`;
+    trackPageView(virtualPath, `BPO Assessment - ${stepParam}`, i18n.language);
+  }, [state.currentStep, state.questionIndex, lang, i18n.language]);
 
   const handleStart = () => {
     trackAssessmentStart(i18n.language);
@@ -131,7 +144,7 @@ const AssessmentPage = () => {
     });
   };
 
-  // Track step views
+  // Track step views (assessment-specific events, separate from pageviews)
   useEffect(() => {
     if (state.currentStep === 'question') {
       const question = assessmentQuestions[state.questionIndex];
