@@ -29,6 +29,8 @@ const CloneYourBusinessPage = lazy(() => import('./pages/CloneYourBusinessPage')
 const RoatanReportPage = lazy(() => import('./pages/reports/RoatanReportPage'));
 const DDDataroomPage = lazy(() => import('./pages/reports/DDDataroomPage'));
 const DDScopingPage = lazy(() => import('./pages/reports/DDScopingPage'));
+const AssessmentPage = lazy(() => import('./pages/AssessmentPage'));
+const AssessmentThankYouPage = lazy(() => import('./pages/AssessmentThankYouPage'));
 
 
 /**
@@ -69,6 +71,8 @@ function App() {
                 <Route path="clone-your-business" element={<CloneYourBusinessPage />} />
                 <Route path="clona-tu-empresa" element={<CloneYourBusinessPage />} />
                 <Route path="klonujte-firmu" element={<CloneYourBusinessPage />} />
+                <Route path="bpo-assessment" element={<AssessmentPage />} />
+                <Route path="bpo-assessment/thank-you" element={<AssessmentThankYouPage />} />
             </Route>
 
             {/* Report pages — outside PublicLayout (no site Header/Footer) */}
