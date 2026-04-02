@@ -142,8 +142,8 @@ const AssessmentPage = () => {
   return (
     <>
       <SEO
-        titleKey="assessment.title"
-        descriptionKey="assessment.description"
+        titleKey="seo.assessment.title"
+        descriptionKey="seo.assessment.description"
         path="/bpo-assessment"
         noindex={state.currentStep === 'result'}
       />
@@ -176,7 +176,7 @@ const AssessmentPage = () => {
         {state.currentStep === 'form' && (
           <AssessmentForm
             onSubmitSuccess={handleFormSuccess}
-            assessmentMeta={{ score: state.score, level, painPoint: state.painPoint }}
+            assessmentMeta={{ score: state.score, level, painPoint: state.painPoint, answers: state.answers }}
           />
         )}
 

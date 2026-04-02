@@ -115,10 +115,3 @@ export function getPainPoint(answers: Record<number, number>): string | null {
   if (selectedOption === undefined) return null;
   return assessmentQuestions[painQuestionIndex].options[selectedOption].tag || null;
 }
-
-export const MATURITY_COLORS: Record<MaturityLevel, string> = {
-  initial: 'orange-500',
-  developing: 'yellow-500',
-  advanced: 'emerald-400',
-  leader: 'green-500',
-};

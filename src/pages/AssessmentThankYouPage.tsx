@@ -39,8 +39,8 @@ const AssessmentThankYouPage = () => {
   return (
     <>
       <SEO
-        titleKey="assessmentThankYou.title"
-        descriptionKey="assessmentThankYou.description"
+        titleKey="seo.assessmentThankYou.title"
+        descriptionKey="seo.assessmentThankYou.description"
         path="/bpo-assessment/thank-you"
         noindex
       />

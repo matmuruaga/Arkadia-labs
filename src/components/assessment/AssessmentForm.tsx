@@ -31,6 +31,7 @@ interface AssessmentFormProps {
     score: number;
     level: string;
     painPoint: string | null;
+    answers: Record<number, number>;
   };
 }
 
@@ -104,6 +105,7 @@ const AssessmentForm: React.FC<AssessmentFormProps> = ({ onSubmitSuccess, assess
             score: assessmentMeta.score,
             level: assessmentMeta.level,
             painPoint: assessmentMeta.painPoint,
+            answers: assessmentMeta.answers,
             language: i18n.language,
             timestamp: new Date().toISOString(),
           }),
