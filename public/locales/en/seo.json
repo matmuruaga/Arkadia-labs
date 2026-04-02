@@ -52,6 +52,14 @@
     "cloneYourBusiness": {
       "title": "Clone Your Business with AI — Automate Entire Departments",
       "description": "Deploy AI agents that clone entire business departments — sales, support, marketing, and operations. Automate 99% of your processes without changing your workflow. No technical expertise required."
+    },
+    "assessment": {
+      "title": "AI Maturity Assessment for BPOs",
+      "description": "Assess how ready your BPO is to automate with artificial intelligence. Free 2-minute test with personalized recommendations."
+    },
+    "assessmentThankYou": {
+      "title": "Your AI Assessment Result",
+      "description": "Thank you for completing the AI maturity assessment. Review your result and schedule a free call."
     }
   }
 }

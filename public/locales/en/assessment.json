@@ -1,0 +1,154 @@
+{
+  "intro": {
+    "headline": "Is your BPO ready to automate with AI?",
+    "description": "Find out in 2 minutes with this free assessment. Answer 7 simple questions and get a personalized diagnosis with recommendations for your operation.",
+    "duration": "2 minutes",
+    "cta": "Start assessment"
+  },
+  "progress": "Question {{current}} of {{total}}",
+  "back": "Back",
+  "questions": {
+    "q1": {
+      "title": "How many agents does your operation currently have?",
+      "options": { "a": "Less than 50", "b": "50-150", "c": "150-300", "d": "More than 300" }
+    },
+    "q2": {
+      "title": "How do you monitor the quality of customer interactions?",
+      "options": {
+        "a": "We don't have a formal QA process",
+        "b": "Manual call listening by supervisors (random sample)",
+        "c": "We have a dedicated QA team with scorecards",
+        "d": "We use speech analytics or automated recording tools"
+      }
+    },
+    "q3": {
+      "title": "How do you handle demand peaks or night shifts?",
+      "options": {
+        "a": "We hire temporary agents when there are peaks",
+        "b": "We have rotating shifts but struggle to cover nights/weekends",
+        "c": "We use IVR or automated menus to deflect simple calls",
+        "d": "We have chatbots or voicebots for basic 24/7 queries"
+      }
+    },
+    "q4": {
+      "title": "How long does it take a new agent to be 100% productive?",
+      "options": {
+        "a": "More than 4 weeks",
+        "b": "2-4 weeks",
+        "c": "1-2 weeks",
+        "d": "Less than 1 week (we have an optimized process)"
+      }
+    },
+    "q5": {
+      "title": "What tools do you use to manage your operation?",
+      "options": {
+        "a": "Mainly Excel/Google Sheets and basic tools",
+        "b": "Basic CRM (HubSpot free, Zoho, etc.) + telephony",
+        "c": "Advanced CRM + telephony + workforce management tools",
+        "d": "Integrated suite with analytics, AI, and process automation"
+      }
+    },
+    "q6": {
+      "title": "What is your biggest operational challenge today?",
+      "options": {
+        "a": "High staff turnover and hiring costs",
+        "b": "Maintaining consistent quality with current volume",
+        "c": "Scaling operations without proportionally increasing costs",
+        "d": "Lack of visibility and data for decision-making"
+      }
+    },
+    "q7": {
+      "title": "Have you explored using artificial intelligence in your operation?",
+      "options": {
+        "a": "No, we haven't considered AI yet",
+        "b": "We've discussed it but haven't implemented anything",
+        "c": "We're evaluating AI tools or providers",
+        "d": "We already use AI in at least one process"
+      }
+    }
+  },
+  "form": {
+    "title": "Almost there — get your personalized result",
+    "subtitle": "Fill in your details to see your AI maturity diagnosis.",
+    "labels": { "fullName": "Full name", "email": "Corporate email", "company": "Company", "country": "Country" },
+    "placeholders": { "fullName": "Your full name", "email": "name@company.com", "company": "Your company name" },
+    "validation": {
+      "fullName": "Enter your full name (minimum 3 characters)",
+      "email": "Enter a valid email address",
+      "company": "Enter your company name",
+      "country": "Select your country"
+    },
+    "countries": {
+      "guatemala": "Guatemala", "honduras": "Honduras", "el_salvador": "El Salvador",
+      "costa_rica": "Costa Rica", "panama": "Panama", "nicaragua": "Nicaragua",
+      "belice": "Belize", "other": "Other"
+    },
+    "submit": "See my result",
+    "submitting": "Submitting...",
+    "error": "There was an error submitting. Please try again."
+  },
+  "result": {
+    "title": "Your result",
+    "scoreLabel": "Your score",
+    "of": "of",
+    "levelLabel": "Maturity level",
+    "recommendationsTitle": "Recommendations for your operation",
+    "painPointTitle": "Personalized recommendation",
+    "shareCta": "Share on WhatsApp",
+    "shareText": "I just assessed my BPO's AI maturity. Want to find out how yours is doing?",
+    "cta": "Schedule a free call to dive deeper",
+    "levels": {
+      "initial": {
+        "name": "Initial",
+        "description": "Your operation has significant automation opportunities. There's great potential to improve efficiency and reduce costs with AI.",
+        "recommendations": [
+          "Start by automating quality monitoring — AI can evaluate 100% of interactions without adding staff",
+          "Implement a chatbot for frequent tier-1 queries to reduce call volume",
+          "Digitize shift scheduling with workforce management tools"
+        ]
+      },
+      "developing": {
+        "name": "Developing",
+        "description": "You have solid foundations, but there are key processes that can be optimized with AI to make the next leap in efficiency.",
+        "recommendations": [
+          "Implement AI speech analytics to detect improvement patterns in real time",
+          "Automate agent onboarding with AI simulations that reduce ramp-up time",
+          "Create automated dashboards to eliminate manual reporting"
+        ]
+      },
+      "advanced": {
+        "name": "Advanced",
+        "description": "Good operational maturity. AI can take you to the next level of competitiveness and market differentiation.",
+        "recommendations": [
+          "Integrate predictive AI to anticipate demand peaks and optimize scheduling",
+          "Implement automated agent coaching based on conversation analysis",
+          "Explore AI voicebots for full-service coverage during low-demand hours"
+        ]
+      },
+      "leader": {
+        "name": "Leader",
+        "description": "Mature and well-equipped operation. AI would help you differentiate competitively and lead the transformation in the industry.",
+        "recommendations": [
+          "Develop proprietary AI models trained on your operation's data",
+          "Create end-to-end automation flows connecting CRM, telephony, and QA",
+          "Implement AI for proactive churn detection and upselling"
+        ]
+      }
+    },
+    "painPoints": {
+      "rotacion": "Since turnover is your biggest pain point, we recommend prioritizing onboarding automation. We've seen BPOs reduce ramp-up time from 4 weeks to 5 days using AI simulations and real-time feedback.",
+      "calidad": "If maintaining quality is your priority, AI interaction monitoring is the first step. Going from reviewing 5% to 100% of calls transforms service consistency.",
+      "escalar": "To scale without increasing costs, the key is automating repetitive tier-1 interactions. An AI voicebot can handle up to 40% of volume without human intervention.",
+      "datos": "If you lack visibility, start with AI-powered automated dashboards. We've helped BPOs go from weekly manual reports to real-time insights."
+    }
+  },
+  "thankYou": {
+    "title": "Thank you for completing the assessment!",
+    "subtitle": "We'll send your detailed results to your email.",
+    "summary": "Your level: {{level}} ({{score}} points out of 28)",
+    "schedulerTitle": "Want to dive deeper into your results?",
+    "schedulerDescription": "Schedule a free 30-minute call with our team to review your diagnosis and explore how AI can transform your operation.",
+    "schedulerButton": "Schedule a free call",
+    "backLink": "Back to home"
+  }
+}

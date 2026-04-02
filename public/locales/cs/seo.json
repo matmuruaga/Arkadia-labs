@@ -52,6 +52,14 @@
     "cloneYourBusiness": {
       "title": "Klonujte svou firmu s AI — Automatizujte celá oddělení",
       "description": "Nasaďte AI agenty, kteří klonují celá firemní oddělení — obchod, podporu, marketing a provoz. Automatizujte 99 % procesů bez změny pracovního postupu a bez technických znalostí."
+    },
+    "assessment": {
+      "title": "Hodnocení AI vyspělosti pro BPO",
+      "description": "Ohodnoťte, jak připravené je vaše BPO na automatizaci s umělou inteligencí. Bezplatný 2minutový test s personalizovanými doporučeními."
+    },
+    "assessmentThankYou": {
+      "title": "Výsledek vašeho AI hodnocení",
+      "description": "Děkujeme za dokončení hodnocení AI vyspělosti. Prohlédněte si výsledek a naplánujte bezplatný hovor."
     }
   }
 }

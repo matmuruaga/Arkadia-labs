@@ -52,6 +52,14 @@
     "cloneYourBusiness": {
       "title": "Clona tu Empresa con IA",
       "description": "Automatiza el 99% de tus procesos con agentes de IA que clonan departamentos enteros. Ventas, soporte, marketing y operaciones en piloto automático — sin cambiar tu flujo de trabajo."
+    },
+    "assessment": {
+      "title": "Evaluación de Madurez AI para BPOs",
+      "description": "Evaluá qué tan preparado está tu BPO para automatizar con inteligencia artificial. Test gratuito de 2 minutos con recomendaciones personalizadas."
+    },
+    "assessmentThankYou": {
+      "title": "Resultado de tu Evaluación AI",
+      "description": "Gracias por completar la evaluación de madurez AI. Revisá tu resultado y agendá una llamada gratuita."
     }
   }
 }

@@ -1,0 +1,173 @@
+{
+  "intro": {
+    "headline": "¿Está tu BPO listo para automatizar con AI?",
+    "description": "Descubrilo en 2 minutos con esta evaluación gratuita. Respondé 7 preguntas simples y recibí un diagnóstico personalizado con recomendaciones para tu operación.",
+    "duration": "2 minutos",
+    "cta": "Comenzar evaluación"
+  },
+  "progress": "Pregunta {{current}} de {{total}}",
+  "back": "Atrás",
+  "questions": {
+    "q1": {
+      "title": "¿Cuántos agentes tiene tu operación actualmente?",
+      "options": {
+        "a": "Menos de 50",
+        "b": "50-150",
+        "c": "150-300",
+        "d": "Más de 300"
+      }
+    },
+    "q2": {
+      "title": "¿Cómo monitorean la calidad de las interacciones con clientes?",
+      "options": {
+        "a": "No tenemos un proceso formal de QA",
+        "b": "Escucha manual de llamadas por supervisores (muestra aleatoria)",
+        "c": "Tenemos un equipo de QA dedicado con scorecards",
+        "d": "Usamos herramientas de speech analytics o grabación automatizada"
+      }
+    },
+    "q3": {
+      "title": "¿Cómo manejan los picos de demanda o los turnos nocturnos?",
+      "options": {
+        "a": "Contratamos agentes temporales cuando hay picos",
+        "b": "Tenemos turnos rotativos pero nos cuesta cubrir noches/fines de semana",
+        "c": "Usamos IVR o menús automatizados para desviar llamadas simples",
+        "d": "Tenemos chatbots o voicebots para atender consultas básicas 24/7"
+      }
+    },
+    "q4": {
+      "title": "¿Cuánto tiempo tarda un nuevo agente en estar 100% productivo?",
+      "options": {
+        "a": "Más de 4 semanas",
+        "b": "2-4 semanas",
+        "c": "1-2 semanas",
+        "d": "Menos de 1 semana (tenemos un proceso optimizado)"
+      }
+    },
+    "q5": {
+      "title": "¿Qué herramientas usan para gestionar la operación?",
+      "options": {
+        "a": "Principalmente Excel/Google Sheets y herramientas básicas",
+        "b": "CRM básico (HubSpot free, Zoho, etc.) + telefonía",
+        "c": "CRM avanzado + telefonía + herramientas de workforce management",
+        "d": "Suite integrada con analytics, AI, y automatización de procesos"
+      }
+    },
+    "q6": {
+      "title": "¿Cuál es el mayor desafío operativo que enfrentan hoy?",
+      "options": {
+        "a": "Alta rotación de personal y costos de contratación",
+        "b": "Mantener la calidad constante con el volumen actual",
+        "c": "Escalar la operación sin aumentar costos proporcionalmente",
+        "d": "Falta de visibilidad y datos para tomar decisiones"
+      }
+    },
+    "q7": {
+      "title": "¿Han explorado el uso de inteligencia artificial en su operación?",
+      "options": {
+        "a": "No, no hemos considerado AI todavía",
+        "b": "Lo hemos discutido pero no hemos implementado nada",
+        "c": "Estamos evaluando herramientas o proveedores de AI",
+        "d": "Ya usamos AI en al menos un proceso"
+      }
+    }
+  },
+  "form": {
+    "title": "Casi listo: recibí tu resultado personalizado",
+    "subtitle": "Completá tus datos para ver tu diagnóstico de madurez AI.",
+    "labels": {
+      "fullName": "Nombre completo",
+      "email": "Email corporativo",
+      "company": "Empresa",
+      "country": "País"
+    },
+    "placeholders": {
+      "fullName": "Tu nombre completo",
+      "email": "nombre@empresa.com",
+      "company": "Nombre de tu empresa"
+    },
+    "validation": {
+      "fullName": "Ingresá tu nombre completo (mínimo 3 caracteres)",
+      "email": "Ingresá un email válido",
+      "company": "Ingresá el nombre de tu empresa",
+      "country": "Seleccioná tu país"
+    },
+    "countries": {
+      "guatemala": "Guatemala",
+      "honduras": "Honduras",
+      "el_salvador": "El Salvador",
+      "costa_rica": "Costa Rica",
+      "panama": "Panamá",
+      "nicaragua": "Nicaragua",
+      "belice": "Belice",
+      "other": "Otro"
+    },
+    "submit": "Ver mi resultado",
+    "submitting": "Enviando...",
+    "error": "Hubo un error al enviar. Por favor intentá de nuevo."
+  },
+  "result": {
+    "title": "Tu resultado",
+    "scoreLabel": "Tu puntaje",
+    "of": "de",
+    "levelLabel": "Nivel de madurez",
+    "recommendationsTitle": "Recomendaciones para tu operación",
+    "painPointTitle": "Recomendación personalizada",
+    "shareCta": "Compartir por WhatsApp",
+    "shareText": "Acabo de evaluar la madurez AI de mi BPO. ¿Querés saber cómo está el tuyo?",
+    "cta": "Agendá una llamada gratuita para profundizar",
+    "levels": {
+      "initial": {
+        "name": "Inicial",
+        "description": "Tu operación tiene oportunidades significativas de automatización. Hay mucho potencial para mejorar eficiencia y reducir costos con AI.",
+        "recommendations": [
+          "Empezar por automatizar el monitoreo de calidad — AI puede evaluar el 100% de las interacciones sin agregar personal",
+          "Implementar un chatbot para consultas frecuentes de tier-1 y reducir volumen de llamadas",
+          "Digitalizar la programación de turnos con herramientas de workforce management"
+        ]
+      },
+      "developing": {
+        "name": "En desarrollo",
+        "description": "Tienen bases sólidas, pero hay procesos clave que se pueden optimizar con AI para dar el siguiente salto en eficiencia.",
+        "recommendations": [
+          "Implementar speech analytics con AI para detectar patrones de mejora en tiempo real",
+          "Automatizar el onboarding de agentes con simulaciones AI que reducen el tiempo de ramp-up",
+          "Crear dashboards automáticos que eliminen la reportería manual"
+        ]
+      },
+      "advanced": {
+        "name": "Avanzado",
+        "description": "Buena madurez operativa. AI puede llevarlos al siguiente nivel de competitividad y diferenciación en el mercado.",
+        "recommendations": [
+          "Integrar AI predictiva para anticipar picos de demanda y optimizar scheduling",
+          "Implementar coaching automatizado de agentes basado en análisis de conversaciones",
+          "Explorar voicebots con AI para atención completa en horarios de baja demanda"
+        ]
+      },
+      "leader": {
+        "name": "Líder",
+        "description": "Operación madura y bien equipada. AI los ayudaría a diferenciarse competitivamente y liderar la transformación en la industria.",
+        "recommendations": [
+          "Desarrollar modelos propietarios de AI entrenados con los datos de tu operación",
+          "Crear flujos de automatización end-to-end que conecten CRM, telefonía, y QA",
+          "Implementar AI para detección proactiva de churn y upselling"
+        ]
+      }
+    },
+    "painPoints": {
+      "rotacion": "Dado que la rotación es tu mayor dolor, te recomendamos priorizar la automatización del onboarding. Hemos visto BPOs reducir el tiempo de ramp-up de 4 semanas a 5 días usando AI para simulaciones y feedback en tiempo real.",
+      "calidad": "Si mantener la calidad es tu prioridad, el monitoreo AI de interacciones es el primer paso. Pasar de revisar el 5% al 100% de las llamadas transforma la consistencia del servicio.",
+      "escalar": "Para escalar sin aumentar costos, la clave es automatizar las interacciones repetitivas de tier-1. Un voicebot AI puede manejar hasta el 40% del volumen sin intervención humana.",
+      "datos": "Si te falta visibilidad, empezá por dashboards automáticos con AI. Hemos ayudado a BPOs a pasar de reportes manuales semanales a insights en tiempo real."
+    }
+  },
+  "thankYou": {
+    "title": "¡Gracias por completar la evaluación!",
+    "subtitle": "Te enviamos tu resultado detallado por email.",
+    "summary": "Tu nivel: {{level}} ({{score}} puntos de 28)",
+    "schedulerTitle": "¿Querés profundizar en tus resultados?",
+    "schedulerDescription": "Agendá una llamada gratuita de 30 minutos con nuestro equipo para revisar tu diagnóstico y explorar cómo AI puede transformar tu operación.",
+    "schedulerButton": "Agendar llamada gratuita",
+    "backLink": "Volver al inicio"
+  }
+}

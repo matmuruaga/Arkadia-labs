@@ -1,0 +1,62 @@
+{
+  "intro": {
+    "headline": "Je vaše BPO připraveno na automatizaci s AI?",
+    "description": "Zjistěte to za 2 minuty s tímto bezplatným hodnocením. Odpovězte na 7 jednoduchých otázek a získejte personalizovanou diagnózu s doporučeními pro vaši operaci.",
+    "duration": "2 minuty",
+    "cta": "Zahájit hodnocení"
+  },
+  "progress": "Otázka {{current}} z {{total}}",
+  "back": "Zpět",
+  "questions": {
+    "q1": { "title": "Kolik agentů má vaše operace aktuálně?", "options": { "a": "Méně než 50", "b": "50-150", "c": "150-300", "d": "Více než 300" } },
+    "q2": { "title": "Jak monitorujete kvalitu interakcí se zákazníky?", "options": { "a": "Nemáme formální proces QA", "b": "Manuální odposlech hovorů supervizory (náhodný vzorek)", "c": "Máme dedikovaný QA tým se scorecards", "d": "Používáme nástroje speech analytics nebo automatizované nahrávání" } },
+    "q3": { "title": "Jak zvládáte špičky poptávky nebo noční směny?", "options": { "a": "Najímáme dočasné agenty při špičkách", "b": "Máme rotační směny, ale obtížně pokrýváme noci/víkendy", "c": "Používáme IVR nebo automatizované menu pro přesměrování jednoduchých hovorů", "d": "Máme chatboty nebo voiceboty pro základní dotazy 24/7" } },
+    "q4": { "title": "Jak dlouho trvá, než je nový agent 100% produktivní?", "options": { "a": "Více než 4 týdny", "b": "2-4 týdny", "c": "1-2 týdny", "d": "Méně než 1 týden (máme optimalizovaný proces)" } },
+    "q5": { "title": "Jaké nástroje používáte k řízení operace?", "options": { "a": "Především Excel/Google Sheets a základní nástroje", "b": "Základní CRM (HubSpot free, Zoho, atd.) + telefonie", "c": "Pokročilé CRM + telefonie + nástroje workforce managementu", "d": "Integrovaná suite s analytikou, AI a automatizací procesů" } },
+    "q6": { "title": "Jaká je vaše největší provozní výzva dnes?", "options": { "a": "Vysoká fluktuace zaměstnanců a náklady na nábor", "b": "Udržení konzistentní kvality při současném objemu", "c": "Škálování operace bez proporcionálního zvyšování nákladů", "d": "Nedostatek viditelnosti a dat pro rozhodování" } },
+    "q7": { "title": "Zkoumali jste využití umělé inteligence ve vaší operaci?", "options": { "a": "Ne, zatím jsme AI nezvažovali", "b": "Diskutovali jsme o tom, ale nic jsme neimplementovali", "c": "Vyhodnocujeme nástroje nebo poskytovatele AI", "d": "Již používáme AI alespoň v jednom procesu" } }
+  },
+  "form": {
+    "title": "Téměř hotovo — získejte svůj personalizovaný výsledek",
+    "subtitle": "Vyplňte své údaje pro zobrazení diagnózy AI vyspělosti.",
+    "labels": { "fullName": "Celé jméno", "email": "Firemní email", "company": "Společnost", "country": "Země" },
+    "placeholders": { "fullName": "Vaše celé jméno", "email": "jmeno@firma.cz", "company": "Název vaší společnosti" },
+    "validation": { "fullName": "Zadejte celé jméno (minimálně 3 znaky)", "email": "Zadejte platnou emailovou adresu", "company": "Zadejte název společnosti", "country": "Vyberte svou zemi" },
+    "countries": { "guatemala": "Guatemala", "honduras": "Honduras", "el_salvador": "El Salvador", "costa_rica": "Kostarika", "panama": "Panama", "nicaragua": "Nikaragua", "belice": "Belize", "other": "Jiná" },
+    "submit": "Zobrazit výsledek",
+    "submitting": "Odesílání...",
+    "error": "Při odesílání došlo k chybě. Zkuste to prosím znovu."
+  },
+  "result": {
+    "title": "Váš výsledek",
+    "scoreLabel": "Vaše skóre",
+    "of": "z",
+    "levelLabel": "Úroveň vyspělosti",
+    "recommendationsTitle": "Doporučení pro vaši operaci",
+    "painPointTitle": "Personalizované doporučení",
+    "shareCta": "Sdílet přes WhatsApp",
+    "shareText": "Právě jsem ohodnotil AI vyspělost mého BPO. Chcete zjistit, jak je na tom to vaše?",
+    "cta": "Naplánovat bezplatný hovor pro hlubší analýzu",
+    "levels": {
+      "initial": { "name": "Počáteční", "description": "Vaše operace má významné příležitosti k automatizaci. Je zde velký potenciál pro zlepšení efektivity a snížení nákladů pomocí AI.", "recommendations": ["Začněte automatizací monitorování kvality — AI dokáže vyhodnotit 100% interakcí bez přidávání personálu", "Implementujte chatbota pro časté dotazy tier-1 ke snížení objemu hovorů", "Digitalizujte plánování směn pomocí nástrojů workforce managementu"] },
+      "developing": { "name": "Ve vývoji", "description": "Máte solidní základy, ale existují klíčové procesy, které lze optimalizovat pomocí AI pro další skok v efektivitě.", "recommendations": ["Implementujte AI speech analytics pro detekci vzorců zlepšení v reálném čase", "Automatizujte onboarding agentů pomocí AI simulací, které zkracují dobu zapracování", "Vytvořte automatizované dashboardy, které eliminují manuální reportování"] },
+      "advanced": { "name": "Pokročilý", "description": "Dobrá provozní vyspělost. AI vás může posunout na další úroveň konkurenceschopnosti a diferenciace na trhu.", "recommendations": ["Integrujte prediktivní AI pro předvídání špiček poptávky a optimalizaci plánování", "Implementujte automatizovaný coaching agentů založený na analýze konverzací", "Prozkoumejte AI voiceboty pro kompletní obsluhu v hodinách nízké poptávky"] },
+      "leader": { "name": "Lídr", "description": "Vyspělá a dobře vybavená operace. AI by vám pomohlo se konkurenčně odlišit a vést transformaci v odvětví.", "recommendations": ["Vyviňte proprietární AI modely trénované na datech vaší operace", "Vytvořte end-to-end automatizační toky propojující CRM, telefonii a QA", "Implementujte AI pro proaktivní detekci odchodu zákazníků a upselling"] }
+    },
+    "painPoints": {
+      "rotacion": "Vzhledem k tomu, že fluktuace je vaším největším problémem, doporučujeme prioritizovat automatizaci onboardingu. Viděli jsme BPO, které zkrátily dobu zapracování ze 4 týdnů na 5 dní pomocí AI simulací a zpětné vazby v reálném čase.",
+      "calidad": "Pokud je udržení kvality vaší prioritou, AI monitoring interakcí je prvním krokem. Přechod z kontroly 5% na 100% hovorů transformuje konzistenci služeb.",
+      "escalar": "Pro škálování bez zvyšování nákladů je klíčem automatizace opakujících se interakcí tier-1. AI voicebot zvládne až 40% objemu bez lidského zásahu.",
+      "datos": "Pokud vám chybí viditelnost, začněte s automatizovanými AI dashboardy. Pomohli jsme BPO přejít od týdenních manuálních reportů k insightům v reálném čase."
+    }
+  },
+  "thankYou": {
+    "title": "Děkujeme za dokončení hodnocení!",
+    "subtitle": "Podrobné výsledky vám zašleme na email.",
+    "summary": "Vaše úroveň: {{level}} ({{score}} bodů z 28)",
+    "schedulerTitle": "Chcete se ponořit hlouběji do výsledků?",
+    "schedulerDescription": "Naplánujte si bezplatný 30minutový hovor s naším týmem pro revizi vaší diagnózy a prozkoumání, jak AI může transformovat vaši operaci.",
+    "schedulerButton": "Naplánovat bezplatný hovor",
+    "backLink": "Zpět na úvod"
+  }
+}
