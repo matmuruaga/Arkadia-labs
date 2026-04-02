@@ -570,6 +570,70 @@ export const trackTestimonialInteraction = (action: 'next' | 'previous' | 'click
 };
 
 // ============================================================================
+// ASSESSMENT EVENTS
+// ============================================================================
+
+/**
+ * Track assessment start (user clicks "Begin")
+ */
+export const trackAssessmentStart = (language: string) => {
+  pushToDataLayer({
+    event: 'assessment_start',
+    assessment_type: 'bpo_ai_maturity',
+    language: language,
+  });
+};
+
+/**
+ * Track assessment step view
+ */
+export const trackAssessmentStep = (stepNumber: number, questionId: string) => {
+  pushToDataLayer({
+    event: 'assessment_step',
+    assessment_type: 'bpo_ai_maturity',
+    step_number: stepNumber,
+    question_id: questionId,
+  });
+};
+
+/**
+ * Track assessment question answered (no PII — only question ID and option index)
+ */
+export const trackAssessmentAnswer = (questionId: string, optionIndex: number) => {
+  pushToDataLayer({
+    event: 'assessment_answer',
+    assessment_type: 'bpo_ai_maturity',
+    question_id: questionId,
+    option_index: optionIndex,
+  });
+};
+
+/**
+ * Track assessment result viewed
+ */
+export const trackAssessmentResult = (score: number, level: string, painPoint: string | null) => {
+  pushToDataLayer({
+    event: 'assessment_result',
+    assessment_type: 'bpo_ai_maturity',
+    assessment_score: score,
+    assessment_level: level,
+    assessment_pain_point: painPoint || 'none',
+  });
+};
+
+/**
+ * Track assessment share action
+ */
+export const trackAssessmentShare = (method: string, location: string) => {
+  pushToDataLayer({
+    event: 'assessment_share',
+    assessment_type: 'bpo_ai_maturity',
+    share_method: method,
+    share_location: location,
+  });
+};
+
+// ============================================================================
 // EXPORT ALL TRACKING FUNCTIONS
 // ============================================================================
 
@@ -648,4 +712,11 @@ export default {
   trackTimeOnPage,
   trackFeatureComparisonView,
   trackTestimonialInteraction,
+
+  // Assessment
+  trackAssessmentStart,
+  trackAssessmentStep,
+  trackAssessmentAnswer,
+  trackAssessmentResult,
+  trackAssessmentShare,
 };
