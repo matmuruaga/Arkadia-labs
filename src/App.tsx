@@ -83,6 +83,9 @@ function App() {
 
           </Route>
 
+          {/* Redirect /bpo-assessment without lang prefix */}
+          <Route path="bpo-assessment" element={<Navigate to="/en/bpo-assessment" replace />} />
+
           {/* Redirección: si alguien entra a la raíz, lo enviamos a /en por defecto */}
           <Route path="*" element={<Navigate to="/en" replace />} />
         </Routes>
