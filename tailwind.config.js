@@ -27,6 +27,8 @@ export default {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'marquee-left': 'marquee-left var(--marquee-speed, 30s) linear infinite',
         'marquee-right': 'marquee-right var(--marquee-speed, 30s) linear infinite',
+        'fade-in-up': 'fade-in-up 0.4s ease-out both',
+        'pill-appear': 'pill-appear 0.5s ease-out both',
       },
       keyframes: {
         'marquee-left': {
@@ -36,6 +38,14 @@ export default {
         'marquee-right': {
           '0%': { transform: 'translateX(-50%)' },
           '100%': { transform: 'translateX(0)' },
+        },
+        'fade-in-up': {
+          '0%': { opacity: '0', transform: 'translateY(12px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'pill-appear': {
+          '0%': { opacity: '0', transform: 'translateX(-50%) scale(0.85)' },
+          '100%': { opacity: '1', transform: 'translateX(-50%) scale(1)' },
         },
       },
   		borderRadius: {
