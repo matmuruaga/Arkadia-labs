@@ -379,6 +379,19 @@
       "departments": "Departments",
       "availability": "Availability"
     },
-    "cta": "Explore All Solutions"
+    "cta": "Explore All Solutions",
+    "officeAlt": "Isometric office illustration showing AI agents working at their stations",
+    "orchestrator": {
+      "title": "AI Orchestrator",
+      "badge": "Director"
+    },
+    "pills": {
+      "processingLeads": "Processing leads...",
+      "answeringCalls": "Answering calls...",
+      "creatingContent": "Creating content...",
+      "analyzingData": "Analyzing data..."
+    },
+    "agentLabel": "AI Agent",
+    "liveLabel": "Active"
   }
 }

@@ -368,6 +368,19 @@
       "departments": "Oddělení",
       "availability": "Dostupnost"
     },
-    "cta": "Prozkoumat všechna řešení"
+    "cta": "Prozkoumat všechna řešení",
+    "officeAlt": "Izometricka ilustrace kancelare ukazujici AI agenty pracujici na svych stanicich",
+    "orchestrator": {
+      "title": "AI Orchestrator",
+      "badge": "Reditel"
+    },
+    "pills": {
+      "processingLeads": "Zpracovani leadu...",
+      "answeringCalls": "Prijem hovoru...",
+      "creatingContent": "Tvorba obsahu...",
+      "analyzingData": "Analyza dat..."
+    },
+    "agentLabel": "AI Agent",
+    "liveLabel": "Aktivni"
   }
 }

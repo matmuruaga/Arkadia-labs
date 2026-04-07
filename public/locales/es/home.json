@@ -373,6 +373,19 @@
       "departments": "Departamentos",
       "availability": "Disponibilidad"
     },
-    "cta": "Explorar Todas las Soluciones"
+    "cta": "Explorar Todas las Soluciones",
+    "officeAlt": "Ilustracion isometrica de oficina mostrando agentes de IA trabajando en sus estaciones",
+    "orchestrator": {
+      "title": "Orquestador IA",
+      "badge": "Director"
+    },
+    "pills": {
+      "processingLeads": "Procesando leads...",
+      "answeringCalls": "Respondiendo llamadas...",
+      "creatingContent": "Creando contenido...",
+      "analyzingData": "Analizando datos..."
+    },
+    "agentLabel": "Agente IA",
+    "liveLabel": "Activo"
   }
 }
