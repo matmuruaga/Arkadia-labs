@@ -1,5 +1,30 @@
 /* Font movida a <link> en index.html para control de carga y font-display:swap */
 
+/* SkeletonOrgChart: CSS Houdini @property for animatable conic-gradient angle */
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-rotate {
+  to { --border-angle: 360deg; }
+}
+
+@keyframes line-pulse {
+  0%, 100% { background-position: 0% 0%; }
+  50% { background-position: 0% 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aura-node {
+    animation: none !important;
+  }
+  .aura-line {
+    animation: none !important;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
