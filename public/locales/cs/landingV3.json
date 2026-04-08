@@ -46,7 +46,17 @@
       "task3": "Crear calendario de 12 posts para mayo",
       "task4": "Redactar copy + sugerencias de imagen",
       "agentStatus": "El equipo esta trabajando. Te notifico cuando este listo.",
-      "inputPlaceholder": "Ask anything or request work..."
+      "inputPlaceholder": "Zeptejte se na cokoliv nebo zadejte ukol...",
+      "sidebarLogoText": "Arkadia Labs",
+      "sidebarClientSubtitle": "ClientCo Inc.",
+      "sidebarNewConversation": "Nova konverzace",
+      "sidebarConv1": "Plan obsahu na LinkedIn",
+      "sidebarConv2": "Prodejni zprava Q2",
+      "sidebarConv3": "Automatizace sledovani",
+      "sidebarWorkspaceLabel": "Pracovni prostor",
+      "sidebarWorkspaceItem1": "Agenti",
+      "sidebarWorkspaceItem2": "Aktivita",
+      "sidebarWorkspaceItem3": "Nastaveni"
     },
     "agents": {
       "pm": { "name": "PM Agent", "status": "Active", "description": "Coordinating subtasks. Waiting for content pillars to start calendar creation." },
