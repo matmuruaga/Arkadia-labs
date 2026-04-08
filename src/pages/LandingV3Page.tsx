@@ -5,6 +5,7 @@ import SEO from '@/components/SEO';
 import { trackPageView } from '@/utils/dataLayer';
 import HeroProduct from '@/components/landing/HeroProduct';
 import TheShiftSection from '@/components/landing/TheShiftSection';
+import ProductDemo from '@/components/landing/ProductDemo';
 
 const LandingV3Page = () => {
   const { i18n } = useTranslation('landingV3');
@@ -19,6 +20,7 @@ const LandingV3Page = () => {
       <SEO titleKey="seo.home.title" descriptionKey="seo.home.description" path="/v3" />
       <HeroProduct />
       <TheShiftSection />
+      <ProductDemo />
     </>
   );
 };
