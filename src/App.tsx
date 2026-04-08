@@ -31,6 +31,7 @@ const DDDataroomPage = lazy(() => import('./pages/reports/DDDataroomPage'));
 const DDScopingPage = lazy(() => import('./pages/reports/DDScopingPage'));
 const AssessmentPage = lazy(() => import('./pages/AssessmentPage'));
 const AssessmentThankYouPage = lazy(() => import('./pages/AssessmentThankYouPage'));
+const LandingV3Page = lazy(() => import('./pages/LandingV3Page'));
 
 
 /**
@@ -73,6 +74,7 @@ function App() {
                 <Route path="klonujte-firmu" element={<CloneYourBusinessPage />} />
                 <Route path="bpo-assessment" element={<AssessmentPage />} />
                 <Route path="bpo-assessment/thank-you" element={<AssessmentThankYouPage />} />
+                <Route path="v3" element={<LandingV3Page />} />
             </Route>
 
             {/* Report pages — outside PublicLayout (no site Header/Footer) */}

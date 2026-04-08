@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "badge": "Equipos con IA",
+    "title1": "Tu equipo AI.",
+    "title2": "Pideles lo que necesites.",
+    "subtitle": "Construimos equipos de agentes AI que trabajan dentro de tu empresa. Les hablas, les das tareas, y las ejecutan.",
+    "ctaPrimary": "Ver como funciona",
+    "ctaSecondary": "Hablar con el equipo",
+    "check1": "Listo en ~1 mes",
+    "check2": "Sin codigo",
+    "check3": "Humano en el loop"
+  },
+  "theShift": {
+    "label": "ANTES Y DESPUES",
+    "title": "Tu equipo hace mucho.\nPero puede hacer mas con menos.",
+    "before": {
+      "pill1": "47 emails sin responder",
+      "pill2": "Reporte atrasado 3 dias",
+      "pill3": "Lead sin seguimiento",
+      "pill4": "Entrada manual de datos...",
+      "point1": "Tareas repetitivas consumen horas cada semana",
+      "point2": "Talento clave atrapado en lo operativo",
+      "point3": "Conocimiento que se pierde con cada renuncia",
+      "point4": "Procesos que dependen de una persona y no escalan"
+    },
+    "after": {
+      "pill1": "47 emails respondidos",
+      "pill2": "Reporte listo en 4 min",
+      "pill3": "12 leads calificados",
+      "pill4": "Procesando datos...",
+      "point1": "Agentes ejecutan lo repetitivo. Tu equipo piensa.",
+      "point2": "El conocimiento queda en la empresa. Siempre.",
+      "point3": "Escala sin contratar. Pides mas, entregan mas.",
+      "point4": "Operacion 24/7. Los agentes nunca se cansan."
+    }
+  },
+  "productDemo": {
+    "label": "EL PRODUCTO",
+    "title": "Asi se siente tener un equipo AI.",
+    "subtitle": "Tu pides. El equipo ejecuta. Tu revisas.",
+    "chat": {
+      "userMessage": "Crea un plan de contenido para LinkedIn en mayo para mi empresa de consultoria IT",
+      "agentIntro": "Entendido. Descompongo la solicitud en subtareas:",
+      "task1": "Analizar perfil de empresa y competidores",
+      "task2": "Definir pilares de contenido (4 tematicas)",
+      "task3": "Crear calendario de 12 posts para mayo",
+      "task4": "Redactar copy + sugerencias de imagen",
+      "agentStatus": "El equipo esta trabajando. Te notifico cuando este listo.",
+      "inputPlaceholder": "Pide cualquier cosa o solicita trabajo..."
+    },
+    "agents": {
+      "pm": { "name": "Agente PM", "status": "Activo", "description": "Coordinando subtareas. Esperando pilares de contenido para iniciar la creacion del calendario." },
+      "research": { "name": "Agente de Investigacion", "status": "Completado", "description": "Analizo 8 perfiles de competidores. Reporte listo." },
+      "content": { "name": "Agente de Contenido", "status": "Trabajando", "description": "Definiendo 4 pilares de contenido basados en tendencias del sector y analisis de competidores." },
+      "calendar": { "name": "Agente de Calendario", "status": "En cola", "description": "Esperando pilares de contenido. Creara calendario de 12 posts." }
+    },
+    "activityLog": {
+      "entry1": { "agent": "Agente de Investigacion", "action": "completo el analisis de competidores", "time": "hace 2 min" },
+      "entry2": { "agent": "Agente de Contenido", "action": "inicio la definicion de pilares", "time": "ahora mismo" },
+      "entry3": { "agent": "Agente PM", "action": "actualizo las dependencias de tareas", "time": "hace 1 min" }
+    },
+    "steps": {
+      "step1": { "number": "1", "title": "Tu pides", "description": "En lenguaje natural. Como si hablaras con un colega." },
+      "step2": { "number": "2", "title": "El equipo ejecuta", "description": "Un agente PM descompone y asigna a agentes especializados." },
+      "step3": { "number": "3", "title": "Tu revisas", "description": "Resultado listo. Apruebas, ajustas, o pides cambios." }
+    }
+  },
+  "comparison": {
+    "title": "Construido para ti. No por ti.",
+    "subtitle": "Las plataformas te dan herramientas. Nosotros te damos un equipo funcionando.",
+    "headerDiy": "PLATAFORMAS DIY",
+    "headerArkadia": "ARKADIA LABS",
+    "rows": {
+      "builder": { "criteria": "Quien construye", "diy": "Tu (necesitas perfil tecnico)", "arkadia": "Nosotros. Tu solo usas." },
+      "time": { "criteria": "Tiempo hasta resultados", "diy": "Semanas/meses de prueba y error", "arkadia": "~1 mes, listo para operar" },
+      "training": { "criteria": "Entrenamiento", "diy": "Generico, tu lo configuras", "arkadia": "Con tus datos y criterios reales" },
+      "support": { "criteria": "Soporte", "diy": "Documentacion y foros", "arkadia": "Equipo dedicado + optimizacion" },
+      "result": { "criteria": "Resultado", "diy": "Herramientas que operar", "arkadia": "Un equipo AI que opera por ti" }
+    }
+  }
+}
