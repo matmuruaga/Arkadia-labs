@@ -14,13 +14,13 @@ const OfficeIllustration: React.FC<OfficeIllustrationProps> = ({ pills }) => {
 
   return (
     <div
-      className="relative w-full rounded-2xl overflow-hidden shadow-lg"
+      className="relative w-full animate-float"
       style={{ aspectRatio: '2752 / 1536' }}
     >
       <img
         src={OFFICE_IMAGE_URL}
         alt={t('agentWorkforce.officeAlt')}
-        className="w-full h-full"
+        className="w-full h-full drop-shadow-2xl"
         loading="lazy"
         decoding="async"
         width={2752}

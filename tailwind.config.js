@@ -10,6 +10,7 @@ export default {
       'animate-ping',
       'animate-pulse',
       'animate-pulse-slow',
+      'animate-ray-pulse',
       // Liquid glass button classes
       'liquid-glass-button',
       'liquid-glass-content',
@@ -29,8 +30,14 @@ export default {
         'marquee-right': 'marquee-right var(--marquee-speed, 30s) linear infinite',
         'fade-in-up': 'fade-in-up 0.4s ease-out both',
         'pill-appear': 'pill-appear 0.5s ease-out both',
+        'float': 'float 4s ease-in-out infinite',
+        'ray-pulse': 'ray-pulse 2s ease-in-out infinite',
       },
       keyframes: {
+        'ray-pulse': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.7' },
+        },
         'marquee-left': {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
@@ -46,6 +53,10 @@ export default {
         'pill-appear': {
           '0%': { opacity: '0', transform: 'translateX(-50%) scale(0.85)' },
           '100%': { opacity: '1', transform: 'translateX(-50%) scale(1)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-8px)' },
         },
       },
   		borderRadius: {

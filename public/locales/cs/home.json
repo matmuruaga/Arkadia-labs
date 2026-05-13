@@ -381,6 +381,19 @@
       "analyzingData": "Analyza dat..."
     },
     "agentLabel": "AI Agent",
-    "liveLabel": "Aktivni"
+    "liveLabel": "Aktivni",
+    "title2": "Vase firma, klonovana",
+    "subtitle2": "Jeden expert vytreni vedouciho agenta. Vedouci agent vytreni zbytek. Kazde oddeleni pokryto — nepretrzite",
+    "connectionTitle": "Vytrenujte jednu AI. Skalujte cely tym.",
+    "connectionSubtitle": "Znalosti vaseho nejlepsiho zamestnance se promeni v AI agenta. Ten agent vytreni svuj tym. Cela vase firma, v provozu 24/7 — s clovekem vzdy pod kontrolou.",
+    "connectionAlt": "Dva AI agenti spolupracuji a sdileji znalosti pro skalovani operaci",
+    "officeTitle": "Vase virtualni kancelar, vzdy v provozu",
+    "officeSubtitle": "Kazda pracovni stanice je pohanena specializovanym AI agentem — zpracovava leady, prijima hovory, vytvari obsah a analyzuje data soucasne.",
+    "officeBullet1": "Kazdy agent je natrenovany na realne procesy vasi firmy, vas ton a vase rozhodovaci kriteria — zadne genericke sablony",
+    "officeBullet2": "Agenti pracuji paralelne napric oddeleni, zvladaji stovky ukolu soucasne bez uzkych mist",
+    "officeBullet3": "Lidsky dohled v kazdem kroku — vas tym kontroluje, schvaluje a vede AI tym v realnem case",
+    "cloneBullet1": "Vas organigram se stane strukturou pohanenou AI — kazda role od vedouciho prodeje po agenta podpory je replikovana",
+    "cloneBullet2": "Vedouci agenti trenuji sve tymy autonomne a skaluji znalosti vaseho nejlepsiho zamestnance napric celou organizaci",
+    "cloneBullet3": "Nasazeni behem tydnu, ne mesicu — zacnete jednim oddelenim a rozsirujte podle vysledku"
   }
 }

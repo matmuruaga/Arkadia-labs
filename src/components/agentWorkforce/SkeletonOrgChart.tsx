@@ -1,62 +1,83 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Bot } from 'lucide-react';
 import { trackCtaClick } from '@/utils/dataLayer';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
 
 // ---------------------------------------------------------------------------
-// Aura node: a skeleton rectangle whose border is a rotating conic-gradient
-// beam, giving an "AI energy" effect. All animation is pure CSS (no JS).
+// Aura node: a skeleton card with rotating conic-gradient border beam
 // ---------------------------------------------------------------------------
 
 interface AuraNodeProps {
-  /** Extra Tailwind classes for sizing/shape */
   className?: string;
-  /** CSS animation-delay for staggered beam effect */
   delay?: string;
-  style?: React.CSSProperties;
+  children?: React.ReactNode;
 }
 
-const AuraNode: React.FC<AuraNodeProps> = ({ className, delay = '0s', style }) => {
-  return (
+const AuraNode: React.FC<AuraNodeProps> = ({ className, delay = '0s', children }) => (
+  <div
+    className={cn('aura-node relative', className)}
+    style={{
+      background:
+        'conic-gradient(from var(--border-angle), transparent 60%, #1C7ED6 75%, #22d3ee 80%, #1C7ED6 85%, transparent 95%)',
+      border: '1.5px solid transparent',
+      backgroundOrigin: 'border-box',
+      backgroundClip: 'border-box',
+      animationName: 'border-rotate',
+      animationDuration: '3s',
+      animationTimingFunction: 'linear',
+      animationIterationCount: 'infinite',
+      animationDelay: delay,
+    }}
+  >
+    {/* Layer 1: opaque fill — completely blocks the conic gradient from showing inside */}
     <div
-      className={cn('aura-node relative', className)}
-      style={{
-        // Rotating conic-gradient used as the border via background-clip trick.
-        // The ::after pseudo-element fills the interior so the gradient only
-        // shows through at the border.
-        background:
-          'conic-gradient(from var(--border-angle), transparent 60%, #1C7ED6 75%, #22d3ee 80%, #1C7ED6 85%, transparent 95%)',
-        border: '1.5px solid transparent',
-        backgroundOrigin: 'border-box',
-        backgroundClip: 'border-box',
-        animationName: 'border-rotate',
-        animationDuration: '3s',
-        animationTimingFunction: 'linear',
-        animationIterationCount: 'infinite',
-        animationDelay: delay,
-        ...style,
-      }}
-    >
-      {/* Interior fill — slightly transparent so the glow bleeds through */}
-      <div
-        className="absolute inset-0 rounded-[inherit]"
-        style={{ background: 'rgba(241, 243, 245, 0.96)' }}
-      />
+      className="absolute inset-[1.5px] rounded-[inherit]"
+      style={{ background: '#F1F3F5' }}
+    />
+    {/* Layer 2: glassmorphism on top — semi-transparent white + blur + shadow */}
+    <div
+      className="absolute inset-[1.5px] rounded-[inherit] backdrop-blur-sm"
+      style={{ background: 'rgba(255, 255, 255, 0.45)', boxShadow: '0 1px 3px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6)' }}
+    />
+    {/* Content layer */}
+    {children && <div className="relative z-10">{children}</div>}
+  </div>
+);
+
+// ---------------------------------------------------------------------------
+// Skeleton content: circle avatar + text lines placeholder
+// ---------------------------------------------------------------------------
+
+interface SkeletonContentProps {
+  size: 'lg' | 'md' | 'sm';
+}
+
+const SkeletonContent: React.FC<SkeletonContentProps> = ({ size }) => {
+  const avatarSize = size === 'lg' ? 'w-10 h-10' : size === 'md' ? 'w-8 h-8' : 'w-6 h-6';
+  const lineWidth1 = size === 'lg' ? 'w-20' : size === 'md' ? 'w-16' : 'w-12';
+  const lineWidth2 = size === 'lg' ? 'w-14' : size === 'md' ? 'w-10' : 'w-8';
+  const lineH = size === 'sm' ? 'h-1.5' : 'h-2';
+  const gap = size === 'sm' ? 'gap-1' : 'gap-1.5';
+
+  return (
+    <div className={cn('flex items-center', gap, size === 'sm' ? 'px-2.5 py-2' : 'px-3 py-3')}>
+      {/* Avatar circle */}
+      <div className={cn('rounded-full bg-slate-300/50 shrink-0', avatarSize)} />
+      {/* Text lines */}
+      <div className={cn('flex flex-col', gap === 'gap-1' ? 'gap-1' : 'gap-1.5')}>
+        <div className={cn('rounded-full bg-slate-300/50', lineH, lineWidth1)} />
+        <div className={cn('rounded-full bg-slate-300/35', lineH, lineWidth2)} />
+      </div>
     </div>
   );
 };
 
 // ---------------------------------------------------------------------------
-// Connector line: a 1 px vertical line with a pulsing gradient shimmer
+// Connector line with pulsing gradient
 // ---------------------------------------------------------------------------
 
-interface ConnectorProps {
-  height?: number;
-  delay?: string;
-}
-
-const Connector: React.FC<ConnectorProps> = ({ height = 20, delay = '0s' }) => (
+const Connector: React.FC<{ height?: number; delay?: string }> = ({ height = 20, delay = '0s' }) => (
   <div
     className="aura-line mx-auto"
     style={{
@@ -74,24 +95,13 @@ const Connector: React.FC<ConnectorProps> = ({ height = 20, delay = '0s' }) => (
 );
 
 // ---------------------------------------------------------------------------
-// Horizontal branch: connects multiple dept nodes from a central stem
+// Horizontal branch bar
 // ---------------------------------------------------------------------------
 
-interface BranchProps {
-  /** Number of columns (= number of dept nodes) */
-  cols: number;
-}
-
-/**
- * Renders the horizontal connector bar that spans across all dept nodes.
- * Uses a CSS flex trick: invisible spacer cells keep the lines aligned
- * with the node centres.
- */
-const HorizontalBranch: React.FC<BranchProps> = ({ cols }) => (
+const HorizontalBranch: React.FC<{ cols: number }> = ({ cols }) => (
   <div className="relative flex w-full" aria-hidden="true">
     {Array.from({ length: cols }).map((_, i) => (
       <div key={i} className="flex-1 flex flex-col items-center">
-        {/* Top stub — only for leftmost and rightmost cells, draw half-bar */}
         <div
           style={{
             height: 1,
@@ -100,8 +110,8 @@ const HorizontalBranch: React.FC<BranchProps> = ({ cols }) => (
               i === 0
                 ? 'linear-gradient(to right, transparent 50%, #1C7ED630 100%)'
                 : i === cols - 1
-                ? 'linear-gradient(to right, #1C7ED630 0%, transparent 50%)'
-                : '#1C7ED630',
+                  ? 'linear-gradient(to right, #1C7ED630 0%, transparent 50%)'
+                  : '#1C7ED630',
           }}
         />
       </div>
@@ -110,31 +120,16 @@ const HorizontalBranch: React.FC<BranchProps> = ({ cols }) => (
 );
 
 // ---------------------------------------------------------------------------
-// Main SkeletonOrgChart component
+// Main SkeletonOrgChart
 // ---------------------------------------------------------------------------
 
-/**
- * Pure CSS skeleton org chart with an "AI aura" glowing border effect.
- *
- * Structure:
- *   [Director]
- *       │
- *   ┌───┼───┐
- * [D1][D2][D3][D4]
- *  │   │   │   │
- * [a] [a] [a] [a]
- * [a] [a] [a]
- * [a]
- *
- * No text, no icons — pure silhouettes with animated gradient borders.
- */
 const SkeletonOrgChart: React.FC = () => {
   const { t } = useTranslation('home');
   const navigate = useNavigate();
   const { lang = 'en' } = useParams<{ lang: string }>();
 
-  // Agent counts per department: [3, 2, 2, 1]
-  const deptAgents = [3, 2, 2, 1];
+  // 3 department columns with agent counts
+  const deptAgents = [3, 2, 2];
 
   const handleExploreCta = () => {
     trackCtaClick('explore_solutions', 'agent_workforce_skeleton', t('agentWorkforce.cta'));
@@ -142,51 +137,48 @@ const SkeletonOrgChart: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4 select-none" aria-hidden="true">
-      {/* Title */}
-      <h2 className="text-2xl font-bold text-center text-[var(--site-text-dark)] leading-tight">
-        {t('agentWorkforce.title')}
-      </h2>
-
+    <div className="flex flex-col items-center gap-5 select-none">
       {/* Org chart skeleton */}
-      <div className="flex flex-col items-center w-full max-w-sm">
+      <div className="flex flex-col items-center w-full" aria-hidden="true">
 
         {/* Director node */}
-        <AuraNode
-          className="rounded-xl"
-          style={{ width: 96, height: 44 }}
-          delay="0s"
-        />
+        <AuraNode className="rounded-xl w-full max-w-[200px]" delay="0s">
+          <SkeletonContent size="lg" />
+        </AuraNode>
 
-        {/* Director → branch stem */}
-        <Connector height={16} delay="0.1s" />
+        <Connector height={20} delay="0.1s" />
 
-        {/* Horizontal branch bar */}
-        <HorizontalBranch cols={4} />
+        {/* Horizontal branch */}
+        <HorizontalBranch cols={3} />
 
-        {/* Dept row */}
-        <div className="flex w-full justify-around">
+        {/* Department columns */}
+        <div className="flex w-full justify-around gap-3">
           {deptAgents.map((agentCount, deptIdx) => (
-            <div key={deptIdx} className="flex flex-col items-center gap-0">
+            <div key={deptIdx} className="flex flex-col items-center gap-0 flex-1">
+              {/* Vertical drop */}
+              <Connector height={16} delay={`${deptIdx * 0.25}s`} />
+
               {/* Dept node */}
               <AuraNode
-                className="rounded-lg"
-                style={{ width: 60, height: 30 }}
+                className="rounded-lg w-full max-w-[160px]"
                 delay={`${deptIdx * 0.3}s`}
-              />
+              >
+                <SkeletonContent size="md" />
+              </AuraNode>
 
               {/* Dept → agents stem */}
               <Connector height={14} delay={`${deptIdx * 0.3 + 0.1}s`} />
 
-              {/* Agent column */}
-              <div className="flex flex-col items-center gap-[6px]">
+              {/* Agent cards */}
+              <div className="flex flex-col items-center gap-2 w-full">
                 {Array.from({ length: agentCount }).map((_, agentIdx) => (
                   <AuraNode
                     key={agentIdx}
-                    className="rounded-md"
-                    style={{ width: 50, height: 24 }}
+                    className="rounded-md w-full max-w-[140px]"
                     delay={`${deptIdx * 0.3 + agentIdx * 0.15}s`}
-                  />
+                  >
+                    <SkeletonContent size="sm" />
+                  </AuraNode>
                 ))}
               </div>
             </div>
@@ -194,16 +186,6 @@ const SkeletonOrgChart: React.FC = () => {
         </div>
       </div>
 
-      {/* CTA */}
-      <Button
-        variant="outline"
-        size="sm"
-        className="mt-2 border-[var(--site-accent-blue)] text-[var(--site-accent-blue)] hover:bg-[var(--site-accent-blue)] hover:text-white transition-colors"
-        onClick={handleExploreCta}
-        aria-label={t('agentWorkforce.cta')}
-      >
-        {t('agentWorkforce.cta')}
-      </Button>
     </div>
   );
 };

@@ -386,6 +386,19 @@
       "analyzingData": "Analizando datos..."
     },
     "agentLabel": "Agente IA",
-    "liveLabel": "Activo"
+    "liveLabel": "Activo",
+    "title2": "Tu Empresa, Clonada",
+    "subtitle2": "Un experto entrena al agente lider. El agente lider entrena al resto. Cada departamento, cubierto — las 24 horas",
+    "connectionTitle": "Entrena una IA. Escala un equipo entero.",
+    "connectionSubtitle": "El conocimiento de tu mejor empleado se convierte en un agente IA. Ese agente entrena a su equipo. Toda tu empresa, funcionando 24/7 — con un humano siempre al mando.",
+    "connectionAlt": "Dos agentes de IA colaborando y compartiendo conocimiento para escalar operaciones",
+    "officeTitle": "Tu Oficina Virtual, Siempre Activa",
+    "officeSubtitle": "Cada estacion de trabajo esta impulsada por un agente IA especializado — procesando leads, respondiendo llamadas, creando contenido y analizando datos simultaneamente.",
+    "officeBullet1": "Cada agente esta entrenado con los procesos reales de tu empresa, tu tono y tus criterios de decision — no plantillas genericas",
+    "officeBullet2": "Los agentes trabajan en paralelo entre departamentos, gestionando cientos de tareas simultaneamente sin cuellos de botella",
+    "officeBullet3": "Supervision humana en cada paso — tu equipo revisa, aprueba y guia al equipo de IA en tiempo real",
+    "cloneBullet1": "Tu organigrama se convierte en una estructura potenciada por IA — cada rol desde lider de ventas hasta agente de soporte esta replicado",
+    "cloneBullet2": "Los agentes lideres entrenan a sus equipos de forma autonoma, escalando el conocimiento de tu mejor empleado en toda la organizacion",
+    "cloneBullet3": "Despliega en semanas, no meses — comienza con un departamento y expande a medida que veas resultados"
   }
 }

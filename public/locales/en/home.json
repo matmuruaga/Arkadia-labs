@@ -392,6 +392,19 @@
       "analyzingData": "Analyzing data..."
     },
     "agentLabel": "AI Agent",
-    "liveLabel": "Active"
+    "liveLabel": "Active",
+    "title2": "Your Company, Cloned",
+    "subtitle2": "One expert trains the lead agent. The lead agent trains the rest. Every department, covered — around the clock",
+    "connectionTitle": "Train One AI. Scale an Entire Team.",
+    "connectionSubtitle": "Your best employee's knowledge becomes an AI agent. That agent trains its team. Your entire company, running 24/7 — with a human always in the loop.",
+    "connectionAlt": "Two AI agents collaborating and sharing knowledge to scale operations",
+    "officeTitle": "Your Virtual Office, Always Running",
+    "officeSubtitle": "Every workstation is powered by a specialized AI agent — processing leads, answering calls, creating content, and analyzing data simultaneously.",
+    "officeBullet1": "Each agent is trained with your company's real processes, tone, and decision criteria — not generic templates",
+    "officeBullet2": "Agents work in parallel across departments, handling hundreds of tasks simultaneously without bottlenecks",
+    "officeBullet3": "Human oversight at every step — your team reviews, approves, and guides the AI workforce in real time",
+    "cloneBullet1": "Your org chart becomes an AI-powered structure — every role from sales lead to support agent is replicated",
+    "cloneBullet2": "Lead agents train their teams autonomously, scaling your best employee's knowledge across the entire organization",
+    "cloneBullet3": "Deploy in weeks, not months — start with one department and expand as you see results"
   }
 }

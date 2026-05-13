@@ -139,6 +139,7 @@ const HeroFramed = () => {
             <div className="text-justify text-xs text-gray-500 max-w-sm mt-2">
               <Trans
                 i18nKey="hero.disclaimer"
+                ns="home"
                 components={{
                   terms: <Link to={`/${i18n.language}/terms-and-conditions`} className="underline hover:text-gray-700" />,
                   privacy: <Link to={`/${i18n.language}/privacy-policy`} className="underline hover:text-gray-700" />
@@ -323,6 +324,7 @@ const HeroFramed = () => {
                   <div className="text-xs text-slate-500 text-center max-w-2xl leading-relaxed">
                     <Trans
                       i18nKey="hero.disclaimer"
+                      ns="home"
                       components={{
                         terms: <Link to={`/${i18n.language}/terms-and-conditions`} className="underline hover:text-slate-700" />,
                         privacy: <Link to={`/${i18n.language}/privacy-policy`} className="underline hover:text-slate-700" />

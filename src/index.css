@@ -16,6 +16,19 @@
   50% { background-position: 0% 100%; }
 }
 
+/* Cable light sweep animations */
+@keyframes cable-glow-blue {
+  0%   { background-position: 100% 100%; }
+  50%  { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+@keyframes cable-glow-purple {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .aura-node {
     animation: none !important;

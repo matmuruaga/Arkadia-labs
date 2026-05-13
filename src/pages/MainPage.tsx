@@ -13,7 +13,9 @@ import KpiSection from "@/components/KpiSection";
 
 // Below-the-fold components - Lazy load for better initial performance
 const WhyArkadia = lazy(() => import("@/components/WhyArkadia"));
+const AgentConnectionHero = lazy(() => import("@/components/agentWorkforce/AgentConnectionHero"));
 const AgentWorkforceBuilder = lazy(() => import("@/components/AgentWorkforceBuilder"));
+const VirtualOfficeSection = lazy(() => import("@/components/agentWorkforce/VirtualOfficeSection"));
 const IntegrationsSection = lazy(() => import("@/components/IntegrationsSection"));
 const AnimatedSeparator = lazy(() => import("@/components/AnimatedSeparator"));
 const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
@@ -33,41 +35,56 @@ const MainPage = () => {
   return (
     <>
       <SEO titleKey="seo.home.title" descriptionKey="seo.home.description" path="" />
-      {/* Critical above-the-fold content - loaded immediately */}
+      {/* 1. Hero — Hook: what we do */}
       <HeroFramed />
+
+      {/* 2. Agent Connection — "Train One AI. Scale an Entire Team." */}
+      <Suspense fallback={<div className="h-32" />}>
+        <AgentConnectionHero />
+      </Suspense>
+
+      {/* 3. Org Chart — "Your Company, Cloned" */}
+      <Suspense fallback={<div className="h-16" />}>
+        <AgentWorkforceBuilder />
+      </Suspense>
+
+      {/* 4. Virtual Office — "Your Virtual Office, Always Running" */}
+      <Suspense fallback={<div className="h-16" />}>
+        <VirtualOfficeSection />
+      </Suspense>
+
+      {/* 5. Before & After — proof of value by department */}
       <BeforeAfterSection />
+
+      {/* 4. KPIs — measurable results */}
       <KpiSection />
 
-      {/*
-        Below-the-fold content - lazy loaded with individual Suspense boundaries
-        This allows progressive loading and prevents waterfall effects
-        Each component loads independently for better UX
-      */}
+      {/* 5. Why Arkadia — why us */}
       <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
         <WhyArkadia />
       </Suspense>
 
-      {/* Agent Workforce Builder — scroll-driven org chart (desktop only, hidden on mobile via component) */}
-      <Suspense fallback={<div className="hidden md:block h-16" />}>
-        <AgentWorkforceBuilder />
-      </Suspense>
-
+      {/* 6. Integrations — connects with your tools */}
       <Suspense fallback={<div className="h-40 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading integrations...</div></div>}>
         <IntegrationsSection />
       </Suspense>
 
+      {/* 7. Separator */}
       <Suspense fallback={<div className="h-16" />}>
         <AnimatedSeparator />
       </Suspense>
 
+      {/* 8. Testimonials — social proof */}
       <Suspense fallback={<div className="h-48 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading testimonials...</div></div>}>
         <TestimonialsSection />
       </Suspense>
 
+      {/* 9. FAQ — objection handling */}
       <Suspense fallback={<div className="h-32 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading FAQ...</div></div>}>
         <FaqSection />
       </Suspense>
 
+      {/* 10. Final CTA — conversion */}
       <Suspense fallback={<div className="h-24 flex items-center justify-center"><div className="animate-pulse text-gray-400">Loading...</div></div>}>
         <FinalCtaSection />
       </Suspense>
